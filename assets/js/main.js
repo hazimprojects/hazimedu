@@ -9,22 +9,6 @@ if (navToggle && siteNav) {
 }
 
 /* =========================
-   TOGGLE JAWAPAN
-========================= */
-document.querySelectorAll(".interactive-toggle").forEach((button) => {
-  button.addEventListener("click", () => {
-    const targetId = button.getAttribute("data-target");
-    if (!targetId) return;
-
-    const target = document.getElementById(targetId);
-    if (!target) return;
-
-    const isOpen = target.classList.toggle("show");
-    button.textContent = isOpen ? "Sembunyikan jawapan" : "Tunjukkan jawapan";
-  });
-});
-
-/* =========================
    PROCESS CARDS
 ========================= */
 const processCards = document.querySelectorAll(".paper-process-card");
