@@ -9,9 +9,8 @@ if (navToggle && siteNav) {
 }
 
 /* =========================
-   INTERACTIVE TOGGLE
+   TOGGLE JAWAPAN
 ========================= */
-
 document.querySelectorAll(".interactive-toggle").forEach((button) => {
   button.addEventListener("click", () => {
     const targetId = button.getAttribute("data-target");
@@ -26,21 +25,20 @@ document.querySelectorAll(".interactive-toggle").forEach((button) => {
 });
 
 /* =========================
-   TAB CARDS
+   PAPER TABS
 ========================= */
+const paperTabs = document.querySelectorAll(".paper-tab");
+const paperTabPanels = document.querySelectorAll(".paper-tab-panel");
 
-const tabCards = document.querySelectorAll(".tab-card");
-const tabPanels = document.querySelectorAll(".tab-panel");
-
-tabCards.forEach((card) => {
-  card.addEventListener("click", () => {
-    const targetId = card.getAttribute("data-tab");
+paperTabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const targetId = tab.getAttribute("data-tab");
     if (!targetId) return;
 
-    tabCards.forEach((item) => item.classList.remove("active"));
-    tabPanels.forEach((panel) => panel.classList.remove("active"));
+    paperTabs.forEach((item) => item.classList.remove("active"));
+    paperTabPanels.forEach((panel) => panel.classList.remove("active"));
 
-    card.classList.add("active");
+    tab.classList.add("active");
 
     const targetPanel = document.getElementById(targetId);
     if (targetPanel) {
@@ -50,21 +48,20 @@ tabCards.forEach((card) => {
 });
 
 /* =========================
-   TIMELINE ACCORDION
+   PAPER TIMELINE
 ========================= */
+const paperTimelineNodes = document.querySelectorAll(".paper-timeline-node");
+const paperTimelinePanels = document.querySelectorAll(".paper-timeline-panel");
 
-const timelineTriggers = document.querySelectorAll(".timeline-trigger");
-const timelinePanels = document.querySelectorAll(".timeline-panel");
-
-timelineTriggers.forEach((trigger) => {
-  trigger.addEventListener("click", () => {
-    const targetId = trigger.getAttribute("data-timeline");
+paperTimelineNodes.forEach((node) => {
+  node.addEventListener("click", () => {
+    const targetId = node.getAttribute("data-timeline");
     if (!targetId) return;
 
-    timelineTriggers.forEach((item) => item.classList.remove("active"));
-    timelinePanels.forEach((panel) => panel.classList.remove("active"));
+    paperTimelineNodes.forEach((item) => item.classList.remove("active"));
+    paperTimelinePanels.forEach((panel) => panel.classList.remove("active"));
 
-    trigger.classList.add("active");
+    node.classList.add("active");
 
     const targetPanel = document.getElementById(targetId);
     if (targetPanel) {
@@ -76,13 +73,12 @@ timelineTriggers.forEach((trigger) => {
 /* =========================
    REVEAL ON SCROLL
 ========================= */
-
 const revealElements = document.querySelectorAll(".reveal-on-scroll");
 
 function revealOnScroll() {
   revealElements.forEach((el) => {
     const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 80) {
+    if (rect.top < window.innerHeight - 70) {
       el.classList.add("visible");
     }
   });
