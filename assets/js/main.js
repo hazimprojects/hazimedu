@@ -25,23 +25,46 @@ document.querySelectorAll(".interactive-toggle").forEach((button) => {
 });
 
 /* =========================
-   PAPER TABS
+   PROCESS CARDS
 ========================= */
-const paperTabs = document.querySelectorAll(".paper-tab");
-const paperTabPanels = document.querySelectorAll(".paper-tab-panel");
+const processCards = document.querySelectorAll(".paper-process-card");
+const processPanels = document.querySelectorAll(".paper-process-panel");
 
-paperTabs.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    const targetId = tab.getAttribute("data-tab");
+processCards.forEach((card) => {
+  card.addEventListener("click", () => {
+    const targetId = card.getAttribute("data-process");
     if (!targetId) return;
 
-    paperTabs.forEach((item) => item.classList.remove("active"));
-    paperTabPanels.forEach((panel) => panel.classList.remove("active"));
+    processCards.forEach((item) => item.classList.remove("active"));
+    processPanels.forEach((panel) => panel.classList.remove("active"));
 
-    tab.classList.add("active");
+    card.classList.add("active");
+    const targetPanel = document.getElementById(targetId);
+    if (targetPanel) targetPanel.classList.add("active");
+  });
+});
+
+/* =========================
+   PAPER ACCORDION
+========================= */
+const accordionTriggers = document.querySelectorAll(".paper-accordion-trigger");
+const accordionPanels = document.querySelectorAll(".paper-accordion-panel");
+
+accordionTriggers.forEach((trigger) => {
+  trigger.addEventListener("click", () => {
+    const targetId = trigger.getAttribute("data-accordion");
+    if (!targetId) return;
 
     const targetPanel = document.getElementById(targetId);
-    if (targetPanel) {
+    if (!targetPanel) return;
+
+    const isAlreadyOpen = trigger.classList.contains("active");
+
+    accordionTriggers.forEach((item) => item.classList.remove("active"));
+    accordionPanels.forEach((panel) => panel.classList.remove("active"));
+
+    if (!isAlreadyOpen) {
+      trigger.classList.add("active");
       targetPanel.classList.add("active");
     }
   });
