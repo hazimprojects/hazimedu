@@ -1429,3 +1429,60 @@ h3 {
     grid-template-columns: 1fr;
   }
 }
+/* =========================
+   INTERACTION POLISH
+========================= */
+
+.two-col-chips {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem;
+}
+
+.two-col-chips .paper-chip {
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.paper-accordion-panel,
+.paper-timeline-panel {
+  overflow: hidden;
+}
+
+.paper-accordion-trigger,
+.paper-timeline-node {
+  position: relative;
+}
+
+.paper-accordion-trigger::after,
+.paper-timeline-node::after {
+  content: "+";
+  position: absolute;
+  right: 0.95rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 800;
+  color: var(--muted);
+}
+
+.paper-accordion-trigger.active::after,
+.paper-timeline-node.active::after {
+  content: "−";
+}
+
+@media (max-width: 760px) {
+  .two-col-chips {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.55rem;
+  }
+
+  .two-col-chips .paper-chip {
+    padding: 0.58rem 0.6rem;
+    font-size: 0.82rem;
+  }
+
+  .paper-accordion-trigger,
+  .paper-timeline-node {
+    padding-right: 2.4rem;
+  }
+}
