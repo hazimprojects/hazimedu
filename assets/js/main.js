@@ -81,13 +81,16 @@ paperTimelineNodes.forEach((node) => {
     const targetId = node.getAttribute("data-timeline");
     if (!targetId) return;
 
+    const targetPanel = document.getElementById(targetId);
+    if (!targetPanel) return;
+
+    const isOpen = node.classList.contains("active");
+
     paperTimelineNodes.forEach((item) => item.classList.remove("active"));
     paperTimelinePanels.forEach((panel) => panel.classList.remove("active"));
 
-    node.classList.add("active");
-
-    const targetPanel = document.getElementById(targetId);
-    if (targetPanel) {
+    if (!isOpen) {
+      node.classList.add("active");
       targetPanel.classList.add("active");
     }
   });
