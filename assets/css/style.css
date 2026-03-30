@@ -1519,50 +1519,81 @@ h3 {
 }
 /* =========================
    KEYWORD HIGHLIGHT SYSTEM
+   REFINED INLINE VERSION
 ========================= */
 
 .kw {
   display: inline;
-  padding: 0.08rem 0.38rem 0.12rem;
-  border-radius: 0.45rem;
-  font-weight: 800;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
+  background-repeat: no-repeat;
+  background-size: 100% 0.72em;
+  background-position: 0 88%;
 }
 
+/* kategori warna — teks saiz sama, hanya warna + highlight */
 .kw-tokoh {
-  background: rgba(255, 228, 230, 0.95);
   color: #9f1239;
+  background-image: linear-gradient(rgba(255, 228, 230, 0.95), rgba(255, 228, 230, 0.95));
 }
 
 .kw-masa {
-  background: rgba(219, 234, 254, 0.95);
   color: #1d4ed8;
+  background-image: linear-gradient(rgba(219, 234, 254, 0.95), rgba(219, 234, 254, 0.95));
 }
 
 .kw-tempat {
-  background: rgba(220, 252, 231, 0.95);
   color: #166534;
+  background-image: linear-gradient(rgba(220, 252, 231, 0.95), rgba(220, 252, 231, 0.95));
 }
 
 .kw-konsep {
-  background: rgba(255, 237, 213, 0.98);
   color: #c2410c;
+  background-image: linear-gradient(rgba(255, 237, 213, 0.98), rgba(255, 237, 213, 0.98));
 }
 
 .kw-kerajaan {
-  background: rgba(237, 233, 254, 0.96);
   color: #6d28d9;
+  background-image: linear-gradient(rgba(237, 233, 254, 0.96), rgba(237, 233, 254, 0.96));
 }
 
 .kw-istilah {
-  background: rgba(204, 251, 241, 0.98);
   color: #0f766e;
+  background-image: linear-gradient(rgba(204, 251, 241, 0.98), rgba(204, 251, 241, 0.98));
+}
+
+/* jangan terlalu menyerlah dalam heading/chip */
+.paper-chip .kw,
+.point-line .kw,
+.lead .kw,
+.emoji-point-list .kw,
+.answer-paper .kw,
+.paper-kingdom .kw,
+.paper-timeline-panel .kw,
+.paper-accordion-panel .kw {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* teks dalam chip lebih kemas */
+.paper-chip {
+  line-height: 1.55;
 }
 
 @media (max-width: 760px) {
   .kw {
-    padding: 0.06rem 0.34rem 0.1rem;
+    background-size: 100% 0.68em;
+    background-position: 0 90%;
+  }
+
+  .paper-chip {
+    line-height: 1.5;
   }
 }
 /* =========================
