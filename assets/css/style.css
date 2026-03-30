@@ -1695,12 +1695,11 @@ h3 {
   border-radius: 0.14em;
   font-size: inherit;
   line-height: inherit;
-  font-weight: inherit;
+  font-weight: 700;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
 
-/* kategori warna */
 .kw-tokoh {
   color: #9f1239;
   background: rgba(255, 228, 230, 0.92);
@@ -1731,7 +1730,6 @@ h3 {
   background: rgba(204, 251, 241, 0.94);
 }
 
-/* elak keyword jadi lebih besar / lebih tebal daripada ayat */
 .paper-chip .kw,
 .point-line .kw,
 .lead .kw,
@@ -1743,7 +1741,7 @@ h3 {
 .keyword-legend-item .kw {
   font-size: inherit;
   line-height: inherit;
-  font-weight: inherit;
+  font-weight: 700;
 }
 
 /* =========================
@@ -1805,7 +1803,6 @@ h3 {
   line-height: 1.35;
 }
 
-/* kemaskan chip biasa */
 .paper-chip {
   line-height: 1.55;
 }
