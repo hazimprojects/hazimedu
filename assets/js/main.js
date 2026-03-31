@@ -60,8 +60,6 @@ if (processCards.length && processPanels.length) {
 
 // =========================
 // PAPER ACCORDION
-// - satu terbuka bagi setiap kumpulan
-// - klik item yang sama untuk tutup
 // =========================
 const accordionTriggers = document.querySelectorAll(".paper-accordion-trigger");
 
@@ -103,8 +101,6 @@ accordionTriggers.forEach((trigger) => {
 
 // =========================
 // PAPER TIMELINE
-// - klik untuk buka
-// - klik semula untuk tutup
 // =========================
 const paperTimelineNodes = document.querySelectorAll(".paper-timeline-node");
 const paperTimelinePanels = document.querySelectorAll(".paper-timeline-panel");
@@ -169,8 +165,6 @@ if (revealElements.length) {
 
 // =========================
 // READING PROGRESS INDICATOR
-// - inject terus tanpa perlu edit HTML/CSS lain
-// - klik indicator untuk scroll ke atas
 // =========================
 (function setupReadingProgress() {
   const mainContent = document.querySelector("main");
@@ -183,7 +177,7 @@ if (revealElements.length) {
       right: 16px;
       bottom: 18px;
       z-index: 60;
-      width: 84px;
+      width: 92px;
       padding: 10px 10px 9px;
       border-radius: 18px;
       background: rgba(255, 253, 248, 0.95);
@@ -211,7 +205,7 @@ if (revealElements.length) {
 
     .reading-progress-top {
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       justify-content: space-between;
       gap: 6px;
       margin-bottom: 7px;
@@ -229,7 +223,7 @@ if (revealElements.length) {
 
     .reading-progress-percent {
       font-family: "Nunito", sans-serif;
-      font-size: 18px;
+      font-size: 15px;
       font-weight: 900;
       line-height: 1;
       color: #24313f;
@@ -255,24 +249,28 @@ if (revealElements.length) {
     .reading-progress-hint {
       margin-top: 7px;
       font-family: "Nunito", sans-serif;
-      font-size: 10px;
-      font-weight: 700;
+      font-size: 9px;
+      font-weight: 800;
       color: #6b7280;
       text-align: center;
-      line-height: 1.15;
+      line-height: 1.2;
+      min-height: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     @media (max-width: 760px) {
       .reading-progress-pill {
         right: 12px;
         bottom: 14px;
-        width: 78px;
+        width: 86px;
         padding: 9px 9px 8px;
         border-radius: 16px;
       }
 
       .reading-progress-percent {
-        font-size: 17px;
+        font-size: 14px;
       }
 
       .reading-progress-label,
@@ -295,12 +293,13 @@ if (revealElements.length) {
     <div class="reading-progress-bar">
       <div class="reading-progress-fill"></div>
     </div>
-    <div class="reading-progress-hint">Naik semula</div>
+    <div class="reading-progress-hint">Permulaan yang baik</div>
   `;
   document.body.appendChild(pill);
 
   const percentEl = pill.querySelector(".reading-progress-percent");
   const fillEl = pill.querySelector(".reading-progress-fill");
+  const hintEl = pill.querySelector(".reading-progress-hint");
 
   function getReadingProgress() {
     const mainRect = mainContent.getBoundingClientRect();
@@ -316,10 +315,19 @@ if (revealElements.length) {
     return Math.max(0, Math.min(100, progress));
   }
 
+  function getProgressMessage(progress) {
+    if (progress >= 100) return "Selesai dibaca";
+    if (progress >= 75) return "Sedikit lagi";
+    if (progress >= 50) return "Separuh jalan";
+    if (progress >= 25) return "Teruskan membaca";
+    return "Permulaan yang baik";
+  }
+
   function updateReadingProgress() {
     const progress = Math.round(getReadingProgress());
     percentEl.textContent = `${progress}%`;
     fillEl.style.width = `${progress}%`;
+    hintEl.textContent = getProgressMessage(progress);
 
     if (window.scrollY > 120) {
       pill.classList.add("is-visible");
