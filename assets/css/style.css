@@ -1998,3 +1998,348 @@ h3 {
     max-width: 100%;
   }
 }
+/* =========================
+   HEADING HIERARCHY SYSTEM
+========================= */
+
+/* Tajuk seksyen utama selepas hero */
+.section-heading {
+  margin-bottom: 1rem;
+}
+
+.section-heading h2 {
+  font-size: clamp(1.45rem, 2.2vw, 2.05rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  margin: 0.2rem 0 0.45rem;
+  line-height: 1.08;
+}
+
+.section-heading p {
+  margin: 0;
+  color: var(--muted);
+  max-width: 62ch;
+}
+
+/* Label kecil di atas tajuk seksyen */
+.section-heading .paper-label.small {
+  background: linear-gradient(90deg, #dfeedd, #cfe7cc);
+  color: #315649;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 0.44rem 0.78rem;
+  box-shadow: var(--shadow-soft);
+}
+
+/* Tajuk kecil di atas kandungan dalam kad */
+.paper-strip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  padding: 0.5rem 0.8rem;
+  border-radius: 12px;
+  margin-bottom: 0.95rem;
+  box-shadow: var(--shadow-soft);
+}
+
+/* Variasi visual untuk tahap/kategori berbeza */
+.paper-strip.strip-main {
+  background: linear-gradient(90deg, #f7dca8, #f5cf86);
+  color: #6b4a14;
+}
+
+.paper-strip.strip-sub {
+  background: linear-gradient(90deg, #dfeedd, #cfe7cc);
+  color: #315649;
+}
+
+.paper-strip.strip-info {
+  background: linear-gradient(90deg, #dbeafe, #c7dcff);
+  color: #2457c5;
+}
+
+.paper-strip.strip-glossary {
+  background: linear-gradient(90deg, #ede9fe, #ddd4fe);
+  color: #6d28d9;
+}
+
+.paper-strip.strip-summary {
+  background: linear-gradient(90deg, #ffe4e6, #ffd5db);
+  color: #9f1239;
+}
+
+/* Tajuk kecil dalam blok */
+.point-heading {
+  margin: 0 0 0.72rem;
+  font-size: 0.96rem;
+  font-weight: 900;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+}
+
+/* Ayat isi biasa */
+.point-line {
+  margin: 0.72rem 0 0;
+  color: var(--muted);
+  font-size: 0.99rem;
+  line-height: 1.7;
+}
+
+/* Subheading lembut untuk bahagian dalam kad */
+.soft-subhead {
+  margin: 1rem 0 0.55rem;
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #5f6f64;
+}
+
+/* =========================
+   SPECIAL CONTENT TYPES
+========================= */
+
+/* Info / sejarah / tambahan */
+.info-paper {
+  background: linear-gradient(135deg, #f8fbff, #eef5ff);
+  border: 1px solid rgba(59, 130, 246, 0.14);
+}
+
+/* Glosari / istilah */
+.glossary-paper {
+  background: linear-gradient(135deg, #faf7ff, #f1ebff);
+  border: 1px solid rgba(109, 40, 217, 0.14);
+}
+
+/* Rumusan kecil */
+.summary-paper {
+  background: linear-gradient(135deg, #fff8f1, #fff2df);
+  border: 1px solid rgba(193, 93, 23, 0.14);
+}
+
+/* Rumusan besar / sinopsis bab */
+.master-summary-paper {
+  background: linear-gradient(135deg, #eef8f1, #f8f5ea);
+  border: 1px solid rgba(47, 122, 103, 0.16);
+  box-shadow: var(--shadow-medium);
+}
+
+/* Bezakan sedikit gaya label pada kad selingan */
+.info-paper .paper-strip,
+.glossary-paper .paper-strip,
+.summary-paper .paper-strip,
+.master-summary-paper .paper-strip {
+  transform: rotate(-0.6deg);
+}
+
+.paper-board:not(.info-paper):not(.glossary-paper):not(.summary-paper):not(.master-summary-paper) .paper-strip {
+  transform: rotate(-0.25deg);
+}
+
+/* =========================
+   ACCORDION HIERARCHY
+========================= */
+
+.paper-accordion {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.paper-accordion-item {
+  border-radius: 22px;
+  background: rgba(255, 252, 247, 0.82);
+  border: 1px solid rgba(92, 110, 132, 0.1);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+}
+
+.paper-accordion-trigger {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  padding: 1rem 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-align: left;
+  font: inherit;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.paper-accordion-trigger:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.paper-accordion-no {
+  flex: 0 0 auto;
+  font-weight: 900;
+}
+
+.paper-accordion-title {
+  flex: 1;
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1.35;
+}
+
+.paper-accordion-trigger::after {
+  content: "+";
+  flex: 0 0 auto;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #6b7280;
+}
+
+.paper-accordion-item.is-open .paper-accordion-trigger::after {
+  content: "−";
+}
+
+.paper-accordion-panel {
+  display: none;
+  padding: 0 1.1rem 1.1rem;
+}
+
+.paper-accordion-item.is-open .paper-accordion-panel {
+  display: block;
+}
+
+/* =========================
+   BETTER CARD DISTINCTION
+========================= */
+
+.paper-board {
+  border-radius: 28px;
+}
+
+.paper-flap-card {
+  border-radius: 28px;
+}
+
+.conclusion-paper {
+  box-shadow: var(--shadow-medium);
+}
+
+/* grid dua kolum supaya tak terlalu memanjang */
+.two-up-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+/* Desktop lebih lebar untuk nota panjang */
+.note-wide {
+  max-width: 1180px;
+}
+
+.note-section-wide .container.narrow,
+.note-section-wide .container.note-wide {
+  max-width: 1180px;
+}
+
+/* =========================
+   ORG CHART
+========================= */
+
+.org-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  text-align: center;
+}
+
+.org-level {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.org-level-1,
+.org-level-2 {
+  max-width: 320px;
+}
+
+.org-level-3 {
+  max-width: 920px;
+}
+
+.org-node {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 0.85rem 1rem;
+  border-radius: 18px;
+  background: rgba(255, 253, 248, 0.85);
+  border: 1px solid rgba(92, 110, 132, 0.1);
+  box-shadow: var(--shadow-soft);
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.org-arrow {
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .two-up-grid {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+
+  .note-wide {
+    max-width: 100%;
+  }
+
+  .org-level-3 {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 760px) {
+  .section-heading h2 {
+    font-size: 1.3rem;
+  }
+
+  .paper-strip {
+    font-size: 0.78rem;
+    padding: 0.46rem 0.72rem;
+  }
+
+  .point-heading {
+    font-size: 0.89rem;
+  }
+
+  .point-line {
+    font-size: 0.95rem;
+  }
+
+  .paper-accordion-trigger {
+    padding: 0.95rem 1rem;
+  }
+
+  .paper-accordion-title {
+    font-size: 0.96rem;
+  }
+
+  .paper-accordion-panel {
+    padding: 0 1rem 1rem;
+  }
+}
