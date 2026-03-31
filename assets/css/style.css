@@ -1764,3 +1764,81 @@ h3 {
     width: 100%;
   }
   }
+/* =========================
+   SPACING FIX FOR 📌 POINTS
+========================= */
+
+/* Bila point heading datang selepas kad/grid/chips, beri ruang lebih jelas */
+.paper-chip-list + .point-heading,
+.paper-grid + .point-heading,
+.paper-process-grid + .point-heading,
+.paper-process-panels + .point-heading,
+.paper-steps + .point-heading,
+.paper-accordion + .point-heading,
+.answer-paper + .point-heading,
+.org-chart + .point-heading,
+.paper-board + .point-heading {
+  margin-top: 1.15rem;
+}
+
+/* Bila senarai emoji datang selepas block lain, jangan terlalu rapat */
+.paper-chip-list + .emoji-point-list,
+.paper-grid + .emoji-point-list,
+.paper-process-grid + .emoji-point-list,
+.paper-process-panels + .emoji-point-list,
+.paper-steps + .emoji-point-list,
+.answer-paper + .emoji-point-list,
+.org-chart + .emoji-point-list {
+  margin-top: 1rem;
+}
+
+/* Jika point-line diikuti point heading, beri nafas sedikit */
+.point-line + .point-heading {
+  margin-top: 1rem;
+}
+
+/* Jika beberapa point heading berturutan, rapat sedikit tapi masih kemas */
+.point-heading + .point-heading {
+  margin-top: 0.8rem;
+}
+
+/* Dalam kad, point dengan emoji 📌 nampak lebih kemas */
+.emoji-point-list li + li {
+  margin-top: 0.08rem;
+}
+
+/* Ruang sebelum point selepas paper strip */
+.paper-strip + .point-heading,
+.paper-strip + .point-line,
+.paper-strip + .emoji-point-list {
+  margin-top: 0.15rem;
+}
+
+/* Mobile: ruang sedikit lembut supaya tak terlalu panjang */
+@media (max-width: 760px) {
+  .paper-chip-list + .point-heading,
+  .paper-grid + .point-heading,
+  .paper-process-grid + .point-heading,
+  .paper-process-panels + .point-heading,
+  .paper-steps + .point-heading,
+  .paper-accordion + .point-heading,
+  .answer-paper + .point-heading,
+  .org-chart + .point-heading,
+  .paper-board + .point-heading {
+    margin-top: 1rem;
+  }
+
+  .paper-chip-list + .emoji-point-list,
+  .paper-grid + .emoji-point-list,
+  .paper-process-grid + .emoji-point-list,
+  .paper-process-panels + .emoji-point-list,
+  .paper-steps + .emoji-point-list,
+  .answer-paper + .emoji-point-list,
+  .org-chart + .emoji-point-list {
+    margin-top: 0.9rem;
+  }
+
+  .point-line + .point-heading {
+    margin-top: 0.9rem;
+  }
+}
