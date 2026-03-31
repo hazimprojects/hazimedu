@@ -1681,12 +1681,45 @@ h3 {
     min-width: 0;
   }
 
-  .paper-chip-sentence {
+  .paper-chip-sentence,
+  .paper-chip.paper-chip-sentence,
+  .paper-chip-list .paper-chip.paper-chip-sentence {
+    display: block;
     width: 100%;
+    flex: none;
+  }
+
+  /* Panel isi panjang: paksa satu kolum penuh supaya tidak berpecah */
+  .paper-accordion-panel .paper-chip-list,
+  .answer-paper .paper-chip-list,
+  .info-paper .paper-chip-list,
+  .glossary-paper .paper-chip-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.62rem;
+  }
+
+  .paper-accordion-panel .paper-chip,
+  .answer-paper .paper-chip,
+  .info-paper .paper-chip,
+  .glossary-paper .paper-chip {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    flex: none;
+  }
+
+  /* Rumusan dan kad ringkas kekal padat */
+  .summary-paper .paper-chip-list,
+  .master-summary-paper .paper-chip-list {
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .summary-paper .paper-chip,
   .master-summary-paper .paper-chip {
+    width: auto;
+    max-width: 100%;
     padding: 0.54rem 0.68rem;
     font-size: 0.86rem;
     border-radius: 13px;
