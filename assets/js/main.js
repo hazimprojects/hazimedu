@@ -357,22 +357,48 @@ if (revealElements.length) {
 })();
 
 // =========================
-// MOBILE CHIP SENTENCE FIX
+// MOBILE CHIP LAYOUT FIX
 // =========================
-(function setupSentenceChipFix() {
+(function setupMobileChipFix() {
   const style = document.createElement("style");
   style.innerHTML = `
     @media (max-width: 760px) {
-      .paper-chip.paper-chip-sentence {
+      .paper-chip.paper-chip-sentence,
+      .paper-chip-list .paper-chip.paper-chip-sentence {
         display: block !important;
         width: 100% !important;
         flex: none !important;
       }
 
-      .paper-chip-list .paper-chip.paper-chip-sentence {
-        display: block !important;
+      .paper-accordion-panel .paper-chip-list,
+      .answer-paper .paper-chip-list,
+      .info-paper .paper-chip-list,
+      .glossary-paper .paper-chip-list {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 0.62rem !important;
+      }
+
+      .paper-accordion-panel .paper-chip,
+      .answer-paper .paper-chip,
+      .info-paper .paper-chip,
+      .glossary-paper .paper-chip {
+        display: flex !important;
         width: 100% !important;
+        max-width: 100% !important;
         flex: none !important;
+      }
+
+      .master-summary-paper .paper-chip-list,
+      .summary-paper .paper-chip-list {
+        display: flex !important;
+        grid-template-columns: none !important;
+      }
+
+      .master-summary-paper .paper-chip,
+      .summary-paper .paper-chip {
+        width: auto !important;
+        max-width: 100% !important;
       }
     }
   `;
