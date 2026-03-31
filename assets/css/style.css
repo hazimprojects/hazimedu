@@ -2279,6 +2279,408 @@ h3 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+/* =========================
+   KEYWORD HIGHLIGHT
+========================= */
+
+.kw {
+  display: inline;
+  padding: 0 0.08em;
+  margin: 0;
+  border-radius: 0.14em;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: 700;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.kw-tokoh {
+  color: #9f1239;
+  background: rgba(255, 228, 230, 0.92);
+}
+
+.kw-masa {
+  color: #1d4ed8;
+  background: rgba(219, 234, 254, 0.92);
+}
+
+.kw-tempat {
+  color: #166534;
+  background: rgba(220, 252, 231, 0.92);
+}
+
+.kw-konsep {
+  color: #c2410c;
+  background: rgba(255, 237, 213, 0.94);
+}
+
+.kw-kerajaan {
+  color: #6d28d9;
+  background: rgba(237, 233, 254, 0.94);
+}
+
+.kw-istilah {
+  color: #0f766e;
+  background: rgba(204, 251, 241, 0.94);
+}
+
+.paper-chip .kw,
+.point-line .kw,
+.lead .kw,
+.emoji-point-list .kw,
+.answer-paper .kw,
+.paper-kingdom .kw,
+.paper-timeline-panel .kw,
+.paper-accordion-panel .kw,
+.keyword-legend-item .kw {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: 700;
+}
+
+/* =========================
+   SENTENCE CHIP FIX
+========================= */
+
+.paper-chip-sentence {
+  display: block;
+  width: 100%;
+  white-space: normal;
+  line-height: 1.65;
+  text-align: left;
+}
+
+.paper-chip-sentence .chip-icon {
+  margin-right: 0.45rem;
+}
+
+.paper-chip-sentence .kw {
+  display: inline;
+  white-space: normal;
+}
+
+.paper-chip-sentence,
+.paper-chip-sentence * {
+  vertical-align: baseline;
+}
+
+/* =========================
+   COMPACT KEYWORD LEGEND
+========================= */
+
+.keyword-legend-wrap {
+  margin-top: 1rem;
+  padding: 0.85rem 0.95rem;
+  border-radius: 20px;
+  background: rgba(255, 253, 248, 0.6);
+  border: 1px solid rgba(92, 110, 132, 0.08);
+  box-shadow: var(--shadow-soft);
+}
+
+.keyword-legend-title {
+  margin: 0 0 0.65rem;
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.keyword-legend-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.6rem;
+}
+
+.keyword-legend-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  line-height: 1.2;
+}
+
+.keyword-legend-item .kw {
+  display: inline;
+  font-size: 0.92rem;
+  line-height: 1.3;
+  font-weight: 700;
+  padding: 0.08rem 0.35rem;
+  border-radius: 0.42rem;
+}
+
+.page-hero .keyword-legend-wrap {
+  margin-top: 1rem;
+}
+
+.page-hero .hero-actions {
+  margin-top: 1.1rem;
+}
+
+/* =========================
+   HEADING HIERARCHY SYSTEM
+========================= */
+
+.section-heading {
+  margin-bottom: 1rem;
+}
+
+.section-heading h2 {
+  font-size: clamp(1.45rem, 2.2vw, 2.05rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  margin: 0.2rem 0 0.45rem;
+  line-height: 1.08;
+}
+
+.section-heading p {
+  margin: 0;
+  color: var(--muted);
+  max-width: 62ch;
+}
+
+.section-heading .paper-label.small {
+  background: linear-gradient(90deg, #dfeedd, #cfe7cc);
+  color: #315649;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 0.44rem 0.78rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.paper-strip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  padding: 0.5rem 0.8rem;
+  border-radius: 12px;
+  margin-bottom: 0.95rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.paper-strip.strip-main {
+  background: linear-gradient(90deg, #f7dca8, #f5cf86);
+  color: #6b4a14;
+}
+
+.paper-strip.strip-sub {
+  background: linear-gradient(90deg, #dfeedd, #cfe7cc);
+  color: #315649;
+}
+
+.paper-strip.strip-info {
+  background: linear-gradient(90deg, #dbeafe, #c7dcff);
+  color: #2457c5;
+}
+
+.paper-strip.strip-glossary {
+  background: linear-gradient(90deg, #ede9fe, #ddd4fe);
+  color: #6d28d9;
+}
+
+.paper-strip.strip-summary {
+  background: linear-gradient(90deg, #ffe4e6, #ffd5db);
+  color: #9f1239;
+}
+
+.point-heading {
+  margin: 0 0 0.72rem;
+  font-size: 0.96rem;
+  font-weight: 900;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+}
+
+.point-line {
+  margin: 0.72rem 0 0;
+  color: var(--muted);
+  font-size: 0.99rem;
+  line-height: 1.7;
+}
+
+/* =========================
+   SPECIAL CONTENT TYPES
+========================= */
+
+.info-paper {
+  background: linear-gradient(135deg, #f8fbff, #eef5ff);
+  border: 1px solid rgba(59, 130, 246, 0.14);
+}
+
+.glossary-paper {
+  background: linear-gradient(135deg, #faf7ff, #f1ebff);
+  border: 1px solid rgba(109, 40, 217, 0.14);
+}
+
+.summary-paper {
+  background: linear-gradient(135deg, #fff8f1, #fff2df);
+  border: 1px solid rgba(193, 93, 23, 0.14);
+}
+
+.master-summary-paper {
+  background: linear-gradient(135deg, #eef8f1, #f8f5ea);
+  border: 1px solid rgba(47, 122, 103, 0.16);
+  box-shadow: var(--shadow-medium);
+}
+
+.info-paper .paper-strip,
+.glossary-paper .paper-strip,
+.summary-paper .paper-strip,
+.master-summary-paper .paper-strip {
+  transform: rotate(-0.6deg);
+}
+
+.paper-board:not(.info-paper):not(.glossary-paper):not(.summary-paper):not(.master-summary-paper) .paper-strip {
+  transform: rotate(-0.25deg);
+}
+
+/* =========================
+   ACCORDION HIERARCHY
+========================= */
+
+.paper-accordion {
+  display: grid;
+  gap: 0.9rem;
+  margin-top: 0.9rem;
+}
+
+.paper-accordion-item {
+  border-radius: 22px;
+  background: rgba(255, 252, 247, 0.82);
+  border: 1px solid rgba(92, 110, 132, 0.1);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+}
+
+.paper-accordion-trigger {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  padding: 1rem 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-align: left;
+  font: inherit;
+  color: var(--ink);
+  cursor: pointer;
+  position: relative;
+}
+
+.paper-accordion-trigger:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.paper-accordion-no {
+  flex: 0 0 auto;
+  font-weight: 900;
+}
+
+.paper-accordion-title {
+  flex: 1;
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1.35;
+}
+
+.paper-accordion-trigger::after {
+  content: "+";
+  flex: 0 0 auto;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #6b7280;
+}
+
+.paper-accordion-item.is-open .paper-accordion-trigger::after {
+  content: "−";
+}
+
+.paper-accordion-panel {
+  display: none;
+  padding: 0 1.1rem 1.1rem;
+  overflow: hidden;
+}
+
+.paper-accordion-item.is-open .paper-accordion-panel {
+  display: block;
+}
+
+/* =========================
+   SHARED LAYOUT
+========================= */
+
+.paper-board {
+  border-radius: 28px;
+}
+
+.paper-flap-card {
+  border-radius: 28px;
+}
+
+.conclusion-paper {
+  box-shadow: var(--shadow-medium);
+}
+
+.two-up-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+.note-wide {
+  max-width: 1180px;
+}
+
+.note-section-wide .container.narrow,
+.note-section-wide .container.note-wide {
+  max-width: 1180px;
+}
+
+/* =========================
+   ORGANIZATION CHART
+========================= */
+
+.org-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  text-align: center;
+}
+
+.org-level {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.org-level-1,
+.org-level-2 {
+  max-width: 320px;
+}
+
+.org-level-3 {
+  max-width: 920px;
+}
+
+.org-node {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   min-height: 54px;
   padding: 0.85rem 1rem;
   border-radius: 18px;
@@ -2314,6 +2716,10 @@ h3 {
 }
 
 @media (max-width: 760px) {
+  .kw {
+    padding: 0 0.07em;
+  }
+
   .section-heading h2 {
     font-size: 1.3rem;
   }
@@ -2331,6 +2737,30 @@ h3 {
     font-size: 0.95rem;
   }
 
+  .paper-chip {
+    line-height: 1.5;
+  }
+
+  .keyword-legend-wrap {
+    padding: 0.8rem 0.85rem;
+    border-radius: 18px;
+  }
+
+  .keyword-legend-title {
+    font-size: 0.84rem;
+    margin-bottom: 0.55rem;
+  }
+
+  .keyword-legend-grid {
+    gap: 0.45rem 0.5rem;
+  }
+
+  .keyword-legend-item .kw {
+    font-size: 0.88rem;
+    padding: 0.07rem 0.32rem;
+    border-radius: 0.38rem;
+  }
+
   .paper-accordion-trigger {
     padding: 0.95rem 1rem;
   }
@@ -2342,4 +2772,4 @@ h3 {
   .paper-accordion-panel {
     padding: 0 1rem 1rem;
   }
-}
+  }
