@@ -1334,6 +1334,142 @@ h3 {
 }
 
 /* =========================
+   KEYWORD HIGHLIGHT — BAB 3
+========================= */
+
+.kw-b3-tokoh {
+  color: #9f1239;
+  background: rgba(255, 228, 230, 0.92);
+}
+
+.kw-b3-tahun {
+  color: #3458b2;
+  background: rgba(219, 232, 255, 0.94);
+}
+
+.kw-b3-tempat {
+  color: #166534;
+  background: rgba(220, 252, 231, 0.92);
+}
+
+.kw-b3-peristiwa {
+  color: #b35c1e;
+  background: rgba(255, 230, 207, 0.94);
+}
+
+.kw-b3-ideologi {
+  color: #7c35b2;
+  background: rgba(242, 222, 252, 0.94);
+}
+
+.kw-b3-pertubuhan {
+  color: #5f3eb2;
+  background: rgba(231, 222, 252, 0.94);
+}
+
+.kw-b3-perjanjian {
+  color: #2f7f86;
+  background: rgba(217, 243, 244, 0.94);
+}
+
+.kw-b3-istilah {
+  color: #0f766e;
+  background: rgba(204, 251, 241, 0.94);
+}
+
+.kw-b3-karya {
+  color: #92400e;
+  background: rgba(254, 243, 199, 0.94);
+}
+
+/* supaya keyword Bab 3 ikut saiz teks semasa */
+.paper-chip .kw-b3-tokoh,
+.paper-chip .kw-b3-tahun,
+.paper-chip .kw-b3-tempat,
+.paper-chip .kw-b3-peristiwa,
+.paper-chip .kw-b3-ideologi,
+.paper-chip .kw-b3-pertubuhan,
+.paper-chip .kw-b3-perjanjian,
+.paper-chip .kw-b3-istilah,
+.paper-chip .kw-b3-karya,
+.point-line .kw-b3-tokoh,
+.point-line .kw-b3-tahun,
+.point-line .kw-b3-tempat,
+.point-line .kw-b3-peristiwa,
+.point-line .kw-b3-ideologi,
+.point-line .kw-b3-pertubuhan,
+.point-line .kw-b3-perjanjian,
+.point-line .kw-b3-istilah,
+.point-line .kw-b3-karya,
+.lead .kw-b3-tokoh,
+.lead .kw-b3-tahun,
+.lead .kw-b3-tempat,
+.lead .kw-b3-peristiwa,
+.lead .kw-b3-ideologi,
+.lead .kw-b3-pertubuhan,
+.lead .kw-b3-perjanjian,
+.lead .kw-b3-istilah,
+.lead .kw-b3-karya,
+.emoji-point-list .kw-b3-tokoh,
+.emoji-point-list .kw-b3-tahun,
+.emoji-point-list .kw-b3-tempat,
+.emoji-point-list .kw-b3-peristiwa,
+.emoji-point-list .kw-b3-ideologi,
+.emoji-point-list .kw-b3-pertubuhan,
+.emoji-point-list .kw-b3-perjanjian,
+.emoji-point-list .kw-b3-istilah,
+.emoji-point-list .kw-b3-karya,
+.answer-paper .kw-b3-tokoh,
+.answer-paper .kw-b3-tahun,
+.answer-paper .kw-b3-tempat,
+.answer-paper .kw-b3-peristiwa,
+.answer-paper .kw-b3-ideologi,
+.answer-paper .kw-b3-pertubuhan,
+.answer-paper .kw-b3-perjanjian,
+.answer-paper .kw-b3-istilah,
+.answer-paper .kw-b3-karya,
+.paper-kingdom .kw-b3-tokoh,
+.paper-kingdom .kw-b3-tahun,
+.paper-kingdom .kw-b3-tempat,
+.paper-kingdom .kw-b3-peristiwa,
+.paper-kingdom .kw-b3-ideologi,
+.paper-kingdom .kw-b3-pertubuhan,
+.paper-kingdom .kw-b3-perjanjian,
+.paper-kingdom .kw-b3-istilah,
+.paper-kingdom .kw-b3-karya,
+.paper-timeline-panel .kw-b3-tokoh,
+.paper-timeline-panel .kw-b3-tahun,
+.paper-timeline-panel .kw-b3-tempat,
+.paper-timeline-panel .kw-b3-peristiwa,
+.paper-timeline-panel .kw-b3-ideologi,
+.paper-timeline-panel .kw-b3-pertubuhan,
+.paper-timeline-panel .kw-b3-perjanjian,
+.paper-timeline-panel .kw-b3-istilah,
+.paper-timeline-panel .kw-b3-karya,
+.paper-accordion-panel .kw-b3-tokoh,
+.paper-accordion-panel .kw-b3-tahun,
+.paper-accordion-panel .kw-b3-tempat,
+.paper-accordion-panel .kw-b3-peristiwa,
+.paper-accordion-panel .kw-b3-ideologi,
+.paper-accordion-panel .kw-b3-pertubuhan,
+.paper-accordion-panel .kw-b3-perjanjian,
+.paper-accordion-panel .kw-b3-istilah,
+.paper-accordion-panel .kw-b3-karya,
+.keyword-legend-item .kw-b3-tokoh,
+.keyword-legend-item .kw-b3-tahun,
+.keyword-legend-item .kw-b3-tempat,
+.keyword-legend-item .kw-b3-peristiwa,
+.keyword-legend-item .kw-b3-ideologi,
+.keyword-legend-item .kw-b3-pertubuhan,
+.keyword-legend-item .kw-b3-perjanjian,
+.keyword-legend-item .kw-b3-istilah,
+.keyword-legend-item .kw-b3-karya {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: 700;
+}
+
+/* =========================
    KEYWORD LEGEND
 ========================= */
 
