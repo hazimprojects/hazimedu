@@ -173,7 +173,9 @@ if (revealElements.length) {
   const isReadingPage =
     path.includes("/notes/bab-") &&
     !path.endsWith("/notes/bab-1.html") &&
-    !path.endsWith("/notes/bab-1");
+    !path.endsWith("/notes/bab-1") &&
+    !path.endsWith("/notes/bab-2.html") &&
+    !path.endsWith("/notes/bab-2");
 
   if (!isReadingPage) return;
 
