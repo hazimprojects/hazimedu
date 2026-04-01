@@ -847,6 +847,15 @@ span.paper-chip {
   max-width: min(100%, 30rem);
 }
 
+.paper-accordion-panel span.paper-chip,
+.answer-paper span.paper-chip,
+.info-paper span.paper-chip,
+.glossary-paper span.paper-chip {
+  width: fit-content;
+  max-width: max-content;
+  flex: 0 0 auto;
+}
+
 .paper-chip-list.inline-chips {
   display: flex;
   flex-wrap: wrap;
@@ -2081,6 +2090,15 @@ span.paper-chip {
     width: fit-content;
     max-width: 100%;
     flex: 0 1 auto;
+  }
+
+  .paper-accordion-panel span.paper-chip,
+  .answer-paper span.paper-chip,
+  .info-paper span.paper-chip,
+  .glossary-paper span.paper-chip {
+    width: fit-content;
+    max-width: max-content;
+    flex: 0 0 auto;
   }
 
   /* Compact inline chips — override single-column panel rule */
