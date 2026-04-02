@@ -3010,3 +3010,298 @@ html[data-theme="dark"] body.bab-theme-3 .bab-card-top {
   color: #ccd7e1 !important;
   border: 1px solid rgba(204, 215, 225, 0.14) !important;
 }
+
+/* =========================================================
+   RICH BAB BACKGROUND THEMES
+   Letak PALING BAWAH style.css
+========================================================= */
+
+/* ---------- Surface kekal lebih menonjol ---------- */
+
+body.bab-theme-1,
+body.bab-theme-2,
+body.bab-theme-3 {
+  background-color: #efe9de;
+}
+
+body.bab-theme-1 .paper-board,
+body.bab-theme-1 .paper-flap-card,
+body.bab-theme-1 .paper-accordion-item,
+body.bab-theme-1 .paper-tab,
+body.bab-theme-1 .paper-tab-panel,
+body.bab-theme-1 .paper-process-card,
+body.bab-theme-1 .paper-process-panel,
+body.bab-theme-1 .paper-timeline-node,
+body.bab-theme-1 .paper-chip,
+body.bab-theme-1 .keyword-legend-wrap,
+body.bab-theme-1 .mindmap-card,
+body.bab-theme-1 .paper-flow-card,
+body.bab-theme-1 .org-node,
+body.bab-theme-1 .metric-card,
+body.bab-theme-1 .editorial-card,
+body.bab-theme-1 .audience-card,
+body.bab-theme-1 .note-card,
+body.bab-theme-1 .value-card,
+body.bab-theme-1 .content-block,
+body.bab-theme-2 .paper-board,
+body.bab-theme-2 .paper-flap-card,
+body.bab-theme-2 .paper-accordion-item,
+body.bab-theme-2 .paper-tab,
+body.bab-theme-2 .paper-tab-panel,
+body.bab-theme-2 .paper-process-card,
+body.bab-theme-2 .paper-process-panel,
+body.bab-theme-2 .paper-timeline-node,
+body.bab-theme-2 .paper-chip,
+body.bab-theme-2 .keyword-legend-wrap,
+body.bab-theme-2 .mindmap-card,
+body.bab-theme-2 .paper-flow-card,
+body.bab-theme-2 .org-node,
+body.bab-theme-2 .metric-card,
+body.bab-theme-2 .editorial-card,
+body.bab-theme-2 .audience-card,
+body.bab-theme-2 .note-card,
+body.bab-theme-2 .value-card,
+body.bab-theme-2 .content-block,
+body.bab-theme-3 .paper-board,
+body.bab-theme-3 .paper-flap-card,
+body.bab-theme-3 .paper-accordion-item,
+body.bab-theme-3 .paper-tab,
+body.bab-theme-3 .paper-tab-panel,
+body.bab-theme-3 .paper-process-card,
+body.bab-theme-3 .paper-process-panel,
+body.bab-theme-3 .paper-timeline-node,
+body.bab-theme-3 .paper-chip,
+body.bab-theme-3 .keyword-legend-wrap,
+body.bab-theme-3 .mindmap-card,
+body.bab-theme-3 .paper-flow-card,
+body.bab-theme-3 .org-node,
+body.bab-theme-3 .metric-card,
+body.bab-theme-3 .editorial-card,
+body.bab-theme-3 .audience-card,
+body.bab-theme-3 .note-card,
+body.bab-theme-3 .value-card,
+body.bab-theme-3 .content-block {
+  background: rgba(255, 252, 247, 0.88);
+  border-color: rgba(92, 110, 132, 0.14);
+  box-shadow: 0 16px 36px rgba(36, 49, 63, 0.12);
+}
+
+/* =========================================================
+   BAB 1 — WARISAN NEGARA BANGSA
+   motif: manuskrip + awan larat + mohor
+========================================================= */
+
+body.bab-theme-1 {
+  background-image:
+    radial-gradient(circle at 8% 12%, rgba(63, 125, 95, 0.18), transparent 0 18%),
+    radial-gradient(circle at 88% 14%, rgba(198, 153, 62, 0.18), transparent 0 16%),
+    radial-gradient(circle at 18% 78%, rgba(110, 78, 53, 0.10), transparent 0 15%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='640' viewBox='0 0 640 640'%3E%3Crect width='640' height='640' fill='none'/%3E%3Cg opacity='0.17'%3E%3Cpath d='M78 96c28-22 58-22 86 0 28 22 58 22 86 0 28-22 58-22 86 0 28 22 58 22 86 0' fill='none' stroke='%23846a3d' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M78 148c28-22 58-22 86 0 28 22 58 22 86 0 28-22 58-22 86 0 28 22 58 22 86 0' fill='none' stroke='%23846a3d' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M78 200c28-22 58-22 86 0 28 22 58 22 86 0 28-22 58-22 86 0 28 22 58 22 86 0' fill='none' stroke='%23846a3d' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='520' cy='136' r='56' fill='none' stroke='%23506f58' stroke-width='4'/%3E%3Ccircle cx='520' cy='136' r='30' fill='none' stroke='%23506f58' stroke-width='3'/%3E%3Cpath d='M520 80v112M464 136h112' stroke='%23506f58' stroke-width='3'/%3E%3Cpath d='M120 432c22-16 42-24 60-24 20 0 38 8 54 24 16 16 34 24 54 24 18 0 38-8 60-24 22-16 42-24 60-24 20 0 38 8 54 24' fill='none' stroke='%23906f46' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M120 486c22-16 42-24 60-24 20 0 38 8 54 24 16 16 34 24 54 24 18 0 38-8 60-24 22-16 42-24 60-24 20 0 38 8 54 24' fill='none' stroke='%23906f46' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M84 566c48-18 94-18 142 0 48 18 94 18 142 0 48-18 94-18 142 0' fill='none' stroke='%235d7d6e' stroke-width='3' stroke-linecap='round'/%3E%3C/g%3E%3Cg opacity='0.08'%3E%3Cpath d='M84 280h472M84 306h472M84 332h472M84 358h472' stroke='%236e6151' stroke-width='2' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E"),
+    linear-gradient(180deg, #f1eadb 0%, #e7dfcf 100%);
+  background-size:
+    auto,
+    auto,
+    auto,
+    620px 620px,
+    cover;
+  background-position:
+    left top,
+    right top,
+    left bottom,
+    center top,
+    center center;
+  background-repeat:
+    no-repeat,
+    no-repeat,
+    no-repeat,
+    repeat,
+    no-repeat;
+  background-attachment:
+    fixed,
+    fixed,
+    fixed,
+    scroll,
+    scroll;
+}
+
+/* =========================================================
+   BAB 2 — KEBANGKITAN NASIONALISME
+   motif: akhbar + dakwat + editorial structure
+========================================================= */
+
+body.bab-theme-2 {
+  background-image:
+    radial-gradient(circle at 10% 10%, rgba(54, 99, 170, 0.16), transparent 0 18%),
+    radial-gradient(circle at 90% 16%, rgba(48, 130, 108, 0.15), transparent 0 15%),
+    radial-gradient(circle at 22% 82%, rgba(159, 105, 48, 0.10), transparent 0 14%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='760' height='640' viewBox='0 0 760 640'%3E%3Crect width='760' height='640' fill='none'/%3E%3Cg opacity='0.16'%3E%3Crect x='40' y='52' width='280' height='180' rx='12' fill='none' stroke='%23476284' stroke-width='3'/%3E%3Cline x1='64' y1='84' x2='296' y2='84' stroke='%23476284' stroke-width='3' stroke-linecap='round'/%3E%3Cline x1='64' y1='114' x2='280' y2='114' stroke='%23476284' stroke-width='3' stroke-linecap='round'/%3E%3Cline x1='64' y1='144' x2='292' y2='144' stroke='%23476284' stroke-width='3' stroke-linecap='round'/%3E%3Cline x1='64' y1='174' x2='250' y2='174' stroke='%23476284' stroke-width='3' stroke-linecap='round'/%3E%3Crect x='378' y='58' width='330' height='164' rx='14' fill='none' stroke='%232f7a67' stroke-width='3'/%3E%3Cpath d='M402 92h282M402 124h250M402 156h268M402 188h210' stroke='%232f7a67' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M70 350c42-18 82-18 124 0 42 18 82 18 124 0 42-18 82-18 124 0 42 18 82 18 124 0' fill='none' stroke='%23ad7334' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M70 404c42-18 82-18 124 0 42 18 82 18 124 0 42-18 82-18 124 0 42 18 82 18 124 0' fill='none' stroke='%23ad7334' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M88 500c60 0 96 18 132 36 36 18 72 36 132 36 60 0 96-18 132-36 36-18 72-36 132-36' fill='none' stroke='%2350776d' stroke-width='3' stroke-linecap='round'/%3E%3C/g%3E%3Cg opacity='0.08'%3E%3Cline x1='0' y1='0' x2='760' y2='640' stroke='%23626d78' stroke-width='2'/%3E%3Cline x1='120' y1='0' x2='760' y2='540' stroke='%23626d78' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E"),
+    linear-gradient(180deg, #efe8dc 0%, #e3dacb 100%);
+  background-size:
+    auto,
+    auto,
+    auto,
+    720px 600px,
+    cover;
+  background-position:
+    left top,
+    right top,
+    left bottom,
+    center top,
+    center center;
+  background-repeat:
+    no-repeat,
+    no-repeat,
+    no-repeat,
+    repeat,
+    no-repeat;
+  background-attachment:
+    fixed,
+    fixed,
+    fixed,
+    scroll,
+    scroll;
+}
+
+/* =========================================================
+   BAB 3 — KONFLIK DUNIA & PENDUDUKAN JEPUN
+   motif: peta perang + laluan + dokumen strategi
+========================================================= */
+
+body.bab-theme-3 {
+  background-image:
+    radial-gradient(circle at 10% 10%, rgba(79, 104, 132, 0.18), transparent 0 18%),
+    radial-gradient(circle at 88% 14%, rgba(114, 128, 84, 0.16), transparent 0 16%),
+    radial-gradient(circle at 20% 84%, rgba(148, 90, 72, 0.12), transparent 0 15%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='760' height='660' viewBox='0 0 760 660'%3E%3Crect width='760' height='660' fill='none'/%3E%3Cg opacity='0.16'%3E%3Cpath d='M78 120c48-30 110-42 172-30 32 6 58 4 92-8 34-12 64-16 104-8 36 8 74 24 114 48' fill='none' stroke='%23576780' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M98 200c58 16 118 22 178 12 38-6 70-2 110 10 38 12 84 18 138 10' fill='none' stroke='%23576780' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M112 296c42-22 88-32 138-28 44 4 80-2 124-20 42-18 86-24 142-18' fill='none' stroke='%23576780' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M122 404c26-12 50-18 78-18 30 0 56-8 86-26 30-18 62-28 104-30 38-2 74 6 116 26' fill='none' stroke='%23576780' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M184 96l64 24-64 26' fill='none' stroke='%23905d4a' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M402 262l90-34' fill='none' stroke='%23905d4a' stroke-width='4' stroke-linecap='round'/%3E%3Cpath d='M482 228l14 36-38 0' fill='none' stroke='%23905d4a' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='152' cy='228' r='10' fill='none' stroke='%235a6f68' stroke-width='3'/%3E%3Ccircle cx='326' cy='174' r='10' fill='none' stroke='%235a6f68' stroke-width='3'/%3E%3Ccircle cx='564' cy='422' r='10' fill='none' stroke='%235a6f68' stroke-width='3'/%3E%3Crect x='72' y='514' width='272' height='90' rx='14' fill='none' stroke='%235a6f68' stroke-width='3'/%3E%3Cpath d='M102 544h212M102 572h182' stroke='%235a6f68' stroke-width='3' stroke-linecap='round'/%3E%3C/g%3E%3Cg opacity='0.07'%3E%3Cpath d='M0 110h760M0 220h760M0 330h760M0 440h760M0 550h760' stroke='%23656b72' stroke-width='2'/%3E%3Cpath d='M90 0v660M220 0v660M350 0v660M480 0v660M610 0v660' stroke='%23656b72' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E"),
+    linear-gradient(180deg, #ece5d8 0%, #dfd5c6 100%);
+  background-size:
+    auto,
+    auto,
+    auto,
+    720px 620px,
+    cover;
+  background-position:
+    left top,
+    right top,
+    left bottom,
+    center top,
+    center center;
+  background-repeat:
+    no-repeat,
+    no-repeat,
+    no-repeat,
+    repeat,
+    no-repeat;
+  background-attachment:
+    fixed,
+    fixed,
+    fixed,
+    scroll,
+    scroll;
+}
+
+/* ---------- Bezakan header daripada background ---------- */
+
+body.bab-theme-1 .site-header {
+  background: rgba(246, 241, 232, 0.86);
+}
+
+body.bab-theme-2 .site-header {
+  background: rgba(243, 238, 229, 0.86);
+}
+
+body.bab-theme-3 .site-header {
+  background: rgba(241, 235, 225, 0.86);
+}
+
+/* ---------- Dark mode: background kekal kaya, surface kekal menonjol ---------- */
+
+html[data-theme="dark"] body.bab-theme-1 .paper-board,
+html[data-theme="dark"] body.bab-theme-1 .paper-flap-card,
+html[data-theme="dark"] body.bab-theme-1 .paper-accordion-item,
+html[data-theme="dark"] body.bab-theme-1 .paper-tab,
+html[data-theme="dark"] body.bab-theme-1 .paper-tab-panel,
+html[data-theme="dark"] body.bab-theme-1 .paper-process-card,
+html[data-theme="dark"] body.bab-theme-1 .paper-process-panel,
+html[data-theme="dark"] body.bab-theme-1 .paper-timeline-node,
+html[data-theme="dark"] body.bab-theme-1 .paper-chip,
+html[data-theme="dark"] body.bab-theme-1 .keyword-legend-wrap,
+html[data-theme="dark"] body.bab-theme-1 .mindmap-card,
+html[data-theme="dark"] body.bab-theme-1 .paper-flow-card,
+html[data-theme="dark"] body.bab-theme-1 .org-node,
+html[data-theme="dark"] body.bab-theme-1 .metric-card,
+html[data-theme="dark"] body.bab-theme-1 .editorial-card,
+html[data-theme="dark"] body.bab-theme-1 .audience-card,
+html[data-theme="dark"] body.bab-theme-1 .note-card,
+html[data-theme="dark"] body.bab-theme-1 .value-card,
+html[data-theme="dark"] body.bab-theme-1 .content-block,
+html[data-theme="dark"] body.bab-theme-2 .paper-board,
+html[data-theme="dark"] body.bab-theme-2 .paper-flap-card,
+html[data-theme="dark"] body.bab-theme-2 .paper-accordion-item,
+html[data-theme="dark"] body.bab-theme-2 .paper-tab,
+html[data-theme="dark"] body.bab-theme-2 .paper-tab-panel,
+html[data-theme="dark"] body.bab-theme-2 .paper-process-card,
+html[data-theme="dark"] body.bab-theme-2 .paper-process-panel,
+html[data-theme="dark"] body.bab-theme-2 .paper-timeline-node,
+html[data-theme="dark"] body.bab-theme-2 .paper-chip,
+html[data-theme="dark"] body.bab-theme-2 .keyword-legend-wrap,
+html[data-theme="dark"] body.bab-theme-2 .mindmap-card,
+html[data-theme="dark"] body.bab-theme-2 .paper-flow-card,
+html[data-theme="dark"] body.bab-theme-2 .org-node,
+html[data-theme="dark"] body.bab-theme-2 .metric-card,
+html[data-theme="dark"] body.bab-theme-2 .editorial-card,
+html[data-theme="dark"] body.bab-theme-2 .audience-card,
+html[data-theme="dark"] body.bab-theme-2 .note-card,
+html[data-theme="dark"] body.bab-theme-2 .value-card,
+html[data-theme="dark"] body.bab-theme-2 .content-block,
+html[data-theme="dark"] body.bab-theme-3 .paper-board,
+html[data-theme="dark"] body.bab-theme-3 .paper-flap-card,
+html[data-theme="dark"] body.bab-theme-3 .paper-accordion-item,
+html[data-theme="dark"] body.bab-theme-3 .paper-tab,
+html[data-theme="dark"] body.bab-theme-3 .paper-tab-panel,
+html[data-theme="dark"] body.bab-theme-3 .paper-process-card,
+html[data-theme="dark"] body.bab-theme-3 .paper-process-panel,
+html[data-theme="dark"] body.bab-theme-3 .paper-timeline-node,
+html[data-theme="dark"] body.bab-theme-3 .paper-chip,
+html[data-theme="dark"] body.bab-theme-3 .keyword-legend-wrap,
+html[data-theme="dark"] body.bab-theme-3 .mindmap-card,
+html[data-theme="dark"] body.bab-theme-3 .paper-flow-card,
+html[data-theme="dark"] body.bab-theme-3 .org-node,
+html[data-theme="dark"] body.bab-theme-3 .metric-card,
+html[data-theme="dark"] body.bab-theme-3 .editorial-card,
+html[data-theme="dark"] body.bab-theme-3 .audience-card,
+html[data-theme="dark"] body.bab-theme-3 .note-card,
+html[data-theme="dark"] body.bab-theme-3 .value-card,
+html[data-theme="dark"] body.bab-theme-3 .content-block {
+  background: rgba(29, 27, 24, 0.88) !important;
+  border-color: rgba(220, 210, 190, 0.12) !important;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.24) !important;
+}
+
+html[data-theme="dark"] body.bab-theme-1 .site-header,
+html[data-theme="dark"] body.bab-theme-2 .site-header,
+html[data-theme="dark"] body.bab-theme-3 .site-header {
+  background: rgba(24, 23, 20, 0.90) !important;
+}
+
+/* ---------- Mobile: corak kekal ada tapi lebih ringan ---------- */
+
+@media (max-width: 760px) {
+  body.bab-theme-1 {
+    background-size: auto, auto, auto, 420px 420px, cover;
+  }
+
+  body.bab-theme-2 {
+    background-size: auto, auto, auto, 500px 420px, cover;
+  }
+
+  body.bab-theme-3 {
+    background-size: auto, auto, auto, 500px 430px, cover;
+  }
+
+  body.bab-theme-1,
+  body.bab-theme-2,
+  body.bab-theme-3 {
+    background-attachment: scroll, scroll, scroll, scroll, scroll;
+  }
+}
