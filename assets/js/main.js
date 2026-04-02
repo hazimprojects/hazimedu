@@ -117,13 +117,6 @@ document.addEventListener("DOMContentLoaded", function () {
 // =========================
 const accordionTriggers = document.querySelectorAll(".paper-accordion-trigger");
 
-// Elak butang ambil focus yang boleh gerakkan viewport pada sesetengah browser/mobile
-accordionTriggers.forEach((trigger) => {
-  trigger.addEventListener("pointerdown", (e) => {
-    e.preventDefault();
-  });
-});
-
 accordionTriggers.forEach((trigger) => {
   trigger.addEventListener("click", () => {
     const targetId = trigger.getAttribute("data-accordion");
@@ -140,6 +133,9 @@ accordionTriggers.forEach((trigger) => {
 
     // Simpan posisi trigger sebelum layout berubah
     const beforeTop = trigger.getBoundingClientRect().top;
+
+    // Matikan smooth scroll sementara supaya pampasan scroll tidak "meluncur"
+    document.documentElement.classList.add("accordion-no-smooth-scroll");
 
     // Tutup hanya accordion tahap ini
     accordionGroup.querySelectorAll(":scope > .paper-accordion-item").forEach((item) => {
@@ -167,36 +163,29 @@ accordionTriggers.forEach((trigger) => {
       targetPanel.classList.add("active");
     }
 
-    // Fokus semula tanpa scroll
-    if (typeof trigger.focus === "function") {
-      try {
-        trigger.focus({ preventScroll: true });
-      } catch {
-        trigger.focus();
-      }
-    }
+    // Buang fokus supaya tak muncul box hitam / focus ring
+    trigger.blur();
 
-    // Matlamat: kedudukan trigger kekal pada tempat yang sama dalam viewport
-    document.documentElement.classList.add("accordion-scroll-lock");
-    document.body.classList.add("accordion-scroll-lock");
-
+    // Kekalkan trigger pada kedudukan yang sama dalam viewport
     const start = performance.now();
-    const DURATION = 500; // lebih sedikit daripada transition CSS
+    const DURATION = 450;
 
     function keepTriggerStable(now) {
       const afterTop = trigger.getBoundingClientRect().top;
       const delta = afterTop - beforeTop;
 
-      // Pampas layout shift supaya trigger kekal pada tempat sama
       if (Math.abs(delta) > 0.5) {
-        window.scrollBy(0, delta);
+        window.scrollTo({
+          top: window.scrollY + delta,
+          behavior: "instant"
+        });
       }
 
       if (now - start < DURATION) {
         requestAnimationFrame(keepTriggerStable);
       } else {
-        document.documentElement.classList.remove("accordion-scroll-lock");
-        document.body.classList.remove("accordion-scroll-lock");
+        // kemas semula
+        document.documentElement.classList.remove("accordion-no-smooth-scroll");
       }
     }
 
