@@ -131,8 +131,9 @@ accordionTriggers.forEach((trigger) => {
 
     const isOpen = currentItem.classList.contains("is-open");
 
-    // Simpan posisi trigger sebelum layout berubah
-    const beforeTop = trigger.getBoundingClientRect().top;
+    // Kunci scroll semasa supaya page tidak bergerak langsung
+    const lockedScrollY = window.scrollY;
+    const lockedScrollX = window.scrollX;
 
     // Tutup hanya accordion tahap ini
     accordionGroup.querySelectorAll(":scope > .paper-accordion-item").forEach((item) => {
@@ -152,7 +153,7 @@ accordionTriggers.forEach((trigger) => {
         panel.classList.remove("active");
       });
 
-    // Jika belum terbuka, buka item ini
+    // Jika item tadi belum terbuka, buka item itu
     if (!isOpen) {
       currentItem.classList.add("is-open");
       trigger.classList.add("active");
@@ -160,24 +161,25 @@ accordionTriggers.forEach((trigger) => {
       targetPanel.classList.add("active");
     }
 
-    // Stabilkan posisi bacaan sepanjang animasi accordion
+    // Pastikan browser tidak alih fokus hingga gerakkan viewport
+    trigger.blur();
+
+    // Kunci kedudukan halaman sepanjang animasi accordion
     const start = performance.now();
-    const DURATION = 450;
+    const DURATION = 500;
 
-    function stabilizeScroll(now) {
-      const afterTop = trigger.getBoundingClientRect().top;
-      const delta = beforeTop - afterTop; // <- ini yang betul
-
-      if (Math.abs(delta) > 1) {
-        window.scrollBy(0, delta);
-      }
+    function lockPagePosition(now) {
+      window.scrollTo(lockedScrollX, lockedScrollY);
 
       if (now - start < DURATION) {
-        requestAnimationFrame(stabilizeScroll);
+        requestAnimationFrame(lockPagePosition);
+      } else {
+        // pastikan posisi akhir kekal tepat
+        window.scrollTo(lockedScrollX, lockedScrollY);
       }
     }
 
-    requestAnimationFrame(stabilizeScroll);
+    requestAnimationFrame(lockPagePosition);
   });
 });
 
