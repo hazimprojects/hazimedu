@@ -1741,9 +1741,20 @@ span.paper-chip {
   overflow-anchor: none;
 }
 
-html.accordion-scroll-lock,
-body.accordion-scroll-lock {
-  overflow-anchor: none;
+.paper-accordion-trigger {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+.paper-accordion-trigger:focus,
+.paper-accordion-trigger:focus-visible,
+.paper-accordion-trigger:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+html.accordion-no-smooth-scroll {
+  scroll-behavior: auto !important;
 }
 
 /* =========================
