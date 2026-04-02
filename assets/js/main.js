@@ -116,11 +116,7 @@ accordionTriggers.forEach((trigger) => {
 
     if (!accordionGroup || !currentItem) return;
 
-    // Simpan kedudukan trigger button relative to viewport SEBELUM DOM berubah
-    const triggerRectBefore = trigger.getBoundingClientRect();
-    const triggerOffsetFromTop = triggerRectBefore.top;
-
-    // Tutup semua
+    // Tutup semua — max-height CSS transition handle animasi
     accordionGroup.querySelectorAll(".paper-accordion-item").forEach((item) => item.classList.remove("is-open"));
     accordionGroup.querySelectorAll(".paper-accordion-trigger").forEach((item) => {
       item.classList.remove("active");
@@ -135,16 +131,6 @@ accordionTriggers.forEach((trigger) => {
       trigger.setAttribute("aria-expanded", "true");
       targetPanel.classList.add("active");
     }
-
-    // Selepas DOM update, anchor semula scroll supaya trigger kekal
-    // di kedudukan visual yang sama — mata tidak melompat
-    requestAnimationFrame(() => {
-      const triggerRectAfter = trigger.getBoundingClientRect();
-      const drift = triggerRectAfter.top - triggerOffsetFromTop;
-      if (Math.abs(drift) > 1) {
-        window.scrollBy({ top: drift, behavior: "instant" });
-      }
-    });
   });
 });
 
