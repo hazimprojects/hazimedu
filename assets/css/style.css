@@ -197,48 +197,43 @@ select {
 }
 
 /* =========================
-   DISPLAY PANEL — Floating
+   DISPLAY PANEL — Nav inline
    Kindle/iBooks style brightness + warmth control
 ========================= */
 
 .display-fab {
-  position: fixed;
-  right: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 80;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 36px;
   height: 36px;
   border-radius: 12px;
   border: 1px solid var(--line-strong);
   background: var(--paper);
-  box-shadow: var(--shadow-medium);
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.35s ease, border-color 0.35s ease;
-  backdrop-filter: blur(10px);
+  font-size: 1.1rem;
+  line-height: 1;
+  flex-shrink: 0;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .display-fab:hover {
-  transform: translateY(-50%) scale(1.08);
-  box-shadow: var(--shadow-strong);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-soft);
 }
 
 .display-fab.is-open {
-  transform: translateY(-50%) scale(1.05);
   border-color: rgba(47, 122, 103, 0.4);
+  background: rgba(47, 122, 103, 0.08);
 }
 
 .display-panel {
-  position: fixed;
-  right: 60px;
-  top: 50%;
-  transform: translateY(-50%) scale(0.94);
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
   z-index: 79;
-  width: 220px;
+  width: 230px;
   padding: 1.1rem;
   border-radius: 20px;
   background: var(--paper);
@@ -247,13 +242,20 @@ select {
   backdrop-filter: blur(16px);
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.22s ease, transform 0.22s ease, background 0.35s ease;
+  transform: translateY(-6px) scale(0.97);
+  transform-origin: top right;
+  transition: opacity 0.2s ease, transform 0.2s ease, background 0.35s ease;
 }
 
 .display-panel.is-open {
   opacity: 1;
   pointer-events: auto;
-  transform: translateY(-50%) scale(1);
+  transform: translateY(0) scale(1);
+}
+
+/* Wrapper supaya panel positioning bekerja */
+.display-wrap {
+  position: relative;
 }
 
 .display-panel-title {
@@ -363,24 +365,11 @@ select {
 }
 
 @media (max-width: 760px) {
-  .display-fab {
-    right: 12px;
-    top: auto;
-    bottom: 72px;
-    transform: none;
-  }
-  .display-fab:hover { transform: scale(1.08); }
-  .display-fab.is-open { transform: scale(1.05); border-color: rgba(47, 122, 103, 0.4); }
   .display-panel {
-    right: 12px;
-    top: auto;
-    bottom: 118px;
-    transform: scale(0.94);
-    transform-origin: bottom right;
-    width: calc(100vw - 24px);
-    max-width: 300px;
+    right: 0;
+    width: calc(100vw - 2rem);
+    max-width: 280px;
   }
-  .display-panel.is-open { transform: scale(1); }
 }
 
 /* =========================
