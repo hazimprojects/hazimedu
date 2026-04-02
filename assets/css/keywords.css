@@ -1,0 +1,143 @@
+/* =========================
+   KEYWORD HIGHLIGHT
+========================= */
+
+.kw {
+  display: inline;
+  padding: 0 0.08em;
+  margin: 0;
+  border-radius: 0.14em;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: 700;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* Bab 1 */
+.kw-tokoh { color: #9f1239; background: rgba(255, 228, 230, 0.92); }
+.kw-masa { color: #1d4ed8; background: rgba(219, 234, 254, 0.92); }
+.kw-tempat { color: #166534; background: rgba(220, 252, 231, 0.92); }
+.kw-konsep { color: #c2410c; background: rgba(255, 237, 213, 0.94); }
+.kw-kerajaan { color: #6d28d9; background: rgba(237, 233, 254, 0.94); }
+.kw-istilah { color: #0f766e; background: rgba(204, 251, 241, 0.94); }
+
+
+/* Bab 2 */
+.kw-tahun { color: #3458b2; background: rgba(219, 232, 255, 0.94); }
+.kw-peristiwa { color: #b35c1e; background: rgba(255, 230, 207, 0.94); }
+.kw-gerakan { color: #7c35b2; background: rgba(242, 222, 252, 0.94); }
+.kw-pertubuhan { color: #5f3eb2; background: rgba(231, 222, 252, 0.94); }
+.kw-karya { color: #2f7f86; background: rgba(217, 243, 244, 0.94); }
+
+
+.paper-chip .kw, .point-line .kw, .lead .kw,
+.emoji-point-list .kw, .answer-paper .kw, .paper-kingdom .kw,
+.paper-timeline-panel .kw, .paper-accordion-panel .kw, .keyword-legend-item .kw {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: 700;
+}
+
+/* =========================
+   KEYWORD HIGHLIGHT — BAB 3
+========================= */
+
+.kw-b3-tokoh { color: #9f1239; background: rgba(255, 228, 230, 0.92); }
+.kw-b3-tahun { color: #3458b2; background: rgba(219, 232, 255, 0.94); }
+.kw-b3-tempat { color: #166534; background: rgba(220, 252, 231, 0.92); }
+.kw-b3-peristiwa { color: #b35c1e; background: rgba(255, 230, 207, 0.94); }
+.kw-b3-ideologi { color: #7c35b2; background: rgba(242, 222, 252, 0.94); }
+.kw-b3-pertubuhan { color: #5f3eb2; background: rgba(231, 222, 252, 0.94); }
+.kw-b3-perjanjian { color: #2f7f86; background: rgba(217, 243, 244, 0.94); }
+.kw-b3-istilah { color: #0f766e; background: rgba(204, 251, 241, 0.94); }
+.kw-b3-karya { color: #92400e; background: rgba(254, 243, 199, 0.94); }
+
+
+[class^="kw-b3-"] {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: 700;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* =========================
+   IDENTITI BLOK PERANG
+========================= */
+
+.bloc-central, .bloc-triple-entente, .bloc-axis, .bloc-allies {
+  display: inline;
+  padding: 0 0.04em;
+  border-radius: 0.12em;
+  font-weight: 700;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.bloc-central { color: #334155; background: rgba(226, 232, 240, 0.58); }
+.bloc-triple-entente { color: #166534; background: rgba(220, 252, 231, 0.58); }
+.bloc-axis { color: #991b1b; background: rgba(254, 226, 226, 0.58); }
+.bloc-allies { color: #1d4ed8; background: rgba(219, 234, 254, 0.58); }
+
+
+.paper-chip.bloc-chip-central { color: #334155; background: linear-gradient(135deg, #f8fafc, #e2e8f0); border-color: rgba(71, 85, 105, 0.22); }
+.paper-chip.bloc-chip-entente { color: #14532d; background: linear-gradient(135deg, #f0fdf4, #dcfce7); border-color: rgba(22, 101, 52, 0.20); }
+.paper-chip.bloc-chip-axis { color: #991b1b; background: linear-gradient(135deg, #fef2f2, #fee2e2); border-color: rgba(153, 27, 27, 0.20); }
+.paper-chip.bloc-chip-allies { color: #1d4ed8; background: linear-gradient(135deg, #eff6ff, #dbeafe); border-color: rgba(29, 78, 216, 0.20); }
+
+
+.bloc-box { padding: 0.9rem 1rem; border-radius: 18px; border: 1px solid transparent; box-shadow: var(--shadow-soft); transition: background 0.35s ease; }
+.bloc-box-central { background: linear-gradient(135deg, #f8fafc, #e2e8f0); border-color: rgba(71, 85, 105, 0.18); }
+.bloc-box-entente { background: linear-gradient(135deg, #f0fdf4, #dcfce7); border-color: rgba(22, 101, 52, 0.18); }
+.bloc-box-axis { background: linear-gradient(135deg, #fef2f2, #fee2e2); border-color: rgba(153, 27, 27, 0.18); }
+.bloc-box-allies { background: linear-gradient(135deg, #eff6ff, #dbeafe); border-color: rgba(29, 78, 216, 0.18); }
+
+
+.bloc-legend-grid { display: flex; flex-wrap: wrap; gap: 0.55rem 0.65rem; margin-top: 0.75rem; }
+.bloc-legend-item {
+  display: inline-flex; align-items: center; gap: 0.45rem;
+  padding: 0.55rem 0.72rem; border-radius: 14px;
+  border: 1px solid rgba(92, 110, 132, 0.12);
+  background: rgba(255, 253, 248, 0.82);
+  box-shadow: var(--shadow-soft);
+  font-size: 0.88rem; font-weight: 800; line-height: 1.35;
+  transition: background 0.35s ease;
+}
+
+
+.bloc-legend-swatch { display: inline-flex; width: 0.92rem; height: 0.92rem; border-radius: 999px; flex: 0 0 auto; }
+.bloc-legend-central .bloc-legend-swatch { background: #64748b; }
+.bloc-legend-entente .bloc-legend-swatch { background: #16a34a; }
+.bloc-legend-axis .bloc-legend-swatch { background: #dc2626; }
+.bloc-legend-allies .bloc-legend-swatch { background: #2563eb; }
+
+/* =========================
+   KEYWORD LEGEND
+========================= */
+
+.keyword-legend-wrap {
+  margin-top: 1rem;
+  padding: 0.85rem 0.95rem;
+  border-radius: 20px;
+  background: rgba(255, 253, 248, 0.6);
+  border: 1px solid rgba(92, 110, 132, 0.08);
+  box-shadow: var(--shadow-soft);
+  transition: background 0.35s ease, border-color 0.35s ease;
+}
+
+
+.keyword-legend-title { margin: 0 0 0.65rem; font-size: 0.88rem; font-weight: 800; color: var(--ink); }
+.keyword-legend-grid { display: flex; flex-wrap: wrap; gap: 0.5rem 0.6rem; }
+.keyword-legend-grid-bab2 { gap: 0.52rem 0.62rem; }
+
+.keyword-legend-item {
+  display: inline-flex; align-items: center; justify-content: flex-start;
+  min-height: auto; padding: 0; border: 0; background: transparent;
+  box-shadow: none; line-height: 1.2;
+}
+
+.keyword-legend-item .kw {
+  display: inline; font-size: 0.92rem; line-height: 1.3; font-weight: 700;
+  padding: 0.08rem 0.35rem; border-radius: 0.42rem;
+}
