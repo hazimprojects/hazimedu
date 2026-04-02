@@ -3305,3 +3305,58 @@ html[data-theme="dark"] body.bab-theme-3 .site-header {
     background-attachment: scroll, scroll, scroll, scroll, scroll;
   }
 }
+
+/* =========================================================
+   RESTORE WAR BLOCK CHIPS
+   Letak PALING BAWAH SEKALI
+========================================================= */
+
+/* Light mode */
+body .paper-chip.bloc-chip-central {
+  color: #334155 !important;
+  background: linear-gradient(135deg, #f8fafc, #e2e8f0) !important;
+  border-color: rgba(71, 85, 105, 0.22) !important;
+}
+
+body .paper-chip.bloc-chip-entente {
+  color: #14532d !important;
+  background: linear-gradient(135deg, #f0fdf4, #dcfce7) !important;
+  border-color: rgba(22, 101, 52, 0.20) !important;
+}
+
+body .paper-chip.bloc-chip-axis {
+  color: #991b1b !important;
+  background: linear-gradient(135deg, #fef2f2, #fee2e2) !important;
+  border-color: rgba(153, 27, 27, 0.20) !important;
+}
+
+body .paper-chip.bloc-chip-allies {
+  color: #1d4ed8 !important;
+  background: linear-gradient(135deg, #eff6ff, #dbeafe) !important;
+  border-color: rgba(29, 78, 216, 0.20) !important;
+}
+
+/* Dark mode */
+html[data-theme="dark"] body .paper-chip.bloc-chip-central {
+  color: #94a3b8 !important;
+  background: linear-gradient(135deg, rgba(30,40,55,0.92), rgba(25,35,50,0.92)) !important;
+  border-color: rgba(148,163,184,0.20) !important;
+}
+
+html[data-theme="dark"] body .paper-chip.bloc-chip-entente {
+  color: #86efac !important;
+  background: linear-gradient(135deg, rgba(20,50,35,0.92), rgba(15,45,30,0.92)) !important;
+  border-color: rgba(134,239,172,0.20) !important;
+}
+
+html[data-theme="dark"] body .paper-chip.bloc-chip-axis {
+  color: #fca5a5 !important;
+  background: linear-gradient(135deg, rgba(50,20,20,0.92), rgba(45,15,15,0.92)) !important;
+  border-color: rgba(252,165,165,0.20) !important;
+}
+
+html[data-theme="dark"] body .paper-chip.bloc-chip-allies {
+  color: #93c5fd !important;
+  background: linear-gradient(135deg, rgba(20,35,65,0.92), rgba(15,30,60,0.92)) !important;
+  border-color: rgba(147,197,253,0.20) !important;
+}
