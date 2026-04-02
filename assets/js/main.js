@@ -505,8 +505,8 @@ if (revealElements.length) {
     }
 
     [data-theme="dark"] .reading-progress-pill {
-      background: rgba(20, 28, 36, 0.95);
-      border-color: rgba(180, 200, 220, 0.14);
+      background: rgba(28, 27, 24, 0.95);
+      border-color: rgba(220, 210, 190, 0.14);
     }
 
     .reading-progress-pill.is-visible {
@@ -538,7 +538,7 @@ if (revealElements.length) {
       line-height: 1;
     }
 
-    [data-theme="dark"] .reading-progress-label { color: #8fa3b0; }
+    [data-theme="dark"] .reading-progress-label { color: #8c8579; }
 
     .reading-progress-percent {
       font-family: "Nunito", sans-serif;
@@ -549,7 +549,7 @@ if (revealElements.length) {
       transition: color 0.35s ease;
     }
 
-    [data-theme="dark"] .reading-progress-percent { color: #e8ede4; }
+    [data-theme="dark"] .reading-progress-percent { color: #ddd8cc; }
 
     .reading-progress-bar {
       position: relative;
@@ -560,7 +560,7 @@ if (revealElements.length) {
       transition: background 0.35s ease;
     }
 
-    [data-theme="dark"] .reading-progress-bar { background: rgba(255,255,255,0.1); }
+    [data-theme="dark"] .reading-progress-bar { background: rgba(220,210,190,0.1); }
 
     .reading-progress-fill {
       position: absolute;
@@ -585,7 +585,7 @@ if (revealElements.length) {
       justify-content: center;
     }
 
-    [data-theme="dark"] .reading-progress-hint { color: #8fa3b0; }
+    [data-theme="dark"] .reading-progress-hint { color: #8c8579; }
 
     @media (max-width: 760px) {
       .reading-progress-pill {
