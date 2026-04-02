@@ -112,69 +112,74 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // =========================
-  // PAPER ACCORDION
-  // =========================
-  const accordionTriggers = document.querySelectorAll(".paper-accordion-trigger");
+// =========================
+// PAPER ACCORDION
+// =========================
+const accordionTriggers = document.querySelectorAll(".paper-accordion-trigger");
 
-  accordionTriggers.forEach((trigger) => {
-    trigger.addEventListener("click", () => {
-      const targetId = trigger.getAttribute("data-accordion");
-      if (!targetId) return;
+accordionTriggers.forEach((trigger) => {
+  trigger.addEventListener("click", () => {
+    const targetId = trigger.getAttribute("data-accordion");
+    if (!targetId) return;
 
-      const targetPanel = document.getElementById(targetId);
-      if (!targetPanel) return;
+    const targetPanel = document.getElementById(targetId);
+    if (!targetPanel) return;
 
-      const currentItem = trigger.closest(".paper-accordion-item");
-      const accordionGroup = trigger.closest(".paper-accordion");
-      if (!accordionGroup || !currentItem) return;
+    const currentItem = trigger.closest(".paper-accordion-item");
+    const accordionGroup = trigger.closest(".paper-accordion");
+    if (!accordionGroup || !currentItem) return;
 
-      const isOpen = currentItem.classList.contains("is-open");
+    const isOpen = currentItem.classList.contains("is-open");
 
-      // Simpan posisi trigger sebelum layout berubah
-      const beforeTop = trigger.getBoundingClientRect().top;
+    // Simpan posisi trigger sebelum layout berubah
+    const beforeTop = trigger.getBoundingClientRect().top;
 
-      // Tutup hanya accordion tahap ini
-      accordionGroup.querySelectorAll(":scope > .paper-accordion-item").forEach((item) => {
-        item.classList.remove("is-open");
+    // Tutup hanya accordion tahap ini
+    accordionGroup.querySelectorAll(":scope > .paper-accordion-item").forEach((item) => {
+      item.classList.remove("is-open");
+    });
+
+    accordionGroup
+      .querySelectorAll(":scope > .paper-accordion-item > .paper-accordion-trigger")
+      .forEach((btn) => {
+        btn.classList.remove("active");
+        btn.setAttribute("aria-expanded", "false");
       });
 
-      accordionGroup
-        .querySelectorAll(":scope > .paper-accordion-item > .paper-accordion-trigger")
-        .forEach((btn) => {
-          btn.classList.remove("active");
-          btn.setAttribute("aria-expanded", "false");
-        });
+    accordionGroup
+      .querySelectorAll(":scope > .paper-accordion-item > .paper-accordion-panel")
+      .forEach((panel) => {
+        panel.classList.remove("active");
+      });
 
-      accordionGroup
-        .querySelectorAll(":scope > .paper-accordion-item > .paper-accordion-panel")
-        .forEach((panel) => {
-          panel.classList.remove("active");
-        });
+    // Jika belum terbuka, buka item ini
+    if (!isOpen) {
+      currentItem.classList.add("is-open");
+      trigger.classList.add("active");
+      trigger.setAttribute("aria-expanded", "true");
+      targetPanel.classList.add("active");
+    }
 
-      // Jika belum terbuka, buka item ini
-      if (!isOpen) {
-        currentItem.classList.add("is-open");
-        trigger.classList.add("active");
-        trigger.setAttribute("aria-expanded", "true");
-        targetPanel.classList.add("active");
+    // Stabilkan posisi bacaan sepanjang animasi accordion
+    const start = performance.now();
+    const DURATION = 450; // sedikit lebih lama daripada transition CSS
+
+    function stabilizeScroll(now) {
+      const afterTop = trigger.getBoundingClientRect().top;
+      const delta = afterTop - beforeTop;
+
+      if (Math.abs(delta) > 1) {
+        window.scrollBy(0, delta);
       }
 
-      // Kekalkan kedudukan bacaan supaya skrin tidak "melompat"
-      requestAnimationFrame(() => {
-        const afterTop = trigger.getBoundingClientRect().top;
-        const delta = afterTop - beforeTop;
+      if (now - start < DURATION) {
+        requestAnimationFrame(stabilizeScroll);
+      }
+    }
 
-        if (Math.abs(delta) > 1) {
-          window.scrollBy({
-            top: delta,
-            left: 0,
-            behavior: "auto",
-          });
-        }
-      });
-    });
+    requestAnimationFrame(stabilizeScroll);
   });
+});
 
   // =========================
   // PAPER TIMELINE
