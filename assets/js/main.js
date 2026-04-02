@@ -131,7 +131,36 @@ document.addEventListener("DOMContentLoaded", function () {
   function getHeaderOffset() {
     const header = document.querySelector(".site-header");
     const headerHeight = header ? header.getBoundingClientRect().height : 72;
-    return Math.round(headerHeight + 10);
+    return Math.round(headerHeight + 12);
+  }
+
+  function waitUntilScrollReaches(targetTop, callback) {
+    let rafId = 0;
+    let stableFrames = 0;
+    const MAX_FRAMES = 90;
+    let frameCount = 0;
+
+    function check() {
+      frameCount += 1;
+
+      const distance = Math.abs(window.scrollY - targetTop);
+
+      if (distance <= 2) {
+        stableFrames += 1;
+      } else {
+        stableFrames = 0;
+      }
+
+      if (stableFrames >= 4 || frameCount >= MAX_FRAMES) {
+        window.scrollTo(0, targetTop);
+        callback();
+        return;
+      }
+
+      rafId = requestAnimationFrame(check);
+    }
+
+    rafId = requestAnimationFrame(check);
   }
 
   accordionTriggers.forEach((trigger) => {
@@ -142,7 +171,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const wasOpen = currentItem.classList.contains("is-open");
 
-      // Jika accordion yang sama ditekan semula, tutup seperti biasa tanpa auto-scroll awal
+      // Jika tekan accordion yang sama, tutup seperti biasa
       if (wasOpen) {
         const anchorTop = trigger.getBoundingClientRect().top;
 
@@ -195,19 +224,18 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
-      // ===== VERSI BARU =====
-      // 1) Scroll dulu supaya trigger duduk tepat di bawah nav
+      // 1) Scroll dulu sampai trigger duduk betul-betul bawah nav
       const triggerRect = trigger.getBoundingClientRect();
       const absoluteTop = window.scrollY + triggerRect.top;
-      const targetTop = Math.max(0, absoluteTop - getHeaderOffset());
+      const targetTop = Math.max(0, Math.round(absoluteTop - getHeaderOffset()));
 
       window.scrollTo({
         top: targetTop,
         behavior: "smooth",
       });
 
-      // 2) Selepas scroll selesai, baru tutup accordion lain dan buka yang semasa
-      setTimeout(() => {
+      // 2) Tunggu scroll benar-benar sampai, baru buka accordion
+      waitUntilScrollReaches(targetTop, () => {
         const anchorTop = trigger.getBoundingClientRect().top;
 
         document.documentElement.classList.add("accordion-no-smooth-scroll");
@@ -253,11 +281,19 @@ document.addEventListener("DOMContentLoaded", function () {
             document.documentElement.classList.remove("accordion-no-smooth-scroll");
             document.body.classList.remove("accordion-no-smooth-scroll");
             if (rafId) cancelAnimationFrame(rafId);
+
+            // pastikan posisi akhir tepat di bawah nav
+            const finalAbsoluteTop = window.scrollY + trigger.getBoundingClientRect().top;
+            const finalTargetTop = Math.max(0, Math.round(finalAbsoluteTop - getHeaderOffset()));
+            window.scrollTo({
+              top: finalTargetTop,
+              behavior: "auto",
+            });
           }
         }
 
         rafId = requestAnimationFrame(stabilizeOpen);
-      }, 320);
+      });
     });
   });
   
