@@ -181,13 +181,23 @@ document.addEventListener("DOMContentLoaded", function () {
         lastTop = adjustedTop;
 
         if (stillFrames < REQUIRED_STILL_FRAMES && frameCount < MAX_FRAMES) {
-          rafId = requestAnimationFrame(stabilize);
-        } else {
-          document.documentElement.classList.remove("accordion-no-smooth-scroll");
-          document.body.classList.remove("accordion-no-smooth-scroll");
-          if (rafId) cancelAnimationFrame(rafId);
-        }
-      }
+  rafId = requestAnimationFrame(stabilize);
+} else {
+  document.documentElement.classList.remove("accordion-no-smooth-scroll");
+  document.body.classList.remove("accordion-no-smooth-scroll");
+  if (rafId) cancelAnimationFrame(rafId);
+
+  // Auto bawa accordion aktif ke posisi lebih selesa untuk dibaca
+  if (!wasOpen) {
+    requestAnimationFrame(() => {
+      trigger.scrollIntoView({
+        behavior: "smooth",
+        block: "center", // tukar kepada "start" jika mahu di bahagian atas
+        inline: "nearest"
+      });
+    });
+  }
+}
 
       rafId = requestAnimationFrame(stabilize);
     });
