@@ -63,6 +63,82 @@
 }
 
 /* =========================
+   KEYWORD HIGHLIGHT — BAB 4
+========================= */
+
+.kw-b4-tokoh {
+  color: #9f1239;
+  background: rgba(255, 228, 230, 0.92);
+}
+
+.kw-b4-masa {
+  color: #3458b2;
+  background: rgba(219, 232, 255, 0.94);
+}
+
+.kw-b4-tempat {
+  color: #166534;
+  background: rgba(220, 252, 231, 0.92);
+}
+
+.kw-b4-pentadbiran {
+  color: #b35c1e;
+  background: rgba(255, 230, 207, 0.94);
+}
+
+.kw-b4-pertubuhan {
+  color: #6d28d9;
+  background: rgba(237, 233, 254, 0.94);
+}
+
+.kw-b4-istilah {
+  color: #0f766e;
+  background: rgba(204, 251, 241, 0.94);
+}
+
+/* supaya ikut saiz teks semasa */
+.paper-chip .kw-b4-tokoh,
+.paper-chip .kw-b4-masa,
+.paper-chip .kw-b4-tempat,
+.paper-chip .kw-b4-pentadbiran,
+.paper-chip .kw-b4-pertubuhan,
+.paper-chip .kw-b4-istilah,
+.point-line .kw-b4-tokoh,
+.point-line .kw-b4-masa,
+.point-line .kw-b4-tempat,
+.point-line .kw-b4-pentadbiran,
+.point-line .kw-b4-pertubuhan,
+.point-line .kw-b4-istilah,
+.lead .kw-b4-tokoh,
+.lead .kw-b4-masa,
+.lead .kw-b4-tempat,
+.lead .kw-b4-pentadbiran,
+.lead .kw-b4-pertubuhan,
+.lead .kw-b4-istilah,
+.emoji-point-list .kw-b4-tokoh,
+.emoji-point-list .kw-b4-masa,
+.emoji-point-list .kw-b4-tempat,
+.emoji-point-list .kw-b4-pentadbiran,
+.emoji-point-list .kw-b4-pertubuhan,
+.emoji-point-list .kw-b4-istilah,
+.answer-paper .kw-b4-tokoh,
+.answer-paper .kw-b4-masa,
+.answer-paper .kw-b4-tempat,
+.answer-paper .kw-b4-pentadbiran,
+.answer-paper .kw-b4-pertubuhan,
+.answer-paper .kw-b4-istilah,
+.keyword-legend-item .kw-b4-tokoh,
+.keyword-legend-item .kw-b4-masa,
+.keyword-legend-item .kw-b4-tempat,
+.keyword-legend-item .kw-b4-pentadbiran,
+.keyword-legend-item .kw-b4-pertubuhan,
+.keyword-legend-item .kw-b4-istilah {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: 700;
+}
+
+/* =========================
    IDENTITI BLOK PERANG
 ========================= */
 
