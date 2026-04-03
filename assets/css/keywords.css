@@ -96,7 +96,15 @@
   background: rgba(204, 251, 241, 0.94);
 }
 
-/* supaya ikut saiz teks semasa */
+/* Pastikan semua keyword Bab 4 ikut saiz teks semasa */
+[class^="kw-b4-"] {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: 700;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
 .paper-chip .kw-b4-tokoh,
 .paper-chip .kw-b4-masa,
 .paper-chip .kw-b4-tempat,
@@ -127,6 +135,24 @@
 .answer-paper .kw-b4-pentadbiran,
 .answer-paper .kw-b4-pertubuhan,
 .answer-paper .kw-b4-istilah,
+.paper-kingdom .kw-b4-tokoh,
+.paper-kingdom .kw-b4-masa,
+.paper-kingdom .kw-b4-tempat,
+.paper-kingdom .kw-b4-pentadbiran,
+.paper-kingdom .kw-b4-pertubuhan,
+.paper-kingdom .kw-b4-istilah,
+.paper-timeline-panel .kw-b4-tokoh,
+.paper-timeline-panel .kw-b4-masa,
+.paper-timeline-panel .kw-b4-tempat,
+.paper-timeline-panel .kw-b4-pentadbiran,
+.paper-timeline-panel .kw-b4-pertubuhan,
+.paper-timeline-panel .kw-b4-istilah,
+.paper-accordion-panel .kw-b4-tokoh,
+.paper-accordion-panel .kw-b4-masa,
+.paper-accordion-panel .kw-b4-tempat,
+.paper-accordion-panel .kw-b4-pentadbiran,
+.paper-accordion-panel .kw-b4-pertubuhan,
+.paper-accordion-panel .kw-b4-istilah,
 .keyword-legend-item .kw-b4-tokoh,
 .keyword-legend-item .kw-b4-masa,
 .keyword-legend-item .kw-b4-tempat,
@@ -136,6 +162,40 @@
   font-size: inherit;
   line-height: inherit;
   font-weight: 700;
+}
+
+/* =========================
+   KEYWORD HIGHLIGHT — BAB 4 (DARK MODE)
+========================= */
+
+html[data-theme="dark"] .kw-b4-tokoh {
+  color: #f2a7bb;
+  background: rgba(110, 28, 50, 0.34);
+}
+
+html[data-theme="dark"] .kw-b4-masa {
+  color: #a9c4f2;
+  background: rgba(42, 66, 132, 0.34);
+}
+
+html[data-theme="dark"] .kw-b4-tempat {
+  color: #9dd8b0;
+  background: rgba(24, 78, 48, 0.34);
+}
+
+html[data-theme="dark"] .kw-b4-pentadbiran {
+  color: #efb483;
+  background: rgba(110, 60, 18, 0.34);
+}
+
+html[data-theme="dark"] .kw-b4-pertubuhan {
+  color: #c8aff7;
+  background: rgba(72, 34, 120, 0.34);
+}
+
+html[data-theme="dark"] .kw-b4-istilah {
+  color: #86ddd4;
+  background: rgba(14, 90, 82, 0.34);
 }
 
 /* =========================
