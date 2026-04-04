@@ -885,3 +885,171 @@
   background: rgba(36, 34, 32, 0.86);
   border-color: rgba(220, 210, 190, 0.1);
 }
+
+/* =========================================
+   COMIC-LIGHT PLACEHOLDERS
+========================================= */
+
+.comic-placeholder {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(250, 245, 236, 0.98), rgba(244, 237, 225, 0.98));
+}
+
+.comic-placeholder::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 16% 18%, rgba(211, 170, 78, 0.18), transparent 20%),
+    radial-gradient(circle at 84% 22%, rgba(47, 122, 103, 0.12), transparent 18%),
+    radial-gradient(circle at 50% 78%, rgba(92, 110, 132, 0.1), transparent 22%);
+  pointer-events: none;
+}
+
+.comic-placeholder-scene {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 1.1rem 1.1rem 1.4rem;
+  z-index: 1;
+}
+
+.comic-figure {
+  width: 22%;
+  min-width: 54px;
+  max-width: 120px;
+  aspect-ratio: 3 / 4;
+  border-radius: 999px 999px 20px 20px;
+  background: rgba(92, 110, 132, 0.16);
+  position: relative;
+  box-shadow: inset 0 0 0 1px rgba(92, 110, 132, 0.08);
+}
+
+.comic-figure::before {
+  content: "";
+  position: absolute;
+  top: -16%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48%;
+  aspect-ratio: 1;
+  border-radius: 999px;
+  background: rgba(92, 110, 132, 0.16);
+}
+
+.comic-figure.ruler {
+  background: rgba(211, 170, 78, 0.22);
+}
+
+.comic-figure.people {
+  background: rgba(47, 122, 103, 0.16);
+}
+
+.comic-center-symbol {
+  position: absolute;
+  left: 50%;
+  top: 44%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 74px;
+  height: 74px;
+  padding: 0 1rem;
+  border-radius: 999px;
+  background: rgba(255, 253, 248, 0.86);
+  border: 1px solid rgba(92, 110, 132, 0.12);
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #5d6a79;
+  text-align: center;
+  line-height: 1.2;
+  box-shadow: 0 8px 24px rgba(36, 49, 63, 0.08);
+}
+
+.comic-ground-line {
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  bottom: 16%;
+  height: 2px;
+  background: rgba(92, 110, 132, 0.12);
+  z-index: 0;
+}
+
+.comic-floating-chip {
+  position: absolute;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.38rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(255, 253, 248, 0.9);
+  border: 1px solid rgba(92, 110, 132, 0.1);
+  font-size: 0.74rem;
+  font-weight: 800;
+  color: #5d6a79;
+  box-shadow: 0 8px 18px rgba(36, 49, 63, 0.06);
+}
+
+.comic-chip-top-left { top: 14px; left: 14px; }
+.comic-chip-top-right { top: 14px; right: 14px; }
+.comic-chip-bottom-left { bottom: 14px; left: 14px; }
+.comic-chip-bottom-right { bottom: 14px; right: 14px; }
+
+.comic-placeholder-label {
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.42rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(255, 253, 248, 0.92);
+  border: 1px solid rgba(92, 110, 132, 0.12);
+  font-size: 0.76rem;
+  font-weight: 800;
+  color: #5d6a79;
+}
+
+[data-theme="dark"] .comic-placeholder {
+  background:
+    linear-gradient(180deg, rgba(51, 46, 42, 0.98), rgba(41, 37, 34, 0.98));
+}
+
+[data-theme="dark"] .comic-center-symbol,
+[data-theme="dark"] .comic-floating-chip,
+[data-theme="dark"] .comic-placeholder-label {
+  background: rgba(36, 34, 32, 0.9);
+  border-color: rgba(220, 210, 190, 0.1);
+  color: #b8af9f;
+}
+
+[data-theme="dark"] .comic-figure,
+[data-theme="dark"] .comic-figure::before {
+  background: rgba(220, 210, 190, 0.14);
+}
+
+[data-theme="dark"] .comic-figure.ruler,
+[data-theme="dark"] .comic-figure.ruler::before {
+  background: rgba(211, 170, 78, 0.18);
+}
+
+[data-theme="dark"] .comic-figure.people,
+[data-theme="dark"] .comic-figure.people::before {
+  background: rgba(104, 182, 157, 0.14);
+}
+
+[data-theme="dark"] .comic-ground-line {
+  background: rgba(220, 210, 190, 0.1);
+}
