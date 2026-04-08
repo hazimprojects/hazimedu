@@ -64,7 +64,7 @@
   }
 
   .paper-chip-list { gap: 0.62rem; }
-  .paper-chip-list .paper-chip { display: inline-flex; align-items: flex-start; white-space: normal; }
+  .paper-chip-list .paper-chip { display: block; white-space: normal; }
   .paper-chip-list .paper-chip:not(.paper-chip-sentence) { width: fit-content; min-width: 0; }
 
   .paper-chip-sentence,
@@ -84,7 +84,7 @@
   .answer-paper div.paper-chip,
   .info-paper div.paper-chip,
   .glossary-paper div.paper-chip {
-    display: inline-flex; width: fit-content; max-width: 100%; flex: 0 1 auto;
+    display: block; width: fit-content; max-width: 100%; flex: 0 1 auto;
   }
 
   .paper-accordion-panel .paper-chip-list.inline-chips,
