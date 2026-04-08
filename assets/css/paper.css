@@ -69,11 +69,28 @@
 }
 
 .audio-label {
-  margin: 0 0 0.55rem;
+  margin: 0 0 0.4rem;
   font-size: 0.82rem;
   font-weight: 800;
   color: var(--muted);
   letter-spacing: 0.02em;
+}
+
+.audio-desc {
+  margin: 0 0 0.65rem;
+  font-size: 0.83rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.55;
+}
+
+.audio-disclaimer {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--muted);
+  font-style: italic;
 }
 
 .audio-controls {
