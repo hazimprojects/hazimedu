@@ -781,10 +781,9 @@ document.addEventListener("DOMContentLoaded", function () {
       .answer-paper div.paper-chip,
       .info-paper div.paper-chip,
       .glossary-paper div.paper-chip {
-        display: flex !important;
+        display: block !important;
         width: 100% !important;
         max-width: 100% !important;
-        flex: none !important;
       }
       .master-summary-paper .paper-chip-list,
       .summary-paper .paper-chip-list {
