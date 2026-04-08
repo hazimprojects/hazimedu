@@ -211,9 +211,7 @@
 }
 
 .paper-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
+  display: block;
   width: fit-content;
   max-width: min(100%, 34rem);
   padding: 0.88rem 1rem;
