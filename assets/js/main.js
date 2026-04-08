@@ -812,41 +812,82 @@ document.addEventListener("DOMContentLoaded", function () {
     var timeEl = player.querySelector('.audio-time');
     if (!audio || !playBtn) return;
 
+    // --- Create sticky mini player ---
+    var sticky = document.createElement('div');
+    sticky.className = 'audio-sticky';
+    sticky.innerHTML =
+      '<div class="audio-sticky-inner">' +
+        '<span class="audio-sticky-label">🎧 Audio</span>' +
+        '<button class="audio-skip-btn" data-skip="-10" aria-label="Undur 10 saat">\xAB 10s</button>' +
+        '<button class="audio-play-btn" aria-label="Main audio"></button>' +
+        '<button class="audio-skip-btn" data-skip="10" aria-label="Maju 10 saat">10s \xBB</button>' +
+        '<div class="audio-track"><div class="audio-track-fill"></div></div>' +
+        '<span class="audio-time">0:00 / --:--</span>' +
+      '</div>';
+    document.body.appendChild(sticky);
+
+    var stickyPlayBtn = sticky.querySelector('.audio-play-btn');
+    var stickyFill    = sticky.querySelector('.audio-track-fill');
+    var stickyTrack   = sticky.querySelector('.audio-track');
+    var stickyTimeEl  = sticky.querySelector('.audio-time');
+
+    // --- Shared helpers ---
     function fmt(s) {
       if (!isFinite(s)) return '--:--';
       var m = Math.floor(s / 60), sec = Math.floor(s % 60);
       return m + ':' + (sec < 10 ? '0' : '') + sec;
     }
     function updateTime() {
-      timeEl.textContent = fmt(audio.currentTime) + ' / ' + fmt(audio.duration);
-      trackFill.style.width = (audio.duration ? (audio.currentTime / audio.duration) * 100 : 0) + '%';
+      var t = fmt(audio.currentTime) + ' / ' + fmt(audio.duration);
+      var pct = (audio.duration ? (audio.currentTime / audio.duration) * 100 : 0) + '%';
+      timeEl.textContent = t;       trackFill.style.width = pct;
+      stickyTimeEl.textContent = t; stickyFill.style.width = pct;
     }
-    function setPlaying(playing) {
-      playBtn.classList.toggle('is-playing', playing);
-      playBtn.setAttribute('aria-label', playing ? 'Jeda audio' : 'Main audio');
+    function setPlaying(on) {
+      playBtn.classList.toggle('is-playing', on);
+      stickyPlayBtn.classList.toggle('is-playing', on);
+      var lbl = on ? 'Jeda audio' : 'Main audio';
+      playBtn.setAttribute('aria-label', lbl);
+      stickyPlayBtn.setAttribute('aria-label', lbl);
     }
-
-    playBtn.addEventListener('click', function() {
+    function togglePlay() {
       if (audio.paused) { audio.play(); setPlaying(true); }
-      else { audio.pause(); setPlaying(false); }
-    });
+      else              { audio.pause(); setPlaying(false); }
+    }
+    function skip(secs) {
+      audio.currentTime = Math.max(0, Math.min(audio.duration || 0, audio.currentTime + secs));
+      updateTime();
+    }
+    function seekFromClick(e, el) {
+      if (!audio.duration) return;
+      var rect = el.getBoundingClientRect();
+      audio.currentTime = ((e.clientX - rect.left) / rect.width) * audio.duration;
+    }
 
+    // --- Wire main player ---
+    playBtn.addEventListener('click', togglePlay);
     player.querySelectorAll('.audio-skip-btn').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        var secs = parseInt(btn.getAttribute('data-skip'), 10);
-        audio.currentTime = Math.max(0, Math.min(audio.duration || 0, audio.currentTime + secs));
-        updateTime();
-      });
+      btn.addEventListener('click', function() { skip(parseInt(btn.getAttribute('data-skip'), 10)); });
     });
+    track.addEventListener('click', function(e) { seekFromClick(e, track); });
 
+    // --- Wire sticky player ---
+    stickyPlayBtn.addEventListener('click', togglePlay);
+    sticky.querySelectorAll('.audio-skip-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() { skip(parseInt(btn.getAttribute('data-skip'), 10)); });
+    });
+    stickyTrack.addEventListener('click', function(e) { seekFromClick(e, stickyTrack); });
+
+    // --- Audio events ---
     audio.addEventListener('timeupdate', updateTime);
     audio.addEventListener('loadedmetadata', updateTime);
     audio.addEventListener('ended', function() { setPlaying(false); updateTime(); });
 
-    track.addEventListener('click', function(e) {
-      if (!audio.duration) return;
-      var rect = track.getBoundingClientRect();
-      audio.currentTime = ((e.clientX - rect.left) / rect.width) * audio.duration;
-    });
+    // --- Show sticky when main player scrolls out of view ---
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function(entries) {
+        sticky.classList.toggle('is-visible', !entries[0].isIntersecting);
+      }, { threshold: 0 }).observe(player);
+    }
   });
 })();
