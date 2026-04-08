@@ -816,7 +816,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var timeEl = player.querySelector('.audio-time');
     if (!audio || !playBtn) return;
 
-    // --- Create sticky mini player ---
+    // --- Create sticky mini player (with close button) ---
     var sticky = document.createElement('div');
     sticky.className = 'audio-sticky';
     sticky.innerHTML =
@@ -827,13 +827,24 @@ document.addEventListener("DOMContentLoaded", function () {
         '<button class="audio-skip-btn" data-skip="10" aria-label="Maju 10 saat">10s \xBB</button>' +
         '<div class="audio-track"><div class="audio-track-fill"></div></div>' +
         '<span class="audio-time">0:00 / --:--</span>' +
+        '<button class="audio-sticky-close" aria-label="Tutup">\u2715</button>' +
       '</div>';
     document.body.appendChild(sticky);
 
-    var stickyPlayBtn = sticky.querySelector('.audio-play-btn');
-    var stickyFill    = sticky.querySelector('.audio-track-fill');
-    var stickyTrack   = sticky.querySelector('.audio-track');
-    var stickyTimeEl  = sticky.querySelector('.audio-time');
+    var stickyPlayBtn  = sticky.querySelector('.audio-play-btn');
+    var stickyFill     = sticky.querySelector('.audio-track-fill');
+    var stickyTrack    = sticky.querySelector('.audio-track');
+    var stickyTimeEl   = sticky.querySelector('.audio-time');
+    var stickyCloseBtn = sticky.querySelector('.audio-sticky-close');
+
+    // --- State flags ---
+    var hasPlayed    = false; // only show sticky after first press
+    var dismissed    = false; // permanently hidden after ✕
+    var isScrolledPast = false; // true only when player is ABOVE viewport
+
+    function refreshSticky() {
+      sticky.classList.toggle('is-visible', !dismissed && hasPlayed && isScrolledPast);
+    }
 
     // --- Shared helpers ---
     function fmt(s) {
@@ -855,8 +866,12 @@ document.addEventListener("DOMContentLoaded", function () {
       stickyPlayBtn.setAttribute('aria-label', lbl);
     }
     function togglePlay() {
-      if (audio.paused) { audio.play(); setPlaying(true); }
-      else              { audio.pause(); setPlaying(false); }
+      if (audio.paused) {
+        audio.play(); setPlaying(true);
+        if (!hasPlayed) { hasPlayed = true; refreshSticky(); }
+      } else {
+        audio.pause(); setPlaying(false);
+      }
     }
     function skip(secs) {
       audio.currentTime = Math.max(0, Math.min(audio.duration || 0, audio.currentTime + secs));
@@ -882,15 +897,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     stickyTrack.addEventListener('click', function(e) { seekFromClick(e, stickyTrack); });
 
+    // --- Close / dismiss button ---
+    stickyCloseBtn.addEventListener('click', function() {
+      dismissed = true;
+      refreshSticky();
+    });
+
     // --- Audio events ---
     audio.addEventListener('timeupdate', updateTime);
     audio.addEventListener('loadedmetadata', updateTime);
     audio.addEventListener('ended', function() { setPlaying(false); updateTime(); });
 
-    // --- Show sticky when main player scrolls out of view ---
+    // --- Show sticky only when player is ABOVE viewport (scrolled past) ---
     if ('IntersectionObserver' in window) {
       new IntersectionObserver(function(entries) {
-        sticky.classList.toggle('is-visible', !entries[0].isIntersecting);
+        var entry = entries[0];
+        // boundingClientRect.top < 0 means element top is above viewport
+        isScrolledPast = !entry.isIntersecting && entry.boundingClientRect.top < 0;
+        refreshSticky();
       }, { threshold: 0 }).observe(player);
     }
   });
