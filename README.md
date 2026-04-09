@@ -75,7 +75,7 @@ hazimedu/
     ├── bab-3-8.html
     └── bab-3-9.html
 
-Struktur Kandungan Nota
+## Struktur Kandungan Nota
 
 Folder notes/ mengandungi halaman berikut:
 
@@ -139,7 +139,7 @@ notes/bab-3-8.html
 notes/bab-3-9.html
 
 
-Teknologi Digunakan
+## Teknologi Digunakan
 
 Projek ini dibina menggunakan:
 
@@ -154,7 +154,7 @@ Google Fonts (Nunito)
 
 Ia merupakan laman statik yang ringan, mudah diselenggara dan mudah dihoskan.
 
-Prinsip Reka Bentuk
+## Prinsip Reka Bentuk
 
 Hazim EduHub menekankan beberapa prinsip reka bentuk:
 
@@ -169,7 +169,7 @@ mesra telefon — sesuai dibaca pada skrin kecil
 profesional tetapi santai — sesuai untuk ulang kaji harian
 
 
-Status Projek
+## Status Projek
 
 Projek ini masih dalam proses pembangunan dan penambahbaikan secara berperingkat.
 
@@ -186,7 +186,7 @@ kebolehbacaan pada telefon
 penambahan bab atau subjek baharu
 
 
-Cara Guna
+## Cara Guna
 
 1. Buka fail index.html untuk halaman utama.
 
@@ -201,7 +201,7 @@ Cara Guna
 
 
 
-Cadangan Penambahbaikan Masa Depan
+## Cadangan Penambahbaikan Masa Depan
 
 Antara arah yang boleh dikembangkan kemudian:
 
@@ -218,7 +218,7 @@ penambahbaikan aksesibiliti
 lebih banyak elemen ulang kaji interaktif
 
 
-Tentang Projek
+## Tentang Projek
 
 Hazim EduHub bukan sekadar laman nota biasa. Ia ialah usaha untuk membina ruang ulang kaji yang:
 
@@ -231,7 +231,7 @@ lebih mudah diakses berbanding nota fizikal tradisional
 tetap menjaga integriti isi dan struktur pembelajaran
 
 
-Lesen
+## Lesen
 
 Belum ditetapkan secara rasmi.
 
