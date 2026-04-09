@@ -778,10 +778,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   document.addEventListener('DOMContentLoaded', function() {
-    // Only run on note content pages
-    if (!document.querySelector('.note-section')) return;
-
-    // --- Hide nav dark mode button on content pages (moves into sparkle menu) ---
+    // --- Hide nav dark mode button (moves into sparkle menu) ---
     document.querySelectorAll('.display-fab').forEach(function(btn) {
       btn.style.display = 'none';
     });
