@@ -778,6 +778,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   document.addEventListener('DOMContentLoaded', function() {
+    // Skip if page already has its own sparkle menu (e.g. lab pages)
+    if (document.querySelector('.note-sparkle-wrap')) return;
+
     // --- Hide nav dark mode button (moves into sparkle menu) ---
     document.querySelectorAll('.display-fab').forEach(function(btn) {
       btn.style.display = 'none';
