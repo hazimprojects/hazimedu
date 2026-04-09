@@ -953,21 +953,6 @@ document.addEventListener("DOMContentLoaded", function () {
       btn.style.display = 'none';
     });
 
-    // --- Reading Progress Bar ---
-    var bar = document.createElement('div');
-    bar.className = 'note-reading-bar';
-    document.body.appendChild(bar);
-
-    function updateProgress() {
-      var scrollTop = window.scrollY || window.pageYOffset;
-      var docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      var pct = docHeight > 0 ? Math.min(100, (scrollTop / docHeight) * 100) : 0;
-      bar.style.width = pct + '%';
-    }
-
-    window.addEventListener('scroll', updateProgress, { passive: true });
-    updateProgress();
-
     // --- Build sparkle menu items ---
     var items = [];
 
