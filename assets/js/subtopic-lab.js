@@ -132,83 +132,104 @@
   }
 
   function getKingdomSVG(built) {
-    return `
-      <svg viewBox="0 0 400 300" style="width:100%;max-width:320px;display:block;margin:0 auto;">
-        <defs>
-          <radialGradient id="labSkyA" cx="50%" cy="0%" r="80%">
-            <stop offset="0%" stop-color="#dbeafe" stop-opacity="0.45"></stop>
-            <stop offset="100%" stop-color="#bfdbfe" stop-opacity="0.10"></stop>
-          </radialGradient>
-        </defs>
-        <rect width="400" height="300" fill="url(#labSkyA)"></rect>
-        <ellipse cx="200" cy="285" rx="155" ry="16" fill="rgba(139,165,90,0.18)"></ellipse>
-        <rect x="35" y="275" width="330" height="20" rx="6" fill="rgba(139,165,90,0.14)"></rect>
+    // Pre-build pillar HTML for TIANG (6 pillars flanking a central door)
+    var pillarXs = [100, 148, 194, 274, 320, 368];
+    var pillarHtml = '';
+    if (built.includes('tiang')) {
+      pillarXs.forEach(function(x) {
+        pillarHtml +=
+          '<rect x="' + x + '" y="100" width="12" height="39" rx="2" fill="#6a7b5a" opacity="0.88"/>' +
+          '<rect x="' + (x - 3) + '" y="97" width="18" height="5" rx="1" fill="#7a9060" opacity="0.72"/>' +
+          '<rect x="' + (x - 3) + '" y="136" width="18" height="4" rx="1" fill="#5a6b4a" opacity="0.68"/>';
+      });
+      pillarHtml += '<rect x="92" y="96" width="296" height="4" rx="1" fill="#5a6b4a" opacity="0.55"/>';
+    }
 
-        ${!built.includes("asas") ? `
-          <g opacity="0.07">
-            <rect x="80" y="228" width="240" height="52" rx="3" fill="#888"></rect>
-            <rect x="100" y="113" width="200" height="120" rx="3" fill="#888"></rect>
-            <polygon points="200,53 93,115 307,115" fill="#888"></polygon>
-            <line x1="200" y1="53" x2="200" y2="18" stroke="#888" stroke-width="2"></line>
-            <path d="M200,18 L228,26 L200,34 Z" fill="#888"></path>
-          </g>
-        ` : ""}
+    return `<svg viewBox="0 0 480 178" style="width:100%;display:block;margin:0 auto;">
+      <defs>
+        <radialGradient id="lbSky" cx="50%" cy="12%" r="70%">
+          <stop offset="0%" stop-color="#fef9f0" stop-opacity="0.75"/>
+          <stop offset="100%" stop-color="#e8f2ea" stop-opacity="0.04"/>
+        </radialGradient>
+      </defs>
 
-        ${built.includes("asas") ? `
-          <g>
-            <rect x="78" y="228" width="244" height="32" rx="4" fill="#8a7158" opacity="0.92"></rect>
-            <rect x="58" y="255" width="284" height="20" rx="3" fill="#6b5840" opacity="0.88"></rect>
-            <rect x="38" y="270" width="324" height="12" rx="3" fill="#4a3d28" opacity="0.82"></rect>
-          </g>
-        ` : ""}
+      <rect width="480" height="178" fill="url(#lbSky)"/>
+      <rect x="0" y="163" width="480" height="15" fill="rgba(110,150,75,0.22)"/>
+      <ellipse cx="240" cy="163" rx="215" ry="9" fill="rgba(95,135,60,0.13)"/>
 
-        ${built.includes("tiang") ? `
-          <g>
-            <rect x="103" y="148" width="22" height="82" rx="3" fill="#6a7b5a" opacity="0.90"></rect>
-            <rect x="275" y="148" width="22" height="82" rx="3" fill="#6a7b5a" opacity="0.90"></rect>
-            <rect x="183" y="153" width="34" height="77" rx="2" fill="#7a9060" opacity="0.85"></rect>
-          </g>
-        ` : ""}
+      ${built.length === 0 ? `<g opacity="0.055" fill="#556">
+        <rect x="60" y="155" width="360" height="9"/>
+        <rect x="72" y="145" width="336" height="11"/>
+        <rect x="86" y="135" width="308" height="11"/>
+        <rect x="86" y="100" width="308" height="37"/>
+        <rect x="97" y="100" width="12" height="37"/>
+        <rect x="145" y="100" width="12" height="37"/>
+        <rect x="191" y="100" width="12" height="37"/>
+        <rect x="271" y="100" width="12" height="37"/>
+        <rect x="317" y="100" width="12" height="37"/>
+        <rect x="365" y="100" width="12" height="37"/>
+        <polygon points="40,100 240,62 440,100"/>
+        <polygon points="108,76 240,42 372,76"/>
+        <polygon points="240,22 248,42 232,42"/>
+        <circle cx="240" cy="14" r="8"/>
+      </g>` : ''}
 
-        ${built.includes("dinding") ? `
-          <g>
-            <rect x="98" y="113" width="204" height="40" rx="3" fill="#c8a96b" opacity="0.88"></rect>
-            <rect x="113" y="118" width="30" height="30" rx="2" fill="#d4b87a"></rect>
-            <rect x="153" y="118" width="30" height="30" rx="2" fill="#d4b87a"></rect>
-            <rect x="193" y="118" width="30" height="30" rx="2" fill="#d4b87a"></rect>
-            <rect x="233" y="118" width="30" height="30" rx="2" fill="#d4b87a"></rect>
-          </g>
-        ` : ""}
+      ${built.includes('asas') ? `<g>
+        <rect x="60" y="156" width="360" height="9" rx="2" fill="#4a3d28" opacity="0.80"/>
+        <rect x="72" y="146" width="336" height="11" rx="2" fill="#6b5840" opacity="0.85"/>
+        <rect x="86" y="136" width="308" height="11" rx="2" fill="#8a7158" opacity="0.90"/>
+        <rect x="87" y="134" width="306" height="3" rx="1" fill="#c8a96b" opacity="0.46"/>
+      </g>` : ''}
 
-        ${built.includes("bumbung") ? `
-          <g>
-            <polygon points="200,53 93,113 307,113" fill="#3e5f8a" opacity="0.90"></polygon>
-            <polygon points="200,63 103,110 297,110" fill="#4a72a8" opacity="0.55"></polygon>
-          </g>
-        ` : ""}
+      ${pillarHtml}
 
-        ${built.includes("puncak") ? `
-          <g>
-            <polygon points="200,18 189,53 211,53" fill="#2f7a67" opacity="0.95"></polygon>
-            <circle cx="200" cy="13" r="9" fill="#c8a96b" opacity="0.90"></circle>
-            <circle cx="200" cy="13" r="5.5" fill="#e8c87a"></circle>
-          </g>
-        ` : ""}
+      ${built.includes('dinding') ? `<g>
+        <rect x="87" y="102" width="306" height="36" fill="#c8a96b" opacity="0.82"/>
+        <rect x="115" y="106" width="26" height="26" rx="2" fill="#d4b87a" opacity="0.90"/>
+        <rect x="160" y="106" width="28" height="26" rx="3" fill="#d4b87a" opacity="0.88"/>
+        <path d="M160,120 Q174,106 188,120" fill="#b89448" opacity="0.48"/>
+        <rect x="208" y="100" width="64" height="38" rx="4" fill="#9a7228" opacity="0.68"/>
+        <path d="M208,124 Q240,100 272,124" fill="#7a5618" opacity="0.62"/>
+        <rect x="284" y="106" width="28" height="26" rx="3" fill="#d4b87a" opacity="0.88"/>
+        <path d="M284,120 Q298,106 312,120" fill="#b89448" opacity="0.48"/>
+        <rect x="337" y="106" width="26" height="26" rx="2" fill="#d4b87a" opacity="0.90"/>
+        <rect x="87" y="98" width="306" height="5" rx="1" fill="#e0c060" opacity="0.38"/>
+      </g>` : ''}
 
-        ${built.includes("bendera") ? `
-          <g>
-            <line x1="200" y1="18" x2="200" y2="53" stroke="#8a7158" stroke-width="1.8"></line>
-            <path d="M200,18 L234,27 L200,36 Z" fill="#9a5a5a" opacity="0.92"></path>
-          </g>
-        ` : ""}
+      ${built.includes('bumbung') ? `<g>
+        <polygon points="40,100 240,62 440,100" fill="#3e5f8a" opacity="0.88"/>
+        <polygon points="56,100 240,68 424,100" fill="#4a72a8" opacity="0.38"/>
+        <path d="M40,100 Q28,100 22,114" stroke="#3e5f8a" stroke-width="3.5" fill="none" opacity="0.60"/>
+        <path d="M440,100 Q452,100 458,114" stroke="#3e5f8a" stroke-width="3.5" fill="none" opacity="0.60"/>
+        <circle cx="40" cy="100" r="5.5" fill="#4a72a8" opacity="0.70"/>
+        <circle cx="440" cy="100" r="5.5" fill="#4a72a8" opacity="0.70"/>
+        <polygon points="108,76 240,42 372,76" fill="#2e4d7a" opacity="0.92"/>
+        <polygon points="118,76 240,47 362,76" fill="#3a6098" opacity="0.40"/>
+        <circle cx="108" cy="76" r="4.5" fill="#3a6098" opacity="0.76"/>
+        <circle cx="372" cy="76" r="4.5" fill="#3a6098" opacity="0.76"/>
+        <line x1="108" y1="76" x2="372" y2="76" stroke="#c8a96b" stroke-width="1.5" opacity="0.36"/>
+        <line x1="40" y1="100" x2="440" y2="100" stroke="#c8a96b" stroke-width="1" opacity="0.25"/>
+      </g>` : ''}
 
-        ${built.length ? `
-          <text x="200" y="295" text-anchor="middle" font-size="9" font-weight="800" fill="#5d6a79" opacity="0.65">
-            Negara Bangsa Alam Melayu
-          </text>
-        ` : ""}
-      </svg>
-    `;
+      ${built.includes('puncak') ? `<g>
+        <polygon points="240,22 249,42 231,42" fill="#2f7a67" opacity="0.92"/>
+        <ellipse cx="240" cy="38" rx="10" ry="4.5" fill="#2f7a67" opacity="0.84"/>
+        <ellipse cx="240" cy="32" rx="7.5" ry="3.5" fill="#3a9a82" opacity="0.80"/>
+        <ellipse cx="240" cy="27" rx="5.5" ry="2.8" fill="#2f7a67" opacity="0.87"/>
+        <circle cx="240" cy="14" r="9.5" fill="#c8a96b" opacity="0.88"/>
+        <circle cx="240" cy="14" r="5.8" fill="#e8c87a" opacity="0.94"/>
+        <circle cx="240" cy="14" r="2.2" fill="#b89040" opacity="0.88"/>
+      </g>` : ''}
+
+      ${built.includes('bendera') ? `<g>
+        <line x1="240" y1="4" x2="240" y2="22" stroke="#8a7158" stroke-width="2" opacity="0.76"/>
+        <polygon points="240,3 244,6 240,8 236,6" fill="#c8a96b" opacity="0.84"/>
+        <path d="M240,4 Q263,9 255,13 Q269,17 260,20 L240,20 Z" fill="#9a5a5a" opacity="0.88"/>
+        <path d="M240,6 Q254,10 248,13 L240,13 Z" fill="#c8a96b" opacity="0.46"/>
+      </g>` : ''}
+
+      ${built.length > 0 ? '<text x="240" y="176" text-anchor="middle" font-size="8.5" font-weight="800" fill="#5d6a79" opacity="0.55" font-family="Nunito,sans-serif">Negara Bangsa Alam Melayu</text>' : ''}
+    </svg>`;
   }
 
   const screens = {
