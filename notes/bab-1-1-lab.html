@@ -28,61 +28,66 @@
   </script>
 
   <style>
+    /* ======================================
+       LAB PAGE — MOBILE-FIRST, NO PAGE SCROLL
+       ====================================== */
+
     .lab-compact-page {
-      min-height: 100svh;
+      height: 100dvh;
+      max-height: 100dvh;
+      overflow: hidden;
       display: flex;
       flex-direction: column;
       background:
-        radial-gradient(circle at top, rgba(219, 234, 254, 0.25), transparent 42%),
+        radial-gradient(circle at top, rgba(219, 234, 254, 0.22), transparent 40%),
         linear-gradient(155deg, #f7f4ee, #ede8de);
     }
 
+    /* --- TOPBAR --- */
     .lab-compact-topbar {
-      position: sticky;
-      top: 0;
+      flex-shrink: 0;
       z-index: 30;
-      backdrop-filter: blur(10px);
-      background: rgba(247, 244, 238, 0.82);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background: rgba(247, 244, 238, 0.86);
       border-bottom: 1px solid rgba(92, 110, 132, 0.1);
     }
 
     .lab-compact-topbar-inner {
-      width: min(1100px, calc(100% - 1.25rem));
-      margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 0.8rem;
-      padding: 0.7rem 0;
+      gap: 0.7rem;
+      padding: 0.6rem 1rem;
+      max-width: 1100px;
+      margin: 0 auto;
     }
 
     .lab-compact-back {
       display: inline-flex;
       align-items: center;
-      gap: 0.38rem;
-      padding: 0.5rem 0.78rem;
+      gap: 0.32rem;
+      padding: 0.42rem 0.68rem;
       border-radius: 999px;
       text-decoration: none;
       background: rgba(92, 110, 132, 0.06);
       border: 1px solid rgba(92, 110, 132, 0.14);
       color: #24313f;
-      font-size: 0.8rem;
+      font-size: 0.77rem;
       font-weight: 800;
       white-space: nowrap;
+      flex-shrink: 0;
     }
 
     .lab-compact-topmeta {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      flex: 1;
       text-align: center;
       min-width: 0;
-      flex: 1;
     }
 
     .lab-compact-kicker {
       margin: 0;
-      font-size: 0.68rem;
+      font-size: 0.65rem;
       font-weight: 900;
       letter-spacing: 0.05em;
       text-transform: uppercase;
@@ -90,63 +95,184 @@
     }
 
     .lab-compact-title {
-      margin: 0.08rem 0 0;
-      font-size: 1rem;
-      line-height: 1.15;
+      margin: 0.05rem 0 0;
+      font-size: 0.88rem;
+      line-height: 1.2;
       color: #24313f;
       font-weight: 900;
     }
 
     .lab-compact-spacer {
-      width: 110px;
+      width: 90px;
       flex-shrink: 0;
     }
 
+    /* --- MAIN AREA --- */
     .lab-compact-main {
       flex: 1;
+      min-height: 0;
+      overflow: hidden;
       display: flex;
-      align-items: stretch;
+      padding: 0.65rem 0.75rem 0.7rem;
       justify-content: center;
-      padding: 0.85rem 0.75rem 1rem;
     }
 
+    /* --- SHELL (single column, mobile-first) --- */
     .lab-compact-shell {
-      width: min(1180px, 100%);
-      display: grid;
-      grid-template-columns: minmax(260px, 320px) minmax(0, 560px);
-      justify-content: center;
-      gap: 1rem;
-      align-items: start;
+      width: 100%;
+      max-width: 520px;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
     }
 
+    /* --- SIDEBAR (hidden on mobile) --- */
     .lab-compact-side {
-      display: grid;
-      gap: 0.75rem;
-      align-self: start;
+      display: none;
     }
 
-    .lab-compact-card {
-      padding: 0.9rem 1rem;
-      border-radius: 22px;
-      background: rgba(255, 253, 248, 0.96);
-      border: 1px solid rgba(92, 110, 132, 0.1);
-      box-shadow: 0 16px 34px rgba(36, 49, 63, 0.08);
+    /* --- GAME SECTION --- */
+    .lab-compact-game {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
     }
 
-    .lab-compact-card h1,
-    .lab-compact-card h2,
-    .lab-compact-card h3,
-    .lab-compact-card p {
+    .lab-compact-game .learning-lab-shell {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
       margin-top: 0;
     }
 
-    .lab-compact-headline {
-      margin-bottom: 0.7rem;
+    .lab-compact-game .learning-lab-card {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      overflow: hidden;
+      padding: 0.8rem 0.8rem 0.75rem;
+      border-radius: 22px;
     }
 
+    /* Hide verbose header on mobile */
+    .lab-compact-game .learning-lab-top {
+      display: none;
+    }
+
+    /* --- BUILDING (small & compact) --- */
+    .lab-compact-game .learning-lab-kingdom {
+      padding: 0.5rem 0.6rem 0.45rem;
+      flex-shrink: 0;
+      border-radius: 16px;
+    }
+
+    /* Override inline max-width from JS */
+    .lab-compact-game .learning-lab-kingdom-svg svg {
+      max-width: 180px !important;
+      max-height: 100px !important;
+      height: auto !important;
+    }
+
+    .lab-compact-game .learning-lab-parts {
+      margin-top: 0.38rem;
+      gap: 0.25rem;
+    }
+
+    .lab-compact-game .learning-lab-part {
+      padding: 0.15rem 0.38rem;
+      font-size: 0.6rem;
+    }
+
+    /* --- STAGE: flex column, content fills + scrolls --- */
+    .lab-compact-game [data-lab-screen] {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      gap: 0.5rem;
+    }
+
+    /* Game screen: question scrolls */
+    .lab-compact-game [data-lab-screen="game"] .learning-lab-question {
+      flex: 1;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      padding: 0.72rem 0.78rem;
+      border-radius: 17px;
+      min-height: 0;
+    }
+
+    /* Result screen: full area scrolls */
+    .lab-compact-game [data-lab-screen="result"] {
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    /* --- COMPACT QUESTION ELEMENTS --- */
+    .lab-compact-game .learning-lab-chip-row {
+      margin-bottom: 0.48rem;
+    }
+
+    .lab-compact-game .learning-lab-prompt {
+      font-size: 0.83rem;
+      line-height: 1.52;
+      margin-bottom: 0.48rem;
+    }
+
+    .lab-compact-game .learning-lab-help {
+      font-size: 0.7rem;
+      margin-bottom: 0.42rem;
+    }
+
+    .lab-compact-game .learning-lab-option,
+    .lab-compact-game .learning-lab-order-item {
+      padding: 0.58rem 0.7rem;
+      font-size: 0.77rem;
+    }
+
+    .lab-compact-game .learning-lab-actions {
+      margin-top: 0.6rem;
+    }
+
+    .lab-compact-game .learning-lab-btn {
+      padding: 0.76rem 1rem;
+      font-size: 0.83rem;
+    }
+
+    .lab-compact-game .learning-lab-feedback,
+    .lab-compact-game .learning-lab-tip {
+      padding: 0.6rem 0.72rem;
+    }
+
+    .lab-compact-game .learning-lab-feedback-title {
+      font-size: 0.77rem;
+    }
+
+    .lab-compact-game .learning-lab-feedback-text,
+    .lab-compact-game .learning-lab-tip-text {
+      font-size: 0.71rem;
+    }
+
+    /* --- SIDEBAR CARD STYLES (desktop only) --- */
+    .lab-compact-card {
+      padding: 0.85rem 0.95rem;
+      border-radius: 20px;
+      background: rgba(255, 253, 248, 0.96);
+      border: 1px solid rgba(92, 110, 132, 0.1);
+      box-shadow: 0 12px 28px rgba(36, 49, 63, 0.08);
+    }
+
+    .lab-compact-card h1, .lab-compact-card h2,
+    .lab-compact-card h3, .lab-compact-card p { margin-top: 0; }
+
+    .lab-compact-headline { margin-bottom: 0.6rem; }
+
     .lab-compact-headline h1 {
-      margin: 0 0 0.28rem;
-      font-size: 1.28rem;
+      margin: 0 0 0.22rem;
+      font-size: 1.18rem;
       line-height: 1.15;
       color: #24313f;
       letter-spacing: -0.02em;
@@ -154,51 +280,41 @@
 
     .lab-compact-headline p {
       margin: 0;
-      font-size: 0.82rem;
-      line-height: 1.58;
+      font-size: 0.79rem;
+      line-height: 1.55;
       color: #5d6a79;
       font-weight: 700;
     }
 
-    .lab-compact-points {
-      display: grid;
-      gap: 0.42rem;
-      margin: 0;
-    }
+    .lab-compact-points { display: grid; gap: 0.38rem; }
 
     .lab-compact-point {
-      padding: 0.52rem 0.66rem;
-      border-radius: 12px;
+      padding: 0.48rem 0.6rem;
+      border-radius: 11px;
       background: rgba(92, 110, 132, 0.04);
       border: 1px solid rgba(92, 110, 132, 0.08);
-      font-size: 0.76rem;
+      font-size: 0.73rem;
       line-height: 1.45;
       color: #5d6a79;
       font-weight: 700;
     }
 
-    .lab-compact-links {
-      display: grid;
-      gap: 0.48rem;
-    }
+    .lab-compact-links { display: grid; gap: 0.42rem; }
 
     .lab-compact-link {
       display: inline-flex;
       justify-content: center;
       align-items: center;
-      gap: 0.42rem;
+      gap: 0.38rem;
       width: 100%;
-      padding: 0.82rem 0.95rem;
+      padding: 0.76rem 0.88rem;
       border-radius: 999px;
       text-decoration: none;
-      font-size: 0.84rem;
+      font-size: 0.81rem;
       font-weight: 800;
     }
 
-    .lab-compact-link.primary {
-      background: #2f7a67;
-      color: #fff;
-    }
+    .lab-compact-link.primary { background: #2f7a67; color: #fff; }
 
     .lab-compact-link.secondary {
       background: rgba(92, 110, 132, 0.06);
@@ -206,233 +322,41 @@
       border: 1.5px solid rgba(92, 110, 132, 0.18);
     }
 
-    .lab-compact-game {
-      min-width: 0;
-    }
-
-    .lab-compact-game .learning-lab-card {
-      min-height: calc(100svh - 6.2rem);
-      padding: 0.95rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-    }
-
-    .lab-compact-game .learning-lab-top {
-      margin-bottom: 0.75rem;
-    }
-
-    .lab-compact-game .learning-lab-title {
-      font-size: 1.04rem;
-      margin-top: 0.14rem;
-    }
-
-    .lab-compact-game .learning-lab-desc {
-      font-size: 0.78rem;
-      line-height: 1.5;
-    }
-
-    .lab-compact-game .learning-lab-stat {
-      font-size: 0.68rem;
-      padding: 0.38rem 0.55rem;
-    }
-
-    .lab-compact-game .learning-lab-kingdom {
-      padding: 0.72rem;
-    }
-
-    .lab-compact-game .learning-lab-question {
-      padding: 0.9rem;
-    }
-
-    .lab-compact-game .learning-lab-prompt {
-      font-size: 0.87rem;
-      line-height: 1.58;
-      margin-bottom: 0.72rem;
-    }
-
-    .lab-compact-game .learning-lab-help {
-      font-size: 0.73rem;
-      margin-bottom: 0.56rem;
-    }
-
-    .lab-compact-game .learning-lab-option,
-    .lab-compact-game .learning-lab-order-item {
-      padding: 0.68rem 0.82rem;
-      font-size: 0.8rem;
-    }
-
-    .lab-compact-game .learning-lab-btn {
-      padding: 0.82rem 0.95rem;
-      font-size: 0.84rem;
-    }
-
-    .lab-compact-floating {
-      position: fixed;
-      right: 14px;
-      bottom: 18px;
-      z-index: 60;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 0.48rem;
-    }
-
-    .lab-compact-floating .learning-menu {
-      position: relative;
-    }
-
-    .lab-compact-floating .learning-menu-main {
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      border: none;
-      font-size: 1.15rem;
-      cursor: pointer;
-      color: #fff;
-      background: linear-gradient(135deg, #6d63ff, #8b5cf6);
-      box-shadow: 0 10px 24px rgba(61, 38, 135, 0.28);
-      transition: transform 0.2s ease;
-    }
-
-    .lab-compact-floating .learning-menu-main:hover {
-      transform: scale(1.06);
-    }
-
-    .lab-compact-floating .learning-menu-panel {
-      position: absolute;
-      right: 0;
-      bottom: 64px;
-      min-width: 170px;
-      padding: 0.55rem;
-      border-radius: 16px;
-      background: rgba(255, 253, 248, 0.98);
-      border: 1px solid rgba(92, 110, 132, 0.12);
-      box-shadow: 0 16px 30px rgba(36, 49, 63, 0.14);
-      display: flex;
-      flex-direction: column;
-      gap: 0.42rem;
-      opacity: 0;
-      pointer-events: none;
-      transform: translateY(8px);
-      transition: all 0.22s ease;
-    }
-
-    .lab-compact-floating .learning-menu.is-open .learning-menu-panel {
-      opacity: 1;
-      pointer-events: auto;
-      transform: translateY(0);
-    }
-
-    .lab-compact-floating .learning-menu-item {
-      display: inline-flex;
-      align-items: center;
-      justify-content: flex-start;
-      gap: 0.42rem;
-      width: 100%;
-      padding: 0.68rem 0.78rem;
-      border-radius: 12px;
-      text-decoration: none;
-      background: rgba(92, 110, 132, 0.05);
-      border: 1px solid rgba(92, 110, 132, 0.08);
-      color: #24313f;
-      font-size: 0.8rem;
-      font-weight: 800;
-      cursor: pointer;
-    }
-
-    .lab-compact-floating .learning-menu-note {
-      padding: 0.48rem 0.7rem;
-      border-radius: 14px;
-      background: rgba(255, 253, 248, 0.96);
-      border: 1px solid rgba(92, 110, 132, 0.12);
-      box-shadow: 0 12px 24px rgba(36, 49, 63, 0.08);
-      font-size: 0.72rem;
-      font-weight: 800;
-      color: #5d6a79;
-      max-width: 170px;
-      text-align: right;
-    }
-
-    @media (max-width: 980px) {
+    /* --- DESKTOP: 2-column layout --- */
+    @media (min-width: 900px) {
       .lab-compact-main {
-        padding-top: 0.75rem;
+        padding: 0.85rem;
+        align-items: stretch;
       }
 
       .lab-compact-shell {
-        grid-template-columns: 1fr;
-        max-width: 620px;
+        max-width: 1100px;
+        flex-direction: row;
+        align-items: stretch;
+        gap: 1rem;
       }
 
       .lab-compact-side {
-        order: 2;
+        display: grid;
+        gap: 0.72rem;
+        width: 280px;
+        flex-shrink: 0;
+        align-content: start;
       }
 
-      .lab-compact-game {
-        order: 1;
+      .lab-compact-spacer { display: block; }
+
+      .lab-compact-game .learning-lab-top {
+        display: flex;
       }
 
-      .lab-compact-game .learning-lab-card {
-        min-height: auto;
-      }
-
-      .lab-compact-spacer {
-        display: none;
-      }
-
-      .lab-compact-topbar-inner {
-        justify-content: space-between;
-      }
-
-      .lab-compact-topmeta {
-        align-items: flex-start;
-        text-align: left;
+      .lab-compact-game .learning-lab-kingdom-svg svg {
+        max-width: 320px !important;
+        max-height: 200px !important;
       }
     }
 
-    @media (max-width: 640px) {
-      .lab-compact-topbar-inner {
-        width: min(100%, calc(100% - 1rem));
-        padding: 0.62rem 0;
-      }
-
-      .lab-compact-back {
-        padding: 0.48rem 0.7rem;
-        font-size: 0.76rem;
-      }
-
-      .lab-compact-title {
-        font-size: 0.92rem;
-      }
-
-      .lab-compact-main {
-        padding: 0.6rem 0.55rem 0.9rem;
-      }
-
-      .lab-compact-card {
-        padding: 0.82rem 0.85rem;
-        border-radius: 18px;
-      }
-
-      .lab-compact-headline h1 {
-        font-size: 1.12rem;
-      }
-
-      .lab-compact-floating {
-        right: 12px;
-        bottom: 14px;
-      }
-
-      .lab-compact-floating .learning-menu-main {
-        width: 48px;
-        height: 48px;
-      }
-
-      .lab-compact-floating .learning-menu-note {
-        display: none;
-      }
-    }
-
+    /* --- DARK MODE --- */
     [data-theme="dark"] .lab-compact-page {
       background:
         radial-gradient(circle at top, rgba(76, 96, 150, 0.18), transparent 42%),
@@ -440,27 +364,21 @@
     }
 
     [data-theme="dark"] .lab-compact-topbar {
-      background: rgba(24, 20, 18, 0.82);
+      background: rgba(24, 20, 18, 0.86);
       border-bottom-color: rgba(220, 210, 190, 0.1);
     }
 
     [data-theme="dark"] .lab-compact-back,
-    [data-theme="dark"] .lab-compact-card,
-    [data-theme="dark"] .lab-compact-floating .learning-menu-panel,
-    [data-theme="dark"] .lab-compact-floating .learning-menu-note {
+    [data-theme="dark"] .lab-compact-card {
       background: rgba(36, 34, 32, 0.96);
       border-color: rgba(220, 210, 190, 0.12);
       color: #e8e0d4;
     }
 
     [data-theme="dark"] .lab-compact-headline p,
-    [data-theme="dark"] .lab-compact-point,
-    [data-theme="dark"] .lab-compact-floating .learning-menu-note {
-      color: #b8aea1;
-    }
+    [data-theme="dark"] .lab-compact-point { color: #b8aea1; }
 
-    [data-theme="dark"] .lab-compact-link.secondary,
-    [data-theme="dark"] .lab-compact-floating .learning-menu-item {
+    [data-theme="dark"] .lab-compact-link.secondary {
       background: rgba(255, 255, 255, 0.04);
       color: #e8e0d4;
       border-color: rgba(220, 210, 190, 0.1);
@@ -605,18 +523,14 @@
       </div>
     </main>
 
-    <div class="lab-compact-floating">
-      <div class="learning-menu" data-learning-menu>
-        <button class="learning-menu-main" aria-label="Menu pembelajaran">✨</button>
-
-        <div class="learning-menu-panel">
-          <a href="bab-1-1.html" class="learning-menu-item">📖 Nota</a>
-          <button class="learning-menu-item" type="button" data-action="restart-lab">🎮 Main Semula</button>
-          <button class="learning-menu-item" type="button" data-action="top">⬆️ Ke atas</button>
-        </div>
+    <!-- Emoji-only sparkle dock (reuses shared .note-sparkle-* CSS from ui.css) -->
+    <div class="note-sparkle-wrap" id="lab-sparkle-wrap">
+      <div class="note-sparkle-items" id="lab-sparkle-items">
+        <button class="note-sparkle-item" type="button" data-tooltip="Mod paparan" id="lab-dm-btn">☀️</button>
+        <button class="note-sparkle-item" type="button" data-tooltip="Main Semula" id="lab-restart-btn">🔄</button>
+        <a class="note-sparkle-item" href="bab-1-1.html" data-tooltip="Nota 1.1">📖</a>
       </div>
-
-      <div class="learning-menu-note">Akses pantas tanpa ganggu tumpuan.</div>
+      <button class="note-sparkle-fab" type="button" id="lab-sparkle-fab" aria-label="Menu Lab">✨</button>
     </div>
   </div>
 
@@ -624,47 +538,44 @@
   <script src="../assets/js/main.js?v=40"></script>
   <script>
     (function () {
-      const menu = document.querySelector("[data-learning-menu]");
-      const menuBtn = menu?.querySelector(".learning-menu-main");
-      const topBtn = menu?.querySelector('[data-action="top"]');
-      const restartBtn = menu?.querySelector('[data-action="restart-lab"]');
-      const startBtn = document.querySelector('[data-lab-action="start"]');
-      const restartGameBtn = document.querySelector('[data-lab-action="restart"]');
+      var THEME_KEY = 'hazimedu-theme';
+      var wrap = document.getElementById('lab-sparkle-wrap');
+      var fab  = document.getElementById('lab-sparkle-fab');
+      var dmBtn = document.getElementById('lab-dm-btn');
+      var restartBtn = document.getElementById('lab-restart-btn');
 
-      if (menu && menuBtn) {
-        menuBtn.addEventListener("click", function () {
-          menu.classList.toggle("is-open");
-        });
+      // Sync dark mode emoji on load
+      dmBtn.textContent = (document.documentElement.getAttribute('data-theme') || 'light') === 'dark' ? '🌙' : '☀️';
 
-        document.addEventListener("click", function (event) {
-          if (!menu.contains(event.target)) {
-            menu.classList.remove("is-open");
-          }
-        });
-      }
+      // Toggle open/close
+      fab.addEventListener('click', function (e) {
+        e.stopPropagation();
+        wrap.classList.toggle('is-open');
+      });
+      document.addEventListener('click', function (e) {
+        if (!wrap.contains(e.target)) wrap.classList.remove('is-open');
+      });
 
-      if (topBtn) {
-        topBtn.addEventListener("click", function () {
-          window.scrollTo({ top: 0, behavior: "smooth" });
-          menu?.classList.remove("is-open");
-        });
-      }
+      // Dark mode
+      dmBtn.addEventListener('click', function () {
+        var next = (document.documentElement.getAttribute('data-theme') || 'light') === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem(THEME_KEY, next);
+        dmBtn.textContent = next === 'dark' ? '🌙' : '☀️';
+        wrap.classList.remove('is-open');
+      });
 
-      if (restartBtn) {
-        restartBtn.addEventListener("click", function () {
-          if (restartGameBtn && !restartGameBtn.closest(".is-hidden")) {
-            restartGameBtn.click();
-          } else if (startBtn && !startBtn.closest(".is-hidden")) {
-            startBtn.click();
-          } else if (startBtn) {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-            setTimeout(function () {
-              startBtn.click();
-            }, 180);
-          }
-          menu?.classList.remove("is-open");
-        });
-      }
+      // Restart lab
+      restartBtn.addEventListener('click', function () {
+        var restartGameBtn = document.querySelector('[data-lab-action="restart"]');
+        var startBtn = document.querySelector('[data-lab-action="start"]');
+        if (restartGameBtn && !restartGameBtn.closest('.is-hidden')) {
+          restartGameBtn.click();
+        } else if (startBtn) {
+          startBtn.click();
+        }
+        wrap.classList.remove('is-open');
+      });
     })();
   </script>
 </body>
