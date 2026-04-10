@@ -1246,3 +1246,46 @@
     display: none;
   }
 }
+
+/* ── Handedness — left-hand mode ─────────────────────────────────────────── */
+
+/* Sparkle FAB flips to left side */
+body.hand-left .note-sparkle-wrap {
+  right: auto;
+  left: 14px;
+  align-items: flex-start;
+}
+
+body.hand-left .note-sparkle-items {
+  align-items: flex-start;
+}
+
+/* Tooltip flips to appear on right of icon (instead of left) */
+body.hand-left .note-sparkle-item[data-tooltip]::before {
+  right: auto;
+  left: calc(100% + 10px);
+}
+
+/* Nav toggle moves to left, brand shifts right */
+@media (max-width: 760px) {
+  body.hand-left .nav-wrap {
+    flex-direction: row-reverse;
+  }
+
+  /* Nav dropdown anchors to left when in left-hand mode */
+  body.hand-left .site-nav {
+    right: auto;
+    left: 0.75rem;
+    align-items: flex-start;
+  }
+
+  body.hand-left .site-nav a {
+    text-align: left;
+  }
+}
+
+@media (max-width: 640px) {
+  body.hand-left .note-sparkle-wrap {
+    left: 12px;
+  }
+}
