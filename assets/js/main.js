@@ -1,5 +1,16 @@
 document.documentElement.classList.add("js-enhanced");
 
+// Apply handedness class before first paint to avoid layout flash
+(function () {
+  if (localStorage.getItem('hzedu-hand') === 'left') {
+    document.body
+      ? document.body.classList.add('hand-left')
+      : document.addEventListener('DOMContentLoaded', function () {
+          document.body.classList.add('hand-left');
+        });
+  }
+})();
+
 // =========================
 // DARK MODE TOGGLE
 // =========================
@@ -806,6 +817,10 @@ document.addEventListener("DOMContentLoaded", function () {
       items.push({ emoji: '⚗️', tooltip: 'Makmal Latihan', type: 'lab', href: labHref });
     }
 
+    // Handedness toggle
+    var isLeftHand = localStorage.getItem('hzedu-hand') === 'left';
+    items.push({ emoji: isLeftHand ? '🫲' : '🫱', tooltip: isLeftHand ? 'Mod tangan kanan' : 'Mod tangan kiri', type: 'hand' });
+
     // --- Inject sparkle menu DOM ---
     var wrap = document.createElement('div');
     wrap.className = 'note-sparkle-wrap';
@@ -874,6 +889,20 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       if (type === 'lab') {
+        wrap.classList.remove('is-open');
+      }
+
+      if (type === 'hand') {
+        var nowLeft = localStorage.getItem('hzedu-hand') === 'left';
+        var next = nowLeft ? 'right' : 'left';
+        localStorage.setItem('hzedu-hand', next);
+        document.body.classList.toggle('hand-left', next === 'left');
+        // Update button emoji + tooltip
+        var handBtn = itemsContainer.querySelector('[data-sparkle-type="hand"]');
+        if (handBtn) {
+          handBtn.textContent = next === 'left' ? '🫲' : '🫱';
+          handBtn.setAttribute('data-tooltip', next === 'left' ? 'Mod tangan kanan' : 'Mod tangan kiri');
+        }
         wrap.classList.remove('is-open');
       }
     });
