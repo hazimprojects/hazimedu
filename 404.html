@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 · Halaman Tidak Dijumpai · Hazim EduHub</title>
+  <meta name="robots" content="noindex, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css?v=38" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZTQB7MML49"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZTQB7MML49');
+  </script>
+
+  <style>
+    .error-hero {
+      min-height: calc(100dvh - 64px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 1.25rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .error-orb-a {
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(180, 220, 200, 0.28), transparent 70%);
+      top: -80px;
+      right: -100px;
+      pointer-events: none;
+    }
+
+    .error-orb-b {
+      position: absolute;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(219, 196, 155, 0.22), transparent 70%);
+      bottom: 0;
+      left: -80px;
+      pointer-events: none;
+    }
+
+    .error-inner {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 440px;
+    }
+
+    .error-emoji {
+      font-size: 4.2rem;
+      line-height: 1;
+      margin-bottom: 1.2rem;
+      display: block;
+      animation: bob 3.6s ease-in-out infinite;
+    }
+
+    @keyframes bob {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-8px); }
+    }
+
+    .error-code {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #2f7a67;
+      background: rgba(47, 122, 103, 0.08);
+      border: 1px solid rgba(47, 122, 103, 0.18);
+      border-radius: 999px;
+      padding: 0.28rem 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .error-title {
+      font-size: 1.65rem;
+      font-weight: 900;
+      line-height: 1.25;
+      color: #1e2a34;
+      margin: 0 0 0.9rem;
+    }
+
+    .error-desc {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #6b5a3e;
+      margin: 0 0 2rem;
+    }
+
+    .error-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+    }
+
+    .error-hint {
+      margin-top: 2.5rem;
+      font-size: 0.76rem;
+      color: #9b8f82;
+    }
+
+    /* Dark mode */
+    [data-theme="dark"] .error-title { color: #f0e8da; }
+    [data-theme="dark"] .error-desc  { color: #c7baaa; }
+    [data-theme="dark"] .error-hint  { color: #7a6f65; }
+    [data-theme="dark"] .error-code  {
+      color: #7dd4be;
+      background: rgba(47, 122, 103, 0.14);
+      border-color: rgba(47, 122, 103, 0.25);
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="/index.html">Hazim EduHub</a>
+      <button class="nav-toggle" aria-label="Buka menu" aria-expanded="false">☰</button>
+      <nav class="site-nav">
+        <a href="/index.html">Utama</a>
+        <a href="/notes/index.html">Nota</a>
+        <a href="/about.html">Tentang</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="error-hero">
+      <div class="error-orb-a" aria-hidden="true"></div>
+      <div class="error-orb-b" aria-hidden="true"></div>
+
+      <div class="error-inner">
+        <span class="error-emoji">🗺️</span>
+        <span class="error-code">404 · Halaman tidak dijumpai</span>
+        <h1 class="error-title">Kawasan ini belum diterokai</h1>
+        <p class="error-desc">
+          Seperti penjelajah zaman dahulu yang tiba di tanah yang belum ada petanya —
+          halaman ini tidak wujud, mungkin telah dialihkan, atau sedang dalam pembinaan.
+        </p>
+        <div class="error-actions">
+          <a class="btn btn-primary" href="/index.html">Kembali ke Utama</a>
+          <a class="btn btn-secondary" href="/notes/index.html">Lihat Nota</a>
+        </div>
+        <p class="error-hint">hazimedu.com</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="/assets/js/main.js?v=41"></script>
+</body>
+</html>
