@@ -893,3 +893,63 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 })();
+
+// ── Nota Feedback Widget ──────────────────────────────────────────────────────
+(function () {
+  // Only on subtopic note pages (e.g. /notes/bab-1-1.html)
+  if (!window.location.pathname.match(/\/notes\/bab-\d+-\d+\.html/)) return;
+
+  var STORAGE_KEY = 'hzfb-' + window.location.pathname;
+  if (localStorage.getItem(STORAGE_KEY)) return; // already voted on this page
+
+  // Inject styles once
+  var style = document.createElement('style');
+  style.textContent = [
+    '.nota-feedback{text-align:center;padding:1.4rem 1rem 0.6rem;opacity:0;animation:nfb-in 0.4s ease 0.5s forwards}',
+    '@keyframes nfb-in{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}',
+    '.nota-feedback-label{margin:0 0 0.7rem;font-size:0.8rem;font-weight:700;color:#8c7d6a;letter-spacing:0.01em}',
+    '.nota-feedback-options{display:flex;justify-content:center;gap:0.55rem}',
+    '.nota-feedback-btn{width:46px;height:46px;border-radius:999px;border:1.5px solid rgba(92,110,132,0.14);background:rgba(255,253,248,0.9);font-size:1.3rem;cursor:pointer;transition:transform 0.14s ease,box-shadow 0.14s ease;display:inline-flex;align-items:center;justify-content:center;line-height:1}',
+    '.nota-feedback-btn:hover{transform:scale(1.2);box-shadow:0 4px 14px rgba(0,0,0,0.08)}',
+    '.nota-feedback-btn:active{transform:scale(0.95)}',
+    '.nota-feedback-thanks{margin:0;font-size:0.86rem;font-weight:700;color:#2f7a67;animation:nfb-in 0.25s ease forwards;padding:1.2rem 1rem 0.6rem;text-align:center}',
+    '[data-theme="dark"] .nota-feedback-label{color:#b8aea1}',
+    '[data-theme="dark"] .nota-feedback-btn{background:rgba(50,48,44,0.9);border-color:rgba(220,210,190,0.13)}',
+    '[data-theme="dark"] .nota-feedback-thanks{color:#7dd4be}'
+  ].join('');
+  document.head.appendChild(style);
+
+  // Find the nav section at the bottom of the note
+  var navSection = document.querySelector('.note-subsection .hero-actions');
+  if (!navSection) return;
+  var insertBefore = navSection.closest('.note-subsection');
+  if (!insertBefore) return;
+
+  // Build widget
+  var widget = document.createElement('div');
+  widget.className = 'nota-feedback';
+  widget.innerHTML =
+    '<p class="nota-feedback-label">Nota ini membantu?</p>' +
+    '<div class="nota-feedback-options">' +
+      '<button class="nota-feedback-btn" type="button" data-reaction="mudah" title="Mudah difahami">😊</button>' +
+      '<button class="nota-feedback-btn" type="button" data-reaction="boleh-baik" title="Boleh diperbaiki">🤔</button>' +
+      '<button class="nota-feedback-btn" type="button" data-reaction="kurang-jelas" title="Kurang jelas">😕</button>' +
+    '</div>';
+
+  insertBefore.parentNode.insertBefore(widget, insertBefore);
+
+  widget.querySelectorAll('.nota-feedback-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var reaction = btn.getAttribute('data-reaction');
+      // Fire GA4 custom event (GA already on every page)
+      if (typeof gtag === 'function') {
+        gtag('event', 'nota_reaction', { reaction: reaction, page_path: window.location.pathname });
+      }
+      localStorage.setItem(STORAGE_KEY, reaction);
+      var thanks = document.createElement('p');
+      thanks.className = 'nota-feedback-thanks';
+      thanks.textContent = 'Terima kasih! 🙏';
+      widget.replaceWith(thanks);
+    });
+  });
+})();
