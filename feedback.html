@@ -93,6 +93,50 @@
       display: none !important;
     }
 
+    .feedback-status {
+      display: none;
+      margin-top: 1rem;
+      padding: 0.95rem 1rem;
+      border-radius: 16px;
+      line-height: 1.6;
+      font-size: 0.96rem;
+      border: 1px solid rgba(120, 110, 90, 0.14);
+    }
+
+    .feedback-status.is-visible {
+      display: block;
+    }
+
+    .feedback-status.is-success {
+      background: rgba(47, 122, 103, 0.10);
+      color: #1f5e4f;
+      border-color: rgba(47, 122, 103, 0.18);
+    }
+
+    .feedback-status.is-error {
+      background: rgba(180, 70, 70, 0.10);
+      color: #8a3030;
+      border-color: rgba(180, 70, 70, 0.18);
+    }
+
+    .feedback-submit[disabled] {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+
+    .feedback-success-panel {
+      display: none;
+      margin-top: 1rem;
+    }
+
+    .feedback-success-panel.is-visible {
+      display: block;
+    }
+
+    .feedback-form-wrap.is-hidden {
+      display: none;
+    }
+
     body.dark-mode .feedback-label,
     [data-theme="dark"] .feedback-label {
       color: #f1e7d8;
@@ -113,6 +157,20 @@
     body.dark-mode .feedback-help,
     [data-theme="dark"] .feedback-help {
       color: #c7baaa;
+    }
+
+    body.dark-mode .feedback-status.is-success,
+    [data-theme="dark"] .feedback-status.is-success {
+      background: rgba(47, 122, 103, 0.18);
+      color: #d7f1e8;
+      border-color: rgba(47, 122, 103, 0.25);
+    }
+
+    body.dark-mode .feedback-status.is-error,
+    [data-theme="dark"] .feedback-status.is-error {
+      background: rgba(180, 70, 70, 0.16);
+      color: #ffd7d7;
+      border-color: rgba(180, 70, 70, 0.24);
     }
   </style>
 </head>
@@ -179,124 +237,143 @@
           <article class="paper-board glossary-paper">
             <div class="paper-strip strip-glossary">Borang Maklum Balas</div>
 
-            <form
-              action="https://formspree.io/f/xaqlrnpe"
-              method="POST"
-              class="feedback-form"
-            >
-              <div class="feedback-field">
-                <label class="feedback-label" for="feedback-name">Nama anda</label>
-                <input
-                  class="feedback-input"
-                  id="feedback-name"
-                  name="name"
-                  type="text"
-                  required
-                  minlength="2"
-                  placeholder="Contoh: Aisyah / Amir / Cikgu Farah"
-                />
-              </div>
+            <div class="feedback-form-wrap" id="feedbackFormWrap">
+              <form
+                id="feedbackForm"
+                class="feedback-form"
+                novalidate
+              >
+                <div class="feedback-field">
+                  <label class="feedback-label" for="feedback-name">Nama anda</label>
+                  <input
+                    class="feedback-input"
+                    id="feedback-name"
+                    name="name"
+                    type="text"
+                    required
+                    minlength="2"
+                    placeholder="Contoh: Aisyah / Amir / Cikgu Farah"
+                  />
+                </div>
 
-              <div class="feedback-field">
-                <label class="feedback-label" for="feedback-role">Saya seorang...</label>
-                <select
-                  class="feedback-select"
-                  id="feedback-role"
-                  name="role"
-                  required
-                >
-                  <option value="">Pilih satu</option>
-                  <option value="Pelajar">Pelajar</option>
-                  <option value="Guru">Guru</option>
-                  <option value="Ibu bapa">Ibu bapa</option>
-                  <option value="Pengunjung umum">Pengunjung umum</option>
-                </select>
-              </div>
+                <div class="feedback-field">
+                  <label class="feedback-label" for="feedback-role">Saya seorang...</label>
+                  <select
+                    class="feedback-select"
+                    id="feedback-role"
+                    name="role"
+                    required
+                  >
+                    <option value="">Pilih satu</option>
+                    <option value="Pelajar">Pelajar</option>
+                    <option value="Guru">Guru</option>
+                    <option value="Ibu bapa">Ibu bapa</option>
+                    <option value="Pengunjung umum">Pengunjung umum</option>
+                  </select>
+                </div>
 
-              <div class="feedback-field">
-                <label class="feedback-label" for="feedback-type">Jenis mesej</label>
-                <select
-                  class="feedback-select"
-                  id="feedback-type"
-                  name="message_type"
-                  required
-                >
-                  <option value="">Pilih satu</option>
-                  <option value="Pertanyaan">Pertanyaan</option>
-                  <option value="Cadangan">Cadangan</option>
-                  <option value="Pembetulan isi">Pembetulan isi</option>
-                  <option value="Laporan masalah pada laman">Laporan masalah pada laman</option>
-                  <option value="Maklum balas umum">Maklum balas umum</option>
-                </select>
-              </div>
+                <div class="feedback-field">
+                  <label class="feedback-label" for="feedback-type">Jenis mesej</label>
+                  <select
+                    class="feedback-select"
+                    id="feedback-type"
+                    name="message_type"
+                    required
+                  >
+                    <option value="">Pilih satu</option>
+                    <option value="Pertanyaan">Pertanyaan</option>
+                    <option value="Cadangan">Cadangan</option>
+                    <option value="Pembetulan isi">Pembetulan isi</option>
+                    <option value="Laporan masalah pada laman">Laporan masalah pada laman</option>
+                    <option value="Maklum balas umum">Maklum balas umum</option>
+                  </select>
+                </div>
 
-              <div class="feedback-field">
-                <label class="feedback-label" for="feedback-page">Bab / halaman berkaitan (jika ada)</label>
-                <input
-                  class="feedback-input"
-                  id="feedback-page"
-                  name="page_reference"
-                  type="text"
-                  placeholder="Contoh: Bab 2 / Subtopik 4.3 / Audio Bab 1"
-                />
-                <p class="feedback-help">Bahagian ini membantu semakan dilakukan dengan lebih cepat, tetapi tidak wajib diisi.</p>
-              </div>
+                <div class="feedback-field">
+                  <label class="feedback-label" for="feedback-page">Bab / halaman berkaitan (jika ada)</label>
+                  <input
+                    class="feedback-input"
+                    id="feedback-page"
+                    name="page_reference"
+                    type="text"
+                    placeholder="Contoh: Bab 2 / Subtopik 4.3 / Audio Bab 1"
+                  />
+                  <p class="feedback-help">Bahagian ini membantu semakan dilakukan dengan lebih cepat, tetapi tidak wajib diisi.</p>
+                </div>
 
-              <div class="feedback-field">
-                <label class="feedback-label" for="feedback-message">Tulis mesej anda di sini</label>
-                <textarea
-                  class="feedback-textarea"
-                  id="feedback-message"
-                  name="message"
-                  required
-                  minlength="10"
-                  rows="6"
-                  placeholder="Contohnya: Saya rasa bahagian ini kurang jelas... / Ada typo pada topik ini... / Audio nota ini membantu, cuma..."
-                ></textarea>
-                <p class="feedback-help">Tulis dengan santai dan jelas. Tidak perlu format email rasmi.</p>
-              </div>
+                <div class="feedback-field">
+                  <label class="feedback-label" for="feedback-message">Tulis mesej anda di sini</label>
+                  <textarea
+                    class="feedback-textarea"
+                    id="feedback-message"
+                    name="message"
+                    required
+                    minlength="10"
+                    rows="6"
+                    placeholder="Contohnya: Saya rasa bahagian ini kurang jelas... / Ada typo pada topik ini... / Audio nota ini membantu, cuma..."
+                  ></textarea>
+                  <p class="feedback-help">Tulis dengan santai dan jelas. Tidak perlu format email rasmi.</p>
+                </div>
 
-              <div class="feedback-field">
-                <label class="feedback-label" for="feedback-email">Email (jika anda mahu dibalas)</label>
-                <input
-                  class="feedback-input"
-                  id="feedback-email"
-                  name="email"
-                  type="email"
-                  placeholder="Contoh: nama@email.com"
-                />
-                <p class="feedback-help">Bahagian ini tidak wajib. Isi jika anda mahu menerima balasan.</p>
-              </div>
+                <div class="feedback-field">
+                  <label class="feedback-label" for="feedback-email">Email (jika anda mahu dibalas)</label>
+                  <input
+                    class="feedback-input"
+                    id="feedback-email"
+                    name="email"
+                    type="email"
+                    placeholder="Contoh: nama@email.com"
+                  />
+                  <p class="feedback-help">Bahagian ini tidak wajib. Isi jika anda mahu menerima balasan.</p>
+                </div>
 
-              <div class="feedback-hidden" aria-hidden="true">
-                <label for="website">Jangan isi ruangan ini</label>
-                <input
-                  id="website"
-                  type="text"
-                  name="_gotcha"
-                  tabindex="-1"
-                  autocomplete="off"
-                />
-              </div>
+                <div class="feedback-hidden" aria-hidden="true">
+                  <label for="website">Jangan isi ruangan ini</label>
+                  <input
+                    id="website"
+                    type="text"
+                    name="_gotcha"
+                    tabindex="-1"
+                    autocomplete="off"
+                  />
+                </div>
 
-              <input type="hidden" name="_subject" value="Maklum balas baru · Hazim EduHub" />
-              <input type="hidden" name="_next" value="https://hazimedu.com/thank-you.html" />
-              <input type="hidden" name="source_page" value="feedback.html" />
+                <input type="hidden" name="_subject" value="Maklum balas baru · Hazim EduHub" />
+                <input type="hidden" name="source_page" value="feedback.html" />
 
-              <div class="feedback-field">
-                <p class="feedback-help">Pengesahan ringkas ini membantu melindungi borang daripada spam automatik.</p>
-                <div
-                  class="cf-turnstile"
-                  data-sitekey="0x4AAAAAAC7eTaqA732cE0kr"
-                  data-theme="auto"
-                ></div>
-              </div>
+                <div class="feedback-field">
+                  <p class="feedback-help">Pengesahan ringkas ini membantu melindungi borang daripada spam automatik.</p>
+                  <div
+                    class="cf-turnstile"
+                    data-sitekey="0x4AAAAAAC7eTaqA732cE0kr"
+                    data-theme="auto"
+                  ></div>
+                </div>
 
-              <div class="feedback-actions">
-                <button type="submit" class="btn btn-primary">Hantar maklum balas</button>
-                <p class="feedback-help">Terima kasih. Pandangan seperti ini sangat membantu Hazim EduHub menjadi lebih baik.</p>
-              </div>
-            </form>
+                <div class="feedback-actions">
+                  <button type="submit" class="btn btn-primary feedback-submit" id="feedbackSubmitBtn">Hantar maklum balas</button>
+                  <p class="feedback-help">Terima kasih. Pandangan seperti ini sangat membantu Hazim EduHub menjadi lebih baik.</p>
+                </div>
+
+                <div id="feedbackStatus" class="feedback-status" role="status" aria-live="polite"></div>
+              </form>
+            </div>
+
+            <div id="feedbackSuccessPanel" class="feedback-success-panel">
+              <article class="paper-board summary-paper">
+                <div class="paper-strip strip-summary">Terima kasih</div>
+                <p class="point-line">
+                  Mesej anda telah diterima dengan jayanya. Pandangan seperti ini sangat membantu Hazim EduHub menjadi lebih jelas, lebih kemas dan lebih berguna untuk pengguna.
+                </p>
+                <p class="point-line">
+                  Jika anda meninggalkan email dan mesej anda memerlukan balasan, Hazim EduHub boleh menghubungi anda semula.
+                </p>
+                <div class="hero-actions">
+                  <a class="btn btn-primary" href="notes/index.html">Kembali ke nota</a>
+                  <a class="btn btn-secondary" href="index.html">Kembali ke utama</a>
+                </div>
+              </article>
+            </div>
           </article>
         </section>
 
@@ -342,5 +419,88 @@
 
   <script src="assets/js/main.js?v=46"></script>
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <script>
+    (function () {
+      const form = document.getElementById('feedbackForm');
+      const formWrap = document.getElementById('feedbackFormWrap');
+      const successPanel = document.getElementById('feedbackSuccessPanel');
+      const statusBox = document.getElementById('feedbackStatus');
+      const submitBtn = document.getElementById('feedbackSubmitBtn');
+      const endpoint = 'https://formspree.io/f/xaqlrnpe';
+
+      if (!form || !formWrap || !successPanel || !statusBox || !submitBtn) return;
+
+      function showStatus(message, type) {
+        statusBox.textContent = message;
+        statusBox.className = 'feedback-status is-visible ' + (type === 'success' ? 'is-success' : 'is-error');
+      }
+
+      function clearStatus() {
+        statusBox.textContent = '';
+        statusBox.className = 'feedback-status';
+      }
+
+      form.addEventListener('submit', async function (event) {
+        event.preventDefault();
+        clearStatus();
+
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+
+        const turnstileResponse = form.querySelector('input[name="cf-turnstile-response"]');
+        if (!turnstileResponse || !turnstileResponse.value) {
+          showStatus('Sila lengkapkan pengesahan keselamatan terlebih dahulu.', 'error');
+          return;
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sedang dihantar...';
+
+        try {
+          const formData = new FormData(form);
+
+          const response = await fetch(endpoint, {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+
+          const result = await response.json().catch(() => ({}));
+
+          if (response.ok) {
+            form.reset();
+
+            if (window.turnstile) {
+              const widget = form.querySelector('.cf-turnstile');
+              if (widget) {
+                window.turnstile.reset(widget);
+              }
+            }
+
+            formWrap.classList.add('is-hidden');
+            successPanel.classList.add('is-visible');
+            window.scrollTo({ top: formWrap.offsetTop - 120, behavior: 'smooth' });
+            return;
+          }
+
+          const message =
+            result && result.errors && result.errors.length
+              ? result.errors.map(err => err.message).join(' ')
+              : 'Maaf, mesej tidak dapat dihantar buat masa ini. Cuba lagi sebentar lagi.';
+
+          showStatus(message, 'error');
+        } catch (error) {
+          showStatus('Maaf, berlaku ralat semasa menghantar borang. Sila cuba lagi sebentar lagi.', 'error');
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Hantar maklum balas';
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
