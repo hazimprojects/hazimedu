@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     requestAnimationFrame(() => {
       panel.style.maxHeight = panel.scrollHeight + "px";
-      panel.style.opacity = "1"; // guard: close rAF may have fired first and set opacity:0
+      panel.style.opacity = "1";
     });
 
     const onTransitionEnd = function (e) {
@@ -168,7 +168,6 @@ document.addEventListener("DOMContentLoaded", function () {
     panel.style.maxHeight = fullHeight + "px";
 
     requestAnimationFrame(() => {
-      // Guard: if the item was re-opened before this rAF fired, skip close animation
       if (!item.classList.contains("is-open")) {
         panel.style.maxHeight = "0px";
         panel.style.opacity = "0";
@@ -1295,31 +1294,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }, { passive: true });
   });
-})();
-
-
-// ── Swipe Navigation (note subtopic pages) ────────────────────────────────────
-(function () {
-  var isNotePage = /\/notes\/bab-\d+-\d+\.html$/.test(location.pathname);
-  if (!isNotePage) return;
-  var startX = 0, startY = 0;
-  var THRESHOLD = 72, VERTICAL_LIMIT = 50;
-  document.addEventListener('touchstart', function (e) {
-    startX = e.touches[0].clientX;
-    startY = e.touches[0].clientY;
-  }, { passive: true });
-  document.addEventListener('touchend', function (e) {
-    var dx = e.changedTouches[0].clientX - startX;
-    var dy = Math.abs(e.changedTouches[0].clientY - startY);
-    if (dy > VERTICAL_LIMIT || Math.abs(dx) < THRESHOLD) return;
-    var actions = document.querySelectorAll('.hero-actions a.btn');
-    if (!actions.length) return;
-    if (dx < 0 && actions[actions.length - 1]) {
-      location.href = actions[actions.length - 1].href; // swipe left → next
-    } else if (dx > 0 && actions[0]) {
-      location.href = actions[0].href; // swipe right → back/prev
-    }
-  }, { passive: true });
 })();
 
 // ── Keyboard Shortcuts: ← → prev/next on note pages ─────────────────────────
