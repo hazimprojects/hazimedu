@@ -146,6 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     requestAnimationFrame(() => {
       panel.style.maxHeight = panel.scrollHeight + "px";
+      panel.style.opacity = "1"; // guard: close rAF may have fired first and set opacity:0
     });
 
     const onTransitionEnd = function (e) {
@@ -167,8 +168,11 @@ document.addEventListener("DOMContentLoaded", function () {
     panel.style.maxHeight = fullHeight + "px";
 
     requestAnimationFrame(() => {
-      panel.style.maxHeight = "0px";
-      panel.style.opacity = "0";
+      // Guard: if the item was re-opened before this rAF fired, skip close animation
+      if (!item.classList.contains("is-open")) {
+        panel.style.maxHeight = "0px";
+        panel.style.opacity = "0";
+      }
     });
 
     const onTransitionEnd = function (e) {
@@ -1310,19 +1314,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 })();
 
-// ── Scroll Restoration ────────────────────────────────────────────────────────
-(function () {
-  var key = 'hzedu-scroll-' + location.pathname;
-  window.addEventListener('beforeunload', function () {
-    sessionStorage.setItem(key, window.scrollY);
-  });
-  var saved = parseInt(sessionStorage.getItem(key) || '0', 10);
-  if (saved > 120) {
-    document.addEventListener('DOMContentLoaded', function () {
-      requestAnimationFrame(function () { window.scrollTo(0, saved); });
-    });
-  }
-})();
 
 // ── Swipe Navigation (note subtopic pages) ────────────────────────────────────
 (function () {
