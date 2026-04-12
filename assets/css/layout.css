@@ -1,15 +1,5 @@
-/* =========================
-   PAGE TRANSITION
-========================= */
-
-@keyframes hzPageIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-/* opacity-only on main — no transform, so no stacking context that breaks
-   overflow:hidden + will-change compositing inside accordion items */
-main { animation: hzPageIn 0.18s ease both; }
-
+/* Page transition animation removed — it caused stacking context / compositing
+   bugs on mobile that broke accordion panel rendering. */
 /* =========================
    HEADER / NAV
 ========================= */
