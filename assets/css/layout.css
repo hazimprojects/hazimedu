@@ -62,7 +62,11 @@
     -webkit-tap-highlight-color: transparent;
   }
   .hz-bottom-nav-item.is-active { color: var(--primary); }
-  .hz-bottom-nav-item .hz-nav-icon { font-size: 1.18rem; line-height: 1; }
+  .hz-bottom-nav-item .hz-nav-icon {
+    display: flex; align-items: center; justify-content: center;
+    width: 22px; height: 22px;
+  }
+  .hz-bottom-nav-item .hz-nav-icon svg { width: 22px; height: 22px; }
   /* Body padding — content not hidden behind bottom nav */
   body { padding-bottom: calc(var(--bottom-nav-h) + var(--safe-bottom)); }
   /* Hide hamburger — bottom nav replaces it on mobile */
