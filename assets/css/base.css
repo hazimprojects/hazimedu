@@ -27,8 +27,8 @@
   --theme-transition: background 0.35s ease, color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
 }
 
-/* App-like overscroll */
-html { overscroll-behavior: none; }
+/* Prevent only horizontal overscroll — keeps pull-to-refresh (swipe down) working */
+html { overscroll-behavior-x: none; }
 html, body { background-color: var(--paper); }
 
 /* =========================
