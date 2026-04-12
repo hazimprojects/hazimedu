@@ -859,7 +859,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (audioEl) itemsContainer.appendChild(makeSparkleItem('🎧', 'Main audio', 'audio'));
-    if (labHref) itemsContainer.appendChild(makeSparkleItem('⚗️', 'Makmal Latihan', 'lab', labHref));
+    if (labHref) itemsContainer.appendChild(makeSparkleItem('📜', 'Arkib', 'lab', labHref));
     itemsContainer.appendChild(makeSparkleItem('⚙️', 'Tetapan', 'settings'));
 
     // --- FAB ---
