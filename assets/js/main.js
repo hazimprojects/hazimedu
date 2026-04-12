@@ -889,31 +889,11 @@ document.addEventListener("DOMContentLoaded", function () {
 })();
 
 // =========================
-// NOTE PAGE: SPARKLE MENU + SETTINGS PANEL
+// NOTE PAGE: SPARKLE MENU
 // =========================
 (function setupNoteFeatures() {
-  var THEME_KEY = 'hazimedu-theme';
-
-  function getCurrentTheme() {
-    return document.documentElement.getAttribute('data-theme') || 'light';
-  }
-
-  function toggleTheme() {
-    var next = getCurrentTheme() === 'dark' ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', next);
-    localStorage.setItem(THEME_KEY, next);
-    document.querySelectorAll('.display-fab').forEach(function(btn) {
-      btn.textContent = next === 'dark' ? '🌙' : '☀️';
-    });
-    return next;
-  }
-
   document.addEventListener('DOMContentLoaded', function() {
     if (document.querySelector('.note-sparkle-wrap')) return;
-
-    document.querySelectorAll('.display-fab').forEach(function(btn) {
-      btn.style.display = 'none';
-    });
 
     var audioEl = document.querySelector('.note-audio-player .audio-src');
     var labHref = document.body.dataset.labHref ||
@@ -924,38 +904,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var wrap = document.createElement('div');
     wrap.className = 'note-sparkle-wrap';
-
-    var panel = document.createElement('div');
-    panel.className = 'note-settings-panel';
-
-    function dmEmoji() { return getCurrentTheme() === 'dark' ? '🌙' : '☀️'; }
-    function handEmoji() { return localStorage.getItem('hzedu-hand') === 'left' ? '🫲' : '🫱'; }
-    function handDesc() {
-      return localStorage.getItem('hzedu-hand') === 'left'
-        ? 'Pindah butang navigasi ke kanan'
-        : 'Pindah butang navigasi ke kiri';
-    }
-
-    function makeSettingsRow(name, desc, val, type) {
-      var row = document.createElement('button');
-      row.type = 'button';
-      row.className = 'note-settings-row';
-      row.setAttribute('data-stype', type);
-      row.innerHTML =
-        '<span class="note-settings-body">' +
-          '<span class="note-settings-name">' + name + '</span>' +
-          '<span class="note-settings-desc" id="sd-' + type + '">' + desc + '</span>' +
-        '</span>' +
-        '<span class="note-settings-val" id="sv-' + type + '">' + val + '</span>';
-      return row;
-    }
-
-    var header = document.createElement('div');
-    header.className = 'note-settings-header';
-    header.textContent = 'Tetapan';
-    panel.appendChild(header);
-    panel.appendChild(makeSettingsRow('Mod Paparan', 'Tukar antara mod cerah dan gelap', dmEmoji(), 'dm'));
-    panel.appendChild(makeSettingsRow('Mod Tangan', handDesc(), handEmoji(), 'hand'));
 
     var itemsContainer = document.createElement('div');
     itemsContainer.className = 'note-sparkle-items';
@@ -974,7 +922,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (audioEl) itemsContainer.appendChild(makeSparkleItem('🎧', 'Main audio', 'audio'));
     if (labHref) itemsContainer.appendChild(makeSparkleItem('📜', 'Arkib', 'lab', labHref));
-    itemsContainer.appendChild(makeSparkleItem('⚙️', 'Tetapan', 'settings'));
+    itemsContainer.appendChild(makeSparkleItem('✋', 'Kidal', 'hand'));
 
     var fab = document.createElement('button');
     fab.className = 'note-sparkle-fab';
@@ -982,22 +930,18 @@ document.addEventListener("DOMContentLoaded", function () {
     fab.setAttribute('aria-label', 'Menu pembelajaran');
     fab.textContent = '✨';
 
-    wrap.appendChild(panel);
     wrap.appendChild(itemsContainer);
     wrap.appendChild(fab);
     document.body.appendChild(wrap);
 
     fab.addEventListener('click', function(e) {
       e.stopPropagation();
-      var opening = !wrap.classList.contains('is-open');
       wrap.classList.toggle('is-open');
-      if (!opening) panel.classList.remove('is-open');
     });
 
     document.addEventListener('click', function(e) {
       if (!wrap.contains(e.target)) {
         wrap.classList.remove('is-open');
-        panel.classList.remove('is-open');
       }
     });
 
@@ -1009,29 +953,10 @@ document.addEventListener("DOMContentLoaded", function () {
       if (type === 'audio' && audioEl) {
         audioEl.paused ? audioEl.play() : audioEl.pause();
         wrap.classList.remove('is-open');
-        panel.classList.remove('is-open');
       }
 
       if (type === 'lab') {
         wrap.classList.remove('is-open');
-        panel.classList.remove('is-open');
-      }
-
-      if (type === 'settings') {
-        e.stopPropagation();
-        panel.classList.toggle('is-open');
-      }
-    });
-
-    panel.addEventListener('click', function(e) {
-      var row = e.target.closest('[data-stype]');
-      if (!row) return;
-      var type = row.getAttribute('data-stype');
-
-      if (type === 'dm') {
-        var next = toggleTheme();
-        var val = document.getElementById('sv-dm');
-        if (val) val.textContent = next === 'dark' ? '🌙' : '☀️';
       }
 
       if (type === 'hand') {
@@ -1039,12 +964,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var nextHand = nowLeft ? 'right' : 'left';
         localStorage.setItem('hzedu-hand', nextHand);
         document.body.classList.toggle('hand-left', nextHand === 'left');
-        var hVal  = document.getElementById('sv-hand');
-        var hDesc = document.getElementById('sd-hand');
-        if (hVal)  hVal.textContent  = nextHand === 'left' ? '🫲' : '🫱';
-        if (hDesc) hDesc.textContent = nextHand === 'left'
-          ? 'Pindah butang navigasi ke kanan'
-          : 'Pindah butang navigasi ke kiri';
+        wrap.classList.remove('is-open');
       }
     });
 
@@ -1367,10 +1287,12 @@ document.addEventListener("DOMContentLoaded", function () {
       if (href === '/index.html') return pp === '' || pp === 'index.html';
       return pp === hp;
     }
+    var isDark = (document.documentElement.getAttribute('data-theme') || localStorage.getItem('hazimedu-theme') || 'light') === 'dark';
     var tabs = [
       { icon: '🏠', label: 'Utama', href: '/index.html' },
       { icon: '📚', label: 'Nota',  href: '/notes/index.html' },
-      { icon: '🔍', label: 'Cari',  href: null }
+      { icon: '🔍', label: 'Cari',  href: null, action: 'search' },
+      { icon: isDark ? '🌙' : '☀️', label: 'Tema', href: null, action: 'theme' }
     ];
     var nav = document.createElement('nav');
     nav.className = 'hz-bottom-nav';
@@ -1384,15 +1306,29 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
         el = document.createElement('button');
         el.type = 'button';
-        el.addEventListener('click', function () {
-          var searchInput = document.querySelector('.search-input');
-          if (searchInput) {
-            searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            setTimeout(function () { searchInput.focus(); }, 280);
-          } else {
-            location.href = '/notes/index.html';
-          }
-        });
+        if (tab.action === 'search') {
+          el.addEventListener('click', function () {
+            var searchInput = document.querySelector('.search-input');
+            if (searchInput) {
+              searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              setTimeout(function () { searchInput.focus(); }, 280);
+            } else {
+              location.href = '/notes/index.html';
+            }
+          });
+        } else if (tab.action === 'theme') {
+          el.addEventListener('click', function () {
+            var current = document.documentElement.getAttribute('data-theme') || 'light';
+            var next = current === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            localStorage.setItem('hazimedu-theme', next);
+            document.querySelectorAll('.display-fab').forEach(function (b) {
+              b.textContent = next === 'dark' ? '🌙' : '☀️';
+            });
+            var icon = el.querySelector('.hz-nav-icon');
+            if (icon) icon.textContent = next === 'dark' ? '🌙' : '☀️';
+          });
+        }
       }
       el.className = 'hz-bottom-nav-item';
       el.innerHTML = '<span class="hz-nav-icon">' + tab.icon + '</span><span>' + tab.label + '</span>';
