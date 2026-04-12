@@ -1085,317 +1085,256 @@
 }
 
 /* =========================
-   SPARKLE MENU (NOTE PAGES)
+   SPARKLE MENU (NOTE PAGES) — draggable corner FAB
 ========================= */
+
+/* Base: no hardcoded position — corners handled by .fab-corner-* classes */
 .note-sparkle-wrap {
   position: fixed;
-  right: 14px;
-  bottom: 18px;
   z-index: 60;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 0.52rem;
+  user-select: none;
+  touch-action: none;
 }
 
+/* ── Corner Classes ──────────────────────────────────────────────────── */
+.note-sparkle-wrap.fab-corner-br {
+  right: 14px; bottom: 18px; left: auto; top: auto;
+  flex-direction: column; align-items: flex-end;
+}
+.note-sparkle-wrap.fab-corner-bl {
+  left: 14px; bottom: 18px; right: auto; top: auto;
+  flex-direction: column; align-items: flex-start;
+}
+.note-sparkle-wrap.fab-corner-tr {
+  right: 14px; top: 80px; left: auto; bottom: auto;
+  flex-direction: column-reverse; align-items: flex-end;
+}
+.note-sparkle-wrap.fab-corner-tl {
+  left: 14px; top: 80px; right: auto; bottom: auto;
+  flex-direction: column-reverse; align-items: flex-start;
+}
+
+/* Mobile: lift bottom corners above bottom nav */
+@media (max-width: 760px) {
+  .note-sparkle-wrap.fab-corner-br,
+  .note-sparkle-wrap.fab-corner-bl {
+    bottom: calc(var(--bottom-nav-h) + var(--safe-bottom) + 0.9rem);
+  }
+}
+
+/* ── Drag State ──────────────────────────────────────────────────────── */
+.note-sparkle-wrap.is-dragging,
+.note-sparkle-wrap.is-dragging * { transition: none !important; }
+.note-sparkle-fab { cursor: grab; }
+.note-sparkle-wrap.is-dragging .note-sparkle-fab { cursor: grabbing; }
+
+/* ── FAB Button ──────────────────────────────────────────────────────── */
 .note-sparkle-fab {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  border: none;
-  font-size: 1.15rem;
-  cursor: pointer;
+  width: 52px; height: 52px;
+  border-radius: 50%; border: none;
   color: #fff;
   background: linear-gradient(135deg, #6d63ff, #a78bfa);
   box-shadow: 0 8px 24px rgba(109, 99, 255, 0.32), 0 2px 8px rgba(109, 99, 255, 0.18);
-  transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1),
-              box-shadow 0.22s ease;
+  transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.22s ease;
   animation: sparkle-idle-pulse 3.2s ease-in-out infinite;
   flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
 }
+.note-sparkle-fab svg { width: 22px; height: 22px; pointer-events: none; }
 
 @keyframes sparkle-idle-pulse {
-  0%, 100% {
-    box-shadow: 0 8px 24px rgba(109, 99, 255, 0.32), 0 2px 8px rgba(109, 99, 255, 0.18);
-  }
-  50% {
-    box-shadow: 0 10px 30px rgba(109, 99, 255, 0.46), 0 4px 14px rgba(109, 99, 255, 0.26);
-  }
+  0%, 100% { box-shadow: 0 8px 24px rgba(109,99,255,0.32), 0 2px 8px rgba(109,99,255,0.18); }
+  50%       { box-shadow: 0 10px 30px rgba(109,99,255,0.46), 0 4px 14px rgba(109,99,255,0.26); }
 }
 
-.note-sparkle-fab:hover {
-  transform: scale(1.08);
-}
-
+.note-sparkle-fab:hover { transform: scale(1.08); }
 .note-sparkle-wrap.is-open .note-sparkle-fab {
   animation: none;
   transform: scale(0.93) rotate(20deg);
 }
 
+/* ── Items Container ─────────────────────────────────────────────────── */
 .note-sparkle-items {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.48rem;
+  display: flex; flex-direction: column;
+  align-items: center; gap: 0.48rem;
   pointer-events: none;
 }
 
+/* ── Individual Item ─────────────────────────────────────────────────── */
 .note-sparkle-item {
-  width: 44px;
-  height: 44px;
+  width: 44px; height: 44px;
   border-radius: 50%;
   border: 1px solid rgba(92, 110, 132, 0.13);
   background: rgba(255, 253, 248, 0.97);
   box-shadow: 0 6px 18px rgba(36, 49, 63, 0.12), 0 2px 6px rgba(36, 49, 63, 0.07);
-  font-size: 1.1rem;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
+  display: flex; align-items: center; justify-content: center;
+  text-decoration: none; color: var(--muted);
   opacity: 0;
   transform: translateY(16px) scale(0.82);
   transition: opacity 0.22s ease, transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1),
               background 0.15s ease, box-shadow 0.15s ease;
   position: relative;
 }
-
+.note-sparkle-item svg { width: 20px; height: 20px; pointer-events: none; }
 .note-sparkle-item:hover {
   background: rgba(255, 253, 248, 1);
   box-shadow: 0 8px 22px rgba(36, 49, 63, 0.17), 0 2px 8px rgba(36, 49, 63, 0.1);
 }
 
-/* Tooltip */
+/* Top corners: items start above FAB (open downward) */
+.note-sparkle-wrap.fab-corner-tr .note-sparkle-item,
+.note-sparkle-wrap.fab-corner-tl .note-sparkle-item {
+  transform: translateY(-16px) scale(0.82);
+}
+
+/* ── Tooltip ─────────────────────────────────────────────────────────── */
 .note-sparkle-item[data-tooltip]::before {
   content: attr(data-tooltip);
   position: absolute;
-  right: calc(100% + 10px);
-  top: 50%;
+  right: calc(100% + 10px); top: 50%;
   transform: translateY(-50%);
-  background: rgba(36, 49, 63, 0.88);
-  color: #fff;
-  font-size: 0.72rem;
-  font-weight: 700;
+  background: rgba(36, 49, 63, 0.88); color: #fff;
+  font-size: 0.72rem; font-weight: 700;
   font-family: "Nunito", sans-serif;
-  padding: 0.28rem 0.6rem;
-  border-radius: 8px;
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.15s ease;
+  padding: 0.28rem 0.6rem; border-radius: 8px;
+  white-space: nowrap; opacity: 0;
+  pointer-events: none; transition: opacity 0.15s ease;
 }
-
-.note-sparkle-item[data-tooltip]:hover::before {
-  opacity: 1;
+/* Left corners: tooltip on right */
+.note-sparkle-wrap.fab-corner-bl .note-sparkle-item[data-tooltip]::before,
+.note-sparkle-wrap.fab-corner-tl .note-sparkle-item[data-tooltip]::before {
+  right: auto; left: calc(100% + 10px);
 }
+.note-sparkle-item[data-tooltip]:hover::before { opacity: 1; }
 
-/* Staggered open animation */
-.note-sparkle-wrap.is-open .note-sparkle-items {
-  pointer-events: auto;
-}
-
+/* ── Staggered Open Animation ────────────────────────────────────────── */
+.note-sparkle-wrap.is-open .note-sparkle-items { pointer-events: auto; }
 .note-sparkle-wrap.is-open .note-sparkle-item:nth-child(1) {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-  transition-delay: 0ms;
+  opacity: 1; transform: translateY(0) scale(1); transition-delay: 0ms;
 }
-
 .note-sparkle-wrap.is-open .note-sparkle-item:nth-child(2) {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-  transition-delay: 55ms;
+  opacity: 1; transform: translateY(0) scale(1); transition-delay: 55ms;
 }
-
 .note-sparkle-wrap.is-open .note-sparkle-item:nth-child(3) {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-  transition-delay: 110ms;
+  opacity: 1; transform: translateY(0) scale(1); transition-delay: 110ms;
 }
 
-/* Dark mode */
+/* ── Dark Mode ───────────────────────────────────────────────────────── */
 [data-theme="dark"] .note-sparkle-item {
   background: rgba(36, 34, 32, 0.96);
   border-color: rgba(220, 210, 190, 0.12);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28), 0 2px 6px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.28), 0 2px 6px rgba(0,0,0,0.18);
 }
-
 [data-theme="dark"] .note-sparkle-item:hover {
   background: rgba(48, 46, 44, 0.98);
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35), 0 2px 8px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.35), 0 2px 8px rgba(0,0,0,0.22);
 }
 
-/* Mobile */
+/* ── Mobile ──────────────────────────────────────────────────────────── */
 @media (max-width: 640px) {
-  .note-sparkle-wrap {
-    right: 12px;
-    bottom: 14px;
-  }
-
-  .note-sparkle-fab {
-    width: 48px;
-    height: 48px;
-  }
-
-  .note-sparkle-item {
-    width: 42px;
-    height: 42px;
-    font-size: 1rem;
-  }
-
-  .note-sparkle-item[data-tooltip]::before {
-    display: none;
-  }
+  .note-sparkle-fab { width: 48px; height: 48px; }
+  .note-sparkle-item { width: 42px; height: 42px; }
+  .note-sparkle-item[data-tooltip]::before { display: none; }
 }
 
-/* ── Handedness — left-hand mode ─────────────────────────────────────────── */
+/* =========================
+   GLOBAL SEARCH OVERLAY
+========================= */
 
-/* Sparkle FAB flips to left side */
-body.hand-left .note-sparkle-wrap {
-  right: auto;
-  left: 14px;
-  align-items: flex-start;
+.hz-search-overlay {
+  position: fixed; inset: 0; z-index: 300;
+  background: rgba(0, 0, 0, 0.48);
+  backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+  display: none; align-items: flex-end; justify-content: center;
 }
-
-body.hand-left .note-sparkle-items {
-  align-items: flex-start;
-}
-
-/* Tooltip flips to appear on right of icon (instead of left) */
-body.hand-left .note-sparkle-item[data-tooltip]::before {
-  right: auto;
-  left: calc(100% + 10px);
-}
-
-/* Nav toggle moves to left, brand shifts right */
-@media (max-width: 760px) {
-  body.hand-left .nav-wrap {
-    flex-direction: row-reverse;
-  }
-
-  /* Nav dropdown anchors to left when in left-hand mode */
-  body.hand-left .site-nav {
-    right: auto;
-    left: 0.75rem;
-    align-items: flex-start;
-  }
-
-  body.hand-left .site-nav a {
-    text-align: left;
-  }
-}
-
-@media (max-width: 640px) {
-  body.hand-left .note-sparkle-wrap {
-    left: 12px;
-  }
-}
-
-/* ── Settings sub-panel (opened by ⚙️ sparkle item) ─────────────────────── */
-
-.note-settings-panel {
-  width: 272px;
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  box-shadow: 0 8px 32px rgba(36, 49, 63, 0.15);
-  overflow: hidden;
-  display: none;
-  flex-direction: column;
-}
-
-.note-settings-panel.is-open {
+.hz-search-overlay.is-open {
   display: flex;
-  animation: fadeSlide 0.2s ease;
+  animation: hz-overlay-in 0.18s ease both;
+}
+@keyframes hz-overlay-in {
+  from { opacity: 0; } to { opacity: 1; }
 }
 
-.note-settings-header {
-  padding: 0.6rem 1rem 0.5rem;
-  font-size: 0.71rem;
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--muted);
+.hz-search-sheet {
+  width: 100%; max-width: 600px; max-height: 78vh;
+  background: var(--paper);
+  border-radius: 20px 20px 0 0;
+  display: flex; flex-direction: column; overflow: hidden;
+  animation: hz-sheet-in 0.24s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  padding-bottom: var(--safe-bottom);
+}
+@keyframes hz-sheet-in {
+  from { transform: translateY(40px); opacity: 0.5; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+.hz-search-header {
+  padding: 1rem 1rem 0.75rem;
+  flex-shrink: 0;
   border-bottom: 1px solid var(--line);
 }
-
-.note-settings-row {
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
-  padding: 0.65rem 1rem;
-  width: 100%;
-  border: none;
-  background: none;
-  text-align: left;
-  cursor: pointer;
-  transition: background 0.14s ease;
-  color: inherit;
+.hz-search-input-wrap {
+  display: flex; align-items: center; gap: 0.55rem;
+  background: rgba(92, 110, 132, 0.06);
+  border: 1px solid var(--line);
+  border-radius: 12px; padding: 0 0.75rem;
 }
-
-.note-settings-row:hover {
-  background: rgba(47, 122, 103, 0.07);
+.hz-search-icon { flex-shrink: 0; color: var(--muted); display: flex; align-items: center; }
+.hz-search-icon svg { width: 17px; height: 17px; }
+.hz-search-input {
+  flex: 1; border: none; background: none;
+  padding: 0.72rem 0; font-size: 1rem; font-family: inherit;
+  color: var(--ink); outline: none;
+  -webkit-appearance: none; appearance: none;
 }
-
-.note-settings-body {
-  flex: 1;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.1rem;
+.hz-search-input::placeholder { color: var(--muted); }
+.hz-search-close {
+  background: none; border: none; cursor: pointer;
+  color: var(--muted); padding: 0.3rem;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 8px; flex-shrink: 0;
+  transition: color 0.15s, background 0.15s;
 }
+.hz-search-close svg { width: 18px; height: 18px; }
+.hz-search-close:hover { color: var(--ink); background: rgba(92,110,132,0.08); }
 
-.note-settings-name {
-  font-size: 0.875rem;
-  font-weight: 700;
-  color: var(--ink);
-  line-height: 1.2;
-}
+.hz-search-body { flex: 1; overflow-y: auto; overscroll-behavior: contain; }
 
-.note-settings-desc {
-  font-size: 0.72rem;
-  color: var(--muted);
-  line-height: 1.35;
+.hz-search-result-item {
+  display: flex; flex-direction: column; gap: 0.2rem;
+  padding: 0.75rem 1rem; text-decoration: none;
+  border-bottom: 1px solid var(--line); transition: background 0.12s;
 }
+.hz-search-result-item:last-child { border-bottom: none; }
+.hz-search-result-item:hover { background: rgba(47, 122, 103, 0.05); }
+.hz-search-result-tag {
+  font-size: 0.67rem; font-weight: 800;
+  letter-spacing: 0.06em; text-transform: uppercase; color: var(--primary);
+}
+.hz-search-result-title {
+  font-size: 0.9rem; font-weight: 700; color: var(--ink);
+  line-height: 1.3; margin: 0;
+}
+.hz-search-result-excerpt {
+  font-size: 0.77rem; color: var(--muted); line-height: 1.5; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical; overflow: hidden;
+}
+.hz-search-result-excerpt mark {
+  background: rgba(47, 122, 103, 0.18); color: var(--ink); border-radius: 2px;
+}
+.hz-search-empty-msg {
+  padding: 2rem 1rem; text-align: center;
+  color: var(--muted); font-size: 0.88rem; display: none;
+}
+.hz-search-empty-msg.is-visible { display: block; }
 
-.note-settings-val {
-  flex-shrink: 0;
-  font-size: 0.92rem;
-  line-height: 1;
-  min-width: 30px;
-  text-align: center;
-  padding: 0.28rem 0.48rem;
-  border-radius: 8px;
-  background: rgba(47, 122, 103, 0.08);
-  color: var(--muted);
-  border: none;
-  cursor: pointer;
-  transition: background 0.14s;
-}
-
-.note-settings-val:hover {
-  background: rgba(47, 122, 103, 0.15);
-}
-
-[data-theme="dark"] .note-settings-panel {
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-}
-
-[data-theme="dark"] .note-settings-row:hover {
-  background: rgba(47, 122, 103, 0.13);
-}
-
-@media (max-width: 400px) {
-  .note-settings-panel {
-    width: calc(100vw - 1.5rem);
-  }
-}
-
-/* ── Sparkle FAB — push above bottom nav on mobile ─────────────────────────── */
-@media (max-width: 760px) {
-  .note-sparkle-wrap {
-    bottom: calc(var(--bottom-nav-h) + var(--safe-bottom) + 0.9rem) !important;
-  }
-}
+[data-theme="dark"] .hz-search-input-wrap { background: rgba(255,255,255,0.04); }
 
 /* ── Desktop Floating TOC ──────────────────────────────────────────────────── */
 .hz-toc { display: none; }

@@ -889,7 +889,7 @@ document.addEventListener("DOMContentLoaded", function () {
 })();
 
 // =========================
-// NOTE PAGE: SPARKLE MENU
+// NOTE PAGE: SPARKLE MENU — draggable corner FAB
 // =========================
 (function setupNoteFeatures() {
   document.addEventListener('DOMContentLoaded', function() {
@@ -902,77 +902,140 @@ document.addEventListener("DOMContentLoaded", function () {
         return el ? el.getAttribute('href') : null;
       })();
 
+    // Only show sparkle if there's at least one item
+    if (!audioEl && !labHref) return;
+
     var wrap = document.createElement('div');
     wrap.className = 'note-sparkle-wrap';
 
     var itemsContainer = document.createElement('div');
     itemsContainer.className = 'note-sparkle-items';
 
-    function makeSparkleItem(emoji, tooltip, type, href) {
+    function makeSparkleItem(svgIcon, tooltip, type, href) {
       var el = href ? document.createElement('a') : document.createElement('button');
-      if (href) el.href = href;
-      else el.type = 'button';
+      if (href) { el.href = href; }
+      else { el.type = 'button'; }
       el.className = 'note-sparkle-item';
       el.setAttribute('aria-label', tooltip);
       el.setAttribute('data-tooltip', tooltip);
       el.setAttribute('data-sparkle-type', type);
-      el.textContent = emoji;
+      el.innerHTML = svgIcon;
       return el;
     }
 
-    if (audioEl) itemsContainer.appendChild(makeSparkleItem('🎧', 'Main audio', 'audio'));
-    if (labHref) itemsContainer.appendChild(makeSparkleItem('📜', 'Arkib', 'lab', labHref));
-    itemsContainer.appendChild(makeSparkleItem('✋', 'Kidal', 'hand'));
+    if (audioEl) itemsContainer.appendChild(makeSparkleItem(HZ_ICONS.audio, 'Main audio', 'audio'));
+    if (labHref) itemsContainer.appendChild(makeSparkleItem(HZ_ICONS.archive, 'Arkib', 'lab', labHref));
 
     var fab = document.createElement('button');
     fab.className = 'note-sparkle-fab';
     fab.type = 'button';
     fab.setAttribute('aria-label', 'Menu pembelajaran');
-    fab.textContent = '✨';
+    fab.innerHTML = HZ_ICONS.sparkle;
 
     wrap.appendChild(itemsContainer);
     wrap.appendChild(fab);
     document.body.appendChild(wrap);
 
+    // ── Corner Position ───────────────────────────────────────────────
+    var FAB_KEY = 'hzedu-fab-corner';
+    var corner = localStorage.getItem(FAB_KEY) || 'br';
+    wrap.classList.add('fab-corner-' + corner);
+
+    function snapToCorner(c) {
+      ['br','bl','tr','tl'].forEach(function(cc) { wrap.classList.remove('fab-corner-' + cc); });
+      wrap.style.cssText = '';
+      corner = c;
+      localStorage.setItem(FAB_KEY, corner);
+      wrap.classList.add('fab-corner-' + corner);
+    }
+
+    // ── Drag Behaviour ────────────────────────────────────────────────
+    var isDragging = false;
+    var didDrag    = false;
+    var dragStartX, dragStartY, wrapStartLeft, wrapStartTop;
+
+    fab.addEventListener('pointerdown', function(e) {
+      isDragging  = true;
+      didDrag     = false;
+      dragStartX  = e.clientX;
+      dragStartY  = e.clientY;
+      var r = wrap.getBoundingClientRect();
+      wrapStartLeft = r.left;
+      wrapStartTop  = r.top;
+      fab.setPointerCapture(e.pointerId);
+    });
+
+    fab.addEventListener('pointermove', function(e) {
+      if (!isDragging) return;
+      var dx = e.clientX - dragStartX;
+      var dy = e.clientY - dragStartY;
+      if (!didDrag && Math.hypot(dx, dy) < 8) return;
+      if (!didDrag) {
+        didDrag = true;
+        wrap.classList.add('is-dragging');
+        wrap.classList.remove('is-open');
+        ['br','bl','tr','tl'].forEach(function(cc) { wrap.classList.remove('fab-corner-' + cc); });
+      }
+      var vw = window.innerWidth, vh = window.innerHeight;
+      var r  = wrap.getBoundingClientRect();
+      var nx = Math.max(0, Math.min(vw - r.width,  wrapStartLeft + dx));
+      var ny = Math.max(0, Math.min(vh - r.height, wrapStartTop  + dy));
+      wrap.style.position = 'fixed';
+      wrap.style.left   = nx + 'px';
+      wrap.style.top    = ny + 'px';
+      wrap.style.right  = 'auto';
+      wrap.style.bottom = 'auto';
+    });
+
+    fab.addEventListener('pointerup', function() {
+      if (!isDragging) return;
+      isDragging = false;
+      wrap.classList.remove('is-dragging');
+      if (!didDrag) return; // tap — handled by click listener
+      var r  = wrap.getBoundingClientRect();
+      var cx = r.left + r.width  / 2;
+      var cy = r.top  + r.height / 2;
+      snapToCorner((cy < window.innerHeight / 2 ? 't' : 'b') + (cx < window.innerWidth / 2 ? 'l' : 'r'));
+    });
+
+    fab.addEventListener('pointercancel', function() {
+      if (!isDragging) return;
+      isDragging = false;
+      wrap.classList.remove('is-dragging');
+      if (didDrag) snapToCorner(corner);
+    });
+
+    // ── Menu Toggle (tap only) ────────────────────────────────────────
     fab.addEventListener('click', function(e) {
       e.stopPropagation();
+      if (didDrag) return;
       wrap.classList.toggle('is-open');
     });
 
     document.addEventListener('click', function(e) {
-      if (!wrap.contains(e.target)) {
-        wrap.classList.remove('is-open');
-      }
+      if (!wrap.contains(e.target)) wrap.classList.remove('is-open');
     });
 
+    // ── Item Actions ──────────────────────────────────────────────────
     itemsContainer.addEventListener('click', function(e) {
       var btn = e.target.closest('[data-sparkle-type]');
       if (!btn) return;
       var type = btn.getAttribute('data-sparkle-type');
-
       if (type === 'audio' && audioEl) {
         audioEl.paused ? audioEl.play() : audioEl.pause();
         wrap.classList.remove('is-open');
       }
-
       if (type === 'lab') {
-        wrap.classList.remove('is-open');
-      }
-
-      if (type === 'hand') {
-        var nowLeft = localStorage.getItem('hzedu-hand') === 'left';
-        var nextHand = nowLeft ? 'right' : 'left';
-        localStorage.setItem('hzedu-hand', nextHand);
-        document.body.classList.toggle('hand-left', nextHand === 'left');
         wrap.classList.remove('is-open');
       }
     });
 
+    // ── Audio Icon Sync ───────────────────────────────────────────────
     if (audioEl) {
       var audioBtn = itemsContainer.querySelector('[data-sparkle-type="audio"]');
-      audioEl.addEventListener('play',  function() { if (audioBtn) audioBtn.textContent = '⏸️'; });
-      audioEl.addEventListener('pause', function() { if (audioBtn) audioBtn.textContent = '🎧'; });
-      audioEl.addEventListener('ended', function() { if (audioBtn) audioBtn.textContent = '🎧'; });
+      audioEl.addEventListener('play',  function() { if (audioBtn) audioBtn.innerHTML = HZ_ICONS.audioPause; });
+      audioEl.addEventListener('pause', function() { if (audioBtn) audioBtn.innerHTML = HZ_ICONS.audio; });
+      audioEl.addEventListener('ended', function() { if (audioBtn) audioBtn.innerHTML = HZ_ICONS.audio; });
     }
   });
 })();
@@ -1273,6 +1336,225 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 })();
 
+// ── SVG Icon Library ──────────────────────────────────────────────────────────
+var HZ_ICONS = (function () {
+  var s = ' fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"';
+  return {
+    home:    '<svg viewBox="0 0 24 24"' + s + '><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>',
+    notes:   '<svg viewBox="0 0 24 24"' + s + '><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>',
+    search:  '<svg viewBox="0 0 24 24"' + s + '><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>',
+    sun:     '<svg viewBox="0 0 24 24"' + s + '><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>',
+    moon:    '<svg viewBox="0 0 24 24"' + s + '><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>',
+    sparkle: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H23l-7.5 5.4 2.4 7.5L12 17.7l-5.9 4.6 2.4-7.5L1 9.4h8.6L12 2z"/></svg>',
+    audio:      '<svg viewBox="0 0 24 24"' + s + '><path d="M3 18v-6a9 9 0 0118 0v6"/><path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"/></svg>',
+    audioPause: '<svg viewBox="0 0 24 24"' + s + '><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>',
+    archive: '<svg viewBox="0 0 24 24"' + s + '><polyline points="21 8 21 21 3 21 3 8"/><rect x="1" y="3" width="22" height="5"/><line x1="10" y1="12" x2="14" y2="12"/></svg>',
+    close:   '<svg viewBox="0 0 24 24"' + s + '><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+  };
+})();
+
+// ── Global Search Overlay ─────────────────────────────────────────────────────
+(function () {
+  var PAGES = [
+    { title: 'Bab 1 · Warisan Negara Bangsa', tag: 'Bab Induk', href: 'bab-1.html' },
+    { title: '1.1 · Latar Belakang Negara Bangsa Sebelum Kedatangan Barat', tag: 'Subtopik 1.1', href: 'bab-1-1.html' },
+    { title: '1.2 · Ciri-ciri Negara Bangsa Kesultanan Melayu Melaka', tag: 'Subtopik 1.2', href: 'bab-1-2.html' },
+    { title: '1.3 · Keunggulan Sistem Pentadbiran dan Undang-undang', tag: 'Subtopik 1.3', href: 'bab-1-3.html' },
+    { title: '1.4 · Peranan Pemerintah dan Rakyat', tag: 'Subtopik 1.4', href: 'bab-1-4.html' },
+    { title: 'Bab 2 · Kebangkitan Nasionalisme', tag: 'Bab Induk', href: 'bab-2.html' },
+    { title: '2.1 · Maksud Nasionalisme', tag: 'Subtopik 2.1', href: 'bab-2-1.html' },
+    { title: '2.2 · Perkembangan Idea Nasionalisme di Barat', tag: 'Subtopik 2.2', href: 'bab-2-2.html' },
+    { title: '2.3 · Perkembangan Nasionalisme di Asia', tag: 'Subtopik 2.3', href: 'bab-2-3.html' },
+    { title: '2.4 · Perkembangan Nasionalisme di Asia Tenggara', tag: 'Subtopik 2.4', href: 'bab-2-4.html' },
+    { title: '2.5 · Kesedaran Nasionalisme di Negara Kita', tag: 'Subtopik 2.5', href: 'bab-2-5.html' },
+    { title: '2.6 · Faktor Kemunculan Gerakan Nasionalisme', tag: 'Subtopik 2.6', href: 'bab-2-6.html' },
+    { title: '2.7 · Perkembangan Nasionalisme', tag: 'Subtopik 2.7', href: 'bab-2-7.html' },
+    { title: '2.8 · Kesan Perkembangan Nasionalisme', tag: 'Subtopik 2.8', href: 'bab-2-8.html' },
+    { title: 'Bab 3 · Konflik Dunia dan Pendudukan Jepun di Negara Kita', tag: 'Bab Induk', href: 'bab-3.html' },
+    { title: '3.1 · Nasionalisme di Negara Kita Sebelum Perang Dunia', tag: 'Subtopik 3.1', href: 'bab-3-1.html' },
+    { title: '3.2 · Latar Belakang Perang Dunia', tag: 'Subtopik 3.2', href: 'bab-3-2.html' },
+    { title: '3.3 · Perang Dunia Kedua', tag: 'Subtopik 3.3', href: 'bab-3-3.html' },
+    { title: '3.4 · Perang Dunia Kedua di Asia Pasifik', tag: 'Subtopik 3.4', href: 'bab-3-4.html' },
+    { title: '3.5 · Faktor Kedatangan Jepun ke Negara Kita', tag: 'Subtopik 3.5', href: 'bab-3-5.html' },
+    { title: '3.6 · Dasar Pendudukan Jepun di Negara Kita', tag: 'Subtopik 3.6', href: 'bab-3-6.html' },
+    { title: '3.7 · Perjuangan Rakyat Menentang Pendudukan Jepun', tag: 'Subtopik 3.7', href: 'bab-3-7.html' },
+    { title: '3.8 · Perkembangan Gerakan Nasionalisme Tempatan dan Pendudukan Jepun', tag: 'Subtopik 3.8', href: 'bab-3-8.html' },
+    { title: '3.9 · Keadaan Negara Kita Selepas Kekalahan Jepun', tag: 'Subtopik 3.9', href: 'bab-3-9.html' },
+    { title: 'Bab 4 · Era Peralihan Kuasa British di Negara Kita', tag: 'Bab Induk', href: 'bab-4.html' },
+    { title: '4.1 · British Military Administration (BMA)', tag: 'Subtopik 4.1', href: 'bab-4-1.html' },
+    { title: '4.2 · Gagasan Malayan Union', tag: 'Subtopik 4.2', href: 'bab-4-2.html' },
+    { title: '4.3 · Reaksi Penduduk Tempatan terhadap Malayan Union', tag: 'Subtopik 4.3', href: 'bab-4-3.html' },
+    { title: '4.4 · Penyerahan Sarawak kepada Kerajaan British', tag: 'Subtopik 4.4', href: 'bab-4-4.html' },
+    { title: '4.5 · Reaksi Penduduk Tempatan terhadap Penyerahan Sarawak', tag: 'Subtopik 4.5', href: 'bab-4-5.html' },
+    { title: '4.6 · Penyerahan Sabah kepada Kerajaan British', tag: 'Subtopik 4.6', href: 'bab-4-6.html' },
+    { title: '4.7 · Reaksi Penduduk Tempatan terhadap Penyerahan Sabah', tag: 'Subtopik 4.7', href: 'bab-4-7.html' },
+    { title: 'Bab 5 · Persekutuan Tanah Melayu 1948', tag: 'Bab Induk', href: 'bab-5.html' },
+    { title: '5.1 · Latar Belakang Penubuhan Persekutuan Tanah Melayu 1948', tag: 'Subtopik 5.1', href: 'bab-5-1.html' },
+    { title: '5.2 · Faktor Penubuhan Persekutuan Tanah Melayu 1948', tag: 'Subtopik 5.2', href: 'bab-5-2.html' },
+    { title: '5.3 · Ciri-ciri Persekutuan Tanah Melayu 1948', tag: 'Subtopik 5.3', href: 'bab-5-3.html' },
+    { title: '5.4 · Kesan Penubuhan Persekutuan Tanah Melayu 1948', tag: 'Subtopik 5.4', href: 'bab-5-4.html' },
+    { title: 'Bab 6 · Ancaman Komunis dan Perisytiharan Darurat', tag: 'Bab Induk', href: 'bab-6.html' },
+    { title: '6.1 · Kemasukan Pengaruh Komunis di Negara Kita', tag: 'Subtopik 6.1', href: 'bab-6-1.html' },
+    { title: '6.2 · Ancaman Komunis di Negara Kita', tag: 'Subtopik 6.2', href: 'bab-6-2.html' },
+    { title: '6.3 · Usaha Menangani Ancaman Komunis', tag: 'Subtopik 6.3', href: 'bab-6-3.html' },
+    { title: '6.4 · Kesan Zaman Darurat terhadap Negara Kita', tag: 'Subtopik 6.4', href: 'bab-6-4.html' }
+  ];
+
+  var overlay, searchInput, resultsEl, emptyMsgEl;
+  var INDEX = null, indexBuilding = false;
+
+  function buildOverlayDOM() {
+    overlay = document.createElement('div');
+    overlay.className = 'hz-search-overlay';
+    overlay.setAttribute('aria-modal', 'true');
+    overlay.setAttribute('role', 'dialog');
+    overlay.setAttribute('aria-label', 'Carian');
+
+    var sheet = document.createElement('div');
+    sheet.className = 'hz-search-sheet';
+    sheet.innerHTML =
+      '<div class="hz-search-header">' +
+        '<div class="hz-search-input-wrap">' +
+          '<span class="hz-search-icon">' + HZ_ICONS.search + '</span>' +
+          '<input class="hz-search-input" type="search" placeholder="Cari nota..." autocomplete="off" />' +
+          '<button class="hz-search-close" type="button" aria-label="Tutup">' + HZ_ICONS.close + '</button>' +
+        '</div>' +
+      '</div>' +
+      '<div class="hz-search-body">' +
+        '<div class="hz-search-results"></div>' +
+        '<div class="hz-search-empty-msg"></div>' +
+      '</div>';
+
+    overlay.appendChild(sheet);
+    document.body.appendChild(overlay);
+
+    searchInput = sheet.querySelector('.hz-search-input');
+    resultsEl   = sheet.querySelector('.hz-search-results');
+    emptyMsgEl  = sheet.querySelector('.hz-search-empty-msg');
+
+    sheet.querySelector('.hz-search-close').addEventListener('click', closeOverlay);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeOverlay(); });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('is-open')) closeOverlay();
+    });
+
+    searchInput.addEventListener('input', function() {
+      var q = searchInput.value.trim();
+      if (!q) { clearResults(); return; }
+      if (!INDEX) {
+        emptyMsgEl.textContent = 'Membina indeks carian…';
+        emptyMsgEl.classList.add('is-visible');
+        buildIndex().then(function() {
+          emptyMsgEl.classList.remove('is-visible');
+          renderResults(doSearch(q), q);
+        });
+        return;
+      }
+      renderResults(doSearch(q), q);
+    });
+  }
+
+  function openOverlay() {
+    if (!overlay) buildOverlayDOM();
+    overlay.classList.add('is-open');
+    clearResults();
+    searchInput.value = '';
+    setTimeout(function() { searchInput.focus(); }, 80);
+    if (!INDEX && !indexBuilding) buildIndex();
+  }
+
+  function closeOverlay() {
+    if (overlay) overlay.classList.remove('is-open');
+  }
+
+  function clearResults() {
+    if (resultsEl)   resultsEl.innerHTML = '';
+    if (emptyMsgEl)  emptyMsgEl.classList.remove('is-visible');
+  }
+
+  function extractText(html) {
+    var doc = new DOMParser().parseFromString(html, 'text/html');
+    doc.querySelectorAll('header, footer, script, style, .site-nav, .hero-actions, .keyword-legend-wrap').forEach(function(el) { el.remove(); });
+    var main = doc.querySelector('main') || doc.body;
+    return main ? main.textContent.replace(/\s+/g, ' ').trim() : '';
+  }
+
+  function buildIndex() {
+    if (indexBuilding || INDEX) return Promise.resolve();
+    indexBuilding = true;
+    INDEX = [];
+    var fetches = PAGES.map(function(page) {
+      return fetch('/notes/' + page.href)
+        .then(function(res) { return res.ok ? res.text() : ''; })
+        .then(function(html) {
+          if (!html) return;
+          var ft = extractText(html);
+          INDEX.push({ title: page.title, tag: page.tag, href: '/notes/' + page.href,
+                       fullText: ft.toLowerCase(), excerpt: ft.slice(0, 160) + '…' });
+        })
+        .catch(function() {});
+    });
+    return Promise.all(fetches).then(function() { indexBuilding = false; });
+  }
+
+  function normalize(str) {
+    return str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  }
+
+  function highlight(text, query) {
+    query.trim().split(/\s+/).filter(Boolean).forEach(function(word) {
+      var esc = word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      text = text.replace(new RegExp('(' + esc + ')', 'gi'), '<mark>$1</mark>');
+    });
+    return text;
+  }
+
+  function findExcerpt(fullText, query) {
+    var words = query.toLowerCase().trim().split(/\s+/);
+    var lower = fullText.toLowerCase(), best = -1;
+    words.forEach(function(w) { var p = lower.indexOf(w); if (p !== -1 && (best === -1 || p < best)) best = p; });
+    if (best === -1) return fullText.slice(0, 160) + '…';
+    var s = Math.max(0, best - 40), e = Math.min(fullText.length, best + 160);
+    return (s > 0 ? '…' : '') + fullText.slice(s, e) + '…';
+  }
+
+  function doSearch(query) {
+    if (!INDEX) return [];
+    var q = normalize(query.trim());
+    if (!q) return [];
+    var words = q.split(/\s+/).filter(Boolean);
+    return INDEX.filter(function(item) {
+      var hay = normalize(item.fullText + ' ' + item.title);
+      return words.every(function(w) { return hay.includes(w); });
+    }).map(function(item) {
+      return Object.assign({}, item, { relevantExcerpt: findExcerpt(item.fullText, q) });
+    });
+  }
+
+  function renderResults(items, query) {
+    resultsEl.innerHTML = '';
+    emptyMsgEl.classList.remove('is-visible');
+    if (!items.length) {
+      emptyMsgEl.textContent = 'Tiada keputusan untuk "' + query + '"';
+      emptyMsgEl.classList.add('is-visible');
+      return;
+    }
+    items.forEach(function(item) {
+      var a = document.createElement('a');
+      a.className = 'hz-search-result-item';
+      a.href = item.href;
+      a.innerHTML =
+        '<span class="hz-search-result-tag">' + item.tag + '</span>' +
+        '<p class="hz-search-result-title">' + highlight(item.title, query) + '</p>' +
+        '<p class="hz-search-result-excerpt">' + highlight(item.relevantExcerpt, query) + '</p>';
+      a.addEventListener('click', closeOverlay);
+      resultsEl.appendChild(a);
+    });
+  }
+
+  document.addEventListener('hz:search-open', openOverlay);
+})();
+
 // ── Bottom Navigation Bar (mobile) ───────────────────────────────────────────
 (function () {
   document.addEventListener('DOMContentLoaded', function () {
@@ -1289,10 +1571,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     var isDark = (document.documentElement.getAttribute('data-theme') || localStorage.getItem('hazimedu-theme') || 'light') === 'dark';
     var tabs = [
-      { icon: '🏠', label: 'Utama', href: '/index.html' },
-      { icon: '📚', label: 'Nota',  href: '/notes/index.html' },
-      { icon: '🔍', label: 'Cari',  href: null, action: 'search' },
-      { icon: isDark ? '🌙' : '☀️', label: 'Tema', href: null, action: 'theme' }
+      { icon: HZ_ICONS.home,   label: 'Utama', href: '/index.html' },
+      { icon: HZ_ICONS.notes,  label: 'Nota',  href: '/notes/index.html' },
+      { icon: HZ_ICONS.search, label: 'Cari',  href: null, action: 'search' },
+      { icon: isDark ? HZ_ICONS.moon : HZ_ICONS.sun, label: 'Tema', href: null, action: 'theme' }
     ];
     var nav = document.createElement('nav');
     nav.className = 'hz-bottom-nav';
@@ -1308,13 +1590,7 @@ document.addEventListener("DOMContentLoaded", function () {
         el.type = 'button';
         if (tab.action === 'search') {
           el.addEventListener('click', function () {
-            var searchInput = document.querySelector('.search-input');
-            if (searchInput) {
-              searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
-              setTimeout(function () { searchInput.focus(); }, 280);
-            } else {
-              location.href = '/notes/index.html';
-            }
+            document.dispatchEvent(new CustomEvent('hz:search-open'));
           });
         } else if (tab.action === 'theme') {
           el.addEventListener('click', function () {
@@ -1326,7 +1602,7 @@ document.addEventListener("DOMContentLoaded", function () {
               b.textContent = next === 'dark' ? '🌙' : '☀️';
             });
             var icon = el.querySelector('.hz-nav-icon');
-            if (icon) icon.textContent = next === 'dark' ? '🌙' : '☀️';
+            if (icon) icon.innerHTML = next === 'dark' ? HZ_ICONS.moon : HZ_ICONS.sun;
           });
         }
       }
