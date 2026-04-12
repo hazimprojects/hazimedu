@@ -2,11 +2,11 @@ document.documentElement.classList.add("js-enhanced");
 
 // Apply handedness class before first paint to avoid layout flash
 (function () {
-  if (localStorage.getItem('hzedu-hand') === 'left') {
+  if (localStorage.getItem("hzedu-hand") === "left") {
     document.body
-      ? document.body.classList.add('hand-left')
-      : document.addEventListener('DOMContentLoaded', function () {
-          document.body.classList.add('hand-left');
+      ? document.body.classList.add("hand-left")
+      : document.addEventListener("DOMContentLoaded", function () {
+          document.body.classList.add("hand-left");
         });
   }
 })();
@@ -128,36 +128,94 @@ document.addEventListener("DOMContentLoaded", function () {
   // =========================
   const accordionTriggers = document.querySelectorAll(".paper-accordion-trigger");
 
+  function getOwnAccordionPanel(item) {
+    return item.querySelector(":scope > .paper-accordion-panel");
+  }
+
+  function getOwnAccordionTrigger(item) {
+    return item.querySelector(":scope > .paper-accordion-trigger");
+  }
+
+  function animateOpen(panel, item) {
+    panel.classList.add("active");
+    item.classList.add("is-open");
+
+    panel.style.overflow = "hidden";
+    panel.style.maxHeight = "0px";
+    panel.style.opacity = "1";
+
+    requestAnimationFrame(() => {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    });
+
+    const onTransitionEnd = function (e) {
+      if (e.target !== panel || e.propertyName !== "max-height") return;
+      if (item.classList.contains("is-open")) {
+        panel.style.maxHeight = "none";
+        panel.style.overflow = "visible";
+      }
+      panel.removeEventListener("transitionend", onTransitionEnd);
+    };
+
+    panel.addEventListener("transitionend", onTransitionEnd);
+  }
+
+  function animateClose(panel, item) {
+    const fullHeight = panel.scrollHeight;
+
+    panel.style.overflow = "hidden";
+    panel.style.maxHeight = fullHeight + "px";
+
+    requestAnimationFrame(() => {
+      panel.style.maxHeight = "0px";
+      panel.style.opacity = "0";
+    });
+
+    const onTransitionEnd = function (e) {
+      if (e.target !== panel || e.propertyName !== "max-height") return;
+      if (!item.classList.contains("is-open")) {
+        panel.classList.remove("active");
+      }
+      panel.removeEventListener("transitionend", onTransitionEnd);
+    };
+
+    panel.addEventListener("transitionend", onTransitionEnd);
+  }
+
   function setAccordionState(item, open) {
-    const trigger = item.querySelector(":scope > .paper-accordion-trigger");
-    const panel = item.querySelector(":scope > .paper-accordion-panel");
+    const trigger = getOwnAccordionTrigger(item);
+    const panel = getOwnAccordionPanel(item);
     if (!trigger || !panel) return;
 
-    item.classList.toggle("is-open", open);
     trigger.classList.toggle("active", open);
     trigger.setAttribute("aria-expanded", open ? "true" : "false");
-    panel.classList.toggle("active", open);
+
+    if (open) {
+      animateOpen(panel, item);
+    } else {
+      item.classList.remove("is-open");
+      animateClose(panel, item);
+    }
   }
 
   function getHeaderOffset() {
     const header = document.querySelector(".site-header");
     const headerHeight = header ? header.getBoundingClientRect().height : 72;
     const sticky = document.querySelector(".audio-sticky");
-    const stickyHeight = (sticky && sticky.classList.contains("is-visible"))
-      ? sticky.getBoundingClientRect().height
-      : 0;
+    const stickyHeight =
+      sticky && sticky.classList.contains("is-visible")
+        ? sticky.getBoundingClientRect().height
+        : 0;
     return Math.round(headerHeight + stickyHeight + 12);
   }
 
   function waitUntilScrollReaches(targetTop, callback) {
-    let rafId = 0;
     let stableFrames = 0;
     const MAX_FRAMES = 90;
     let frameCount = 0;
 
     function check() {
       frameCount += 1;
-
       const distance = Math.abs(window.scrollY - targetTop);
 
       if (distance <= 2) {
@@ -172,11 +230,55 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
-      rafId = requestAnimationFrame(check);
+      requestAnimationFrame(check);
     }
 
-    rafId = requestAnimationFrame(check);
+    requestAnimationFrame(check);
   }
+
+  function refreshOpenAccordions() {
+    document.querySelectorAll(".paper-accordion-item.is-open").forEach((item) => {
+      const panel = getOwnAccordionPanel(item);
+      if (!panel) return;
+
+      panel.style.maxHeight = "none";
+      const height = panel.scrollHeight;
+      panel.style.overflow = "hidden";
+      panel.style.maxHeight = height + "px";
+
+      requestAnimationFrame(() => {
+        if (item.classList.contains("is-open")) {
+          panel.style.maxHeight = "none";
+          panel.style.overflow = "visible";
+        }
+      });
+    });
+  }
+
+  accordionTriggers.forEach((trigger) => {
+    const item = trigger.closest(".paper-accordion-item");
+    const panel = item ? getOwnAccordionPanel(item) : null;
+
+    if (trigger) {
+      trigger.setAttribute(
+        "aria-expanded",
+        item && item.classList.contains("is-open") ? "true" : "false"
+      );
+    }
+
+    if (panel && !item.classList.contains("is-open")) {
+      panel.style.maxHeight = "0px";
+      panel.style.opacity = "0";
+      panel.style.overflow = "hidden";
+    }
+
+    if (panel && item.classList.contains("is-open")) {
+      panel.classList.add("active");
+      panel.style.maxHeight = "none";
+      panel.style.opacity = "1";
+      panel.style.overflow = "visible";
+    }
+  });
 
   accordionTriggers.forEach((trigger) => {
     trigger.addEventListener("click", () => {
@@ -186,20 +288,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const wasOpen = currentItem.classList.contains("is-open");
 
-      // Jika tekan accordion yang sama, tutup seperti biasa
       if (wasOpen) {
         const anchorTop = trigger.getBoundingClientRect().top;
 
         document.documentElement.classList.add("accordion-no-smooth-scroll");
         document.body.classList.add("accordion-no-smooth-scroll");
 
-        accordionGroup.querySelectorAll(":scope > .paper-accordion-item").forEach((item) => {
-          setAccordionState(item, false);
-        });
+        accordionGroup
+          .querySelectorAll(":scope > .paper-accordion-item")
+          .forEach((item) => {
+            setAccordionState(item, false);
+          });
 
         trigger.blur();
 
-        let rafId = 0;
         let stillFrames = 0;
         let lastTop = null;
         const REQUIRED_STILL_FRAMES = 10;
@@ -227,19 +329,17 @@ document.addEventListener("DOMContentLoaded", function () {
           lastTop = adjustedTop;
 
           if (stillFrames < REQUIRED_STILL_FRAMES && frameCount < MAX_FRAMES) {
-            rafId = requestAnimationFrame(stabilizeClose);
+            requestAnimationFrame(stabilizeClose);
           } else {
             document.documentElement.classList.remove("accordion-no-smooth-scroll");
             document.body.classList.remove("accordion-no-smooth-scroll");
-            if (rafId) cancelAnimationFrame(rafId);
           }
         }
 
-        rafId = requestAnimationFrame(stabilizeClose);
+        requestAnimationFrame(stabilizeClose);
         return;
       }
 
-      // 1) Scroll dulu sampai trigger duduk betul-betul bawah nav
       const triggerRect = trigger.getBoundingClientRect();
       const absoluteTop = window.scrollY + triggerRect.top;
       const targetTop = Math.max(0, Math.round(absoluteTop - getHeaderOffset()));
@@ -249,25 +349,25 @@ document.addEventListener("DOMContentLoaded", function () {
         behavior: "smooth",
       });
 
-      // 2) Tunggu scroll benar-benar sampai, baru buka accordion
       waitUntilScrollReaches(targetTop, () => {
         const anchorTop = trigger.getBoundingClientRect().top;
 
         document.documentElement.classList.add("accordion-no-smooth-scroll");
         document.body.classList.add("accordion-no-smooth-scroll");
 
-        accordionGroup.querySelectorAll(":scope > .paper-accordion-item").forEach((item) => {
-          setAccordionState(item, false);
-        });
+        accordionGroup
+          .querySelectorAll(":scope > .paper-accordion-item")
+          .forEach((item) => {
+            setAccordionState(item, false);
+          });
 
         setAccordionState(currentItem, true);
         trigger.blur();
 
-        let rafId = 0;
         let stillFrames = 0;
         let lastTop = null;
         const REQUIRED_STILL_FRAMES = 10;
-        const MAX_FRAMES = 40;
+        const MAX_FRAMES = 50;
         let frameCount = 0;
 
         function stabilizeOpen() {
@@ -291,26 +391,32 @@ document.addEventListener("DOMContentLoaded", function () {
           lastTop = adjustedTop;
 
           if (stillFrames < REQUIRED_STILL_FRAMES && frameCount < MAX_FRAMES) {
-            rafId = requestAnimationFrame(stabilizeOpen);
+            requestAnimationFrame(stabilizeOpen);
           } else {
             document.documentElement.classList.remove("accordion-no-smooth-scroll");
             document.body.classList.remove("accordion-no-smooth-scroll");
-            if (rafId) cancelAnimationFrame(rafId);
 
-            // pastikan posisi akhir tepat di bawah nav
             const finalAbsoluteTop = window.scrollY + trigger.getBoundingClientRect().top;
-            const finalTargetTop = Math.max(0, Math.round(finalAbsoluteTop - getHeaderOffset()));
+            const finalTargetTop = Math.max(
+              0,
+              Math.round(finalAbsoluteTop - getHeaderOffset())
+            );
+
             window.scrollTo({
               top: finalTargetTop,
               behavior: "auto",
             });
+
+            refreshOpenAccordions();
           }
         }
 
-        rafId = requestAnimationFrame(stabilizeOpen);
+        requestAnimationFrame(stabilizeOpen);
       });
     });
   });
+
+  window.addEventListener("resize", refreshOpenAccordions);
 
   // =========================
   // PAPER TIMELINE
@@ -660,7 +766,6 @@ document.addEventListener("DOMContentLoaded", function () {
     var timeEl = player.querySelector('.audio-time');
     if (!audio || !playBtn) return;
 
-    // --- Create sticky mini player (with close button) ---
     var sticky = document.createElement('div');
     sticky.className = 'audio-sticky';
     sticky.innerHTML =
@@ -681,27 +786,29 @@ document.addEventListener("DOMContentLoaded", function () {
     var stickyTimeEl   = sticky.querySelector('.audio-time');
     var stickyCloseBtn = sticky.querySelector('.audio-sticky-close');
 
-    // --- State flags ---
-    var hasPlayed    = false; // only show sticky after first press
-    var dismissed    = false; // permanently hidden after ✕
-    var isScrolledPast = false; // true only when player is ABOVE viewport
+    var hasPlayed = false;
+    var dismissed = false;
+    var isScrolledPast = false;
 
     function refreshSticky() {
       sticky.classList.toggle('is-visible', !dismissed && hasPlayed && isScrolledPast);
     }
 
-    // --- Shared helpers ---
     function fmt(s) {
       if (!isFinite(s)) return '--:--';
       var m = Math.floor(s / 60), sec = Math.floor(s % 60);
       return m + ':' + (sec < 10 ? '0' : '') + sec;
     }
+
     function updateTime() {
       var t = fmt(audio.currentTime) + ' / ' + fmt(audio.duration);
       var pct = (audio.duration ? (audio.currentTime / audio.duration) * 100 : 0) + '%';
-      timeEl.textContent = t;       trackFill.style.width = pct;
-      stickyTimeEl.textContent = t; stickyFill.style.width = pct;
+      timeEl.textContent = t;
+      trackFill.style.width = pct;
+      stickyTimeEl.textContent = t;
+      stickyFill.style.width = pct;
     }
+
     function setPlaying(on) {
       playBtn.classList.toggle('is-playing', on);
       stickyPlayBtn.classList.toggle('is-playing', on);
@@ -709,55 +816,65 @@ document.addEventListener("DOMContentLoaded", function () {
       playBtn.setAttribute('aria-label', lbl);
       stickyPlayBtn.setAttribute('aria-label', lbl);
     }
+
     function togglePlay() {
       if (audio.paused) {
-        audio.play(); setPlaying(true);
-        if (!hasPlayed) { hasPlayed = true; }
-        if (dismissed) { dismissed = false; }
+        audio.play();
+        setPlaying(true);
+        if (!hasPlayed) hasPlayed = true;
+        if (dismissed) dismissed = false;
         refreshSticky();
       } else {
-        audio.pause(); setPlaying(false);
+        audio.pause();
+        setPlaying(false);
       }
     }
+
     function skip(secs) {
       audio.currentTime = Math.max(0, Math.min(audio.duration || 0, audio.currentTime + secs));
       updateTime();
     }
+
     function seekFromClick(e, el) {
       if (!audio.duration) return;
       var rect = el.getBoundingClientRect();
       audio.currentTime = ((e.clientX - rect.left) / rect.width) * audio.duration;
     }
 
-    // --- Wire main player ---
     playBtn.addEventListener('click', togglePlay);
     player.querySelectorAll('.audio-skip-btn').forEach(function(btn) {
-      btn.addEventListener('click', function() { skip(parseInt(btn.getAttribute('data-skip'), 10)); });
+      btn.addEventListener('click', function() {
+        skip(parseInt(btn.getAttribute('data-skip'), 10));
+      });
     });
-    track.addEventListener('click', function(e) { seekFromClick(e, track); });
+    track.addEventListener('click', function(e) {
+      seekFromClick(e, track);
+    });
 
-    // --- Wire sticky player ---
     stickyPlayBtn.addEventListener('click', togglePlay);
     sticky.querySelectorAll('.audio-skip-btn').forEach(function(btn) {
-      btn.addEventListener('click', function() { skip(parseInt(btn.getAttribute('data-skip'), 10)); });
+      btn.addEventListener('click', function() {
+        skip(parseInt(btn.getAttribute('data-skip'), 10));
+      });
     });
-    stickyTrack.addEventListener('click', function(e) { seekFromClick(e, stickyTrack); });
+    stickyTrack.addEventListener('click', function(e) {
+      seekFromClick(e, stickyTrack);
+    });
 
-    // --- Close / dismiss — hide sticky but keep alive so next play can reshow it ---
-    var stickyObserver = null;
     stickyCloseBtn.addEventListener('click', function() {
       dismissed = true;
       refreshSticky();
     });
 
-    // --- Audio events ---
     audio.addEventListener('timeupdate', updateTime);
     audio.addEventListener('loadedmetadata', updateTime);
-    audio.addEventListener('ended', function() { setPlaying(false); updateTime(); });
+    audio.addEventListener('ended', function() {
+      setPlaying(false);
+      updateTime();
+    });
 
-    // --- Show sticky only when player is ABOVE viewport (scrolled past) ---
     if ('IntersectionObserver' in window) {
-      stickyObserver = new IntersectionObserver(function(entries) {
+      var stickyObserver = new IntersectionObserver(function(entries) {
         var entry = entries[0];
         isScrolledPast = !entry.isIntersecting && entry.boundingClientRect.top < 0;
         refreshSticky();
@@ -788,15 +905,12 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   document.addEventListener('DOMContentLoaded', function() {
-    // Skip if page already has its own sparkle menu (e.g. lab pages)
     if (document.querySelector('.note-sparkle-wrap')) return;
 
-    // Hide nav dark mode button (moved into settings panel)
     document.querySelectorAll('.display-fab').forEach(function(btn) {
       btn.style.display = 'none';
     });
 
-    // Detect audio + lab
     var audioEl = document.querySelector('.note-audio-player .audio-src');
     var labHref = document.body.dataset.labHref ||
       (function() {
@@ -804,11 +918,9 @@ document.addEventListener("DOMContentLoaded", function () {
         return el ? el.getAttribute('href') : null;
       })();
 
-    // --- Build sparkle wrap ---
     var wrap = document.createElement('div');
     wrap.className = 'note-sparkle-wrap';
 
-    // --- Settings sub-panel (sits at top of wrap, above sparkle items) ---
     var panel = document.createElement('div');
     panel.className = 'note-settings-panel';
 
@@ -840,9 +952,7 @@ document.addEventListener("DOMContentLoaded", function () {
     panel.appendChild(header);
     panel.appendChild(makeSettingsRow('Mod Paparan', 'Tukar antara mod cerah dan gelap', dmEmoji(), 'dm'));
     panel.appendChild(makeSettingsRow('Mod Tangan', handDesc(), handEmoji(), 'hand'));
-    panel.appendChild(makeSettingsRow('Kata Motivasi', 'Urus kata-kata semangat kamu', '›', 'quotes'));
 
-    // --- Sparkle items: audio (optional) + lab (optional) + ⚙️ (always) ---
     var itemsContainer = document.createElement('div');
     itemsContainer.className = 'note-sparkle-items';
 
@@ -862,7 +972,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (labHref) itemsContainer.appendChild(makeSparkleItem('📜', 'Arkib', 'lab', labHref));
     itemsContainer.appendChild(makeSparkleItem('⚙️', 'Tetapan', 'settings'));
 
-    // --- FAB ---
     var fab = document.createElement('button');
     fab.className = 'note-sparkle-fab';
     fab.type = 'button';
@@ -874,7 +983,6 @@ document.addEventListener("DOMContentLoaded", function () {
     wrap.appendChild(fab);
     document.body.appendChild(wrap);
 
-    // --- Toggle sparkle open/close ---
     fab.addEventListener('click', function(e) {
       e.stopPropagation();
       var opening = !wrap.classList.contains('is-open');
@@ -889,7 +997,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // --- Sparkle item clicks ---
     itemsContainer.addEventListener('click', function(e) {
       var btn = e.target.closest('[data-sparkle-type]');
       if (!btn) return;
@@ -912,7 +1019,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // --- Settings panel row clicks ---
     panel.addEventListener('click', function(e) {
       var row = e.target.closest('[data-stype]');
       if (!row) return;
@@ -936,15 +1042,8 @@ document.addEventListener("DOMContentLoaded", function () {
           ? 'Pindah butang navigasi ke kanan'
           : 'Pindah butang navigasi ke kiri';
       }
-
-      if (type === 'quotes') {
-        document.dispatchEvent(new CustomEvent('hzedu:open-quotes'));
-        wrap.classList.remove('is-open');
-        panel.classList.remove('is-open');
-      }
     });
 
-    // --- Sync audio button emoji with playback ---
     if (audioEl) {
       var audioBtn = itemsContainer.querySelector('[data-sparkle-type="audio"]');
       audioEl.addEventListener('play',  function() { if (audioBtn) audioBtn.textContent = '⏸️'; });
@@ -956,13 +1055,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // ── Nota Feedback Widget ──────────────────────────────────────────────────────
 (function () {
-  // Only on subtopic note pages (e.g. /notes/bab-1-1.html)
   if (!window.location.pathname.match(/\/notes\/bab-\d+-\d+\.html/)) return;
 
   var STORAGE_KEY = 'hzfb-' + window.location.pathname;
-  if (localStorage.getItem(STORAGE_KEY)) return; // already voted on this page
+  if (localStorage.getItem(STORAGE_KEY)) return;
 
-  // Inject styles once
   var style = document.createElement('style');
   style.textContent = [
     '.nota-feedback{text-align:center;padding:1.4rem 1rem 0.6rem;opacity:0;animation:nfb-in 0.4s ease 0.5s forwards}',
@@ -979,13 +1076,11 @@ document.addEventListener("DOMContentLoaded", function () {
   ].join('');
   document.head.appendChild(style);
 
-  // Find the nav section at the bottom of the note
   var navSection = document.querySelector('.note-subsection .hero-actions');
   if (!navSection) return;
   var insertBefore = navSection.closest('.note-subsection');
   if (!insertBefore) return;
 
-  // Build widget
   var widget = document.createElement('div');
   widget.className = 'nota-feedback';
   widget.innerHTML =
@@ -1001,7 +1096,6 @@ document.addEventListener("DOMContentLoaded", function () {
   widget.querySelectorAll('.nota-feedback-btn').forEach(function (btn) {
     btn.addEventListener('click', function () {
       var reaction = btn.getAttribute('data-reaction');
-      // Fire GA4 custom event (GA already on every page)
       if (typeof gtag === 'function') {
         gtag('event', 'nota_reaction', { reaction: reaction, page_path: window.location.pathname });
       }
@@ -1014,244 +1108,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 })();
 
-// ── Personal Identity (Phase 1) ───────────────────────────────────────────────
-(function () {
-  var NAME_KEY   = 'hzedu-name';
-  var QUOTES_KEY = 'hzedu-quotes';
-
-  var DEFAULT_QUOTES = [
-    'Sedikit demi sedikit, lama-lama menjadi bukit.',
-    'Ilmu itu cahaya. Semakin kamu belajar, semakin terang jalanmu.',
-    'Ulang kaji hari ini, keyakinan esok hari.',
-    'Setiap minit yang kamu luangkan hari ini adalah pelaburan untuk masa hadapan.',
-    'Bukan soal cerdas atau tidak — soal usaha dan istiqamah.'
-  ];
-
-  // Inject shared styles once
-  var ps = document.createElement('style');
-  ps.textContent = [
-    // Greeting chip on homepage
-    '.hzedu-greeting{display:inline-flex;align-items:center;gap:0.4rem;font-size:0.82rem;font-weight:800;color:#2f7a67;background:rgba(47,122,103,0.08);border:1px solid rgba(47,122,103,0.18);border-radius:999px;padding:0.3rem 0.8rem;margin-bottom:0.7rem;animation:ps-in 0.4s ease forwards}',
-    '[data-theme="dark"] .hzedu-greeting{color:#7dd4be;background:rgba(47,122,103,0.14);border-color:rgba(47,122,103,0.26)}',
-    // Quote banner on note pages
-    '.hzedu-quote{margin:0.9rem 0 0;padding:0.72rem 1rem;border-left:3px solid rgba(47,122,103,0.35);border-radius:0 10px 10px 0;background:rgba(47,122,103,0.05);font-size:0.83rem;font-style:italic;color:#5a4f42;line-height:1.6;animation:ps-in 0.4s ease 0.2s both}',
-    '[data-theme="dark"] .hzedu-quote{background:rgba(47,122,103,0.09);border-left-color:rgba(47,122,103,0.4);color:#b8aea1}',
-    // Name setup card
-    '.hzedu-setup{position:fixed;bottom:0;left:0;right:0;z-index:200;padding:1.2rem 1.25rem 1.6rem;background:rgba(247,244,238,0.97);border-top:1px solid rgba(92,110,132,0.12);box-shadow:0 -8px 30px rgba(70,60,40,0.1);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transform:translateY(100%);transition:transform 0.35s cubic-bezier(0.34,1.26,0.64,1);max-width:520px;margin:0 auto;border-radius:20px 20px 0 0}',
-    '.hzedu-setup.is-visible{transform:translateY(0)}',
-    '[data-theme="dark"] .hzedu-setup{background:rgba(30,28,26,0.97);border-top-color:rgba(255,255,255,0.07)}',
-    '.hzedu-setup-title{margin:0 0 0.15rem;font-size:1rem;font-weight:900;color:#1e2a34}',
-    '[data-theme="dark"] .hzedu-setup-title{color:#f0e8da}',
-    '.hzedu-setup-sub{margin:0 0 0.9rem;font-size:0.8rem;color:#8c7d6a}',
-    '[data-theme="dark"] .hzedu-setup-sub{color:#a89a8c}',
-    '.hzedu-setup-row{display:flex;gap:0.55rem}',
-    '.hzedu-setup-input{flex:1;padding:0.6rem 0.85rem;border-radius:12px;border:1.5px solid rgba(92,110,132,0.2);background:#fff;font-family:inherit;font-size:0.88rem;font-weight:700;color:#1e2a34;outline:none}',
-    '.hzedu-setup-input:focus{border-color:#2f7a67}',
-    '[data-theme="dark"] .hzedu-setup-input{background:#2a2824;border-color:rgba(220,210,190,0.15);color:#e8e0d4}',
-    '.hzedu-setup-btn{padding:0.6rem 1.1rem;border-radius:12px;background:#2f7a67;color:#fff;border:none;font-family:inherit;font-size:0.88rem;font-weight:800;cursor:pointer}',
-    '.hzedu-setup-close{position:absolute;top:0.9rem;right:1rem;background:none;border:none;font-size:1.1rem;cursor:pointer;color:#9b8f82;line-height:1;padding:0.2rem}',
-    // Quote panel in sparkle
-    '.hzedu-quote-sheet{position:fixed;inset:0;z-index:300;display:flex;flex-direction:column;justify-content:flex-end;background:rgba(0,0,0,0.3);opacity:0;pointer-events:none;transition:opacity 0.25s}',
-    '.hzedu-quote-sheet.is-open{opacity:1;pointer-events:all}',
-    '.hzedu-quote-inner{background:#f7f4ee;border-radius:22px 22px 0 0;padding:1.3rem 1.25rem 2rem;max-height:75dvh;overflow-y:auto;transform:translateY(100%);transition:transform 0.35s cubic-bezier(0.34,1.26,0.64,1)}',
-    '[data-theme="dark"] .hzedu-quote-inner{background:#1e1c1a}',
-    '.hzedu-quote-sheet.is-open .hzedu-quote-inner{transform:translateY(0)}',
-    '.hzedu-quote-sheet-title{margin:0 0 1rem;font-size:1rem;font-weight:900;color:#1e2a34}',
-    '[data-theme="dark"] .hzedu-quote-sheet-title{color:#f0e8da}',
-    '.hzedu-quote-list{list-style:none;margin:0 0 1rem;padding:0;display:flex;flex-direction:column;gap:0.5rem}',
-    '.hzedu-quote-item{display:flex;align-items:flex-start;gap:0.6rem;padding:0.65rem 0.8rem;border-radius:12px;background:rgba(47,122,103,0.06);font-size:0.83rem;font-style:italic;color:#5a4f42;line-height:1.55}',
-    '[data-theme="dark"] .hzedu-quote-item{background:rgba(47,122,103,0.1);color:#b8aea1}',
-    '.hzedu-quote-del{background:none;border:none;font-size:0.9rem;cursor:pointer;color:#c0a090;padding:0;line-height:1;flex-shrink:0;margin-left:auto}',
-    '.hzedu-quote-add-row{display:flex;gap:0.5rem;margin-top:0.6rem}',
-    '.hzedu-quote-add-input{flex:1;padding:0.6rem 0.8rem;border-radius:11px;border:1.5px solid rgba(92,110,132,0.18);background:#fff;font-family:inherit;font-size:0.82rem;font-style:italic;color:#1e2a34;outline:none}',
-    '.hzedu-quote-add-input:focus{border-color:#2f7a67}',
-    '[data-theme="dark"] .hzedu-quote-add-input{background:#2a2824;border-color:rgba(220,210,190,0.14);color:#e8e0d4}',
-    '.hzedu-quote-add-btn{padding:0.6rem 0.9rem;border-radius:11px;background:#2f7a67;color:#fff;border:none;font-family:inherit;font-size:0.82rem;font-weight:800;cursor:pointer}',
-    '@keyframes ps-in{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}'
-  ].join('');
-  document.head.appendChild(ps);
-
-  // ── Helpers ───────────────────────────────────────────────────────────────
-  function getName()   { return localStorage.getItem(NAME_KEY) || ''; }
-  function getQuotes() {
-    try { return JSON.parse(localStorage.getItem(QUOTES_KEY)) || []; }
-    catch (e) { return []; }
-  }
-  function saveQuotes(arr) { localStorage.setItem(QUOTES_KEY, JSON.stringify(arr)); }
-  function pickQuote() {
-    var q = getQuotes();
-    var pool = q.length ? q : DEFAULT_QUOTES;
-    return pool[Math.floor(Math.random() * pool.length)];
-  }
-
-  // ── 1. Homepage greeting ──────────────────────────────────────────────────
-  var isHome = window.location.pathname === '/' ||
-               window.location.pathname.endsWith('/index.html') && !window.location.pathname.includes('/notes/');
-  if (isHome) {
-    document.addEventListener('DOMContentLoaded', function () {
-      var name = getName();
-      if (!name) {
-        // Show name-setup card after 1.8s (first visit feel)
-        setTimeout(showSetupCard, 1800);
-        return;
-      }
-      // Inject greeting before <h1> in .hero-copy
-      var heroCopy = document.querySelector('.hero-copy');
-      if (!heroCopy) return;
-      var h1 = heroCopy.querySelector('h1');
-      if (!h1) return;
-      var chip = document.createElement('div');
-      chip.className = 'hzedu-greeting';
-      chip.textContent = 'Selamat datang semula, ' + name + ' \uD83D\uDC4B';
-      heroCopy.insertBefore(chip, h1);
-    });
-  }
-
-  // ── 2. Name setup card ────────────────────────────────────────────────────
-  function showSetupCard() {
-    if (document.getElementById('hzedu-setup')) return;
-    var card = document.createElement('div');
-    card.className = 'hzedu-setup';
-    card.id = 'hzedu-setup';
-    card.innerHTML =
-      '<button class="hzedu-setup-close" id="hzedu-setup-close" aria-label="Tutup">\u2715</button>' +
-      '<p class="hzedu-setup-title">Siapa nama kamu? \uD83D\uDC4B</p>' +
-      '<p class="hzedu-setup-sub">Nama ini hanya disimpan di peranti kamu sahaja.</p>' +
-      '<div class="hzedu-setup-row">' +
-        '<input class="hzedu-setup-input" id="hzedu-name-input" type="text" placeholder="Nama atau gelaran..." maxlength="30" autocomplete="off" />' +
-        '<button class="hzedu-setup-btn" id="hzedu-name-save">Simpan</button>' +
-      '</div>';
-    document.body.appendChild(card);
-    requestAnimationFrame(function () {
-      requestAnimationFrame(function () { card.classList.add('is-visible'); });
-    });
-
-    document.getElementById('hzedu-setup-close').addEventListener('click', function () {
-      card.classList.remove('is-visible');
-      setTimeout(function () { card.remove(); }, 350);
-    });
-
-    function saveName() {
-      var val = document.getElementById('hzedu-name-input').value.trim();
-      if (!val) return;
-      localStorage.setItem(NAME_KEY, val);
-      card.classList.remove('is-visible');
-      setTimeout(function () {
-        card.remove();
-        // Show greeting immediately
-        var heroCopy = document.querySelector('.hero-copy');
-        if (!heroCopy) return;
-        var h1 = heroCopy.querySelector('h1');
-        if (!h1) return;
-        var chip = document.createElement('div');
-        chip.className = 'hzedu-greeting';
-        chip.textContent = 'Selamat datang, ' + val + ' \uD83D\uDC4B';
-        heroCopy.insertBefore(chip, h1);
-      }, 350);
-    }
-
-    document.getElementById('hzedu-name-save').addEventListener('click', saveName);
-    document.getElementById('hzedu-name-input').addEventListener('keydown', function (e) {
-      if (e.key === 'Enter') saveName();
-    });
-    setTimeout(function () {
-      var inp = document.getElementById('hzedu-name-input');
-      if (inp) inp.focus();
-    }, 400);
-  }
-
-  // ── 3. Motivational quote on note pages ───────────────────────────────────
-  var isNotePage = window.location.pathname.match(/\/notes\/bab-\d+-\d+\.html/);
-  if (isNotePage) {
-    document.addEventListener('DOMContentLoaded', function () {
-      var lead = document.querySelector('.page-hero .lead, .note-hero .lead');
-      if (!lead) return;
-      var quote = pickQuote();
-      var el = document.createElement('p');
-      el.className = 'hzedu-quote';
-      el.textContent = '\u201C' + quote + '\u201D';
-      lead.after(el);
-    });
-  }
-
-  // ── 4. Quote management — triggered via settings panel custom event ──────────
-  document.addEventListener('DOMContentLoaded', function () {
-    // Only on pages that have the sparkle menu
-    if (!document.querySelector('.note-sparkle-wrap') &&
-        !document.querySelector('.note-settings-panel')) return;
-
-    // Build sheet
-    var sheet = document.createElement('div');
-    sheet.className = 'hzedu-quote-sheet';
-    sheet.id = 'hzedu-quote-sheet';
-    sheet.innerHTML =
-      '<div class="hzedu-quote-inner">' +
-        '<p class="hzedu-quote-sheet-title">\u270D\uFE0F Kata Motivasi Kamu</p>' +
-        '<ul class="hzedu-quote-list" id="hzedu-qlist"></ul>' +
-        '<div class="hzedu-quote-add-row">' +
-          '<input class="hzedu-quote-add-input" id="hzedu-qadd" type="text" placeholder="Tambah kata-kata baru..." maxlength="120" />' +
-          '<button class="hzedu-quote-add-btn" id="hzedu-qadd-btn">+</button>' +
-        '</div>' +
-      '</div>';
-    document.body.appendChild(sheet);
-
-    function renderList() {
-      var list = document.getElementById('hzedu-qlist');
-      if (!list) return;
-      var quotes = getQuotes();
-      list.innerHTML = quotes.length
-        ? quotes.map(function (q, i) {
-            return '<li class="hzedu-quote-item">\u201C' + q + '\u201D' +
-              '<button class="hzedu-quote-del" data-idx="' + i + '" aria-label="Padam">\uD83D\uDDD1\uFE0F</button></li>';
-          }).join('')
-        : '<li style="font-size:0.8rem;color:#a89a8c;font-style:normal;padding:0.3rem 0">Tiada kata-kata disimpan lagi.</li>';
-      list.querySelectorAll('.hzedu-quote-del').forEach(function (btn) {
-        btn.addEventListener('click', function () {
-          var idx = parseInt(btn.getAttribute('data-idx'), 10);
-          var q = getQuotes();
-          q.splice(idx, 1);
-          saveQuotes(q);
-          renderList();
-        });
-      });
-    }
-
-    function openSheet() {
-      renderList();
-      sheet.classList.add('is-open');
-      var wrap = document.querySelector('.note-sparkle-wrap');
-      if (wrap) wrap.classList.remove('is-open');
-    }
-    function closeSheet() { sheet.classList.remove('is-open'); }
-
-    // Listen for the custom event dispatched by the settings panel
-    document.addEventListener('hzedu:open-quotes', openSheet);
-    sheet.addEventListener('click', function (e) {
-      if (e.target === sheet) closeSheet();
-    });
-
-    document.getElementById('hzedu-qadd-btn').addEventListener('click', function () {
-      var inp = document.getElementById('hzedu-qadd');
-      var val = inp.value.trim();
-      if (!val) return;
-      var q = getQuotes();
-      if (q.length >= 10) return;
-      q.push(val);
-      saveQuotes(q);
-      inp.value = '';
-      renderList();
-    });
-    document.getElementById('hzedu-qadd').addEventListener('keydown', function (e) {
-      if (e.key === 'Enter') document.getElementById('hzedu-qadd-btn').click();
-    });
-  });
-})();
-
 // ── PWA Install Nudge ─────────────────────────────────────────────────────────
 (function () {
-  // Skip if already running as installed PWA
   if (window.matchMedia('(display-mode: standalone)').matches) return;
-  if (navigator.standalone) return; // iOS standalone check
+  if (navigator.standalone) return;
 
   var DISMISSED_KEY = 'hzedu-pwa-dismissed-until';
   var dismissed = localStorage.getItem(DISMISSED_KEY);
@@ -1262,7 +1122,6 @@ document.addEventListener("DOMContentLoaded", function () {
   var isSafari  = isIOS && /safari/i.test(ua) && !/crios|fxios|opios/i.test(ua);
   var isAndroid = /android/i.test(ua);
 
-  // Only show on platforms that support PWA install
   if (!isSafari && !isAndroid) return;
 
   var deferredPrompt = null;
@@ -1273,7 +1132,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Inject styles
   var style = document.createElement('style');
   style.textContent = [
     '.pwa-nudge{position:fixed;bottom:1rem;left:50%;transform:translateX(-50%) translateY(calc(100% + 1.5rem));z-index:250;width:calc(100% - 2rem);max-width:400px;background:rgba(247,244,238,0.97);border:1px solid rgba(92,110,132,0.13);border-radius:20px;box-shadow:0 8px 32px rgba(70,60,40,0.14);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding:1rem 1rem 1rem 0.9rem;display:flex;align-items:flex-start;gap:0.75rem;transition:transform 0.4s cubic-bezier(0.34,1.26,0.64,1),opacity 0.4s ease;opacity:0}',
@@ -1338,7 +1196,6 @@ document.addEventListener("DOMContentLoaded", function () {
         '</div>' +
         '<button class="pwa-nudge-close" id="pwa-close-btn" aria-label="Tutup">\u2715</button>';
     } else {
-      // iOS — manual instruction
       var shareIcon =
         '<span class="pwa-nudge-ios-share">' +
           '<svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">' +
@@ -1385,20 +1242,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Show after 7s — enough time to read content, not too intrusive
   function tryShow() {
-    // For Android, only show if deferredPrompt was captured
     if (isAndroid && !deferredPrompt) return;
     buildNudge();
   }
 
-  // Android: wait for beforeinstallprompt + 7s
-  // iOS Safari: just wait 7s (no prompt event)
   if (isIOS && isSafari) {
     setTimeout(buildNudge, 7000);
   } else {
     setTimeout(tryShow, 7000);
-    // Also listen in case prompt fires after our timer
     window.addEventListener('beforeinstallprompt', function () {
       if (!document.getElementById('pwa-nudge')) setTimeout(tryShow, 1000);
     });
