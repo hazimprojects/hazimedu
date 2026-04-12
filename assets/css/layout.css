@@ -67,6 +67,8 @@
   body { padding-bottom: calc(var(--bottom-nav-h) + var(--safe-bottom)); }
   /* Hide hamburger — bottom nav replaces it on mobile */
   .nav-toggle { display: none !important; }
+  /* Hide header dark-mode FAB on mobile — it lives in bottom nav now */
+  .nav-wrap .display-fab { display: none !important; }
 }
 
 [data-theme="dark"] .hz-bottom-nav {
