@@ -1166,7 +1166,7 @@ document.addEventListener("DOMContentLoaded", function () {
       '<div class="hzedu-quote-inner">' +
         '<p class="hzedu-quote-sheet-title">\u270D\uFE0F Kata Motivasi</p>' +
         '<ul class="hzedu-quote-list" id="hzedu-qlist"></ul>' +
-        '<p style="margin:0.35rem 0 0;font-size:0.78rem;color:#9c8e7d">Fungsi tambah kata motivasi baharu ditutup sementara.</p>' +
+        '<p style="margin:0.35rem 0 0;font-size:0.78rem;color:#9c8e7d">Fungsi tambah kata motivasi baharu ditutup buat sementara waktu.</p>' +
       '</div>';
     document.body.appendChild(sheet);
 
