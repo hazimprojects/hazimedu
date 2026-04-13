@@ -5,7 +5,7 @@
    - Everything else: network-first
 */
 
-const CACHE = 'hzedu-v6';
+const CACHE = 'hzedu-v7';
 
 const PRECACHE_URLS = [
   '/',
