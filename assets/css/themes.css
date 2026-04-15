@@ -4,6 +4,118 @@
    Menyokong bab-theme-1 hingga bab-theme-10
 ========================================================= */
 
+
+
+/* =========================================================
+   GLOBAL PAGE THEMES — halaman umum (non-bab)
+========================================================= */
+
+body[class*="page-theme-"] {
+  --page-bg-solid: #f2f6ff;
+  --page-overlay-1: radial-gradient(circle at 10% 14%, rgba(120, 151, 255, 0.19), transparent 0 24%);
+  --page-overlay-2: radial-gradient(circle at 88% 16%, rgba(94, 211, 194, 0.14), transparent 0 20%);
+  --page-overlay-3: radial-gradient(circle at 22% 86%, rgba(188, 162, 255, 0.14), transparent 0 18%);
+  --page-gradient: linear-gradient(180deg, #ffffff 0%, #f3f7ff 52%, #edf6ff 100%);
+
+  --page-surface-bg: linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(244, 250, 255, 0.88));
+  --page-surface-border: rgba(94, 115, 148, 0.16);
+  --page-surface-shadow: 0 18px 40px rgba(50, 62, 82, 0.10);
+
+  background-color: var(--page-bg-solid);
+  background-image:
+    var(--page-overlay-1),
+    var(--page-overlay-2),
+    var(--page-overlay-3),
+    var(--page-gradient);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-attachment: fixed, fixed, fixed, scroll;
+}
+
+body[class*="page-theme-"] .site-header {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(14px);
+}
+
+body[class*="page-theme-"] .site-footer {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.80), rgba(242, 249, 255, 0.74));
+}
+
+body[class*="page-theme-"] .paper-board,
+body[class*="page-theme-"] .paper-flap-card,
+body[class*="page-theme-"] .metric-card,
+body[class*="page-theme-"] .editorial-card,
+body[class*="page-theme-"] .audience-card,
+body[class*="page-theme-"] .note-card,
+body[class*="page-theme-"] .value-card,
+body[class*="page-theme-"] .content-block,
+body[class*="page-theme-"] .search-wrap,
+body[class*="page-theme-"] .search-results,
+body[class*="page-theme-"] .search-empty,
+body[class*="page-theme-"] .feedback-form-wrap {
+  background: var(--page-surface-bg);
+  border-color: var(--page-surface-border);
+  box-shadow: var(--page-surface-shadow);
+}
+
+body.page-theme-home {
+  --page-bg-solid: #fffaf3;
+  --page-overlay-1: radial-gradient(circle at 8% 10%, rgba(255, 184, 107, 0.25), transparent 0 30%);
+  --page-overlay-2: radial-gradient(circle at 92% 14%, rgba(108, 200, 255, 0.24), transparent 0 32%);
+  --page-overlay-3: radial-gradient(circle at 52% 86%, rgba(99, 219, 161, 0.18), transparent 0 36%);
+  --page-gradient: linear-gradient(180deg, #fffdf8 0%, #fff7ec 42%, #eff8ff 100%);
+}
+
+body.page-theme-notes {
+  --page-bg-solid: #f4f9ff;
+  --page-overlay-1: radial-gradient(circle at 10% 12%, rgba(126, 169, 255, 0.2), transparent 0 24%);
+  --page-overlay-2: radial-gradient(circle at 88% 16%, rgba(71, 198, 214, 0.18), transparent 0 20%);
+  --page-overlay-3: radial-gradient(circle at 20% 86%, rgba(137, 228, 200, 0.18), transparent 0 18%);
+  --page-gradient: linear-gradient(180deg, #fcfeff 0%, #eff6ff 52%, #e9fbf7 100%);
+}
+
+body.page-theme-about {
+  --page-bg-solid: #f8f5ff;
+  --page-overlay-1: radial-gradient(circle at 12% 10%, rgba(170, 148, 255, 0.22), transparent 0 24%);
+  --page-overlay-2: radial-gradient(circle at 86% 14%, rgba(108, 198, 255, 0.17), transparent 0 20%);
+  --page-overlay-3: radial-gradient(circle at 18% 86%, rgba(255, 179, 222, 0.18), transparent 0 18%);
+  --page-gradient: linear-gradient(180deg, #fffcff 0%, #f4f0ff 54%, #eef6ff 100%);
+}
+
+body.page-theme-feedback {
+  --page-bg-solid: #f6fff9;
+  --page-overlay-1: radial-gradient(circle at 10% 12%, rgba(91, 199, 168, 0.22), transparent 0 24%);
+  --page-overlay-2: radial-gradient(circle at 88% 16%, rgba(125, 175, 255, 0.18), transparent 0 20%);
+  --page-overlay-3: radial-gradient(circle at 24% 86%, rgba(255, 196, 145, 0.18), transparent 0 18%);
+  --page-gradient: linear-gradient(180deg, #fcfffd 0%, #f0fff8 52%, #edf4ff 100%);
+}
+
+body.page-theme-thankyou {
+  --page-bg-solid: #f4fbff;
+  --page-overlay-1: radial-gradient(circle at 12% 12%, rgba(113, 188, 255, 0.22), transparent 0 24%);
+  --page-overlay-2: radial-gradient(circle at 88% 14%, rgba(111, 224, 196, 0.19), transparent 0 20%);
+  --page-overlay-3: radial-gradient(circle at 22% 86%, rgba(171, 165, 255, 0.16), transparent 0 18%);
+  --page-gradient: linear-gradient(180deg, #fdfefe 0%, #eef8ff 52%, #eafaf6 100%);
+}
+
+body.page-theme-error {
+  --page-bg-solid: #fff8f4;
+  --page-overlay-1: radial-gradient(circle at 12% 10%, rgba(255, 186, 153, 0.20), transparent 0 24%);
+  --page-overlay-2: radial-gradient(circle at 90% 14%, rgba(144, 199, 255, 0.20), transparent 0 20%);
+  --page-overlay-3: radial-gradient(circle at 18% 86%, rgba(191, 204, 255, 0.18), transparent 0 18%);
+  --page-gradient: linear-gradient(180deg, #fffefd 0%, #fff4ef 54%, #edf5ff 100%);
+}
+
+html[data-theme="dark"] body[class*="page-theme-"] {
+  --page-bg-solid: #0D0F1A;
+  --page-overlay-1: radial-gradient(circle at 12% 12%, rgba(99, 102, 241, 0.16), transparent 0 24%);
+  --page-overlay-2: radial-gradient(circle at 86% 12%, rgba(34, 211, 238, 0.12), transparent 0 22%);
+  --page-overlay-3: radial-gradient(circle at 16% 86%, rgba(129, 140, 248, 0.10), transparent 0 20%);
+  --page-gradient: linear-gradient(180deg, #0D0F1A 0%, #0B0E1A 56%, #0A0C16 100%);
+  --page-surface-bg: rgba(21, 24, 41, 0.88);
+  --page-surface-border: rgba(129, 140, 248, 0.12);
+  --page-surface-shadow: 0 18px 42px rgba(0, 0, 0, 0.32);
+}
+
 /* =========================================================
    THEME CORE — semua bab guna rangka sama
 ========================================================= */
