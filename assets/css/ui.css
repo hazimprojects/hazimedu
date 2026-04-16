@@ -1324,6 +1324,23 @@
   letter-spacing: -0.02em;
   font-family: "Plus Jakarta Sans", sans-serif;
 }
+/* Play/pause button — CSS-drawn icons, no text */
+.sparkle-ctrl-btn[data-ctrl="play-pause"] { font-size: 0; }
+.sparkle-ctrl-btn[data-ctrl="play-pause"]::before {
+  content: '';
+  display: block;
+  width: 9px; height: 12px;
+  border-left: 2.5px solid currentColor;
+  border-right: 2.5px solid currentColor;
+  box-sizing: border-box;
+}
+.sparkle-ctrl-btn[data-ctrl="play-pause"].is-paused::before {
+  width: 0; height: 0;
+  border-style: solid;
+  border-width: 6px 0 6px 11px;
+  border-color: transparent transparent transparent currentColor;
+  border-right: none;
+}
 
 /* Staggered entrance */
 .note-sparkle-wrap.controls-open .sparkle-ctrl-btn:nth-child(1) { transition-delay: 0ms; }
