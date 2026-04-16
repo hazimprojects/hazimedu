@@ -14,8 +14,8 @@ const PRECACHE_URLS = [
   '/notes/index.html',
   '/assets/css/style.css?v=61',
   '/assets/js/main.js?v=63',
-  '/icons/favicon.svg',
-  '/icons/icon-192.png',
+  '/icons/icon.svg',
+  '/icons/icon-maskable.svg',
   '/manifest.json?v=2'
 ];
 
