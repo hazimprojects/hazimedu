@@ -881,7 +881,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var ctrlStop     = makeCtrlBtn('■',   'stop');
     var ctrlBack     = makeCtrlBtn('−10', 'skip-back');
-    var ctrlPlayPause = makeCtrlBtn('∥',  'play-pause');
+    var ctrlPlayPause = makeCtrlBtn('', 'play-pause');
     var ctrlFwd      = makeCtrlBtn('+10', 'skip-fwd');
 
     var audioControls = document.createElement('div');
@@ -1027,7 +1027,7 @@ document.addEventListener("DOMContentLoaded", function () {
         wrap.classList.remove('controls-open');
         progCircle.setAttribute('stroke-dashoffset', '0');
         countdownEl.textContent = '';
-        ctrlPlayPause.textContent = '∥';
+        ctrlPlayPause.classList.remove('is-paused');
         if (audioBtn) audioBtn.textContent = '🎧';
       }
 
@@ -1037,13 +1037,13 @@ document.addEventListener("DOMContentLoaded", function () {
         fab.textContent = '🎧';
         wrap.classList.add('audio-active');
         wrap.classList.remove('is-open');
-        ctrlPlayPause.textContent = '∥';
+        ctrlPlayPause.classList.remove('is-paused');
         countdownEl.textContent = fmtRemaining();
         if (audioBtn) audioBtn.textContent = '⏸️';
       });
 
       audioEl.addEventListener('pause', function() {
-        ctrlPlayPause.textContent = '▶';
+        ctrlPlayPause.classList.add('is-paused');
         if (audioBtn) audioBtn.textContent = '🎧';
         // FAB stays 🎧, ring stays visible
       });
