@@ -761,130 +761,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // AUDIO PLAYER
 // =========================
 (function setupAudioPlayers() {
-  document.querySelectorAll('.note-audio-player').forEach(function(player) {
-    var audio = player.querySelector('.audio-src');
-    var playBtn = player.querySelector('.audio-play-btn');
-    var trackFill = player.querySelector('.audio-track-fill');
-    var track = player.querySelector('.audio-track');
-    var timeEl = player.querySelector('.audio-time');
-    if (!audio || !playBtn) return;
-
-    var sticky = document.createElement('div');
-    sticky.className = 'audio-sticky';
-    sticky.innerHTML =
-      '<div class="audio-sticky-inner">' +
-        '<span class="audio-sticky-label">🎧 Audio</span>' +
-        '<button class="audio-skip-btn" data-skip="-10" aria-label="Undur 10 saat">\xAB 10s</button>' +
-        '<button class="audio-play-btn" aria-label="Main audio"></button>' +
-        '<button class="audio-skip-btn" data-skip="10" aria-label="Maju 10 saat">10s \xBB</button>' +
-        '<div class="audio-track"><div class="audio-track-fill"></div></div>' +
-        '<span class="audio-time">0:00 / --:--</span>' +
-        '<button class="audio-sticky-close" aria-label="Tutup">\u2715</button>' +
-      '</div>';
-    document.body.appendChild(sticky);
-
-    var stickyPlayBtn  = sticky.querySelector('.audio-play-btn');
-    var stickyFill     = sticky.querySelector('.audio-track-fill');
-    var stickyTrack    = sticky.querySelector('.audio-track');
-    var stickyTimeEl   = sticky.querySelector('.audio-time');
-    var stickyCloseBtn = sticky.querySelector('.audio-sticky-close');
-
-    var hasPlayed = false;
-    var dismissed = false;
-    var isScrolledPast = false;
-
-    function refreshSticky() {
-      sticky.classList.toggle('is-visible', !dismissed && hasPlayed && isScrolledPast);
-    }
-
-    function fmt(s) {
-      if (!isFinite(s)) return '--:--';
-      var m = Math.floor(s / 60), sec = Math.floor(s % 60);
-      return m + ':' + (sec < 10 ? '0' : '') + sec;
-    }
-
-    function updateTime() {
-      var t = fmt(audio.currentTime) + ' / ' + fmt(audio.duration);
-      var pct = (audio.duration ? (audio.currentTime / audio.duration) * 100 : 0) + '%';
-      timeEl.textContent = t;
-      trackFill.style.width = pct;
-      stickyTimeEl.textContent = t;
-      stickyFill.style.width = pct;
-    }
-
-    function setPlaying(on) {
-      playBtn.classList.toggle('is-playing', on);
-      stickyPlayBtn.classList.toggle('is-playing', on);
-      var lbl = on ? 'Jeda audio' : 'Main audio';
-      playBtn.setAttribute('aria-label', lbl);
-      stickyPlayBtn.setAttribute('aria-label', lbl);
-    }
-
-    function togglePlay() {
-      if (audio.paused) {
-        audio.play();
-        setPlaying(true);
-        if (!hasPlayed) hasPlayed = true;
-        if (dismissed) dismissed = false;
-        refreshSticky();
-      } else {
-        audio.pause();
-        setPlaying(false);
-      }
-    }
-
-    function skip(secs) {
-      audio.currentTime = Math.max(0, Math.min(audio.duration || 0, audio.currentTime + secs));
-      updateTime();
-    }
-
-    function seekFromClick(e, el) {
-      if (!audio.duration) return;
-      var rect = el.getBoundingClientRect();
-      audio.currentTime = ((e.clientX - rect.left) / rect.width) * audio.duration;
-    }
-
-    playBtn.addEventListener('click', togglePlay);
-    player.querySelectorAll('.audio-skip-btn').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        skip(parseInt(btn.getAttribute('data-skip'), 10));
-      });
-    });
-    track.addEventListener('click', function(e) {
-      seekFromClick(e, track);
-    });
-
-    stickyPlayBtn.addEventListener('click', togglePlay);
-    sticky.querySelectorAll('.audio-skip-btn').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        skip(parseInt(btn.getAttribute('data-skip'), 10));
-      });
-    });
-    stickyTrack.addEventListener('click', function(e) {
-      seekFromClick(e, stickyTrack);
-    });
-
-    stickyCloseBtn.addEventListener('click', function() {
-      dismissed = true;
-      refreshSticky();
-    });
-
-    audio.addEventListener('timeupdate', updateTime);
-    audio.addEventListener('loadedmetadata', updateTime);
-    audio.addEventListener('ended', function() {
-      setPlaying(false);
-      updateTime();
-    });
-
-    if ('IntersectionObserver' in window) {
-      var stickyObserver = new IntersectionObserver(function(entries) {
-        var entry = entries[0];
-        isScrolledPast = !entry.isIntersecting && entry.boundingClientRect.top < 0;
-        refreshSticky();
-      }, { threshold: 0 });
-      stickyObserver.observe(player);
-    }
-  });
+  // Audio kini dikawal sepenuhnya oleh Sparkle Menu (setupNoteFeatures).
 })();
 
 // =========================
@@ -936,8 +813,53 @@ document.addEventListener("DOMContentLoaded", function () {
     fab.setAttribute('aria-label', 'Menu pembelajaran');
     fab.textContent = '✨';
 
+    // ── Audio Progress Ring ───────────────────────────────────────────
+    var CIRC = 2 * Math.PI * 18;
+    var svgNS = 'http://www.w3.org/2000/svg';
+    var ringDiv = document.createElement('div');
+    ringDiv.className = 'sparkle-audio-ring';
+
+    var ringsvg = document.createElementNS(svgNS, 'svg');
+    ringsvg.setAttribute('viewBox', '0 0 44 44');
+    ringsvg.setAttribute('aria-hidden', 'true');
+
+    var ringDefs = document.createElementNS(svgNS, 'defs');
+    var grad = document.createElementNS(svgNS, 'linearGradient');
+    grad.setAttribute('id', 'sparkleRingGrad');
+    grad.setAttribute('x1', '0%'); grad.setAttribute('y1', '0%');
+    grad.setAttribute('x2', '100%'); grad.setAttribute('y2', '0%');
+    var stop1 = document.createElementNS(svgNS, 'stop');
+    stop1.setAttribute('offset', '0%'); stop1.setAttribute('stop-color', '#38bdf8');
+    var stop2 = document.createElementNS(svgNS, 'stop');
+    stop2.setAttribute('offset', '100%'); stop2.setAttribute('stop-color', '#818cf8');
+    grad.appendChild(stop1); grad.appendChild(stop2);
+    ringDefs.appendChild(grad); ringsvg.appendChild(ringDefs);
+
+    var trackCircle = document.createElementNS(svgNS, 'circle');
+    trackCircle.setAttribute('cx', '22'); trackCircle.setAttribute('cy', '22');
+    trackCircle.setAttribute('r', '18'); trackCircle.setAttribute('fill', 'none');
+    trackCircle.setAttribute('stroke', 'rgba(109,99,255,0.18)');
+    trackCircle.setAttribute('stroke-width', '3.5');
+    ringsvg.appendChild(trackCircle);
+
+    var progCircle = document.createElementNS(svgNS, 'circle');
+    progCircle.setAttribute('cx', '22'); progCircle.setAttribute('cy', '22');
+    progCircle.setAttribute('r', '18'); progCircle.setAttribute('fill', 'none');
+    progCircle.setAttribute('stroke', 'url(#sparkleRingGrad)');
+    progCircle.setAttribute('stroke-width', '3.5');
+    progCircle.setAttribute('stroke-linecap', 'round');
+    progCircle.setAttribute('stroke-dasharray', CIRC);
+    progCircle.setAttribute('stroke-dashoffset', '0');
+    ringsvg.appendChild(progCircle);
+    ringDiv.appendChild(ringsvg);
+
+    var fabGroup = document.createElement('div');
+    fabGroup.className = 'note-sparkle-fab-group';
+    fabGroup.appendChild(fab);
+    fabGroup.appendChild(ringDiv);
+
     wrap.appendChild(itemsContainer);
-    wrap.appendChild(fab);
+    wrap.appendChild(fabGroup);
     document.body.appendChild(wrap);
 
     // ── Corner Position ───────────────────────────────────────────────
@@ -1034,12 +956,36 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // ── Audio Icon Sync ───────────────────────────────────────────────
+    // ── Audio State Machine ───────────────────────────────────────────
     if (audioEl) {
       var audioBtn = itemsContainer.querySelector('[data-sparkle-type="audio"]');
-      audioEl.addEventListener('play',  function() { if (audioBtn) audioBtn.textContent = '⏸️'; });
-      audioEl.addEventListener('pause', function() { if (audioBtn) audioBtn.textContent = '🎧'; });
-      audioEl.addEventListener('ended', function() { if (audioBtn) audioBtn.textContent = '🎧'; });
+
+      function updateRing() {
+        if (!audioEl.duration) return;
+        progCircle.setAttribute('stroke-dashoffset',
+          CIRC * (audioEl.currentTime / audioEl.duration));
+      }
+
+      audioEl.addEventListener('timeupdate', updateRing);
+
+      audioEl.addEventListener('play', function() {
+        fab.textContent = '🎧';
+        wrap.classList.add('audio-active');
+        wrap.classList.remove('is-open');
+        if (audioBtn) audioBtn.textContent = '⏸️';
+      });
+
+      audioEl.addEventListener('pause', function() {
+        fab.textContent = '⏸️';
+        if (audioBtn) audioBtn.textContent = '🎧';
+      });
+
+      audioEl.addEventListener('ended', function() {
+        fab.textContent = '✨';
+        wrap.classList.remove('audio-active');
+        progCircle.setAttribute('stroke-dashoffset', '0');
+        if (audioBtn) audioBtn.textContent = '🎧';
+      });
     }
   });
 })();
