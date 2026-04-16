@@ -772,6 +772,44 @@ document.addEventListener("DOMContentLoaded", function () {
     if (document.querySelector('.note-sparkle-wrap')) return;
 
     var audioEl = document.querySelector('.note-audio-player .audio-src');
+
+    var NOTICE_KEY = 'hzaudio-notice' + window.location.pathname;
+    var noticeShown = false;
+
+    function showAudioNotice() {
+      if (noticeShown || localStorage.getItem(NOTICE_KEY)) return;
+      noticeShown = true;
+
+      var sheet = document.createElement('div');
+      sheet.className = 'audio-notice-sheet';
+      sheet.innerHTML =
+        '<span class="audio-notice-icon">\uD83C\uDFA7</span>' +
+        '<p class="audio-notice-text">Audio mungkin mengandungi ringkasan \u2014 nota adalah rujukan utama.</p>' +
+        '<div class="audio-notice-footer">' +
+          '<span class="audio-notice-countdown">3</span>' +
+          '<button class="audio-notice-dismiss" type="button">OK</button>' +
+        '</div>';
+      document.body.appendChild(sheet);
+
+      var cdEl = sheet.querySelector('.audio-notice-countdown');
+      var secs = 3;
+
+      function dismiss() {
+        clearInterval(timer);
+        localStorage.setItem(NOTICE_KEY, '1');
+        sheet.classList.add('is-leaving');
+        setTimeout(function() { sheet.remove(); }, 200);
+      }
+
+      sheet.querySelector('.audio-notice-dismiss').addEventListener('click', dismiss);
+
+      var timer = setInterval(function() {
+        secs -= 1;
+        if (secs <= 0) { dismiss(); return; }
+        cdEl.textContent = secs;
+      }, 1000);
+    }
+
     var labHref = document.body.dataset.labHref ||
       (function() {
         var el = document.querySelector('#learning-lab-entry .btn[href]');
@@ -993,6 +1031,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!btn) return;
       var type = btn.getAttribute('data-sparkle-type');
       if (type === 'audio' && audioEl) {
+        showAudioNotice();
         audioEl.paused ? audioEl.play() : audioEl.pause();
         wrap.classList.remove('is-open');
       }
