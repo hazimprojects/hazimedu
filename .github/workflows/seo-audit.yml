@@ -1,0 +1,32 @@
+name: SEO Audit
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  seo-audit:
+    name: Run SEO audit
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run SEO audit script
+        run: |
+          set -o pipefail
+          python3 scripts/seo-audit.py | tee seo-audit-output.txt
+
+      - name: Add SEO audit summary
+        if: always()
+        run: |
+          {
+            echo "## SEO Audit Output"
+            echo
+            echo '```text'
+            cat seo-audit-output.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
