@@ -1412,6 +1412,63 @@
   .sparkle-ctrl-btn { width: 32px; height: 32px; font-size: 0.78rem; }
 }
 
+/* ── Audio Notice Sheet ──────────────────────────────────────────── */
+.audio-notice-sheet {
+  position: fixed;
+  left: 1rem; right: 1rem;
+  bottom: calc(var(--bottom-nav-h, 56px) + var(--safe-bottom, 0px) + 0.85rem);
+  max-width: 400px;
+  margin: 0 auto;
+  z-index: 55;
+  background: var(--paper);
+  border: 1px solid rgba(92, 110, 132, 0.1);
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px rgba(36,49,63,0.13), 0 2px 8px rgba(36,49,63,0.07);
+  padding: 0.8rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  animation: hz-sheet-in 0.26s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+.audio-notice-sheet.is-leaving {
+  animation: audio-notice-out 0.18s ease forwards;
+}
+@keyframes audio-notice-out {
+  to { transform: translateY(20px); opacity: 0; }
+}
+.audio-notice-icon { font-size: 1.1rem; flex-shrink: 0; line-height: 1; }
+.audio-notice-text {
+  flex: 1;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.45;
+  margin: 0;
+}
+.audio-notice-footer {
+  display: flex; align-items: center; gap: 0.5rem; flex-shrink: 0;
+}
+.audio-notice-countdown {
+  font-size: 0.72rem; font-weight: 700;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  min-width: 1.2em; text-align: center;
+}
+.audio-notice-dismiss {
+  border: none;
+  background: var(--primary); color: #fff;
+  font-size: 0.72rem; font-weight: 700;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding: 0.3rem 0.65rem; border-radius: 6px;
+  cursor: pointer; line-height: 1;
+  transition: opacity 0.15s ease;
+}
+.audio-notice-dismiss:hover { opacity: 0.85; }
+[data-theme="dark"] .audio-notice-sheet {
+  border-color: rgba(255,255,255,0.08);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.32);
+}
+
 /* =========================
    GLOBAL SEARCH OVERLAY
 ========================= */
