@@ -485,13 +485,20 @@
       glossaryPanel.className = "zh-comprehension-panel zh-panel-collapsed";
       glossaryPanel.setAttribute("lang", "zh-Hans");
       glossaryPanel.setAttribute("aria-label", "词汇注释面板");
+      var glBodyHTML;
+      if (glossaryFallback.pairs && glossaryFallback.pairs.length > 0) {
+        glBodyHTML = '<p class="zh-comprehension-explain zh-glossary-pairs">' +
+          glossaryFallback.pairs.map(function (p) {
+            return '<span class="zh-ann-pair"><strong class="zh-ann-bm">' + escapeHtml(p.bm) + '</strong><span class="zh-ann-zh">（' + escapeHtml(p.zh) + '）</span></span>';
+          }).join('<span class="zh-ann-sep"> · </span>') + '</p>';
+      } else {
+        glBodyHTML = '<p class="zh-comprehension-explain">' + escapeHtml(glossaryFallback.text) + "</p>";
+      }
       glossaryPanel.innerHTML =
         '<button class="zh-panel-toggle" aria-expanded="false">' +
           '🈶 词汇注释 · 术语速查 <span class="zh-panel-chevron">▼</span>' +
         '</button>' +
-        '<div class="zh-panel-body" hidden>' +
-          '<p class="zh-comprehension-explain">' + escapeHtml(glossaryFallback.text) + "</p>" +
-        '</div>';
+        '<div class="zh-panel-body" hidden>' + glBodyHTML + '</div>';
       sourceEl.insertAdjacentElement("afterend", glossaryPanel);
       makePanelToggleable(glossaryPanel);
     }
@@ -579,9 +586,9 @@
       annSpan.setAttribute("lang", "zh-Hans");
 
       if (result.pairs && result.pairs.length > 0) {
-        var annHTML = '<span class="zh-ann-label">句中词汇：</span>';
+        var annHTML = '<span class="zh-ann-label">词汇：</span>';
         annHTML += result.pairs.map(function (p) {
-          return '<span class="zh-ann-pair"><strong>' + escapeHtml(p.zh) + '</strong><small>（' + escapeHtml(p.bm) + '）</small></span>';
+          return '<span class="zh-ann-pair"><strong class="zh-ann-bm">' + escapeHtml(p.bm) + '</strong><span class="zh-ann-zh">（' + escapeHtml(p.zh) + '）</span></span>';
         }).join('<span class="zh-ann-sep"> · </span>');
         annSpan.innerHTML = annHTML;
       } else {
@@ -611,7 +618,9 @@
       ".point-line:not([data-zh-unit-id])",
       ".lead:not([data-zh-unit-id])",
       ".paper-process-panel",
-      ".paper-timeline-panel > p"
+      ".paper-timeline-panel > p",
+      ".conclusion-paper h2",
+      ".summary-paper h2"
     ].join(", ");
 
     document.querySelectorAll(blockSel).forEach(function (el) {
