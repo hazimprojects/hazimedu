@@ -483,6 +483,58 @@ html[data-theme="dark"] .paper-chip.zh-chip-flipped {
   background: rgba(60, 20, 20, 0.55);
 }
 
+.zh-comprehension-panel {
+  margin: 0.55rem 0 0.9rem;
+  padding: 0.72rem 0.82rem;
+  border: 1px dashed rgba(220, 38, 38, 0.26);
+  border-radius: 12px;
+  background: rgba(255, 247, 247, 0.9);
+}
+
+.zh-comprehension-title {
+  margin: 0 0 0.32rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #b91c1c;
+}
+
+.zh-comprehension-explain {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: #7f1d1d;
+}
+
+.zh-comprehension-points {
+  margin: 0.42rem 0 0;
+  padding-left: 1.1rem;
+  font-size: 0.82rem;
+  color: #991b1b;
+  line-height: 1.45;
+}
+
+.zh-comprehension-focus {
+  margin: 0.45rem 0 0;
+  font-size: 0.76rem;
+  color: #7f1d1d;
+}
+
+.zh-comprehension-focus span {
+  font-weight: 600;
+}
+
+html[data-theme="dark"] .zh-comprehension-panel {
+  border-color: rgba(248, 113, 113, 0.35);
+  background: rgba(80, 20, 20, 0.36);
+}
+
+html[data-theme="dark"] .zh-comprehension-title,
+html[data-theme="dark"] .zh-comprehension-explain,
+html[data-theme="dark"] .zh-comprehension-points,
+html[data-theme="dark"] .zh-comprehension-focus {
+  color: #fecaca;
+}
+
 @media (max-width: 760px) {
   .zh-disclaimer-toast {
     bottom: var(--floating-bottom-offset);
