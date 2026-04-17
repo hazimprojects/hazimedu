@@ -16,6 +16,8 @@
   var annotated = false;
   var legacyControlsInitialized = false;
   var applyRequestId = 0;
+  var ZH_MODE_GLOSSARY = "glossary";
+  var ZH_MODE_EXPLAIN = "explain";
 
   // ── Helpers ──────────────────────────────────────────────
 
@@ -52,6 +54,13 @@
       .replace(/>/g, "&gt;")
       .replace(/\"/g, "&quot;")
       .replace(/'/g, "&#39;");
+  }
+
+  function getElementZhMode(el, fallbackMode) {
+    if (!el || !el.getAttribute) return fallbackMode || ZH_MODE_EXPLAIN;
+    var mode = (el.getAttribute("data-zh-mode") || "").trim().toLowerCase();
+    if (mode === ZH_MODE_GLOSSARY || mode === ZH_MODE_EXPLAIN) return mode;
+    return fallbackMode || ZH_MODE_EXPLAIN;
   }
 
   // ── Glossary Loading ─────────────────────────────────────
@@ -172,7 +181,59 @@
     return translated;
   }
 
-  function setupChipFlips(gl) {
+  function buildGlossaryFallback(text, gl) {
+    var translated = translateTextByGlossary(text, gl);
+    if (!translated || translated === text) return null;
+    return {
+      modeLabel: "Terjemahan istilah",
+      text: translated,
+      fallbackLabel: ""
+    };
+  }
+
+  function buildExplainFallback(text, gl) {
+    var translated = translateTextByGlossary(text, gl);
+    if (!translated || translated === text) return null;
+    return {
+      modeLabel: "Penjelasan maksud ayat",
+      text: translated,
+      fallbackLabel: "Istilah sahaja"
+    };
+  }
+
+  function buildChipBackContent(chip, sourceText, gl, comprehension) {
+    var hasSentenceClass = chip.classList.contains("paper-chip-sentence");
+    var defaultMode = hasSentenceClass ? ZH_MODE_EXPLAIN : ZH_MODE_GLOSSARY;
+    var mode = getElementZhMode(chip, defaultMode);
+    var sourceId = chip.getAttribute("data-zh-unit-id");
+    var unit = sourceId ? comprehension[sourceId] : null;
+
+    if (mode === ZH_MODE_EXPLAIN) {
+      if (unit && typeof unit.zh_explain === "string" && unit.zh_explain.trim()) {
+        return {
+          modeLabel: "Penjelasan maksud ayat",
+          text: unit.zh_explain.trim(),
+          fallbackLabel: ""
+        };
+      }
+      return buildExplainFallback(sourceText, gl);
+    }
+
+    if (mode === ZH_MODE_GLOSSARY) {
+      if (unit && typeof unit.glossary_zh === "string" && unit.glossary_zh.trim()) {
+        return {
+          modeLabel: "Terjemahan istilah",
+          text: unit.glossary_zh.trim(),
+          fallbackLabel: ""
+        };
+      }
+      return buildGlossaryFallback(sourceText, gl);
+    }
+
+    return null;
+  }
+
+  function setupChipFlips(gl, comprehension) {
     var chips = document.querySelectorAll(".paper-chip");
     chips.forEach(function (chip) {
       var hasLegacyFlipMarkup =
@@ -207,20 +268,26 @@
       var sourceText = sourceNode.textContent ? sourceNode.textContent.trim() : "";
       if (!sourceText || sourceText.length < 3 || sourceText.length > 320) return;
 
-      var translatedText = translateTextByGlossary(sourceText, gl);
-      if (!translatedText || translatedText === sourceText) return;
+      var backContent = buildChipBackContent(chip, sourceText, gl, comprehension);
+      if (!backContent || !backContent.text) return;
 
       chip.classList.add("zh-chip-flip-ready");
       chip.setAttribute("tabindex", "0");
       chip.setAttribute("role", "button");
       chip.setAttribute("aria-label", "Klik untuk flip dan lihat terjemahan Cina");
       chip.setAttribute("data-zh-bm", sourceText);
-      chip.setAttribute("data-zh-cn", translatedText);
+      chip.setAttribute("data-zh-cn", backContent.text);
+      chip.setAttribute("data-zh-mode-label", backContent.modeLabel);
+      chip.setAttribute("data-zh-fallback-label", backContent.fallbackLabel);
 
       chip.innerHTML =
         '<span class="zh-chip-inner">' +
           '<span class="zh-chip-front">' + escapeHtml(sourceText) + "</span>" +
-          '<span class="zh-chip-back">' + escapeHtml(translatedText) + "</span>" +
+          '<span class="zh-chip-back">' +
+            '<strong>' + escapeHtml(backContent.modeLabel) + ":</strong> " +
+            escapeHtml(backContent.text) +
+            (backContent.fallbackLabel ? (' <em>(' + escapeHtml(backContent.fallbackLabel) + ")</em>") : "") +
+          "</span>" +
         "</span>";
 
       function toggleFlip() {
@@ -281,6 +348,8 @@
       chip.removeAttribute("aria-label");
       chip.removeAttribute("data-zh-bm");
       chip.removeAttribute("data-zh-cn");
+      chip.removeAttribute("data-zh-mode-label");
+      chip.removeAttribute("data-zh-fallback-label");
     });
   }
 
@@ -290,15 +359,32 @@
     document.querySelectorAll(".zh-comprehension-panel").forEach(function (panel) { panel.remove(); });
   }
 
-  function renderComprehensionPanels(map) {
+  function renderComprehensionPanels(map, gl) {
     removeComprehensionPanels();
     if (!isZhMode()) return;
 
     document.querySelectorAll("[data-zh-unit-id]").forEach(function (sourceEl) {
+      var mode = getElementZhMode(sourceEl, ZH_MODE_EXPLAIN);
       var sourceId = sourceEl.getAttribute("data-zh-unit-id");
       if (!sourceId) return;
       var unit = map[sourceId];
       if (!unit) return;
+
+      if (mode === ZH_MODE_GLOSSARY) {
+        var sourceText = (sourceEl.textContent || "").trim();
+        var glossaryFallback = buildGlossaryFallback(unit.bm_focus_phrase || sourceText, gl);
+        if (!glossaryFallback) return;
+
+        var glossaryPanel = document.createElement("aside");
+        glossaryPanel.className = "zh-comprehension-panel";
+        glossaryPanel.setAttribute("lang", "zh-Hans");
+        glossaryPanel.setAttribute("aria-label", "Panel terjemahan istilah");
+        glossaryPanel.innerHTML =
+          '<p class="zh-comprehension-title">🈶 Terjemahan istilah · 术语速查</p>' +
+          '<p class="zh-comprehension-explain">' + escapeHtml(glossaryFallback.text) + "</p>";
+        sourceEl.insertAdjacentElement("afterend", glossaryPanel);
+        return;
+      }
 
       var keyPoints = Array.isArray(unit.key_points_zh) ? unit.key_points_zh.filter(function (item) {
         return typeof item === "string" && item.trim();
@@ -309,7 +395,7 @@
       panel.setAttribute("lang", "zh-Hans");
       panel.setAttribute("aria-label", "Panel sokongan faham ayat");
       panel.innerHTML =
-        '<p class="zh-comprehension-title">🧠 Faham Ayat · 中文辅助理解</p>' +
+        '<p class="zh-comprehension-title">🧠 Penjelasan maksud ayat · 中文辅助理解</p>' +
         '<p class="zh-comprehension-explain">' + escapeHtml(unit.zh_explain || "") + "</p>" +
         (keyPoints.length
           ? ('<ul class="zh-comprehension-points">' + keyPoints.map(function (item) {
@@ -337,9 +423,9 @@
     toast.innerHTML =
       '<span class="zh-disclaimer-icon">中</span>' +
       '<div class="zh-disclaimer-content">' +
-        '<span class="zh-disclaimer-text">中文 ON · Terjemahan kata kunci</span>' +
+        '<span class="zh-disclaimer-text">中文 ON · Terjemahan istilah + penjelasan ayat</span>' +
         '<button class="zh-help-toggle zh-disclaimer-help-toggle" type="button" aria-expanded="false">❓ Help</button>' +
-        '<span class="zh-disclaimer-help" hidden>Mod Bahasa Cina aktif. Terjemahan istilah utama dipaparkan terus pada kata kunci untuk rujukan pantas. 中文模式已开启：重点词会直接显示中文释义。</span>' +
+        '<span class="zh-disclaimer-help" hidden>Mod Bahasa Cina aktif. “Terjemahan istilah” ialah bantuan cepat pada kata kunci/chip. “Penjelasan maksud ayat” pula menerangkan maksud keseluruhan ayat penting. Jika data ayat tiada, sistem papar “Istilah sahaja”.</span>' +
       "</div>" +
       '<button class="zh-disclaimer-close" type="button" aria-label="Tutup">✕</button>';
 
@@ -395,8 +481,8 @@
         var merged = getMergedGlossary();
         var comprehension = getComprehensionMap();
         annotateKeywords(merged);
-        setupChipFlips(merged);
-        renderComprehensionPanels(comprehension);
+        setupChipFlips(merged, comprehension);
+        renderComprehensionPanels(comprehension, merged);
         if (!opts.silentDisclaimer) {
           showDisclaimer();
         }
@@ -458,8 +544,8 @@
         var merged = getMergedGlossary();
         var comprehension = getComprehensionMap();
         annotateKeywords(merged);
-        setupChipFlips(merged);
-        renderComprehensionPanels(comprehension);
+        setupChipFlips(merged, comprehension);
+        renderComprehensionPanels(comprehension, merged);
       });
     }
   });
