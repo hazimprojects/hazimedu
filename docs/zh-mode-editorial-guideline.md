@@ -73,6 +73,14 @@ Jika dataset unit berada di laluan lain, berikan path secara eksplisit:
 python3 scripts/check-zh-units.py data/zh-units.json data/zh-units/*.json
 ```
 
+Selain semakan unit, glosari juga wajib lulus lint:
+
+```bash
+python3 scripts/check-zh-glossary.py
+```
+
+Rujuk panduan khusus glosari di `docs/zh-glossary-editorial-guideline.md`.
+
 ## 6) Proses review 2 lapis (wajib)
 
 Setiap perubahan kandungan ZH perlu melalui **dua lapisan review**:
