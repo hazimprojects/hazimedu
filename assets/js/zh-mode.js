@@ -253,13 +253,23 @@
       ann.setAttribute("lang", "zh-Hans");
       span.classList.add("kw-zh-annotated");
       span.appendChild(ann);
+      function toggleKw(e) {
+        e.stopPropagation();
+        span.classList.toggle("kw-zh-open");
+      }
+      span.__zhKwHandler = toggleKw;
+      span.addEventListener("click", toggleKw);
     });
   }
 
   function removeAnnotations() {
     document.querySelectorAll(".kw-zh-ann").forEach(function (el) { el.remove(); });
     document.querySelectorAll(".kw-zh-annotated").forEach(function (el) {
-      el.classList.remove("kw-zh-annotated");
+      el.classList.remove("kw-zh-annotated", "kw-zh-open");
+      if (el.__zhKwHandler) {
+        el.removeEventListener("click", el.__zhKwHandler);
+        el.__zhKwHandler = null;
+      }
     });
     annotated = false;
   }
@@ -405,13 +415,22 @@
         chip.removeAttribute("data-zh-fallback-label");
       }
 
-      if (!chip.__zhOriginalHTML) {
-        chip.__zhOriginalHTML = chip.innerHTML;
-      }
-
+      // Build clean front HTML (preserve original structure, strip any Chinese annotations)
       var sourceNode = chip.cloneNode(true);
       sourceNode.querySelectorAll(".kw-zh-ann").forEach(function (ann) { ann.remove(); });
+      sourceNode.querySelectorAll(".kw-zh-annotated, .kw-zh-open").forEach(function (el) {
+        el.classList.remove("kw-zh-annotated", "kw-zh-open");
+        if (el.__zhKwHandler) {
+          el.removeEventListener("click", el.__zhKwHandler);
+          el.__zhKwHandler = null;
+        }
+      });
+      var frontHTML = sourceNode.innerHTML;
       var sourceText = sourceNode.textContent ? sourceNode.textContent.trim() : "";
+
+      // Always save clean original (without annotation artefacts)
+      chip.__zhOriginalHTML = frontHTML;
+
       if (!sourceText || sourceText.length < 3 || sourceText.length > 320) {
         reportChipFlipIssue(chip, "conditional-render", { hasLegacyFlipMarkup: hasLegacyFlipMarkup });
         return;
@@ -461,9 +480,25 @@
         chip.removeAttribute("aria-pressed");
       }
 
+      // Rich pairs HTML for stacked chips; inline chips use simple bracketed format
+      var translationInnerHTML;
+      if (!renderInline && backContent.pairs && backContent.pairs.length > 0) {
+        translationInnerHTML = backContent.pairs.map(function (p) {
+          return '<span class="zh-ann-pair"><strong class="zh-ann-bm">' + escapeHtml(p.bm) + '</strong><span class="zh-ann-zh">（' + escapeHtml(p.zh) + '）</span></span>';
+        }).join('<span class="zh-ann-sep"> · </span>');
+        if (backContent.fallbackLabel) {
+          translationInnerHTML += ' <em class="zh-chip-fallback">（' + escapeHtml(backContent.fallbackLabel) + '）</em>';
+        }
+      } else {
+        translationInnerHTML = escapeHtml(backContent.text);
+        if (!renderInline && backContent.fallbackLabel) {
+          translationInnerHTML += ' <em class="zh-chip-fallback">（' + escapeHtml(backContent.fallbackLabel) + '）</em>';
+        }
+      }
+
       var translationHtml = renderInline
         ? '<span class="zh-chip-translation-inline" lang="zh-Hans">（' + escapeHtml(backContent.text) + '）</span>'
-        : '<span class="zh-chip-translation" lang="zh-Hans">' + escapeHtml(backContent.text) + '</span>';
+        : '<span class="zh-chip-translation" lang="zh-Hans">' + translationInnerHTML + '</span>';
 
       chip.innerHTML =
         '<span class="zh-chip-inner">' +
@@ -666,6 +701,8 @@
 
     function attachToggle(el, rawText) {
       if (el.querySelector(".zh-heading-toggle")) return;
+      // Skip elements that already have keyword spans — those get per-word click annotations
+      if (el.querySelector(".kw")) return;
       var cleanText = normalize(rawText.replace(EMOJI_STRIP_RE, "").replace(/^[^a-zA-ZÀ-ÿ]+/, ""));
       if (!cleanText || cleanText.length < 3) return;
 
