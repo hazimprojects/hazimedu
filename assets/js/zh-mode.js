@@ -256,10 +256,16 @@
 
     // Exact match
     if (gl[cleanText] && typeof gl[cleanText] === "string") {
-      return { modeLabel: "词汇注释", text: gl[cleanText], fallbackLabel: "" };
+      var exactZh = gl[cleanText];
+      return {
+        modeLabel: "词汇注释",
+        pairs: [{ bm: cleanText, zh: exactZh }],
+        text: exactZh + "（" + cleanText + "）",
+        fallbackLabel: ""
+      };
     }
 
-    // Partial match — collect BM = 中文 pairs, skip overly-general terms
+    // Partial match — collect BM→中文 pairs, skip overly-general terms, max 8
     var keys = Object.keys(gl)
       .filter(function (k) {
         return typeof gl[k] === "string" && !OVERLY_GENERAL_TERMS.has(normalize(k)) && k.length > 2;
@@ -271,14 +277,16 @@
     for (var i = 0; i < keys.length; i++) {
       var nk = normalize(keys[i]);
       if (cleanText.indexOf(nk) !== -1 && !seen.has(nk)) {
-        pairs.push(keys[i] + " = " + gl[keys[i]]);
+        pairs.push({ bm: keys[i], zh: gl[keys[i]] });
         seen.add(nk);
-        if (pairs.length >= 3) break;
+        if (pairs.length >= 8) break;
       }
     }
 
     if (pairs.length === 0) return null;
-    return { modeLabel: "词汇注释", text: pairs.join(" · "), fallbackLabel: "" };
+
+    var textStr = pairs.map(function (p) { return p.zh + "（" + p.bm + "）"; }).join(" · ");
+    return { modeLabel: "词汇注释", pairs: pairs, text: textStr, fallbackLabel: "" };
   }
 
   function buildExplainFallback(unit) {
@@ -569,7 +577,16 @@
       annSpan.setAttribute("hidden", "");
       annSpan.setAttribute("aria-hidden", "true");
       annSpan.setAttribute("lang", "zh-Hans");
-      annSpan.textContent = result.text;
+
+      if (result.pairs && result.pairs.length > 0) {
+        var annHTML = '<span class="zh-ann-label">句中词汇：</span>';
+        annHTML += result.pairs.map(function (p) {
+          return '<span class="zh-ann-pair"><strong>' + escapeHtml(p.zh) + '</strong><small>（' + escapeHtml(p.bm) + '）</small></span>';
+        }).join('<span class="zh-ann-sep"> · </span>');
+        annSpan.innerHTML = annHTML;
+      } else {
+        annSpan.textContent = result.text;
+      }
 
       toggleBtn.addEventListener("click", function (e) {
         e.stopPropagation();
