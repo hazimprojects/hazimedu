@@ -914,7 +914,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (audioEl) itemsContainer.appendChild(makeSparkleItem('🎧', 'Main audio', 'audio'));
     if (labHref) itemsContainer.appendChild(makeSparkleItem(labEmoji, 'Kuiz', 'lab', labHref));
-    if (zhModeApi) itemsContainer.appendChild(makeSparkleItem('华', 'Mod Cina', 'zh-mode'));
+    if (zhModeApi) itemsContainer.appendChild(makeSparkleItem('华', 'Mod Bahasa Cina', 'zh-mode'));
 
     var fab = document.createElement('button');
     fab.className = 'note-sparkle-fab';
@@ -1016,7 +1016,7 @@ document.addEventListener("DOMContentLoaded", function () {
       zhPanel.className = 'audio-notice-sheet';
       zhPanel.innerHTML =
         '<span class="audio-notice-icon">华</span>' +
-        '<p class="audio-notice-text">Aksi Mod Cina</p>' +
+        '<p class="audio-notice-text">Aksi Mod Bahasa Cina</p>' +
         '<div class="audio-notice-footer">' +
           '<button class="audio-notice-dismiss" type="button" data-zh-action="toggle"></button>' +
           '<button class="audio-notice-dismiss" type="button" data-zh-action="notes">Nota Terjemahan</button>' +
@@ -1026,7 +1026,7 @@ document.addEventListener("DOMContentLoaded", function () {
       function refreshZhPanel() {
         var toggleBtn = zhPanel.querySelector('[data-zh-action="toggle"]');
         if (!toggleBtn) return;
-        toggleBtn.textContent = zhModeApi.isActive() ? 'Nyahaktif Mod Cina' : 'Aktifkan Mod Cina';
+        toggleBtn.textContent = zhModeApi.isActive() ? 'Nyahaktif Mod Bahasa Cina' : 'Aktifkan Mod Bahasa Cina';
       }
 
       zhPanel.addEventListener('click', function (e) {
@@ -1144,7 +1144,7 @@ document.addEventListener("DOMContentLoaded", function () {
         wrap.classList.remove('controls-open');
         syncSparklePanelState();
       }
-      if (zhPanel && !zhPanel.contains(e.target)) {
+      if (zhPanel && !zhPanel.contains(e.target) && !wrap.contains(e.target)) {
         zhPanel.classList.add('is-leaving');
         setTimeout(function () {
           if (zhPanel) {
