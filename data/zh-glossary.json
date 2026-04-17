@@ -1,8 +1,8 @@
 {
   "_meta": {
     "language": "zh-Hans",
-    "description": "Glosari istilah Sejarah Tingkatan 4 — Bahasa Melayu ke Bahasa Cina Ringkas (简体中文). Ditambah istilah umum untuk sokongan flip paper chip.",
-    "version": "3",
+    "description": "Glosari istilah Sejarah Tingkatan 4 — Bahasa Melayu ke Bahasa Cina Ringkas (简体中文). Guna polisi satu istilah satu padanan utama dengan nota konteks jika perlu.",
+    "version": "4",
     "feedback_url": "/feedback.html"
   },
   "negara bangsa": "民族国家",
@@ -60,11 +60,13 @@
   "negeri-negeri melayu tidak bersekutu": "马来属邦",
   "sultan": "苏丹",
   "raja": "国王",
-  "pembesar": "大臣/贵族",
+  "pembesar": "贵族官员",
   "gabenor": "总督",
   "residen": "驻扎官",
   "pentadbiran": "行政",
-  "kerajaan": "政府/王国",
+  "kerajaan": "政府",
+  "kerajaan moden": "现代政府",
+  "kerajaan tradisional": "传统王国政体",
   "wilayah": "领土",
   "undang-undang": "法律",
   "umno": "巫统",
@@ -91,7 +93,7 @@
   "darurat": "紧急状态",
   "tragedi 13 mei": "五一三事件",
   "komunis": "共产主义",
-  "pemberontakan": "起义/暴动",
+  "pemberontakan": "起义",
   "revolusi": "革命",
   "perdagangan": "贸易",
   "ekonomi": "经济",
@@ -113,11 +115,11 @@
   "pendidikan": "教育",
   "kebudayaan": "文化",
   "peradaban": "文明",
-  "warisan": "遗产/传承",
-  "perjanjian": "条约/协议",
+  "warisan": "文化遗产",
+  "perjanjian": "条约",
   "perang": "战争",
   "konflik": "冲突",
-  "pakatan": "联盟/协定",
+  "pakatan": "联盟",
   "rundingan": "谈判",
   "kemunculan": "崛起",
   "perkembangan": "发展",
@@ -129,7 +131,7 @@
   "angkor": "吴哥",
   "negara merdeka": "独立国家",
   "simbolik": "象征性的",
-  "penulisan": "写作/著述",
+  "penulisan": "著述",
   "penerbitan": "出版",
   "berperingkat": "循序渐进",
   "perpaduan antara kaum": "各族团结",
@@ -218,5 +220,99 @@
   "tekanan": "压力",
   "dianggap tidak demokratik": "被视为不民主",
   "pesuruhjaya tinggi": "高级专员",
-  "jesselton": "亚庇（旧称Jesselton）"
+  "jesselton": "亚庇（旧称Jesselton）",
+  "_audit": {
+    "contains_slash": [],
+    "overly_general": [
+      {
+        "term": "bahasa",
+        "value": "语言",
+        "note": "Terlalu umum; guna istilah khusus seperti bahasa melayu / bahasa rasmi."
+      },
+      {
+        "term": "politik",
+        "value": "政治",
+        "note": "Terlalu luas; guna istilah khusus seperti politik nasionalisme/politik kolonial."
+      },
+      {
+        "term": "agama",
+        "value": "宗教",
+        "note": "Terlalu umum; guna nama agama khusus dalam topik."
+      },
+      {
+        "term": "kampung",
+        "value": "乡村",
+        "note": "Perlu bezakan konteks kampung tradisional vs kampung baru era darurat."
+      },
+      {
+        "term": "rakyat",
+        "value": "人民",
+        "note": "Perlu khususkan mengikut konteks: rakyat tempatan/rakyat jajahan."
+      },
+      {
+        "term": "masyarakat",
+        "value": "社会",
+        "note": "Perlu khususkan: masyarakat majmuk/masyarakat feudal."
+      },
+      {
+        "term": "penduduk",
+        "value": "居民",
+        "note": "Perlu khususkan: penduduk tempatan/imigran."
+      },
+      {
+        "term": "bandar",
+        "value": "城市",
+        "note": "Perlu khususkan contoh bandar pelabuhan/bandar pentadbiran."
+      },
+      {
+        "term": "kawasan",
+        "value": "地区",
+        "note": "Perlu khususkan seperti kawasan perlombongan/kawasan strategik."
+      }
+    ],
+    "resolved_from_slash": [
+      {
+        "term": "kerajaan",
+        "before": "政府/王国",
+        "after": "政府",
+        "note": "Konteks tradisional dipisah ke entri khusus kerajaan tradisional."
+      },
+      {
+        "term": "pembesar",
+        "before": "大臣/贵族",
+        "after": "贵族官员",
+        "note": "Gabung kepada satu padanan utama sejarah."
+      },
+      {
+        "term": "pemberontakan",
+        "before": "起义/暴动",
+        "after": "起义",
+        "note": "Pilih istilah teras sejarah untuk konsistensi."
+      },
+      {
+        "term": "perjanjian",
+        "before": "条约/协议",
+        "after": "条约",
+        "note": "Padanan utama distandardkan."
+      },
+      {
+        "term": "warisan",
+        "before": "遗产/传承",
+        "after": "文化遗产",
+        "note": "Khusus kepada konteks warisan sejarah."
+      },
+      {
+        "term": "pakatan",
+        "before": "联盟/协定",
+        "after": "联盟",
+        "note": "Kekal satu padanan utama."
+      },
+      {
+        "term": "penulisan",
+        "before": "写作/著述",
+        "after": "著述",
+        "note": "Pilih istilah akademik sejarah."
+      }
+    ]
+  }
 }
