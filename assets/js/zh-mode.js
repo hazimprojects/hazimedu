@@ -12,6 +12,7 @@
   var LANG_KEY = "hzedu-lang-mode";
   var DISCLAIMER_KEY = "hzedu-zh-disclaimer-shown";
   var glossary = null;
+  var comprehensionMap = null;
   var annotated = false;
   var legacyControlsInitialized = false;
   var applyRequestId = 0;
@@ -31,8 +32,17 @@
     return parts.length > 1 ? "../data/zh-glossary.json" : "data/zh-glossary.json";
   }
 
+  function resolveComprehensionPath() {
+    var parts = window.location.pathname.split("/").filter(Boolean);
+    return parts.length > 1 ? "../data/zh-comprehension.json" : "data/zh-comprehension.json";
+  }
+
   function getMergedGlossary() {
     return glossary || {};
+  }
+
+  function getComprehensionMap() {
+    return comprehensionMap || {};
   }
 
   function escapeHtml(str) {
@@ -56,6 +66,27 @@
       })
       .catch(function () {
         glossary = {};
+        return {};
+      });
+  }
+
+  function loadComprehensionData() {
+    if (comprehensionMap !== null) return Promise.resolve(comprehensionMap);
+    return fetch(resolveComprehensionPath())
+      .then(function (res) { return res.ok ? res.json() : {}; })
+      .then(function (data) {
+        var mapped = {};
+        var units = Array.isArray(data) ? data : (Array.isArray(data.units) ? data.units : []);
+        units.forEach(function (unit) {
+          if (!unit || typeof unit !== "object") return;
+          if (!unit.source_id || typeof unit.source_id !== "string") return;
+          mapped[unit.source_id] = unit;
+        });
+        comprehensionMap = mapped;
+        return comprehensionMap;
+      })
+      .catch(function () {
+        comprehensionMap = {};
         return {};
       });
   }
@@ -253,6 +284,46 @@
     });
   }
 
+  // ── Faham Ayat Panel ────────────────────────────────────
+
+  function removeComprehensionPanels() {
+    document.querySelectorAll(".zh-comprehension-panel").forEach(function (panel) { panel.remove(); });
+  }
+
+  function renderComprehensionPanels(map) {
+    removeComprehensionPanels();
+    if (!isZhMode()) return;
+
+    document.querySelectorAll("[data-zh-unit-id]").forEach(function (sourceEl) {
+      var sourceId = sourceEl.getAttribute("data-zh-unit-id");
+      if (!sourceId) return;
+      var unit = map[sourceId];
+      if (!unit) return;
+
+      var keyPoints = Array.isArray(unit.key_points_zh) ? unit.key_points_zh.filter(function (item) {
+        return typeof item === "string" && item.trim();
+      }) : [];
+
+      var panel = document.createElement("aside");
+      panel.className = "zh-comprehension-panel";
+      panel.setAttribute("lang", "zh-Hans");
+      panel.setAttribute("aria-label", "Panel sokongan faham ayat");
+      panel.innerHTML =
+        '<p class="zh-comprehension-title">🧠 Faham Ayat · 中文辅助理解</p>' +
+        '<p class="zh-comprehension-explain">' + escapeHtml(unit.zh_explain || "") + "</p>" +
+        (keyPoints.length
+          ? ('<ul class="zh-comprehension-points">' + keyPoints.map(function (item) {
+              return "<li>" + escapeHtml(item) + "</li>";
+            }).join("") + "</ul>")
+          : "") +
+        (unit.bm_focus_phrase
+          ? ('<p class="zh-comprehension-focus"><span>Frasa BM fokus:</span> <strong>' + escapeHtml(unit.bm_focus_phrase) + "</strong></p>")
+          : "");
+
+      sourceEl.insertAdjacentElement("afterend", panel);
+    });
+  }
+
   // ── Disclaimer Toast ─────────────────────────────────────
 
   function showDisclaimer() {
@@ -318,12 +389,14 @@
 
     if (active) {
       document.documentElement.setAttribute("data-lang-mode", "zh");
-      loadGlossary().then(function () {
+      Promise.all([loadGlossary(), loadComprehensionData()]).then(function () {
         if (requestId !== applyRequestId) return;
         if (!isZhMode()) return;
         var merged = getMergedGlossary();
+        var comprehension = getComprehensionMap();
         annotateKeywords(merged);
         setupChipFlips(merged);
+        renderComprehensionPanels(comprehension);
         if (!opts.silentDisclaimer) {
           showDisclaimer();
         }
@@ -332,6 +405,7 @@
       document.documentElement.removeAttribute("data-lang-mode");
       removeAnnotations();
       resetChipFlips();
+      removeComprehensionPanels();
     }
   }
 
@@ -380,10 +454,12 @@
     }
 
     if (isZhMode()) {
-      loadGlossary().then(function () {
+      Promise.all([loadGlossary(), loadComprehensionData()]).then(function () {
         var merged = getMergedGlossary();
+        var comprehension = getComprehensionMap();
         annotateKeywords(merged);
         setupChipFlips(merged);
+        renderComprehensionPanels(comprehension);
       });
     }
   });
