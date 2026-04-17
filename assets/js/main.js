@@ -481,6 +481,45 @@ document.addEventListener("DOMContentLoaded", function () {
       window.addEventListener("load", revealFallback);
     }
   }
+
+  // =========================
+  // AUDIO MARKER ON SUBTOPIC CARDS
+  // =========================
+  async function markSubtopicCardsWithAudio() {
+    const subtopicCards = Array.from(document.querySelectorAll(".bab-card[href]")).filter((card) => {
+      const href = card.getAttribute("href") || "";
+      return /bab-\d+-\d+\.html$/i.test(href);
+    });
+
+    if (!subtopicCards.length) return;
+
+    await Promise.all(
+      subtopicCards.map(async (card) => {
+        const href = card.getAttribute("href");
+        if (!href) return;
+
+        const slug = href.replace(/\.html$/i, "");
+        const audioPath = `../assets/audio/${slug}.mp3`;
+
+        try {
+          const response = await fetch(audioPath, { method: "HEAD" });
+          if (!response.ok) return;
+
+          card.classList.add("has-audio");
+          card.setAttribute("data-has-audio", "true");
+
+          const currentLabel = card.getAttribute("aria-label");
+          if (currentLabel) {
+            card.setAttribute("aria-label", `${currentLabel} (ada audio)`);
+          }
+        } catch (e) {
+          // senyap sahaja jika audio belum wujud
+        }
+      })
+    );
+  }
+
+  markSubtopicCardsWithAudio();
 });
 
 // =========================
