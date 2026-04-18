@@ -1,1 +1,53 @@
-{"units": []}
+{
+  "meta": {
+    "source_file": "notes/bab-1.html",
+    "rollout": "gelombang-1-manual-revision"
+  },
+  "units": [
+    {
+      "source_id": "bab-1-synopsis-1",
+      "bm_original": "Kerajaan Alam Melayu sudah mempunyai ciri negara bangsa sebelum kedatangan Barat.",
+      "translate": "重点：Kerajaan Alam Melayu sudah mempunyai ciri negara bangsa sebelum kedatangan Barat.",
+      "key_points_zh": [
+        "重点：Kerajaan Alam Melayu sudah mempunyai ciri negara bangsa sebelum kedatangan Barat."
+      ],
+      "bm_focus_phrase": "Kerajaan Alam Melayu sudah mempunyai ciri negara bangsa sebelum kedatangan Barat."
+    },
+    {
+      "source_id": "bab-1-synopsis-2",
+      "bm_original": "Ciri ini diwarisi daripada Funan dan Champa , kemudian diteruskan oleh Srivijaya , Kesultanan Melayu Melaka dan Johor-Riau .",
+      "translate": "Ciri 这 diwarisi daripada Funan 与 Champa , kemudian diteruskan 由 Srivijaya , Kesultanan Melayu Melaka 与 Johor-Riau .",
+      "key_points_zh": [
+        "Ciri 这 diwarisi daripada Funan 与 Champa , kemudian diteruskan 由 Srivijaya , Kesultanan Melayu Melaka 与 Johor-Riau ."
+      ],
+      "bm_focus_phrase": "Ciri ini diwarisi daripada Funan dan Champa , kemudian diteruskan oleh Srivijaya , Kesultanan Melayu Melaka dan Johor-Riau ."
+    },
+    {
+      "source_id": "bab-1-synopsis-3",
+      "bm_original": "Antara ciri utama negara bangsa ialah raja , undang-undang , wilayah pengaruh dan rakyat .",
+      "translate": "Antara ciri 主要 negara bangsa 是 raja , undang-undang , wilayah pengaruh 与 人民 .",
+      "key_points_zh": [
+        "Antara ciri 主要 negara bangsa 是 raja , undang-undang , wilayah pengaruh 与 人民 ."
+      ],
+      "bm_focus_phrase": "Antara ciri utama negara bangsa ialah raja , undang-undang , wilayah pengaruh dan rakyat ."
+    },
+    {
+      "source_id": "bab-1-synopsis-4",
+      "bm_original": "Kesultanan Melayu Melaka mengukuhkan warisan ini melalui sistem pentadbiran dan perundangan yang unggul.",
+      "translate": "Kesultanan Melayu Melaka 加强 warisan 这 通过 sistem 行政 与 perundangan 的 unggul.",
+      "key_points_zh": [
+        "Kesultanan Melayu Melaka 加强 warisan 这 通过 sistem 行政 与 perundangan 的 unggul."
+      ],
+      "bm_focus_phrase": "Kesultanan Melayu Melaka mengukuhkan warisan ini melalui sistem pentadbiran dan perundangan yang unggul."
+    },
+    {
+      "source_id": "bab-1-synopsis-5",
+      "bm_original": "Hubungan timbal balik antara pemerintah dan rakyat menjadi warisan penting yang kekal bernilai hingga kini.",
+      "translate": "Hubungan timbal balik 其中 pemerintah 与 人民 menjadi warisan penting 的 kekal bernilai hingga kini.",
+      "key_points_zh": [
+        "Hubungan timbal balik 其中 pemerintah 与 人民 menjadi warisan penting 的 kekal bernilai hingga kini."
+      ],
+      "bm_focus_phrase": "Hubungan timbal balik antara pemerintah dan rakyat menjadi warisan penting yang kekal bernilai hingga kini."
+    }
+  ]
+}

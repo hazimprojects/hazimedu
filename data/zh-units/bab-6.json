@@ -1,1 +1,53 @@
-{"units": []}
+{
+  "meta": {
+    "source_file": "notes/bab-6.html",
+    "rollout": "gelombang-1-manual-revision"
+  },
+  "units": [
+    {
+      "source_id": "bab-6-synopsis-1",
+      "bm_original": "Perkembangan pengaruh komunis di negara kita berlaku sebelum meletusnya Perang Dunia Kedua .",
+      "translate": "Perkembangan pengaruh komunis di negara kita 发生 sebelum meletusnya 第二次世界大战 .",
+      "key_points_zh": [
+        "Perkembangan pengaruh komunis di negara kita 发生 sebelum meletusnya 第二次世界大战 ."
+      ],
+      "bm_focus_phrase": "Perkembangan pengaruh komunis di negara kita berlaku sebelum meletusnya Perang Dunia Kedua ."
+    },
+    {
+      "source_id": "bab-6-synopsis-2",
+      "bm_original": "Komunis melakukan pelbagai tindakan untuk melumpuhkan ekonomi negara dan menggugat kestabilan politik.",
+      "translate": "Komunis melakukan pelbagai tindakan 为了 melumpuhkan ekonomi negara 与 menggugat kestabilan 政治.",
+      "key_points_zh": [
+        "Komunis melakukan pelbagai tindakan 为了 melumpuhkan ekonomi negara 与 menggugat kestabilan 政治."
+      ],
+      "bm_focus_phrase": "Komunis melakukan pelbagai tindakan untuk melumpuhkan ekonomi negara dan menggugat kestabilan politik."
+    },
+    {
+      "source_id": "bab-6-synopsis-3",
+      "bm_original": "Matlamat komunis adalah untuk merampas kuasa daripada British dan menggantikannya dengan sebuah Republik Komunis .",
+      "translate": "Matlamat komunis 是 为了 merampas kuasa daripada British 与 menggantikannya 以 sebuah Republik Komunis .",
+      "key_points_zh": [
+        "Matlamat komunis 是 为了 merampas kuasa daripada British 与 menggantikannya 以 sebuah Republik Komunis ."
+      ],
+      "bm_focus_phrase": "Matlamat komunis adalah untuk merampas kuasa daripada British dan menggantikannya dengan sebuah Republik Komunis ."
+    },
+    {
+      "source_id": "bab-6-synopsis-4",
+      "bm_original": "Namun begitu, British berjaya menawan hati dan fikiran rakyat untuk bersama-sama membanteras ancaman komunis.",
+      "translate": "Namun begitu, British 成功 menawan hati 与 fikiran 人民 为了 bersama-sama membanteras ancaman komunis.",
+      "key_points_zh": [
+        "Namun begitu, British 成功 menawan hati 与 fikiran 人民 为了 bersama-sama membanteras ancaman komunis."
+      ],
+      "bm_focus_phrase": "Namun begitu, British berjaya menawan hati dan fikiran rakyat untuk bersama-sama membanteras ancaman komunis."
+    },
+    {
+      "source_id": "bab-6-synopsis-5",
+      "bm_original": "Zaman darurat telah membawa pelbagai kesan kepada politik, ekonomi dan sosial di negara kita.",
+      "translate": "Zaman darurat 已经 membawa pelbagai 影响 向 政治, ekonomi 与 sosial di negara kita.",
+      "key_points_zh": [
+        "Zaman darurat 已经 membawa pelbagai 影响 向 政治, ekonomi 与 sosial di negara kita."
+      ],
+      "bm_focus_phrase": "Zaman darurat telah membawa pelbagai kesan kepada politik, ekonomi dan sosial di negara kita."
+    }
+  ]
+}

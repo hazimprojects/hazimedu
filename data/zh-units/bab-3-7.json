@@ -1,1 +1,1268 @@
-{"units": []}
+{
+  "meta": {
+    "source_file": "notes/bab-3-7.html",
+    "rollout": "gelombang-1-manual-revision"
+  },
+  "units": [
+    {
+      "source_id": "bab-3-7-extra-1",
+      "bm_original": "Jepun",
+      "translate": "重点：Jepun",
+      "key_points_zh": [
+        "重点：Jepun"
+      ],
+      "bm_focus_phrase": "Jepun"
+    },
+    {
+      "source_id": "bab-3-7-u63",
+      "bm_original": "Rakyat daripada pelbagai kaum dan latar belakang bangkit menentang 🇯🇵 Jepun melalui perjuangan bersenjata, perang gerila, kerjasama dengan pihak luar dan penentangan individu.",
+      "translate": "人民 daripada pelbagai kaum 与 latar belakang bangkit 反对 🇯🇵 Jepun 通过 斗争 bersenjata, perang gerila, kerjasama 以 pihak luar 与 反对 individu.",
+      "key_points_zh": [
+        "人民 daripada pelbagai kaum 与 latar belakang bangkit 反对 🇯🇵 Jepun 通过 斗争 bersenjata, perang gerila, kerjasama 以 pihak luar 与 反对 individu."
+      ],
+      "bm_focus_phrase": "Rakyat daripada pelbagai kaum dan latar belakang bangkit menentang 🇯🇵 Jepun melalui perjuangan bersenjata, perang gerila, kerjasama dengan pihak luar dan penentangan individu."
+    },
+    {
+      "source_id": "bab-3-7-extra-2",
+      "bm_original": "bab-3-7-extra-2",
+      "translate": "重点：bab-3-7-extra-2",
+      "key_points_zh": [
+        "重点：bab-3-7-extra-2"
+      ],
+      "bm_focus_phrase": "bab-3-7-extra-2"
+    },
+    {
+      "source_id": "bab-3-7-u64",
+      "bm_original": "Di Tanah Melayu , perjuangan digerakkan oleh Rejimen Askar Melayu , MPAJA , Force 136 dan gerila lain.",
+      "translate": "Di Tanah Melayu , 斗争 digerakkan 由 Rejimen Askar Melayu , MPAJA , Force 136 与 gerila lain.",
+      "key_points_zh": [
+        "Di Tanah Melayu , 斗争 digerakkan 由 Rejimen Askar Melayu , MPAJA , Force 136 与 gerila lain."
+      ],
+      "bm_focus_phrase": "Di Tanah Melayu , perjuangan digerakkan oleh Rejimen Askar Melayu , MPAJA , Force 136 dan gerila lain."
+    },
+    {
+      "source_id": "bab-3-7-u65",
+      "bm_original": "Penentangan individu pula dapat dilihat melalui keberanian Gurchan Singh dan Sybil Kathigasu .",
+      "translate": "反对 individu pula dapat dilihat 通过 keberanian Gurchan Singh 与 Sybil Kathigasu .",
+      "key_points_zh": [
+        "反对 individu pula dapat dilihat 通过 keberanian Gurchan Singh 与 Sybil Kathigasu ."
+      ],
+      "bm_focus_phrase": "Penentangan individu pula dapat dilihat melalui keberanian Gurchan Singh dan Sybil Kathigasu ."
+    },
+    {
+      "source_id": "bab-3-7-u66",
+      "bm_original": "Di Sarawak dan Sabah , penentangan terserlah melalui Operasi Semut dan Pemberontakan Jesselton .",
+      "translate": "Di Sarawak 与 Sabah , 反对 terserlah 通过 Operasi Semut 与 Pemberontakan Jesselton .",
+      "key_points_zh": [
+        "Di Sarawak 与 Sabah , 反对 terserlah 通过 Operasi Semut 与 Pemberontakan Jesselton ."
+      ],
+      "bm_focus_phrase": "Di Sarawak dan Sabah , penentangan terserlah melalui Operasi Semut dan Pemberontakan Jesselton ."
+    },
+    {
+      "source_id": "b3-7-soalan-heading",
+      "bm_original": "Bagaimanakah rakyat di negara kita menentang pendudukan Jepun semasa Perang Dunia Kedua?",
+      "translate": "Bagaimanakah 人民 di negara kita 反对 pendudukan Jepun semasa 第二次世界大战?",
+      "key_points_zh": [
+        "Bagaimanakah 人民 di negara kita 反对 pendudukan Jepun semasa 第二次世界大战?"
+      ],
+      "bm_focus_phrase": "Bagaimanakah rakyat di negara kita menentang pendudukan Jepun semasa Perang Dunia Kedua?"
+    },
+    {
+      "source_id": "b3-7-soalan-line-1",
+      "bm_original": "Rakyat daripada pelbagai kaum dan latar belakang bangkit menentang Jepun melalui perjuangan bersenjata, gerila, kerjasama dengan pihak luar dan penentangan individu demi mempertahankan tanah air.",
+      "translate": "人民 daripada pelbagai kaum 与 latar belakang bangkit 反对 Jepun 通过 斗争 bersenjata, gerila, kerjasama 以 pihak luar 与 反对 individu demi mempertahankan tanah air.",
+      "key_points_zh": [
+        "人民 daripada pelbagai kaum 与 latar belakang bangkit 反对 Jepun 通过 斗争 bersenjata, gerila, kerjasama 以 pihak luar 与 反对 individu demi mempertahankan tanah air."
+      ],
+      "bm_focus_phrase": "Rakyat daripada pelbagai kaum dan latar belakang bangkit menentang Jepun melalui perjuangan bersenjata, gerila, kerjasama dengan pihak luar dan penentangan individu demi mempertahankan tanah air."
+    },
+    {
+      "source_id": "b3-7-soalan-line-2",
+      "bm_original": "Semasa pendudukan Jepun, tentera Jepun bertindak kejam, rakyat Tanah Melayu , Sarawak dan Sabah menderita, tetapi semangat perjuangan rakyat tetap tidak luntur.",
+      "translate": "Semasa pendudukan Jepun, tentera Jepun bertindak kejam, 人民 Tanah Melayu , Sarawak 与 Sabah menderita, tetapi semangat 斗争 人民 tetap 不 luntur.",
+      "key_points_zh": [
+        "Semasa pendudukan Jepun, tentera Jepun bertindak kejam, 人民 Tanah Melayu , Sarawak 与 Sabah menderita, tetapi semangat 斗争 人民 tetap 不 luntur."
+      ],
+      "bm_focus_phrase": "Semasa pendudukan Jepun, tentera Jepun bertindak kejam, rakyat Tanah Melayu , Sarawak dan Sabah menderita, tetapi semangat perjuangan rakyat tetap tidak luntur."
+    },
+    {
+      "source_id": "b3-7-soalan-line-3",
+      "bm_original": "Penentangan dilakukan oleh askar, gerila, pemimpin tempatan dan individu yang berani.",
+      "translate": "反对 dilakukan 由 askar, gerila, 领袖 本地 与 individu 的 berani.",
+      "key_points_zh": [
+        "反对 dilakukan 由 askar, gerila, 领袖 本地 与 individu 的 berani."
+      ],
+      "bm_focus_phrase": "Penentangan dilakukan oleh askar, gerila, pemimpin tempatan dan individu yang berani."
+    },
+    {
+      "source_id": "b3-7-fokus-line",
+      "bm_original": "Rakyat negara kita tidak akur dengan pendudukan Jepun dan menentangnya melalui pelbagai cara dan saluran. Subtopik ini membincangkan lima bentuk perjuangan menentang pendudukan Jepun:",
+      "translate": "人民 negara kita 不 akur 以 pendudukan Jepun 与 menentangnya 通过 pelbagai cara 与 saluran. Subtopik 这 membincangkan lima bentuk 斗争 反对 pendudukan Jepun:",
+      "key_points_zh": [
+        "人民 negara kita 不 akur 以 pendudukan Jepun 与 menentangnya 通过 pelbagai cara 与 saluran. Subtopik 这 membincangkan lima bentuk 斗争 反对 pendudukan Jepun:"
+      ],
+      "bm_focus_phrase": "Rakyat negara kita tidak akur dengan pendudukan Jepun dan menentangnya melalui pelbagai cara dan saluran. Subtopik ini membincangkan lima bentuk perjuangan menentang pendudukan Jepun:"
+    },
+    {
+      "source_id": "bab-3-7-u01",
+      "bm_original": "Penentangan terhadap Jepun dapat dilihat melalui tujuh bentuk utama:",
+      "translate": "反对 针对 Jepun dapat dilihat 通过 tujuh bentuk 主要:",
+      "key_points_zh": [
+        "反对 针对 Jepun dapat dilihat 通过 tujuh bentuk 主要:"
+      ],
+      "bm_focus_phrase": "Penentangan terhadap Jepun dapat dilihat melalui tujuh bentuk utama:"
+    },
+    {
+      "source_id": "bab-3-7-extra-3",
+      "bm_original": "1️⃣ Rejimen Askar Melayu 🏅",
+      "translate": "重点：1️⃣ Rejimen Askar Melayu 🏅",
+      "key_points_zh": [
+        "重点：1️⃣ Rejimen Askar Melayu 🏅"
+      ],
+      "bm_focus_phrase": "1️⃣ Rejimen Askar Melayu 🏅"
+    },
+    {
+      "source_id": "bab-3-7-extra-4",
+      "bm_original": "2️⃣ Penentangan MPAJA ✊",
+      "translate": "2️⃣ 反对 MPAJA ✊",
+      "key_points_zh": [
+        "2️⃣ 反对 MPAJA ✊"
+      ],
+      "bm_focus_phrase": "2️⃣ Penentangan MPAJA ✊"
+    },
+    {
+      "source_id": "bab-3-7-extra-5",
+      "bm_original": "3️⃣ Kerjasama MPAJA dan Force 136 🤝",
+      "translate": "3️⃣ Kerjasama MPAJA 与 Force 136 🤝",
+      "key_points_zh": [
+        "3️⃣ Kerjasama MPAJA 与 Force 136 🤝"
+      ],
+      "bm_focus_phrase": "3️⃣ Kerjasama MPAJA dan Force 136 🤝"
+    },
+    {
+      "source_id": "bab-3-7-extra-6",
+      "bm_original": "4️⃣ Kerjasama KMT dan MPAJA 🇨🇳🤝",
+      "translate": "4️⃣ Kerjasama KMT 与 MPAJA 🇨🇳🤝",
+      "key_points_zh": [
+        "4️⃣ Kerjasama KMT 与 MPAJA 🇨🇳🤝"
+      ],
+      "bm_focus_phrase": "4️⃣ Kerjasama KMT dan MPAJA 🇨🇳🤝"
+    },
+    {
+      "source_id": "bab-3-7-extra-7",
+      "bm_original": "5️⃣ Force 136 💣",
+      "translate": "重点：5️⃣ Force 136 💣",
+      "key_points_zh": [
+        "重点：5️⃣ Force 136 💣"
+      ],
+      "bm_focus_phrase": "5️⃣ Force 136 💣"
+    },
+    {
+      "source_id": "bab-3-7-extra-8",
+      "bm_original": "6️⃣ Penentangan individu ✊",
+      "translate": "6️⃣ 反对 individu ✊",
+      "key_points_zh": [
+        "6️⃣ 反对 individu ✊"
+      ],
+      "bm_focus_phrase": "6️⃣ Penentangan individu ✊"
+    },
+    {
+      "source_id": "bab-3-7-extra-9",
+      "bm_original": "7️⃣ Gerakan anti-Jepun di Sarawak dan Sabah 🇲🇾",
+      "translate": "7️⃣ Gerakan anti-Jepun di Sarawak 与 Sabah 🇲🇾",
+      "key_points_zh": [
+        "7️⃣ Gerakan anti-Jepun di Sarawak 与 Sabah 🇲🇾"
+      ],
+      "bm_focus_phrase": "7️⃣ Gerakan anti-Jepun di Sarawak dan Sabah 🇲🇾"
+    },
+    {
+      "source_id": "bab-3-7-u02",
+      "bm_original": "Rejimen Askar Melayu menjadi benteng pertahanan penting dalam menentang kemaraan tentera Jepun.",
+      "translate": "Rejimen Askar Melayu menjadi benteng pertahanan penting 在 反对 kemaraan tentera Jepun.",
+      "key_points_zh": [
+        "Rejimen Askar Melayu menjadi benteng pertahanan penting 在 反对 kemaraan tentera Jepun."
+      ],
+      "bm_focus_phrase": "Rejimen Askar Melayu menjadi benteng pertahanan penting dalam menentang kemaraan tentera Jepun."
+    },
+    {
+      "source_id": "bab-3-7-u03",
+      "bm_original": "Batalion Kedua Rejimen Askar Melayu bersama tentera British:",
+      "translate": "重点：Batalion Kedua Rejimen Askar Melayu bersama tentera British:",
+      "key_points_zh": [
+        "重点：Batalion Kedua Rejimen Askar Melayu bersama tentera British:"
+      ],
+      "bm_focus_phrase": "Batalion Kedua Rejimen Askar Melayu bersama tentera British:"
+    },
+    {
+      "source_id": "bab-3-7-extra-10",
+      "bm_original": "menentang pendaratan Jepun di Kelantan",
+      "translate": "反对 pendaratan Jepun di Kelantan",
+      "key_points_zh": [
+        "反对 pendaratan Jepun di Kelantan"
+      ],
+      "bm_focus_phrase": "menentang pendaratan Jepun di Kelantan"
+    },
+    {
+      "source_id": "bab-3-7-extra-11",
+      "bm_original": "menjadi benteng utama pertahanan negara",
+      "translate": "menjadi benteng 主要 pertahanan negara",
+      "key_points_zh": [
+        "menjadi benteng 主要 pertahanan negara"
+      ],
+      "bm_focus_phrase": "menjadi benteng utama pertahanan negara"
+    },
+    {
+      "source_id": "bab-3-7-u04",
+      "bm_original": "Dalam pertempuran di Singapura , Askar Melayu bersama tentera British menunjukkan semangat juang yang tinggi.",
+      "translate": "Dalam pertempuran di Singapura , Askar Melayu bersama tentera British menunjukkan semangat juang 的 tinggi.",
+      "key_points_zh": [
+        "Dalam pertempuran di Singapura , Askar Melayu bersama tentera British menunjukkan semangat juang 的 tinggi."
+      ],
+      "bm_focus_phrase": "Dalam pertempuran di Singapura , Askar Melayu bersama tentera British menunjukkan semangat juang yang tinggi."
+    },
+    {
+      "source_id": "bab-3-7-u05",
+      "bm_original": "Berjuang habis-habisan di Bukit Candu, Singapura .",
+      "translate": "重点：Berjuang habis-habisan di Bukit Candu, Singapura .",
+      "key_points_zh": [
+        "重点：Berjuang habis-habisan di Bukit Candu, Singapura ."
+      ],
+      "bm_focus_phrase": "Berjuang habis-habisan di Bukit Candu, Singapura ."
+    },
+    {
+      "source_id": "bab-3-7-u06",
+      "bm_original": "Beliau menjadi lambang keberanian dan keperwiraan askar Melayu dalam menentang Jepun.",
+      "translate": "Beliau menjadi lambang keberanian 与 keperwiraan askar Melayu 在 反对 Jepun.",
+      "key_points_zh": [
+        "Beliau menjadi lambang keberanian 与 keperwiraan askar Melayu 在 反对 Jepun."
+      ],
+      "bm_focus_phrase": "Beliau menjadi lambang keberanian dan keperwiraan askar Melayu dalam menentang Jepun."
+    },
+    {
+      "source_id": "bab-3-7-u07",
+      "bm_original": "Menyelamatkan hampir 2000 tentera Bersekutu yang terperangkap di pantai Johor.",
+      "translate": "Menyelamatkan hampir 2000 tentera Bersekutu 的 terperangkap di pantai Johor.",
+      "key_points_zh": [
+        "Menyelamatkan hampir 2000 tentera Bersekutu 的 terperangkap di pantai Johor."
+      ],
+      "bm_focus_phrase": "Menyelamatkan hampir 2000 tentera Bersekutu yang terperangkap di pantai Johor."
+    },
+    {
+      "source_id": "bab-3-7-u08",
+      "bm_original": "Menunjukkan keberanian dalam pertempuran di Pasir Panjang .",
+      "translate": "Menunjukkan keberanian 在 pertempuran di Pasir Panjang .",
+      "key_points_zh": [
+        "Menunjukkan keberanian 在 pertempuran di Pasir Panjang ."
+      ],
+      "bm_focus_phrase": "Menunjukkan keberanian dalam pertempuran di Pasir Panjang ."
+    },
+    {
+      "source_id": "bab-3-7-u09",
+      "bm_original": "Perjuangan mereka membuktikan kesanggupan berkorban demi tanah air.",
+      "translate": "斗争 mereka membuktikan kesanggupan berkorban demi tanah air.",
+      "key_points_zh": [
+        "斗争 mereka membuktikan kesanggupan berkorban demi tanah air."
+      ],
+      "bm_focus_phrase": "Perjuangan mereka membuktikan kesanggupan berkorban demi tanah air."
+    },
+    {
+      "source_id": "bab-3-7-u10",
+      "bm_original": "MPAJA merupakan gerakan gerila anti-Jepun yang penting di Tanah Melayu.",
+      "translate": "MPAJA merupakan gerakan gerila anti-Jepun 的 penting di Tanah Melayu.",
+      "key_points_zh": [
+        "MPAJA merupakan gerakan gerila anti-Jepun 的 penting di Tanah Melayu."
+      ],
+      "bm_focus_phrase": "MPAJA merupakan gerakan gerila anti-Jepun yang penting di Tanah Melayu."
+    },
+    {
+      "source_id": "bab-3-7-u11",
+      "bm_original": "Kekejaman Jepun menyebabkan ramai rakyat, terutama orang Cina, menjadi mangsa penindasan.",
+      "translate": "Kekejaman Jepun menyebabkan ramai 人民, terutama orang Cina, menjadi mangsa penindasan.",
+      "key_points_zh": [
+        "Kekejaman Jepun menyebabkan ramai 人民, terutama orang Cina, menjadi mangsa penindasan."
+      ],
+      "bm_focus_phrase": "Kekejaman Jepun menyebabkan ramai rakyat, terutama orang Cina, menjadi mangsa penindasan."
+    },
+    {
+      "source_id": "bab-3-7-u12",
+      "bm_original": "Ramai daripada mereka berlindung di bawah Parti Komunis Malaya (PKM) .",
+      "translate": "重点：Ramai daripada mereka berlindung di bawah Parti Komunis Malaya (PKM) .",
+      "key_points_zh": [
+        "重点：Ramai daripada mereka berlindung di bawah Parti Komunis Malaya (PKM) ."
+      ],
+      "bm_focus_phrase": "Ramai daripada mereka berlindung di bawah Parti Komunis Malaya (PKM) ."
+    },
+    {
+      "source_id": "bab-3-7-u13",
+      "bm_original": "PKM kemudian menubuhkan Malayan People’s Anti-Japanese Army (MPAJA) .",
+      "translate": "PKM kemudian 成立 Malayan People’s Anti-Japanese Army (MPAJA) .",
+      "key_points_zh": [
+        "PKM kemudian 成立 Malayan People’s Anti-Japanese Army (MPAJA) ."
+      ],
+      "bm_focus_phrase": "PKM kemudian menubuhkan Malayan People’s Anti-Japanese Army (MPAJA) ."
+    },
+    {
+      "source_id": "bab-3-7-u14",
+      "bm_original": "Seramai 165 anggota PKM diberi latihan di Sekolah Latihan Khas, Singapura .",
+      "translate": "重点：Seramai 165 anggota PKM diberi latihan di Sekolah Latihan Khas, Singapura .",
+      "key_points_zh": [
+        "重点：Seramai 165 anggota PKM diberi latihan di Sekolah Latihan Khas, Singapura ."
+      ],
+      "bm_focus_phrase": "Seramai 165 anggota PKM diberi latihan di Sekolah Latihan Khas, Singapura ."
+    },
+    {
+      "source_id": "bab-3-7-u15",
+      "bm_original": "Mereka dilatih dalam:",
+      "translate": "Mereka dilatih 在:",
+      "key_points_zh": [
+        "Mereka dilatih 在:"
+      ],
+      "bm_focus_phrase": "Mereka dilatih dalam:"
+    },
+    {
+      "source_id": "bab-3-7-extra-12",
+      "bm_original": "sabotaj",
+      "translate": "重点：sabotaj",
+      "key_points_zh": [
+        "重点：sabotaj"
+      ],
+      "bm_focus_phrase": "sabotaj"
+    },
+    {
+      "source_id": "bab-3-7-extra-13",
+      "bm_original": "perang gerila",
+      "translate": "重点：perang gerila",
+      "key_points_zh": [
+        "重点：perang gerila"
+      ],
+      "bm_focus_phrase": "perang gerila"
+    },
+    {
+      "source_id": "bab-3-7-u16",
+      "bm_original": "MPAJA mempunyai 8 rejimen yang beroperasi di seluruh Tanah Melayu .",
+      "translate": "MPAJA mempunyai 8 rejimen 的 beroperasi di 全国 Tanah Melayu .",
+      "key_points_zh": [
+        "MPAJA mempunyai 8 rejimen 的 beroperasi di 全国 Tanah Melayu ."
+      ],
+      "bm_focus_phrase": "MPAJA mempunyai 8 rejimen yang beroperasi di seluruh Tanah Melayu ."
+    },
+    {
+      "source_id": "bab-3-7-u17",
+      "bm_original": "Bantuan yang diterima termasuk:",
+      "translate": "Bantuan 的 diterima termasuk:",
+      "key_points_zh": [
+        "Bantuan 的 diterima termasuk:"
+      ],
+      "bm_focus_phrase": "Bantuan yang diterima termasuk:"
+    },
+    {
+      "source_id": "bab-3-7-extra-14",
+      "bm_original": "senjata",
+      "translate": "重点：senjata",
+      "key_points_zh": [
+        "重点：senjata"
+      ],
+      "bm_focus_phrase": "senjata"
+    },
+    {
+      "source_id": "bab-3-7-extra-15",
+      "bm_original": "ubat-ubatan",
+      "translate": "重点：ubat-ubatan",
+      "key_points_zh": [
+        "重点：ubat-ubatan"
+      ],
+      "bm_focus_phrase": "ubat-ubatan"
+    },
+    {
+      "source_id": "bab-3-7-extra-16",
+      "bm_original": "kewangan",
+      "translate": "重点：kewangan",
+      "key_points_zh": [
+        "重点：kewangan"
+      ],
+      "bm_focus_phrase": "kewangan"
+    },
+    {
+      "source_id": "bab-3-7-extra-17",
+      "bm_original": "latihan ketenteraan",
+      "translate": "重点：latihan ketenteraan",
+      "key_points_zh": [
+        "重点：latihan ketenteraan"
+      ],
+      "bm_focus_phrase": "latihan ketenteraan"
+    },
+    {
+      "source_id": "bab-3-7-u18",
+      "bm_original": "Kerjasama ini menjadikan MPAJA lebih kuat dan lebih bersedia menentang Jepun.",
+      "translate": "Kerjasama 这 menjadikan MPAJA 更 kuat 与 更 bersedia 反对 Jepun.",
+      "key_points_zh": [
+        "Kerjasama 这 menjadikan MPAJA 更 kuat 与 更 bersedia 反对 Jepun."
+      ],
+      "bm_focus_phrase": "Kerjasama ini menjadikan MPAJA lebih kuat dan lebih bersedia menentang Jepun."
+    },
+    {
+      "source_id": "bab-3-7-u19",
+      "bm_original": "Selain PKM, gerila Cina yang dipimpin oleh Kuomintang (KMT) juga menentang Jepun.",
+      "translate": "Selain PKM, gerila Cina 的 dipimpin 由 Kuomintang (KMT) 也 反对 Jepun.",
+      "key_points_zh": [
+        "Selain PKM, gerila Cina 的 dipimpin 由 Kuomintang (KMT) 也 反对 Jepun."
+      ],
+      "bm_focus_phrase": "Selain PKM, gerila Cina yang dipimpin oleh Kuomintang (KMT) juga menentang Jepun."
+    },
+    {
+      "source_id": "bab-3-7-u20",
+      "bm_original": "Gerakan ini aktif di:",
+      "translate": "Gerakan 这 aktif di:",
+      "key_points_zh": [
+        "Gerakan 这 aktif di:"
+      ],
+      "bm_focus_phrase": "Gerakan ini aktif di:"
+    },
+    {
+      "source_id": "bab-3-7-extra-18",
+      "bm_original": "Hulu Perak",
+      "translate": "重点：Hulu Perak",
+      "key_points_zh": [
+        "重点：Hulu Perak"
+      ],
+      "bm_focus_phrase": "Hulu Perak"
+    },
+    {
+      "source_id": "bab-3-7-extra-19",
+      "bm_original": "Kelantan",
+      "translate": "重点：Kelantan",
+      "key_points_zh": [
+        "重点：Kelantan"
+      ],
+      "bm_focus_phrase": "Kelantan"
+    },
+    {
+      "source_id": "bab-3-7-u21",
+      "bm_original": "Mereka menubuhkan Overseas Chinese Anti-Japanese Army (OCAJA) yang dikenali sebagai Tentera Bintang Satu .",
+      "translate": "Mereka 成立 Overseas Chinese Anti-Japanese Army (OCAJA) 的 dikenali 作为 Tentera Bintang Satu .",
+      "key_points_zh": [
+        "Mereka 成立 Overseas Chinese Anti-Japanese Army (OCAJA) 的 dikenali 作为 Tentera Bintang Satu ."
+      ],
+      "bm_focus_phrase": "Mereka menubuhkan Overseas Chinese Anti-Japanese Army (OCAJA) yang dikenali sebagai Tentera Bintang Satu ."
+    },
+    {
+      "source_id": "bab-3-7-u22",
+      "bm_original": "KMT kemudian bersetuju bekerjasama dengan MPAJA.",
+      "translate": "KMT kemudian bersetuju bekerjasama 以 MPAJA.",
+      "key_points_zh": [
+        "KMT kemudian bersetuju bekerjasama 以 MPAJA."
+      ],
+      "bm_focus_phrase": "KMT kemudian bersetuju bekerjasama dengan MPAJA."
+    },
+    {
+      "source_id": "bab-3-7-u23",
+      "bm_original": "Kesannya, MPAJA muncul sebagai gerakan anti-Jepun yang terbesar di Tanah Melayu.",
+      "translate": "Kesannya, MPAJA muncul 作为 gerakan anti-Jepun 的 terbesar di Tanah Melayu.",
+      "key_points_zh": [
+        "Kesannya, MPAJA muncul 作为 gerakan anti-Jepun 的 terbesar di Tanah Melayu."
+      ],
+      "bm_focus_phrase": "Kesannya, MPAJA muncul sebagai gerakan anti-Jepun yang terbesar di Tanah Melayu."
+    },
+    {
+      "source_id": "bab-3-7-u24",
+      "bm_original": "Jepun bertindak menggunakan pasukan Melayu untuk menentang MPAJA.",
+      "translate": "Jepun bertindak menggunakan pasukan Melayu 为了 反对 MPAJA.",
+      "key_points_zh": [
+        "Jepun bertindak menggunakan pasukan Melayu 为了 反对 MPAJA."
+      ],
+      "bm_focus_phrase": "Jepun bertindak menggunakan pasukan Melayu untuk menentang MPAJA."
+    },
+    {
+      "source_id": "bab-3-7-u25",
+      "bm_original": "Tindakan ini menyebabkan ketegangan antara orang Melayu dan Cina meningkat.",
+      "translate": "Tindakan 这 menyebabkan ketegangan 其中 orang Melayu 与 Cina meningkat.",
+      "key_points_zh": [
+        "Tindakan 这 menyebabkan ketegangan 其中 orang Melayu 与 Cina meningkat."
+      ],
+      "bm_focus_phrase": "Tindakan ini menyebabkan ketegangan antara orang Melayu dan Cina meningkat."
+    },
+    {
+      "source_id": "bab-3-7-u26",
+      "bm_original": "Force 136 ialah unit khas British yang ditubuhkan untuk menentang pendudukan 🇯🇵 Jepun secara gerila di Tanah Melayu .",
+      "translate": "Force 136 是 unit khas British 的 ditubuhkan 为了 反对 pendudukan 🇯🇵 Jepun secara gerila di Tanah Melayu .",
+      "key_points_zh": [
+        "Force 136 是 unit khas British 的 ditubuhkan 为了 反对 pendudukan 🇯🇵 Jepun secara gerila di Tanah Melayu ."
+      ],
+      "bm_focus_phrase": "Force 136 ialah unit khas British yang ditubuhkan untuk menentang pendudukan 🇯🇵 Jepun secara gerila di Tanah Melayu ."
+    },
+    {
+      "source_id": "bab-3-7-extra-20",
+      "bm_original": "bab-3-7-extra-20",
+      "translate": "重点：bab-3-7-extra-20",
+      "key_points_zh": [
+        "重点：bab-3-7-extra-20"
+      ],
+      "bm_focus_phrase": "bab-3-7-extra-20"
+    },
+    {
+      "source_id": "bab-3-7-u27",
+      "bm_original": "SEAC kemudian membentuk unit khas yang dikenali sebagai Force 136 .",
+      "translate": "SEAC kemudian membentuk unit khas 的 dikenali 作为 Force 136 .",
+      "key_points_zh": [
+        "SEAC kemudian membentuk unit khas 的 dikenali 作为 Force 136 ."
+      ],
+      "bm_focus_phrase": "SEAC kemudian membentuk unit khas yang dikenali sebagai Force 136 ."
+    },
+    {
+      "source_id": "bab-3-7-u28",
+      "bm_original": "Anggota Force 136 mendapat latihan di India dan Sri Lanka .",
+      "translate": "Anggota Force 136 获得 latihan di India 与 Sri Lanka .",
+      "key_points_zh": [
+        "Anggota Force 136 获得 latihan di India 与 Sri Lanka ."
+      ],
+      "bm_focus_phrase": "Anggota Force 136 mendapat latihan di India dan Sri Lanka ."
+    },
+    {
+      "source_id": "bab-3-7-u29",
+      "bm_original": "Mereka kemudian dihantar ke Tanah Melayu melalui:",
+      "translate": "Mereka kemudian dihantar ke Tanah Melayu 通过:",
+      "key_points_zh": [
+        "Mereka kemudian dihantar ke Tanah Melayu 通过:"
+      ],
+      "bm_focus_phrase": "Mereka kemudian dihantar ke Tanah Melayu melalui:"
+    },
+    {
+      "source_id": "bab-3-7-extra-21",
+      "bm_original": "kapal selam",
+      "translate": "重点：kapal selam",
+      "key_points_zh": [
+        "重点：kapal selam"
+      ],
+      "bm_focus_phrase": "kapal selam"
+    },
+    {
+      "source_id": "bab-3-7-extra-22",
+      "bm_original": "payung terjun dari kapal terbang",
+      "translate": "重点：payung terjun dari kapal terbang",
+      "key_points_zh": [
+        "重点：payung terjun dari kapal terbang"
+      ],
+      "bm_focus_phrase": "payung terjun dari kapal terbang"
+    },
+    {
+      "source_id": "bab-3-7-u30",
+      "bm_original": "Tujuan mereka ialah:",
+      "translate": "目的 mereka 是:",
+      "key_points_zh": [
+        "目的 mereka 是:"
+      ],
+      "bm_focus_phrase": "Tujuan mereka ialah:"
+    },
+    {
+      "source_id": "bab-3-7-extra-23",
+      "bm_original": "mendapatkan sokongan orang Melayu",
+      "translate": "取得 sokongan orang Melayu",
+      "key_points_zh": [
+        "取得 sokongan orang Melayu"
+      ],
+      "bm_focus_phrase": "mendapatkan sokongan orang Melayu"
+    },
+    {
+      "source_id": "bab-3-7-extra-24",
+      "bm_original": "menubuhkan pasukan gerila anti-Jepun",
+      "translate": "成立 pasukan gerila anti-Jepun",
+      "key_points_zh": [
+        "成立 pasukan gerila anti-Jepun"
+      ],
+      "bm_focus_phrase": "menubuhkan pasukan gerila anti-Jepun"
+    },
+    {
+      "source_id": "bab-3-7-u31",
+      "bm_original": "Antara anggota terawal Force 136 di Tanah Melayu ialah:",
+      "translate": "Antara anggota terawal Force 136 di Tanah Melayu 是:",
+      "key_points_zh": [
+        "Antara anggota terawal Force 136 di Tanah Melayu 是:"
+      ],
+      "bm_focus_phrase": "Antara anggota terawal Force 136 di Tanah Melayu ialah:"
+    },
+    {
+      "source_id": "bab-3-7-extra-25",
+      "bm_original": "Mejar Tengku Mahmood Mahyiddeen",
+      "translate": "重点：Mejar Tengku Mahmood Mahyiddeen",
+      "key_points_zh": [
+        "重点：Mejar Tengku Mahmood Mahyiddeen"
+      ],
+      "bm_focus_phrase": "Mejar Tengku Mahmood Mahyiddeen"
+    },
+    {
+      "source_id": "bab-3-7-extra-26",
+      "bm_original": "Leftenan Tunku Yusuf Tunku Yaakub",
+      "translate": "重点：Leftenan Tunku Yusuf Tunku Yaakub",
+      "key_points_zh": [
+        "重点：Leftenan Tunku Yusuf Tunku Yaakub"
+      ],
+      "bm_focus_phrase": "Leftenan Tunku Yusuf Tunku Yaakub"
+    },
+    {
+      "source_id": "bab-3-7-extra-27",
+      "bm_original": "Kapten Ibrahim Ismail",
+      "translate": "重点：Kapten Ibrahim Ismail",
+      "key_points_zh": [
+        "重点：Kapten Ibrahim Ismail"
+      ],
+      "bm_focus_phrase": "Kapten Ibrahim Ismail"
+    },
+    {
+      "source_id": "bab-3-7-extra-28",
+      "bm_original": "Leftenan Tengku Osman Tengku Mohd Jiwa",
+      "translate": "重点：Leftenan Tengku Osman Tengku Mohd Jiwa",
+      "key_points_zh": [
+        "重点：Leftenan Tengku Osman Tengku Mohd Jiwa"
+      ],
+      "bm_focus_phrase": "Leftenan Tengku Osman Tengku Mohd Jiwa"
+    },
+    {
+      "source_id": "bab-3-7-u32",
+      "bm_original": "Tengku Mahmood Mahyiddeen ialah pemimpin pasukan Melayu Force 136 .",
+      "translate": "Tengku Mahmood Mahyiddeen 是 领袖 pasukan Melayu Force 136 .",
+      "key_points_zh": [
+        "Tengku Mahmood Mahyiddeen 是 领袖 pasukan Melayu Force 136 ."
+      ],
+      "bm_focus_phrase": "Tengku Mahmood Mahyiddeen ialah pemimpin pasukan Melayu Force 136 ."
+    },
+    {
+      "source_id": "bab-3-7-u33",
+      "bm_original": "Beliau menerima jolokan “Harimau Malaya” kerana mengelolakan siaran radio dari India yang diberikan nama Suara Harimau Malaya .",
+      "translate": "Beliau menerima jolokan “Harimau Malaya” 因为 mengelolakan siaran radio dari India 的 diberikan nama Suara Harimau Malaya .",
+      "key_points_zh": [
+        "Beliau menerima jolokan “Harimau Malaya” 因为 mengelolakan siaran radio dari India 的 diberikan nama Suara Harimau Malaya ."
+      ],
+      "bm_focus_phrase": "Beliau menerima jolokan “Harimau Malaya” kerana mengelolakan siaran radio dari India yang diberikan nama Suara Harimau Malaya ."
+    },
+    {
+      "source_id": "bab-3-7-u34",
+      "bm_original": "Beliau juga menyeru orang Melayu supaya menentang tentera Jepun dan tali barutnya.",
+      "translate": "Beliau 也 menyeru orang Melayu supaya 反对 tentera Jepun 与 tali barutnya.",
+      "key_points_zh": [
+        "Beliau 也 menyeru orang Melayu supaya 反对 tentera Jepun 与 tali barutnya."
+      ],
+      "bm_focus_phrase": "Beliau juga menyeru orang Melayu supaya menentang tentera Jepun dan tali barutnya."
+    },
+    {
+      "source_id": "bab-3-7-u35",
+      "bm_original": "Force 136 berjaya membentuk beberapa pasukan gerila Melayu di kawasan tertentu.",
+      "translate": "Force 136 成功 membentuk beberapa pasukan gerila Melayu di kawasan tertentu.",
+      "key_points_zh": [
+        "Force 136 成功 membentuk beberapa pasukan gerila Melayu di kawasan tertentu."
+      ],
+      "bm_focus_phrase": "Force 136 berjaya membentuk beberapa pasukan gerila Melayu di kawasan tertentu."
+    },
+    {
+      "source_id": "bab-3-7-u36",
+      "bm_original": "Force 136 dan pertubuhan gerila Melayu bekerjasama untuk menentang Jepun dengan menjalankan aktiviti rahsia di Tanah Melayu.",
+      "translate": "Force 136 与 pertubuhan gerila Melayu bekerjasama 为了 反对 Jepun 以 menjalankan aktiviti rahsia di Tanah Melayu.",
+      "key_points_zh": [
+        "Force 136 与 pertubuhan gerila Melayu bekerjasama 为了 反对 Jepun 以 menjalankan aktiviti rahsia di Tanah Melayu."
+      ],
+      "bm_focus_phrase": "Force 136 dan pertubuhan gerila Melayu bekerjasama untuk menentang Jepun dengan menjalankan aktiviti rahsia di Tanah Melayu."
+    },
+    {
+      "source_id": "bab-3-7-u37",
+      "bm_original": "Antara aktivitinya termasuk:",
+      "translate": "重点：Antara aktivitinya termasuk:",
+      "key_points_zh": [
+        "重点：Antara aktivitinya termasuk:"
+      ],
+      "bm_focus_phrase": "Antara aktivitinya termasuk:"
+    },
+    {
+      "source_id": "bab-3-7-extra-29",
+      "bm_original": "mengumpulkan maklumat",
+      "translate": "重点：mengumpulkan maklumat",
+      "key_points_zh": [
+        "重点：mengumpulkan maklumat"
+      ],
+      "bm_focus_phrase": "mengumpulkan maklumat"
+    },
+    {
+      "source_id": "bab-3-7-extra-30",
+      "bm_original": "melakukan sabotaj",
+      "translate": "重点：melakukan sabotaj",
+      "key_points_zh": [
+        "重点：melakukan sabotaj"
+      ],
+      "bm_focus_phrase": "melakukan sabotaj"
+    },
+    {
+      "source_id": "bab-3-7-extra-31",
+      "bm_original": "menyebarkan propaganda",
+      "translate": "重点：menyebarkan propaganda",
+      "key_points_zh": [
+        "重点：menyebarkan propaganda"
+      ],
+      "bm_focus_phrase": "menyebarkan propaganda"
+    },
+    {
+      "source_id": "bab-3-7-extra-32",
+      "bm_original": "membuat persiapan untuk British melancarkan Operasi Zipper",
+      "translate": "membuat persiapan 为了 British melancarkan Operasi Zipper",
+      "key_points_zh": [
+        "membuat persiapan 为了 British melancarkan Operasi Zipper"
+      ],
+      "bm_focus_phrase": "membuat persiapan untuk British melancarkan Operasi Zipper"
+    },
+    {
+      "source_id": "bab-3-7-u38",
+      "bm_original": "Operasi Zipper ialah serangan secara besar-besaran untuk menawan semula Tanah Melayu pada tahun 1945 .",
+      "translate": "Operasi Zipper 是 serangan secara besar-besaran 为了 menawan semula Tanah Melayu 于 年 1945 .",
+      "key_points_zh": [
+        "Operasi Zipper 是 serangan secara besar-besaran 为了 menawan semula Tanah Melayu 于 年 1945 ."
+      ],
+      "bm_focus_phrase": "Operasi Zipper ialah serangan secara besar-besaran untuk menawan semula Tanah Melayu pada tahun 1945 ."
+    },
+    {
+      "source_id": "bab-3-7-u39",
+      "bm_original": "Kegiatan anti-Jepun turut digerakkan secara individu seperti oleh Gurchan Singh .",
+      "translate": "Kegiatan anti-Jepun turut digerakkan secara individu seperti 由 Gurchan Singh .",
+      "key_points_zh": [
+        "Kegiatan anti-Jepun turut digerakkan secara individu seperti 由 Gurchan Singh ."
+      ],
+      "bm_focus_phrase": "Kegiatan anti-Jepun turut digerakkan secara individu seperti oleh Gurchan Singh ."
+    },
+    {
+      "source_id": "bab-3-7-u40",
+      "bm_original": "Beliau menentang pendudukan tentera Jepun dengan cara menyebarkan risalah dan propaganda menggunakan nama samaran “Lion of Malaya” .",
+      "translate": "Beliau 反对 pendudukan tentera Jepun 以 cara menyebarkan risalah 与 propaganda menggunakan nama samaran “Lion of Malaya” .",
+      "key_points_zh": [
+        "Beliau 反对 pendudukan tentera Jepun 以 cara menyebarkan risalah 与 propaganda menggunakan nama samaran “Lion of Malaya” ."
+      ],
+      "bm_focus_phrase": "Beliau menentang pendudukan tentera Jepun dengan cara menyebarkan risalah dan propaganda menggunakan nama samaran “Lion of Malaya” ."
+    },
+    {
+      "source_id": "bab-3-7-u41",
+      "bm_original": "Risalah penentangan yang dihasilkannya diedarkan secara teratur dan berkesan untuk memberitahu penduduk tentang fakta sebenar perang dan pendudukan tentera Jepun.",
+      "translate": "Risalah 反对 的 dihasilkannya diedarkan secara teratur 与 berkesan 为了 memberitahu penduduk tentang fakta sebenar perang 与 pendudukan tentera Jepun.",
+      "key_points_zh": [
+        "Risalah 反对 的 dihasilkannya diedarkan secara teratur 与 berkesan 为了 memberitahu penduduk tentang fakta sebenar perang 与 pendudukan tentera Jepun."
+      ],
+      "bm_focus_phrase": "Risalah penentangan yang dihasilkannya diedarkan secara teratur dan berkesan untuk memberitahu penduduk tentang fakta sebenar perang dan pendudukan tentera Jepun."
+    },
+    {
+      "source_id": "bab-3-7-u42",
+      "bm_original": "Tindakan beliau:",
+      "translate": "重点：Tindakan beliau:",
+      "key_points_zh": [
+        "重点：Tindakan beliau:"
+      ],
+      "bm_focus_phrase": "Tindakan beliau:"
+    },
+    {
+      "source_id": "bab-3-7-extra-33",
+      "bm_original": "menyebarkan risalah anti-Jepun sebagai “Lion of Malaya”",
+      "translate": "menyebarkan risalah anti-Jepun 作为 “Lion of Malaya”",
+      "key_points_zh": [
+        "menyebarkan risalah anti-Jepun 作为 “Lion of Malaya”"
+      ],
+      "bm_focus_phrase": "menyebarkan risalah anti-Jepun sebagai “Lion of Malaya”"
+    },
+    {
+      "source_id": "bab-3-7-extra-34",
+      "bm_original": "menyamar sebagai wartawan dalam sidang akhbar tentera Jepun",
+      "translate": "menyamar 作为 wartawan 在 sidang 报章 tentera Jepun",
+      "key_points_zh": [
+        "menyamar 作为 wartawan 在 sidang 报章 tentera Jepun"
+      ],
+      "bm_focus_phrase": "menyamar sebagai wartawan dalam sidang akhbar tentera Jepun"
+    },
+    {
+      "source_id": "bab-3-7-extra-35",
+      "bm_original": "mendalangi sabotaj terhadap landasan kereta api yang menjejaskan pengangkutan tentera Jepun",
+      "translate": "mendalangi sabotaj 针对 landasan kereta api 的 menjejaskan pengangkutan tentera Jepun",
+      "key_points_zh": [
+        "mendalangi sabotaj 针对 landasan kereta api 的 menjejaskan pengangkutan tentera Jepun"
+      ],
+      "bm_focus_phrase": "mendalangi sabotaj terhadap landasan kereta api yang menjejaskan pengangkutan tentera Jepun"
+    },
+    {
+      "source_id": "bab-3-7-u43",
+      "bm_original": "Beliau ditangkap oleh Kempeitai selepas dikhianati, namun berjaya melarikan diri ke Burma sehingga perang tamat.",
+      "translate": "Beliau ditangkap 由 Kempeitai 在…之后 dikhianati, namun 成功 melarikan diri ke Burma sehingga perang tamat.",
+      "key_points_zh": [
+        "Beliau ditangkap 由 Kempeitai 在…之后 dikhianati, namun 成功 melarikan diri ke Burma sehingga perang tamat."
+      ],
+      "bm_focus_phrase": "Beliau ditangkap oleh Kempeitai selepas dikhianati, namun berjaya melarikan diri ke Burma sehingga perang tamat."
+    },
+    {
+      "source_id": "bab-3-7-u44",
+      "bm_original": "Sybil Kathigasu atau Sybil Medan Daly ialah seorang jururawat yang terkenal dengan keberanian dan kecekalan membantu mangsa perang serta gerila anti-Jepun di Perak.",
+      "translate": "Sybil Kathigasu atau Sybil Medan Daly 是 seorang jururawat 的 terkenal 以 keberanian 与 kecekalan membantu mangsa perang 以及 gerila anti-Jepun di Perak.",
+      "key_points_zh": [
+        "Sybil Kathigasu atau Sybil Medan Daly 是 seorang jururawat 的 terkenal 以 keberanian 与 kecekalan membantu mangsa perang 以及 gerila anti-Jepun di Perak."
+      ],
+      "bm_focus_phrase": "Sybil Kathigasu atau Sybil Medan Daly ialah seorang jururawat yang terkenal dengan keberanian dan kecekalan membantu mangsa perang serta gerila anti-Jepun di Perak."
+    },
+    {
+      "source_id": "bab-3-7-u45",
+      "bm_original": "Sybil dan suaminya, Dr. Abdon Clement Kathigasu , mengendalikan sebuah klinik di Ipoh sebelum perang sehingga kedatangan Jepun.",
+      "translate": "Sybil 与 suaminya, Dr. Abdon Clement Kathigasu , mengendalikan sebuah klinik di Ipoh sebelum perang sehingga kedatangan Jepun.",
+      "key_points_zh": [
+        "Sybil 与 suaminya, Dr. Abdon Clement Kathigasu , mengendalikan sebuah klinik di Ipoh sebelum perang sehingga kedatangan Jepun."
+      ],
+      "bm_focus_phrase": "Sybil dan suaminya, Dr. Abdon Clement Kathigasu , mengendalikan sebuah klinik di Ipoh sebelum perang sehingga kedatangan Jepun."
+    },
+    {
+      "source_id": "bab-3-7-u46",
+      "bm_original": "Semasa pendudukan Jepun, pasangan ini memberikan bantuan ubat-ubatan dan perkhidmatan perubatan kepada gerila anti-Jepun.",
+      "translate": "Semasa pendudukan Jepun, pasangan 这 memberikan bantuan ubat-ubatan 与 perkhidmatan perubatan 向 gerila anti-Jepun.",
+      "key_points_zh": [
+        "Semasa pendudukan Jepun, pasangan 这 memberikan bantuan ubat-ubatan 与 perkhidmatan perubatan 向 gerila anti-Jepun."
+      ],
+      "bm_focus_phrase": "Semasa pendudukan Jepun, pasangan ini memberikan bantuan ubat-ubatan dan perkhidmatan perubatan kepada gerila anti-Jepun."
+    },
+    {
+      "source_id": "bab-3-7-u47",
+      "bm_original": "Sumbangan beliau:",
+      "translate": "重点：Sumbangan beliau:",
+      "key_points_zh": [
+        "重点：Sumbangan beliau:"
+      ],
+      "bm_focus_phrase": "Sumbangan beliau:"
+    },
+    {
+      "source_id": "bab-3-7-extra-36",
+      "bm_original": "membantu gerila dengan rawatan perubatan",
+      "translate": "membantu gerila 以 rawatan perubatan",
+      "key_points_zh": [
+        "membantu gerila 以 rawatan perubatan"
+      ],
+      "bm_focus_phrase": "membantu gerila dengan rawatan perubatan"
+    },
+    {
+      "source_id": "bab-3-7-extra-37",
+      "bm_original": "menyembunyikan radio",
+      "translate": "重点：menyembunyikan radio",
+      "key_points_zh": [
+        "重点：menyembunyikan radio"
+      ],
+      "bm_focus_phrase": "menyembunyikan radio"
+    },
+    {
+      "source_id": "bab-3-7-extra-38",
+      "bm_original": "berkongsi maklumat daripada siaran radio British dengan gerila anti-Jepun",
+      "translate": "berkongsi maklumat daripada siaran radio British 以 gerila anti-Jepun",
+      "key_points_zh": [
+        "berkongsi maklumat daripada siaran radio British 以 gerila anti-Jepun"
+      ],
+      "bm_focus_phrase": "berkongsi maklumat daripada siaran radio British dengan gerila anti-Jepun"
+    },
+    {
+      "source_id": "bab-3-7-u48",
+      "bm_original": "Sybil dan suaminya ditangkap oleh tentera Jepun apabila kegiatan mereka terbongkar.",
+      "translate": "Sybil 与 suaminya ditangkap 由 tentera Jepun apabila kegiatan mereka terbongkar.",
+      "key_points_zh": [
+        "Sybil 与 suaminya ditangkap 由 tentera Jepun apabila kegiatan mereka terbongkar."
+      ],
+      "bm_focus_phrase": "Sybil dan suaminya ditangkap oleh tentera Jepun apabila kegiatan mereka terbongkar."
+    },
+    {
+      "source_id": "bab-3-7-u49",
+      "bm_original": "Semasa berada dalam tahanan, penyeksaan demi penyeksaan dilakukan oleh tentera Jepun sehingga menyebabkan kematian suaminya.",
+      "translate": "Semasa berada 在 tahanan, penyeksaan demi penyeksaan dilakukan 由 tentera Jepun sehingga menyebabkan kematian suaminya.",
+      "key_points_zh": [
+        "Semasa berada 在 tahanan, penyeksaan demi penyeksaan dilakukan 由 tentera Jepun sehingga menyebabkan kematian suaminya."
+      ],
+      "bm_focus_phrase": "Semasa berada dalam tahanan, penyeksaan demi penyeksaan dilakukan oleh tentera Jepun sehingga menyebabkan kematian suaminya."
+    },
+    {
+      "source_id": "bab-3-7-u50",
+      "bm_original": "Selepas tentera Jepun menyerah kalah, Sybil dibebaskan dan diterbangkan ke Britain untuk menerima rawatan perubatan.",
+      "translate": "Selepas tentera Jepun menyerah kalah, Sybil dibebaskan 与 diterbangkan ke Britain 为了 menerima rawatan perubatan.",
+      "key_points_zh": [
+        "Selepas tentera Jepun menyerah kalah, Sybil dibebaskan 与 diterbangkan ke Britain 为了 menerima rawatan perubatan."
+      ],
+      "bm_focus_phrase": "Selepas tentera Jepun menyerah kalah, Sybil dibebaskan dan diterbangkan ke Britain untuk menerima rawatan perubatan."
+    },
+    {
+      "source_id": "bab-3-7-u51",
+      "bm_original": "Operasi Semut ialah siri operasi peninjauan yang dilakukan oleh Unit Khas Z Australia sebagai sebahagian daripada kempen tentera Bersekutu menentang Jepun di Sarawak.",
+      "translate": "Operasi Semut 是 siri operasi peninjauan 的 dilakukan 由 Unit Khas Z Australia 作为 部分 daripada kempen tentera Bersekutu 反对 Jepun di Sarawak.",
+      "key_points_zh": [
+        "Operasi Semut 是 siri operasi peninjauan 的 dilakukan 由 Unit Khas Z Australia 作为 部分 daripada kempen tentera Bersekutu 反对 Jepun di Sarawak."
+      ],
+      "bm_focus_phrase": "Operasi Semut ialah siri operasi peninjauan yang dilakukan oleh Unit Khas Z Australia sebagai sebahagian daripada kempen tentera Bersekutu menentang Jepun di Sarawak."
+    },
+    {
+      "source_id": "bab-3-7-u52",
+      "bm_original": "Operasi tersebut dilaksanakan oleh Jabatan Peninjauan Perkhidmatan Australia atau Australian Services Reconnaissance Department (SRD) untuk mengumpulkan risikan dan melatih orang tempatan melancarkan perang gerila melawan Jepun.",
+      "translate": "Operasi tersebut dilaksanakan 由 Jabatan Peninjauan Perkhidmatan Australia atau Australian Services Reconnaissance Department (SRD) 为了 mengumpulkan risikan 与 melatih orang 本地 melancarkan perang gerila melawan Jepun.",
+      "key_points_zh": [
+        "Operasi tersebut dilaksanakan 由 Jabatan Peninjauan Perkhidmatan Australia atau Australian Services Reconnaissance Department (SRD) 为了 mengumpulkan risikan 与 melatih orang 本地 melancarkan perang gerila melawan Jepun."
+      ],
+      "bm_focus_phrase": "Operasi tersebut dilaksanakan oleh Jabatan Peninjauan Perkhidmatan Australia atau Australian Services Reconnaissance Department (SRD) untuk mengumpulkan risikan dan melatih orang tempatan melancarkan perang gerila melawan Jepun."
+    },
+    {
+      "source_id": "bab-3-7-u53",
+      "bm_original": "Anggota ini terdiri daripada tentera 🇦🇺 Australia , 🇬🇧 British dan 🇳🇿 New Zealand .",
+      "translate": "Anggota 这 terdiri daripada tentera 🇦🇺 Australia , 🇬🇧 British 与 🇳🇿 New Zealand .",
+      "key_points_zh": [
+        "Anggota 这 terdiri daripada tentera 🇦🇺 Australia , 🇬🇧 British 与 🇳🇿 New Zealand ."
+      ],
+      "bm_focus_phrase": "Anggota ini terdiri daripada tentera 🇦🇺 Australia , 🇬🇧 British dan 🇳🇿 New Zealand ."
+    },
+    {
+      "source_id": "bab-3-7-extra-39",
+      "bm_original": "bab-3-7-extra-39",
+      "translate": "重点：bab-3-7-extra-39",
+      "key_points_zh": [
+        "重点：bab-3-7-extra-39"
+      ],
+      "bm_focus_phrase": "bab-3-7-extra-39"
+    },
+    {
+      "source_id": "bab-3-7-extra-40",
+      "bm_original": "bab-3-7-extra-40",
+      "translate": "重点：bab-3-7-extra-40",
+      "key_points_zh": [
+        "重点：bab-3-7-extra-40"
+      ],
+      "bm_focus_phrase": "bab-3-7-extra-40"
+    },
+    {
+      "source_id": "bab-3-7-extra-41",
+      "bm_original": "bab-3-7-extra-41",
+      "translate": "重点：bab-3-7-extra-41",
+      "key_points_zh": [
+        "重点：bab-3-7-extra-41"
+      ],
+      "bm_focus_phrase": "bab-3-7-extra-41"
+    },
+    {
+      "source_id": "bab-3-7-u54",
+      "bm_original": "Rekrut tempatan yang dikenali sebagai gerila Semut antaranya diambil daripada orang:",
+      "translate": "Rekrut 本地 的 dikenali 作为 gerila Semut antaranya diambil daripada orang:",
+      "key_points_zh": [
+        "Rekrut 本地 的 dikenali 作为 gerila Semut antaranya diambil daripada orang:"
+      ],
+      "bm_focus_phrase": "Rekrut tempatan yang dikenali sebagai gerila Semut antaranya diambil daripada orang:"
+    },
+    {
+      "source_id": "bab-3-7-extra-42",
+      "bm_original": "Kayan",
+      "translate": "重点：Kayan",
+      "key_points_zh": [
+        "重点：Kayan"
+      ],
+      "bm_focus_phrase": "Kayan"
+    },
+    {
+      "source_id": "bab-3-7-extra-43",
+      "bm_original": "Kenyah",
+      "translate": "重点：Kenyah",
+      "key_points_zh": [
+        "重点：Kenyah"
+      ],
+      "bm_focus_phrase": "Kenyah"
+    },
+    {
+      "source_id": "bab-3-7-extra-44",
+      "bm_original": "Kelabit",
+      "translate": "重点：Kelabit",
+      "key_points_zh": [
+        "重点：Kelabit"
+      ],
+      "bm_focus_phrase": "Kelabit"
+    },
+    {
+      "source_id": "bab-3-7-extra-45",
+      "bm_original": "Murut",
+      "translate": "重点：Murut",
+      "key_points_zh": [
+        "重点：Murut"
+      ],
+      "bm_focus_phrase": "Murut"
+    },
+    {
+      "source_id": "bab-3-7-extra-46",
+      "bm_original": "Iban",
+      "translate": "重点：Iban",
+      "key_points_zh": [
+        "重点：Iban"
+      ],
+      "bm_focus_phrase": "Iban"
+    },
+    {
+      "source_id": "bab-3-7-u55",
+      "bm_original": "Kepakaran gerila Semut penting dalam usaha merancang taktikal perang gerila menentang tentera Jepun kerana sebagai penduduk tempatan, mereka mengetahui selok-belok bumi Sarawak.",
+      "translate": "Kepakaran gerila Semut penting 在 usaha merancang taktikal perang gerila 反对 tentera Jepun 因为 作为 penduduk 本地, mereka mengetahui selok-belok bumi Sarawak.",
+      "key_points_zh": [
+        "Kepakaran gerila Semut penting 在 usaha merancang taktikal perang gerila 反对 tentera Jepun 因为 作为 penduduk 本地, mereka mengetahui selok-belok bumi Sarawak."
+      ],
+      "bm_focus_phrase": "Kepakaran gerila Semut penting dalam usaha merancang taktikal perang gerila menentang tentera Jepun kerana sebagai penduduk tempatan, mereka mengetahui selok-belok bumi Sarawak."
+    },
+    {
+      "source_id": "bab-3-7-extra-47",
+      "bm_original": "Semut I → Bario hingga Belait dan Trusan",
+      "translate": "Semut I → Bario hingga Belait 与 Trusan",
+      "key_points_zh": [
+        "Semut I → Bario hingga Belait 与 Trusan"
+      ],
+      "bm_focus_phrase": "Semut I → Bario hingga Belait dan Trusan"
+    },
+    {
+      "source_id": "bab-3-7-extra-48",
+      "bm_original": "Semut II → Baram, Tutong, Marudi dan Brunei",
+      "translate": "Semut II → Baram, Tutong, Marudi 与 Brunei",
+      "key_points_zh": [
+        "Semut II → Baram, Tutong, Marudi 与 Brunei"
+      ],
+      "bm_focus_phrase": "Semut II → Baram, Tutong, Marudi dan Brunei"
+    },
+    {
+      "source_id": "bab-3-7-extra-49",
+      "bm_original": "Semut III → Sungai Rajang",
+      "translate": "重点：Semut III → Sungai Rajang",
+      "key_points_zh": [
+        "重点：Semut III → Sungai Rajang"
+      ],
+      "bm_focus_phrase": "Semut III → Sungai Rajang"
+    },
+    {
+      "source_id": "bab-3-7-extra-50",
+      "bm_original": "Semut IV → Bintulu dan Mukah",
+      "translate": "Semut IV → Bintulu 与 Mukah",
+      "key_points_zh": [
+        "Semut IV → Bintulu 与 Mukah"
+      ],
+      "bm_focus_phrase": "Semut IV → Bintulu dan Mukah"
+    },
+    {
+      "source_id": "bab-3-7-u56",
+      "bm_original": "Pemberontakan Jesselton juga dikenali sebagai pemberontakan Double Tenth , iaitu penentangan terhadap pendudukan tentera Jepun di Sabah yang diketuai oleh Albert Kwok .",
+      "translate": "Pemberontakan Jesselton 也 dikenali 作为 pemberontakan Double Tenth , iaitu 反对 针对 pendudukan tentera Jepun di Sabah 的 diketuai 由 Albert Kwok .",
+      "key_points_zh": [
+        "Pemberontakan Jesselton 也 dikenali 作为 pemberontakan Double Tenth , iaitu 反对 针对 pendudukan tentera Jepun di Sabah 的 diketuai 由 Albert Kwok ."
+      ],
+      "bm_focus_phrase": "Pemberontakan Jesselton juga dikenali sebagai pemberontakan Double Tenth , iaitu penentangan terhadap pendudukan tentera Jepun di Sabah yang diketuai oleh Albert Kwok ."
+    },
+    {
+      "source_id": "bab-3-7-u57",
+      "bm_original": "Sasaran serangan:",
+      "translate": "重点：Sasaran serangan:",
+      "key_points_zh": [
+        "重点：Sasaran serangan:"
+      ],
+      "bm_focus_phrase": "Sasaran serangan:"
+    },
+    {
+      "source_id": "bab-3-7-extra-51",
+      "bm_original": "pejabat pentadbiran Jepun",
+      "translate": "pejabat 行政 Jepun",
+      "key_points_zh": [
+        "pejabat 行政 Jepun"
+      ],
+      "bm_focus_phrase": "pejabat pentadbiran Jepun"
+    },
+    {
+      "source_id": "bab-3-7-extra-52",
+      "bm_original": "balai polis",
+      "translate": "重点：balai polis",
+      "key_points_zh": [
+        "重点：balai polis"
+      ],
+      "bm_focus_phrase": "balai polis"
+    },
+    {
+      "source_id": "bab-3-7-extra-53",
+      "bm_original": "kemudahan tentera Diraja Jepun",
+      "translate": "重点：kemudahan tentera Diraja Jepun",
+      "key_points_zh": [
+        "重点：kemudahan tentera Diraja Jepun"
+      ],
+      "bm_focus_phrase": "kemudahan tentera Diraja Jepun"
+    },
+    {
+      "source_id": "bab-3-7-u58",
+      "bm_original": "Kawasan serangan:",
+      "translate": "重点：Kawasan serangan:",
+      "key_points_zh": [
+        "重点：Kawasan serangan:"
+      ],
+      "bm_focus_phrase": "Kawasan serangan:"
+    },
+    {
+      "source_id": "bab-3-7-extra-54",
+      "bm_original": "Jesselton",
+      "translate": "重点：Jesselton",
+      "key_points_zh": [
+        "重点：Jesselton"
+      ],
+      "bm_focus_phrase": "Jesselton"
+    },
+    {
+      "source_id": "bab-3-7-extra-55",
+      "bm_original": "Kota Belud",
+      "translate": "重点：Kota Belud",
+      "key_points_zh": [
+        "重点：Kota Belud"
+      ],
+      "bm_focus_phrase": "Kota Belud"
+    },
+    {
+      "source_id": "bab-3-7-extra-56",
+      "bm_original": "Menggatal",
+      "translate": "重点：Menggatal",
+      "key_points_zh": [
+        "重点：Menggatal"
+      ],
+      "bm_focus_phrase": "Menggatal"
+    },
+    {
+      "source_id": "bab-3-7-extra-57",
+      "bm_original": "Tuaran",
+      "translate": "重点：Tuaran",
+      "key_points_zh": [
+        "重点：Tuaran"
+      ],
+      "bm_focus_phrase": "Tuaran"
+    },
+    {
+      "source_id": "bab-3-7-u59",
+      "bm_original": "Tentera Jepun kemudian melancarkan serangan balas dengan pantas dan kejam.",
+      "translate": "Tentera Jepun kemudian melancarkan serangan balas 以 pantas 与 kejam.",
+      "key_points_zh": [
+        "Tentera Jepun kemudian melancarkan serangan balas 以 pantas 与 kejam."
+      ],
+      "bm_focus_phrase": "Tentera Jepun kemudian melancarkan serangan balas dengan pantas dan kejam."
+    },
+    {
+      "source_id": "bab-3-7-u60",
+      "bm_original": "Perkampungan di pesisiran pantai diserang dan dibom. Beratus-ratus orang disoal siasat dan diseksa sehingga mati dalam usaha mencari pemimpin dan anggota pemberontak.",
+      "translate": "Perkampungan di pesisiran pantai diserang 与 dibom. Beratus-ratus orang disoal siasat 与 diseksa sehingga mati 在 usaha mencari 领袖 与 anggota pemberontak.",
+      "key_points_zh": [
+        "Perkampungan di pesisiran pantai diserang 与 dibom. Beratus-ratus orang disoal siasat 与 diseksa sehingga mati 在 usaha mencari 领袖 与 anggota pemberontak."
+      ],
+      "bm_focus_phrase": "Perkampungan di pesisiran pantai diserang dan dibom. Beratus-ratus orang disoal siasat dan diseksa sehingga mati dalam usaha mencari pemimpin dan anggota pemberontak."
+    },
+    {
+      "source_id": "bab-3-7-u61",
+      "bm_original": "Beliau bersama 175 orang lain kemudiannya dihukum bunuh di Petagas , manakala 131 orang lagi dipenjarakan di Labuan .",
+      "translate": "重点：Beliau bersama 175 orang lain kemudiannya dihukum bunuh di Petagas , manakala 131 orang lagi dipenjarakan di Labuan .",
+      "key_points_zh": [
+        "重点：Beliau bersama 175 orang lain kemudiannya dihukum bunuh di Petagas , manakala 131 orang lagi dipenjarakan di Labuan ."
+      ],
+      "bm_focus_phrase": "Beliau bersama 175 orang lain kemudiannya dihukum bunuh di Petagas , manakala 131 orang lagi dipenjarakan di Labuan ."
+    },
+    {
+      "source_id": "bab-3-7-u62",
+      "bm_original": "Selain itu, terdapat pasukan gerila anti-Jepun yang dipimpin oleh Datu Mustapha Datu Harun .",
+      "translate": "Selain 那, terdapat pasukan gerila anti-Jepun 的 dipimpin 由 Datu Mustapha Datu Harun .",
+      "key_points_zh": [
+        "Selain 那, terdapat pasukan gerila anti-Jepun 的 dipimpin 由 Datu Mustapha Datu Harun ."
+      ],
+      "bm_focus_phrase": "Selain itu, terdapat pasukan gerila anti-Jepun yang dipimpin oleh Datu Mustapha Datu Harun ."
+    },
+    {
+      "source_id": "b3-7-conclusion-board",
+      "bm_original": "Kesimpulan 📌 Perjuangan rakyat menentang Jepun memperlihatkan: ⚔️ keberanian yang luar biasa 🤝 kerjasama merentas kaum 🇲🇾 semangat nasionalisme yang tinggi 📌 Rakyat menentang Jepun melalui: 🪖 perjuangan bersenjata 🌿 gerila 🤝 kerjasama dengan pihak luar ✊ penentangan individu 💡 Semua bentuk perjuangan ini bukan sahaja melemahkan penguasaan Jepun, malah menyemai semangat kebangsaan yang semakin kuat dalam kalangan rakyat. 🚩 Perjuangan tersebut akhirnya menjadi antara asas penting yang mempercepatkan gerakan ke arah kemerdekaan negara.",
+      "translate": "Kesimpulan 📌 斗争 人民 反对 Jepun memperlihatkan: ⚔️ keberanian 的 luar biasa 🤝 kerjasama merentas kaum 🇲🇾 semangat 民族主义 的 tinggi 📌 人民 反对 Jepun 通过: 🪖 斗争 bersenjata 🌿 gerila 🤝 kerjasama 以 pihak luar ✊ 反对 individu 💡 Semua bentuk 斗争 这 bukan sahaja melemahkan penguasaan Jepun, malah menyemai semangat kebangsaan 的 semakin kuat 在 kalangan 人民. 🚩 斗争 tersebut akhirnya menjadi 其中 asas penting 的 mempercepatkan gerakan ke arah 独立 negara.",
+      "key_points_zh": [
+        "Kesimpulan 📌 斗争 人民 反对 Jepun memperlihatkan: ⚔️ keberanian 的 luar biasa 🤝 kerjasama merentas kaum 🇲🇾 semangat 民族主义 的 tinggi 📌 人民 反对 Jepun 通过: 🪖 斗争 bersenjata 🌿 gerila 🤝 kerjasama 以 pihak luar ✊ 反对 individu 💡 Semua bentuk 斗争 这 bukan sahaja melemahkan penguasaan Jepun, malah menyemai semangat kebangsaan 的 semakin kuat 在 kalangan 人民. 🚩 斗争 tersebut akhirnya menjadi 其中 asas penting 的 mempercepatkan gerakan ke arah 独立 negara."
+      ],
+      "bm_focus_phrase": "Kesimpulan 📌 Perjuangan rakyat menentang Jepun memperlihatkan: ⚔️ keberanian yang luar biasa 🤝 kerjasama merentas kaum 🇲🇾 semangat nasionalisme yang tinggi 📌 Rakyat menentang Jepun melalui: 🪖 perjuangan bersenjata 🌿 gerila 🤝 kerjasama dengan pihak luar ✊ penentangan individu 💡 Semua bentuk perjuangan ini bukan sahaja melemahkan penguasaan Jepun, malah menyemai semangat kebangsaan yang semakin kuat dalam kalangan rakyat. 🚩 Perjuangan tersebut akhirnya menjadi antara asas penting yang mempercepatkan gerakan ke arah kemerdekaan negara."
+    },
+    {
+      "source_id": "b3-7-conclusion-line-1",
+      "bm_original": "b3-7-conclusion-line-1",
+      "translate": "重点：b3-7-conclusion-line-1",
+      "key_points_zh": [
+        "重点：b3-7-conclusion-line-1"
+      ],
+      "bm_focus_phrase": "b3-7-conclusion-line-1"
+    },
+    {
+      "source_id": "bab-3-7-extra-58",
+      "bm_original": "bab-3-7-extra-58",
+      "translate": "重点：bab-3-7-extra-58",
+      "key_points_zh": [
+        "重点：bab-3-7-extra-58"
+      ],
+      "bm_focus_phrase": "bab-3-7-extra-58"
+    },
+    {
+      "source_id": "bab-3-7-extra-59",
+      "bm_original": "bab-3-7-extra-59",
+      "translate": "重点：bab-3-7-extra-59",
+      "key_points_zh": [
+        "重点：bab-3-7-extra-59"
+      ],
+      "bm_focus_phrase": "bab-3-7-extra-59"
+    },
+    {
+      "source_id": "bab-3-7-extra-60",
+      "bm_original": "bab-3-7-extra-60",
+      "translate": "重点：bab-3-7-extra-60",
+      "key_points_zh": [
+        "重点：bab-3-7-extra-60"
+      ],
+      "bm_focus_phrase": "bab-3-7-extra-60"
+    },
+    {
+      "source_id": "b3-7-conclusion-line-2",
+      "bm_original": "b3-7-conclusion-line-2",
+      "translate": "重点：b3-7-conclusion-line-2",
+      "key_points_zh": [
+        "重点：b3-7-conclusion-line-2"
+      ],
+      "bm_focus_phrase": "b3-7-conclusion-line-2"
+    },
+    {
+      "source_id": "bab-3-7-extra-61",
+      "bm_original": "bab-3-7-extra-61",
+      "translate": "重点：bab-3-7-extra-61",
+      "key_points_zh": [
+        "重点：bab-3-7-extra-61"
+      ],
+      "bm_focus_phrase": "bab-3-7-extra-61"
+    },
+    {
+      "source_id": "bab-3-7-extra-62",
+      "bm_original": "bab-3-7-extra-62",
+      "translate": "重点：bab-3-7-extra-62",
+      "key_points_zh": [
+        "重点：bab-3-7-extra-62"
+      ],
+      "bm_focus_phrase": "bab-3-7-extra-62"
+    },
+    {
+      "source_id": "bab-3-7-extra-63",
+      "bm_original": "bab-3-7-extra-63",
+      "translate": "重点：bab-3-7-extra-63",
+      "key_points_zh": [
+        "重点：bab-3-7-extra-63"
+      ],
+      "bm_focus_phrase": "bab-3-7-extra-63"
+    },
+    {
+      "source_id": "bab-3-7-extra-64",
+      "bm_original": "bab-3-7-extra-64",
+      "translate": "重点：bab-3-7-extra-64",
+      "key_points_zh": [
+        "重点：bab-3-7-extra-64"
+      ],
+      "bm_focus_phrase": "bab-3-7-extra-64"
+    },
+    {
+      "source_id": "b3-7-conclusion-line-3",
+      "bm_original": "b3-7-conclusion-line-3",
+      "translate": "重点：b3-7-conclusion-line-3",
+      "key_points_zh": [
+        "重点：b3-7-conclusion-line-3"
+      ],
+      "bm_focus_phrase": "b3-7-conclusion-line-3"
+    },
+    {
+      "source_id": "b3-7-conclusion-line-4",
+      "bm_original": "b3-7-conclusion-line-4",
+      "translate": "重点：b3-7-conclusion-line-4",
+      "key_points_zh": [
+        "重点：b3-7-conclusion-line-4"
+      ],
+      "bm_focus_phrase": "b3-7-conclusion-line-4"
+    }
+  ]
+}

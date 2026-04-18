@@ -1,1 +1,2735 @@
-{"units": []}
+{
+  "meta": {
+    "source_file": "notes/bab-6-3.html",
+    "rollout": "gelombang-1-manual-revision"
+  },
+  "units": [
+    {
+      "source_id": "bab-6-3-u80",
+      "bm_original": "Kerajaan melaksanakan pelbagai langkah untuk menangani ancaman komunis dari segi undang-undang , keselamatan , pentadbiran , psikologi dan rundingan .",
+      "translate": "Kerajaan melaksanakan pelbagai 步骤 为了 menangani ancaman komunis dari segi undang-undang , keselamatan , 行政 , psikologi 与 rundingan .",
+      "key_points_zh": [
+        "Kerajaan melaksanakan pelbagai 步骤 为了 menangani ancaman komunis dari segi undang-undang , keselamatan , 行政 , psikologi 与 rundingan ."
+      ],
+      "bm_focus_phrase": "Kerajaan melaksanakan pelbagai langkah untuk menangani ancaman komunis dari segi undang-undang , keselamatan , pentadbiran , psikologi dan rundingan ."
+    },
+    {
+      "source_id": "bab-6-3-u81",
+      "bm_original": "Usaha ini merangkumi penguatkuasaan Undang-Undang Darurat , pemerkasaan pasukan keselamatan, sistem pendaftaran kebangsaan, Rancangan Briggs dan tawaran pengampunan.",
+      "translate": "Usaha 这 merangkumi penguatkuasaan Undang-Undang Darurat , pemerkasaan pasukan keselamatan, sistem pendaftaran kebangsaan, Rancangan Briggs 与 tawaran pengampunan.",
+      "key_points_zh": [
+        "Usaha 这 merangkumi penguatkuasaan Undang-Undang Darurat , pemerkasaan pasukan keselamatan, sistem pendaftaran kebangsaan, Rancangan Briggs 与 tawaran pengampunan."
+      ],
+      "bm_focus_phrase": "Usaha ini merangkumi penguatkuasaan Undang-Undang Darurat , pemerkasaan pasukan keselamatan, sistem pendaftaran kebangsaan, Rancangan Briggs dan tawaran pengampunan."
+    },
+    {
+      "source_id": "bab-6-3-u82",
+      "bm_original": "Kerajaan juga melaksanakan Kempen Bulan Rakyat Melawan Penjahat , perintah berkurung dan perang saraf untuk melemahkan pengaruh komunis.",
+      "translate": "Kerajaan 也 melaksanakan Kempen Bulan 人民 Melawan Penjahat , perintah berkurung 与 perang saraf 为了 melemahkan pengaruh komunis.",
+      "key_points_zh": [
+        "Kerajaan 也 melaksanakan Kempen Bulan 人民 Melawan Penjahat , perintah berkurung 与 perang saraf 为了 melemahkan pengaruh komunis."
+      ],
+      "bm_focus_phrase": "Kerajaan juga melaksanakan Kempen Bulan Rakyat Melawan Penjahat , perintah berkurung dan perang saraf untuk melemahkan pengaruh komunis."
+    },
+    {
+      "source_id": "bab-6-3-u83",
+      "bm_original": "Selain tindakan keselamatan, kerajaan turut berusaha menamatkan konflik melalui Rundingan Baling , walaupun rundingan itu gagal.",
+      "translate": "Selain tindakan keselamatan, 政府 turut berusaha menamatkan konflik 通过 Rundingan Baling , walaupun rundingan 那 失败.",
+      "key_points_zh": [
+        "Selain tindakan keselamatan, 政府 turut berusaha menamatkan konflik 通过 Rundingan Baling , walaupun rundingan 那 失败."
+      ],
+      "bm_focus_phrase": "Selain tindakan keselamatan, kerajaan turut berusaha menamatkan konflik melalui Rundingan Baling , walaupun rundingan itu gagal."
+    },
+    {
+      "source_id": "bab-6-3-u01",
+      "bm_original": "Bagi menangani ancaman komunis, kerajaan telah melaksanakan pelbagai langkah dari segi undang-undang, keselamatan, pentadbiran, psikologi dan rundingan.",
+      "translate": "Bagi menangani ancaman komunis, 政府 已经 melaksanakan pelbagai 步骤 dari segi undang-undang, keselamatan, 行政, psikologi 与 rundingan.",
+      "key_points_zh": [
+        "Bagi menangani ancaman komunis, 政府 已经 melaksanakan pelbagai 步骤 dari segi undang-undang, keselamatan, 行政, psikologi 与 rundingan."
+      ],
+      "bm_focus_phrase": "Bagi menangani ancaman komunis, kerajaan telah melaksanakan pelbagai langkah dari segi undang-undang, keselamatan, pentadbiran, psikologi dan rundingan."
+    },
+    {
+      "source_id": "bab-6-3-u02",
+      "bm_original": "Usaha ini dilakukan untuk melemahkan gerakan komunis, melindungi rakyat dan memulihkan keamanan negara.",
+      "translate": "Usaha 这 dilakukan 为了 melemahkan gerakan komunis, melindungi 人民 与 memulihkan keamanan negara.",
+      "key_points_zh": [
+        "Usaha 这 dilakukan 为了 melemahkan gerakan komunis, melindungi 人民 与 memulihkan keamanan negara."
+      ],
+      "bm_focus_phrase": "Usaha ini dilakukan untuk melemahkan gerakan komunis, melindungi rakyat dan memulihkan keamanan negara."
+    },
+    {
+      "source_id": "bab-6-3-u03",
+      "bm_original": "Antara usaha utama kerajaan ialah:",
+      "translate": "Antara usaha 主要 政府 是:",
+      "key_points_zh": [
+        "Antara usaha 主要 政府 是:"
+      ],
+      "bm_focus_phrase": "Antara usaha utama kerajaan ialah:"
+    },
+    {
+      "source_id": "bab-6-3-extra-1",
+      "bm_original": "1️⃣ penguatkuasaan Undang-Undang Darurat 🚨",
+      "translate": "重点：1️⃣ penguatkuasaan Undang-Undang Darurat 🚨",
+      "key_points_zh": [
+        "重点：1️⃣ penguatkuasaan Undang-Undang Darurat 🚨"
+      ],
+      "bm_focus_phrase": "1️⃣ penguatkuasaan Undang-Undang Darurat 🚨"
+    },
+    {
+      "source_id": "bab-6-3-extra-2",
+      "bm_original": "2️⃣ pemerkasaan pasukan keselamatan 👮🪖",
+      "translate": "重点：2️⃣ pemerkasaan pasukan keselamatan 👮🪖",
+      "key_points_zh": [
+        "重点：2️⃣ pemerkasaan pasukan keselamatan 👮🪖"
+      ],
+      "bm_focus_phrase": "2️⃣ pemerkasaan pasukan keselamatan 👮🪖"
+    },
+    {
+      "source_id": "bab-6-3-extra-3",
+      "bm_original": "3️⃣ pendaftaran kebangsaan dan kad pengenalan 🪪",
+      "translate": "3️⃣ pendaftaran kebangsaan 与 kad pengenalan 🪪",
+      "key_points_zh": [
+        "3️⃣ pendaftaran kebangsaan 与 kad pengenalan 🪪"
+      ],
+      "bm_focus_phrase": "3️⃣ pendaftaran kebangsaan dan kad pengenalan 🪪"
+    },
+    {
+      "source_id": "bab-6-3-extra-4",
+      "bm_original": "4️⃣ Rancangan Briggs 🏘️",
+      "translate": "重点：4️⃣ Rancangan Briggs 🏘️",
+      "key_points_zh": [
+        "重点：4️⃣ Rancangan Briggs 🏘️"
+      ],
+      "bm_focus_phrase": "4️⃣ Rancangan Briggs 🏘️"
+    },
+    {
+      "source_id": "bab-6-3-extra-5",
+      "bm_original": "5️⃣ tawaran pengampunan 🕊️",
+      "translate": "重点：5️⃣ tawaran pengampunan 🕊️",
+      "key_points_zh": [
+        "重点：5️⃣ tawaran pengampunan 🕊️"
+      ],
+      "bm_focus_phrase": "5️⃣ tawaran pengampunan 🕊️"
+    },
+    {
+      "source_id": "bab-6-3-extra-6",
+      "bm_original": "6️⃣ Kempen Bulan Rakyat Melawan Penjahat 📣",
+      "translate": "6️⃣ Kempen Bulan 人民 Melawan Penjahat 📣",
+      "key_points_zh": [
+        "6️⃣ Kempen Bulan 人民 Melawan Penjahat 📣"
+      ],
+      "bm_focus_phrase": "6️⃣ Kempen Bulan Rakyat Melawan Penjahat 📣"
+    },
+    {
+      "source_id": "bab-6-3-extra-7",
+      "bm_original": "7️⃣ perintah berkurung ⏰",
+      "translate": "重点：7️⃣ perintah berkurung ⏰",
+      "key_points_zh": [
+        "重点：7️⃣ perintah berkurung ⏰"
+      ],
+      "bm_focus_phrase": "7️⃣ perintah berkurung ⏰"
+    },
+    {
+      "source_id": "bab-6-3-extra-8",
+      "bm_original": "8️⃣ perang saraf 🧠",
+      "translate": "重点：8️⃣ perang saraf 🧠",
+      "key_points_zh": [
+        "重点：8️⃣ perang saraf 🧠"
+      ],
+      "bm_focus_phrase": "8️⃣ perang saraf 🧠"
+    },
+    {
+      "source_id": "bab-6-3-extra-9",
+      "bm_original": "9️⃣ Rundingan Baling 🤝",
+      "translate": "重点：9️⃣ Rundingan Baling 🤝",
+      "key_points_zh": [
+        "重点：9️⃣ Rundingan Baling 🤝"
+      ],
+      "bm_focus_phrase": "9️⃣ Rundingan Baling 🤝"
+    },
+    {
+      "source_id": "bab-6-3-u04",
+      "bm_original": "Bagi menguatkuasakan Undang-Undang Darurat , British mengambil beberapa tindakan tegas, antaranya:",
+      "translate": "重点：Bagi menguatkuasakan Undang-Undang Darurat , British mengambil beberapa tindakan tegas, antaranya:",
+      "key_points_zh": [
+        "重点：Bagi menguatkuasakan Undang-Undang Darurat , British mengambil beberapa tindakan tegas, antaranya:"
+      ],
+      "bm_focus_phrase": "Bagi menguatkuasakan Undang-Undang Darurat , British mengambil beberapa tindakan tegas, antaranya:"
+    },
+    {
+      "source_id": "bab-6-3-extra-10",
+      "bm_original": "menahan sesiapa sahaja yang disyaki terlibat dalam pergerakan komunis tanpa perbicaraan",
+      "translate": "menahan sesiapa sahaja 的 disyaki terlibat 在 pergerakan komunis tanpa perbicaraan",
+      "key_points_zh": [
+        "menahan sesiapa sahaja 的 disyaki terlibat 在 pergerakan komunis tanpa perbicaraan"
+      ],
+      "bm_focus_phrase": "menahan sesiapa sahaja yang disyaki terlibat dalam pergerakan komunis tanpa perbicaraan"
+    },
+    {
+      "source_id": "bab-6-3-extra-11",
+      "bm_original": "mengenakan hukuman berat kepada sesiapa sahaja yang membantu komunis",
+      "translate": "mengenakan hukuman berat 向 sesiapa sahaja 的 membantu komunis",
+      "key_points_zh": [
+        "mengenakan hukuman berat 向 sesiapa sahaja 的 membantu komunis"
+      ],
+      "bm_focus_phrase": "mengenakan hukuman berat kepada sesiapa sahaja yang membantu komunis"
+    },
+    {
+      "source_id": "bab-6-3-extra-12",
+      "bm_original": "mengetatkan undang-undang senjata api dengan mengenakan hukuman mati terhadap mereka yang membawa senjata api dan bahan letupan",
+      "translate": "mengetatkan undang-undang senjata api 以 mengenakan hukuman mati 针对 mereka 的 membawa senjata api 与 bahan letupan",
+      "key_points_zh": [
+        "mengetatkan undang-undang senjata api 以 mengenakan hukuman mati 针对 mereka 的 membawa senjata api 与 bahan letupan"
+      ],
+      "bm_focus_phrase": "mengetatkan undang-undang senjata api dengan mengenakan hukuman mati terhadap mereka yang membawa senjata api dan bahan letupan"
+    },
+    {
+      "source_id": "bab-6-3-extra-13",
+      "bm_original": "menggeledah rumah kediaman, memagar kampung, mengadakan perintah berkurung, mewujudkan Kampung Baru serta memindahkan dan menempatkan penduduk",
+      "translate": "menggeledah rumah kediaman, memagar kampung, mengadakan perintah berkurung, mewujudkan Kampung Baru 以及 memindahkan 与 menempatkan penduduk",
+      "key_points_zh": [
+        "menggeledah rumah kediaman, memagar kampung, mengadakan perintah berkurung, mewujudkan Kampung Baru 以及 memindahkan 与 menempatkan penduduk"
+      ],
+      "bm_focus_phrase": "menggeledah rumah kediaman, memagar kampung, mengadakan perintah berkurung, mewujudkan Kampung Baru serta memindahkan dan menempatkan penduduk"
+    },
+    {
+      "source_id": "bab-6-3-u05",
+      "bm_original": "British turut mengharamkan PKM dan parti politik berfahaman radikal seperti:",
+      "translate": "British turut mengharamkan PKM 与 parti 政治 berfahaman radikal seperti:",
+      "key_points_zh": [
+        "British turut mengharamkan PKM 与 parti 政治 berfahaman radikal seperti:"
+      ],
+      "bm_focus_phrase": "British turut mengharamkan PKM dan parti politik berfahaman radikal seperti:"
+    },
+    {
+      "source_id": "bab-6-3-extra-14",
+      "bm_original": "AWAS",
+      "translate": "重点：AWAS",
+      "key_points_zh": [
+        "重点：AWAS"
+      ],
+      "bm_focus_phrase": "AWAS"
+    },
+    {
+      "source_id": "bab-6-3-extra-15",
+      "bm_original": "Ikatan Pembela Tanah Air (PETA)",
+      "translate": "重点：Ikatan Pembela Tanah Air (PETA)",
+      "key_points_zh": [
+        "重点：Ikatan Pembela Tanah Air (PETA)"
+      ],
+      "bm_focus_phrase": "Ikatan Pembela Tanah Air (PETA)"
+    },
+    {
+      "source_id": "bab-6-3-extra-16",
+      "bm_original": "Pemuda Radikal Melayu (PERAM)",
+      "translate": "重点：Pemuda Radikal Melayu (PERAM)",
+      "key_points_zh": [
+        "重点：Pemuda Radikal Melayu (PERAM)"
+      ],
+      "bm_focus_phrase": "Pemuda Radikal Melayu (PERAM)"
+    },
+    {
+      "source_id": "bab-6-3-extra-17",
+      "bm_original": "PKMM",
+      "translate": "重点：PKMM",
+      "key_points_zh": [
+        "重点：PKMM"
+      ],
+      "bm_focus_phrase": "PKMM"
+    },
+    {
+      "source_id": "bab-6-3-extra-18",
+      "bm_original": "Hizbul Muslimin",
+      "translate": "重点：Hizbul Muslimin",
+      "key_points_zh": [
+        "重点：Hizbul Muslimin"
+      ],
+      "bm_focus_phrase": "Hizbul Muslimin"
+    },
+    {
+      "source_id": "bab-6-3-u06",
+      "bm_original": "British juga menangkap pemimpin gerakan radikal seperti:",
+      "translate": "British 也 menangkap 领袖 gerakan radikal seperti:",
+      "key_points_zh": [
+        "British 也 menangkap 领袖 gerakan radikal seperti:"
+      ],
+      "bm_focus_phrase": "British juga menangkap pemimpin gerakan radikal seperti:"
+    },
+    {
+      "source_id": "bab-6-3-extra-19",
+      "bm_original": "Ahmad Boestamam",
+      "translate": "重点：Ahmad Boestamam",
+      "key_points_zh": [
+        "重点：Ahmad Boestamam"
+      ],
+      "bm_focus_phrase": "Ahmad Boestamam"
+    },
+    {
+      "source_id": "bab-6-3-extra-20",
+      "bm_original": "Ishak Haji Muhammad",
+      "translate": "重点：Ishak Haji Muhammad",
+      "key_points_zh": [
+        "重点：Ishak Haji Muhammad"
+      ],
+      "bm_focus_phrase": "Ishak Haji Muhammad"
+    },
+    {
+      "source_id": "bab-6-3-extra-21",
+      "bm_original": "Abu Bakar al-Baqir",
+      "translate": "重点：Abu Bakar al-Baqir",
+      "key_points_zh": [
+        "重点：Abu Bakar al-Baqir"
+      ],
+      "bm_focus_phrase": "Abu Bakar al-Baqir"
+    },
+    {
+      "source_id": "bab-6-3-extra-22",
+      "bm_original": "Khatijah Sidek",
+      "translate": "重点：Khatijah Sidek",
+      "key_points_zh": [
+        "重点：Khatijah Sidek"
+      ],
+      "bm_focus_phrase": "Khatijah Sidek"
+    },
+    {
+      "source_id": "bab-6-3-u07",
+      "bm_original": "Langkah ini bertujuan mengekang pengaruh komunis daripada terus merebak.",
+      "translate": "步骤 这 bertujuan mengekang pengaruh komunis daripada terus merebak.",
+      "key_points_zh": [
+        "步骤 这 bertujuan mengekang pengaruh komunis daripada terus merebak."
+      ],
+      "bm_focus_phrase": "Langkah ini bertujuan mengekang pengaruh komunis daripada terus merebak."
+    },
+    {
+      "source_id": "bab-6-3-u08",
+      "bm_original": "British memperkasakan pasukan keselamatan tempatan untuk membanteras kegiatan komunis.",
+      "translate": "British memperkasakan pasukan keselamatan 本地 为了 membanteras kegiatan komunis.",
+      "key_points_zh": [
+        "British memperkasakan pasukan keselamatan 本地 为了 membanteras kegiatan komunis."
+      ],
+      "bm_focus_phrase": "British memperkasakan pasukan keselamatan tempatan untuk membanteras kegiatan komunis."
+    },
+    {
+      "source_id": "bab-6-3-u09",
+      "bm_original": "Pasukan yang terlibat boleh dibahagikan kepada tiga kumpulan utama:",
+      "translate": "Pasukan 的 terlibat 可以 dibahagikan 向 tiga kumpulan 主要:",
+      "key_points_zh": [
+        "Pasukan 的 terlibat 可以 dibahagikan 向 tiga kumpulan 主要:"
+      ],
+      "bm_focus_phrase": "Pasukan yang terlibat boleh dibahagikan kepada tiga kumpulan utama:"
+    },
+    {
+      "source_id": "bab-6-3-extra-23",
+      "bm_original": "Polis",
+      "translate": "重点：Polis",
+      "key_points_zh": [
+        "重点：Polis"
+      ],
+      "bm_focus_phrase": "Polis"
+    },
+    {
+      "source_id": "bab-6-3-extra-24",
+      "bm_original": "Tentera",
+      "translate": "重点：Tentera",
+      "key_points_zh": [
+        "重点：Tentera"
+      ],
+      "bm_focus_phrase": "Tentera"
+    },
+    {
+      "source_id": "bab-6-3-extra-25",
+      "bm_original": "Sukarelawan",
+      "translate": "重点：Sukarelawan",
+      "key_points_zh": [
+        "重点：Sukarelawan"
+      ],
+      "bm_focus_phrase": "Sukarelawan"
+    },
+    {
+      "source_id": "bab-6-3-extra-26",
+      "bm_original": "Ogos 1950 → Guy C. Madoc dilantik mengetuai badan perisikan",
+      "translate": "重点：Ogos 1950 → Guy C. Madoc dilantik mengetuai badan perisikan",
+      "key_points_zh": [
+        "重点：Ogos 1950 → Guy C. Madoc dilantik mengetuai badan perisikan"
+      ],
+      "bm_focus_phrase": "Ogos 1950 → Guy C. Madoc dilantik mengetuai badan perisikan"
+    },
+    {
+      "source_id": "bab-6-3-u10",
+      "bm_original": "Beliau menubuhkan:",
+      "translate": "Beliau 成立:",
+      "key_points_zh": [
+        "Beliau 成立:"
+      ],
+      "bm_focus_phrase": "Beliau menubuhkan:"
+    },
+    {
+      "source_id": "bab-6-3-extra-27",
+      "bm_original": "Cawangan Khas (Special Branch)",
+      "translate": "重点：Cawangan Khas (Special Branch)",
+      "key_points_zh": [
+        "重点：Cawangan Khas (Special Branch)"
+      ],
+      "bm_focus_phrase": "Cawangan Khas (Special Branch)"
+    },
+    {
+      "source_id": "bab-6-3-extra-28",
+      "bm_original": "yang kemudiannya menjadi sebahagian daripada pasukan polis",
+      "translate": "的 kemudiannya menjadi 部分 daripada pasukan polis",
+      "key_points_zh": [
+        "的 kemudiannya menjadi 部分 daripada pasukan polis"
+      ],
+      "bm_focus_phrase": "yang kemudiannya menjadi sebahagian daripada pasukan polis"
+    },
+    {
+      "source_id": "bab-6-3-u11",
+      "bm_original": "Peranan Cawangan Khas:",
+      "translate": "重点：Peranan Cawangan Khas:",
+      "key_points_zh": [
+        "重点：Peranan Cawangan Khas:"
+      ],
+      "bm_focus_phrase": "Peranan Cawangan Khas:"
+    },
+    {
+      "source_id": "bab-6-3-extra-29",
+      "bm_original": "menjalankan risikan",
+      "translate": "重点：menjalankan risikan",
+      "key_points_zh": [
+        "重点：menjalankan risikan"
+      ],
+      "bm_focus_phrase": "menjalankan risikan"
+    },
+    {
+      "source_id": "bab-6-3-extra-30",
+      "bm_original": "mengetahui operasi PKM",
+      "translate": "重点：mengetahui operasi PKM",
+      "key_points_zh": [
+        "重点：mengetahui operasi PKM"
+      ],
+      "bm_focus_phrase": "mengetahui operasi PKM"
+    },
+    {
+      "source_id": "bab-6-3-extra-31",
+      "bm_original": "menyusup masuk ke dalam organisasi PKM",
+      "translate": "menyusup masuk ke 在 organisasi PKM",
+      "key_points_zh": [
+        "menyusup masuk ke 在 organisasi PKM"
+      ],
+      "bm_focus_phrase": "menyusup masuk ke dalam organisasi PKM"
+    },
+    {
+      "source_id": "bab-6-3-extra-32",
+      "bm_original": "ada anggota yang menyamar sebagai komunis untuk mendapatkan maklumat",
+      "translate": "ada anggota 的 menyamar 作为 komunis 为了 取得 maklumat",
+      "key_points_zh": [
+        "ada anggota 的 menyamar 作为 komunis 为了 取得 maklumat"
+      ],
+      "bm_focus_phrase": "ada anggota yang menyamar sebagai komunis untuk mendapatkan maklumat"
+    },
+    {
+      "source_id": "bab-6-3-extra-33",
+      "bm_original": "British turut mengambil ramai anggota dalam kalangan orang Cina untuk menjejak komunis hingga ke kubu persembunyian",
+      "translate": "British turut mengambil ramai anggota 在 kalangan orang Cina 为了 menjejak komunis hingga ke kubu persembunyian",
+      "key_points_zh": [
+        "British turut mengambil ramai anggota 在 kalangan orang Cina 为了 menjejak komunis hingga ke kubu persembunyian"
+      ],
+      "bm_focus_phrase": "British turut mengambil ramai anggota dalam kalangan orang Cina untuk menjejak komunis hingga ke kubu persembunyian"
+    },
+    {
+      "source_id": "bab-6-3-u12",
+      "bm_original": "Kejayaan penyusupan ini memudahkan pasukan keselamatan merancang tindakan terhadap PKM.",
+      "translate": "Kejayaan penyusupan 这 memudahkan pasukan keselamatan merancang tindakan 针对 PKM.",
+      "key_points_zh": [
+        "Kejayaan penyusupan 这 memudahkan pasukan keselamatan merancang tindakan 针对 PKM."
+      ],
+      "bm_focus_phrase": "Kejayaan penyusupan ini memudahkan pasukan keselamatan merancang tindakan terhadap PKM."
+    },
+    {
+      "source_id": "bab-6-3-extra-34",
+      "bm_original": "1948 → ditubuhkan ketika Rancangan Briggs dilaksanakan",
+      "translate": "重点：1948 → ditubuhkan ketika Rancangan Briggs dilaksanakan",
+      "key_points_zh": [
+        "重点：1948 → ditubuhkan ketika Rancangan Briggs dilaksanakan"
+      ],
+      "bm_focus_phrase": "1948 → ditubuhkan ketika Rancangan Briggs dilaksanakan"
+    },
+    {
+      "source_id": "bab-6-3-u13",
+      "bm_original": "Seramai 24 ribu orang dilatih dan dihantar untuk:",
+      "translate": "Seramai 24 ribu orang dilatih 与 dihantar 为了:",
+      "key_points_zh": [
+        "Seramai 24 ribu orang dilatih 与 dihantar 为了:"
+      ],
+      "bm_focus_phrase": "Seramai 24 ribu orang dilatih dan dihantar untuk:"
+    },
+    {
+      "source_id": "bab-6-3-extra-35",
+      "bm_original": "mengawal ladang",
+      "translate": "重点：mengawal ladang",
+      "key_points_zh": [
+        "重点：mengawal ladang"
+      ],
+      "bm_focus_phrase": "mengawal ladang"
+    },
+    {
+      "source_id": "bab-6-3-extra-36",
+      "bm_original": "mengawal kawasan lombong",
+      "translate": "重点：mengawal kawasan lombong",
+      "key_points_zh": [
+        "重点：mengawal kawasan lombong"
+      ],
+      "bm_focus_phrase": "mengawal kawasan lombong"
+    },
+    {
+      "source_id": "bab-6-3-u14",
+      "bm_original": "Mereka menjadi barisan hadapan dalam menghadapi ancaman komunis.",
+      "translate": "Mereka menjadi barisan hadapan 在 menghadapi ancaman komunis.",
+      "key_points_zh": [
+        "Mereka menjadi barisan hadapan 在 menghadapi ancaman komunis."
+      ],
+      "bm_focus_phrase": "Mereka menjadi barisan hadapan dalam menghadapi ancaman komunis."
+    },
+    {
+      "source_id": "bab-6-3-u15",
+      "bm_original": "Pada asalnya, pasukan ini dikenali sebagai:",
+      "translate": "Pada asalnya, pasukan 这 dikenali 作为:",
+      "key_points_zh": [
+        "Pada asalnya, pasukan 这 dikenali 作为:"
+      ],
+      "bm_focus_phrase": "Pada asalnya, pasukan ini dikenali sebagai:"
+    },
+    {
+      "source_id": "bab-6-3-extra-37",
+      "bm_original": "Flying Squad",
+      "translate": "重点：Flying Squad",
+      "key_points_zh": [
+        "重点：Flying Squad"
+      ],
+      "bm_focus_phrase": "Flying Squad"
+    },
+    {
+      "source_id": "bab-6-3-extra-38",
+      "bm_original": "1951 → dinamakan Jungle Squad dan kemudian Jungle Companies",
+      "translate": "1951 → dinamakan Jungle Squad 与 kemudian Jungle Companies",
+      "key_points_zh": [
+        "1951 → dinamakan Jungle Squad 与 kemudian Jungle Companies"
+      ],
+      "bm_focus_phrase": "1951 → dinamakan Jungle Squad dan kemudian Jungle Companies"
+    },
+    {
+      "source_id": "bab-6-3-extra-39",
+      "bm_original": "1953 → disusun semula dan dinamakan Police Field Force (PFF)",
+      "translate": "1953 → disusun semula 与 dinamakan Police Field Force (PFF)",
+      "key_points_zh": [
+        "1953 → disusun semula 与 dinamakan Police Field Force (PFF)"
+      ],
+      "bm_focus_phrase": "1953 → disusun semula dan dinamakan Police Field Force (PFF)"
+    },
+    {
+      "source_id": "bab-6-3-extra-40",
+      "bm_original": "18 Oktober 1958 → dikenali sebagai Pasukan Polis Hutan",
+      "translate": "18 Oktober 1958 → dikenali 作为 Pasukan Polis Hutan",
+      "key_points_zh": [
+        "18 Oktober 1958 → dikenali 作为 Pasukan Polis Hutan"
+      ],
+      "bm_focus_phrase": "18 Oktober 1958 → dikenali sebagai Pasukan Polis Hutan"
+    },
+    {
+      "source_id": "bab-6-3-u16",
+      "bm_original": "Tugas mereka:",
+      "translate": "重点：Tugas mereka:",
+      "key_points_zh": [
+        "重点：Tugas mereka:"
+      ],
+      "bm_focus_phrase": "Tugas mereka:"
+    },
+    {
+      "source_id": "bab-6-3-extra-41",
+      "bm_original": "memburu komunis",
+      "translate": "重点：memburu komunis",
+      "key_points_zh": [
+        "重点：memburu komunis"
+      ],
+      "bm_focus_phrase": "memburu komunis"
+    },
+    {
+      "source_id": "bab-6-3-extra-42",
+      "bm_original": "membuat rondaan di pinggir hutan",
+      "translate": "重点：membuat rondaan di pinggir hutan",
+      "key_points_zh": [
+        "重点：membuat rondaan di pinggir hutan"
+      ],
+      "bm_focus_phrase": "membuat rondaan di pinggir hutan"
+    },
+    {
+      "source_id": "bab-6-3-extra-43",
+      "bm_original": "membawa bekalan makanan kepada pasukan di dalam hutan",
+      "translate": "membawa bekalan makanan 向 pasukan di 在 hutan",
+      "key_points_zh": [
+        "membawa bekalan makanan 向 pasukan di 在 hutan"
+      ],
+      "bm_focus_phrase": "membawa bekalan makanan kepada pasukan di dalam hutan"
+    },
+    {
+      "source_id": "bab-6-3-extra-44",
+      "bm_original": "menjaga kubu (jungle fort)",
+      "translate": "重点：menjaga kubu (jungle fort)",
+      "key_points_zh": [
+        "重点：menjaga kubu (jungle fort)"
+      ],
+      "bm_focus_phrase": "menjaga kubu (jungle fort)"
+    },
+    {
+      "source_id": "bab-6-3-extra-45",
+      "bm_original": "Ogos 1955 → polis wanita ditubuhkan",
+      "translate": "Ogos 1955 → polis 妇女 ditubuhkan",
+      "key_points_zh": [
+        "Ogos 1955 → polis 妇女 ditubuhkan"
+      ],
+      "bm_focus_phrase": "Ogos 1955 → polis wanita ditubuhkan"
+    },
+    {
+      "source_id": "bab-6-3-extra-46",
+      "bm_original": "Barbara D.R. Wentworth",
+      "translate": "重点：Barbara D.R. Wentworth",
+      "key_points_zh": [
+        "重点：Barbara D.R. Wentworth"
+      ],
+      "bm_focus_phrase": "Barbara D.R. Wentworth"
+    },
+    {
+      "source_id": "bab-6-3-extra-47",
+      "bm_original": "pegawai polis wanita pertama",
+      "translate": "pegawai polis 妇女 pertama",
+      "key_points_zh": [
+        "pegawai polis 妇女 pertama"
+      ],
+      "bm_focus_phrase": "pegawai polis wanita pertama"
+    },
+    {
+      "source_id": "bab-6-3-extra-48",
+      "bm_original": "ditugaskan melatih anggota baharu dan menyusun pasukan polis wanita",
+      "translate": "ditugaskan melatih anggota baharu 与 menyusun pasukan polis 妇女",
+      "key_points_zh": [
+        "ditugaskan melatih anggota baharu 与 menyusun pasukan polis 妇女"
+      ],
+      "bm_focus_phrase": "ditugaskan melatih anggota baharu dan menyusun pasukan polis wanita"
+    },
+    {
+      "source_id": "bab-6-3-extra-49",
+      "bm_original": "1956 → Senoi Praaq ditubuhkan",
+      "translate": "重点：1956 → Senoi Praaq ditubuhkan",
+      "key_points_zh": [
+        "重点：1956 → Senoi Praaq ditubuhkan"
+      ],
+      "bm_focus_phrase": "1956 → Senoi Praaq ditubuhkan"
+    },
+    {
+      "source_id": "bab-6-3-u17",
+      "bm_original": "Dalam bahasa Semai, Senoi Praaq bermaksud:",
+      "translate": "重点：Dalam bahasa Semai, Senoi Praaq bermaksud:",
+      "key_points_zh": [
+        "重点：Dalam bahasa Semai, Senoi Praaq bermaksud:"
+      ],
+      "bm_focus_phrase": "Dalam bahasa Semai, Senoi Praaq bermaksud:"
+    },
+    {
+      "source_id": "bab-6-3-extra-50",
+      "bm_original": "Urang Perang",
+      "translate": "重点：Urang Perang",
+      "key_points_zh": [
+        "重点：Urang Perang"
+      ],
+      "bm_focus_phrase": "Urang Perang"
+    },
+    {
+      "source_id": "bab-6-3-u18",
+      "bm_original": "Tugas mereka:",
+      "translate": "重点：Tugas mereka:",
+      "key_points_zh": [
+        "重点：Tugas mereka:"
+      ],
+      "bm_focus_phrase": "Tugas mereka:"
+    },
+    {
+      "source_id": "bab-6-3-extra-51",
+      "bm_original": "mengesan tempat persembunyian komunis di dalam hutan",
+      "translate": "mengesan tempat persembunyian komunis di 在 hutan",
+      "key_points_zh": [
+        "mengesan tempat persembunyian komunis di 在 hutan"
+      ],
+      "bm_focus_phrase": "mengesan tempat persembunyian komunis di dalam hutan"
+    },
+    {
+      "source_id": "bab-6-3-u19",
+      "bm_original": "Anggotanya terdiri daripada Orang Asli suku:",
+      "translate": "重点：Anggotanya terdiri daripada Orang Asli suku:",
+      "key_points_zh": [
+        "重点：Anggotanya terdiri daripada Orang Asli suku:"
+      ],
+      "bm_focus_phrase": "Anggotanya terdiri daripada Orang Asli suku:"
+    },
+    {
+      "source_id": "bab-6-3-extra-52",
+      "bm_original": "Senoi",
+      "translate": "重点：Senoi",
+      "key_points_zh": [
+        "重点：Senoi"
+      ],
+      "bm_focus_phrase": "Senoi"
+    },
+    {
+      "source_id": "bab-6-3-extra-53",
+      "bm_original": "Semai",
+      "translate": "重点：Semai",
+      "key_points_zh": [
+        "重点：Semai"
+      ],
+      "bm_focus_phrase": "Semai"
+    },
+    {
+      "source_id": "bab-6-3-extra-54",
+      "bm_original": "Temuan",
+      "translate": "重点：Temuan",
+      "key_points_zh": [
+        "重点：Temuan"
+      ],
+      "bm_focus_phrase": "Temuan"
+    },
+    {
+      "source_id": "bab-6-3-u20",
+      "bm_original": "Mereka terkenal dengan gelaran:",
+      "translate": "Mereka terkenal 以 gelaran:",
+      "key_points_zh": [
+        "Mereka terkenal 以 gelaran:"
+      ],
+      "bm_focus_phrase": "Mereka terkenal dengan gelaran:"
+    },
+    {
+      "source_id": "bab-6-3-extra-55",
+      "bm_original": "The Silent Killers",
+      "translate": "重点：The Silent Killers",
+      "key_points_zh": [
+        "重点：The Silent Killers"
+      ],
+      "bm_focus_phrase": "The Silent Killers"
+    },
+    {
+      "source_id": "bab-6-3-extra-56",
+      "bm_original": "Disember 1948 → terdapat 17 ribu orang anggota Auxiliary Police di seluruh Persekutuan Tanah Melayu",
+      "translate": "Disember 1948 → terdapat 17 ribu orang anggota Auxiliary Police di 全国 Persekutuan Tanah Melayu",
+      "key_points_zh": [
+        "Disember 1948 → terdapat 17 ribu orang anggota Auxiliary Police di 全国 Persekutuan Tanah Melayu"
+      ],
+      "bm_focus_phrase": "Disember 1948 → terdapat 17 ribu orang anggota Auxiliary Police di seluruh Persekutuan Tanah Melayu"
+    },
+    {
+      "source_id": "bab-6-3-u21",
+      "bm_original": "Peranan mereka:",
+      "translate": "重点：Peranan mereka:",
+      "key_points_zh": [
+        "重点：Peranan mereka:"
+      ],
+      "bm_focus_phrase": "Peranan mereka:"
+    },
+    {
+      "source_id": "bab-6-3-extra-57",
+      "bm_original": "mempertahankan bandar dan kampung daripada serangan komunis",
+      "translate": "mempertahankan bandar 与 kampung daripada serangan komunis",
+      "key_points_zh": [
+        "mempertahankan bandar 与 kampung daripada serangan komunis"
+      ],
+      "bm_focus_phrase": "mempertahankan bandar dan kampung daripada serangan komunis"
+    },
+    {
+      "source_id": "bab-6-3-extra-58",
+      "bm_original": "membantu polis menentang ancaman komunis",
+      "translate": "membantu polis 反对 ancaman komunis",
+      "key_points_zh": [
+        "membantu polis 反对 ancaman komunis"
+      ],
+      "bm_focus_phrase": "membantu polis menentang ancaman komunis"
+    },
+    {
+      "source_id": "bab-6-3-extra-59",
+      "bm_original": "1956 → anggota AP dijadikan Police Volunteer Reserve",
+      "translate": "重点：1956 → anggota AP dijadikan Police Volunteer Reserve",
+      "key_points_zh": [
+        "重点：1956 → anggota AP dijadikan Police Volunteer Reserve"
+      ],
+      "bm_focus_phrase": "1956 → anggota AP dijadikan Police Volunteer Reserve"
+    },
+    {
+      "source_id": "bab-6-3-extra-60",
+      "bm_original": "1933 → pasukan ini ditubuhkan",
+      "translate": "1933 → pasukan 这 ditubuhkan",
+      "key_points_zh": [
+        "1933 → pasukan 这 ditubuhkan"
+      ],
+      "bm_focus_phrase": "1933 → pasukan ini ditubuhkan"
+    },
+    {
+      "source_id": "bab-6-3-u22",
+      "bm_original": "Tugas utama:",
+      "translate": "Tugas 主要:",
+      "key_points_zh": [
+        "Tugas 主要:"
+      ],
+      "bm_focus_phrase": "Tugas utama:"
+    },
+    {
+      "source_id": "bab-6-3-extra-61",
+      "bm_original": "membanteras gerila komunis di dalam hutan",
+      "translate": "membanteras gerila komunis di 在 hutan",
+      "key_points_zh": [
+        "membanteras gerila komunis di 在 hutan"
+      ],
+      "bm_focus_phrase": "membanteras gerila komunis di dalam hutan"
+    },
+    {
+      "source_id": "bab-6-3-u23",
+      "bm_original": "Kerajaan juga melengkapkan tentera darat dengan:",
+      "translate": "Kerajaan 也 melengkapkan tentera darat 以:",
+      "key_points_zh": [
+        "Kerajaan 也 melengkapkan tentera darat 以:"
+      ],
+      "bm_focus_phrase": "Kerajaan juga melengkapkan tentera darat dengan:"
+    },
+    {
+      "source_id": "bab-6-3-extra-62",
+      "bm_original": "pasukan meriam",
+      "translate": "重点：pasukan meriam",
+      "key_points_zh": [
+        "重点：pasukan meriam"
+      ],
+      "bm_focus_phrase": "pasukan meriam"
+    },
+    {
+      "source_id": "bab-6-3-extra-63",
+      "bm_original": "pasukan bantuan lain",
+      "translate": "重点：pasukan bantuan lain",
+      "key_points_zh": [
+        "重点：pasukan bantuan lain"
+      ],
+      "bm_focus_phrase": "pasukan bantuan lain"
+    },
+    {
+      "source_id": "bab-6-3-u24",
+      "bm_original": "Rejimen Askar Melayu diperbesar daripada:",
+      "translate": "重点：Rejimen Askar Melayu diperbesar daripada:",
+      "key_points_zh": [
+        "重点：Rejimen Askar Melayu diperbesar daripada:"
+      ],
+      "bm_focus_phrase": "Rejimen Askar Melayu diperbesar daripada:"
+    },
+    {
+      "source_id": "bab-6-3-extra-64",
+      "bm_original": "3️⃣ rejimen ➡️ 7️⃣ rejimen",
+      "translate": "重点：3️⃣ rejimen ➡️ 7️⃣ rejimen",
+      "key_points_zh": [
+        "重点：3️⃣ rejimen ➡️ 7️⃣ rejimen"
+      ],
+      "bm_focus_phrase": "3️⃣ rejimen ➡️ 7️⃣ rejimen"
+    },
+    {
+      "source_id": "bab-6-3-u25",
+      "bm_original": "Pasukan ini mencapai prestasi cemerlang kerana berjaya:",
+      "translate": "Pasukan 这 mencapai prestasi cemerlang 因为 成功:",
+      "key_points_zh": [
+        "Pasukan 这 mencapai prestasi cemerlang 因为 成功:"
+      ],
+      "bm_focus_phrase": "Pasukan ini mencapai prestasi cemerlang kerana berjaya:"
+    },
+    {
+      "source_id": "bab-6-3-extra-65",
+      "bm_original": "menumpaskan anggota komunis",
+      "translate": "重点：menumpaskan anggota komunis",
+      "key_points_zh": [
+        "重点：menumpaskan anggota komunis"
+      ],
+      "bm_focus_phrase": "menumpaskan anggota komunis"
+    },
+    {
+      "source_id": "bab-6-3-extra-66",
+      "bm_original": "memusnahkan kubu operasi komunis",
+      "translate": "重点：memusnahkan kubu operasi komunis",
+      "key_points_zh": [
+        "重点：memusnahkan kubu operasi komunis"
+      ],
+      "bm_focus_phrase": "memusnahkan kubu operasi komunis"
+    },
+    {
+      "source_id": "bab-6-3-u26",
+      "bm_original": "Kerajaan membawa masuk askar Komanwel dari:",
+      "translate": "重点：Kerajaan membawa masuk askar Komanwel dari:",
+      "key_points_zh": [
+        "重点：Kerajaan membawa masuk askar Komanwel dari:"
+      ],
+      "bm_focus_phrase": "Kerajaan membawa masuk askar Komanwel dari:"
+    },
+    {
+      "source_id": "bab-6-3-extra-67",
+      "bm_original": "Britain",
+      "translate": "重点：Britain",
+      "key_points_zh": [
+        "重点：Britain"
+      ],
+      "bm_focus_phrase": "Britain"
+    },
+    {
+      "source_id": "bab-6-3-extra-68",
+      "bm_original": "Australia",
+      "translate": "重点：Australia",
+      "key_points_zh": [
+        "重点：Australia"
+      ],
+      "bm_focus_phrase": "Australia"
+    },
+    {
+      "source_id": "bab-6-3-extra-69",
+      "bm_original": "New Zealand",
+      "translate": "重点：New Zealand",
+      "key_points_zh": [
+        "重点：New Zealand"
+      ],
+      "bm_focus_phrase": "New Zealand"
+    },
+    {
+      "source_id": "bab-6-3-extra-70",
+      "bm_original": "India",
+      "translate": "重点：India",
+      "key_points_zh": [
+        "重点：India"
+      ],
+      "bm_focus_phrase": "India"
+    },
+    {
+      "source_id": "bab-6-3-extra-71",
+      "bm_original": "Afrika Timur",
+      "translate": "重点：Afrika Timur",
+      "key_points_zh": [
+        "重点：Afrika Timur"
+      ],
+      "bm_focus_phrase": "Afrika Timur"
+    },
+    {
+      "source_id": "bab-6-3-extra-72",
+      "bm_original": "Kenya",
+      "translate": "重点：Kenya",
+      "key_points_zh": [
+        "重点：Kenya"
+      ],
+      "bm_focus_phrase": "Kenya"
+    },
+    {
+      "source_id": "bab-6-3-extra-73",
+      "bm_original": "Uganda",
+      "translate": "重点：Uganda",
+      "key_points_zh": [
+        "重点：Uganda"
+      ],
+      "bm_focus_phrase": "Uganda"
+    },
+    {
+      "source_id": "bab-6-3-extra-74",
+      "bm_original": "Rhodesia",
+      "translate": "重点：Rhodesia",
+      "key_points_zh": [
+        "重点：Rhodesia"
+      ],
+      "bm_focus_phrase": "Rhodesia"
+    },
+    {
+      "source_id": "bab-6-3-extra-75",
+      "bm_original": "Fiji",
+      "translate": "重点：Fiji",
+      "key_points_zh": [
+        "重点：Fiji"
+      ],
+      "bm_focus_phrase": "Fiji"
+    },
+    {
+      "source_id": "bab-6-3-extra-76",
+      "bm_original": "1954 → terdapat 25 ribu askar Britain",
+      "translate": "重点：1954 → terdapat 25 ribu askar Britain",
+      "key_points_zh": [
+        "重点：1954 → terdapat 25 ribu askar Britain"
+      ],
+      "bm_focus_phrase": "1954 → terdapat 25 ribu askar Britain"
+    },
+    {
+      "source_id": "bab-6-3-extra-77",
+      "bm_original": "10 ribu askar Gurkha",
+      "translate": "重点：10 ribu askar Gurkha",
+      "key_points_zh": [
+        "重点：10 ribu askar Gurkha"
+      ],
+      "bm_focus_phrase": "10 ribu askar Gurkha"
+    },
+    {
+      "source_id": "bab-6-3-extra-78",
+      "bm_original": "1 batalion askar Afrika",
+      "translate": "重点：1 batalion askar Afrika",
+      "key_points_zh": [
+        "重点：1 batalion askar Afrika"
+      ],
+      "bm_focus_phrase": "1 batalion askar Afrika"
+    },
+    {
+      "source_id": "bab-6-3-extra-79",
+      "bm_original": "1 batalion rejimen Fiji",
+      "translate": "重点：1 batalion rejimen Fiji",
+      "key_points_zh": [
+        "重点：1 batalion rejimen Fiji"
+      ],
+      "bm_focus_phrase": "1 batalion rejimen Fiji"
+    },
+    {
+      "source_id": "bab-6-3-u27",
+      "bm_original": "Pasukan ini membantu memerangi komunis di Tanah Melayu .",
+      "translate": "Pasukan 这 membantu memerangi komunis di Tanah Melayu .",
+      "key_points_zh": [
+        "Pasukan 这 membantu memerangi komunis di Tanah Melayu ."
+      ],
+      "bm_focus_phrase": "Pasukan ini membantu memerangi komunis di Tanah Melayu ."
+    },
+    {
+      "source_id": "bab-6-3-u28",
+      "bm_original": "Pasukan ini terdiri daripada:",
+      "translate": "Pasukan 这 terdiri daripada:",
+      "key_points_zh": [
+        "Pasukan 这 terdiri daripada:"
+      ],
+      "bm_focus_phrase": "Pasukan ini terdiri daripada:"
+    },
+    {
+      "source_id": "bab-6-3-extra-80",
+      "bm_original": "orang Iban",
+      "translate": "重点：orang Iban",
+      "key_points_zh": [
+        "重点：orang Iban"
+      ],
+      "bm_focus_phrase": "orang Iban"
+    },
+    {
+      "source_id": "bab-6-3-u29",
+      "bm_original": "Tugas mereka:",
+      "translate": "重点：Tugas mereka:",
+      "key_points_zh": [
+        "重点：Tugas mereka:"
+      ],
+      "bm_focus_phrase": "Tugas mereka:"
+    },
+    {
+      "source_id": "bab-6-3-extra-81",
+      "bm_original": "menjejak persembunyian komunis di dalam hutan",
+      "translate": "menjejak persembunyian komunis di 在 hutan",
+      "key_points_zh": [
+        "menjejak persembunyian komunis di 在 hutan"
+      ],
+      "bm_focus_phrase": "menjejak persembunyian komunis di dalam hutan"
+    },
+    {
+      "source_id": "bab-6-3-u30",
+      "bm_original": "Kelebihan mereka:",
+      "translate": "重点：Kelebihan mereka:",
+      "key_points_zh": [
+        "重点：Kelebihan mereka:"
+      ],
+      "bm_focus_phrase": "Kelebihan mereka:"
+    },
+    {
+      "source_id": "bab-6-3-extra-82",
+      "bm_original": "mahir selok-belok hutan",
+      "translate": "重点：mahir selok-belok hutan",
+      "key_points_zh": [
+        "重点：mahir selok-belok hutan"
+      ],
+      "bm_focus_phrase": "mahir selok-belok hutan"
+    },
+    {
+      "source_id": "bab-6-3-u31",
+      "bm_original": "Cogan kata:",
+      "translate": "重点：Cogan kata:",
+      "key_points_zh": [
+        "重点：Cogan kata:"
+      ],
+      "bm_focus_phrase": "Cogan kata:"
+    },
+    {
+      "source_id": "bab-6-3-extra-83",
+      "bm_original": "“Agi Idup Agi Ngelaban”",
+      "translate": "重点：“Agi Idup Agi Ngelaban”",
+      "key_points_zh": [
+        "重点：“Agi Idup Agi Ngelaban”"
+      ],
+      "bm_focus_phrase": "“Agi Idup Agi Ngelaban”"
+    },
+    {
+      "source_id": "bab-6-3-extra-84",
+      "bm_original": "bermaksud “Selagi hidup selagi melawan”",
+      "translate": "重点：bermaksud “Selagi hidup selagi melawan”",
+      "key_points_zh": [
+        "重点：bermaksud “Selagi hidup selagi melawan”"
+      ],
+      "bm_focus_phrase": "bermaksud “Selagi hidup selagi melawan”"
+    },
+    {
+      "source_id": "bab-6-3-u32",
+      "bm_original": "Banyak kem dan markas komunis berjaya dimusnahkan oleh pasukan ini.",
+      "translate": "Banyak kem 与 markas komunis 成功 dimusnahkan 由 pasukan 这.",
+      "key_points_zh": [
+        "Banyak kem 与 markas komunis 成功 dimusnahkan 由 pasukan 这."
+      ],
+      "bm_focus_phrase": "Banyak kem dan markas komunis berjaya dimusnahkan oleh pasukan ini."
+    },
+    {
+      "source_id": "bab-6-3-u33",
+      "bm_original": "Home Guard ialah pasukan Pengawal Kampung.",
+      "translate": "Home Guard 是 pasukan Pengawal Kampung.",
+      "key_points_zh": [
+        "Home Guard 是 pasukan Pengawal Kampung."
+      ],
+      "bm_focus_phrase": "Home Guard ialah pasukan Pengawal Kampung."
+    },
+    {
+      "source_id": "bab-6-3-u34",
+      "bm_original": "Tugas mereka:",
+      "translate": "重点：Tugas mereka:",
+      "key_points_zh": [
+        "重点：Tugas mereka:"
+      ],
+      "bm_focus_phrase": "Tugas mereka:"
+    },
+    {
+      "source_id": "bab-6-3-extra-85",
+      "bm_original": "membantu menyekat bekalan makanan dan ubatan daripada jatuh ke tangan komunis",
+      "translate": "membantu menyekat bekalan makanan 与 ubatan daripada jatuh ke tangan komunis",
+      "key_points_zh": [
+        "membantu menyekat bekalan makanan 与 ubatan daripada jatuh ke tangan komunis"
+      ],
+      "bm_focus_phrase": "membantu menyekat bekalan makanan dan ubatan daripada jatuh ke tangan komunis"
+    },
+    {
+      "source_id": "bab-6-3-extra-86",
+      "bm_original": "mengawal kampung dan pekan",
+      "translate": "mengawal kampung 与 pekan",
+      "key_points_zh": [
+        "mengawal kampung 与 pekan"
+      ],
+      "bm_focus_phrase": "mengawal kampung dan pekan"
+    },
+    {
+      "source_id": "bab-6-3-u35",
+      "bm_original": "Anggotanya diberikan latihan ketenteraan.",
+      "translate": "重点：Anggotanya diberikan latihan ketenteraan.",
+      "key_points_zh": [
+        "重点：Anggotanya diberikan latihan ketenteraan."
+      ],
+      "bm_focus_phrase": "Anggotanya diberikan latihan ketenteraan."
+    },
+    {
+      "source_id": "bab-6-3-extra-87",
+      "bm_original": "Julai 1951 → terdapat 79 ribu orang Home Guard di Persekutuan Tanah Melayu",
+      "translate": "重点：Julai 1951 → terdapat 79 ribu orang Home Guard di Persekutuan Tanah Melayu",
+      "key_points_zh": [
+        "重点：Julai 1951 → terdapat 79 ribu orang Home Guard di Persekutuan Tanah Melayu"
+      ],
+      "bm_focus_phrase": "Julai 1951 → terdapat 79 ribu orang Home Guard di Persekutuan Tanah Melayu"
+    },
+    {
+      "source_id": "bab-6-3-u36",
+      "bm_original": "Mereka berjaya membantu:",
+      "translate": "Mereka 成功 membantu:",
+      "key_points_zh": [
+        "Mereka 成功 membantu:"
+      ],
+      "bm_focus_phrase": "Mereka berjaya membantu:"
+    },
+    {
+      "source_id": "bab-6-3-extra-88",
+      "bm_original": "mengamankan kampung",
+      "translate": "重点：mengamankan kampung",
+      "key_points_zh": [
+        "重点：mengamankan kampung"
+      ],
+      "bm_focus_phrase": "mengamankan kampung"
+    },
+    {
+      "source_id": "bab-6-3-extra-89",
+      "bm_original": "melindungi pekerja lombong bijih timah daripada serangan komunis",
+      "translate": "重点：melindungi pekerja lombong bijih timah daripada serangan komunis",
+      "key_points_zh": [
+        "重点：melindungi pekerja lombong bijih timah daripada serangan komunis"
+      ],
+      "bm_focus_phrase": "melindungi pekerja lombong bijih timah daripada serangan komunis"
+    },
+    {
+      "source_id": "bab-6-3-extra-90",
+      "bm_original": "23 Julai 1948 → kerajaan memperkenalkan sistem pendaftaran kebangsaan dan kad pengenalan",
+      "translate": "23 Julai 1948 → 政府 memperkenalkan sistem pendaftaran kebangsaan 与 kad pengenalan",
+      "key_points_zh": [
+        "23 Julai 1948 → 政府 memperkenalkan sistem pendaftaran kebangsaan 与 kad pengenalan"
+      ],
+      "bm_focus_phrase": "23 Julai 1948 → kerajaan memperkenalkan sistem pendaftaran kebangsaan dan kad pengenalan"
+    },
+    {
+      "source_id": "bab-6-3-u37",
+      "bm_original": "Tujuan utama:",
+      "translate": "目的 主要:",
+      "key_points_zh": [
+        "目的 主要:"
+      ],
+      "bm_focus_phrase": "Tujuan utama:"
+    },
+    {
+      "source_id": "bab-6-3-extra-91",
+      "bm_original": "mengawal pergerakan penduduk",
+      "translate": "重点：mengawal pergerakan penduduk",
+      "key_points_zh": [
+        "重点：mengawal pergerakan penduduk"
+      ],
+      "bm_focus_phrase": "mengawal pergerakan penduduk"
+    },
+    {
+      "source_id": "bab-6-3-extra-92",
+      "bm_original": "memudahkan pihak keselamatan membezakan orang awam dengan komunis",
+      "translate": "memudahkan pihak keselamatan membezakan orang awam 以 komunis",
+      "key_points_zh": [
+        "memudahkan pihak keselamatan membezakan orang awam 以 komunis"
+      ],
+      "bm_focus_phrase": "memudahkan pihak keselamatan membezakan orang awam dengan komunis"
+    },
+    {
+      "source_id": "bab-6-3-u38",
+      "bm_original": "Di bawah peraturan ini:",
+      "translate": "Di bawah peraturan 这:",
+      "key_points_zh": [
+        "Di bawah peraturan 这:"
+      ],
+      "bm_focus_phrase": "Di bawah peraturan ini:"
+    },
+    {
+      "source_id": "bab-6-3-extra-93",
+      "bm_original": "setiap lelaki, wanita dan kanak-kanak berumur 12 tahun ke atas wajib mendaftarkan diri",
+      "translate": "setiap lelaki, 妇女 与 kanak-kanak berumur 12 年 ke atas wajib mendaftarkan diri",
+      "key_points_zh": [
+        "setiap lelaki, 妇女 与 kanak-kanak berumur 12 年 ke atas wajib mendaftarkan diri"
+      ],
+      "bm_focus_phrase": "setiap lelaki, wanita dan kanak-kanak berumur 12 tahun ke atas wajib mendaftarkan diri"
+    },
+    {
+      "source_id": "bab-6-3-extra-94",
+      "bm_original": "orang awam mesti membawa kad pengenalan ke mana-mana sahaja",
+      "translate": "重点：orang awam mesti membawa kad pengenalan ke mana-mana sahaja",
+      "key_points_zh": [
+        "重点：orang awam mesti membawa kad pengenalan ke mana-mana sahaja"
+      ],
+      "bm_focus_phrase": "orang awam mesti membawa kad pengenalan ke mana-mana sahaja"
+    },
+    {
+      "source_id": "bab-6-3-u39",
+      "bm_original": "Langkah ini penting untuk mengawal pergerakan penduduk semasa darurat.",
+      "translate": "步骤 这 penting 为了 mengawal pergerakan penduduk semasa darurat.",
+      "key_points_zh": [
+        "步骤 这 penting 为了 mengawal pergerakan penduduk semasa darurat."
+      ],
+      "bm_focus_phrase": "Langkah ini penting untuk mengawal pergerakan penduduk semasa darurat."
+    },
+    {
+      "source_id": "bab-6-3-extra-95",
+      "bm_original": "1950 → Sir Henry Gurney melancarkan Rancangan Briggs",
+      "translate": "重点：1950 → Sir Henry Gurney melancarkan Rancangan Briggs",
+      "key_points_zh": [
+        "重点：1950 → Sir Henry Gurney melancarkan Rancangan Briggs"
+      ],
+      "bm_focus_phrase": "1950 → Sir Henry Gurney melancarkan Rancangan Briggs"
+    },
+    {
+      "source_id": "bab-6-3-extra-96",
+      "bm_original": "Leftenan Jeneral Sir Harold Rowdon Briggs → dilantik sebagai Pengarah Operasi",
+      "translate": "Leftenan Jeneral Sir Harold Rowdon Briggs → dilantik 作为 Pengarah Operasi",
+      "key_points_zh": [
+        "Leftenan Jeneral Sir Harold Rowdon Briggs → dilantik 作为 Pengarah Operasi"
+      ],
+      "bm_focus_phrase": "Leftenan Jeneral Sir Harold Rowdon Briggs → dilantik sebagai Pengarah Operasi"
+    },
+    {
+      "source_id": "bab-6-3-u40",
+      "bm_original": "Tujuan utama Rancangan Briggs ialah:",
+      "translate": "目的 主要 Rancangan Briggs 是:",
+      "key_points_zh": [
+        "目的 主要 Rancangan Briggs 是:"
+      ],
+      "bm_focus_phrase": "Tujuan utama Rancangan Briggs ialah:"
+    },
+    {
+      "source_id": "bab-6-3-extra-97",
+      "bm_original": "memutuskan hubungan antara PKM dengan Min Yuen",
+      "translate": "memutuskan hubungan 其中 PKM 以 Min Yuen",
+      "key_points_zh": [
+        "memutuskan hubungan 其中 PKM 以 Min Yuen"
+      ],
+      "bm_focus_phrase": "memutuskan hubungan antara PKM dengan Min Yuen"
+    },
+    {
+      "source_id": "bab-6-3-u41",
+      "bm_original": "Min Yuen membekalkan:",
+      "translate": "重点：Min Yuen membekalkan:",
+      "key_points_zh": [
+        "重点：Min Yuen membekalkan:"
+      ],
+      "bm_focus_phrase": "Min Yuen membekalkan:"
+    },
+    {
+      "source_id": "bab-6-3-extra-98",
+      "bm_original": "makanan",
+      "translate": "重点：makanan",
+      "key_points_zh": [
+        "重点：makanan"
+      ],
+      "bm_focus_phrase": "makanan"
+    },
+    {
+      "source_id": "bab-6-3-extra-99",
+      "bm_original": "senjata",
+      "translate": "重点：senjata",
+      "key_points_zh": [
+        "重点：senjata"
+      ],
+      "bm_focus_phrase": "senjata"
+    },
+    {
+      "source_id": "bab-6-3-extra-100",
+      "bm_original": "maklumat",
+      "translate": "重点：maklumat",
+      "key_points_zh": [
+        "重点：maklumat"
+      ],
+      "bm_focus_phrase": "maklumat"
+    },
+    {
+      "source_id": "bab-6-3-extra-101",
+      "bm_original": "ubat-ubatan",
+      "translate": "重点：ubat-ubatan",
+      "key_points_zh": [
+        "重点：ubat-ubatan"
+      ],
+      "bm_focus_phrase": "ubat-ubatan"
+    },
+    {
+      "source_id": "bab-6-3-extra-102",
+      "bm_original": "mendapatkan bekalan makanan dan wang kepada komunis",
+      "translate": "取得 bekalan makanan 与 wang 向 komunis",
+      "key_points_zh": [
+        "取得 bekalan makanan 与 wang 向 komunis"
+      ],
+      "bm_focus_phrase": "mendapatkan bekalan makanan dan wang kepada komunis"
+    },
+    {
+      "source_id": "bab-6-3-extra-103",
+      "bm_original": "melakukan peras ugut",
+      "translate": "重点：melakukan peras ugut",
+      "key_points_zh": [
+        "重点：melakukan peras ugut"
+      ],
+      "bm_focus_phrase": "melakukan peras ugut"
+    },
+    {
+      "source_id": "bab-6-3-extra-104",
+      "bm_original": "merompak",
+      "translate": "重点：merompak",
+      "key_points_zh": [
+        "重点：merompak"
+      ],
+      "bm_focus_phrase": "merompak"
+    },
+    {
+      "source_id": "bab-6-3-extra-105",
+      "bm_original": "menjalankan propaganda",
+      "translate": "重点：menjalankan propaganda",
+      "key_points_zh": [
+        "重点：menjalankan propaganda"
+      ],
+      "bm_focus_phrase": "menjalankan propaganda"
+    },
+    {
+      "source_id": "bab-6-3-extra-106",
+      "bm_original": "melakukan perisikan dan sabotaj",
+      "translate": "melakukan perisikan 与 sabotaj",
+      "key_points_zh": [
+        "melakukan perisikan 与 sabotaj"
+      ],
+      "bm_focus_phrase": "melakukan perisikan dan sabotaj"
+    },
+    {
+      "source_id": "bab-6-3-extra-107",
+      "bm_original": "merekrut ahli baharu",
+      "translate": "重点：merekrut ahli baharu",
+      "key_points_zh": [
+        "重点：merekrut ahli baharu"
+      ],
+      "bm_focus_phrase": "merekrut ahli baharu"
+    },
+    {
+      "source_id": "bab-6-3-extra-108",
+      "bm_original": "membantu kegiatan politik",
+      "translate": "membantu kegiatan 政治",
+      "key_points_zh": [
+        "membantu kegiatan 政治"
+      ],
+      "bm_focus_phrase": "membantu kegiatan politik"
+    },
+    {
+      "source_id": "bab-6-3-u42",
+      "bm_original": "Min Yuen bergerak:",
+      "translate": "重点：Min Yuen bergerak:",
+      "key_points_zh": [
+        "重点：Min Yuen bergerak:"
+      ],
+      "bm_focus_phrase": "Min Yuen bergerak:"
+    },
+    {
+      "source_id": "bab-6-3-extra-109",
+      "bm_original": "pada waktu malam",
+      "translate": "于 waktu malam",
+      "key_points_zh": [
+        "于 waktu malam"
+      ],
+      "bm_focus_phrase": "pada waktu malam"
+    },
+    {
+      "source_id": "bab-6-3-extra-110",
+      "bm_original": "dalam kalangan rakyat",
+      "translate": "在 kalangan 人民",
+      "key_points_zh": [
+        "在 kalangan 人民"
+      ],
+      "bm_focus_phrase": "dalam kalangan rakyat"
+    },
+    {
+      "source_id": "bab-6-3-extra-111",
+      "bm_original": "tanpa senjata api",
+      "translate": "重点：tanpa senjata api",
+      "key_points_zh": [
+        "重点：tanpa senjata api"
+      ],
+      "bm_focus_phrase": "tanpa senjata api"
+    },
+    {
+      "source_id": "bab-6-3-u43",
+      "bm_original": "Penduduk setinggan di pinggir hutan dipaksa berpindah ke petempatan baharu yang dikenali sebagai:",
+      "translate": "Penduduk setinggan di pinggir hutan dipaksa berpindah ke petempatan baharu 的 dikenali 作为:",
+      "key_points_zh": [
+        "Penduduk setinggan di pinggir hutan dipaksa berpindah ke petempatan baharu 的 dikenali 作为:"
+      ],
+      "bm_focus_phrase": "Penduduk setinggan di pinggir hutan dipaksa berpindah ke petempatan baharu yang dikenali sebagai:"
+    },
+    {
+      "source_id": "bab-6-3-extra-112",
+      "bm_original": "Kampung Baru",
+      "translate": "重点：Kampung Baru",
+      "key_points_zh": [
+        "重点：Kampung Baru"
+      ],
+      "bm_focus_phrase": "Kampung Baru"
+    },
+    {
+      "source_id": "bab-6-3-u44",
+      "bm_original": "Kampung Baru dilengkapi dengan:",
+      "translate": "Kampung Baru dilengkapi 以:",
+      "key_points_zh": [
+        "Kampung Baru dilengkapi 以:"
+      ],
+      "bm_focus_phrase": "Kampung Baru dilengkapi dengan:"
+    },
+    {
+      "source_id": "bab-6-3-extra-113",
+      "bm_original": "tempat tinggal",
+      "translate": "重点：tempat tinggal",
+      "key_points_zh": [
+        "重点：tempat tinggal"
+      ],
+      "bm_focus_phrase": "tempat tinggal"
+    },
+    {
+      "source_id": "bab-6-3-extra-114",
+      "bm_original": "bekalan elektrik",
+      "translate": "重点：bekalan elektrik",
+      "key_points_zh": [
+        "重点：bekalan elektrik"
+      ],
+      "bm_focus_phrase": "bekalan elektrik"
+    },
+    {
+      "source_id": "bab-6-3-extra-115",
+      "bm_original": "air paip",
+      "translate": "重点：air paip",
+      "key_points_zh": [
+        "重点：air paip"
+      ],
+      "bm_focus_phrase": "air paip"
+    },
+    {
+      "source_id": "bab-6-3-extra-116",
+      "bm_original": "sekolah",
+      "translate": "重点：sekolah",
+      "key_points_zh": [
+        "重点：sekolah"
+      ],
+      "bm_focus_phrase": "sekolah"
+    },
+    {
+      "source_id": "bab-6-3-extra-117",
+      "bm_original": "kemudahan kesihatan",
+      "translate": "重点：kemudahan kesihatan",
+      "key_points_zh": [
+        "重点：kemudahan kesihatan"
+      ],
+      "bm_focus_phrase": "kemudahan kesihatan"
+    },
+    {
+      "source_id": "bab-6-3-extra-118",
+      "bm_original": "pusat komuniti",
+      "translate": "重点：pusat komuniti",
+      "key_points_zh": [
+        "重点：pusat komuniti"
+      ],
+      "bm_focus_phrase": "pusat komuniti"
+    },
+    {
+      "source_id": "bab-6-3-extra-119",
+      "bm_original": "rumah ibadat",
+      "translate": "重点：rumah ibadat",
+      "key_points_zh": [
+        "重点：rumah ibadat"
+      ],
+      "bm_focus_phrase": "rumah ibadat"
+    },
+    {
+      "source_id": "bab-6-3-u45",
+      "bm_original": "Jawatankuasa kampung ditubuhkan untuk memelihara dan memperbaik kemudahan.",
+      "translate": "Jawatankuasa kampung ditubuhkan 为了 memelihara 与 memperbaik kemudahan.",
+      "key_points_zh": [
+        "Jawatankuasa kampung ditubuhkan 为了 memelihara 与 memperbaik kemudahan."
+      ],
+      "bm_focus_phrase": "Jawatankuasa kampung ditubuhkan untuk memelihara dan memperbaik kemudahan."
+    },
+    {
+      "source_id": "bab-6-3-u46",
+      "bm_original": "Kampung Baru juga:",
+      "translate": "Kampung Baru 也:",
+      "key_points_zh": [
+        "Kampung Baru 也:"
+      ],
+      "bm_focus_phrase": "Kampung Baru juga:"
+    },
+    {
+      "source_id": "bab-6-3-extra-120",
+      "bm_original": "dipagari dengan kawat berduri",
+      "translate": "dipagari 以 kawat berduri",
+      "key_points_zh": [
+        "dipagari 以 kawat berduri"
+      ],
+      "bm_focus_phrase": "dipagari dengan kawat berduri"
+    },
+    {
+      "source_id": "bab-6-3-extra-121",
+      "bm_original": "dikawal oleh Special Constables",
+      "translate": "dikawal 由 Special Constables",
+      "key_points_zh": [
+        "dikawal 由 Special Constables"
+      ],
+      "bm_focus_phrase": "dikawal oleh Special Constables"
+    },
+    {
+      "source_id": "bab-6-3-extra-122",
+      "bm_original": "Sehingga Mac 1952 → lebih daripada 423 ribu orang dipindahkan ke 410 buah Kampung Baru",
+      "translate": "Sehingga Mac 1952 → 更 daripada 423 ribu orang dipindahkan ke 410 buah Kampung Baru",
+      "key_points_zh": [
+        "Sehingga Mac 1952 → 更 daripada 423 ribu orang dipindahkan ke 410 buah Kampung Baru"
+      ],
+      "bm_focus_phrase": "Sehingga Mac 1952 → lebih daripada 423 ribu orang dipindahkan ke 410 buah Kampung Baru"
+    },
+    {
+      "source_id": "bab-6-3-u47",
+      "bm_original": "Rancangan Briggs merupakan langkah yang sangat berkesan untuk melemahkan gerakan komunis.",
+      "translate": "Rancangan Briggs merupakan 步骤 的 sangat berkesan 为了 melemahkan gerakan komunis.",
+      "key_points_zh": [
+        "Rancangan Briggs merupakan 步骤 的 sangat berkesan 为了 melemahkan gerakan komunis."
+      ],
+      "bm_focus_phrase": "Rancangan Briggs merupakan langkah yang sangat berkesan untuk melemahkan gerakan komunis."
+    },
+    {
+      "source_id": "bab-6-3-extra-123",
+      "bm_original": "6 September 1949 → Sir Henry Gurney mengisytiharkan pengampunan kepada komunis supaya menyerah diri",
+      "translate": "6 September 1949 → Sir Henry Gurney mengisytiharkan pengampunan 向 komunis supaya menyerah diri",
+      "key_points_zh": [
+        "6 September 1949 → Sir Henry Gurney mengisytiharkan pengampunan 向 komunis supaya menyerah diri"
+      ],
+      "bm_focus_phrase": "6 September 1949 → Sir Henry Gurney mengisytiharkan pengampunan kepada komunis supaya menyerah diri"
+    },
+    {
+      "source_id": "bab-6-3-u48",
+      "bm_original": "Cara tawaran ini disebarkan:",
+      "translate": "Cara tawaran 这 disebarkan:",
+      "key_points_zh": [
+        "Cara tawaran 这 disebarkan:"
+      ],
+      "bm_focus_phrase": "Cara tawaran ini disebarkan:"
+    },
+    {
+      "source_id": "bab-6-3-extra-124",
+      "bm_original": "Radio Malaya menyiarkan syarat pengampunan setiap hari",
+      "translate": "重点：Radio Malaya menyiarkan syarat pengampunan setiap hari",
+      "key_points_zh": [
+        "重点：Radio Malaya menyiarkan syarat pengampunan setiap hari"
+      ],
+      "bm_focus_phrase": "Radio Malaya menyiarkan syarat pengampunan setiap hari"
+    },
+    {
+      "source_id": "bab-6-3-extra-125",
+      "bm_original": "poster ditampal di merata-rata tempat",
+      "translate": "重点：poster ditampal di merata-rata tempat",
+      "key_points_zh": [
+        "重点：poster ditampal di merata-rata tempat"
+      ],
+      "bm_focus_phrase": "poster ditampal di merata-rata tempat"
+    },
+    {
+      "source_id": "bab-6-3-extra-126",
+      "bm_original": "40 juta risalah diedarkan",
+      "translate": "重点：40 juta risalah diedarkan",
+      "key_points_zh": [
+        "重点：40 juta risalah diedarkan"
+      ],
+      "bm_focus_phrase": "40 juta risalah diedarkan"
+    },
+    {
+      "source_id": "bab-6-3-extra-127",
+      "bm_original": "12 juta pas pengampunan diedarkan",
+      "translate": "重点：12 juta pas pengampunan diedarkan",
+      "key_points_zh": [
+        "重点：12 juta pas pengampunan diedarkan"
+      ],
+      "bm_focus_phrase": "12 juta pas pengampunan diedarkan"
+    },
+    {
+      "source_id": "bab-6-3-u49",
+      "bm_original": "Bahasa yang digunakan:",
+      "translate": "Bahasa 的 digunakan:",
+      "key_points_zh": [
+        "Bahasa 的 digunakan:"
+      ],
+      "bm_focus_phrase": "Bahasa yang digunakan:"
+    },
+    {
+      "source_id": "bab-6-3-extra-128",
+      "bm_original": "bahasa Cina",
+      "translate": "重点：bahasa Cina",
+      "key_points_zh": [
+        "重点：bahasa Cina"
+      ],
+      "bm_focus_phrase": "bahasa Cina"
+    },
+    {
+      "source_id": "bab-6-3-extra-129",
+      "bm_original": "bahasa Melayu",
+      "translate": "重点：bahasa Melayu",
+      "key_points_zh": [
+        "重点：bahasa Melayu"
+      ],
+      "bm_focus_phrase": "bahasa Melayu"
+    },
+    {
+      "source_id": "bab-6-3-extra-130",
+      "bm_original": "bahasa Tamil",
+      "translate": "重点：bahasa Tamil",
+      "key_points_zh": [
+        "重点：bahasa Tamil"
+      ],
+      "bm_focus_phrase": "bahasa Tamil"
+    },
+    {
+      "source_id": "bab-6-3-u50",
+      "bm_original": "Kaedah penyebaran:",
+      "translate": "重点：Kaedah penyebaran:",
+      "key_points_zh": [
+        "重点：Kaedah penyebaran:"
+      ],
+      "bm_focus_phrase": "Kaedah penyebaran:"
+    },
+    {
+      "source_id": "bab-6-3-extra-131",
+      "bm_original": "diedarkan dari udara",
+      "translate": "重点：diedarkan dari udara",
+      "key_points_zh": [
+        "重点：diedarkan dari udara"
+      ],
+      "bm_focus_phrase": "diedarkan dari udara"
+    },
+    {
+      "source_id": "bab-6-3-extra-132",
+      "bm_original": "iklan digunakan",
+      "translate": "重点：iklan digunakan",
+      "key_points_zh": [
+        "重点：iklan digunakan"
+      ],
+      "bm_focus_phrase": "iklan digunakan"
+    },
+    {
+      "source_id": "bab-6-3-extra-133",
+      "bm_original": "wayang gambar digunakan",
+      "translate": "重点：wayang gambar digunakan",
+      "key_points_zh": [
+        "重点：wayang gambar digunakan"
+      ],
+      "bm_focus_phrase": "wayang gambar digunakan"
+    },
+    {
+      "source_id": "bab-6-3-u51",
+      "bm_original": "Tujuannya ialah memujuk anggota komunis supaya menyerah diri.",
+      "translate": "Tujuannya 是 memujuk anggota komunis supaya menyerah diri.",
+      "key_points_zh": [
+        "Tujuannya 是 memujuk anggota komunis supaya menyerah diri."
+      ],
+      "bm_focus_phrase": "Tujuannya ialah memujuk anggota komunis supaya menyerah diri."
+    },
+    {
+      "source_id": "bab-6-3-extra-134",
+      "bm_original": "22 Disember 1949 → Majlis Perundangan Persekutuan mengisytiharkan kempen Bulan Rakyat Melawan Penjahat",
+      "translate": "22 Disember 1949 → Majlis Perundangan Persekutuan mengisytiharkan kempen Bulan 人民 Melawan Penjahat",
+      "key_points_zh": [
+        "22 Disember 1949 → Majlis Perundangan Persekutuan mengisytiharkan kempen Bulan 人民 Melawan Penjahat"
+      ],
+      "bm_focus_phrase": "22 Disember 1949 → Majlis Perundangan Persekutuan mengisytiharkan kempen Bulan Rakyat Melawan Penjahat"
+    },
+    {
+      "source_id": "bab-6-3-u52",
+      "bm_original": "Penduduk pelbagai kaum diseru supaya:",
+      "translate": "重点：Penduduk pelbagai kaum diseru supaya:",
+      "key_points_zh": [
+        "重点：Penduduk pelbagai kaum diseru supaya:"
+      ],
+      "bm_focus_phrase": "Penduduk pelbagai kaum diseru supaya:"
+    },
+    {
+      "source_id": "bab-6-3-extra-135",
+      "bm_original": "mendaftarkan diri secara sukarela dengan pihak berkuasa",
+      "translate": "mendaftarkan diri secara sukarela 以 pihak berkuasa",
+      "key_points_zh": [
+        "mendaftarkan diri secara sukarela 以 pihak berkuasa"
+      ],
+      "bm_focus_phrase": "mendaftarkan diri secara sukarela dengan pihak berkuasa"
+    },
+    {
+      "source_id": "bab-6-3-extra-136",
+      "bm_original": "Menjelang Mac 1950 → jumlah sukarelawan mencecah 435,905 orang",
+      "translate": "重点：Menjelang Mac 1950 → jumlah sukarelawan mencecah 435,905 orang",
+      "key_points_zh": [
+        "重点：Menjelang Mac 1950 → jumlah sukarelawan mencecah 435,905 orang"
+      ],
+      "bm_focus_phrase": "Menjelang Mac 1950 → jumlah sukarelawan mencecah 435,905 orang"
+    },
+    {
+      "source_id": "bab-6-3-u53",
+      "bm_original": "Sukarelawan ini terdiri daripada:",
+      "translate": "Sukarelawan 这 terdiri daripada:",
+      "key_points_zh": [
+        "Sukarelawan 这 terdiri daripada:"
+      ],
+      "bm_focus_phrase": "Sukarelawan ini terdiri daripada:"
+    },
+    {
+      "source_id": "bab-6-3-extra-137",
+      "bm_original": "lelaki",
+      "translate": "重点：lelaki",
+      "key_points_zh": [
+        "重点：lelaki"
+      ],
+      "bm_focus_phrase": "lelaki"
+    },
+    {
+      "source_id": "bab-6-3-extra-138",
+      "bm_original": "wanita",
+      "translate": "妇女",
+      "key_points_zh": [
+        "妇女"
+      ],
+      "bm_focus_phrase": "wanita"
+    },
+    {
+      "source_id": "bab-6-3-extra-139",
+      "bm_original": "pelbagai kaum",
+      "translate": "重点：pelbagai kaum",
+      "key_points_zh": [
+        "重点：pelbagai kaum"
+      ],
+      "bm_focus_phrase": "pelbagai kaum"
+    },
+    {
+      "source_id": "bab-6-3-extra-140",
+      "bm_original": "pelbagai sektor termasuk golongan profesional",
+      "translate": "重点：pelbagai sektor termasuk golongan profesional",
+      "key_points_zh": [
+        "重点：pelbagai sektor termasuk golongan profesional"
+      ],
+      "bm_focus_phrase": "pelbagai sektor termasuk golongan profesional"
+    },
+    {
+      "source_id": "bab-6-3-u54",
+      "bm_original": "Kempen ini berjaya:",
+      "translate": "Kempen 这 成功:",
+      "key_points_zh": [
+        "Kempen 这 成功:"
+      ],
+      "bm_focus_phrase": "Kempen ini berjaya:"
+    },
+    {
+      "source_id": "bab-6-3-extra-141",
+      "bm_original": "melibatkan rakyat berbilang kaum",
+      "translate": "melibatkan 人民 berbilang kaum",
+      "key_points_zh": [
+        "melibatkan 人民 berbilang kaum"
+      ],
+      "bm_focus_phrase": "melibatkan rakyat berbilang kaum"
+    },
+    {
+      "source_id": "bab-6-3-extra-142",
+      "bm_original": "menggalakkan interaksi antara kaum",
+      "translate": "menggalakkan interaksi 其中 kaum",
+      "key_points_zh": [
+        "menggalakkan interaksi 其中 kaum"
+      ],
+      "bm_focus_phrase": "menggalakkan interaksi antara kaum"
+    },
+    {
+      "source_id": "bab-6-3-extra-143",
+      "bm_original": "mengeratkan hubungan masyarakat",
+      "translate": "mengeratkan hubungan 社会",
+      "key_points_zh": [
+        "mengeratkan hubungan 社会"
+      ],
+      "bm_focus_phrase": "mengeratkan hubungan masyarakat"
+    },
+    {
+      "source_id": "bab-6-3-extra-144",
+      "bm_original": "memperkuat penentangan terhadap komunis",
+      "translate": "memperkuat 反对 针对 komunis",
+      "key_points_zh": [
+        "memperkuat 反对 针对 komunis"
+      ],
+      "bm_focus_phrase": "memperkuat penentangan terhadap komunis"
+    },
+    {
+      "source_id": "bab-6-3-u55",
+      "bm_original": "Perintah berkurung ialah tindakan melarang penduduk keluar dari rumah dalam tempoh tertentu.",
+      "translate": "Perintah berkurung 是 tindakan melarang penduduk keluar dari rumah 在 tempoh tertentu.",
+      "key_points_zh": [
+        "Perintah berkurung 是 tindakan melarang penduduk keluar dari rumah 在 tempoh tertentu."
+      ],
+      "bm_focus_phrase": "Perintah berkurung ialah tindakan melarang penduduk keluar dari rumah dalam tempoh tertentu."
+    },
+    {
+      "source_id": "bab-6-3-extra-145",
+      "bm_original": "membolehkan pasukan keselamatan menjalankan operasi dengan lebih berkesan",
+      "translate": "membolehkan pasukan keselamatan menjalankan operasi 以 更 berkesan",
+      "key_points_zh": [
+        "membolehkan pasukan keselamatan menjalankan operasi 以 更 berkesan"
+      ],
+      "bm_focus_phrase": "membolehkan pasukan keselamatan menjalankan operasi dengan lebih berkesan"
+    },
+    {
+      "source_id": "bab-6-3-extra-146",
+      "bm_original": "menekan penduduk yang enggan bekerjasama dengan kerajaan",
+      "translate": "menekan penduduk 的 enggan bekerjasama 以 政府",
+      "key_points_zh": [
+        "menekan penduduk 的 enggan bekerjasama 以 政府"
+      ],
+      "bm_focus_phrase": "menekan penduduk yang enggan bekerjasama dengan kerajaan"
+    },
+    {
+      "source_id": "bab-6-3-extra-147",
+      "bm_original": "Jun 1951 → penduduk di kawasan Labis, Johor dikenakan perintah berkurung",
+      "translate": "重点：Jun 1951 → penduduk di kawasan Labis, Johor dikenakan perintah berkurung",
+      "key_points_zh": [
+        "重点：Jun 1951 → penduduk di kawasan Labis, Johor dikenakan perintah berkurung"
+      ],
+      "bm_focus_phrase": "Jun 1951 → penduduk di kawasan Labis, Johor dikenakan perintah berkurung"
+    },
+    {
+      "source_id": "bab-6-3-extra-148",
+      "bm_original": "untuk membolehkan pasukan keselamatan memburu komunis",
+      "translate": "为了 membolehkan pasukan keselamatan memburu komunis",
+      "key_points_zh": [
+        "为了 membolehkan pasukan keselamatan memburu komunis"
+      ],
+      "bm_focus_phrase": "untuk membolehkan pasukan keselamatan memburu komunis"
+    },
+    {
+      "source_id": "bab-6-3-extra-149",
+      "bm_original": "Mac 1952 → penduduk Tanjung Malim dikenakan perintah berkurung selama 22 jam",
+      "translate": "重点：Mac 1952 → penduduk Tanjung Malim dikenakan perintah berkurung selama 22 jam",
+      "key_points_zh": [
+        "重点：Mac 1952 → penduduk Tanjung Malim dikenakan perintah berkurung selama 22 jam"
+      ],
+      "bm_focus_phrase": "Mac 1952 → penduduk Tanjung Malim dikenakan perintah berkurung selama 22 jam"
+    },
+    {
+      "source_id": "bab-6-3-extra-150",
+      "bm_original": "40 orang komunis menyerang sekumpulan pekerja yang dihantar membaiki paip air",
+      "translate": "40 orang komunis menyerang sekumpulan pekerja 的 dihantar membaiki paip air",
+      "key_points_zh": [
+        "40 orang komunis menyerang sekumpulan pekerja 的 dihantar membaiki paip air"
+      ],
+      "bm_focus_phrase": "40 orang komunis menyerang sekumpulan pekerja yang dihantar membaiki paip air"
+    },
+    {
+      "source_id": "bab-6-3-extra-151",
+      "bm_original": "kejadian ini mengorbankan 12 nyawa",
+      "translate": "kejadian 这 mengorbankan 12 nyawa",
+      "key_points_zh": [
+        "kejadian 这 mengorbankan 12 nyawa"
+      ],
+      "bm_focus_phrase": "kejadian ini mengorbankan 12 nyawa"
+    },
+    {
+      "source_id": "bab-6-3-extra-152",
+      "bm_original": "siasatan polis tidak mendapat maklumat daripada penduduk",
+      "translate": "siasatan polis 不 获得 maklumat daripada penduduk",
+      "key_points_zh": [
+        "siasatan polis 不 获得 maklumat daripada penduduk"
+      ],
+      "bm_focus_phrase": "siasatan polis tidak mendapat maklumat daripada penduduk"
+    },
+    {
+      "source_id": "bab-6-3-extra-153",
+      "bm_original": "27 Mac 1952 → Sir Gerald Templer tiba di Tanjung Malim",
+      "translate": "重点：27 Mac 1952 → Sir Gerald Templer tiba di Tanjung Malim",
+      "key_points_zh": [
+        "重点：27 Mac 1952 → Sir Gerald Templer tiba di Tanjung Malim"
+      ],
+      "bm_focus_phrase": "27 Mac 1952 → Sir Gerald Templer tiba di Tanjung Malim"
+    },
+    {
+      "source_id": "bab-6-3-extra-154",
+      "bm_original": "memaklumkan penduduk tentang hukuman terhadap sikap mereka yang enggan memberi maklumat kepada kerajaan",
+      "translate": "memaklumkan penduduk tentang hukuman 针对 sikap mereka 的 enggan memberi maklumat 向 政府",
+      "key_points_zh": [
+        "memaklumkan penduduk tentang hukuman 针对 sikap mereka 的 enggan memberi maklumat 向 政府"
+      ],
+      "bm_focus_phrase": "memaklumkan penduduk tentang hukuman terhadap sikap mereka yang enggan memberi maklumat kepada kerajaan"
+    },
+    {
+      "source_id": "bab-6-3-u56",
+      "bm_original": "Perang saraf ialah rancangan British untuk menghapuskan komunis melalui usaha:",
+      "translate": "Perang saraf 是 rancangan British 为了 削弱 komunis 通过 usaha:",
+      "key_points_zh": [
+        "Perang saraf 是 rancangan British 为了 削弱 komunis 通过 usaha:"
+      ],
+      "bm_focus_phrase": "Perang saraf ialah rancangan British untuk menghapuskan komunis melalui usaha:"
+    },
+    {
+      "source_id": "bab-6-3-extra-155",
+      "bm_original": "memenangi hati rakyat",
+      "translate": "memenangi hati 人民",
+      "key_points_zh": [
+        "memenangi hati 人民"
+      ],
+      "bm_focus_phrase": "memenangi hati rakyat"
+    },
+    {
+      "source_id": "bab-6-3-extra-156",
+      "bm_original": "mempengaruhi fikiran rakyat",
+      "translate": "mempengaruhi fikiran 人民",
+      "key_points_zh": [
+        "mempengaruhi fikiran 人民"
+      ],
+      "bm_focus_phrase": "mempengaruhi fikiran rakyat"
+    },
+    {
+      "source_id": "bab-6-3-extra-157",
+      "bm_original": "1952 → Sir Gerald Templer dilantik sebagai Pesuruhjaya Tinggi British di Tanah Melayu",
+      "translate": "1952 → Sir Gerald Templer dilantik 作为 Pesuruhjaya Tinggi British di Tanah Melayu",
+      "key_points_zh": [
+        "1952 → Sir Gerald Templer dilantik 作为 Pesuruhjaya Tinggi British di Tanah Melayu"
+      ],
+      "bm_focus_phrase": "1952 → Sir Gerald Templer dilantik sebagai Pesuruhjaya Tinggi British di Tanah Melayu"
+    },
+    {
+      "source_id": "bab-6-3-u57",
+      "bm_original": "Beliau berusaha menjalinkan hubungan baik dengan penduduk tempatan supaya mereka:",
+      "translate": "Beliau berusaha menjalinkan hubungan baik 以 penduduk 本地 supaya mereka:",
+      "key_points_zh": [
+        "Beliau berusaha menjalinkan hubungan baik 以 penduduk 本地 supaya mereka:"
+      ],
+      "bm_focus_phrase": "Beliau berusaha menjalinkan hubungan baik dengan penduduk tempatan supaya mereka:"
+    },
+    {
+      "source_id": "bab-6-3-extra-158",
+      "bm_original": "bekerjasama dengan kerajaan",
+      "translate": "bekerjasama 以 政府",
+      "key_points_zh": [
+        "bekerjasama 以 政府"
+      ],
+      "bm_focus_phrase": "bekerjasama dengan kerajaan"
+    },
+    {
+      "source_id": "bab-6-3-extra-159",
+      "bm_original": "menyampaikan maklumat tentang komunis",
+      "translate": "重点：menyampaikan maklumat tentang komunis",
+      "key_points_zh": [
+        "重点：menyampaikan maklumat tentang komunis"
+      ],
+      "bm_focus_phrase": "menyampaikan maklumat tentang komunis"
+    },
+    {
+      "source_id": "bab-6-3-u58",
+      "bm_original": "Perang saraf berjaya memujuk rakyat berbilang kaum supaya bersatu menentang komunis.",
+      "translate": "Perang saraf 成功 memujuk 人民 berbilang kaum supaya bersatu 反对 komunis.",
+      "key_points_zh": [
+        "Perang saraf 成功 memujuk 人民 berbilang kaum supaya bersatu 反对 komunis."
+      ],
+      "bm_focus_phrase": "Perang saraf berjaya memujuk rakyat berbilang kaum supaya bersatu menentang komunis."
+    },
+    {
+      "source_id": "bab-6-3-u59",
+      "bm_original": "Templer mendampingi rakyat untuk mengetahui masalah dan pandangan mereka.",
+      "translate": "Templer mendampingi 人民 为了 mengetahui masalah 与 pandangan mereka.",
+      "key_points_zh": [
+        "Templer mendampingi 人民 为了 mengetahui masalah 与 pandangan mereka."
+      ],
+      "bm_focus_phrase": "Templer mendampingi rakyat untuk mengetahui masalah dan pandangan mereka."
+    },
+    {
+      "source_id": "bab-6-3-u60",
+      "bm_original": "Beliau melakukan 122 lawatan ke:",
+      "translate": "重点：Beliau melakukan 122 lawatan ke:",
+      "key_points_zh": [
+        "重点：Beliau melakukan 122 lawatan ke:"
+      ],
+      "bm_focus_phrase": "Beliau melakukan 122 lawatan ke:"
+    },
+    {
+      "source_id": "bab-6-3-extra-160",
+      "bm_original": "sekolah",
+      "translate": "重点：sekolah",
+      "key_points_zh": [
+        "重点：sekolah"
+      ],
+      "bm_focus_phrase": "sekolah"
+    },
+    {
+      "source_id": "bab-6-3-extra-161",
+      "bm_original": "kampung",
+      "translate": "重点：kampung",
+      "key_points_zh": [
+        "重点：kampung"
+      ],
+      "bm_focus_phrase": "kampung"
+    },
+    {
+      "source_id": "bab-6-3-extra-162",
+      "bm_original": "hospital",
+      "translate": "重点：hospital",
+      "key_points_zh": [
+        "重点：hospital"
+      ],
+      "bm_focus_phrase": "hospital"
+    },
+    {
+      "source_id": "bab-6-3-extra-163",
+      "bm_original": "dispensari",
+      "translate": "重点：dispensari",
+      "key_points_zh": [
+        "重点：dispensari"
+      ],
+      "bm_focus_phrase": "dispensari"
+    },
+    {
+      "source_id": "bab-6-3-extra-164",
+      "bm_original": "bilik operasi",
+      "translate": "重点：bilik operasi",
+      "key_points_zh": [
+        "重点：bilik operasi"
+      ],
+      "bm_focus_phrase": "bilik operasi"
+    },
+    {
+      "source_id": "bab-6-3-extra-165",
+      "bm_original": "pondok polis",
+      "translate": "重点：pondok polis",
+      "key_points_zh": [
+        "重点：pondok polis"
+      ],
+      "bm_focus_phrase": "pondok polis"
+    },
+    {
+      "source_id": "bab-6-3-extra-166",
+      "bm_original": "unit pasukan keselamatan",
+      "translate": "重点：unit pasukan keselamatan",
+      "key_points_zh": [
+        "重点：unit pasukan keselamatan"
+      ],
+      "bm_focus_phrase": "unit pasukan keselamatan"
+    },
+    {
+      "source_id": "bab-6-3-extra-167",
+      "bm_original": "kawasan buruh",
+      "translate": "重点：kawasan buruh",
+      "key_points_zh": [
+        "重点：kawasan buruh"
+      ],
+      "bm_focus_phrase": "kawasan buruh"
+    },
+    {
+      "source_id": "bab-6-3-extra-168",
+      "bm_original": "lombong",
+      "translate": "重点：lombong",
+      "key_points_zh": [
+        "重点：lombong"
+      ],
+      "bm_focus_phrase": "lombong"
+    },
+    {
+      "source_id": "bab-6-3-extra-169",
+      "bm_original": "estet",
+      "translate": "重点：estet",
+      "key_points_zh": [
+        "重点：estet"
+      ],
+      "bm_focus_phrase": "estet"
+    },
+    {
+      "source_id": "bab-6-3-u61",
+      "bm_original": "Setiap lawatan mengambil masa 2 hingga 3 hari.",
+      "translate": "重点：Setiap lawatan mengambil masa 2 hingga 3 hari.",
+      "key_points_zh": [
+        "重点：Setiap lawatan mengambil masa 2 hingga 3 hari."
+      ],
+      "bm_focus_phrase": "Setiap lawatan mengambil masa 2 hingga 3 hari."
+    },
+    {
+      "source_id": "bab-6-3-u62",
+      "bm_original": "Bersama isterinya, beliau juga melakukan 20 lawatan ke:",
+      "translate": "Bersama isterinya, beliau 也 melakukan 20 lawatan ke:",
+      "key_points_zh": [
+        "Bersama isterinya, beliau 也 melakukan 20 lawatan ke:"
+      ],
+      "bm_focus_phrase": "Bersama isterinya, beliau juga melakukan 20 lawatan ke:"
+    },
+    {
+      "source_id": "bab-6-3-extra-170",
+      "bm_original": "Kampung Baru",
+      "translate": "重点：Kampung Baru",
+      "key_points_zh": [
+        "重点：Kampung Baru"
+      ],
+      "bm_focus_phrase": "Kampung Baru"
+    },
+    {
+      "source_id": "bab-6-3-extra-171",
+      "bm_original": "Kampung Melayu",
+      "translate": "重点：Kampung Melayu",
+      "key_points_zh": [
+        "重点：Kampung Melayu"
+      ],
+      "bm_focus_phrase": "Kampung Melayu"
+    },
+    {
+      "source_id": "bab-6-3-u63",
+      "bm_original": "Isterinya menubuhkan:",
+      "translate": "Isterinya 成立:",
+      "key_points_zh": [
+        "Isterinya 成立:"
+      ],
+      "bm_focus_phrase": "Isterinya menubuhkan:"
+    },
+    {
+      "source_id": "bab-6-3-extra-172",
+      "bm_original": "cawangan Palang Merah",
+      "translate": "重点：cawangan Palang Merah",
+      "key_points_zh": [
+        "重点：cawangan Palang Merah"
+      ],
+      "bm_focus_phrase": "cawangan Palang Merah"
+    },
+    {
+      "source_id": "bab-6-3-extra-173",
+      "bm_original": "Pandu Puteri",
+      "translate": "重点：Pandu Puteri",
+      "key_points_zh": [
+        "重点：Pandu Puteri"
+      ],
+      "bm_focus_phrase": "Pandu Puteri"
+    },
+    {
+      "source_id": "bab-6-3-extra-174",
+      "bm_original": "pusat komuniti",
+      "translate": "重点：pusat komuniti",
+      "key_points_zh": [
+        "重点：pusat komuniti"
+      ],
+      "bm_focus_phrase": "pusat komuniti"
+    },
+    {
+      "source_id": "bab-6-3-u64",
+      "bm_original": "Syarat kewarganegaraan dilonggarkan untuk menarik kaum bukan Melayu menjadi rakyat Tanah Melayu.",
+      "translate": "Syarat 公民权 dilonggarkan 为了 menarik kaum bukan Melayu menjadi 人民 Tanah Melayu.",
+      "key_points_zh": [
+        "Syarat 公民权 dilonggarkan 为了 menarik kaum bukan Melayu menjadi 人民 Tanah Melayu."
+      ],
+      "bm_focus_phrase": "Syarat kewarganegaraan dilonggarkan untuk menarik kaum bukan Melayu menjadi rakyat Tanah Melayu."
+    },
+    {
+      "source_id": "bab-6-3-extra-175",
+      "bm_original": "mewujudkan bangsa yang bersatu",
+      "translate": "mewujudkan bangsa 的 bersatu",
+      "key_points_zh": [
+        "mewujudkan bangsa 的 bersatu"
+      ],
+      "bm_focus_phrase": "mewujudkan bangsa yang bersatu"
+    },
+    {
+      "source_id": "bab-6-3-extra-176",
+      "bm_original": "14 September 1952 → lebih kurang 1.2 juta orang Cina dan 180 ribu orang India layak menjadi warganegara",
+      "translate": "14 September 1952 → 更 kurang 1.2 juta orang Cina 与 180 ribu orang India layak menjadi warganegara",
+      "key_points_zh": [
+        "14 September 1952 → 更 kurang 1.2 juta orang Cina 与 180 ribu orang India layak menjadi warganegara"
+      ],
+      "bm_focus_phrase": "14 September 1952 → lebih kurang 1.2 juta orang Cina dan 180 ribu orang India layak menjadi warganegara"
+    },
+    {
+      "source_id": "bab-6-3-u65",
+      "bm_original": "Kerajaan mengadakan pilihan raya tempatan yang pertama.",
+      "translate": "Kerajaan mengadakan pilihan raya 本地 的 pertama.",
+      "key_points_zh": [
+        "Kerajaan mengadakan pilihan raya 本地 的 pertama."
+      ],
+      "bm_focus_phrase": "Kerajaan mengadakan pilihan raya tempatan yang pertama."
+    },
+    {
+      "source_id": "bab-6-3-extra-177",
+      "bm_original": "menggalakkan penyertaan orang bukan Melayu dalam politik",
+      "translate": "menggalakkan penyertaan orang bukan Melayu 在 政治",
+      "key_points_zh": [
+        "menggalakkan penyertaan orang bukan Melayu 在 政治"
+      ],
+      "bm_focus_phrase": "menggalakkan penyertaan orang bukan Melayu dalam politik"
+    },
+    {
+      "source_id": "bab-6-3-extra-178",
+      "bm_original": "mendapatkan sokongan mereka untuk menentang komunis",
+      "translate": "取得 sokongan mereka 为了 反对 komunis",
+      "key_points_zh": [
+        "取得 sokongan mereka 为了 反对 komunis"
+      ],
+      "bm_focus_phrase": "mendapatkan sokongan mereka untuk menentang komunis"
+    },
+    {
+      "source_id": "bab-6-3-u66",
+      "bm_original": "Hadiah wang tunai ditawarkan kepada penduduk yang berjaya:",
+      "translate": "Hadiah wang tunai ditawarkan 向 penduduk 的 成功:",
+      "key_points_zh": [
+        "Hadiah wang tunai ditawarkan 向 penduduk 的 成功:"
+      ],
+      "bm_focus_phrase": "Hadiah wang tunai ditawarkan kepada penduduk yang berjaya:"
+    },
+    {
+      "source_id": "bab-6-3-extra-179",
+      "bm_original": "menangkap gerila komunis",
+      "translate": "重点：menangkap gerila komunis",
+      "key_points_zh": [
+        "重点：menangkap gerila komunis"
+      ],
+      "bm_focus_phrase": "menangkap gerila komunis"
+    },
+    {
+      "source_id": "bab-6-3-extra-180",
+      "bm_original": "memberi maklumat tentang mereka",
+      "translate": "重点：memberi maklumat tentang mereka",
+      "key_points_zh": [
+        "重点：memberi maklumat tentang mereka"
+      ],
+      "bm_focus_phrase": "memberi maklumat tentang mereka"
+    },
+    {
+      "source_id": "bab-6-3-extra-181",
+      "bm_original": "sesiapa yang berjaya menangkap Chin Peng , hidup atau mati, akan diberikan hadiah sebanyak $250 ribu",
+      "translate": "sesiapa 的 成功 menangkap Chin Peng , hidup atau mati, 将会 diberikan hadiah sebanyak $250 ribu",
+      "key_points_zh": [
+        "sesiapa 的 成功 menangkap Chin Peng , hidup atau mati, 将会 diberikan hadiah sebanyak $250 ribu"
+      ],
+      "bm_focus_phrase": "sesiapa yang berjaya menangkap Chin Peng , hidup atau mati, akan diberikan hadiah sebanyak $250 ribu"
+    },
+    {
+      "source_id": "bab-6-3-u67",
+      "bm_original": "Templer berusaha mendapatkan sokongan Orang Asli.",
+      "translate": "Templer berusaha 取得 sokongan Orang Asli.",
+      "key_points_zh": [
+        "Templer berusaha 取得 sokongan Orang Asli."
+      ],
+      "bm_focus_phrase": "Templer berusaha mendapatkan sokongan Orang Asli."
+    },
+    {
+      "source_id": "bab-6-3-extra-182",
+      "bm_original": "supaya Orang Asli menyokong kerajaan dalam usaha menghapuskan komunis",
+      "translate": "supaya Orang Asli menyokong 政府 在 usaha 削弱 komunis",
+      "key_points_zh": [
+        "supaya Orang Asli menyokong 政府 在 usaha 削弱 komunis"
+      ],
+      "bm_focus_phrase": "supaya Orang Asli menyokong kerajaan dalam usaha menghapuskan komunis"
+    },
+    {
+      "source_id": "bab-6-3-u68",
+      "bm_original": "Beliau mendirikan 14 kubu yang menyediakan:",
+      "translate": "Beliau mendirikan 14 kubu 的 menyediakan:",
+      "key_points_zh": [
+        "Beliau mendirikan 14 kubu 的 menyediakan:"
+      ],
+      "bm_focus_phrase": "Beliau mendirikan 14 kubu yang menyediakan:"
+    },
+    {
+      "source_id": "bab-6-3-extra-183",
+      "bm_original": "barangan keperluan harian",
+      "translate": "重点：barangan keperluan harian",
+      "key_points_zh": [
+        "重点：barangan keperluan harian"
+      ],
+      "bm_focus_phrase": "barangan keperluan harian"
+    },
+    {
+      "source_id": "bab-6-3-extra-184",
+      "bm_original": "perubatan",
+      "translate": "重点：perubatan",
+      "key_points_zh": [
+        "重点：perubatan"
+      ],
+      "bm_focus_phrase": "perubatan"
+    },
+    {
+      "source_id": "bab-6-3-extra-185",
+      "bm_original": "pendidikan",
+      "translate": "重点：pendidikan",
+      "key_points_zh": [
+        "重点：pendidikan"
+      ],
+      "bm_focus_phrase": "pendidikan"
+    },
+    {
+      "source_id": "bab-6-3-extra-186",
+      "bm_original": "perlindungan",
+      "translate": "重点：perlindungan",
+      "key_points_zh": [
+        "重点：perlindungan"
+      ],
+      "bm_focus_phrase": "perlindungan"
+    },
+    {
+      "source_id": "bab-6-3-u69",
+      "bm_original": "Kerajaan Tanah Melayu memajukan Jabatan Penerangan dan Perkhidmatan Radio Malaya.",
+      "translate": "Kerajaan Tanah Melayu memajukan Jabatan Penerangan 与 Perkhidmatan Radio Malaya.",
+      "key_points_zh": [
+        "Kerajaan Tanah Melayu memajukan Jabatan Penerangan 与 Perkhidmatan Radio Malaya."
+      ],
+      "bm_focus_phrase": "Kerajaan Tanah Melayu memajukan Jabatan Penerangan dan Perkhidmatan Radio Malaya."
+    },
+    {
+      "source_id": "bab-6-3-extra-187",
+      "bm_original": "mendapatkan sokongan penduduk tempatan",
+      "translate": "取得 sokongan penduduk 本地",
+      "key_points_zh": [
+        "取得 sokongan penduduk 本地"
+      ],
+      "bm_focus_phrase": "mendapatkan sokongan penduduk tempatan"
+    },
+    {
+      "source_id": "bab-6-3-extra-188",
+      "bm_original": "menimbulkan kesedaran agar masyarakat menyokong kerajaan",
+      "translate": "menimbulkan kesedaran agar 社会 menyokong 政府",
+      "key_points_zh": [
+        "menimbulkan kesedaran agar 社会 menyokong 政府"
+      ],
+      "bm_focus_phrase": "menimbulkan kesedaran agar masyarakat menyokong kerajaan"
+    },
+    {
+      "source_id": "bab-6-3-u70",
+      "bm_original": "Jabatan ini bertanggungjawab:",
+      "translate": "Jabatan 这 bertanggungjawab:",
+      "key_points_zh": [
+        "Jabatan 这 bertanggungjawab:"
+      ],
+      "bm_focus_phrase": "Jabatan ini bertanggungjawab:"
+    },
+    {
+      "source_id": "bab-6-3-extra-189",
+      "bm_original": "menyebarkan risalah antikomunis kepada penduduk",
+      "translate": "menyebarkan risalah antikomunis 向 penduduk",
+      "key_points_zh": [
+        "menyebarkan risalah antikomunis 向 penduduk"
+      ],
+      "bm_focus_phrase": "menyebarkan risalah antikomunis kepada penduduk"
+    },
+    {
+      "source_id": "bab-6-3-extra-190",
+      "bm_original": "menyebarkan risalah kerajaan kepada komunis di dalam hutan",
+      "translate": "menyebarkan risalah 政府 向 komunis di 在 hutan",
+      "key_points_zh": [
+        "menyebarkan risalah 政府 向 komunis di 在 hutan"
+      ],
+      "bm_focus_phrase": "menyebarkan risalah kerajaan kepada komunis di dalam hutan"
+    },
+    {
+      "source_id": "bab-6-3-u71",
+      "bm_original": "Kerajaan memperkenalkan konsep:",
+      "translate": "重点：Kerajaan memperkenalkan konsep:",
+      "key_points_zh": [
+        "重点：Kerajaan memperkenalkan konsep:"
+      ],
+      "bm_focus_phrase": "Kerajaan memperkenalkan konsep:"
+    },
+    {
+      "source_id": "bab-6-3-extra-191",
+      "bm_original": "Kawasan Hitam → kawasan yang mempunyai kegiatan komunis aktif dan dikenakan perintah berkurung",
+      "translate": "Kawasan Hitam → kawasan 的 mempunyai kegiatan komunis aktif 与 dikenakan perintah berkurung",
+      "key_points_zh": [
+        "Kawasan Hitam → kawasan 的 mempunyai kegiatan komunis aktif 与 dikenakan perintah berkurung"
+      ],
+      "bm_focus_phrase": "Kawasan Hitam → kawasan yang mempunyai kegiatan komunis aktif dan dikenakan perintah berkurung"
+    },
+    {
+      "source_id": "bab-6-3-extra-192",
+      "bm_original": "Kawasan Putih → kawasan yang diisytiharkan bebas daripada ancaman komunis",
+      "translate": "Kawasan Putih → kawasan 的 diisytiharkan bebas daripada ancaman komunis",
+      "key_points_zh": [
+        "Kawasan Putih → kawasan 的 diisytiharkan bebas daripada ancaman komunis"
+      ],
+      "bm_focus_phrase": "Kawasan Putih → kawasan yang diisytiharkan bebas daripada ancaman komunis"
+    },
+    {
+      "source_id": "bab-6-3-extra-193",
+      "bm_original": "Sehingga 1954 → kerajaan mengisytiharkan negeri-negeri berikut sebagai kawasan putih:",
+      "translate": "Sehingga 1954 → 政府 mengisytiharkan negeri-negeri berikut 作为 kawasan putih:",
+      "key_points_zh": [
+        "Sehingga 1954 → 政府 mengisytiharkan negeri-negeri berikut 作为 kawasan putih:"
+      ],
+      "bm_focus_phrase": "Sehingga 1954 → kerajaan mengisytiharkan negeri-negeri berikut sebagai kawasan putih:"
+    },
+    {
+      "source_id": "bab-6-3-extra-194",
+      "bm_original": "Melaka",
+      "translate": "重点：Melaka",
+      "key_points_zh": [
+        "重点：Melaka"
+      ],
+      "bm_focus_phrase": "Melaka"
+    },
+    {
+      "source_id": "bab-6-3-extra-195",
+      "bm_original": "Terengganu",
+      "translate": "重点：Terengganu",
+      "key_points_zh": [
+        "重点：Terengganu"
+      ],
+      "bm_focus_phrase": "Terengganu"
+    },
+    {
+      "source_id": "bab-6-3-extra-196",
+      "bm_original": "Kedah",
+      "translate": "重点：Kedah",
+      "key_points_zh": [
+        "重点：Kedah"
+      ],
+      "bm_focus_phrase": "Kedah"
+    },
+    {
+      "source_id": "bab-6-3-extra-197",
+      "bm_original": "Perlis",
+      "translate": "重点：Perlis",
+      "key_points_zh": [
+        "重点：Perlis"
+      ],
+      "bm_focus_phrase": "Perlis"
+    },
+    {
+      "source_id": "bab-6-3-extra-198",
+      "bm_original": "Negeri Sembilan",
+      "translate": "重点：Negeri Sembilan",
+      "key_points_zh": [
+        "重点：Negeri Sembilan"
+      ],
+      "bm_focus_phrase": "Negeri Sembilan"
+    },
+    {
+      "source_id": "bab-6-3-u72",
+      "bm_original": "Bagi menamatkan ancaman komunis dan mencapai kemerdekaan, Tunku Abdul Rahman mengadakan pertemuan dengan pemimpin PKM.",
+      "translate": "Bagi menamatkan ancaman komunis 与 mencapai 独立, Tunku Abdul Rahman mengadakan pertemuan 以 领袖 PKM.",
+      "key_points_zh": [
+        "Bagi menamatkan ancaman komunis 与 mencapai 独立, Tunku Abdul Rahman mengadakan pertemuan 以 领袖 PKM."
+      ],
+      "bm_focus_phrase": "Bagi menamatkan ancaman komunis dan mencapai kemerdekaan, Tunku Abdul Rahman mengadakan pertemuan dengan pemimpin PKM."
+    },
+    {
+      "source_id": "bab-6-3-extra-199",
+      "bm_original": "28 Disember 1955",
+      "translate": "重点：28 Disember 1955",
+      "key_points_zh": [
+        "重点：28 Disember 1955"
+      ],
+      "bm_focus_phrase": "28 Disember 1955"
+    },
+    {
+      "source_id": "bab-6-3-extra-200",
+      "bm_original": "Sekolah Inggeris, Baling, Kedah, Tanah Melayu",
+      "translate": "重点：Sekolah Inggeris, Baling, Kedah, Tanah Melayu",
+      "key_points_zh": [
+        "重点：Sekolah Inggeris, Baling, Kedah, Tanah Melayu"
+      ],
+      "bm_focus_phrase": "Sekolah Inggeris, Baling, Kedah, Tanah Melayu"
+    },
+    {
+      "source_id": "bab-6-3-extra-201",
+      "bm_original": "Tunku Abdul Rahman",
+      "translate": "重点：Tunku Abdul Rahman",
+      "key_points_zh": [
+        "重点：Tunku Abdul Rahman"
+      ],
+      "bm_focus_phrase": "Tunku Abdul Rahman"
+    },
+    {
+      "source_id": "bab-6-3-extra-202",
+      "bm_original": "Tan Cheng Lock",
+      "translate": "重点：Tan Cheng Lock",
+      "key_points_zh": [
+        "重点：Tan Cheng Lock"
+      ],
+      "bm_focus_phrase": "Tan Cheng Lock"
+    },
+    {
+      "source_id": "bab-6-3-extra-203",
+      "bm_original": "David Marshall",
+      "translate": "重点：David Marshall",
+      "key_points_zh": [
+        "重点：David Marshall"
+      ],
+      "bm_focus_phrase": "David Marshall"
+    },
+    {
+      "source_id": "bab-6-3-extra-204",
+      "bm_original": "Chin Peng",
+      "translate": "重点：Chin Peng",
+      "key_points_zh": [
+        "重点：Chin Peng"
+      ],
+      "bm_focus_phrase": "Chin Peng"
+    },
+    {
+      "source_id": "bab-6-3-extra-205",
+      "bm_original": "Chen Tien",
+      "translate": "重点：Chen Tien",
+      "key_points_zh": [
+        "重点：Chen Tien"
+      ],
+      "bm_focus_phrase": "Chen Tien"
+    },
+    {
+      "source_id": "bab-6-3-extra-206",
+      "bm_original": "Rashid Maidin",
+      "translate": "重点：Rashid Maidin",
+      "key_points_zh": [
+        "重点：Rashid Maidin"
+      ],
+      "bm_focus_phrase": "Rashid Maidin"
+    },
+    {
+      "source_id": "bab-6-3-u73",
+      "bm_original": "Tunku Abdul Rahman menuntut supaya Chin Peng:",
+      "translate": "重点：Tunku Abdul Rahman menuntut supaya Chin Peng:",
+      "key_points_zh": [
+        "重点：Tunku Abdul Rahman menuntut supaya Chin Peng:"
+      ],
+      "bm_focus_phrase": "Tunku Abdul Rahman menuntut supaya Chin Peng:"
+    },
+    {
+      "source_id": "bab-6-3-extra-207",
+      "bm_original": "membubarkan PKM",
+      "translate": "重点：membubarkan PKM",
+      "key_points_zh": [
+        "重点：membubarkan PKM"
+      ],
+      "bm_focus_phrase": "membubarkan PKM"
+    },
+    {
+      "source_id": "bab-6-3-extra-208",
+      "bm_original": "meletakkan senjata",
+      "translate": "重点：meletakkan senjata",
+      "key_points_zh": [
+        "重点：meletakkan senjata"
+      ],
+      "bm_focus_phrase": "meletakkan senjata"
+    },
+    {
+      "source_id": "bab-6-3-extra-209",
+      "bm_original": "menyerah diri",
+      "translate": "重点：menyerah diri",
+      "key_points_zh": [
+        "重点：menyerah diri"
+      ],
+      "bm_focus_phrase": "menyerah diri"
+    },
+    {
+      "source_id": "bab-6-3-u74",
+      "bm_original": "Chin Peng pula mensyaratkan bahawa:",
+      "translate": "重点：Chin Peng pula mensyaratkan bahawa:",
+      "key_points_zh": [
+        "重点：Chin Peng pula mensyaratkan bahawa:"
+      ],
+      "bm_focus_phrase": "Chin Peng pula mensyaratkan bahawa:"
+    },
+    {
+      "source_id": "bab-6-3-extra-210",
+      "bm_original": "peletakan senjata",
+      "translate": "重点：peletakan senjata",
+      "key_points_zh": [
+        "重点：peletakan senjata"
+      ],
+      "bm_focus_phrase": "peletakan senjata"
+    },
+    {
+      "source_id": "bab-6-3-extra-211",
+      "bm_original": "penyerahan diri",
+      "translate": "重点：penyerahan diri",
+      "key_points_zh": [
+        "重点：penyerahan diri"
+      ],
+      "bm_focus_phrase": "penyerahan diri"
+    },
+    {
+      "source_id": "bab-6-3-u75",
+      "bm_original": "Tunku Abdul Rahman menolak syarat tersebut.",
+      "translate": "重点：Tunku Abdul Rahman menolak syarat tersebut.",
+      "key_points_zh": [
+        "重点：Tunku Abdul Rahman menolak syarat tersebut."
+      ],
+      "bm_focus_phrase": "Tunku Abdul Rahman menolak syarat tersebut."
+    },
+    {
+      "source_id": "bab-6-3-u76",
+      "bm_original": "Akibatnya, Rundingan Baling gagal.",
+      "translate": "Akibatnya, Rundingan Baling 失败.",
+      "key_points_zh": [
+        "Akibatnya, Rundingan Baling 失败."
+      ],
+      "bm_focus_phrase": "Akibatnya, Rundingan Baling gagal."
+    },
+    {
+      "source_id": "bab-6-3-u77",
+      "bm_original": "Kerajaan menangani ancaman komunis melalui pelbagai cara, termasuk:",
+      "translate": "Kerajaan menangani ancaman komunis 通过 pelbagai cara, termasuk:",
+      "key_points_zh": [
+        "Kerajaan menangani ancaman komunis 通过 pelbagai cara, termasuk:"
+      ],
+      "bm_focus_phrase": "Kerajaan menangani ancaman komunis melalui pelbagai cara, termasuk:"
+    },
+    {
+      "source_id": "bab-6-3-extra-212",
+      "bm_original": "penguatkuasaan undang-undang",
+      "translate": "重点：penguatkuasaan undang-undang",
+      "key_points_zh": [
+        "重点：penguatkuasaan undang-undang"
+      ],
+      "bm_focus_phrase": "penguatkuasaan undang-undang"
+    },
+    {
+      "source_id": "bab-6-3-extra-213",
+      "bm_original": "pemerkasaan pasukan keselamatan",
+      "translate": "重点：pemerkasaan pasukan keselamatan",
+      "key_points_zh": [
+        "重点：pemerkasaan pasukan keselamatan"
+      ],
+      "bm_focus_phrase": "pemerkasaan pasukan keselamatan"
+    },
+    {
+      "source_id": "bab-6-3-extra-214",
+      "bm_original": "penempatan semula penduduk",
+      "translate": "重点：penempatan semula penduduk",
+      "key_points_zh": [
+        "重点：penempatan semula penduduk"
+      ],
+      "bm_focus_phrase": "penempatan semula penduduk"
+    },
+    {
+      "source_id": "bab-6-3-extra-215",
+      "bm_original": "kempen rakyat",
+      "translate": "kempen 人民",
+      "key_points_zh": [
+        "kempen 人民"
+      ],
+      "bm_focus_phrase": "kempen rakyat"
+    },
+    {
+      "source_id": "bab-6-3-extra-216",
+      "bm_original": "perang saraf",
+      "translate": "重点：perang saraf",
+      "key_points_zh": [
+        "重点：perang saraf"
+      ],
+      "bm_focus_phrase": "perang saraf"
+    },
+    {
+      "source_id": "bab-6-3-extra-217",
+      "bm_original": "rundingan",
+      "translate": "重点：rundingan",
+      "key_points_zh": [
+        "重点：rundingan"
+      ],
+      "bm_focus_phrase": "rundingan"
+    },
+    {
+      "source_id": "bab-6-3-u78",
+      "bm_original": "Kejayaan menentang komunis tidak bergantung pada kekuatan ketenteraan semata-mata, tetapi juga pada:",
+      "translate": "Kejayaan 反对 komunis 不 bergantung 于 kekuatan ketenteraan semata-mata, tetapi 也 于:",
+      "key_points_zh": [
+        "Kejayaan 反对 komunis 不 bergantung 于 kekuatan ketenteraan semata-mata, tetapi 也 于:"
+      ],
+      "bm_focus_phrase": "Kejayaan menentang komunis tidak bergantung pada kekuatan ketenteraan semata-mata, tetapi juga pada:"
+    },
+    {
+      "source_id": "bab-6-3-extra-218",
+      "bm_original": "kerjasama rakyat",
+      "translate": "kerjasama 人民",
+      "key_points_zh": [
+        "kerjasama 人民"
+      ],
+      "bm_focus_phrase": "kerjasama rakyat"
+    },
+    {
+      "source_id": "bab-6-3-extra-219",
+      "bm_original": "sokongan pemimpin",
+      "translate": "sokongan 领袖",
+      "key_points_zh": [
+        "sokongan 领袖"
+      ],
+      "bm_focus_phrase": "sokongan pemimpin"
+    },
+    {
+      "source_id": "bab-6-3-extra-220",
+      "bm_original": "ketegasan kerajaan",
+      "translate": "ketegasan 政府",
+      "key_points_zh": [
+        "ketegasan 政府"
+      ],
+      "bm_focus_phrase": "ketegasan kerajaan"
+    },
+    {
+      "source_id": "bab-6-3-u79",
+      "bm_original": "Perjuangan ini membuktikan bahawa perpaduan antara rakyat dan kerajaan amat penting dalam usaha mempertahankan tanah air daripada ancaman musuh.",
+      "translate": "斗争 这 membuktikan bahawa perpaduan 其中 人民 与 政府 amat penting 在 usaha mempertahankan tanah air daripada ancaman musuh.",
+      "key_points_zh": [
+        "斗争 这 membuktikan bahawa perpaduan 其中 人民 与 政府 amat penting 在 usaha mempertahankan tanah air daripada ancaman musuh."
+      ],
+      "bm_focus_phrase": "Perjuangan ini membuktikan bahawa perpaduan antara rakyat dan kerajaan amat penting dalam usaha mempertahankan tanah air daripada ancaman musuh."
+    }
+  ]
+}

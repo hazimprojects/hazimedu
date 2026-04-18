@@ -1,1 +1,719 @@
-{"units": []}
+{
+  "meta": {
+    "source_file": "notes/bab-1-4.html",
+    "rollout": "gelombang-1-manual-revision"
+  },
+  "units": [
+    {
+      "source_id": "bab-1-4-u17",
+      "bm_original": "Hubungan antara pemerintah dan rakyat berasaskan konsep waadat .",
+      "translate": "Hubungan 其中 pemerintah 与 人民 berasaskan konsep waadat .",
+      "key_points_zh": [
+        "Hubungan 其中 pemerintah 与 人民 berasaskan konsep waadat ."
+      ],
+      "bm_focus_phrase": "Hubungan antara pemerintah dan rakyat berasaskan konsep waadat ."
+    },
+    {
+      "source_id": "bab-1-4-u18",
+      "bm_original": "Hubungan ini bersifat timbal balik dan saling melengkapi .",
+      "translate": "Hubungan 这 bersifat timbal balik 与 saling melengkapi .",
+      "key_points_zh": [
+        "Hubungan 这 bersifat timbal balik 与 saling melengkapi ."
+      ],
+      "bm_focus_phrase": "Hubungan ini bersifat timbal balik dan saling melengkapi ."
+    },
+    {
+      "source_id": "bab-1-4-u19",
+      "bm_original": "Hubungan ini menyokong sistem pemerintahan dalam Kesultanan Melayu Melaka .",
+      "translate": "Hubungan 这 menyokong sistem pemerintahan 在 Kesultanan Melayu Melaka .",
+      "key_points_zh": [
+        "Hubungan 这 menyokong sistem pemerintahan 在 Kesultanan Melayu Melaka ."
+      ],
+      "bm_focus_phrase": "Hubungan ini menyokong sistem pemerintahan dalam Kesultanan Melayu Melaka ."
+    },
+    {
+      "source_id": "bab-1-4-u20",
+      "bm_original": "Hasilnya, pentadbiran berjalan lancar dan Melaka mencapai kegemilangan.",
+      "translate": "Hasilnya, 行政 berjalan lancar 与 Melaka mencapai kegemilangan.",
+      "key_points_zh": [
+        "Hasilnya, 行政 berjalan lancar 与 Melaka mencapai kegemilangan."
+      ],
+      "bm_focus_phrase": "Hasilnya, pentadbiran berjalan lancar dan Melaka mencapai kegemilangan."
+    },
+    {
+      "source_id": "bab-1-4-soalan-heading",
+      "bm_original": "Bagaimanakah hubungan antara pemerintah dan rakyat dalam Kesultanan Melayu Melaka?",
+      "translate": "Bagaimanakah hubungan 其中 pemerintah 与 人民 在 Kesultanan Melayu Melaka?",
+      "key_points_zh": [
+        "Bagaimanakah hubungan 其中 pemerintah 与 人民 在 Kesultanan Melayu Melaka?"
+      ],
+      "bm_focus_phrase": "Bagaimanakah hubungan antara pemerintah dan rakyat dalam Kesultanan Melayu Melaka?"
+    },
+    {
+      "source_id": "bab-1-4-soalan-line-1",
+      "bm_original": "Hubungan antara pemerintah dan rakyat dalam Kesultanan Melayu Melaka berasaskan konsep waadat , iaitu perjanjian antara pemerintah dan rakyat.",
+      "translate": "Hubungan 其中 pemerintah 与 人民 在 Kesultanan Melayu Melaka berasaskan konsep waadat , iaitu 协议 其中 pemerintah 与 人民.",
+      "key_points_zh": [
+        "Hubungan 其中 pemerintah 与 人民 在 Kesultanan Melayu Melaka berasaskan konsep waadat , iaitu 协议 其中 pemerintah 与 人民."
+      ],
+      "bm_focus_phrase": "Hubungan antara pemerintah dan rakyat dalam Kesultanan Melayu Melaka berasaskan konsep waadat , iaitu perjanjian antara pemerintah dan rakyat."
+    },
+    {
+      "source_id": "bab-1-4-u01",
+      "bm_original": "Hubungan ini bersifat timbal balik dan saling melengkapi , lalu menyokong kestabilan pemerintahan.",
+      "translate": "Hubungan 这 bersifat timbal balik 与 saling melengkapi , lalu menyokong kestabilan pemerintahan.",
+      "key_points_zh": [
+        "Hubungan 这 bersifat timbal balik 与 saling melengkapi , lalu menyokong kestabilan pemerintahan."
+      ],
+      "bm_focus_phrase": "Hubungan ini bersifat timbal balik dan saling melengkapi , lalu menyokong kestabilan pemerintahan."
+    },
+    {
+      "source_id": "bab-1-4-u02",
+      "bm_original": "Hasilnya, pentadbiran berjalan lancar dan Kesultanan Melayu Melaka mencapai kegemilangan.",
+      "translate": "Hasilnya, 行政 berjalan lancar 与 Kesultanan Melayu Melaka mencapai kegemilangan.",
+      "key_points_zh": [
+        "Hasilnya, 行政 berjalan lancar 与 Kesultanan Melayu Melaka mencapai kegemilangan."
+      ],
+      "bm_focus_phrase": "Hasilnya, pentadbiran berjalan lancar dan Kesultanan Melayu Melaka mencapai kegemilangan."
+    },
+    {
+      "source_id": "bab-1-4-fokus-line",
+      "bm_original": "Dalam Kesultanan Melayu Melaka, hubungan antara pemerintah dan rakyat didasari oleh konsep waadat yang bersifat timbal balik dan saling melengkapi. Subtopik ini menjelaskan struktur masyarakat dan jenis-jenis hubungan yang wujud:",
+      "translate": "Dalam Kesultanan Melayu Melaka, hubungan 其中 pemerintah 与 人民 didasari 由 konsep waadat 的 bersifat timbal balik 与 saling melengkapi. Subtopik 这 menjelaskan struktur 社会 与 jenis-jenis hubungan 的 wujud:",
+      "key_points_zh": [
+        "Dalam Kesultanan Melayu Melaka, hubungan 其中 pemerintah 与 人民 didasari 由 konsep waadat 的 bersifat timbal balik 与 saling melengkapi. Subtopik 这 menjelaskan struktur 社会 与 jenis-jenis hubungan 的 wujud:"
+      ],
+      "bm_focus_phrase": "Dalam Kesultanan Melayu Melaka, hubungan antara pemerintah dan rakyat didasari oleh konsep waadat yang bersifat timbal balik dan saling melengkapi. Subtopik ini menjelaskan struktur masyarakat dan jenis-jenis hubungan yang wujud:"
+    },
+    {
+      "source_id": "bab-1-4-u03",
+      "bm_original": "Masyarakat Melaka terbahagi kepada dua:",
+      "translate": "社会 Melaka terbahagi 向 dua:",
+      "key_points_zh": [
+        "社会 Melaka terbahagi 向 dua:"
+      ],
+      "bm_focus_phrase": "Masyarakat Melaka terbahagi kepada dua:"
+    },
+    {
+      "source_id": "bab-1-4-extra-1",
+      "bm_original": "1️⃣ Golongan Pemerintah 👑",
+      "translate": "重点：1️⃣ Golongan Pemerintah 👑",
+      "key_points_zh": [
+        "重点：1️⃣ Golongan Pemerintah 👑"
+      ],
+      "bm_focus_phrase": "1️⃣ Golongan Pemerintah 👑"
+    },
+    {
+      "source_id": "bab-1-4-extra-2",
+      "bm_original": "2️⃣ Golongan Diperintah 👥",
+      "translate": "重点：2️⃣ Golongan Diperintah 👥",
+      "key_points_zh": [
+        "重点：2️⃣ Golongan Diperintah 👥"
+      ],
+      "bm_focus_phrase": "2️⃣ Golongan Diperintah 👥"
+    },
+    {
+      "source_id": "bab-1-4-u04",
+      "bm_original": "Terdiri daripada:",
+      "translate": "重点：Terdiri daripada:",
+      "key_points_zh": [
+        "重点：Terdiri daripada:"
+      ],
+      "bm_focus_phrase": "Terdiri daripada:"
+    },
+    {
+      "source_id": "bab-1-4-extra-3",
+      "bm_original": "Sultan",
+      "translate": "重点：Sultan",
+      "key_points_zh": [
+        "重点：Sultan"
+      ],
+      "bm_focus_phrase": "Sultan"
+    },
+    {
+      "source_id": "bab-1-4-extra-4",
+      "bm_original": "Pembesar",
+      "translate": "重点：Pembesar",
+      "key_points_zh": [
+        "重点：Pembesar"
+      ],
+      "bm_focus_phrase": "Pembesar"
+    },
+    {
+      "source_id": "bab-1-4-extra-5",
+      "bm_original": "Kerabat diraja",
+      "translate": "重点：Kerabat diraja",
+      "key_points_zh": [
+        "重点：Kerabat diraja"
+      ],
+      "bm_focus_phrase": "Kerabat diraja"
+    },
+    {
+      "source_id": "bab-1-4-extra-6",
+      "bm_original": "Ulama",
+      "translate": "重点：Ulama",
+      "key_points_zh": [
+        "重点：Ulama"
+      ],
+      "bm_focus_phrase": "Ulama"
+    },
+    {
+      "source_id": "bab-1-4-u05",
+      "bm_original": "Rakyat terdiri daripada:",
+      "translate": "人民 terdiri daripada:",
+      "key_points_zh": [
+        "人民 terdiri daripada:"
+      ],
+      "bm_focus_phrase": "Rakyat terdiri daripada:"
+    },
+    {
+      "source_id": "bab-1-4-extra-7",
+      "bm_original": "peniaga",
+      "translate": "重点：peniaga",
+      "key_points_zh": [
+        "重点：peniaga"
+      ],
+      "bm_focus_phrase": "peniaga"
+    },
+    {
+      "source_id": "bab-1-4-extra-8",
+      "bm_original": "petani",
+      "translate": "重点：petani",
+      "key_points_zh": [
+        "重点：petani"
+      ],
+      "bm_focus_phrase": "petani"
+    },
+    {
+      "source_id": "bab-1-4-extra-9",
+      "bm_original": "tukang",
+      "translate": "重点：tukang",
+      "key_points_zh": [
+        "重点：tukang"
+      ],
+      "bm_focus_phrase": "tukang"
+    },
+    {
+      "source_id": "bab-1-4-extra-10",
+      "bm_original": "nelayan",
+      "translate": "重点：nelayan",
+      "key_points_zh": [
+        "重点：nelayan"
+      ],
+      "bm_focus_phrase": "nelayan"
+    },
+    {
+      "source_id": "bab-1-4-u06",
+      "bm_original": "Golongan hamba:",
+      "translate": "重点：Golongan hamba:",
+      "key_points_zh": [
+        "重点：Golongan hamba:"
+      ],
+      "bm_focus_phrase": "Golongan hamba:"
+    },
+    {
+      "source_id": "bab-1-4-extra-11",
+      "bm_original": "hamba raja",
+      "translate": "重点：hamba raja",
+      "key_points_zh": [
+        "重点：hamba raja"
+      ],
+      "bm_focus_phrase": "hamba raja"
+    },
+    {
+      "source_id": "bab-1-4-extra-12",
+      "bm_original": "hamba berhutang",
+      "translate": "重点：hamba berhutang",
+      "key_points_zh": [
+        "重点：hamba berhutang"
+      ],
+      "bm_focus_phrase": "hamba berhutang"
+    },
+    {
+      "source_id": "bab-1-4-extra-13",
+      "bm_original": "hamba biasa",
+      "translate": "重点：hamba biasa",
+      "key_points_zh": [
+        "重点：hamba biasa"
+      ],
+      "bm_focus_phrase": "hamba biasa"
+    },
+    {
+      "source_id": "bab-1-4-u07",
+      "bm_original": "Sultan berperanan sebagai:",
+      "translate": "Sultan berperanan 作为:",
+      "key_points_zh": [
+        "Sultan berperanan 作为:"
+      ],
+      "bm_focus_phrase": "Sultan berperanan sebagai:"
+    },
+    {
+      "source_id": "bab-1-4-extra-14",
+      "bm_original": "pelindung rakyat",
+      "translate": "pelindung 人民",
+      "key_points_zh": [
+        "pelindung 人民"
+      ],
+      "bm_focus_phrase": "pelindung rakyat"
+    },
+    {
+      "source_id": "bab-1-4-extra-15",
+      "bm_original": "penyatu masyarakat",
+      "translate": "penyatu 社会",
+      "key_points_zh": [
+        "penyatu 社会"
+      ],
+      "bm_focus_phrase": "penyatu masyarakat"
+    },
+    {
+      "source_id": "bab-1-4-extra-16",
+      "bm_original": "pemimpin negara",
+      "translate": "领袖 negara",
+      "key_points_zh": [
+        "领袖 negara"
+      ],
+      "bm_focus_phrase": "pemimpin negara"
+    },
+    {
+      "source_id": "bab-1-4-u08",
+      "bm_original": "Tanggungjawab utama:",
+      "translate": "Tanggungjawab 主要:",
+      "key_points_zh": [
+        "Tanggungjawab 主要:"
+      ],
+      "bm_focus_phrase": "Tanggungjawab utama:"
+    },
+    {
+      "source_id": "bab-1-4-extra-17",
+      "bm_original": "menjaga keselamatan rakyat",
+      "translate": "menjaga keselamatan 人民",
+      "key_points_zh": [
+        "menjaga keselamatan 人民"
+      ],
+      "bm_focus_phrase": "menjaga keselamatan rakyat"
+    },
+    {
+      "source_id": "bab-1-4-extra-18",
+      "bm_original": "mewujudkan perpaduan",
+      "translate": "重点：mewujudkan perpaduan",
+      "key_points_zh": [
+        "重点：mewujudkan perpaduan"
+      ],
+      "bm_focus_phrase": "mewujudkan perpaduan"
+    },
+    {
+      "source_id": "bab-1-4-extra-19",
+      "bm_original": "memastikan kemakmuran & kestabilan",
+      "translate": "重点：memastikan kemakmuran & kestabilan",
+      "key_points_zh": [
+        "重点：memastikan kemakmuran & kestabilan"
+      ],
+      "bm_focus_phrase": "memastikan kemakmuran & kestabilan"
+    },
+    {
+      "source_id": "bab-1-4-extra-20",
+      "bm_original": "menggubal undang-undang",
+      "translate": "重点：menggubal undang-undang",
+      "key_points_zh": [
+        "重点：menggubal undang-undang"
+      ],
+      "bm_focus_phrase": "menggubal undang-undang"
+    },
+    {
+      "source_id": "bab-1-4-u09",
+      "bm_original": "Pembesar membantu sultan dalam pentadbiran.",
+      "translate": "Pembesar membantu sultan 在 行政.",
+      "key_points_zh": [
+        "Pembesar membantu sultan 在 行政."
+      ],
+      "bm_focus_phrase": "Pembesar membantu sultan dalam pentadbiran."
+    },
+    {
+      "source_id": "bab-1-4-extra-21",
+      "bm_original": "menjaga keamanan kawasan pegangan",
+      "translate": "重点：menjaga keamanan kawasan pegangan",
+      "key_points_zh": [
+        "重点：menjaga keamanan kawasan pegangan"
+      ],
+      "bm_focus_phrase": "menjaga keamanan kawasan pegangan"
+    },
+    {
+      "source_id": "bab-1-4-extra-22",
+      "bm_original": "menjadi perantara sultan dengan rakyat",
+      "translate": "menjadi perantara sultan 以 人民",
+      "key_points_zh": [
+        "menjadi perantara sultan 以 人民"
+      ],
+      "bm_focus_phrase": "menjadi perantara sultan dengan rakyat"
+    },
+    {
+      "source_id": "bab-1-4-extra-23",
+      "bm_original": "mengutip hasil melalui sistem serah",
+      "translate": "mengutip hasil 通过 sistem serah",
+      "key_points_zh": [
+        "mengutip hasil 通过 sistem serah"
+      ],
+      "bm_focus_phrase": "mengutip hasil melalui sistem serah"
+    },
+    {
+      "source_id": "bab-1-4-extra-24",
+      "bm_original": "menyediakan tentera melalui sistem kerah",
+      "translate": "menyediakan tentera 通过 sistem kerah",
+      "key_points_zh": [
+        "menyediakan tentera 通过 sistem kerah"
+      ],
+      "bm_focus_phrase": "menyediakan tentera melalui sistem kerah"
+    },
+    {
+      "source_id": "bab-1-4-u10",
+      "bm_original": "Rakyat memainkan peranan penting dalam negara.",
+      "translate": "人民 memainkan peranan penting 在 negara.",
+      "key_points_zh": [
+        "人民 memainkan peranan penting 在 negara."
+      ],
+      "bm_focus_phrase": "Rakyat memainkan peranan penting dalam negara."
+    },
+    {
+      "source_id": "bab-1-4-extra-25",
+      "bm_original": "taat setia kepada pemerintah",
+      "translate": "taat setia 向 pemerintah",
+      "key_points_zh": [
+        "taat setia 向 pemerintah"
+      ],
+      "bm_focus_phrase": "taat setia kepada pemerintah"
+    },
+    {
+      "source_id": "bab-1-4-extra-26",
+      "bm_original": "mematuhi arahan",
+      "translate": "重点：mematuhi arahan",
+      "key_points_zh": [
+        "重点：mematuhi arahan"
+      ],
+      "bm_focus_phrase": "mematuhi arahan"
+    },
+    {
+      "source_id": "bab-1-4-extra-27",
+      "bm_original": "tidak menderhaka (takut ditimpa tulah)",
+      "translate": "不 menderhaka (takut ditimpa tulah)",
+      "key_points_zh": [
+        "不 menderhaka (takut ditimpa tulah)"
+      ],
+      "bm_focus_phrase": "tidak menderhaka (takut ditimpa tulah)"
+    },
+    {
+      "source_id": "bab-1-4-extra-28",
+      "bm_original": "menjadi tentera",
+      "translate": "重点：menjadi tentera",
+      "key_points_zh": [
+        "重点：menjadi tentera"
+      ],
+      "bm_focus_phrase": "menjadi tentera"
+    },
+    {
+      "source_id": "bab-1-4-extra-29",
+      "bm_original": "menjadi pendayung kapal perang",
+      "translate": "重点：menjadi pendayung kapal perang",
+      "key_points_zh": [
+        "重点：menjadi pendayung kapal perang"
+      ],
+      "bm_focus_phrase": "menjadi pendayung kapal perang"
+    },
+    {
+      "source_id": "bab-1-4-extra-30",
+      "bm_original": "menyertai gotong-royong",
+      "translate": "重点：menyertai gotong-royong",
+      "key_points_zh": [
+        "重点：menyertai gotong-royong"
+      ],
+      "bm_focus_phrase": "menyertai gotong-royong"
+    },
+    {
+      "source_id": "bab-1-4-extra-31",
+      "bm_original": "tenaga kerja melalui sistem kerah",
+      "translate": "tenaga kerja 通过 sistem kerah",
+      "key_points_zh": [
+        "tenaga kerja 通过 sistem kerah"
+      ],
+      "bm_focus_phrase": "tenaga kerja melalui sistem kerah"
+    },
+    {
+      "source_id": "bab-1-4-u11",
+      "bm_original": "Waadat ialah perjanjian antara pemerintah dan rakyat.",
+      "translate": "Waadat 是 协议 其中 pemerintah 与 人民.",
+      "key_points_zh": [
+        "Waadat 是 协议 其中 pemerintah 与 人民."
+      ],
+      "bm_focus_phrase": "Waadat ialah perjanjian antara pemerintah dan rakyat."
+    },
+    {
+      "source_id": "bab-1-4-u12",
+      "bm_original": "Berlaku antara:",
+      "translate": "Berlaku 其中:",
+      "key_points_zh": [
+        "Berlaku 其中:"
+      ],
+      "bm_focus_phrase": "Berlaku antara:"
+    },
+    {
+      "source_id": "bab-1-4-extra-32",
+      "bm_original": "Sang Sapurba (pemerintah)",
+      "translate": "重点：Sang Sapurba (pemerintah)",
+      "key_points_zh": [
+        "重点：Sang Sapurba (pemerintah)"
+      ],
+      "bm_focus_phrase": "Sang Sapurba (pemerintah)"
+    },
+    {
+      "source_id": "bab-1-4-extra-33",
+      "bm_original": "Demang Lebar Daun (wakil rakyat)",
+      "translate": "Demang Lebar Daun (wakil 人民)",
+      "key_points_zh": [
+        "Demang Lebar Daun (wakil 人民)"
+      ],
+      "bm_focus_phrase": "Demang Lebar Daun (wakil rakyat)"
+    },
+    {
+      "source_id": "bab-1-4-extra-34",
+      "bm_original": "tidak menderhaka kepada raja",
+      "translate": "不 menderhaka 向 raja",
+      "key_points_zh": [
+        "不 menderhaka 向 raja"
+      ],
+      "bm_focus_phrase": "tidak menderhaka kepada raja"
+    },
+    {
+      "source_id": "bab-1-4-extra-35",
+      "bm_original": "tidak berlaku zalim kepada rakyat",
+      "translate": "不 发生 zalim 向 人民",
+      "key_points_zh": [
+        "不 发生 zalim 向 人民"
+      ],
+      "bm_focus_phrase": "tidak berlaku zalim kepada rakyat"
+    },
+    {
+      "source_id": "bab-1-4-extra-36",
+      "bm_original": "rakyat derhaka → ditimpa tulah",
+      "translate": "人民 derhaka → ditimpa tulah",
+      "key_points_zh": [
+        "人民 derhaka → ditimpa tulah"
+      ],
+      "bm_focus_phrase": "rakyat derhaka → ditimpa tulah"
+    },
+    {
+      "source_id": "bab-1-4-extra-37",
+      "bm_original": "raja zalim → kerajaan akan binasa",
+      "translate": "raja zalim → 政府 将会 binasa",
+      "key_points_zh": [
+        "raja zalim → 政府 将会 binasa"
+      ],
+      "bm_focus_phrase": "raja zalim → kerajaan akan binasa"
+    },
+    {
+      "source_id": "bab-1-4-u13",
+      "bm_original": "Waadat menjadi asas kepada:",
+      "translate": "Waadat menjadi asas 向:",
+      "key_points_zh": [
+        "Waadat menjadi asas 向:"
+      ],
+      "bm_focus_phrase": "Waadat menjadi asas kepada:"
+    },
+    {
+      "source_id": "bab-1-4-extra-38",
+      "bm_original": "kesetiaan rakyat",
+      "translate": "kesetiaan 人民",
+      "key_points_zh": [
+        "kesetiaan 人民"
+      ],
+      "bm_focus_phrase": "kesetiaan rakyat"
+    },
+    {
+      "source_id": "bab-1-4-extra-39",
+      "bm_original": "keadilan pemerintah",
+      "translate": "重点：keadilan pemerintah",
+      "key_points_zh": [
+        "重点：keadilan pemerintah"
+      ],
+      "bm_focus_phrase": "keadilan pemerintah"
+    },
+    {
+      "source_id": "bab-1-4-extra-40",
+      "bm_original": "Waadat → perjanjian",
+      "translate": "Waadat → 协议",
+      "key_points_zh": [
+        "Waadat → 协议"
+      ],
+      "bm_focus_phrase": "Waadat → perjanjian"
+    },
+    {
+      "source_id": "bab-1-4-extra-41",
+      "bm_original": "Tulah → kecelakaan akibat menderhaka kepada raja",
+      "translate": "Tulah → kecelakaan akibat menderhaka 向 raja",
+      "key_points_zh": [
+        "Tulah → kecelakaan akibat menderhaka 向 raja"
+      ],
+      "bm_focus_phrase": "Tulah → kecelakaan akibat menderhaka kepada raja"
+    },
+    {
+      "source_id": "bab-1-4-u14",
+      "bm_original": "Hubungan antara pemerintah dan rakyat:",
+      "translate": "Hubungan 其中 pemerintah 与 人民:",
+      "key_points_zh": [
+        "Hubungan 其中 pemerintah 与 人民:"
+      ],
+      "bm_focus_phrase": "Hubungan antara pemerintah dan rakyat:"
+    },
+    {
+      "source_id": "bab-1-4-extra-42",
+      "bm_original": "saling bergantung",
+      "translate": "重点：saling bergantung",
+      "key_points_zh": [
+        "重点：saling bergantung"
+      ],
+      "bm_focus_phrase": "saling bergantung"
+    },
+    {
+      "source_id": "bab-1-4-extra-43",
+      "bm_original": "bersifat timbal balik",
+      "translate": "重点：bersifat timbal balik",
+      "key_points_zh": [
+        "重点：bersifat timbal balik"
+      ],
+      "bm_focus_phrase": "bersifat timbal balik"
+    },
+    {
+      "source_id": "bab-1-4-extra-44",
+      "bm_original": "kedaulatan raja terpelihara",
+      "translate": "主权 raja terpelihara",
+      "key_points_zh": [
+        "主权 raja terpelihara"
+      ],
+      "bm_focus_phrase": "kedaulatan raja terpelihara"
+    },
+    {
+      "source_id": "bab-1-4-extra-45",
+      "bm_original": "kesejahteraan rakyat terjamin",
+      "translate": "kesejahteraan 人民 terjamin",
+      "key_points_zh": [
+        "kesejahteraan 人民 terjamin"
+      ],
+      "bm_focus_phrase": "kesejahteraan rakyat terjamin"
+    },
+    {
+      "source_id": "bab-1-4-extra-46",
+      "bm_original": "negara menjadi stabil dan makmur",
+      "translate": "negara menjadi stabil 与 makmur",
+      "key_points_zh": [
+        "negara menjadi stabil 与 makmur"
+      ],
+      "bm_focus_phrase": "negara menjadi stabil dan makmur"
+    },
+    {
+      "source_id": "bab-1-4-u15",
+      "bm_original": "Ciri-ciri negara bangsa:",
+      "translate": "重点：Ciri-ciri negara bangsa:",
+      "key_points_zh": [
+        "重点：Ciri-ciri negara bangsa:"
+      ],
+      "bm_focus_phrase": "Ciri-ciri negara bangsa:"
+    },
+    {
+      "source_id": "bab-1-4-extra-47",
+      "bm_original": "diwarisi dari kerajaan Alam Melayu",
+      "translate": "diwarisi dari 政府 Alam Melayu",
+      "key_points_zh": [
+        "diwarisi dari 政府 Alam Melayu"
+      ],
+      "bm_focus_phrase": "diwarisi dari kerajaan Alam Melayu"
+    },
+    {
+      "source_id": "bab-1-4-extra-48",
+      "bm_original": "diperkukuh oleh Kesultanan Melayu Melaka",
+      "translate": "diperkukuh 由 Kesultanan Melayu Melaka",
+      "key_points_zh": [
+        "diperkukuh 由 Kesultanan Melayu Melaka"
+      ],
+      "bm_focus_phrase": "diperkukuh oleh Kesultanan Melayu Melaka"
+    },
+    {
+      "source_id": "bab-1-4-u16",
+      "bm_original": "Keunggulan Melaka terbina melalui:",
+      "translate": "Keunggulan Melaka terbina 通过:",
+      "key_points_zh": [
+        "Keunggulan Melaka terbina 通过:"
+      ],
+      "bm_focus_phrase": "Keunggulan Melaka terbina melalui:"
+    },
+    {
+      "source_id": "bab-1-4-extra-49",
+      "bm_original": "sistem pentadbiran yang tersusun",
+      "translate": "sistem 行政 的 tersusun",
+      "key_points_zh": [
+        "sistem 行政 的 tersusun"
+      ],
+      "bm_focus_phrase": "sistem pentadbiran yang tersusun"
+    },
+    {
+      "source_id": "bab-1-4-extra-50",
+      "bm_original": "undang-undang yang sistematik",
+      "translate": "undang-undang 的 sistematik",
+      "key_points_zh": [
+        "undang-undang 的 sistematik"
+      ],
+      "bm_focus_phrase": "undang-undang yang sistematik"
+    },
+    {
+      "source_id": "bab-1-4-extra-51",
+      "bm_original": "hubungan erat pemerintah & rakyat",
+      "translate": "hubungan erat pemerintah & 人民",
+      "key_points_zh": [
+        "hubungan erat pemerintah & 人民"
+      ],
+      "bm_focus_phrase": "hubungan erat pemerintah & rakyat"
+    },
+    {
+      "source_id": "bab-1-4-extra-52",
+      "bm_original": "kerajaan menjadi kuat dan gemilang",
+      "translate": "政府 menjadi kuat 与 gemilang",
+      "key_points_zh": [
+        "政府 menjadi kuat 与 gemilang"
+      ],
+      "bm_focus_phrase": "kerajaan menjadi kuat dan gemilang"
+    },
+    {
+      "source_id": "bab-1-4-extra-53",
+      "bm_original": "menjadi empayar yang terkenal",
+      "translate": "menjadi empayar 的 terkenal",
+      "key_points_zh": [
+        "menjadi empayar 的 terkenal"
+      ],
+      "bm_focus_phrase": "menjadi empayar yang terkenal"
+    },
+    {
+      "source_id": "bab-1-4-extra-54",
+      "bm_original": "berbangga dengan warisan sejarah",
+      "translate": "berbangga 以 warisan 历史",
+      "key_points_zh": [
+        "berbangga 以 warisan 历史"
+      ],
+      "bm_focus_phrase": "berbangga dengan warisan sejarah"
+    },
+    {
+      "source_id": "bab-1-4-extra-55",
+      "bm_original": "menjaga perpaduan",
+      "translate": "重点：menjaga perpaduan",
+      "key_points_zh": [
+        "重点：menjaga perpaduan"
+      ],
+      "bm_focus_phrase": "menjaga perpaduan"
+    },
+    {
+      "source_id": "bab-1-4-extra-56",
+      "bm_original": "mempertahankan kedaulatan negara",
+      "translate": "mempertahankan 主权 negara",
+      "key_points_zh": [
+        "mempertahankan 主权 negara"
+      ],
+      "bm_focus_phrase": "mempertahankan kedaulatan negara"
+    }
+  ]
+}

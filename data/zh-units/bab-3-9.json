@@ -1,1 +1,584 @@
-{"units": []}
+{
+  "meta": {
+    "source_file": "notes/bab-3-9.html",
+    "rollout": "gelombang-1-manual-revision"
+  },
+  "units": [
+    {
+      "source_id": "bab-3-9-u39",
+      "bm_original": "Amerika Syarikat menggunakan bom atom terhadap Hiroshima dan Nagasaki pada Ogos 1945 , lalu membawa kepada kekalahan tentera Jepun dan berakhirnya Perang Dunia Kedua .",
+      "translate": "Amerika Syarikat menggunakan bom atom 针对 Hiroshima 与 Nagasaki 于 Ogos 1945 , lalu membawa 向 kekalahan tentera Jepun 与 berakhirnya 第二次世界大战 .",
+      "key_points_zh": [
+        "Amerika Syarikat menggunakan bom atom 针对 Hiroshima 与 Nagasaki 于 Ogos 1945 , lalu membawa 向 kekalahan tentera Jepun 与 berakhirnya 第二次世界大战 ."
+      ],
+      "bm_focus_phrase": "Amerika Syarikat menggunakan bom atom terhadap Hiroshima dan Nagasaki pada Ogos 1945 , lalu membawa kepada kekalahan tentera Jepun dan berakhirnya Perang Dunia Kedua ."
+    },
+    {
+      "source_id": "bab-3-9-u40",
+      "bm_original": "Kelewatan pendaratan semula tentera British mewujudkan kekosongan kuasa politik yang membolehkan Bintang Tiga menguasai Tanah Melayu buat sementara waktu.",
+      "translate": "Kelewatan pendaratan semula tentera British mewujudkan kekosongan kuasa 政治 的 membolehkan Bintang Tiga menguasai Tanah Melayu buat sementara waktu.",
+      "key_points_zh": [
+        "Kelewatan pendaratan semula tentera British mewujudkan kekosongan kuasa 政治 的 membolehkan Bintang Tiga menguasai Tanah Melayu buat sementara waktu."
+      ],
+      "bm_focus_phrase": "Kelewatan pendaratan semula tentera British mewujudkan kekosongan kuasa politik yang membolehkan Bintang Tiga menguasai Tanah Melayu buat sementara waktu."
+    },
+    {
+      "source_id": "bab-3-9-u41",
+      "bm_original": "Orang Melayu bangkit mempertahankan institusi politik, kekeluargaan dan agama Islam, manakala pemimpin masyarakat serta Raja-raja Melayu berusaha memulihkan keamanan melalui kompromi dan perundingan.",
+      "translate": "Orang Melayu bangkit mempertahankan institusi 政治, kekeluargaan 与 agama Islam, manakala 领袖 社会 以及 Raja-raja Melayu berusaha memulihkan keamanan 通过 kompromi 与 perundingan.",
+      "key_points_zh": [
+        "Orang Melayu bangkit mempertahankan institusi 政治, kekeluargaan 与 agama Islam, manakala 领袖 社会 以及 Raja-raja Melayu berusaha memulihkan keamanan 通过 kompromi 与 perundingan."
+      ],
+      "bm_focus_phrase": "Orang Melayu bangkit mempertahankan institusi politik, kekeluargaan dan agama Islam, manakala pemimpin masyarakat serta Raja-raja Melayu berusaha memulihkan keamanan melalui kompromi dan perundingan."
+    },
+    {
+      "source_id": "bab-3-9-u42",
+      "bm_original": "Di Sarawak, ketegangan antara kaum berlaku di beberapa tempat sebelum campur tangan tentera Australia berjaya menghalang pertumpahan darah yang lebih besar.",
+      "translate": "Di Sarawak, ketegangan 其中 kaum 发生 di beberapa tempat sebelum campur tangan tentera Australia 成功 menghalang pertumpahan darah 的 更 besar.",
+      "key_points_zh": [
+        "Di Sarawak, ketegangan 其中 kaum 发生 di beberapa tempat sebelum campur tangan tentera Australia 成功 menghalang pertumpahan darah 的 更 besar."
+      ],
+      "bm_focus_phrase": "Di Sarawak, ketegangan antara kaum berlaku di beberapa tempat sebelum campur tangan tentera Australia berjaya menghalang pertumpahan darah yang lebih besar."
+    },
+    {
+      "source_id": "bab-3-9-u01",
+      "bm_original": "Kekalahan tentera Jepun membawa berakhirnya Perang Dunia Kedua, tetapi pada masa yang sama mewujudkan keadaan tidak stabil di negara kita.",
+      "translate": "Kekalahan tentera Jepun membawa berakhirnya 第二次世界大战, tetapi 于 masa 的 sama mewujudkan keadaan 不 stabil di negara kita.",
+      "key_points_zh": [
+        "Kekalahan tentera Jepun membawa berakhirnya 第二次世界大战, tetapi 于 masa 的 sama mewujudkan keadaan 不 stabil di negara kita."
+      ],
+      "bm_focus_phrase": "Kekalahan tentera Jepun membawa berakhirnya Perang Dunia Kedua, tetapi pada masa yang sama mewujudkan keadaan tidak stabil di negara kita."
+    },
+    {
+      "source_id": "bab-3-9-u02",
+      "bm_original": "Kekosongan kuasa politik telah membuka ruang kepada penguasaan Bintang Tiga di Tanah Melayu, seterusnya mencetuskan tindak balas orang Melayu, usaha perundingan dan pelbagai tindakan bagi memulihkan keamanan.",
+      "translate": "Kekosongan kuasa 政治 已经 membuka ruang 向 penguasaan Bintang Tiga di Tanah Melayu, seterusnya mencetuskan tindak balas orang Melayu, usaha perundingan 与 pelbagai tindakan bagi memulihkan keamanan.",
+      "key_points_zh": [
+        "Kekosongan kuasa 政治 已经 membuka ruang 向 penguasaan Bintang Tiga di Tanah Melayu, seterusnya mencetuskan tindak balas orang Melayu, usaha perundingan 与 pelbagai tindakan bagi memulihkan keamanan."
+      ],
+      "bm_focus_phrase": "Kekosongan kuasa politik telah membuka ruang kepada penguasaan Bintang Tiga di Tanah Melayu, seterusnya mencetuskan tindak balas orang Melayu, usaha perundingan dan pelbagai tindakan bagi memulihkan keamanan."
+    },
+    {
+      "source_id": "bab-3-9-u03",
+      "bm_original": "Amerika Syarikat telah menggunakan bom atom dalam serangan terhadap Jepun pada bulan Ogos 1945 .",
+      "translate": "Amerika Syarikat 已经 menggunakan bom atom 在 serangan 针对 Jepun 于 bulan Ogos 1945 .",
+      "key_points_zh": [
+        "Amerika Syarikat 已经 menggunakan bom atom 在 serangan 针对 Jepun 于 bulan Ogos 1945 ."
+      ],
+      "bm_focus_phrase": "Amerika Syarikat telah menggunakan bom atom dalam serangan terhadap Jepun pada bulan Ogos 1945 ."
+    },
+    {
+      "source_id": "bab-3-9-u04",
+      "bm_original": "Peristiwa tersebut membawa kepada kekalahan tentera Jepun dan berakhirnya Perang Dunia Kedua .",
+      "translate": "Peristiwa tersebut membawa 向 kekalahan tentera Jepun 与 berakhirnya 第二次世界大战 .",
+      "key_points_zh": [
+        "Peristiwa tersebut membawa 向 kekalahan tentera Jepun 与 berakhirnya 第二次世界大战 ."
+      ],
+      "bm_focus_phrase": "Peristiwa tersebut membawa kepada kekalahan tentera Jepun dan berakhirnya Perang Dunia Kedua ."
+    },
+    {
+      "source_id": "bab-3-9-u05",
+      "bm_original": "Selepas Jepun menyerah kalah, Lord Louis Mountbatten , Pemerintah Tertinggi Tentera Bersekutu di Asia Tenggara, merancang untuk segera mendarat di Tanah Melayu semula.",
+      "translate": "Selepas Jepun menyerah kalah, Lord Louis Mountbatten , Pemerintah Tertinggi Tentera Bersekutu di Asia Tenggara, merancang 为了 segera mendarat di Tanah Melayu semula.",
+      "key_points_zh": [
+        "Selepas Jepun menyerah kalah, Lord Louis Mountbatten , Pemerintah Tertinggi Tentera Bersekutu di Asia Tenggara, merancang 为了 segera mendarat di Tanah Melayu semula."
+      ],
+      "bm_focus_phrase": "Selepas Jepun menyerah kalah, Lord Louis Mountbatten , Pemerintah Tertinggi Tentera Bersekutu di Asia Tenggara, merancang untuk segera mendarat di Tanah Melayu semula."
+    },
+    {
+      "source_id": "bab-3-9-u06",
+      "bm_original": "Namun begitu, beliau tidak dibenarkan berbuat demikian sehingga selesai upacara penyerahan rasmi oleh pemerintah tentera Jepun kepada Jeneral Douglas MacArthur , Pemerintah Tertinggi Tentera Bersekutu di Pasifik pada 2 September 1945 .",
+      "translate": "Namun begitu, beliau 不 dibenarkan berbuat demikian sehingga selesai upacara penyerahan rasmi 由 pemerintah tentera Jepun 向 Jeneral Douglas MacArthur , Pemerintah Tertinggi Tentera Bersekutu di Pasifik 于 2 September 1945 .",
+      "key_points_zh": [
+        "Namun begitu, beliau 不 dibenarkan berbuat demikian sehingga selesai upacara penyerahan rasmi 由 pemerintah tentera Jepun 向 Jeneral Douglas MacArthur , Pemerintah Tertinggi Tentera Bersekutu di Pasifik 于 2 September 1945 ."
+      ],
+      "bm_focus_phrase": "Namun begitu, beliau tidak dibenarkan berbuat demikian sehingga selesai upacara penyerahan rasmi oleh pemerintah tentera Jepun kepada Jeneral Douglas MacArthur , Pemerintah Tertinggi Tentera Bersekutu di Pasifik pada 2 September 1945 ."
+    },
+    {
+      "source_id": "bab-3-9-u07",
+      "bm_original": "Oleh sebab itu, tentera British mula kembali ke Tanah Melayu pada 3 September 1945 .",
+      "translate": "Oleh sebab 那, tentera British mula kembali ke Tanah Melayu 于 3 September 1945 .",
+      "key_points_zh": [
+        "Oleh sebab 那, tentera British mula kembali ke Tanah Melayu 于 3 September 1945 ."
+      ],
+      "bm_focus_phrase": "Oleh sebab itu, tentera British mula kembali ke Tanah Melayu pada 3 September 1945 ."
+    },
+    {
+      "source_id": "bab-3-9-u08",
+      "bm_original": "Upacara rasmi penyerahan kalah tentera Jepun diadakan di Sabah , Sarawak , Singapura dan Tanah Melayu .",
+      "translate": "Upacara rasmi penyerahan kalah tentera Jepun diadakan di Sabah , Sarawak , Singapura 与 Tanah Melayu .",
+      "key_points_zh": [
+        "Upacara rasmi penyerahan kalah tentera Jepun diadakan di Sabah , Sarawak , Singapura 与 Tanah Melayu ."
+      ],
+      "bm_focus_phrase": "Upacara rasmi penyerahan kalah tentera Jepun diadakan di Sabah , Sarawak , Singapura dan Tanah Melayu ."
+    },
+    {
+      "source_id": "bab-3-9-u43",
+      "bm_original": "1️⃣ Pendaratan pertama tentera British di Pulau Pinang pada 3 September 1945 , iaitu tiga minggu selepas Jepun menyerah kalah.",
+      "translate": "1️⃣ Pendaratan pertama tentera British di Pulau Pinang 于 3 September 1945 , iaitu tiga minggu 在…之后 Jepun menyerah kalah.",
+      "key_points_zh": [
+        "1️⃣ Pendaratan pertama tentera British di Pulau Pinang 于 3 September 1945 , iaitu tiga minggu 在…之后 Jepun menyerah kalah."
+      ],
+      "bm_focus_phrase": "1️⃣ Pendaratan pertama tentera British di Pulau Pinang pada 3 September 1945 , iaitu tiga minggu selepas Jepun menyerah kalah."
+    },
+    {
+      "source_id": "bab-3-9-u44",
+      "bm_original": "2️⃣ Leftenan Jeneral Masao Baba menyerah kalah di Surrender Point, Labuan pada 10 September 1945 .",
+      "translate": "2️⃣ Leftenan Jeneral Masao Baba menyerah kalah di Surrender Point, Labuan 于 10 September 1945 .",
+      "key_points_zh": [
+        "2️⃣ Leftenan Jeneral Masao Baba menyerah kalah di Surrender Point, Labuan 于 10 September 1945 ."
+      ],
+      "bm_focus_phrase": "2️⃣ Leftenan Jeneral Masao Baba menyerah kalah di Surrender Point, Labuan pada 10 September 1945 ."
+    },
+    {
+      "source_id": "bab-3-9-u45",
+      "bm_original": "3️⃣ Mejar Jeneral Hiyoe Yamamura menyerah kalah di atas kapal Tentera Laut Australia, HMAS Kapunda , di Kuching, Sarawak pada 11 September 1945 .",
+      "translate": "3️⃣ Mejar Jeneral Hiyoe Yamamura menyerah kalah di atas kapal Tentera Laut Australia, HMAS Kapunda , di Kuching, Sarawak 于 11 September 1945 .",
+      "key_points_zh": [
+        "3️⃣ Mejar Jeneral Hiyoe Yamamura menyerah kalah di atas kapal Tentera Laut Australia, HMAS Kapunda , di Kuching, Sarawak 于 11 September 1945 ."
+      ],
+      "bm_focus_phrase": "3️⃣ Mejar Jeneral Hiyoe Yamamura menyerah kalah di atas kapal Tentera Laut Australia, HMAS Kapunda , di Kuching, Sarawak pada 11 September 1945 ."
+    },
+    {
+      "source_id": "bab-3-9-u46",
+      "bm_original": "4️⃣ Lord Mountbatten menandatangani pernyataan menyerah kalah tentera Jepun di Singapura pada 12 September 1945 .",
+      "translate": "4️⃣ Lord Mountbatten menandatangani pernyataan menyerah kalah tentera Jepun di Singapura 于 12 September 1945 .",
+      "key_points_zh": [
+        "4️⃣ Lord Mountbatten menandatangani pernyataan menyerah kalah tentera Jepun di Singapura 于 12 September 1945 ."
+      ],
+      "bm_focus_phrase": "4️⃣ Lord Mountbatten menandatangani pernyataan menyerah kalah tentera Jepun di Singapura pada 12 September 1945 ."
+    },
+    {
+      "source_id": "bab-3-9-u47",
+      "bm_original": "5️⃣ Jeneral Teizo Ishiguro menyerah kalah kepada Leftenan O. L. Roberts di Kuala Lumpur pada 13 September 1945 .",
+      "translate": "5️⃣ Jeneral Teizo Ishiguro menyerah kalah 向 Leftenan O. L. Roberts di Kuala Lumpur 于 13 September 1945 .",
+      "key_points_zh": [
+        "5️⃣ Jeneral Teizo Ishiguro menyerah kalah 向 Leftenan O. L. Roberts di Kuala Lumpur 于 13 September 1945 ."
+      ],
+      "bm_focus_phrase": "5️⃣ Jeneral Teizo Ishiguro menyerah kalah kepada Leftenan O. L. Roberts di Kuala Lumpur pada 13 September 1945 ."
+    },
+    {
+      "source_id": "bab-3-9-u09",
+      "bm_original": "Penyerahan kalah tentera Jepun menamatkan pendudukan Jepun di negara kita yang berlangsung dari 15 Februari 1942 hingga 12 September 1945 .",
+      "translate": "Penyerahan kalah tentera Jepun menamatkan pendudukan Jepun di negara kita 的 berlangsung dari 15 Februari 1942 hingga 12 September 1945 .",
+      "key_points_zh": [
+        "Penyerahan kalah tentera Jepun menamatkan pendudukan Jepun di negara kita 的 berlangsung dari 15 Februari 1942 hingga 12 September 1945 ."
+      ],
+      "bm_focus_phrase": "Penyerahan kalah tentera Jepun menamatkan pendudukan Jepun di negara kita yang berlangsung dari 15 Februari 1942 hingga 12 September 1945 ."
+    },
+    {
+      "source_id": "bab-3-9-u10",
+      "bm_original": "Kelewatan pendaratan semula tentera British menyebabkan wujud kekosongan kuasa politik .",
+      "translate": "Kelewatan pendaratan semula tentera British menyebabkan wujud kekosongan kuasa 政治 .",
+      "key_points_zh": [
+        "Kelewatan pendaratan semula tentera British menyebabkan wujud kekosongan kuasa 政治 ."
+      ],
+      "bm_focus_phrase": "Kelewatan pendaratan semula tentera British menyebabkan wujud kekosongan kuasa politik ."
+    },
+    {
+      "source_id": "bab-3-9-u11",
+      "bm_original": "Kesempatan ini digunakan oleh Bintang Tiga PKM melalui MPAJA untuk mengambil alih penguasaan di Tanah Melayu.",
+      "translate": "Kesempatan 这 digunakan 由 Bintang Tiga PKM 通过 MPAJA 为了 mengambil alih penguasaan di Tanah Melayu.",
+      "key_points_zh": [
+        "Kesempatan 这 digunakan 由 Bintang Tiga PKM 通过 MPAJA 为了 mengambil alih penguasaan di Tanah Melayu."
+      ],
+      "bm_focus_phrase": "Kesempatan ini digunakan oleh Bintang Tiga PKM melalui MPAJA untuk mengambil alih penguasaan di Tanah Melayu."
+    },
+    {
+      "source_id": "bab-3-9-u12",
+      "bm_original": "Bintang Tiga menganggap kekalahan tentera Jepun sebagai lambang keunggulan, kekuatan dan keberanian mereka menentang pendudukan Jepun.",
+      "translate": "Bintang Tiga menganggap kekalahan tentera Jepun 作为 lambang keunggulan, kekuatan 与 keberanian mereka 反对 pendudukan Jepun.",
+      "key_points_zh": [
+        "Bintang Tiga menganggap kekalahan tentera Jepun 作为 lambang keunggulan, kekuatan 与 keberanian mereka 反对 pendudukan Jepun."
+      ],
+      "bm_focus_phrase": "Bintang Tiga menganggap kekalahan tentera Jepun sebagai lambang keunggulan, kekuatan dan keberanian mereka menentang pendudukan Jepun."
+    },
+    {
+      "source_id": "bab-3-9-u48",
+      "bm_original": "Parti Komunis Malaya melalui Bintang Tiga telah menguasai bandar , balai polis dan pejabat pentadbiran kerajaan yang ditinggalkan oleh tentera Jepun.",
+      "translate": "Parti Komunis Malaya 通过 Bintang Tiga 已经 menguasai bandar , balai polis 与 pejabat 行政 政府 的 ditinggalkan 由 tentera Jepun.",
+      "key_points_zh": [
+        "Parti Komunis Malaya 通过 Bintang Tiga 已经 menguasai bandar , balai polis 与 pejabat 行政 政府 的 ditinggalkan 由 tentera Jepun."
+      ],
+      "bm_focus_phrase": "Parti Komunis Malaya melalui Bintang Tiga telah menguasai bandar , balai polis dan pejabat pentadbiran kerajaan yang ditinggalkan oleh tentera Jepun."
+    },
+    {
+      "source_id": "bab-3-9-u49",
+      "bm_original": "Bintang Tiga menjalankan undang-undang sendiri dan menggunakan mahkamah komunis untuk menjatuhkan hukuman mati terhadap sesiapa yang bekerjasama dengan Jepun, terutama orang Melayu .",
+      "translate": "Bintang Tiga menjalankan undang-undang sendiri 与 menggunakan mahkamah komunis 为了 menjatuhkan hukuman mati 针对 sesiapa 的 bekerjasama 以 Jepun, terutama orang Melayu .",
+      "key_points_zh": [
+        "Bintang Tiga menjalankan undang-undang sendiri 与 menggunakan mahkamah komunis 为了 menjatuhkan hukuman mati 针对 sesiapa 的 bekerjasama 以 Jepun, terutama orang Melayu ."
+      ],
+      "bm_focus_phrase": "Bintang Tiga menjalankan undang-undang sendiri dan menggunakan mahkamah komunis untuk menjatuhkan hukuman mati terhadap sesiapa yang bekerjasama dengan Jepun, terutama orang Melayu ."
+    },
+    {
+      "source_id": "bab-3-9-u50",
+      "bm_original": "Tindakan Bintang Tiga menyeksa dan membunuh anggota polis , askar , pegawai daerah dan pasukan sukarelawan Melayu dianggap perbuatan melampau dan mencabar kesabaran orang Melayu.",
+      "translate": "Tindakan Bintang Tiga menyeksa 与 membunuh anggota polis , askar , pegawai daerah 与 pasukan sukarelawan Melayu dianggap perbuatan melampau 与 mencabar kesabaran orang Melayu.",
+      "key_points_zh": [
+        "Tindakan Bintang Tiga menyeksa 与 membunuh anggota polis , askar , pegawai daerah 与 pasukan sukarelawan Melayu dianggap perbuatan melampau 与 mencabar kesabaran orang Melayu."
+      ],
+      "bm_focus_phrase": "Tindakan Bintang Tiga menyeksa dan membunuh anggota polis , askar , pegawai daerah dan pasukan sukarelawan Melayu dianggap perbuatan melampau dan mencabar kesabaran orang Melayu."
+    },
+    {
+      "source_id": "bab-3-9-u51",
+      "bm_original": "Selama lebih kurang 14 hari , Tanah Melayu berada di bawah penguasaan Bintang Tiga .",
+      "translate": "Selama 更 kurang 14 hari , Tanah Melayu berada di bawah penguasaan Bintang Tiga .",
+      "key_points_zh": [
+        "Selama 更 kurang 14 hari , Tanah Melayu berada di bawah penguasaan Bintang Tiga ."
+      ],
+      "bm_focus_phrase": "Selama lebih kurang 14 hari , Tanah Melayu berada di bawah penguasaan Bintang Tiga ."
+    },
+    {
+      "source_id": "bab-3-9-u13",
+      "bm_original": "Orang Melayu bersatu apabila Bintang Tiga mengancam institusi politik, kekeluargaan dan agama Islam.",
+      "translate": "Orang Melayu bersatu apabila Bintang Tiga 威胁 institusi 政治, kekeluargaan 与 agama Islam.",
+      "key_points_zh": [
+        "Orang Melayu bersatu apabila Bintang Tiga 威胁 institusi 政治, kekeluargaan 与 agama Islam."
+      ],
+      "bm_focus_phrase": "Orang Melayu bersatu apabila Bintang Tiga mengancam institusi politik, kekeluargaan dan agama Islam."
+    },
+    {
+      "source_id": "bab-3-9-u14",
+      "bm_original": "Gangguan Bintang Tiga dalam urusan keagamaan di surau dan masjid menyebabkan orang Melayu membentuk Gerakan Fi-Sabilillah .",
+      "translate": "Gangguan Bintang Tiga 在 urusan keagamaan di surau 与 masjid menyebabkan orang Melayu membentuk Gerakan Fi-Sabilillah .",
+      "key_points_zh": [
+        "Gangguan Bintang Tiga 在 urusan keagamaan di surau 与 masjid menyebabkan orang Melayu membentuk Gerakan Fi-Sabilillah ."
+      ],
+      "bm_focus_phrase": "Gangguan Bintang Tiga dalam urusan keagamaan di surau dan masjid menyebabkan orang Melayu membentuk Gerakan Fi-Sabilillah ."
+    },
+    {
+      "source_id": "bab-3-9-extra-1",
+      "bm_original": "mempertahankan maruah bangsa",
+      "translate": "重点：mempertahankan maruah bangsa",
+      "key_points_zh": [
+        "重点：mempertahankan maruah bangsa"
+      ],
+      "bm_focus_phrase": "mempertahankan maruah bangsa"
+    },
+    {
+      "source_id": "bab-3-9-extra-2",
+      "bm_original": "mempertahankan hak",
+      "translate": "mempertahankan 权利",
+      "key_points_zh": [
+        "mempertahankan 权利"
+      ],
+      "bm_focus_phrase": "mempertahankan hak"
+    },
+    {
+      "source_id": "bab-3-9-extra-3",
+      "bm_original": "mempertahankan harta",
+      "translate": "重点：mempertahankan harta",
+      "key_points_zh": [
+        "重点：mempertahankan harta"
+      ],
+      "bm_focus_phrase": "mempertahankan harta"
+    },
+    {
+      "source_id": "bab-3-9-extra-4",
+      "bm_original": "mempertahankan kelangsungan hidup orang Melayu",
+      "translate": "重点：mempertahankan kelangsungan hidup orang Melayu",
+      "key_points_zh": [
+        "重点：mempertahankan kelangsungan hidup orang Melayu"
+      ],
+      "bm_focus_phrase": "mempertahankan kelangsungan hidup orang Melayu"
+    },
+    {
+      "source_id": "bab-3-9-u15",
+      "bm_original": "Kepimpinan ulama tempatan memberikan inspirasi kepada masyarakat Melayu untuk berhadapan dengan kezaliman Bintang Tiga.",
+      "translate": "Kepimpinan ulama 本地 memberikan inspirasi 向 社会 Melayu 为了 berhadapan 以 kezaliman Bintang Tiga.",
+      "key_points_zh": [
+        "Kepimpinan ulama 本地 memberikan inspirasi 向 社会 Melayu 为了 berhadapan 以 kezaliman Bintang Tiga."
+      ],
+      "bm_focus_phrase": "Kepimpinan ulama tempatan memberikan inspirasi kepada masyarakat Melayu untuk berhadapan dengan kezaliman Bintang Tiga."
+    },
+    {
+      "source_id": "bab-3-9-u16",
+      "bm_original": "Di Johor, Haji Salleh Abdul Karim atau dikenali sebagai Kiai Salleh mempelopori penentangan terhadap Bintang Tiga dengan menubuhkan pasukan Tentera Selempang Merah .",
+      "translate": "Di Johor, Haji Salleh Abdul Karim atau dikenali 作为 Kiai Salleh mempelopori 反对 针对 Bintang Tiga 以 成立 pasukan Tentera Selempang Merah .",
+      "key_points_zh": [
+        "Di Johor, Haji Salleh Abdul Karim atau dikenali 作为 Kiai Salleh mempelopori 反对 针对 Bintang Tiga 以 成立 pasukan Tentera Selempang Merah ."
+      ],
+      "bm_focus_phrase": "Di Johor, Haji Salleh Abdul Karim atau dikenali sebagai Kiai Salleh mempelopori penentangan terhadap Bintang Tiga dengan menubuhkan pasukan Tentera Selempang Merah ."
+    },
+    {
+      "source_id": "bab-3-9-u17",
+      "bm_original": "Di Sungai Manik, Perak, Tuan Haji Bakri Haji Mohd Saman menjadi Khalifah Parang Panjang dalam usaha mempertahankan orang Melayu daripada ancaman Bintang Tiga.",
+      "translate": "Di Sungai Manik, Perak, Tuan Haji Bakri Haji Mohd Saman menjadi Khalifah Parang Panjang 在 usaha mempertahankan orang Melayu daripada ancaman Bintang Tiga.",
+      "key_points_zh": [
+        "Di Sungai Manik, Perak, Tuan Haji Bakri Haji Mohd Saman menjadi Khalifah Parang Panjang 在 usaha mempertahankan orang Melayu daripada ancaman Bintang Tiga."
+      ],
+      "bm_focus_phrase": "Di Sungai Manik, Perak, Tuan Haji Bakri Haji Mohd Saman menjadi Khalifah Parang Panjang dalam usaha mempertahankan orang Melayu daripada ancaman Bintang Tiga."
+    },
+    {
+      "source_id": "bab-3-9-u18",
+      "bm_original": "Keadaan ini menyebabkan negara kita berada dalam suasana tidak aman.",
+      "translate": "Keadaan 这 menyebabkan negara kita berada 在 suasana 不 aman.",
+      "key_points_zh": [
+        "Keadaan 这 menyebabkan negara kita berada 在 suasana 不 aman."
+      ],
+      "bm_focus_phrase": "Keadaan ini menyebabkan negara kita berada dalam suasana tidak aman."
+    },
+    {
+      "source_id": "bab-3-9-u19",
+      "bm_original": "Kebangkitan orang Melayu berlaku di beberapa lokasi berikut:",
+      "translate": "Kebangkitan orang Melayu 发生 di beberapa lokasi berikut:",
+      "key_points_zh": [
+        "Kebangkitan orang Melayu 发生 di beberapa lokasi berikut:"
+      ],
+      "bm_focus_phrase": "Kebangkitan orang Melayu berlaku di beberapa lokasi berikut:"
+    },
+    {
+      "source_id": "bab-3-9-extra-5",
+      "bm_original": "Johor → Batu Pahat (Ayer Hitam), Senggarang dan Rengit, Muar",
+      "translate": "Johor → Batu Pahat (Ayer Hitam), Senggarang 与 Rengit, Muar",
+      "key_points_zh": [
+        "Johor → Batu Pahat (Ayer Hitam), Senggarang 与 Rengit, Muar"
+      ],
+      "bm_focus_phrase": "Johor → Batu Pahat (Ayer Hitam), Senggarang dan Rengit, Muar"
+    },
+    {
+      "source_id": "bab-3-9-extra-6",
+      "bm_original": "Negeri Sembilan → Batu Kikir (Padang Lebar)",
+      "translate": "重点：Negeri Sembilan → Batu Kikir (Padang Lebar)",
+      "key_points_zh": [
+        "重点：Negeri Sembilan → Batu Kikir (Padang Lebar)"
+      ],
+      "bm_focus_phrase": "Negeri Sembilan → Batu Kikir (Padang Lebar)"
+    },
+    {
+      "source_id": "bab-3-9-extra-7",
+      "bm_original": "Melaka → Alor Gajah",
+      "translate": "重点：Melaka → Alor Gajah",
+      "key_points_zh": [
+        "重点：Melaka → Alor Gajah"
+      ],
+      "bm_focus_phrase": "Melaka → Alor Gajah"
+    },
+    {
+      "source_id": "bab-3-9-extra-8",
+      "bm_original": "Perak → Sungai Manik, Teluk Anson, Kampung Gajah, Bidor, Kuala Kangsar",
+      "translate": "重点：Perak → Sungai Manik, Teluk Anson, Kampung Gajah, Bidor, Kuala Kangsar",
+      "key_points_zh": [
+        "重点：Perak → Sungai Manik, Teluk Anson, Kampung Gajah, Bidor, Kuala Kangsar"
+      ],
+      "bm_focus_phrase": "Perak → Sungai Manik, Teluk Anson, Kampung Gajah, Bidor, Kuala Kangsar"
+    },
+    {
+      "source_id": "bab-3-9-extra-9",
+      "bm_original": "Pahang → Temerloh, Raub",
+      "translate": "重点：Pahang → Temerloh, Raub",
+      "key_points_zh": [
+        "重点：Pahang → Temerloh, Raub"
+      ],
+      "bm_focus_phrase": "Pahang → Temerloh, Raub"
+    },
+    {
+      "source_id": "bab-3-9-extra-10",
+      "bm_original": "Kedah → Baling",
+      "translate": "重点：Kedah → Baling",
+      "key_points_zh": [
+        "重点：Kedah → Baling"
+      ],
+      "bm_focus_phrase": "Kedah → Baling"
+    },
+    {
+      "source_id": "bab-3-9-u20",
+      "bm_original": "Nama asalnya ialah Teluk Mak Intan .",
+      "translate": "Nama asalnya 是 Teluk Mak Intan .",
+      "key_points_zh": [
+        "Nama asalnya 是 Teluk Mak Intan ."
+      ],
+      "bm_focus_phrase": "Nama asalnya ialah Teluk Mak Intan ."
+    },
+    {
+      "source_id": "bab-3-9-u21",
+      "bm_original": "Pada 1882 , namanya ditukar kepada Teluk Anson bersempena dengan nama Archibald Anson , Pegawai Daerah Hilir Perak.",
+      "translate": "Pada 1882 , namanya ditukar 向 Teluk Anson bersempena 以 nama Archibald Anson , Pegawai Daerah Hilir Perak.",
+      "key_points_zh": [
+        "Pada 1882 , namanya ditukar 向 Teluk Anson bersempena 以 nama Archibald Anson , Pegawai Daerah Hilir Perak."
+      ],
+      "bm_focus_phrase": "Pada 1882 , namanya ditukar kepada Teluk Anson bersempena dengan nama Archibald Anson , Pegawai Daerah Hilir Perak."
+    },
+    {
+      "source_id": "bab-3-9-u22",
+      "bm_original": "Pada 1 Januari 1982 , namanya ditukar kepada Teluk Intan.",
+      "translate": "Pada 1 Januari 1982 , namanya ditukar 向 Teluk Intan.",
+      "key_points_zh": [
+        "Pada 1 Januari 1982 , namanya ditukar 向 Teluk Intan."
+      ],
+      "bm_focus_phrase": "Pada 1 Januari 1982 , namanya ditukar kepada Teluk Intan."
+    },
+    {
+      "source_id": "bab-3-9-u23",
+      "bm_original": "Kebangkitan orang Melayu menentang Bintang Tiga yang mencetuskan pergaduhan kaum menyedarkan pemimpin masyarakat dan Raja-raja Melayu tentang kepentingan perdamaian.",
+      "translate": "Kebangkitan orang Melayu 反对 Bintang Tiga 的 mencetuskan pergaduhan kaum menyedarkan 领袖 社会 与 Raja-raja Melayu tentang kepentingan perdamaian.",
+      "key_points_zh": [
+        "Kebangkitan orang Melayu 反对 Bintang Tiga 的 mencetuskan pergaduhan kaum menyedarkan 领袖 社会 与 Raja-raja Melayu tentang kepentingan perdamaian."
+      ],
+      "bm_focus_phrase": "Kebangkitan orang Melayu menentang Bintang Tiga yang mencetuskan pergaduhan kaum menyedarkan pemimpin masyarakat dan Raja-raja Melayu tentang kepentingan perdamaian."
+    },
+    {
+      "source_id": "bab-3-9-u24",
+      "bm_original": "Dato' Onn Jaafar dilantik oleh Sultan Ibrahim sebagai Pegawai Daerah Batu Pahat dengan tugas utamanya menamatkan kekacauan dan memulihkan keamanan di Batu Pahat.",
+      "translate": "Dato' Onn Jaafar dilantik 由 Sultan Ibrahim 作为 Pegawai Daerah Batu Pahat 以 tugas utamanya menamatkan kekacauan 与 memulihkan keamanan di Batu Pahat.",
+      "key_points_zh": [
+        "Dato' Onn Jaafar dilantik 由 Sultan Ibrahim 作为 Pegawai Daerah Batu Pahat 以 tugas utamanya menamatkan kekacauan 与 memulihkan keamanan di Batu Pahat."
+      ],
+      "bm_focus_phrase": "Dato' Onn Jaafar dilantik oleh Sultan Ibrahim sebagai Pegawai Daerah Batu Pahat dengan tugas utamanya menamatkan kekacauan dan memulihkan keamanan di Batu Pahat."
+    },
+    {
+      "source_id": "bab-3-9-u25",
+      "bm_original": "Kompromi beliau berjaya memujuk Kiai Salleh membebaskan orang Cina yang ditahan di Parit Raja , manakala Bintang Tiga pula menamatkan penguasaan mereka di Balai Polis Batu Pahat .",
+      "translate": "Kompromi beliau 成功 memujuk Kiai Salleh membebaskan orang Cina 的 ditahan di Parit Raja , manakala Bintang Tiga pula menamatkan penguasaan mereka di Balai Polis Batu Pahat .",
+      "key_points_zh": [
+        "Kompromi beliau 成功 memujuk Kiai Salleh membebaskan orang Cina 的 ditahan di Parit Raja , manakala Bintang Tiga pula menamatkan penguasaan mereka di Balai Polis Batu Pahat ."
+      ],
+      "bm_focus_phrase": "Kompromi beliau berjaya memujuk Kiai Salleh membebaskan orang Cina yang ditahan di Parit Raja , manakala Bintang Tiga pula menamatkan penguasaan mereka di Balai Polis Batu Pahat ."
+    },
+    {
+      "source_id": "bab-3-9-u26",
+      "bm_original": "Kedua-dua pihak memberikan kerjasama kepada beliau sebagai Pegawai Daerah untuk mengembalikan keamanan di Johor.",
+      "translate": "Kedua-dua pihak memberikan kerjasama 向 beliau 作为 Pegawai Daerah 为了 mengembalikan keamanan di Johor.",
+      "key_points_zh": [
+        "Kedua-dua pihak memberikan kerjasama 向 beliau 作为 Pegawai Daerah 为了 mengembalikan keamanan di Johor."
+      ],
+      "bm_focus_phrase": "Kedua-dua pihak memberikan kerjasama kepada beliau sebagai Pegawai Daerah untuk mengembalikan keamanan di Johor."
+    },
+    {
+      "source_id": "bab-3-9-u27",
+      "bm_original": "Raja-raja Melayu berperanan penting dalam usaha menyelesaikan pergaduhan kaum.",
+      "translate": "Raja-raja Melayu berperanan penting 在 usaha menyelesaikan pergaduhan kaum.",
+      "key_points_zh": [
+        "Raja-raja Melayu berperanan penting 在 usaha menyelesaikan pergaduhan kaum."
+      ],
+      "bm_focus_phrase": "Raja-raja Melayu berperanan penting dalam usaha menyelesaikan pergaduhan kaum."
+    },
+    {
+      "source_id": "bab-3-9-u28",
+      "bm_original": "Contohnya, Sultan Pahang, Sultan Abu Bakar Ri'ayatuddin Al-Mu'adzam Shah berangkat ke Kuala Lipis untuk mengingatkan penduduk agar tidak lagi berlaku pergaduhan antara orang Melayu dengan orang Cina.",
+      "translate": "Contohnya, Sultan Pahang, Sultan Abu Bakar Ri'ayatuddin Al-Mu'adzam Shah berangkat ke Kuala Lipis 为了 mengingatkan penduduk agar 不 lagi 发生 pergaduhan 其中 orang Melayu 以 orang Cina.",
+      "key_points_zh": [
+        "Contohnya, Sultan Pahang, Sultan Abu Bakar Ri'ayatuddin Al-Mu'adzam Shah berangkat ke Kuala Lipis 为了 mengingatkan penduduk agar 不 lagi 发生 pergaduhan 其中 orang Melayu 以 orang Cina."
+      ],
+      "bm_focus_phrase": "Contohnya, Sultan Pahang, Sultan Abu Bakar Ri'ayatuddin Al-Mu'adzam Shah berangkat ke Kuala Lipis untuk mengingatkan penduduk agar tidak lagi berlaku pergaduhan antara orang Melayu dengan orang Cina."
+    },
+    {
+      "source_id": "bab-3-9-u29",
+      "bm_original": "Sultan Perak, Sultan Abdul Aziz Almustasim Billah Shah juga mengadakan lawatan dan pemantauan ke beberapa daerah bagi memastikan tiada berlaku pergaduhan antara orang Melayu dengan orang Cina.",
+      "translate": "Sultan Perak, Sultan Abdul Aziz Almustasim Billah Shah 也 mengadakan lawatan 与 pemantauan ke beberapa daerah bagi memastikan tiada 发生 pergaduhan 其中 orang Melayu 以 orang Cina.",
+      "key_points_zh": [
+        "Sultan Perak, Sultan Abdul Aziz Almustasim Billah Shah 也 mengadakan lawatan 与 pemantauan ke beberapa daerah bagi memastikan tiada 发生 pergaduhan 其中 orang Melayu 以 orang Cina."
+      ],
+      "bm_focus_phrase": "Sultan Perak, Sultan Abdul Aziz Almustasim Billah Shah juga mengadakan lawatan dan pemantauan ke beberapa daerah bagi memastikan tiada berlaku pergaduhan antara orang Melayu dengan orang Cina."
+    },
+    {
+      "source_id": "bab-3-9-u30",
+      "bm_original": "Baginda melawat kawasan yang terlibat untuk berjumpa dengan pemimpin setempat.",
+      "translate": "Baginda melawat kawasan 的 terlibat 为了 berjumpa 以 领袖 setempat.",
+      "key_points_zh": [
+        "Baginda melawat kawasan 的 terlibat 为了 berjumpa 以 领袖 setempat."
+      ],
+      "bm_focus_phrase": "Baginda melawat kawasan yang terlibat untuk berjumpa dengan pemimpin setempat."
+    },
+    {
+      "source_id": "bab-3-9-u31",
+      "bm_original": "Mesyuarat dengan penghulu, ketua kampung dan pegawai kerajaan diadakan bagi memastikan kerja pemulihan selepas perang diberikan keutamaan.",
+      "translate": "Mesyuarat 以 penghulu, ketua kampung 与 pegawai 政府 diadakan bagi memastikan kerja pemulihan 在…之后 perang diberikan keutamaan.",
+      "key_points_zh": [
+        "Mesyuarat 以 penghulu, ketua kampung 与 pegawai 政府 diadakan bagi memastikan kerja pemulihan 在…之后 perang diberikan keutamaan."
+      ],
+      "bm_focus_phrase": "Mesyuarat dengan penghulu, ketua kampung dan pegawai kerajaan diadakan bagi memastikan kerja pemulihan selepas perang diberikan keutamaan."
+    },
+    {
+      "source_id": "bab-3-9-u32",
+      "bm_original": "Ketegangan antara kaum berlaku di beberapa tempat sebelum pendaratan tentera Australia pada 11 September 1945 .",
+      "translate": "Ketegangan 其中 kaum 发生 di beberapa tempat sebelum pendaratan tentera Australia 于 11 September 1945 .",
+      "key_points_zh": [
+        "Ketegangan 其中 kaum 发生 di beberapa tempat sebelum pendaratan tentera Australia 于 11 September 1945 ."
+      ],
+      "bm_focus_phrase": "Ketegangan antara kaum berlaku di beberapa tempat sebelum pendaratan tentera Australia pada 11 September 1945 ."
+    },
+    {
+      "source_id": "bab-3-9-u33",
+      "bm_original": "Di Kanowit , permusuhan berlaku antara bekas gerila peribumi yang dilatih oleh SRD dengan orang Cina yang bersubahat dengan tentera Jepun.",
+      "translate": "Di Kanowit , permusuhan 发生 其中 bekas gerila peribumi 的 dilatih 由 SRD 以 orang Cina 的 bersubahat 以 tentera Jepun.",
+      "key_points_zh": [
+        "Di Kanowit , permusuhan 发生 其中 bekas gerila peribumi 的 dilatih 由 SRD 以 orang Cina 的 bersubahat 以 tentera Jepun."
+      ],
+      "bm_focus_phrase": "Di Kanowit , permusuhan berlaku antara bekas gerila peribumi yang dilatih oleh SRD dengan orang Cina yang bersubahat dengan tentera Jepun."
+    },
+    {
+      "source_id": "bab-3-9-u34",
+      "bm_original": "Di Kuching , campur tangan segera tentera Australia yang mengenakan perintah berkurung berjaya menghalang pertumpahan darah antara kaum.",
+      "translate": "Di Kuching , campur tangan segera tentera Australia 的 mengenakan perintah berkurung 成功 menghalang pertumpahan darah 其中 kaum.",
+      "key_points_zh": [
+        "Di Kuching , campur tangan segera tentera Australia 的 mengenakan perintah berkurung 成功 menghalang pertumpahan darah 其中 kaum."
+      ],
+      "bm_focus_phrase": "Di Kuching , campur tangan segera tentera Australia yang mengenakan perintah berkurung berjaya menghalang pertumpahan darah antara kaum."
+    },
+    {
+      "source_id": "bab-3-9-u35",
+      "bm_original": "Pendudukan Jepun memberikan impak negatif terhadap keharmonian masyarakat di negara kita.",
+      "translate": "Pendudukan Jepun memberikan impak negatif 针对 keharmonian 社会 di negara kita.",
+      "key_points_zh": [
+        "Pendudukan Jepun memberikan impak negatif 针对 keharmonian 社会 di negara kita."
+      ],
+      "bm_focus_phrase": "Pendudukan Jepun memberikan impak negatif terhadap keharmonian masyarakat di negara kita."
+    },
+    {
+      "source_id": "bab-3-9-u36",
+      "bm_original": "Keretakan hubungan kaum menyebabkan pelbagai usaha dilakukan bagi mengembalikan keharmonian masyarakat.",
+      "translate": "Keretakan hubungan kaum menyebabkan pelbagai usaha dilakukan bagi mengembalikan keharmonian 社会.",
+      "key_points_zh": [
+        "Keretakan hubungan kaum menyebabkan pelbagai usaha dilakukan bagi mengembalikan keharmonian 社会."
+      ],
+      "bm_focus_phrase": "Keretakan hubungan kaum menyebabkan pelbagai usaha dilakukan bagi mengembalikan keharmonian masyarakat."
+    },
+    {
+      "source_id": "bab-3-9-u37",
+      "bm_original": "Peristiwa ini memberikan iktibar kepada kita supaya mengelak daripada perkara yang boleh menimbulkan ketegangan antara kaum.",
+      "translate": "Peristiwa 这 memberikan iktibar 向 kita supaya mengelak daripada perkara 的 可以 menimbulkan ketegangan 其中 kaum.",
+      "key_points_zh": [
+        "Peristiwa 这 memberikan iktibar 向 kita supaya mengelak daripada perkara 的 可以 menimbulkan ketegangan 其中 kaum."
+      ],
+      "bm_focus_phrase": "Peristiwa ini memberikan iktibar kepada kita supaya mengelak daripada perkara yang boleh menimbulkan ketegangan antara kaum."
+    },
+    {
+      "source_id": "bab-3-9-u38",
+      "bm_original": "Tindakan sedemikian boleh menjadi ancaman kepada kerukunan hidup bermasyarakat dan kestabilan negara.",
+      "translate": "Tindakan sedemikian 可以 menjadi ancaman 向 kerukunan hidup bermasyarakat 与 kestabilan negara.",
+      "key_points_zh": [
+        "Tindakan sedemikian 可以 menjadi ancaman 向 kerukunan hidup bermasyarakat 与 kestabilan negara."
+      ],
+      "bm_focus_phrase": "Tindakan sedemikian boleh menjadi ancaman kepada kerukunan hidup bermasyarakat dan kestabilan negara."
+    },
+    {
+      "source_id": "bab-3-9-u52",
+      "bm_original": "Konflik dunia yang merangkumi Perang Dunia Pertama dan Perang Dunia Kedua meninggalkan kesan terhadap kehidupan manusia.",
+      "translate": "Konflik dunia 的 merangkumi Perang Dunia Pertama 与 第二次世界大战 meninggalkan 影响 针对 kehidupan manusia.",
+      "key_points_zh": [
+        "Konflik dunia 的 merangkumi Perang Dunia Pertama 与 第二次世界大战 meninggalkan 影响 针对 kehidupan manusia."
+      ],
+      "bm_focus_phrase": "Konflik dunia yang merangkumi Perang Dunia Pertama dan Perang Dunia Kedua meninggalkan kesan terhadap kehidupan manusia."
+    },
+    {
+      "source_id": "bab-3-9-u53",
+      "bm_original": "Kesengsaraan dan kemusnahan akibat perang memberikan iktibar kepada kita tentang nikmat keamanan yang sewajarnya dipertahankan untuk kehidupan yang sejahtera.",
+      "translate": "Kesengsaraan 与 kemusnahan akibat perang memberikan iktibar 向 kita tentang nikmat keamanan 的 sewajarnya dipertahankan 为了 kehidupan 的 sejahtera.",
+      "key_points_zh": [
+        "Kesengsaraan 与 kemusnahan akibat perang memberikan iktibar 向 kita tentang nikmat keamanan 的 sewajarnya dipertahankan 为了 kehidupan 的 sejahtera."
+      ],
+      "bm_focus_phrase": "Kesengsaraan dan kemusnahan akibat perang memberikan iktibar kepada kita tentang nikmat keamanan yang sewajarnya dipertahankan untuk kehidupan yang sejahtera."
+    },
+    {
+      "source_id": "bab-3-9-u54",
+      "bm_original": "Sebagai warga masyarakat dunia, kita perlu belajar untuk hidup bersama-sama bagi menjamin keadaan yang aman dan harmoni.",
+      "translate": "Sebagai warga 社会 dunia, kita perlu belajar 为了 hidup bersama-sama bagi menjamin keadaan 的 aman 与 harmoni.",
+      "key_points_zh": [
+        "Sebagai warga 社会 dunia, kita perlu belajar 为了 hidup bersama-sama bagi menjamin keadaan 的 aman 与 harmoni."
+      ],
+      "bm_focus_phrase": "Sebagai warga masyarakat dunia, kita perlu belajar untuk hidup bersama-sama bagi menjamin keadaan yang aman dan harmoni."
+    }
+  ]
+}

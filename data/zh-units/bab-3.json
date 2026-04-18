@@ -1,1 +1,44 @@
-{"units": []}
+{
+  "meta": {
+    "source_file": "notes/bab-3.html",
+    "rollout": "gelombang-1-manual-revision"
+  },
+  "units": [
+    {
+      "source_id": "bab-3-synopsis-1",
+      "bm_original": "Konflik dunia yang merangkumi Perang Dunia Pertama dan Perang Dunia Kedua tercetus akibat perkembangan imperialisme dan nasionalisme dalam persaingan merebut kuasa politik dan ekonomi.",
+      "translate": "Konflik dunia 的 merangkumi Perang Dunia Pertama 与 第二次世界大战 tercetus akibat perkembangan imperialisme 与 民族主义 在 persaingan merebut kuasa 政治 与 ekonomi.",
+      "key_points_zh": [
+        "Konflik dunia 的 merangkumi Perang Dunia Pertama 与 第二次世界大战 tercetus akibat perkembangan imperialisme 与 民族主义 在 persaingan merebut kuasa 政治 与 ekonomi."
+      ],
+      "bm_focus_phrase": "Konflik dunia yang merangkumi Perang Dunia Pertama dan Perang Dunia Kedua tercetus akibat perkembangan imperialisme dan nasionalisme dalam persaingan merebut kuasa politik dan ekonomi."
+    },
+    {
+      "source_id": "bab-3-synopsis-2",
+      "bm_original": "Perang dunia bermula di Eropah , kemudian merebak ke Asia Pasifik .",
+      "translate": "重点：Perang dunia bermula di Eropah , kemudian merebak ke Asia Pasifik .",
+      "key_points_zh": [
+        "重点：Perang dunia bermula di Eropah , kemudian merebak ke Asia Pasifik ."
+      ],
+      "bm_focus_phrase": "Perang dunia bermula di Eropah , kemudian merebak ke Asia Pasifik ."
+    },
+    {
+      "source_id": "bab-3-synopsis-3",
+      "bm_original": "Pemerintahan tentera Jepun di negara kita telah mencetuskan tindak balas rakyat terhadap pendudukan asing.",
+      "translate": "Pemerintahan tentera Jepun di negara kita 已经 mencetuskan tindak balas 人民 针对 pendudukan asing.",
+      "key_points_zh": [
+        "Pemerintahan tentera Jepun di negara kita 已经 mencetuskan tindak balas 人民 针对 pendudukan asing."
+      ],
+      "bm_focus_phrase": "Pemerintahan tentera Jepun di negara kita telah mencetuskan tindak balas rakyat terhadap pendudukan asing."
+    },
+    {
+      "source_id": "bab-3-synopsis-4",
+      "bm_original": "Pendudukan Jepun turut menyemarakkan perkembangan nasionalisme tempatan.",
+      "translate": "Pendudukan Jepun turut menyemarakkan perkembangan 民族主义 本地.",
+      "key_points_zh": [
+        "Pendudukan Jepun turut menyemarakkan perkembangan 民族主义 本地."
+      ],
+      "bm_focus_phrase": "Pendudukan Jepun turut menyemarakkan perkembangan nasionalisme tempatan."
+    }
+  ]
+}

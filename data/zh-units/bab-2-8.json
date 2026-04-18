@@ -1,1 +1,782 @@
-{"units": []}
+{
+  "meta": {
+    "source_file": "notes/bab-2-8.html",
+    "rollout": "gelombang-1-manual-revision"
+  },
+  "units": [
+    {
+      "source_id": "bab-2-8-u23",
+      "bm_original": "Perkembangan nasionalisme memberi kesan besar dalam bidang politik dengan meningkatkan kesedaran rakyat terhadap pentadbiran dan peluang berperanan dalam kerajaan.",
+      "translate": "Perkembangan 民族主义 memberi 影响 besar 在 bidang 政治 以 提升 kesedaran 人民 针对 行政 与 peluang berperanan 在 政府.",
+      "key_points_zh": [
+        "Perkembangan 民族主义 memberi 影响 besar 在 bidang 政治 以 提升 kesedaran 人民 针对 行政 与 peluang berperanan 在 政府."
+      ],
+      "bm_focus_phrase": "Perkembangan nasionalisme memberi kesan besar dalam bidang politik dengan meningkatkan kesedaran rakyat terhadap pentadbiran dan peluang berperanan dalam kerajaan."
+    },
+    {
+      "source_id": "bab-2-8-u24",
+      "bm_original": "Dalam bidang ekonomi, nasionalisme menggalakkan masyarakat meningkatkan pendidikan, taraf hidup dan penguasaan ekonomi.",
+      "translate": "Dalam bidang ekonomi, 民族主义 menggalakkan 社会 提升 pendidikan, taraf hidup 与 penguasaan ekonomi.",
+      "key_points_zh": [
+        "Dalam bidang ekonomi, 民族主义 menggalakkan 社会 提升 pendidikan, taraf hidup 与 penguasaan ekonomi."
+      ],
+      "bm_focus_phrase": "Dalam bidang ekonomi, nasionalisme menggalakkan masyarakat meningkatkan pendidikan, taraf hidup dan penguasaan ekonomi."
+    },
+    {
+      "source_id": "bab-2-8-u25",
+      "bm_original": "Dalam bidang sosial, nasionalisme membangkitkan kesedaran tentang pendidikan, peranan wanita dan kebajikan masyarakat pelbagai kaum.",
+      "translate": "Dalam bidang sosial, 民族主义 membangkitkan kesedaran tentang pendidikan, peranan 妇女 与 kebajikan 社会 pelbagai kaum.",
+      "key_points_zh": [
+        "Dalam bidang sosial, 民族主义 membangkitkan kesedaran tentang pendidikan, peranan 妇女 与 kebajikan 社会 pelbagai kaum."
+      ],
+      "bm_focus_phrase": "Dalam bidang sosial, nasionalisme membangkitkan kesedaran tentang pendidikan, peranan wanita dan kebajikan masyarakat pelbagai kaum."
+    },
+    {
+      "source_id": "bab-2-8-u26",
+      "bm_original": "Semua perkembangan ini menjadi titik tolak penting ke arah perjuangan kemerdekaan dan pembinaan negara bangsa.",
+      "translate": "Semua perkembangan 这 menjadi titik tolak penting ke arah 斗争 独立 与 pembinaan negara bangsa.",
+      "key_points_zh": [
+        "Semua perkembangan 这 menjadi titik tolak penting ke arah 斗争 独立 与 pembinaan negara bangsa."
+      ],
+      "bm_focus_phrase": "Semua perkembangan ini menjadi titik tolak penting ke arah perjuangan kemerdekaan dan pembinaan negara bangsa."
+    },
+    {
+      "source_id": "b2-8-soalan-heading",
+      "bm_original": "Apakah kesan yang dapat dilihat daripada perkembangan nasionalisme di negara kita?",
+      "translate": "Apakah 影响 的 dapat dilihat daripada perkembangan 民族主义 di negara kita?",
+      "key_points_zh": [
+        "Apakah 影响 的 dapat dilihat daripada perkembangan 民族主义 di negara kita?"
+      ],
+      "bm_focus_phrase": "Apakah kesan yang dapat dilihat daripada perkembangan nasionalisme di negara kita?"
+    },
+    {
+      "source_id": "b2-8-soalan-line",
+      "bm_original": "Perkembangan nasionalisme memberikan kesan menyeluruh dalam aspek:",
+      "translate": "Perkembangan 民族主义 memberikan 影响 menyeluruh 在 aspek:",
+      "key_points_zh": [
+        "Perkembangan 民族主义 memberikan 影响 menyeluruh 在 aspek:"
+      ],
+      "bm_focus_phrase": "Perkembangan nasionalisme memberikan kesan menyeluruh dalam aspek:"
+    },
+    {
+      "source_id": "bab-2-8-extra-1",
+      "bm_original": "Politik",
+      "translate": "重点：Politik",
+      "key_points_zh": [
+        "重点：Politik"
+      ],
+      "bm_focus_phrase": "Politik"
+    },
+    {
+      "source_id": "bab-2-8-extra-2",
+      "bm_original": "Ekonomi",
+      "translate": "重点：Ekonomi",
+      "key_points_zh": [
+        "重点：Ekonomi"
+      ],
+      "bm_focus_phrase": "Ekonomi"
+    },
+    {
+      "source_id": "bab-2-8-extra-3",
+      "bm_original": "Sosial",
+      "translate": "重点：Sosial",
+      "key_points_zh": [
+        "重点：Sosial"
+      ],
+      "bm_focus_phrase": "Sosial"
+    },
+    {
+      "source_id": "b2-8-fokus-line",
+      "bm_original": "Perjuangan nasionalisme di Tanah Melayu membawa pelbagai kesan penting yang membentuk hala tuju negara. Subtopik ini membincangkan tiga aspek utama kesan nasionalisme Melayu:",
+      "translate": "斗争 民族主义 di Tanah Melayu membawa pelbagai 影响 penting 的 membentuk hala tuju negara. Subtopik 这 membincangkan tiga aspek 主要 影响 民族主义 Melayu:",
+      "key_points_zh": [
+        "斗争 民族主义 di Tanah Melayu membawa pelbagai 影响 penting 的 membentuk hala tuju negara. Subtopik 这 membincangkan tiga aspek 主要 影响 民族主义 Melayu:"
+      ],
+      "bm_focus_phrase": "Perjuangan nasionalisme di Tanah Melayu membawa pelbagai kesan penting yang membentuk hala tuju negara. Subtopik ini membincangkan tiga aspek utama kesan nasionalisme Melayu:"
+    },
+    {
+      "source_id": "bab-2-8-u01",
+      "bm_original": "Usaha golongan intelektual berpendidikan Inggeris serta Kesatuan Melayu Singapura (KMS) berjaya meningkatkan penyertaan orang Melayu dalam pentadbiran.",
+      "translate": "Usaha golongan intelektual berpendidikan Inggeris 以及 Kesatuan Melayu Singapura (KMS) 成功 提升 penyertaan orang Melayu 在 行政.",
+      "key_points_zh": [
+        "Usaha golongan intelektual berpendidikan Inggeris 以及 Kesatuan Melayu Singapura (KMS) 成功 提升 penyertaan orang Melayu 在 行政."
+      ],
+      "bm_focus_phrase": "Usaha golongan intelektual berpendidikan Inggeris serta Kesatuan Melayu Singapura (KMS) berjaya meningkatkan penyertaan orang Melayu dalam pentadbiran."
+    },
+    {
+      "source_id": "bab-2-8-extra-4",
+      "bm_original": "7 orang (1930)",
+      "translate": "重点：7 orang (1930)",
+      "key_points_zh": [
+        "重点：7 orang (1930)"
+      ],
+      "bm_focus_phrase": "7 orang (1930)"
+    },
+    {
+      "source_id": "bab-2-8-extra-5",
+      "bm_original": "20 orang (1937)",
+      "translate": "重点：20 orang (1937)",
+      "key_points_zh": [
+        "重点：20 orang (1937)"
+      ],
+      "bm_focus_phrase": "20 orang (1937)"
+    },
+    {
+      "source_id": "bab-2-8-u02",
+      "bm_original": "British memperkenalkan dasar ini untuk mengembalikan sebahagian kuasa kepada:",
+      "translate": "British memperkenalkan dasar 这 为了 mengembalikan 部分 kuasa 向:",
+      "key_points_zh": [
+        "British memperkenalkan dasar 这 为了 mengembalikan 部分 kuasa 向:"
+      ],
+      "bm_focus_phrase": "British memperkenalkan dasar ini untuk mengembalikan sebahagian kuasa kepada:"
+    },
+    {
+      "source_id": "bab-2-8-extra-6",
+      "bm_original": "Sultan",
+      "translate": "重点：Sultan",
+      "key_points_zh": [
+        "重点：Sultan"
+      ],
+      "bm_focus_phrase": "Sultan"
+    },
+    {
+      "source_id": "bab-2-8-extra-7",
+      "bm_original": "Residen",
+      "translate": "重点：Residen",
+      "key_points_zh": [
+        "重点：Residen"
+      ],
+      "bm_focus_phrase": "Residen"
+    },
+    {
+      "source_id": "bab-2-8-extra-8",
+      "bm_original": "Majlis Mesyuarat Negeri",
+      "translate": "重点：Majlis Mesyuarat Negeri",
+      "key_points_zh": [
+        "重点：Majlis Mesyuarat Negeri"
+      ],
+      "bm_focus_phrase": "Majlis Mesyuarat Negeri"
+    },
+    {
+      "source_id": "bab-2-8-u03",
+      "bm_original": "Kesannya, orang Melayu menjadi lebih peka terhadap politik dan mula menubuhkan persatuan di peringkat negeri.",
+      "translate": "Kesannya, orang Melayu menjadi 更 peka 针对 政治 与 mula 成立 协会 di peringkat 州.",
+      "key_points_zh": [
+        "Kesannya, orang Melayu menjadi 更 peka 针对 政治 与 mula 成立 协会 di peringkat 州."
+      ],
+      "bm_focus_phrase": "Kesannya, orang Melayu menjadi lebih peka terhadap politik dan mula menubuhkan persatuan di peringkat negeri."
+    },
+    {
+      "source_id": "bab-2-8-u04",
+      "bm_original": "Kebangkitan nasionalisme di China memberi kesan kepada masyarakat Cina di Tanah Melayu.",
+      "translate": "Kebangkitan 民族主义 di China memberi 影响 向 社会 Cina di Tanah Melayu.",
+      "key_points_zh": [
+        "Kebangkitan 民族主义 di China memberi 影响 向 社会 Cina di Tanah Melayu."
+      ],
+      "bm_focus_phrase": "Kebangkitan nasionalisme di China memberi kesan kepada masyarakat Cina di Tanah Melayu."
+    },
+    {
+      "source_id": "bab-2-8-extra-9",
+      "bm_original": "menubuhkan kelab bacaan",
+      "translate": "成立 kelab bacaan",
+      "key_points_zh": [
+        "成立 kelab bacaan"
+      ],
+      "bm_focus_phrase": "menubuhkan kelab bacaan"
+    },
+    {
+      "source_id": "bab-2-8-extra-10",
+      "bm_original": "menubuhkan kumpulan drama",
+      "translate": "成立 kumpulan drama",
+      "key_points_zh": [
+        "成立 kumpulan drama"
+      ],
+      "bm_focus_phrase": "menubuhkan kumpulan drama"
+    },
+    {
+      "source_id": "bab-2-8-extra-11",
+      "bm_original": "banyak sekolah Cina ditubuhkan sekitar 1921 dengan bahasa Mandarin sebagai bahasa pengantar",
+      "translate": "banyak sekolah Cina ditubuhkan sekitar 1921 以 bahasa Mandarin 作为 bahasa pengantar",
+      "key_points_zh": [
+        "banyak sekolah Cina ditubuhkan sekitar 1921 以 bahasa Mandarin 作为 bahasa pengantar"
+      ],
+      "bm_focus_phrase": "banyak sekolah Cina ditubuhkan sekitar 1921 dengan bahasa Mandarin sebagai bahasa pengantar"
+    },
+    {
+      "source_id": "bab-2-8-u05",
+      "bm_original": "Antara tahun 1930 hingga 1950 , muncul golongan India kelahiran Tanah Melayu yang dikenali sebagai Straits-born people .",
+      "translate": "Antara 年 1930 hingga 1950 , muncul golongan India kelahiran Tanah Melayu 的 dikenali 作为 Straits-born people .",
+      "key_points_zh": [
+        "Antara 年 1930 hingga 1950 , muncul golongan India kelahiran Tanah Melayu 的 dikenali 作为 Straits-born people ."
+      ],
+      "bm_focus_phrase": "Antara tahun 1930 hingga 1950 , muncul golongan India kelahiran Tanah Melayu yang dikenali sebagai Straits-born people ."
+    },
+    {
+      "source_id": "bab-2-8-u06",
+      "bm_original": "Golongan ini mula membentuk identiti sendiri dan memberi perhatian kepada politik tempatan.",
+      "translate": "Golongan 这 mula membentuk identiti sendiri 与 memberi perhatian 向 政治 本地.",
+      "key_points_zh": [
+        "Golongan 这 mula membentuk identiti sendiri 与 memberi perhatian 向 政治 本地."
+      ],
+      "bm_focus_phrase": "Golongan ini mula membentuk identiti sendiri dan memberi perhatian kepada politik tempatan."
+    },
+    {
+      "source_id": "bab-2-8-u07",
+      "bm_original": "British bertindak mengekang gerakan nasionalisme dengan menangkap tokoh seperti:",
+      "translate": "British bertindak mengekang gerakan 民族主义 以 menangkap tokoh seperti:",
+      "key_points_zh": [
+        "British bertindak mengekang gerakan 民族主义 以 menangkap tokoh seperti:"
+      ],
+      "bm_focus_phrase": "British bertindak mengekang gerakan nasionalisme dengan menangkap tokoh seperti:"
+    },
+    {
+      "source_id": "bab-2-8-extra-12",
+      "bm_original": "Ibrahim Haji Yaakob",
+      "translate": "重点：Ibrahim Haji Yaakob",
+      "key_points_zh": [
+        "重点：Ibrahim Haji Yaakob"
+      ],
+      "bm_focus_phrase": "Ibrahim Haji Yaakob"
+    },
+    {
+      "source_id": "bab-2-8-extra-13",
+      "bm_original": "Ishak Haji Muhammad",
+      "translate": "重点：Ishak Haji Muhammad",
+      "key_points_zh": [
+        "重点：Ishak Haji Muhammad"
+      ],
+      "bm_focus_phrase": "Ishak Haji Muhammad"
+    },
+    {
+      "source_id": "bab-2-8-extra-14",
+      "bm_original": "Ahmad Boestamam",
+      "translate": "重点：Ahmad Boestamam",
+      "key_points_zh": [
+        "重点：Ahmad Boestamam"
+      ],
+      "bm_focus_phrase": "Ahmad Boestamam"
+    },
+    {
+      "source_id": "bab-2-8-u08",
+      "bm_original": "Golongan Kaum Muda menyeru masyarakat supaya meningkatkan taraf hidup melalui:",
+      "translate": "Golongan Kaum Muda menyeru 社会 supaya 提升 taraf hidup 通过:",
+      "key_points_zh": [
+        "Golongan Kaum Muda menyeru 社会 supaya 提升 taraf hidup 通过:"
+      ],
+      "bm_focus_phrase": "Golongan Kaum Muda menyeru masyarakat supaya meningkatkan taraf hidup melalui:"
+    },
+    {
+      "source_id": "bab-2-8-extra-15",
+      "bm_original": "pendidikan",
+      "translate": "重点：pendidikan",
+      "key_points_zh": [
+        "重点：pendidikan"
+      ],
+      "bm_focus_phrase": "pendidikan"
+    },
+    {
+      "source_id": "bab-2-8-extra-16",
+      "bm_original": "kegiatan ekonomi",
+      "translate": "重点：kegiatan ekonomi",
+      "key_points_zh": [
+        "重点：kegiatan ekonomi"
+      ],
+      "bm_focus_phrase": "kegiatan ekonomi"
+    },
+    {
+      "source_id": "bab-2-8-u09",
+      "bm_original": "Persatuan al-Jamiah al-Khairiah ditubuhkan di Singapura untuk:",
+      "translate": "协会 al-Jamiah al-Khairiah ditubuhkan di Singapura 为了:",
+      "key_points_zh": [
+        "协会 al-Jamiah al-Khairiah ditubuhkan di Singapura 为了:"
+      ],
+      "bm_focus_phrase": "Persatuan al-Jamiah al-Khairiah ditubuhkan di Singapura untuk:"
+    },
+    {
+      "source_id": "bab-2-8-extra-17",
+      "bm_original": "menggalakkan perniagaan",
+      "translate": "重点：menggalakkan perniagaan",
+      "key_points_zh": [
+        "重点：menggalakkan perniagaan"
+      ],
+      "bm_focus_phrase": "menggalakkan perniagaan"
+    },
+    {
+      "source_id": "bab-2-8-extra-18",
+      "bm_original": "menerbitkan rencana yang membangkitkan semangat masyarakat",
+      "translate": "menerbitkan rencana 的 membangkitkan semangat 社会",
+      "key_points_zh": [
+        "menerbitkan rencana 的 membangkitkan semangat 社会"
+      ],
+      "bm_focus_phrase": "menerbitkan rencana yang membangkitkan semangat masyarakat"
+    },
+    {
+      "source_id": "bab-2-8-u10",
+      "bm_original": "British hanya memberi tumpuan kepada pendidikan rendah.",
+      "translate": "British hanya memberi tumpuan 向 pendidikan rendah.",
+      "key_points_zh": [
+        "British hanya memberi tumpuan 向 pendidikan rendah."
+      ],
+      "bm_focus_phrase": "British hanya memberi tumpuan kepada pendidikan rendah."
+    },
+    {
+      "source_id": "bab-2-8-u11",
+      "bm_original": "Keadaan ini menyukarkan masyarakat tempatan meningkatkan taraf ekonomi.",
+      "translate": "Keadaan 这 menyukarkan 社会 本地 提升 taraf ekonomi.",
+      "key_points_zh": [
+        "Keadaan 这 menyukarkan 社会 本地 提升 taraf ekonomi."
+      ],
+      "bm_focus_phrase": "Keadaan ini menyukarkan masyarakat tempatan meningkatkan taraf ekonomi."
+    },
+    {
+      "source_id": "bab-2-8-u12",
+      "bm_original": "Za'ba menyedarkan pelatih di Sultan Idris Training College (SITC) tentang:",
+      "translate": "重点：Za'ba menyedarkan pelatih di Sultan Idris Training College (SITC) tentang:",
+      "key_points_zh": [
+        "重点：Za'ba menyedarkan pelatih di Sultan Idris Training College (SITC) tentang:"
+      ],
+      "bm_focus_phrase": "Za'ba menyedarkan pelatih di Sultan Idris Training College (SITC) tentang:"
+    },
+    {
+      "source_id": "bab-2-8-extra-19",
+      "bm_original": "kepentingan pendidikan tinggi",
+      "translate": "重点：kepentingan pendidikan tinggi",
+      "key_points_zh": [
+        "重点：kepentingan pendidikan tinggi"
+      ],
+      "bm_focus_phrase": "kepentingan pendidikan tinggi"
+    },
+    {
+      "source_id": "bab-2-8-extra-20",
+      "bm_original": "kepentingan penguasaan bahasa Inggeris",
+      "translate": "重点：kepentingan penguasaan bahasa Inggeris",
+      "key_points_zh": [
+        "重点：kepentingan penguasaan bahasa Inggeris"
+      ],
+      "bm_focus_phrase": "kepentingan penguasaan bahasa Inggeris"
+    },
+    {
+      "source_id": "bab-2-8-u13",
+      "bm_original": "Akhbar seperti:",
+      "translate": "报章 seperti:",
+      "key_points_zh": [
+        "报章 seperti:"
+      ],
+      "bm_focus_phrase": "Akhbar seperti:"
+    },
+    {
+      "source_id": "bab-2-8-extra-21",
+      "bm_original": "The Malay Mail",
+      "translate": "重点：The Malay Mail",
+      "key_points_zh": [
+        "重点：The Malay Mail"
+      ],
+      "bm_focus_phrase": "The Malay Mail"
+    },
+    {
+      "source_id": "bab-2-8-extra-22",
+      "bm_original": "The Malaya Tribune",
+      "translate": "重点：The Malaya Tribune",
+      "key_points_zh": [
+        "重点：The Malaya Tribune"
+      ],
+      "bm_focus_phrase": "The Malaya Tribune"
+    },
+    {
+      "source_id": "bab-2-8-u14",
+      "bm_original": "Usaha ini turut disokong oleh:",
+      "translate": "Usaha 这 turut disokong 由:",
+      "key_points_zh": [
+        "Usaha 这 turut disokong 由:"
+      ],
+      "bm_focus_phrase": "Usaha ini turut disokong oleh:"
+    },
+    {
+      "source_id": "bab-2-8-extra-23",
+      "bm_original": "Persekutuan Guru-guru Melayu Selangor",
+      "translate": "重点：Persekutuan Guru-guru Melayu Selangor",
+      "key_points_zh": [
+        "重点：Persekutuan Guru-guru Melayu Selangor"
+      ],
+      "bm_focus_phrase": "Persekutuan Guru-guru Melayu Selangor"
+    },
+    {
+      "source_id": "bab-2-8-extra-24",
+      "bm_original": "persatuan negeri",
+      "translate": "协会 州",
+      "key_points_zh": [
+        "协会 州"
+      ],
+      "bm_focus_phrase": "persatuan negeri"
+    },
+    {
+      "source_id": "bab-2-8-extra-25",
+      "bm_original": "Tunku Abdul Rahman",
+      "translate": "重点：Tunku Abdul Rahman",
+      "key_points_zh": [
+        "重点：Tunku Abdul Rahman"
+      ],
+      "bm_focus_phrase": "Tunku Abdul Rahman"
+    },
+    {
+      "source_id": "bab-2-8-extra-26",
+      "bm_original": "Tunku Yaacob",
+      "translate": "重点：Tunku Yaacob",
+      "key_points_zh": [
+        "重点：Tunku Yaacob"
+      ],
+      "bm_focus_phrase": "Tunku Yaacob"
+    },
+    {
+      "source_id": "bab-2-8-extra-27",
+      "bm_original": "Mohd Zain Ariffin",
+      "translate": "重点：Mohd Zain Ariffin",
+      "key_points_zh": [
+        "重点：Mohd Zain Ariffin"
+      ],
+      "bm_focus_phrase": "Mohd Zain Ariffin"
+    },
+    {
+      "source_id": "bab-2-8-u15",
+      "bm_original": "Akhbar, majalah dan persatuan menyeru masyarakat supaya meningkatkan pendidikan melalui:",
+      "translate": "报章, majalah 与 协会 menyeru 社会 supaya 提升 pendidikan 通过:",
+      "key_points_zh": [
+        "报章, majalah 与 协会 menyeru 社会 supaya 提升 pendidikan 通过:"
+      ],
+      "bm_focus_phrase": "Akhbar, majalah dan persatuan menyeru masyarakat supaya meningkatkan pendidikan melalui:"
+    },
+    {
+      "source_id": "bab-2-8-extra-28",
+      "bm_original": "madrasah",
+      "translate": "重点：madrasah",
+      "key_points_zh": [
+        "重点：madrasah"
+      ],
+      "bm_focus_phrase": "madrasah"
+    },
+    {
+      "source_id": "bab-2-8-extra-29",
+      "bm_original": "sekolah Melayu",
+      "translate": "重点：sekolah Melayu",
+      "key_points_zh": [
+        "重点：sekolah Melayu"
+      ],
+      "bm_focus_phrase": "sekolah Melayu"
+    },
+    {
+      "source_id": "bab-2-8-u16",
+      "bm_original": "Bilangan lepasan Sultan Idris Training College (SITC) meningkat:",
+      "translate": "重点：Bilangan lepasan Sultan Idris Training College (SITC) meningkat:",
+      "key_points_zh": [
+        "重点：Bilangan lepasan Sultan Idris Training College (SITC) meningkat:"
+      ],
+      "bm_focus_phrase": "Bilangan lepasan Sultan Idris Training College (SITC) meningkat:"
+    },
+    {
+      "source_id": "bab-2-8-extra-30",
+      "bm_original": "Mac 1924 – 58 orang",
+      "translate": "重点：Mac 1924 – 58 orang",
+      "key_points_zh": [
+        "重点：Mac 1924 – 58 orang"
+      ],
+      "bm_focus_phrase": "Mac 1924 – 58 orang"
+    },
+    {
+      "source_id": "bab-2-8-extra-31",
+      "bm_original": "September 1940 – 141 orang",
+      "translate": "重点：September 1940 – 141 orang",
+      "key_points_zh": [
+        "重点：September 1940 – 141 orang"
+      ],
+      "bm_focus_phrase": "September 1940 – 141 orang"
+    },
+    {
+      "source_id": "bab-2-8-u17",
+      "bm_original": "Mereka berkhidmat sebagai guru dan menyebarkan kepentingan pendidikan kepada masyarakat.",
+      "translate": "Mereka berkhidmat 作为 guru 与 menyebarkan kepentingan pendidikan 向 社会.",
+      "key_points_zh": [
+        "Mereka berkhidmat 作为 guru 与 menyebarkan kepentingan pendidikan 向 社会."
+      ],
+      "bm_focus_phrase": "Mereka berkhidmat sebagai guru dan menyebarkan kepentingan pendidikan kepada masyarakat."
+    },
+    {
+      "source_id": "bab-2-8-u18",
+      "bm_original": "Majalah Bulan Melayu diterbitkan oleh guru wanita di Johor Bahru pada 1930 .",
+      "translate": "Majalah Bulan Melayu diterbitkan 由 guru 妇女 di Johor Bahru 于 1930 .",
+      "key_points_zh": [
+        "Majalah Bulan Melayu diterbitkan 由 guru 妇女 di Johor Bahru 于 1930 ."
+      ],
+      "bm_focus_phrase": "Majalah Bulan Melayu diterbitkan oleh guru wanita di Johor Bahru pada 1930 ."
+    },
+    {
+      "source_id": "bab-2-8-u19",
+      "bm_original": "Majalah ini diedarkan ke seluruh Tanah Melayu dan Indonesia.",
+      "translate": "Majalah 这 diedarkan ke 全国 Tanah Melayu 与 Indonesia.",
+      "key_points_zh": [
+        "Majalah 这 diedarkan ke 全国 Tanah Melayu 与 Indonesia."
+      ],
+      "bm_focus_phrase": "Majalah ini diedarkan ke seluruh Tanah Melayu dan Indonesia."
+    },
+    {
+      "source_id": "bab-2-8-extra-32",
+      "bm_original": "menuntut ilmu pengetahuan",
+      "translate": "重点：menuntut ilmu pengetahuan",
+      "key_points_zh": [
+        "重点：menuntut ilmu pengetahuan"
+      ],
+      "bm_focus_phrase": "menuntut ilmu pengetahuan"
+    },
+    {
+      "source_id": "bab-2-8-extra-33",
+      "bm_original": "meningkatkan martabat wanita",
+      "translate": "提升 martabat 妇女",
+      "key_points_zh": [
+        "提升 martabat 妇女"
+      ],
+      "bm_focus_phrase": "meningkatkan martabat wanita"
+    },
+    {
+      "source_id": "bab-2-8-u20",
+      "bm_original": "Ibu Zain juga menganjurkan Tabung Derma Pelajaran Tinggi untuk anak perempuan Melayu Semenanjung.",
+      "translate": "Ibu Zain 也 menganjurkan Tabung Derma Pelajaran Tinggi 为了 anak perempuan Melayu Semenanjung.",
+      "key_points_zh": [
+        "Ibu Zain 也 menganjurkan Tabung Derma Pelajaran Tinggi 为了 anak perempuan Melayu Semenanjung."
+      ],
+      "bm_focus_phrase": "Ibu Zain juga menganjurkan Tabung Derma Pelajaran Tinggi untuk anak perempuan Melayu Semenanjung."
+    },
+    {
+      "source_id": "bab-2-8-u21",
+      "bm_original": "Masyarakat India dan Ceylon menubuhkan persatuan untuk menjaga kebajikan sosial mereka.",
+      "translate": "社会 India 与 Ceylon 成立 协会 为了 menjaga kebajikan sosial mereka.",
+      "key_points_zh": [
+        "社会 India 与 Ceylon 成立 协会 为了 menjaga kebajikan sosial mereka."
+      ],
+      "bm_focus_phrase": "Masyarakat India dan Ceylon menubuhkan persatuan untuk menjaga kebajikan sosial mereka."
+    },
+    {
+      "source_id": "bab-2-8-u22",
+      "bm_original": "Menjelang Perang Dunia Kedua , masyarakat Cina mula mendesak kerajaan supaya memberi peluang perwakilan dalam jawatankuasa kerajaan.",
+      "translate": "Menjelang 第二次世界大战 , 社会 Cina mula mendesak 政府 supaya memberi peluang perwakilan 在 jawatankuasa 政府.",
+      "key_points_zh": [
+        "Menjelang 第二次世界大战 , 社会 Cina mula mendesak 政府 supaya memberi peluang perwakilan 在 jawatankuasa 政府."
+      ],
+      "bm_focus_phrase": "Menjelang Perang Dunia Kedua , masyarakat Cina mula mendesak kerajaan supaya memberi peluang perwakilan dalam jawatankuasa kerajaan."
+    },
+    {
+      "source_id": "b2-8-conclusion-board",
+      "bm_original": "Kesimpulan Perkembangan nasionalisme membangkitkan kesedaran rakyat untuk membela bangsa dan memajukan negara. 📌 Kesan dilihat dalam: 1️⃣ Politik – penubuhan persatuan, pelibatan rakyat dalam pentadbiran 2️⃣ Ekonomi – galakan pendidikan dan peluang niaga 3️⃣ Sosial – kebangkitan kaum wanita dan perpaduan masyarakat 🔥 Nasionalisme menjadi titik tolak penting ke arah kemerdekaan dan pembinaan negara bangsa.",
+      "translate": "Kesimpulan Perkembangan 民族主义 membangkitkan kesedaran 人民 为了 membela bangsa 与 memajukan negara. 📌 影响 dilihat 在: 1️⃣ Politik – 成立 协会, pelibatan 人民 在 行政 2️⃣ Ekonomi – galakan pendidikan 与 peluang niaga 3️⃣ Sosial – kebangkitan kaum 妇女 与 perpaduan 社会 🔥 民族主义 menjadi titik tolak penting ke arah 独立 与 pembinaan negara bangsa.",
+      "key_points_zh": [
+        "Kesimpulan Perkembangan 民族主义 membangkitkan kesedaran 人民 为了 membela bangsa 与 memajukan negara. 📌 影响 dilihat 在: 1️⃣ Politik – 成立 协会, pelibatan 人民 在 行政 2️⃣ Ekonomi – galakan pendidikan 与 peluang niaga 3️⃣ Sosial – kebangkitan kaum 妇女 与 perpaduan 社会 🔥 民族主义 menjadi titik tolak penting ke arah 独立 与 pembinaan negara bangsa."
+      ],
+      "bm_focus_phrase": "Kesimpulan Perkembangan nasionalisme membangkitkan kesedaran rakyat untuk membela bangsa dan memajukan negara. 📌 Kesan dilihat dalam: 1️⃣ Politik – penubuhan persatuan, pelibatan rakyat dalam pentadbiran 2️⃣ Ekonomi – galakan pendidikan dan peluang niaga 3️⃣ Sosial – kebangkitan kaum wanita dan perpaduan masyarakat 🔥 Nasionalisme menjadi titik tolak penting ke arah kemerdekaan dan pembinaan negara bangsa."
+    },
+    {
+      "source_id": "b2-8-conclusion-heading",
+      "bm_original": "b2-8-conclusion-heading",
+      "translate": "重点：b2-8-conclusion-heading",
+      "key_points_zh": [
+        "重点：b2-8-conclusion-heading"
+      ],
+      "bm_focus_phrase": "b2-8-conclusion-heading"
+    },
+    {
+      "source_id": "bab-2-8-extra-34",
+      "bm_original": "bab-2-8-extra-34",
+      "translate": "重点：bab-2-8-extra-34",
+      "key_points_zh": [
+        "重点：bab-2-8-extra-34"
+      ],
+      "bm_focus_phrase": "bab-2-8-extra-34"
+    },
+    {
+      "source_id": "bab-2-8-extra-35",
+      "bm_original": "bab-2-8-extra-35",
+      "translate": "重点：bab-2-8-extra-35",
+      "key_points_zh": [
+        "重点：bab-2-8-extra-35"
+      ],
+      "bm_focus_phrase": "bab-2-8-extra-35"
+    },
+    {
+      "source_id": "bab-2-8-extra-36",
+      "bm_original": "bab-2-8-extra-36",
+      "translate": "重点：bab-2-8-extra-36",
+      "key_points_zh": [
+        "重点：bab-2-8-extra-36"
+      ],
+      "bm_focus_phrase": "bab-2-8-extra-36"
+    },
+    {
+      "source_id": "b2-8-conclusion-line",
+      "bm_original": "b2-8-conclusion-line",
+      "translate": "重点：b2-8-conclusion-line",
+      "key_points_zh": [
+        "重点：b2-8-conclusion-line"
+      ],
+      "bm_focus_phrase": "b2-8-conclusion-line"
+    },
+    {
+      "source_id": "b2-8-rumusan-board",
+      "bm_original": "Rumusan Besar Bab 2 📌 Nasionalisme ialah: ❤️ perasaan cinta akan negara ⚔️ keinginan membebaskan diri daripada penjajah 📌 Perkembangannya dipengaruhi oleh: 🌍 idea dari Barat dan Asia 🇲🇾 kesedaran rakyat di negara kita 📌 Nasionalis di negara kita menggunakan: 🕌 pendidikan agama, Inggeris dan Melayu 🖋️ penulisan, akhbar dan karya kreatif 🤝 persatuan dan pertubuhan 💡 Kesannya: 🏛️ kesedaran politik berkembang 💼 ekonomi masyarakat diperkukuh 👥 sosial dan pendidikan semakin meningkat 🇲🇾 Rumusan akhir: 🔥 nasionalisme menjadi asas perjuangan kemerdekaan 🛡️ membina kedaulatan negara bangsa",
+      "translate": "Rumusan Besar Bab 2 📌 民族主义 是: ❤️ perasaan cinta 将会 negara ⚔️ keinginan membebaskan diri daripada penjajah 📌 Perkembangannya dipengaruhi 由: 🌍 idea dari Barat 与 Asia 🇲🇾 kesedaran 人民 di negara kita 📌 Nasionalis di negara kita menggunakan: 🕌 pendidikan agama, Inggeris 与 Melayu 🖋️ penulisan, 报章 与 karya kreatif 🤝 协会 与 pertubuhan 💡 Kesannya: 🏛️ kesedaran 政治 berkembang 💼 ekonomi 社会 diperkukuh 👥 sosial 与 pendidikan semakin meningkat 🇲🇾 Rumusan akhir: 🔥 民族主义 menjadi asas 斗争 独立 🛡️ membina 主权 negara bangsa",
+      "key_points_zh": [
+        "Rumusan Besar Bab 2 📌 民族主义 是: ❤️ perasaan cinta 将会 negara ⚔️ keinginan membebaskan diri daripada penjajah 📌 Perkembangannya dipengaruhi 由: 🌍 idea dari Barat 与 Asia 🇲🇾 kesedaran 人民 di negara kita 📌 Nasionalis di negara kita menggunakan: 🕌 pendidikan agama, Inggeris 与 Melayu 🖋️ penulisan, 报章 与 karya kreatif 🤝 协会 与 pertubuhan 💡 Kesannya: 🏛️ kesedaran 政治 berkembang 💼 ekonomi 社会 diperkukuh 👥 sosial 与 pendidikan semakin meningkat 🇲🇾 Rumusan akhir: 🔥 民族主义 menjadi asas 斗争 独立 🛡️ membina 主权 negara bangsa"
+      ],
+      "bm_focus_phrase": "Rumusan Besar Bab 2 📌 Nasionalisme ialah: ❤️ perasaan cinta akan negara ⚔️ keinginan membebaskan diri daripada penjajah 📌 Perkembangannya dipengaruhi oleh: 🌍 idea dari Barat dan Asia 🇲🇾 kesedaran rakyat di negara kita 📌 Nasionalis di negara kita menggunakan: 🕌 pendidikan agama, Inggeris dan Melayu 🖋️ penulisan, akhbar dan karya kreatif 🤝 persatuan dan pertubuhan 💡 Kesannya: 🏛️ kesedaran politik berkembang 💼 ekonomi masyarakat diperkukuh 👥 sosial dan pendidikan semakin meningkat 🇲🇾 Rumusan akhir: 🔥 nasionalisme menjadi asas perjuangan kemerdekaan 🛡️ membina kedaulatan negara bangsa"
+    },
+    {
+      "source_id": "b2-8-rumusan-nasionalisme",
+      "bm_original": "b2-8-rumusan-nasionalisme",
+      "translate": "重点：b2-8-rumusan-nasionalisme",
+      "key_points_zh": [
+        "重点：b2-8-rumusan-nasionalisme"
+      ],
+      "bm_focus_phrase": "b2-8-rumusan-nasionalisme"
+    },
+    {
+      "source_id": "bab-2-8-extra-37",
+      "bm_original": "bab-2-8-extra-37",
+      "translate": "重点：bab-2-8-extra-37",
+      "key_points_zh": [
+        "重点：bab-2-8-extra-37"
+      ],
+      "bm_focus_phrase": "bab-2-8-extra-37"
+    },
+    {
+      "source_id": "bab-2-8-extra-38",
+      "bm_original": "bab-2-8-extra-38",
+      "translate": "重点：bab-2-8-extra-38",
+      "key_points_zh": [
+        "重点：bab-2-8-extra-38"
+      ],
+      "bm_focus_phrase": "bab-2-8-extra-38"
+    },
+    {
+      "source_id": "b2-8-rumusan-pengaruh",
+      "bm_original": "b2-8-rumusan-pengaruh",
+      "translate": "重点：b2-8-rumusan-pengaruh",
+      "key_points_zh": [
+        "重点：b2-8-rumusan-pengaruh"
+      ],
+      "bm_focus_phrase": "b2-8-rumusan-pengaruh"
+    },
+    {
+      "source_id": "bab-2-8-extra-39",
+      "bm_original": "bab-2-8-extra-39",
+      "translate": "重点：bab-2-8-extra-39",
+      "key_points_zh": [
+        "重点：bab-2-8-extra-39"
+      ],
+      "bm_focus_phrase": "bab-2-8-extra-39"
+    },
+    {
+      "source_id": "bab-2-8-extra-40",
+      "bm_original": "bab-2-8-extra-40",
+      "translate": "重点：bab-2-8-extra-40",
+      "key_points_zh": [
+        "重点：bab-2-8-extra-40"
+      ],
+      "bm_focus_phrase": "bab-2-8-extra-40"
+    },
+    {
+      "source_id": "b2-8-rumusan-saluran",
+      "bm_original": "b2-8-rumusan-saluran",
+      "translate": "重点：b2-8-rumusan-saluran",
+      "key_points_zh": [
+        "重点：b2-8-rumusan-saluran"
+      ],
+      "bm_focus_phrase": "b2-8-rumusan-saluran"
+    },
+    {
+      "source_id": "bab-2-8-extra-41",
+      "bm_original": "bab-2-8-extra-41",
+      "translate": "重点：bab-2-8-extra-41",
+      "key_points_zh": [
+        "重点：bab-2-8-extra-41"
+      ],
+      "bm_focus_phrase": "bab-2-8-extra-41"
+    },
+    {
+      "source_id": "bab-2-8-extra-42",
+      "bm_original": "bab-2-8-extra-42",
+      "translate": "重点：bab-2-8-extra-42",
+      "key_points_zh": [
+        "重点：bab-2-8-extra-42"
+      ],
+      "bm_focus_phrase": "bab-2-8-extra-42"
+    },
+    {
+      "source_id": "bab-2-8-extra-43",
+      "bm_original": "bab-2-8-extra-43",
+      "translate": "重点：bab-2-8-extra-43",
+      "key_points_zh": [
+        "重点：bab-2-8-extra-43"
+      ],
+      "bm_focus_phrase": "bab-2-8-extra-43"
+    },
+    {
+      "source_id": "b2-8-rumusan-kesan",
+      "bm_original": "b2-8-rumusan-kesan",
+      "translate": "重点：b2-8-rumusan-kesan",
+      "key_points_zh": [
+        "重点：b2-8-rumusan-kesan"
+      ],
+      "bm_focus_phrase": "b2-8-rumusan-kesan"
+    },
+    {
+      "source_id": "bab-2-8-extra-44",
+      "bm_original": "bab-2-8-extra-44",
+      "translate": "重点：bab-2-8-extra-44",
+      "key_points_zh": [
+        "重点：bab-2-8-extra-44"
+      ],
+      "bm_focus_phrase": "bab-2-8-extra-44"
+    },
+    {
+      "source_id": "bab-2-8-extra-45",
+      "bm_original": "bab-2-8-extra-45",
+      "translate": "重点：bab-2-8-extra-45",
+      "key_points_zh": [
+        "重点：bab-2-8-extra-45"
+      ],
+      "bm_focus_phrase": "bab-2-8-extra-45"
+    },
+    {
+      "source_id": "bab-2-8-extra-46",
+      "bm_original": "bab-2-8-extra-46",
+      "translate": "重点：bab-2-8-extra-46",
+      "key_points_zh": [
+        "重点：bab-2-8-extra-46"
+      ],
+      "bm_focus_phrase": "bab-2-8-extra-46"
+    },
+    {
+      "source_id": "b2-8-rumusan-akhir",
+      "bm_original": "b2-8-rumusan-akhir",
+      "translate": "重点：b2-8-rumusan-akhir",
+      "key_points_zh": [
+        "重点：b2-8-rumusan-akhir"
+      ],
+      "bm_focus_phrase": "b2-8-rumusan-akhir"
+    },
+    {
+      "source_id": "bab-2-8-extra-47",
+      "bm_original": "bab-2-8-extra-47",
+      "translate": "重点：bab-2-8-extra-47",
+      "key_points_zh": [
+        "重点：bab-2-8-extra-47"
+      ],
+      "bm_focus_phrase": "bab-2-8-extra-47"
+    },
+    {
+      "source_id": "bab-2-8-extra-48",
+      "bm_original": "bab-2-8-extra-48",
+      "translate": "重点：bab-2-8-extra-48",
+      "key_points_zh": [
+        "重点：bab-2-8-extra-48"
+      ],
+      "bm_focus_phrase": "bab-2-8-extra-48"
+    }
+  ]
+}

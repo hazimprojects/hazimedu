@@ -1,1 +1,1187 @@
-{"units": []}
+{
+  "meta": {
+    "source_file": "notes/bab-3-6.html",
+    "rollout": "gelombang-1-manual-revision"
+  },
+  "units": [
+    {
+      "source_id": "bab-3-6-extra-1",
+      "bm_original": "Jepun",
+      "translate": "重点：Jepun",
+      "key_points_zh": [
+        "重点：Jepun"
+      ],
+      "bm_focus_phrase": "Jepun"
+    },
+    {
+      "source_id": "bab-3-6-u63",
+      "bm_original": "Jepun mentadbir negara kita melalui tiga dasar utama, iaitu dasar pentadbiran , dasar ekonomi dan dasar sosial .",
+      "translate": "Jepun mentadbir negara kita 通过 tiga dasar 主要, iaitu dasar 行政 , dasar ekonomi 与 dasar sosial .",
+      "key_points_zh": [
+        "Jepun mentadbir negara kita 通过 tiga dasar 主要, iaitu dasar 行政 , dasar ekonomi 与 dasar sosial ."
+      ],
+      "bm_focus_phrase": "Jepun mentadbir negara kita melalui tiga dasar utama, iaitu dasar pentadbiran , dasar ekonomi dan dasar sosial ."
+    },
+    {
+      "source_id": "bab-3-6-extra-2",
+      "bm_original": "bab-3-6-extra-2",
+      "translate": "重点：bab-3-6-extra-2",
+      "key_points_zh": [
+        "重点：bab-3-6-extra-2"
+      ],
+      "bm_focus_phrase": "bab-3-6-extra-2"
+    },
+    {
+      "source_id": "bab-3-6-u64",
+      "bm_original": "Dalam pentadbiran, Jepun mengekalkan Raja-raja Melayu dan menggunakan pemimpin tempatan, tetapi semuanya berada di bawah pengawasan tentera Jepun.",
+      "translate": "Dalam 行政, Jepun mengekalkan Raja-raja Melayu 与 menggunakan 领袖 本地, tetapi semuanya berada di bawah pengawasan tentera Jepun.",
+      "key_points_zh": [
+        "Dalam 行政, Jepun mengekalkan Raja-raja Melayu 与 menggunakan 领袖 本地, tetapi semuanya berada di bawah pengawasan tentera Jepun."
+      ],
+      "bm_focus_phrase": "Dalam pentadbiran, Jepun mengekalkan Raja-raja Melayu dan menggunakan pemimpin tempatan, tetapi semuanya berada di bawah pengawasan tentera Jepun."
+    },
+    {
+      "source_id": "bab-3-6-u65",
+      "bm_original": "Dalam ekonomi, Jepun memperkenalkan ekonomi kawalan dan mata wang Jepun yang dikenali sebagai wang pokok pisang ; pencetakan tanpa kawalan menyebabkan inflasi dan kekurangan barang di pasaran.",
+      "translate": "Dalam ekonomi, Jepun memperkenalkan ekonomi kawalan 与 mata wang Jepun 的 dikenali 作为 wang pokok pisang ; pencetakan tanpa kawalan menyebabkan inflasi 与 kekurangan barang di pasaran.",
+      "key_points_zh": [
+        "Dalam ekonomi, Jepun memperkenalkan ekonomi kawalan 与 mata wang Jepun 的 dikenali 作为 wang pokok pisang ; pencetakan tanpa kawalan menyebabkan inflasi 与 kekurangan barang di pasaran."
+      ],
+      "bm_focus_phrase": "Dalam ekonomi, Jepun memperkenalkan ekonomi kawalan dan mata wang Jepun yang dikenali sebagai wang pokok pisang ; pencetakan tanpa kawalan menyebabkan inflasi dan kekurangan barang di pasaran."
+    },
+    {
+      "source_id": "bab-3-6-u66",
+      "bm_original": "Dalam sosial, rakyat berdepan perubahan pendidikan, catuan makanan, layanan berbeza mengikut kaum dan kekejaman seperti Landasan Kereta Api Maut .",
+      "translate": "Dalam sosial, 人民 berdepan perubahan pendidikan, catuan makanan, layanan berbeza mengikut kaum 与 kekejaman seperti Landasan Kereta Api Maut .",
+      "key_points_zh": [
+        "Dalam sosial, 人民 berdepan perubahan pendidikan, catuan makanan, layanan berbeza mengikut kaum 与 kekejaman seperti Landasan Kereta Api Maut ."
+      ],
+      "bm_focus_phrase": "Dalam sosial, rakyat berdepan perubahan pendidikan, catuan makanan, layanan berbeza mengikut kaum dan kekejaman seperti Landasan Kereta Api Maut ."
+    },
+    {
+      "source_id": "bab-3-6-u01",
+      "bm_original": "Jepun melaksanakan pemerintahan tentera yang keras melalui dasar pentadbiran, ekonomi dan sosial untuk mengukuhkan kekuasaannya serta menyokong kepentingan perang.",
+      "translate": "Jepun melaksanakan pemerintahan tentera 的 keras 通过 dasar 行政, ekonomi 与 sosial 为了 加强 kekuasaannya 以及 menyokong kepentingan perang.",
+      "key_points_zh": [
+        "Jepun melaksanakan pemerintahan tentera 的 keras 通过 dasar 行政, ekonomi 与 sosial 为了 加强 kekuasaannya 以及 menyokong kepentingan perang."
+      ],
+      "bm_focus_phrase": "Jepun melaksanakan pemerintahan tentera yang keras melalui dasar pentadbiran, ekonomi dan sosial untuk mengukuhkan kekuasaannya serta menyokong kepentingan perang."
+    },
+    {
+      "source_id": "bab-3-6-extra-3",
+      "bm_original": "bab-3-6-extra-3",
+      "translate": "重点：bab-3-6-extra-3",
+      "key_points_zh": [
+        "重点：bab-3-6-extra-3"
+      ],
+      "bm_focus_phrase": "bab-3-6-extra-3"
+    },
+    {
+      "source_id": "bab-3-6-u02",
+      "bm_original": "Selepas menawan negara kita, Jepun meletakkan Tanah Melayu , Sarawak dan Sabah di bawah jajahan tentera Jepun.",
+      "translate": "Selepas menawan negara kita, Jepun meletakkan Tanah Melayu , Sarawak 与 Sabah di bawah jajahan tentera Jepun.",
+      "key_points_zh": [
+        "Selepas menawan negara kita, Jepun meletakkan Tanah Melayu , Sarawak 与 Sabah di bawah jajahan tentera Jepun."
+      ],
+      "bm_focus_phrase": "Selepas menawan negara kita, Jepun meletakkan Tanah Melayu , Sarawak dan Sabah di bawah jajahan tentera Jepun."
+    },
+    {
+      "source_id": "bab-3-6-u03",
+      "bm_original": "Pentadbiran ini dikendalikan oleh Panglima Agung Tentera Jepun (Southern Army) .",
+      "translate": "行政 这 dikendalikan 由 Panglima Agung Tentera Jepun (Southern Army) .",
+      "key_points_zh": [
+        "行政 这 dikendalikan 由 Panglima Agung Tentera Jepun (Southern Army) ."
+      ],
+      "bm_focus_phrase": "Pentadbiran ini dikendalikan oleh Panglima Agung Tentera Jepun (Southern Army) ."
+    },
+    {
+      "source_id": "bab-3-6-u04",
+      "bm_original": "Dasar pentadbiran Jepun merangkumi cara Jepun menyusun pemerintahan tentera, mengawal kedudukan Raja-raja Melayu dan menggunakan kepimpinan tempatan untuk membantu pentadbirannya.",
+      "translate": "Dasar 行政 Jepun merangkumi cara Jepun menyusun pemerintahan tentera, mengawal kedudukan Raja-raja Melayu 与 menggunakan kepimpinan 本地 为了 membantu pentadbirannya.",
+      "key_points_zh": [
+        "Dasar 行政 Jepun merangkumi cara Jepun menyusun pemerintahan tentera, mengawal kedudukan Raja-raja Melayu 与 menggunakan kepimpinan 本地 为了 membantu pentadbirannya."
+      ],
+      "bm_focus_phrase": "Dasar pentadbiran Jepun merangkumi cara Jepun menyusun pemerintahan tentera, mengawal kedudukan Raja-raja Melayu dan menggunakan kepimpinan tempatan untuk membantu pentadbirannya."
+    },
+    {
+      "source_id": "bab-3-6-u05",
+      "bm_original": "Tentera Jepun memperkenalkan Pemerintahan Tentera Tanah Melayu .",
+      "translate": "重点：Tentera Jepun memperkenalkan Pemerintahan Tentera Tanah Melayu .",
+      "key_points_zh": [
+        "重点：Tentera Jepun memperkenalkan Pemerintahan Tentera Tanah Melayu ."
+      ],
+      "bm_focus_phrase": "Tentera Jepun memperkenalkan Pemerintahan Tentera Tanah Melayu ."
+    },
+    {
+      "source_id": "bab-3-6-u06",
+      "bm_original": "Pada peringkat awal, Tanah Melayu digabungkan dengan Sumatera di bawah satu pentadbiran untuk membentuk Kawasan Pertahanan Khas .",
+      "translate": "Pada peringkat awal, Tanah Melayu digabungkan 以 Sumatera di bawah satu 行政 为了 membentuk Kawasan Pertahanan Khas .",
+      "key_points_zh": [
+        "Pada peringkat awal, Tanah Melayu digabungkan 以 Sumatera di bawah satu 行政 为了 membentuk Kawasan Pertahanan Khas ."
+      ],
+      "bm_focus_phrase": "Pada peringkat awal, Tanah Melayu digabungkan dengan Sumatera di bawah satu pentadbiran untuk membentuk Kawasan Pertahanan Khas ."
+    },
+    {
+      "source_id": "bab-3-6-u07",
+      "bm_original": "Kawasan ini diletakkan di bawah pentadbiran pasukan tentera Jepun ke-25 yang berpusat di Singapura .",
+      "translate": "Kawasan 这 diletakkan di bawah 行政 pasukan tentera Jepun ke-25 的 berpusat di Singapura .",
+      "key_points_zh": [
+        "Kawasan 这 diletakkan di bawah 行政 pasukan tentera Jepun ke-25 的 berpusat di Singapura ."
+      ],
+      "bm_focus_phrase": "Kawasan ini diletakkan di bawah pentadbiran pasukan tentera Jepun ke-25 yang berpusat di Singapura ."
+    },
+    {
+      "source_id": "bab-3-6-u08",
+      "bm_original": "Hal ini berlaku kerana terdapat perbezaan sistem politik dan ekonomi yang ketara di bawah pentadbiran British dan Belanda sebelum perang.",
+      "translate": "Hal 这 发生 因为 terdapat perbezaan sistem 政治 与 ekonomi 的 ketara di bawah 行政 British 与 Belanda sebelum perang.",
+      "key_points_zh": [
+        "Hal 这 发生 因为 terdapat perbezaan sistem 政治 与 ekonomi 的 ketara di bawah 行政 British 与 Belanda sebelum perang."
+      ],
+      "bm_focus_phrase": "Hal ini berlaku kerana terdapat perbezaan sistem politik dan ekonomi yang ketara di bawah pentadbiran British dan Belanda sebelum perang."
+    },
+    {
+      "source_id": "bab-3-6-extra-4",
+      "bm_original": "Sumatera → di bawah tentera Jepun ke-25",
+      "translate": "重点：Sumatera → di bawah tentera Jepun ke-25",
+      "key_points_zh": [
+        "重点：Sumatera → di bawah tentera Jepun ke-25"
+      ],
+      "bm_focus_phrase": "Sumatera → di bawah tentera Jepun ke-25"
+    },
+    {
+      "source_id": "bab-3-6-extra-5",
+      "bm_original": "pusat di Bukit Tinggi, Sumatera",
+      "translate": "重点：pusat di Bukit Tinggi, Sumatera",
+      "key_points_zh": [
+        "重点：pusat di Bukit Tinggi, Sumatera"
+      ],
+      "bm_focus_phrase": "pusat di Bukit Tinggi, Sumatera"
+    },
+    {
+      "source_id": "bab-3-6-extra-6",
+      "bm_original": "Tanah Melayu → di bawah tentera Jepun ke-29",
+      "translate": "重点：Tanah Melayu → di bawah tentera Jepun ke-29",
+      "key_points_zh": [
+        "重点：Tanah Melayu → di bawah tentera Jepun ke-29"
+      ],
+      "bm_focus_phrase": "Tanah Melayu → di bawah tentera Jepun ke-29"
+    },
+    {
+      "source_id": "bab-3-6-extra-7",
+      "bm_original": "pusat di Taiping, Perak",
+      "translate": "重点：pusat di Taiping, Perak",
+      "key_points_zh": [
+        "重点：pusat di Taiping, Perak"
+      ],
+      "bm_focus_phrase": "pusat di Taiping, Perak"
+    },
+    {
+      "source_id": "bab-3-6-u09",
+      "bm_original": "Singapura yang dikenali sebagai Syonan-to ( Pulau Cahaya Selatan ) diasingkan pentadbirannya daripada Tanah Melayu yang dikenali sebagai Malai Baru ( Melayu Baru ).",
+      "translate": "Singapura 的 dikenali 作为 Syonan-to ( Pulau Cahaya Selatan ) diasingkan pentadbirannya daripada Tanah Melayu 的 dikenali 作为 Malai Baru ( Melayu Baru ).",
+      "key_points_zh": [
+        "Singapura 的 dikenali 作为 Syonan-to ( Pulau Cahaya Selatan ) diasingkan pentadbirannya daripada Tanah Melayu 的 dikenali 作为 Malai Baru ( Melayu Baru )."
+      ],
+      "bm_focus_phrase": "Singapura yang dikenali sebagai Syonan-to ( Pulau Cahaya Selatan ) diasingkan pentadbirannya daripada Tanah Melayu yang dikenali sebagai Malai Baru ( Melayu Baru )."
+    },
+    {
+      "source_id": "bab-3-6-u10",
+      "bm_original": "Negeri Melayu, iaitu Perlis , Kedah , Kelantan dan Terengganu dipindahkan di bawah pentadbiran kerajaan Thailand .",
+      "translate": "Negeri Melayu, iaitu Perlis , Kedah , Kelantan 与 Terengganu dipindahkan di bawah 行政 政府 Thailand .",
+      "key_points_zh": [
+        "Negeri Melayu, iaitu Perlis , Kedah , Kelantan 与 Terengganu dipindahkan di bawah 行政 政府 Thailand ."
+      ],
+      "bm_focus_phrase": "Negeri Melayu, iaitu Perlis , Kedah , Kelantan dan Terengganu dipindahkan di bawah pentadbiran kerajaan Thailand ."
+    },
+    {
+      "source_id": "bab-3-6-u11",
+      "bm_original": "Sarawak , Sabah dan Brunei digabungkan menjadi satu unit pentadbiran yang dikenali sebagai Kita Boruneo .",
+      "translate": "Sarawak , Sabah 与 Brunei digabungkan menjadi satu unit 行政 的 dikenali 作为 Kita Boruneo .",
+      "key_points_zh": [
+        "Sarawak , Sabah 与 Brunei digabungkan menjadi satu unit 行政 的 dikenali 作为 Kita Boruneo ."
+      ],
+      "bm_focus_phrase": "Sarawak , Sabah dan Brunei digabungkan menjadi satu unit pentadbiran yang dikenali sebagai Kita Boruneo ."
+    },
+    {
+      "source_id": "bab-3-6-u12",
+      "bm_original": "Pentadbiran ini diketuai oleh Gabenor Jeneral dan diletakkan di bawah pasukan tentera Jepun ke-37 yang berpusat di Kuching .",
+      "translate": "行政 这 diketuai 由 Gabenor Jeneral 与 diletakkan di bawah pasukan tentera Jepun ke-37 的 berpusat di Kuching .",
+      "key_points_zh": [
+        "行政 这 diketuai 由 Gabenor Jeneral 与 diletakkan di bawah pasukan tentera Jepun ke-37 的 berpusat di Kuching ."
+      ],
+      "bm_focus_phrase": "Pentadbiran ini diketuai oleh Gabenor Jeneral dan diletakkan di bawah pasukan tentera Jepun ke-37 yang berpusat di Kuching ."
+    },
+    {
+      "source_id": "bab-3-6-u13",
+      "bm_original": "Jepun menggunakan Kempeitai , iaitu polis tentera Jepun.",
+      "translate": "重点：Jepun menggunakan Kempeitai , iaitu polis tentera Jepun.",
+      "key_points_zh": [
+        "重点：Jepun menggunakan Kempeitai , iaitu polis tentera Jepun."
+      ],
+      "bm_focus_phrase": "Jepun menggunakan Kempeitai , iaitu polis tentera Jepun."
+    },
+    {
+      "source_id": "bab-3-6-u14",
+      "bm_original": "Tujuannya ialah untuk menjaga kepentingan pentadbiran tentera Jepun.",
+      "translate": "Tujuannya 是 为了 menjaga kepentingan 行政 tentera Jepun.",
+      "key_points_zh": [
+        "Tujuannya 是 为了 menjaga kepentingan 行政 tentera Jepun."
+      ],
+      "bm_focus_phrase": "Tujuannya ialah untuk menjaga kepentingan pentadbiran tentera Jepun."
+    },
+    {
+      "source_id": "bab-3-6-u15",
+      "bm_original": "Kempeitai bertindak dengan:",
+      "translate": "Kempeitai bertindak 以:",
+      "key_points_zh": [
+        "Kempeitai bertindak 以:"
+      ],
+      "bm_focus_phrase": "Kempeitai bertindak dengan:"
+    },
+    {
+      "source_id": "bab-3-6-extra-8",
+      "bm_original": "kejam",
+      "translate": "重点：kejam",
+      "key_points_zh": [
+        "重点：kejam"
+      ],
+      "bm_focus_phrase": "kejam"
+    },
+    {
+      "source_id": "bab-3-6-extra-9",
+      "bm_original": "ganas",
+      "translate": "重点：ganas",
+      "key_points_zh": [
+        "重点：ganas"
+      ],
+      "bm_focus_phrase": "ganas"
+    },
+    {
+      "source_id": "bab-3-6-extra-10",
+      "bm_original": "menyiksa dan membunuh orang awam yang disyaki menentang Jepun",
+      "translate": "menyiksa 与 membunuh orang awam 的 disyaki 反对 Jepun",
+      "key_points_zh": [
+        "menyiksa 与 membunuh orang awam 的 disyaki 反对 Jepun"
+      ],
+      "bm_focus_phrase": "menyiksa dan membunuh orang awam yang disyaki menentang Jepun"
+    },
+    {
+      "source_id": "bab-3-6-u16",
+      "bm_original": "Jepun tetap mengekalkan kedudukan Raja-raja Melayu, tetapi semuanya berada di bawah kawalannya.",
+      "translate": "重点：Jepun tetap mengekalkan kedudukan Raja-raja Melayu, tetapi semuanya berada di bawah kawalannya.",
+      "key_points_zh": [
+        "重点：Jepun tetap mengekalkan kedudukan Raja-raja Melayu, tetapi semuanya berada di bawah kawalannya."
+      ],
+      "bm_focus_phrase": "Jepun tetap mengekalkan kedudukan Raja-raja Melayu, tetapi semuanya berada di bawah kawalannya."
+    },
+    {
+      "source_id": "bab-3-6-u17",
+      "bm_original": "Jepun mengiktiraf Raja-raja Melayu sebagai:",
+      "translate": "Jepun mengiktiraf Raja-raja Melayu 作为:",
+      "key_points_zh": [
+        "Jepun mengiktiraf Raja-raja Melayu 作为:"
+      ],
+      "bm_focus_phrase": "Jepun mengiktiraf Raja-raja Melayu sebagai:"
+    },
+    {
+      "source_id": "bab-3-6-extra-11",
+      "bm_original": "ketua agama Islam",
+      "translate": "重点：ketua agama Islam",
+      "key_points_zh": [
+        "重点：ketua agama Islam"
+      ],
+      "bm_focus_phrase": "ketua agama Islam"
+    },
+    {
+      "source_id": "bab-3-6-extra-12",
+      "bm_original": "ketua adat Melayu",
+      "translate": "重点：ketua adat Melayu",
+      "key_points_zh": [
+        "重点：ketua adat Melayu"
+      ],
+      "bm_focus_phrase": "ketua adat Melayu"
+    },
+    {
+      "source_id": "bab-3-6-u18",
+      "bm_original": "Jepun juga memberi bayaran pencen seperti sebelum pendudukan.",
+      "translate": "Jepun 也 memberi bayaran pencen seperti sebelum pendudukan.",
+      "key_points_zh": [
+        "Jepun 也 memberi bayaran pencen seperti sebelum pendudukan."
+      ],
+      "bm_focus_phrase": "Jepun juga memberi bayaran pencen seperti sebelum pendudukan."
+    },
+    {
+      "source_id": "bab-3-6-u19",
+      "bm_original": "Tujuannya untuk:",
+      "translate": "Tujuannya 为了:",
+      "key_points_zh": [
+        "Tujuannya 为了:"
+      ],
+      "bm_focus_phrase": "Tujuannya untuk:"
+    },
+    {
+      "source_id": "bab-3-6-extra-13",
+      "bm_original": "mengukuhkan kedudukan Raja-raja Melayu",
+      "translate": "加强 kedudukan Raja-raja Melayu",
+      "key_points_zh": [
+        "加强 kedudukan Raja-raja Melayu"
+      ],
+      "bm_focus_phrase": "mengukuhkan kedudukan Raja-raja Melayu"
+    },
+    {
+      "source_id": "bab-3-6-extra-14",
+      "bm_original": "tetapi tetap di bawah pengawasan Gabenor Jepun",
+      "translate": "重点：tetapi tetap di bawah pengawasan Gabenor Jepun",
+      "key_points_zh": [
+        "重点：tetapi tetap di bawah pengawasan Gabenor Jepun"
+      ],
+      "bm_focus_phrase": "tetapi tetap di bawah pengawasan Gabenor Jepun"
+    },
+    {
+      "source_id": "bab-3-6-u20",
+      "bm_original": "Jepun menggunakan pemimpin tempatan untuk membantu pentadbirannya.",
+      "translate": "Jepun menggunakan 领袖 本地 为了 membantu pentadbirannya.",
+      "key_points_zh": [
+        "Jepun menggunakan 领袖 本地 为了 membantu pentadbirannya."
+      ],
+      "bm_focus_phrase": "Jepun menggunakan pemimpin tempatan untuk membantu pentadbirannya."
+    },
+    {
+      "source_id": "bab-3-6-u21",
+      "bm_original": "Jepun memberi peluang kepada:",
+      "translate": "Jepun memberi peluang 向:",
+      "key_points_zh": [
+        "Jepun memberi peluang 向:"
+      ],
+      "bm_focus_phrase": "Jepun memberi peluang kepada:"
+    },
+    {
+      "source_id": "bab-3-6-extra-15",
+      "bm_original": "pemimpin tempatan yang berpendidikan",
+      "translate": "领袖 本地 的 berpendidikan",
+      "key_points_zh": [
+        "领袖 本地 的 berpendidikan"
+      ],
+      "bm_focus_phrase": "pemimpin tempatan yang berpendidikan"
+    },
+    {
+      "source_id": "bab-3-6-extra-16",
+      "bm_original": "pemimpin yang berpengalaman",
+      "translate": "领袖 的 berpengalaman",
+      "key_points_zh": [
+        "领袖 的 berpengalaman"
+      ],
+      "bm_focus_phrase": "pemimpin yang berpengalaman"
+    },
+    {
+      "source_id": "bab-3-6-extra-17",
+      "bm_original": "naik pangkat",
+      "translate": "重点：naik pangkat",
+      "key_points_zh": [
+        "重点：naik pangkat"
+      ],
+      "bm_focus_phrase": "naik pangkat"
+    },
+    {
+      "source_id": "bab-3-6-extra-18",
+      "bm_original": "memegang jawatan penting",
+      "translate": "重点：memegang jawatan penting",
+      "key_points_zh": [
+        "重点：memegang jawatan penting"
+      ],
+      "bm_focus_phrase": "memegang jawatan penting"
+    },
+    {
+      "source_id": "bab-3-6-u22",
+      "bm_original": "Jepun menubuhkan Institut Latihan Pemimpin-pemimpin Muda yang dikenali sebagai Koa Kunrenjo .",
+      "translate": "Jepun 成立 Institut Latihan 领袖-领袖 Muda 的 dikenali 作为 Koa Kunrenjo .",
+      "key_points_zh": [
+        "Jepun 成立 Institut Latihan 领袖-领袖 Muda 的 dikenali 作为 Koa Kunrenjo ."
+      ],
+      "bm_focus_phrase": "Jepun menubuhkan Institut Latihan Pemimpin-pemimpin Muda yang dikenali sebagai Koa Kunrenjo ."
+    },
+    {
+      "source_id": "bab-3-6-u23",
+      "bm_original": "Tujuan penubuhannya ialah:",
+      "translate": "目的 penubuhannya 是:",
+      "key_points_zh": [
+        "目的 penubuhannya 是:"
+      ],
+      "bm_focus_phrase": "Tujuan penubuhannya ialah:"
+    },
+    {
+      "source_id": "bab-3-6-extra-19",
+      "bm_original": "melatih pemimpin tempatan",
+      "translate": "melatih 领袖 本地",
+      "key_points_zh": [
+        "melatih 领袖 本地"
+      ],
+      "bm_focus_phrase": "melatih pemimpin tempatan"
+    },
+    {
+      "source_id": "bab-3-6-extra-20",
+      "bm_original": "menyokong cita-cita politik Jepun",
+      "translate": "menyokong cita-cita 政治 Jepun",
+      "key_points_zh": [
+        "menyokong cita-cita 政治 Jepun"
+      ],
+      "bm_focus_phrase": "menyokong cita-cita politik Jepun"
+    },
+    {
+      "source_id": "bab-3-6-u24",
+      "bm_original": "Jepun melaksanakan ekonomi kawalan untuk menyokong keperluan tenteranya.",
+      "translate": "Jepun melaksanakan ekonomi kawalan 为了 menyokong keperluan tenteranya.",
+      "key_points_zh": [
+        "Jepun melaksanakan ekonomi kawalan 为了 menyokong keperluan tenteranya."
+      ],
+      "bm_focus_phrase": "Jepun melaksanakan ekonomi kawalan untuk menyokong keperluan tenteranya."
+    },
+    {
+      "source_id": "bab-3-6-u25",
+      "bm_original": "Rancangan Ekonomi Jepun",
+      "translate": "重点：Rancangan Ekonomi Jepun",
+      "key_points_zh": [
+        "重点：Rancangan Ekonomi Jepun"
+      ],
+      "bm_focus_phrase": "Rancangan Ekonomi Jepun"
+    },
+    {
+      "source_id": "bab-3-6-u26",
+      "bm_original": "Antara langkah yang diambil ialah:",
+      "translate": "Antara 步骤 的 diambil 是:",
+      "key_points_zh": [
+        "Antara 步骤 的 diambil 是:"
+      ],
+      "bm_focus_phrase": "Antara langkah yang diambil ialah:"
+    },
+    {
+      "source_id": "bab-3-6-extra-21",
+      "bm_original": "Rancangan Pengeluaran Lima Tahun → mengawal pengeluaran dan penggunaan barangan tempatan",
+      "translate": "Rancangan Pengeluaran Lima Tahun → mengawal pengeluaran 与 penggunaan barangan 本地",
+      "key_points_zh": [
+        "Rancangan Pengeluaran Lima Tahun → mengawal pengeluaran 与 penggunaan barangan 本地"
+      ],
+      "bm_focus_phrase": "Rancangan Pengeluaran Lima Tahun → mengawal pengeluaran dan penggunaan barangan tempatan"
+    },
+    {
+      "source_id": "bab-3-6-extra-22",
+      "bm_original": "Jawatankuasa Penyelidikan Bahan → menyelidik kegunaan baharu sumber tempatan",
+      "translate": "Jawatankuasa Penyelidikan Bahan → menyelidik kegunaan baharu sumber 本地",
+      "key_points_zh": [
+        "Jawatankuasa Penyelidikan Bahan → menyelidik kegunaan baharu sumber 本地"
+      ],
+      "bm_focus_phrase": "Jawatankuasa Penyelidikan Bahan → menyelidik kegunaan baharu sumber tempatan"
+    },
+    {
+      "source_id": "bab-3-6-extra-23",
+      "bm_original": "Rancangan Perindustrian Lima Tahun → membangunkan industri tempatan dengan menggunakan kemudahan sedia ada secara maksimum",
+      "translate": "Rancangan Perindustrian Lima Tahun → membangunkan industri 本地 以 menggunakan kemudahan sedia ada secara maksimum",
+      "key_points_zh": [
+        "Rancangan Perindustrian Lima Tahun → membangunkan industri 本地 以 menggunakan kemudahan sedia ada secara maksimum"
+      ],
+      "bm_focus_phrase": "Rancangan Perindustrian Lima Tahun → membangunkan industri tempatan dengan menggunakan kemudahan sedia ada secara maksimum"
+    },
+    {
+      "source_id": "bab-3-6-u27",
+      "bm_original": "Jepun memperkenalkan mata wang Jepun untuk menggantikan mata wang British.",
+      "translate": "Jepun memperkenalkan mata wang Jepun 为了 menggantikan mata wang British.",
+      "key_points_zh": [
+        "Jepun memperkenalkan mata wang Jepun 为了 menggantikan mata wang British."
+      ],
+      "bm_focus_phrase": "Jepun memperkenalkan mata wang Jepun untuk menggantikan mata wang British."
+    },
+    {
+      "source_id": "bab-3-6-u28",
+      "bm_original": "Mata wang ini dikenali oleh rakyat sebagai wang pokok pisang .",
+      "translate": "Mata wang 这 dikenali 由 人民 作为 wang pokok pisang .",
+      "key_points_zh": [
+        "Mata wang 这 dikenali 由 人民 作为 wang pokok pisang ."
+      ],
+      "bm_focus_phrase": "Mata wang ini dikenali oleh rakyat sebagai wang pokok pisang ."
+    },
+    {
+      "source_id": "bab-3-6-u29",
+      "bm_original": "Jepun mencetak wang ini tanpa kawalan untuk membiayai pendudukannya.",
+      "translate": "Jepun mencetak wang 这 tanpa kawalan 为了 membiayai pendudukannya.",
+      "key_points_zh": [
+        "Jepun mencetak wang 这 tanpa kawalan 为了 membiayai pendudukannya."
+      ],
+      "bm_focus_phrase": "Jepun mencetak wang ini tanpa kawalan untuk membiayai pendudukannya."
+    },
+    {
+      "source_id": "bab-3-6-extra-24",
+      "bm_original": "berlaku inflasi",
+      "translate": "发生 inflasi",
+      "key_points_zh": [
+        "发生 inflasi"
+      ],
+      "bm_focus_phrase": "berlaku inflasi"
+    },
+    {
+      "source_id": "bab-3-6-extra-25",
+      "bm_original": "terlalu banyak wang dalam edaran",
+      "translate": "terlalu banyak wang 在 edaran",
+      "key_points_zh": [
+        "terlalu banyak wang 在 edaran"
+      ],
+      "bm_focus_phrase": "terlalu banyak wang dalam edaran"
+    },
+    {
+      "source_id": "bab-3-6-extra-26",
+      "bm_original": "barangan di pasaran semakin berkurangan",
+      "translate": "重点：barangan di pasaran semakin berkurangan",
+      "key_points_zh": [
+        "重点：barangan di pasaran semakin berkurangan"
+      ],
+      "bm_focus_phrase": "barangan di pasaran semakin berkurangan"
+    },
+    {
+      "source_id": "bab-3-6-extra-27",
+      "bm_original": "kehidupan rakyat menjadi semakin sukar",
+      "translate": "kehidupan 人民 menjadi semakin sukar",
+      "key_points_zh": [
+        "kehidupan 人民 menjadi semakin sukar"
+      ],
+      "bm_focus_phrase": "kehidupan rakyat menjadi semakin sukar"
+    },
+    {
+      "source_id": "bab-3-6-u30",
+      "bm_original": "Inflasi berlaku kerana terlalu banyak wang dicetak tetapi bekalan barangan tidak mencukupi di pasaran.",
+      "translate": "Inflasi 发生 因为 terlalu banyak wang dicetak tetapi bekalan barangan 不 mencukupi di pasaran.",
+      "key_points_zh": [
+        "Inflasi 发生 因为 terlalu banyak wang dicetak tetapi bekalan barangan 不 mencukupi di pasaran."
+      ],
+      "bm_focus_phrase": "Inflasi berlaku kerana terlalu banyak wang dicetak tetapi bekalan barangan tidak mencukupi di pasaran."
+    },
+    {
+      "source_id": "bab-3-6-u31",
+      "bm_original": "Dasar sosial Jepun dapat dilihat melalui pendidikan, sikap terhadap agama, catuan makanan, layanan terhadap penduduk dan kekejaman semasa pendudukan.",
+      "translate": "Dasar sosial Jepun dapat dilihat 通过 pendidikan, sikap 针对 agama, catuan makanan, layanan 针对 penduduk 与 kekejaman semasa pendudukan.",
+      "key_points_zh": [
+        "Dasar sosial Jepun dapat dilihat 通过 pendidikan, sikap 针对 agama, catuan makanan, layanan 针对 penduduk 与 kekejaman semasa pendudukan."
+      ],
+      "bm_focus_phrase": "Dasar sosial Jepun dapat dilihat melalui pendidikan, sikap terhadap agama, catuan makanan, layanan terhadap penduduk dan kekejaman semasa pendudukan."
+    },
+    {
+      "source_id": "bab-3-6-u32",
+      "bm_original": "Jepun menutup sekolah Inggeris dan sekolah Cina.",
+      "translate": "Jepun menutup sekolah Inggeris 与 sekolah Cina.",
+      "key_points_zh": [
+        "Jepun menutup sekolah Inggeris 与 sekolah Cina."
+      ],
+      "bm_focus_phrase": "Jepun menutup sekolah Inggeris dan sekolah Cina."
+    },
+    {
+      "source_id": "bab-3-6-u33",
+      "bm_original": "Kemudian Jepun memperkenalkan sistem pendidikan Jepun yang bertujuan:",
+      "translate": "Kemudian Jepun memperkenalkan sistem pendidikan Jepun 的 bertujuan:",
+      "key_points_zh": [
+        "Kemudian Jepun memperkenalkan sistem pendidikan Jepun 的 bertujuan:"
+      ],
+      "bm_focus_phrase": "Kemudian Jepun memperkenalkan sistem pendidikan Jepun yang bertujuan:"
+    },
+    {
+      "source_id": "bab-3-6-extra-28",
+      "bm_original": "membentuk semangat persaudaraan sejagat (Hakko Ichiu)",
+      "translate": "重点：membentuk semangat persaudaraan sejagat (Hakko Ichiu)",
+      "key_points_zh": [
+        "重点：membentuk semangat persaudaraan sejagat (Hakko Ichiu)"
+      ],
+      "bm_focus_phrase": "membentuk semangat persaudaraan sejagat (Hakko Ichiu)"
+    },
+    {
+      "source_id": "bab-3-6-extra-29",
+      "bm_original": "menanam kesetiaan kepada Jepun",
+      "translate": "menanam kesetiaan 向 Jepun",
+      "key_points_zh": [
+        "menanam kesetiaan 向 Jepun"
+      ],
+      "bm_focus_phrase": "menanam kesetiaan kepada Jepun"
+    },
+    {
+      "source_id": "bab-3-6-extra-30",
+      "bm_original": "mencapai teknologi industri",
+      "translate": "重点：mencapai teknologi industri",
+      "key_points_zh": [
+        "重点：mencapai teknologi industri"
+      ],
+      "bm_focus_phrase": "mencapai teknologi industri"
+    },
+    {
+      "source_id": "bab-3-6-extra-31",
+      "bm_original": "meningkatkan disiplin dan nilai Jepun",
+      "translate": "提升 disiplin 与 nilai Jepun",
+      "key_points_zh": [
+        "提升 disiplin 与 nilai Jepun"
+      ],
+      "bm_focus_phrase": "meningkatkan disiplin dan nilai Jepun"
+    },
+    {
+      "source_id": "bab-3-6-extra-32",
+      "bm_original": "menekankan semangat Jepun (Nippon Seishin)",
+      "translate": "重点：menekankan semangat Jepun (Nippon Seishin)",
+      "key_points_zh": [
+        "重点：menekankan semangat Jepun (Nippon Seishin)"
+      ],
+      "bm_focus_phrase": "menekankan semangat Jepun (Nippon Seishin)"
+    },
+    {
+      "source_id": "bab-3-6-extra-33",
+      "bm_original": "menghormati kebudayaan Jepun",
+      "translate": "重点：menghormati kebudayaan Jepun",
+      "key_points_zh": [
+        "重点：menghormati kebudayaan Jepun"
+      ],
+      "bm_focus_phrase": "menghormati kebudayaan Jepun"
+    },
+    {
+      "source_id": "bab-3-6-extra-34",
+      "bm_original": "menghormati Maharaja Jepun (Tenno Heika)",
+      "translate": "重点：menghormati Maharaja Jepun (Tenno Heika)",
+      "key_points_zh": [
+        "重点：menghormati Maharaja Jepun (Tenno Heika)"
+      ],
+      "bm_focus_phrase": "menghormati Maharaja Jepun (Tenno Heika)"
+    },
+    {
+      "source_id": "bab-3-6-u34",
+      "bm_original": "Ciri pendidikan Jepun:",
+      "translate": "重点：Ciri pendidikan Jepun:",
+      "key_points_zh": [
+        "重点：Ciri pendidikan Jepun:"
+      ],
+      "bm_focus_phrase": "Ciri pendidikan Jepun:"
+    },
+    {
+      "source_id": "bab-3-6-extra-35",
+      "bm_original": "bahasa Jepun (Nippon Go) dijadikan bahasa rasmi",
+      "translate": "重点：bahasa Jepun (Nippon Go) dijadikan bahasa rasmi",
+      "key_points_zh": [
+        "重点：bahasa Jepun (Nippon Go) dijadikan bahasa rasmi"
+      ],
+      "bm_focus_phrase": "bahasa Jepun (Nippon Go) dijadikan bahasa rasmi"
+    },
+    {
+      "source_id": "bab-3-6-extra-36",
+      "bm_original": "bahasa Jepun diajar secara meluas untuk dijadikan lingua franca dalam Lingkungan Sekemakmuran Asia Timur Raya",
+      "translate": "bahasa Jepun diajar secara meluas 为了 dijadikan lingua franca 在 Lingkungan Sekemakmuran Asia Timur Raya",
+      "key_points_zh": [
+        "bahasa Jepun diajar secara meluas 为了 dijadikan lingua franca 在 Lingkungan Sekemakmuran Asia Timur Raya"
+      ],
+      "bm_focus_phrase": "bahasa Jepun diajar secara meluas untuk dijadikan lingua franca dalam Lingkungan Sekemakmuran Asia Timur Raya"
+    },
+    {
+      "source_id": "bab-3-6-extra-37",
+      "bm_original": "murid menyanyikan lagu Kimigayo",
+      "translate": "重点：murid menyanyikan lagu Kimigayo",
+      "key_points_zh": [
+        "重点：murid menyanyikan lagu Kimigayo"
+      ],
+      "bm_focus_phrase": "murid menyanyikan lagu Kimigayo"
+    },
+    {
+      "source_id": "bab-3-6-extra-38",
+      "bm_original": "sekolah bermula dengan perhimpunan pagi menghadap arah negara Jepun",
+      "translate": "sekolah bermula 以 perhimpunan pagi menghadap arah negara Jepun",
+      "key_points_zh": [
+        "sekolah bermula 以 perhimpunan pagi menghadap arah negara Jepun"
+      ],
+      "bm_focus_phrase": "sekolah bermula dengan perhimpunan pagi menghadap arah negara Jepun"
+    },
+    {
+      "source_id": "bab-3-6-u35",
+      "bm_original": "Tentera Jepun menunjukkan sikap yang lebih berhati-hati dan hormat terhadap agama Islam dan adat Melayu bagi membendung kegiatan penentangan penduduk tempatan terhadap pendudukan Jepun.",
+      "translate": "Tentera Jepun menunjukkan sikap 的 更 berhati-hati 与 hormat 针对 agama Islam 与 adat Melayu bagi membendung kegiatan 反对 penduduk 本地 针对 pendudukan Jepun.",
+      "key_points_zh": [
+        "Tentera Jepun menunjukkan sikap 的 更 berhati-hati 与 hormat 针对 agama Islam 与 adat Melayu bagi membendung kegiatan 反对 penduduk 本地 针对 pendudukan Jepun."
+      ],
+      "bm_focus_phrase": "Tentera Jepun menunjukkan sikap yang lebih berhati-hati dan hormat terhadap agama Islam dan adat Melayu bagi membendung kegiatan penentangan penduduk tempatan terhadap pendudukan Jepun."
+    },
+    {
+      "source_id": "bab-3-6-extra-39",
+      "bm_original": "kelas agama dibenarkan diteruskan",
+      "translate": "重点：kelas agama dibenarkan diteruskan",
+      "key_points_zh": [
+        "重点：kelas agama dibenarkan diteruskan"
+      ],
+      "bm_focus_phrase": "kelas agama dibenarkan diteruskan"
+    },
+    {
+      "source_id": "bab-3-6-extra-40",
+      "bm_original": "Majlis Agama Negeri ditubuhkan",
+      "translate": "重点：Majlis Agama Negeri ditubuhkan",
+      "key_points_zh": [
+        "重点：Majlis Agama Negeri ditubuhkan"
+      ],
+      "bm_focus_phrase": "Majlis Agama Negeri ditubuhkan"
+    },
+    {
+      "source_id": "bab-3-6-extra-41",
+      "bm_original": "persidangan agama Islam diadakan",
+      "translate": "重点：persidangan agama Islam diadakan",
+      "key_points_zh": [
+        "重点：persidangan agama Islam diadakan"
+      ],
+      "bm_focus_phrase": "persidangan agama Islam diadakan"
+    },
+    {
+      "source_id": "bab-3-6-u36",
+      "bm_original": "Persidangan agama Islam turut diadakan di Singapura dan Kuala Kangsar .",
+      "translate": "Persidangan agama Islam turut diadakan di Singapura 与 Kuala Kangsar .",
+      "key_points_zh": [
+        "Persidangan agama Islam turut diadakan di Singapura 与 Kuala Kangsar ."
+      ],
+      "bm_focus_phrase": "Persidangan agama Islam turut diadakan di Singapura dan Kuala Kangsar ."
+    },
+    {
+      "source_id": "bab-3-6-u37",
+      "bm_original": "Pentadbiran tentera Jepun secara halus memanipulasi pegawai agama untuk tujuan propaganda Jepun.",
+      "translate": "行政 tentera Jepun secara halus memanipulasi pegawai agama 为了 目的 propaganda Jepun.",
+      "key_points_zh": [
+        "行政 tentera Jepun secara halus memanipulasi pegawai agama 为了 目的 propaganda Jepun."
+      ],
+      "bm_focus_phrase": "Pentadbiran tentera Jepun secara halus memanipulasi pegawai agama untuk tujuan propaganda Jepun."
+    },
+    {
+      "source_id": "bab-3-6-u38",
+      "bm_original": "Pegawai agama diminta menyampaikan hal yang diputuskan oleh tentera Jepun dalam kelas agama di masjid dan surau.",
+      "translate": "Pegawai agama diminta menyampaikan hal 的 diputuskan 由 tentera Jepun 在 kelas agama di masjid 与 surau.",
+      "key_points_zh": [
+        "Pegawai agama diminta menyampaikan hal 的 diputuskan 由 tentera Jepun 在 kelas agama di masjid 与 surau."
+      ],
+      "bm_focus_phrase": "Pegawai agama diminta menyampaikan hal yang diputuskan oleh tentera Jepun dalam kelas agama di masjid dan surau."
+    },
+    {
+      "source_id": "bab-3-6-u39",
+      "bm_original": "Masjid juga digunakan untuk menyampaikan titah sultan bagi menyokong dasar Jepun seperti:",
+      "translate": "Masjid 也 digunakan 为了 menyampaikan titah sultan bagi menyokong dasar Jepun seperti:",
+      "key_points_zh": [
+        "Masjid 也 digunakan 为了 menyampaikan titah sultan bagi menyokong dasar Jepun seperti:"
+      ],
+      "bm_focus_phrase": "Masjid juga digunakan untuk menyampaikan titah sultan bagi menyokong dasar Jepun seperti:"
+    },
+    {
+      "source_id": "bab-3-6-extra-42",
+      "bm_original": "menambah pengeluaran makanan",
+      "translate": "重点：menambah pengeluaran makanan",
+      "key_points_zh": [
+        "重点：menambah pengeluaran makanan"
+      ],
+      "bm_focus_phrase": "menambah pengeluaran makanan"
+    },
+    {
+      "source_id": "bab-3-6-extra-43",
+      "bm_original": "tidak menyebar khabar angin",
+      "translate": "不 menyebar khabar angin",
+      "key_points_zh": [
+        "不 menyebar khabar angin"
+      ],
+      "bm_focus_phrase": "tidak menyebar khabar angin"
+    },
+    {
+      "source_id": "bab-3-6-u40",
+      "bm_original": "Jepun memperkenalkan Ordinan Kawalan Barangan dan Bahan Penting untuk mengawal bekalan makanan.",
+      "translate": "Jepun memperkenalkan Ordinan Kawalan Barangan 与 Bahan Penting 为了 mengawal bekalan makanan.",
+      "key_points_zh": [
+        "Jepun memperkenalkan Ordinan Kawalan Barangan 与 Bahan Penting 为了 mengawal bekalan makanan."
+      ],
+      "bm_focus_phrase": "Jepun memperkenalkan Ordinan Kawalan Barangan dan Bahan Penting untuk mengawal bekalan makanan."
+    },
+    {
+      "source_id": "bab-3-6-u41",
+      "bm_original": "Makanan yang dicatu termasuk:",
+      "translate": "Makanan 的 dicatu termasuk:",
+      "key_points_zh": [
+        "Makanan 的 dicatu termasuk:"
+      ],
+      "bm_focus_phrase": "Makanan yang dicatu termasuk:"
+    },
+    {
+      "source_id": "bab-3-6-extra-44",
+      "bm_original": "beras",
+      "translate": "重点：beras",
+      "key_points_zh": [
+        "重点：beras"
+      ],
+      "bm_focus_phrase": "beras"
+    },
+    {
+      "source_id": "bab-3-6-extra-45",
+      "bm_original": "garam",
+      "translate": "重点：garam",
+      "key_points_zh": [
+        "重点：garam"
+      ],
+      "bm_focus_phrase": "garam"
+    },
+    {
+      "source_id": "bab-3-6-extra-46",
+      "bm_original": "gula",
+      "translate": "重点：gula",
+      "key_points_zh": [
+        "重点：gula"
+      ],
+      "bm_focus_phrase": "gula"
+    },
+    {
+      "source_id": "bab-3-6-u42",
+      "bm_original": "Jepun juga melancarkan kempen Tambah Lebih Banyak Makanan .",
+      "translate": "Jepun 也 melancarkan kempen Tambah Lebih Banyak Makanan .",
+      "key_points_zh": [
+        "Jepun 也 melancarkan kempen Tambah Lebih Banyak Makanan ."
+      ],
+      "bm_focus_phrase": "Jepun juga melancarkan kempen Tambah Lebih Banyak Makanan ."
+    },
+    {
+      "source_id": "bab-3-6-u43",
+      "bm_original": "Akibat kekurangan makanan, penduduk terpaksa:",
+      "translate": "重点：Akibat kekurangan makanan, penduduk terpaksa:",
+      "key_points_zh": [
+        "重点：Akibat kekurangan makanan, penduduk terpaksa:"
+      ],
+      "bm_focus_phrase": "Akibat kekurangan makanan, penduduk terpaksa:"
+    },
+    {
+      "source_id": "bab-3-6-extra-47",
+      "bm_original": "berdikari",
+      "translate": "重点：berdikari",
+      "key_points_zh": [
+        "重点：berdikari"
+      ],
+      "bm_focus_phrase": "berdikari"
+    },
+    {
+      "source_id": "bab-3-6-extra-48",
+      "bm_original": "menghasilkan makanan alternatif seperti tempe daripada biji getah",
+      "translate": "重点：menghasilkan makanan alternatif seperti tempe daripada biji getah",
+      "key_points_zh": [
+        "重点：menghasilkan makanan alternatif seperti tempe daripada biji getah"
+      ],
+      "bm_focus_phrase": "menghasilkan makanan alternatif seperti tempe daripada biji getah"
+    },
+    {
+      "source_id": "bab-3-6-u44",
+      "bm_original": "Orang Melayu dan Peribumi",
+      "translate": "Orang Melayu 与 Peribumi",
+      "key_points_zh": [
+        "Orang Melayu 与 Peribumi"
+      ],
+      "bm_focus_phrase": "Orang Melayu dan Peribumi"
+    },
+    {
+      "source_id": "bab-3-6-u45",
+      "bm_original": "Orang Melayu dan peribumi diberi layanan yang lebih baik jika bekerjasama dengan Jepun.",
+      "translate": "Orang Melayu 与 peribumi diberi layanan 的 更 baik jika bekerjasama 以 Jepun.",
+      "key_points_zh": [
+        "Orang Melayu 与 peribumi diberi layanan 的 更 baik jika bekerjasama 以 Jepun."
+      ],
+      "bm_focus_phrase": "Orang Melayu dan peribumi diberi layanan yang lebih baik jika bekerjasama dengan Jepun."
+    },
+    {
+      "source_id": "bab-3-6-u46",
+      "bm_original": "Orang India",
+      "translate": "重点：Orang India",
+      "key_points_zh": [
+        "重点：Orang India"
+      ],
+      "bm_focus_phrase": "Orang India"
+    },
+    {
+      "source_id": "bab-3-6-u47",
+      "bm_original": "Jepun membantu orang India menubuhkan Tentera Kebangsaan India .",
+      "translate": "Jepun membantu orang India 成立 Tentera Kebangsaan India .",
+      "key_points_zh": [
+        "Jepun membantu orang India 成立 Tentera Kebangsaan India ."
+      ],
+      "bm_focus_phrase": "Jepun membantu orang India menubuhkan Tentera Kebangsaan India ."
+    },
+    {
+      "source_id": "bab-3-6-u48",
+      "bm_original": "Gerakan ini dipimpin oleh Subhas Chandra Bose .",
+      "translate": "Gerakan 这 dipimpin 由 Subhas Chandra Bose .",
+      "key_points_zh": [
+        "Gerakan 这 dipimpin 由 Subhas Chandra Bose ."
+      ],
+      "bm_focus_phrase": "Gerakan ini dipimpin oleh Subhas Chandra Bose ."
+    },
+    {
+      "source_id": "bab-3-6-u49",
+      "bm_original": "Orang Cina",
+      "translate": "重点：Orang Cina",
+      "key_points_zh": [
+        "重点：Orang Cina"
+      ],
+      "bm_focus_phrase": "Orang Cina"
+    },
+    {
+      "source_id": "bab-3-6-u50",
+      "bm_original": "Orang Cina menerima layanan yang paling kejam kerana permusuhan Jepun terhadap China dalam Perang China-Jepun .",
+      "translate": "Orang Cina menerima layanan 的 paling kejam 因为 permusuhan Jepun 针对 China 在 Perang China-Jepun .",
+      "key_points_zh": [
+        "Orang Cina menerima layanan 的 paling kejam 因为 permusuhan Jepun 针对 China 在 Perang China-Jepun ."
+      ],
+      "bm_focus_phrase": "Orang Cina menerima layanan yang paling kejam kerana permusuhan Jepun terhadap China dalam Perang China-Jepun ."
+    },
+    {
+      "source_id": "bab-3-6-u51",
+      "bm_original": "Ramai orang Cina menjadi mangsa kekejaman tentera Jepun.",
+      "translate": "重点：Ramai orang Cina menjadi mangsa kekejaman tentera Jepun.",
+      "key_points_zh": [
+        "重点：Ramai orang Cina menjadi mangsa kekejaman tentera Jepun."
+      ],
+      "bm_focus_phrase": "Ramai orang Cina menjadi mangsa kekejaman tentera Jepun."
+    },
+    {
+      "source_id": "bab-3-6-u52",
+      "bm_original": "Jepun membina Landasan Kereta Api Maut dari Thailand ke Burma (Myanmar) .",
+      "translate": "重点：Jepun membina Landasan Kereta Api Maut dari Thailand ke Burma (Myanmar) .",
+      "key_points_zh": [
+        "重点：Jepun membina Landasan Kereta Api Maut dari Thailand ke Burma (Myanmar) ."
+      ],
+      "bm_focus_phrase": "Jepun membina Landasan Kereta Api Maut dari Thailand ke Burma (Myanmar) ."
+    },
+    {
+      "source_id": "bab-3-6-u53",
+      "bm_original": "Buruh paksa",
+      "translate": "重点：Buruh paksa",
+      "key_points_zh": [
+        "重点：Buruh paksa"
+      ],
+      "bm_focus_phrase": "Buruh paksa"
+    },
+    {
+      "source_id": "bab-3-6-u54",
+      "bm_original": "Pembinaan landasan ini melibatkan:",
+      "translate": "Pembinaan landasan 这 melibatkan:",
+      "key_points_zh": [
+        "Pembinaan landasan 这 melibatkan:"
+      ],
+      "bm_focus_phrase": "Pembinaan landasan ini melibatkan:"
+    },
+    {
+      "source_id": "bab-3-6-extra-49",
+      "bm_original": "200,000 buruh paksa (romusha)",
+      "translate": "重点：200,000 buruh paksa (romusha)",
+      "key_points_zh": [
+        "重点：200,000 buruh paksa (romusha)"
+      ],
+      "bm_focus_phrase": "200,000 buruh paksa (romusha)"
+    },
+    {
+      "source_id": "bab-3-6-extra-50",
+      "bm_original": "60,000 tawanan perang",
+      "translate": "重点：60,000 tawanan perang",
+      "key_points_zh": [
+        "重点：60,000 tawanan perang"
+      ],
+      "bm_focus_phrase": "60,000 tawanan perang"
+    },
+    {
+      "source_id": "bab-3-6-u55",
+      "bm_original": "Mereka dipaksa bekerja dalam keadaan:",
+      "translate": "Mereka dipaksa bekerja 在 keadaan:",
+      "key_points_zh": [
+        "Mereka dipaksa bekerja 在 keadaan:"
+      ],
+      "bm_focus_phrase": "Mereka dipaksa bekerja dalam keadaan:"
+    },
+    {
+      "source_id": "bab-3-6-extra-51",
+      "bm_original": "kerja berat",
+      "translate": "重点：kerja berat",
+      "key_points_zh": [
+        "重点：kerja berat"
+      ],
+      "bm_focus_phrase": "kerja berat"
+    },
+    {
+      "source_id": "bab-3-6-extra-52",
+      "bm_original": "kekurangan makanan",
+      "translate": "重点：kekurangan makanan",
+      "key_points_zh": [
+        "重点：kekurangan makanan"
+      ],
+      "bm_focus_phrase": "kekurangan makanan"
+    },
+    {
+      "source_id": "bab-3-6-extra-53",
+      "bm_original": "layanan yang sangat kejam",
+      "translate": "layanan 的 sangat kejam",
+      "key_points_zh": [
+        "layanan 的 sangat kejam"
+      ],
+      "bm_focus_phrase": "layanan yang sangat kejam"
+    },
+    {
+      "source_id": "bab-3-6-u56",
+      "bm_original": "Ramai yang terkorban akibat:",
+      "translate": "Ramai 的 terkorban akibat:",
+      "key_points_zh": [
+        "Ramai 的 terkorban akibat:"
+      ],
+      "bm_focus_phrase": "Ramai yang terkorban akibat:"
+    },
+    {
+      "source_id": "bab-3-6-extra-54",
+      "bm_original": "penyakit",
+      "translate": "重点：penyakit",
+      "key_points_zh": [
+        "重点：penyakit"
+      ],
+      "bm_focus_phrase": "penyakit"
+    },
+    {
+      "source_id": "bab-3-6-extra-55",
+      "bm_original": "kematian semasa kerja paksa",
+      "translate": "重点：kematian semasa kerja paksa",
+      "key_points_zh": [
+        "重点：kematian semasa kerja paksa"
+      ],
+      "bm_focus_phrase": "kematian semasa kerja paksa"
+    },
+    {
+      "source_id": "bab-3-6-u57",
+      "bm_original": "Kekejaman ini turut digambarkan dalam karya Nyawa di Hujung Pedang oleh Ahmad Murad Nasaruddin .",
+      "translate": "Kekejaman 这 turut digambarkan 在 karya Nyawa di Hujung Pedang 由 Ahmad Murad Nasaruddin .",
+      "key_points_zh": [
+        "Kekejaman 这 turut digambarkan 在 karya Nyawa di Hujung Pedang 由 Ahmad Murad Nasaruddin ."
+      ],
+      "bm_focus_phrase": "Kekejaman ini turut digambarkan dalam karya Nyawa di Hujung Pedang oleh Ahmad Murad Nasaruddin ."
+    },
+    {
+      "source_id": "bab-3-6-u58",
+      "bm_original": "Novel ini berdasarkan kisah sebenar seorang pemuda Melayu yang ditangkap dan diseksa oleh Kempeitai .",
+      "translate": "Novel 这 berdasarkan kisah sebenar seorang pemuda Melayu 的 ditangkap 与 diseksa 由 Kempeitai .",
+      "key_points_zh": [
+        "Novel 这 berdasarkan kisah sebenar seorang pemuda Melayu 的 ditangkap 与 diseksa 由 Kempeitai ."
+      ],
+      "bm_focus_phrase": "Novel ini berdasarkan kisah sebenar seorang pemuda Melayu yang ditangkap dan diseksa oleh Kempeitai ."
+    },
+    {
+      "source_id": "bab-3-6-u59",
+      "bm_original": "Dasar pendudukan Jepun di negara kita boleh difahami melalui tiga bahagian utama:",
+      "translate": "Dasar pendudukan Jepun di negara kita 可以 difahami 通过 tiga bahagian 主要:",
+      "key_points_zh": [
+        "Dasar pendudukan Jepun di negara kita 可以 difahami 通过 tiga bahagian 主要:"
+      ],
+      "bm_focus_phrase": "Dasar pendudukan Jepun di negara kita boleh difahami melalui tiga bahagian utama:"
+    },
+    {
+      "source_id": "bab-3-6-extra-56",
+      "bm_original": "dasar pentadbiran",
+      "translate": "dasar 行政",
+      "key_points_zh": [
+        "dasar 行政"
+      ],
+      "bm_focus_phrase": "dasar pentadbiran"
+    },
+    {
+      "source_id": "bab-3-6-extra-57",
+      "bm_original": "dasar ekonomi",
+      "translate": "重点：dasar ekonomi",
+      "key_points_zh": [
+        "重点：dasar ekonomi"
+      ],
+      "bm_focus_phrase": "dasar ekonomi"
+    },
+    {
+      "source_id": "bab-3-6-extra-58",
+      "bm_original": "dasar sosial",
+      "translate": "重点：dasar sosial",
+      "key_points_zh": [
+        "重点：dasar sosial"
+      ],
+      "bm_focus_phrase": "dasar sosial"
+    },
+    {
+      "source_id": "bab-3-6-u60",
+      "bm_original": "Pendudukan Jepun menyebabkan rakyat mengalami:",
+      "translate": "Pendudukan Jepun menyebabkan 人民 mengalami:",
+      "key_points_zh": [
+        "Pendudukan Jepun menyebabkan 人民 mengalami:"
+      ],
+      "bm_focus_phrase": "Pendudukan Jepun menyebabkan rakyat mengalami:"
+    },
+    {
+      "source_id": "bab-3-6-extra-59",
+      "bm_original": "kesengsaraan hidup",
+      "translate": "重点：kesengsaraan hidup",
+      "key_points_zh": [
+        "重点：kesengsaraan hidup"
+      ],
+      "bm_focus_phrase": "kesengsaraan hidup"
+    },
+    {
+      "source_id": "bab-3-6-extra-60",
+      "bm_original": "kekurangan makanan",
+      "translate": "重点：kekurangan makanan",
+      "key_points_zh": [
+        "重点：kekurangan makanan"
+      ],
+      "bm_focus_phrase": "kekurangan makanan"
+    },
+    {
+      "source_id": "bab-3-6-extra-61",
+      "bm_original": "kekejaman tentera Jepun",
+      "translate": "重点：kekejaman tentera Jepun",
+      "key_points_zh": [
+        "重点：kekejaman tentera Jepun"
+      ],
+      "bm_focus_phrase": "kekejaman tentera Jepun"
+    },
+    {
+      "source_id": "bab-3-6-extra-62",
+      "bm_original": "ujian ketahanan fizikal dan mental",
+      "translate": "ujian ketahanan fizikal 与 mental",
+      "key_points_zh": [
+        "ujian ketahanan fizikal 与 mental"
+      ],
+      "bm_focus_phrase": "ujian ketahanan fizikal dan mental"
+    },
+    {
+      "source_id": "bab-3-6-u61",
+      "bm_original": "Namun, pengalaman pahit ini turut:",
+      "translate": "Namun, pengalaman pahit 这 turut:",
+      "key_points_zh": [
+        "Namun, pengalaman pahit 这 turut:"
+      ],
+      "bm_focus_phrase": "Namun, pengalaman pahit ini turut:"
+    },
+    {
+      "source_id": "bab-3-6-extra-63",
+      "bm_original": "membangkitkan semangat juang rakyat",
+      "translate": "membangkitkan semangat juang 人民",
+      "key_points_zh": [
+        "membangkitkan semangat juang 人民"
+      ],
+      "bm_focus_phrase": "membangkitkan semangat juang rakyat"
+    },
+    {
+      "source_id": "bab-3-6-extra-64",
+      "bm_original": "menyemarakkan perkembangan nasionalisme",
+      "translate": "menyemarakkan perkembangan 民族主义",
+      "key_points_zh": [
+        "menyemarakkan perkembangan 民族主义"
+      ],
+      "bm_focus_phrase": "menyemarakkan perkembangan nasionalisme"
+    },
+    {
+      "source_id": "bab-3-6-extra-65",
+      "bm_original": "mempercepatkan gerakan ke arah kemerdekaan",
+      "translate": "mempercepatkan gerakan ke arah 独立",
+      "key_points_zh": [
+        "mempercepatkan gerakan ke arah 独立"
+      ],
+      "bm_focus_phrase": "mempercepatkan gerakan ke arah kemerdekaan"
+    },
+    {
+      "source_id": "bab-3-6-u62",
+      "bm_original": "Pendudukan Jepun membuktikan bahawa kekejaman penjajah akhirnya menimbulkan kesedaran untuk mempertahankan maruah, kebebasan dan kedaulatan negara.",
+      "translate": "Pendudukan Jepun membuktikan bahawa kekejaman penjajah akhirnya menimbulkan kesedaran 为了 mempertahankan maruah, kebebasan 与 主权 negara.",
+      "key_points_zh": [
+        "Pendudukan Jepun membuktikan bahawa kekejaman penjajah akhirnya menimbulkan kesedaran 为了 mempertahankan maruah, kebebasan 与 主权 negara."
+      ],
+      "bm_focus_phrase": "Pendudukan Jepun membuktikan bahawa kekejaman penjajah akhirnya menimbulkan kesedaran untuk mempertahankan maruah, kebebasan dan kedaulatan negara."
+    }
+  ]
+}
