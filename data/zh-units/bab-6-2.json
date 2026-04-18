@@ -406,6 +406,34 @@
         "komunis = 共产主义"
       ],
       "bm_focus_phrase": ""
+    },
+    {
+      "source_id": "bab-6-2-emoji-auto-1",
+      "bm_original": "📍 Antara negeri yang terlibat:",
+      "zh_explain": "",
+      "key_points_zh": [],
+      "bm_focus_phrase": ""
+    },
+    {
+      "source_id": "bab-6-2-emoji-auto-2",
+      "bm_original": "📌 Antaranya:",
+      "zh_explain": "",
+      "key_points_zh": [],
+      "bm_focus_phrase": ""
+    },
+    {
+      "source_id": "bab-6-2-emoji-auto-3",
+      "bm_original": "📍 Contoh penting:",
+      "zh_explain": "",
+      "key_points_zh": [],
+      "bm_focus_phrase": ""
+    },
+    {
+      "source_id": "bab-6-2-emoji-auto-4",
+      "bm_original": "💀 Pembunuhan Henry Gurney",
+      "zh_explain": "",
+      "key_points_zh": [],
+      "bm_focus_phrase": ""
     }
   ]
 }
