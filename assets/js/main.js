@@ -523,6 +523,66 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // =========================
+// SEARCH INDEX SOURCE (single source of truth)
+// =========================
+var HZ_NOTES_SEARCH_PAGES = [
+  { title: "Bab 1 · Warisan Negara Bangsa", tag: "Bab Induk", href: "bab-1.html" },
+  { title: "1.1 · Latar Belakang Negara Bangsa Sebelum Kedatangan Barat", tag: "Subtopik 1.1", href: "bab-1-1.html" },
+  { title: "1.2 · Ciri-ciri Negara Bangsa Kesultanan Melayu Melaka", tag: "Subtopik 1.2", href: "bab-1-2.html" },
+  { title: "1.3 · Keunggulan Sistem Pentadbiran dan Undang-undang", tag: "Subtopik 1.3", href: "bab-1-3.html" },
+  { title: "1.4 · Peranan Pemerintah dan Rakyat", tag: "Subtopik 1.4", href: "bab-1-4.html" },
+
+  { title: "Bab 2 · Kebangkitan Nasionalisme", tag: "Bab Induk", href: "bab-2.html" },
+  { title: "2.1 · Maksud Nasionalisme", tag: "Subtopik 2.1", href: "bab-2-1.html" },
+  { title: "2.2 · Perkembangan Idea Nasionalisme di Barat", tag: "Subtopik 2.2", href: "bab-2-2.html" },
+  { title: "2.3 · Perkembangan Nasionalisme di Asia", tag: "Subtopik 2.3", href: "bab-2-3.html" },
+  { title: "2.4 · Perkembangan Nasionalisme di Asia Tenggara", tag: "Subtopik 2.4", href: "bab-2-4.html" },
+  { title: "2.5 · Kesedaran Nasionalisme di Negara Kita", tag: "Subtopik 2.5", href: "bab-2-5.html" },
+  { title: "2.6 · Faktor Kemunculan Gerakan Nasionalisme", tag: "Subtopik 2.6", href: "bab-2-6.html" },
+  { title: "2.7 · Perkembangan Nasionalisme", tag: "Subtopik 2.7", href: "bab-2-7.html" },
+  { title: "2.8 · Kesan Perkembangan Nasionalisme", tag: "Subtopik 2.8", href: "bab-2-8.html" },
+
+  { title: "Bab 3 · Konflik Dunia dan Pendudukan Jepun di Negara Kita", tag: "Bab Induk", href: "bab-3.html" },
+  { title: "3.1 · Nasionalisme di Negara Kita Sebelum Perang Dunia", tag: "Subtopik 3.1", href: "bab-3-1.html" },
+  { title: "3.2 · Latar Belakang Perang Dunia", tag: "Subtopik 3.2", href: "bab-3-2.html" },
+  { title: "3.3 · Perang Dunia Kedua", tag: "Subtopik 3.3", href: "bab-3-3.html" },
+  { title: "3.4 · Perang Dunia Kedua di Asia Pasifik", tag: "Subtopik 3.4", href: "bab-3-4.html" },
+  { title: "3.5 · Faktor Kedatangan Jepun ke Negara Kita", tag: "Subtopik 3.5", href: "bab-3-5.html" },
+  { title: "3.6 · Dasar Pendudukan Jepun di Negara Kita", tag: "Subtopik 3.6", href: "bab-3-6.html" },
+  { title: "3.7 · Perjuangan Rakyat Menentang Pendudukan Jepun", tag: "Subtopik 3.7", href: "bab-3-7.html" },
+  { title: "3.8 · Perkembangan Gerakan Nasionalisme Tempatan dan Pendudukan Jepun", tag: "Subtopik 3.8", href: "bab-3-8.html" },
+  { title: "3.9 · Keadaan Negara Kita Selepas Kekalahan Jepun", tag: "Subtopik 3.9", href: "bab-3-9.html" },
+
+  { title: "Bab 4 · Era Peralihan Kuasa British di Negara Kita", tag: "Bab Induk", href: "bab-4.html" },
+  { title: "4.1 · British Military Administration (BMA)", tag: "Subtopik 4.1", href: "bab-4-1.html" },
+  { title: "4.2 · Gagasan Malayan Union", tag: "Subtopik 4.2", href: "bab-4-2.html" },
+  { title: "4.3 · Reaksi Penduduk Tempatan terhadap Malayan Union", tag: "Subtopik 4.3", href: "bab-4-3.html" },
+  { title: "4.4 · Penyerahan Sarawak kepada Kerajaan British", tag: "Subtopik 4.4", href: "bab-4-4.html" },
+  { title: "4.5 · Reaksi Penduduk Tempatan terhadap Penyerahan Sarawak", tag: "Subtopik 4.5", href: "bab-4-5.html" },
+  { title: "4.6 · Penyerahan Sabah kepada Kerajaan British", tag: "Subtopik 4.6", href: "bab-4-6.html" },
+  { title: "4.7 · Reaksi Penduduk Tempatan terhadap Penyerahan Sabah", tag: "Subtopik 4.7", href: "bab-4-7.html" },
+
+  { title: "Bab 5 · Persekutuan Tanah Melayu 1948", tag: "Bab Induk", href: "bab-5.html" },
+  { title: "5.1 · Latar Belakang Penubuhan Persekutuan Tanah Melayu 1948", tag: "Subtopik 5.1", href: "bab-5-1.html" },
+  { title: "5.2 · Faktor Penubuhan Persekutuan Tanah Melayu 1948", tag: "Subtopik 5.2", href: "bab-5-2.html" },
+  { title: "5.3 · Ciri-ciri Persekutuan Tanah Melayu 1948", tag: "Subtopik 5.3", href: "bab-5-3.html" },
+  { title: "5.4 · Kesan Penubuhan Persekutuan Tanah Melayu 1948", tag: "Subtopik 5.4", href: "bab-5-4.html" },
+
+  { title: "Bab 6 · Ancaman Komunis dan Perisytiharan Darurat", tag: "Bab Induk", href: "bab-6.html" },
+  { title: "6.1 · Kemasukan Pengaruh Komunis di Negara Kita", tag: "Subtopik 6.1", href: "bab-6-1.html" },
+  { title: "6.2 · Ancaman Komunis di Negara Kita", tag: "Subtopik 6.2", href: "bab-6-2.html" },
+  { title: "6.3 · Usaha Menangani Ancaman Komunis", tag: "Subtopik 6.3", href: "bab-6-3.html" },
+  { title: "6.4 · Kesan Zaman Darurat terhadap Negara Kita", tag: "Subtopik 6.4", href: "bab-6-4.html" },
+
+  { title: "Bab 7 · Usaha Ke Arah Kemerdekaan", tag: "Bab Induk", href: "bab-7.html" },
+  { title: "7.1 · Latar Belakang Idea Negara Merdeka", tag: "Subtopik 7.1", href: "bab-7-1.html" },
+  { title: "7.2 · Jawatankuasa Hubungan Antara Kaum (CLC)", tag: "Subtopik 7.2", href: "bab-7-2.html" },
+  { title: "7.3 · Sistem Ahli", tag: "Subtopik 7.3", href: "bab-7-3.html" },
+  { title: "7.4 · Sistem Pendidikan Kebangsaan", tag: "Subtopik 7.4", href: "bab-7-4.html" },
+  { title: "7.5 · Penubuhan Parti Politik", tag: "Subtopik 7.5", href: "bab-7-5.html" },
+];
+
+// =========================
 // SEARCH ENGINE — Full text fetch
 // =========================
 (function setupSearch() {
@@ -537,62 +597,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const isInNotes = window.location.pathname.includes("/notes/");
   const base = isInNotes ? "" : "notes/";
 
-  const PAGES = [
-    { title: "Bab 1 · Warisan Negara Bangsa", tag: "Bab Induk", href: "bab-1.html" },
-    { title: "1.1 · Latar Belakang Negara Bangsa Sebelum Kedatangan Barat", tag: "Subtopik 1.1", href: "bab-1-1.html" },
-    { title: "1.2 · Ciri-ciri Negara Bangsa Kesultanan Melayu Melaka", tag: "Subtopik 1.2", href: "bab-1-2.html" },
-    { title: "1.3 · Keunggulan Sistem Pentadbiran dan Undang-undang", tag: "Subtopik 1.3", href: "bab-1-3.html" },
-    { title: "1.4 · Peranan Pemerintah dan Rakyat", tag: "Subtopik 1.4", href: "bab-1-4.html" },
-
-    { title: "Bab 2 · Kebangkitan Nasionalisme", tag: "Bab Induk", href: "bab-2.html" },
-    { title: "2.1 · Maksud Nasionalisme", tag: "Subtopik 2.1", href: "bab-2-1.html" },
-    { title: "2.2 · Perkembangan Idea Nasionalisme di Barat", tag: "Subtopik 2.2", href: "bab-2-2.html" },
-    { title: "2.3 · Perkembangan Nasionalisme di Asia", tag: "Subtopik 2.3", href: "bab-2-3.html" },
-    { title: "2.4 · Perkembangan Nasionalisme di Asia Tenggara", tag: "Subtopik 2.4", href: "bab-2-4.html" },
-    { title: "2.5 · Kesedaran Nasionalisme di Negara Kita", tag: "Subtopik 2.5", href: "bab-2-5.html" },
-    { title: "2.6 · Faktor Kemunculan Gerakan Nasionalisme", tag: "Subtopik 2.6", href: "bab-2-6.html" },
-    { title: "2.7 · Perkembangan Nasionalisme", tag: "Subtopik 2.7", href: "bab-2-7.html" },
-    { title: "2.8 · Kesan Perkembangan Nasionalisme", tag: "Subtopik 2.8", href: "bab-2-8.html" },
-
-    { title: "Bab 3 · Konflik Dunia dan Pendudukan Jepun di Negara Kita", tag: "Bab Induk", href: "bab-3.html" },
-    { title: "3.1 · Nasionalisme di Negara Kita Sebelum Perang Dunia", tag: "Subtopik 3.1", href: "bab-3-1.html" },
-    { title: "3.2 · Latar Belakang Perang Dunia", tag: "Subtopik 3.2", href: "bab-3-2.html" },
-    { title: "3.3 · Perang Dunia Kedua", tag: "Subtopik 3.3", href: "bab-3-3.html" },
-    { title: "3.4 · Perang Dunia Kedua di Asia Pasifik", tag: "Subtopik 3.4", href: "bab-3-4.html" },
-    { title: "3.5 · Faktor Kedatangan Jepun ke Negara Kita", tag: "Subtopik 3.5", href: "bab-3-5.html" },
-    { title: "3.6 · Dasar Pendudukan Jepun di Negara Kita", tag: "Subtopik 3.6", href: "bab-3-6.html" },
-    { title: "3.7 · Perjuangan Rakyat Menentang Pendudukan Jepun", tag: "Subtopik 3.7", href: "bab-3-7.html" },
-    { title: "3.8 · Perkembangan Gerakan Nasionalisme Tempatan dan Pendudukan Jepun", tag: "Subtopik 3.8", href: "bab-3-8.html" },
-    { title: "3.9 · Keadaan Negara Kita Selepas Kekalahan Jepun", tag: "Subtopik 3.9", href: "bab-3-9.html" },
-
-    { title: "Bab 4 · Era Peralihan Kuasa British di Negara Kita", tag: "Bab Induk", href: "bab-4.html" },
-    { title: "4.1 · British Military Administration (BMA)", tag: "Subtopik 4.1", href: "bab-4-1.html" },
-    { title: "4.2 · Gagasan Malayan Union", tag: "Subtopik 4.2", href: "bab-4-2.html" },
-    { title: "4.3 · Reaksi Penduduk Tempatan terhadap Malayan Union", tag: "Subtopik 4.3", href: "bab-4-3.html" },
-    { title: "4.4 · Penyerahan Sarawak kepada Kerajaan British", tag: "Subtopik 4.4", href: "bab-4-4.html" },
-    { title: "4.5 · Reaksi Penduduk Tempatan terhadap Penyerahan Sarawak", tag: "Subtopik 4.5", href: "bab-4-5.html" },
-    { title: "4.6 · Penyerahan Sabah kepada Kerajaan British", tag: "Subtopik 4.6", href: "bab-4-6.html" },
-    { title: "4.7 · Reaksi Penduduk Tempatan terhadap Penyerahan Sabah", tag: "Subtopik 4.7", href: "bab-4-7.html" },
-
-    { title: "Bab 5 · Persekutuan Tanah Melayu 1948", tag: "Bab Induk", href: "bab-5.html" },
-    { title: "5.1 · Latar Belakang Penubuhan Persekutuan Tanah Melayu 1948", tag: "Subtopik 5.1", href: "bab-5-1.html" },
-    { title: "5.2 · Faktor Penubuhan Persekutuan Tanah Melayu 1948", tag: "Subtopik 5.2", href: "bab-5-2.html" },
-    { title: "5.3 · Ciri-ciri Persekutuan Tanah Melayu 1948", tag: "Subtopik 5.3", href: "bab-5-3.html" },
-    { title: "5.4 · Kesan Penubuhan Persekutuan Tanah Melayu 1948", tag: "Subtopik 5.4", href: "bab-5-4.html" },
-
-    { title: "Bab 6 · Ancaman Komunis dan Perisytiharan Darurat", tag: "Bab Induk", href: "bab-6.html" },
-    { title: "6.1 · Kemasukan Pengaruh Komunis di Negara Kita", tag: "Subtopik 6.1", href: "bab-6-1.html" },
-    { title: "6.2 · Ancaman Komunis di Negara Kita", tag: "Subtopik 6.2", href: "bab-6-2.html" },
-    { title: "6.3 · Usaha Menangani Ancaman Komunis", tag: "Subtopik 6.3", href: "bab-6-3.html" },
-    { title: "6.4 · Kesan Zaman Darurat terhadap Negara Kita", tag: "Subtopik 6.4", href: "bab-6-4.html" },
-
-    { title: "Bab 7 · Usaha Ke Arah Kemerdekaan", tag: "Bab Induk", href: "bab-7.html" },
-    { title: "7.1 · Latar Belakang Idea Negara Merdeka", tag: "Subtopik 7.1", href: "bab-7-1.html" },
-    { title: "7.2 · Jawatankuasa Hubungan Antara Kaum (CLC)", tag: "Subtopik 7.2", href: "bab-7-2.html" },
-    { title: "7.3 · Sistem Ahli", tag: "Subtopik 7.3", href: "bab-7-3.html" },
-    { title: "7.4 · Sistem Pendidikan Kebangsaan", tag: "Subtopik 7.4", href: "bab-7-4.html" },
-    { title: "7.5 · Penubuhan Parti Politik", tag: "Subtopik 7.5", href: "bab-7-5.html" },
-  ];
+  const PAGES = HZ_NOTES_SEARCH_PAGES;
 
   let INDEX = null;
   let indexBuilding = false;
@@ -1483,56 +1488,8 @@ var HZ_ICONS = (function () {
 
 // ── Global Search Overlay ─────────────────────────────────────────────────────
 (function () {
-  var PAGES = [
-    { title: 'Bab 1 · Warisan Negara Bangsa', tag: 'Bab Induk', href: 'bab-1.html' },
-    { title: '1.1 · Latar Belakang Negara Bangsa Sebelum Kedatangan Barat', tag: 'Subtopik 1.1', href: 'bab-1-1.html' },
-    { title: '1.2 · Ciri-ciri Negara Bangsa Kesultanan Melayu Melaka', tag: 'Subtopik 1.2', href: 'bab-1-2.html' },
-    { title: '1.3 · Keunggulan Sistem Pentadbiran dan Undang-undang', tag: 'Subtopik 1.3', href: 'bab-1-3.html' },
-    { title: '1.4 · Peranan Pemerintah dan Rakyat', tag: 'Subtopik 1.4', href: 'bab-1-4.html' },
-    { title: 'Bab 2 · Kebangkitan Nasionalisme', tag: 'Bab Induk', href: 'bab-2.html' },
-    { title: '2.1 · Maksud Nasionalisme', tag: 'Subtopik 2.1', href: 'bab-2-1.html' },
-    { title: '2.2 · Perkembangan Idea Nasionalisme di Barat', tag: 'Subtopik 2.2', href: 'bab-2-2.html' },
-    { title: '2.3 · Perkembangan Nasionalisme di Asia', tag: 'Subtopik 2.3', href: 'bab-2-3.html' },
-    { title: '2.4 · Perkembangan Nasionalisme di Asia Tenggara', tag: 'Subtopik 2.4', href: 'bab-2-4.html' },
-    { title: '2.5 · Kesedaran Nasionalisme di Negara Kita', tag: 'Subtopik 2.5', href: 'bab-2-5.html' },
-    { title: '2.6 · Faktor Kemunculan Gerakan Nasionalisme', tag: 'Subtopik 2.6', href: 'bab-2-6.html' },
-    { title: '2.7 · Perkembangan Nasionalisme', tag: 'Subtopik 2.7', href: 'bab-2-7.html' },
-    { title: '2.8 · Kesan Perkembangan Nasionalisme', tag: 'Subtopik 2.8', href: 'bab-2-8.html' },
-    { title: 'Bab 3 · Konflik Dunia dan Pendudukan Jepun di Negara Kita', tag: 'Bab Induk', href: 'bab-3.html' },
-    { title: '3.1 · Nasionalisme di Negara Kita Sebelum Perang Dunia', tag: 'Subtopik 3.1', href: 'bab-3-1.html' },
-    { title: '3.2 · Latar Belakang Perang Dunia', tag: 'Subtopik 3.2', href: 'bab-3-2.html' },
-    { title: '3.3 · Perang Dunia Kedua', tag: 'Subtopik 3.3', href: 'bab-3-3.html' },
-    { title: '3.4 · Perang Dunia Kedua di Asia Pasifik', tag: 'Subtopik 3.4', href: 'bab-3-4.html' },
-    { title: '3.5 · Faktor Kedatangan Jepun ke Negara Kita', tag: 'Subtopik 3.5', href: 'bab-3-5.html' },
-    { title: '3.6 · Dasar Pendudukan Jepun di Negara Kita', tag: 'Subtopik 3.6', href: 'bab-3-6.html' },
-    { title: '3.7 · Perjuangan Rakyat Menentang Pendudukan Jepun', tag: 'Subtopik 3.7', href: 'bab-3-7.html' },
-    { title: '3.8 · Perkembangan Gerakan Nasionalisme Tempatan dan Pendudukan Jepun', tag: 'Subtopik 3.8', href: 'bab-3-8.html' },
-    { title: '3.9 · Keadaan Negara Kita Selepas Kekalahan Jepun', tag: 'Subtopik 3.9', href: 'bab-3-9.html' },
-    { title: 'Bab 4 · Era Peralihan Kuasa British di Negara Kita', tag: 'Bab Induk', href: 'bab-4.html' },
-    { title: '4.1 · British Military Administration (BMA)', tag: 'Subtopik 4.1', href: 'bab-4-1.html' },
-    { title: '4.2 · Gagasan Malayan Union', tag: 'Subtopik 4.2', href: 'bab-4-2.html' },
-    { title: '4.3 · Reaksi Penduduk Tempatan terhadap Malayan Union', tag: 'Subtopik 4.3', href: 'bab-4-3.html' },
-    { title: '4.4 · Penyerahan Sarawak kepada Kerajaan British', tag: 'Subtopik 4.4', href: 'bab-4-4.html' },
-    { title: '4.5 · Reaksi Penduduk Tempatan terhadap Penyerahan Sarawak', tag: 'Subtopik 4.5', href: 'bab-4-5.html' },
-    { title: '4.6 · Penyerahan Sabah kepada Kerajaan British', tag: 'Subtopik 4.6', href: 'bab-4-6.html' },
-    { title: '4.7 · Reaksi Penduduk Tempatan terhadap Penyerahan Sabah', tag: 'Subtopik 4.7', href: 'bab-4-7.html' },
-    { title: 'Bab 5 · Persekutuan Tanah Melayu 1948', tag: 'Bab Induk', href: 'bab-5.html' },
-    { title: '5.1 · Latar Belakang Penubuhan Persekutuan Tanah Melayu 1948', tag: 'Subtopik 5.1', href: 'bab-5-1.html' },
-    { title: '5.2 · Faktor Penubuhan Persekutuan Tanah Melayu 1948', tag: 'Subtopik 5.2', href: 'bab-5-2.html' },
-    { title: '5.3 · Ciri-ciri Persekutuan Tanah Melayu 1948', tag: 'Subtopik 5.3', href: 'bab-5-3.html' },
-    { title: '5.4 · Kesan Penubuhan Persekutuan Tanah Melayu 1948', tag: 'Subtopik 5.4', href: 'bab-5-4.html' },
-    { title: 'Bab 6 · Ancaman Komunis dan Perisytiharan Darurat', tag: 'Bab Induk', href: 'bab-6.html' },
-    { title: '6.1 · Kemasukan Pengaruh Komunis di Negara Kita', tag: 'Subtopik 6.1', href: 'bab-6-1.html' },
-    { title: '6.2 · Ancaman Komunis di Negara Kita', tag: 'Subtopik 6.2', href: 'bab-6-2.html' },
-    { title: '6.3 · Usaha Menangani Ancaman Komunis', tag: 'Subtopik 6.3', href: 'bab-6-3.html' },
-    { title: '6.4 · Kesan Zaman Darurat terhadap Negara Kita', tag: 'Subtopik 6.4', href: 'bab-6-4.html' },
-    { title: 'Bab 7 · Usaha Ke Arah Kemerdekaan', tag: 'Bab Induk', href: 'bab-7.html' },
-    { title: '7.1 · Latar Belakang Idea Negara Merdeka', tag: 'Subtopik 7.1', href: 'bab-7-1.html' },
-    { title: '7.2 · Jawatankuasa Hubungan Antara Kaum (CLC)', tag: 'Subtopik 7.2', href: 'bab-7-2.html' },
-    { title: '7.3 · Sistem Ahli', tag: 'Subtopik 7.3', href: 'bab-7-3.html' },
-    { title: '7.4 · Sistem Pendidikan Kebangsaan', tag: 'Subtopik 7.4', href: 'bab-7-4.html' },
-    { title: '7.5 · Penubuhan Parti Politik', tag: 'Subtopik 7.5', href: 'bab-7-5.html' }
-  ];
+  var PAGES = HZ_NOTES_SEARCH_PAGES;
+
 
   var overlay, searchInput, resultsEl, emptyMsgEl;
   var INDEX = null, indexBuilding = false;
