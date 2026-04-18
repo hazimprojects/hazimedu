@@ -24,7 +24,6 @@
   var chipInteractionsBound = false;
   var sentenceTranslationCache = Object.create(null);
   var sentenceTranslationInFlight = Object.create(null);
-  var sentenceTranslationMap = null;
 
   var OVERLY_GENERAL_TERMS = new Set([
     "bahasa", "politik", "agama", "kampung", "rakyat",
@@ -64,11 +63,6 @@
     var prefix = parts.length > 1 ? "../" : "";
     if (trimmed.indexOf("data/") === 0) return prefix + trimmed;
     return prefix + "data/zh-units/" + trimmed;
-  }
-
-  function resolveSentenceTranslationPath() {
-    var parts = window.location.pathname.split("/").filter(Boolean);
-    return parts.length > 1 ? "../data/zh-chip-sentences.json" : "data/zh-chip-sentences.json";
   }
 
   function getMergedGlossary() {
@@ -226,31 +220,7 @@
       })
       .then(function (mapped) {
         comprehensionMap = mapped;
-        seedSentenceTranslationCacheFromComprehension(comprehensionMap);
         return comprehensionMap;
-      });
-  }
-
-  function loadSentenceTranslationMap() {
-    if (sentenceTranslationMap !== null) return Promise.resolve(sentenceTranslationMap);
-    return fetch(resolveSentenceTranslationPath())
-      .then(function (res) { return res.ok ? res.json() : {}; })
-      .then(function (data) {
-        sentenceTranslationMap = data && typeof data === "object" ? data : {};
-        Object.keys(sentenceTranslationMap).forEach(function (sourceText) {
-          var translated = sentenceTranslationMap[sourceText];
-          if (typeof translated !== "string") return;
-          var cleanSource = sourceText.trim();
-          var cleanTranslated = translated.trim();
-          if (!cleanSource || !cleanTranslated) return;
-          sentenceTranslationCache[cleanSource] = cleanTranslated;
-          sentenceTranslationCache[normalize(cleanSource)] = cleanTranslated;
-        });
-        return sentenceTranslationMap;
-      })
-      .catch(function () {
-        sentenceTranslationMap = {};
-        return sentenceTranslationMap;
       });
   }
 
@@ -269,22 +239,6 @@
     return null;
   }
 
-  function seedSentenceTranslationCacheFromComprehension(mapped) {
-    if (!mapped || typeof mapped !== "object") return;
-    Object.keys(mapped).forEach(function (sourceId) {
-      var unit = mapped[sourceId];
-      if (!unit || typeof unit !== "object") return;
-
-      var bmOriginal = typeof unit.bm_original === "string" ? unit.bm_original.trim() : "";
-      if (!bmOriginal) return;
-
-      var manualTranslate = typeof unit.translate === "string" ? normalizeZhExplain(unit.translate, getMergedGlossary()) : "";
-      if (!manualTranslate) return;
-
-      sentenceTranslationCache[bmOriginal] = manualTranslate;
-      sentenceTranslationCache[normalize(bmOriginal)] = manualTranslate;
-    });
-  }
 
   function parseGoogleTranslateSentence(payload) {
     if (!Array.isArray(payload) || !Array.isArray(payload[0])) return "";
@@ -1047,7 +1001,7 @@
 
     if (active) {
       document.documentElement.setAttribute("data-lang-mode", "zh");
-      Promise.all([loadGlossary(), loadComprehensionData(), loadSentenceTranslationMap()]).then(function () {
+      Promise.all([loadGlossary(), loadComprehensionData()]).then(function () {
         if (requestId !== applyRequestId) return;
         if (!isZhMode()) return;
         var merged = getMergedGlossary();
@@ -1113,7 +1067,7 @@
     }
 
     if (isZhMode()) {
-      Promise.all([loadGlossary(), loadComprehensionData(), loadSentenceTranslationMap()]).then(function () {
+      Promise.all([loadGlossary(), loadComprehensionData()]).then(function () {
         var merged = getMergedGlossary();
         var comprehension = getComprehensionMap();
         setupChipFlips(merged, comprehension);
