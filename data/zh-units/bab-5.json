@@ -1,1 +1,53 @@
-{"units": []}
+{
+  "meta": {
+    "source_file": "notes/bab-5.html",
+    "rollout": "gelombang-1-manual-revision"
+  },
+  "units": [
+    {
+      "source_id": "bab-5-synopsis-1",
+      "bm_original": "Persekutuan Tanah Melayu 1948 diperkenalkan oleh British untuk menggantikan Malayan Union .",
+      "translate": "Persekutuan Tanah Melayu 1948 diperkenalkan 由 British 为了 menggantikan Malayan Union .",
+      "key_points_zh": [
+        "Persekutuan Tanah Melayu 1948 diperkenalkan 由 British 为了 menggantikan Malayan Union ."
+      ],
+      "bm_focus_phrase": "Persekutuan Tanah Melayu 1948 diperkenalkan oleh British untuk menggantikan Malayan Union ."
+    },
+    {
+      "source_id": "bab-5-synopsis-2",
+      "bm_original": "Terdapat pelbagai faktor yang membawa kepada penubuhan Persekutuan Tanah Melayu 1948 .",
+      "translate": "Terdapat pelbagai 因素 的 membawa 向 成立 Persekutuan Tanah Melayu 1948 .",
+      "key_points_zh": [
+        "Terdapat pelbagai 因素 的 membawa 向 成立 Persekutuan Tanah Melayu 1948 ."
+      ],
+      "bm_focus_phrase": "Terdapat pelbagai faktor yang membawa kepada penubuhan Persekutuan Tanah Melayu 1948 ."
+    },
+    {
+      "source_id": "bab-5-synopsis-3",
+      "bm_original": "Ciri-ciri Persekutuan Tanah Melayu 1948 berbeza daripada Malayan Union dan lebih diterima oleh penduduk tempatan.",
+      "translate": "Ciri-ciri Persekutuan Tanah Melayu 1948 berbeza daripada Malayan Union 与 更 diterima 由 penduduk 本地.",
+      "key_points_zh": [
+        "Ciri-ciri Persekutuan Tanah Melayu 1948 berbeza daripada Malayan Union 与 更 diterima 由 penduduk 本地."
+      ],
+      "bm_focus_phrase": "Ciri-ciri Persekutuan Tanah Melayu 1948 berbeza daripada Malayan Union dan lebih diterima oleh penduduk tempatan."
+    },
+    {
+      "source_id": "bab-5-synopsis-4",
+      "bm_original": "Pembentukan Perjanjian Persekutuan Tanah Melayu 1948 menggambarkan toleransi penduduk negara ini dalam mencari penyelesaian politik.",
+      "translate": "Pembentukan Perjanjian Persekutuan Tanah Melayu 1948 menggambarkan toleransi penduduk negara 这 在 mencari penyelesaian 政治.",
+      "key_points_zh": [
+        "Pembentukan Perjanjian Persekutuan Tanah Melayu 1948 menggambarkan toleransi penduduk negara 这 在 mencari penyelesaian 政治."
+      ],
+      "bm_focus_phrase": "Pembentukan Perjanjian Persekutuan Tanah Melayu 1948 menggambarkan toleransi penduduk negara ini dalam mencari penyelesaian politik."
+    },
+    {
+      "source_id": "bab-5-synopsis-5",
+      "bm_original": "Perkembangan ini menjadi satu langkah penting yang menuntut ke arah kemerdekaan .",
+      "translate": "Perkembangan 这 menjadi satu 步骤 penting 的 menuntut ke arah 独立 .",
+      "key_points_zh": [
+        "Perkembangan 这 menjadi satu 步骤 penting 的 menuntut ke arah 独立 ."
+      ],
+      "bm_focus_phrase": "Perkembangan ini menjadi satu langkah penting yang menuntut ke arah kemerdekaan ."
+    }
+  ]
+}

@@ -649,7 +649,64 @@
     return false;
   }
 
+  function looksMalayHeavy(text) {
+    if (typeof text !== "string") return false;
+    var lower = text.toLowerCase();
+    var malayMarkers = [
+      " ialah ", " yang ", " dan ", " dengan ", " kepada ", " oleh ",
+      " untuk ", " dalam ", " kerana ", " selepas ", " terhadap ", " rakyat ",
+      " kerajaan ", " pentadbiran ", " penentangan "
+    ];
+    var hits = 0;
+    for (var i = 0; i < malayMarkers.length; i++) {
+      if (lower.indexOf(malayMarkers[i]) !== -1) hits += 1;
+    }
+    return hits >= 3;
+  }
+
+  function isUsableCuratedZhText(text, gl, bmSource) {
+    if (typeof text !== "string") return false;
+    var raw = text.trim();
+    if (!raw) return false;
+    if (isTemplateLikeZhExplain(raw)) return false;
+
+    var zhCount = (raw.match(/[\u4e00-\u9fff]/g) || []).length;
+    if (zhCount < 4) return false;
+    if (looksMalayHeavy(raw)) return false;
+
+    // Ensure protected entities (if any) are retained for historical names/acronyms.
+    if (typeof bmSource === "string" && bmSource.trim()) {
+      var entities = extractProtectedEntities(bmSource, gl);
+      var placeholders = Array.isArray(entities.placeholders) ? entities.placeholders : [];
+      var map = entities.placeholderMap || {};
+      for (var i = 0; i < placeholders.length; i++) {
+        var original = map[placeholders[i]];
+        if (typeof original !== "string" || !original.trim()) continue;
+        if (original.length < 3) continue;
+        if (/[A-Z]{2,}/.test(original) || /\b(?:Raja|Sultan|Tun|Dato|Tunku|Tuanku)\b/.test(original)) {
+          if (raw.indexOf(original) === -1) return false;
+        }
+      }
+    }
+
+    return true;
+  }
+
   function buildChipBackContent(chip, sourceText, gl, comprehension) {
+    var chipId = chip && chip.getAttribute ? (chip.getAttribute("data-zh-unit-id") || "").trim() : "";
+    var unit = chipId && comprehension && comprehension[chipId] ? comprehension[chipId] : null;
+    var bmSource = unit && typeof unit.bm_original === "string" && unit.bm_original.trim()
+      ? unit.bm_original.trim()
+      : sourceText;
+    var curated = unit && typeof unit.translate === "string" ? normalizeZhExplain(unit.translate, gl) : "";
+
+    if (isUsableCuratedZhText(curated, gl, bmSource)) {
+      return {
+        modeLabel: "Unit ZH",
+        text: curated,
+        fallbackLabel: ""
+      };
+    }
     return buildExplainFallback(sourceText, gl);
   }
 
@@ -1021,6 +1078,17 @@
     } else if (typeof rawText === "string" && rawText.trim()) {
       sentenceSource = rawText.trim();
     }
+
+    var curated = unit && typeof unit.translate === "string"
+      ? normalizeZhExplain(unit.translate, gl)
+      : "";
+    if (isUsableCuratedZhText(curated, gl, sentenceSource)) {
+      return Promise.resolve({
+        text: curated,
+        warning: ""
+      });
+    }
+
     var entitiesPayload = extractProtectedEntities(sentenceSource, gl);
     var sourceForTranslate = entitiesPayload.protectedText || sentenceSource;
 

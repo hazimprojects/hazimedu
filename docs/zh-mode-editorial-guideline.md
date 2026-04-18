@@ -102,6 +102,12 @@ Selain semakan unit, glosari juga wajib lulus lint:
 python3 scripts/check-zh-glossary.py
 ```
 
+Semakan pematuhan editorial (nama khas, campuran BM berlebihan, kepadatan aksara Cina) juga wajib lulus:
+
+```bash
+python3 scripts/check-zh-guideline-compliance.py
+```
+
 Semakan padanan coverage ID antara `notes/*.html` dan unit ZH juga wajib lulus:
 
 ```bash
@@ -122,6 +128,7 @@ Sebelum release kandungan ZH, jalankan set semakan berikut mengikut turutan:
 ```bash
 python3 scripts/check-zh-units.py && \
 python3 scripts/check-zh-glossary.py && \
+python3 scripts/check-zh-guideline-compliance.py && \
 python3 scripts/check-zh-coverage.py
 ```
 

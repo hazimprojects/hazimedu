@@ -1,1 +1,611 @@
-{"units": []}
+{
+  "meta": {
+    "source_file": "notes/bab-4-7.html",
+    "rollout": "gelombang-1-manual-revision"
+  },
+  "units": [
+    {
+      "source_id": "bab-4-7-u07",
+      "bm_original": "Penyerahan Sabah kepada British pada 15 Julai 1946 tidak mendapat penentangan besar daripada penduduk tempatan.",
+      "translate": "Penyerahan Sabah 向 British 于 15 Julai 1946 不 获得 反对 besar daripada penduduk 本地.",
+      "key_points_zh": [
+        "Penyerahan Sabah 向 British 于 15 Julai 1946 不 获得 反对 besar daripada penduduk 本地."
+      ],
+      "bm_focus_phrase": "Penyerahan Sabah kepada British pada 15 Julai 1946 tidak mendapat penentangan besar daripada penduduk tempatan."
+    },
+    {
+      "source_id": "bab-4-7-u08",
+      "bm_original": "Hal ini berlaku kerana British berjaya melemahkan gerakan berpersatuan dan mengehadkan peluang penduduk tempatan dalam pentadbiran.",
+      "translate": "Hal 这 发生 因为 British 成功 melemahkan gerakan berpersatuan 与 mengehadkan peluang penduduk 本地 在 行政.",
+      "key_points_zh": [
+        "Hal 这 发生 因为 British 成功 melemahkan gerakan berpersatuan 与 mengehadkan peluang penduduk 本地 在 行政."
+      ],
+      "bm_focus_phrase": "Hal ini berlaku kerana British berjaya melemahkan gerakan berpersatuan dan mengehadkan peluang penduduk tempatan dalam pentadbiran."
+    },
+    {
+      "source_id": "bab-4-7-u09",
+      "bm_original": "Pada masa yang sama, ramai penduduk melihat penyerahan itu sebagai peluang untuk memajukan kehidupan dan membangunkan semula Sabah selepas perang.",
+      "translate": "Pada masa 的 sama, ramai penduduk melihat penyerahan 那 作为 peluang 为了 memajukan kehidupan 与 membangunkan semula Sabah 在…之后 perang.",
+      "key_points_zh": [
+        "Pada masa 的 sama, ramai penduduk melihat penyerahan 那 作为 peluang 为了 memajukan kehidupan 与 membangunkan semula Sabah 在…之后 perang."
+      ],
+      "bm_focus_phrase": "Pada masa yang sama, ramai penduduk melihat penyerahan itu sebagai peluang untuk memajukan kehidupan dan membangunkan semula Sabah selepas perang."
+    },
+    {
+      "source_id": "bab-4-7-u10",
+      "bm_original": "Walaupun kebangkitan nasionalisme di Sabah berkembang lebih perlahan, pengalaman di bawah British tetap menanam kesedaran politik dalam kalangan penduduk tempatan.",
+      "translate": "Walaupun kebangkitan 民族主义 di Sabah berkembang 更 perlahan, pengalaman di bawah British tetap menanam kesedaran 政治 在 kalangan penduduk 本地.",
+      "key_points_zh": [
+        "Walaupun kebangkitan 民族主义 di Sabah berkembang 更 perlahan, pengalaman di bawah British tetap menanam kesedaran 政治 在 kalangan penduduk 本地."
+      ],
+      "bm_focus_phrase": "Walaupun kebangkitan nasionalisme di Sabah berkembang lebih perlahan, pengalaman di bawah British tetap menanam kesedaran politik dalam kalangan penduduk tempatan."
+    },
+    {
+      "source_id": "bab-4-7-u01",
+      "bm_original": "Penyerahan Sabah kepada British pada 15 Julai 1946 tidak mendapat penentangan besar daripada penduduk tempatan kerana British berjaya melemahkan kegiatan berpersatuan, mengehadkan peluang penduduk dalam pentadbiran, dan pada masa yang sama ramai penduduk melihat penyerahan itu sebagai peluang untuk memajukan kehidupan mereka.",
+      "translate": "Penyerahan Sabah 向 British 于 15 Julai 1946 不 获得 反对 besar daripada penduduk 本地 因为 British 成功 melemahkan kegiatan berpersatuan, mengehadkan peluang penduduk 在 行政, 与 于 masa 的 sama ramai penduduk melihat penyerahan 那 作为 peluang 为了 memajukan kehidupan mereka.",
+      "key_points_zh": [
+        "Penyerahan Sabah 向 British 于 15 Julai 1946 不 获得 反对 besar daripada penduduk 本地 因为 British 成功 melemahkan kegiatan berpersatuan, mengehadkan peluang penduduk 在 行政, 与 于 masa 的 sama ramai penduduk melihat penyerahan 那 作为 peluang 为了 memajukan kehidupan mereka."
+      ],
+      "bm_focus_phrase": "Penyerahan Sabah kepada British pada 15 Julai 1946 tidak mendapat penentangan besar daripada penduduk tempatan kerana British berjaya melemahkan kegiatan berpersatuan, mengehadkan peluang penduduk dalam pentadbiran, dan pada masa yang sama ramai penduduk melihat penyerahan itu sebagai peluang untuk memajukan kehidupan mereka."
+    },
+    {
+      "source_id": "bab-4-7-extra-1",
+      "bm_original": "Dasar British yang menekan gerakan nasionalisme",
+      "translate": "Dasar British 的 menekan gerakan 民族主义",
+      "key_points_zh": [
+        "Dasar British 的 menekan gerakan 民族主义"
+      ],
+      "bm_focus_phrase": "Dasar British yang menekan gerakan nasionalisme"
+    },
+    {
+      "source_id": "bab-4-7-extra-2",
+      "bm_original": "Keadaan masyarakat yang berbilang etnik",
+      "translate": "Keadaan 社会 的 berbilang etnik",
+      "key_points_zh": [
+        "Keadaan 社会 的 berbilang etnik"
+      ],
+      "bm_focus_phrase": "Keadaan masyarakat yang berbilang etnik"
+    },
+    {
+      "source_id": "bab-4-7-extra-3",
+      "bm_original": "Kepentingan sosioekonomi penduduk tempatan",
+      "translate": "Kepentingan sosioekonomi penduduk 本地",
+      "key_points_zh": [
+        "Kepentingan sosioekonomi penduduk 本地"
+      ],
+      "bm_focus_phrase": "Kepentingan sosioekonomi penduduk tempatan"
+    },
+    {
+      "source_id": "bab-4-7-extra-4",
+      "bm_original": "Bahasa",
+      "translate": "重点：Bahasa",
+      "key_points_zh": [
+        "重点：Bahasa"
+      ],
+      "bm_focus_phrase": "Bahasa"
+    },
+    {
+      "source_id": "bab-4-7-extra-5",
+      "bm_original": "Budaya",
+      "translate": "重点：Budaya",
+      "key_points_zh": [
+        "重点：Budaya"
+      ],
+      "bm_focus_phrase": "Budaya"
+    },
+    {
+      "source_id": "bab-4-7-extra-6",
+      "bm_original": "Sistem kepercayaan",
+      "translate": "重点：Sistem kepercayaan",
+      "key_points_zh": [
+        "重点：Sistem kepercayaan"
+      ],
+      "bm_focus_phrase": "Sistem kepercayaan"
+    },
+    {
+      "source_id": "bab-4-7-extra-7",
+      "bm_original": "Petempatan",
+      "translate": "重点：Petempatan",
+      "key_points_zh": [
+        "重点：Petempatan"
+      ],
+      "bm_focus_phrase": "Petempatan"
+    },
+    {
+      "source_id": "bab-4-7-extra-8",
+      "bm_original": "Kegiatan ekonomi",
+      "translate": "重点：Kegiatan ekonomi",
+      "key_points_zh": [
+        "重点：Kegiatan ekonomi"
+      ],
+      "bm_focus_phrase": "Kegiatan ekonomi"
+    },
+    {
+      "source_id": "bab-4-7-u02",
+      "bm_original": "Keadaan ini menyukarkan pemimpin tempatan untuk menyatukan semua etnik dalam satu pertubuhan yang kuat.",
+      "translate": "Keadaan 这 menyukarkan 领袖 本地 为了 menyatukan semua etnik 在 satu pertubuhan 的 kuat.",
+      "key_points_zh": [
+        "Keadaan 这 menyukarkan 领袖 本地 为了 menyatukan semua etnik 在 satu pertubuhan 的 kuat."
+      ],
+      "bm_focus_phrase": "Keadaan ini menyukarkan pemimpin tempatan untuk menyatukan semua etnik dalam satu pertubuhan yang kuat."
+    },
+    {
+      "source_id": "bab-4-7-extra-9",
+      "bm_original": "Persaudaraan Sahabat Pena Sabah (PASPAS)",
+      "translate": "重点：Persaudaraan Sahabat Pena Sabah (PASPAS)",
+      "key_points_zh": [
+        "重点：Persaudaraan Sahabat Pena Sabah (PASPAS)"
+      ],
+      "bm_focus_phrase": "Persaudaraan Sahabat Pena Sabah (PASPAS)"
+    },
+    {
+      "source_id": "bab-4-7-extra-10",
+      "bm_original": "Persatuan Kebangsaan Melayu di Sabah",
+      "translate": "协会 Kebangsaan Melayu di Sabah",
+      "key_points_zh": [
+        "协会 Kebangsaan Melayu di Sabah"
+      ],
+      "bm_focus_phrase": "Persatuan Kebangsaan Melayu di Sabah"
+    },
+    {
+      "source_id": "bab-4-7-extra-11",
+      "bm_original": "Barisan Pemuda Sabah (BARIP)",
+      "translate": "重点：Barisan Pemuda Sabah (BARIP)",
+      "key_points_zh": [
+        "重点：Barisan Pemuda Sabah (BARIP)"
+      ],
+      "bm_focus_phrase": "Barisan Pemuda Sabah (BARIP)"
+    },
+    {
+      "source_id": "bab-4-7-extra-12",
+      "bm_original": "Parti Kebangsaan Melayu Labuan (PKML)",
+      "translate": "重点：Parti Kebangsaan Melayu Labuan (PKML)",
+      "key_points_zh": [
+        "重点：Parti Kebangsaan Melayu Labuan (PKML)"
+      ],
+      "bm_focus_phrase": "Parti Kebangsaan Melayu Labuan (PKML)"
+    },
+    {
+      "source_id": "bab-4-7-extra-13",
+      "bm_original": "Tengku Noordin",
+      "translate": "重点：Tengku Noordin",
+      "key_points_zh": [
+        "重点：Tengku Noordin"
+      ],
+      "bm_focus_phrase": "Tengku Noordin"
+    },
+    {
+      "source_id": "bab-4-7-extra-14",
+      "bm_original": "Zakaria Gunn",
+      "translate": "重点：Zakaria Gunn",
+      "key_points_zh": [
+        "重点：Zakaria Gunn"
+      ],
+      "bm_focus_phrase": "Zakaria Gunn"
+    },
+    {
+      "source_id": "bab-4-7-extra-15",
+      "bm_original": "Abu Bakar K. Ahmad",
+      "translate": "重点：Abu Bakar K. Ahmad",
+      "key_points_zh": [
+        "重点：Abu Bakar K. Ahmad"
+      ],
+      "bm_focus_phrase": "Abu Bakar K. Ahmad"
+    },
+    {
+      "source_id": "bab-4-7-extra-16",
+      "bm_original": "Mandur Mohammad Syarif",
+      "translate": "重点：Mandur Mohammad Syarif",
+      "key_points_zh": [
+        "重点：Mandur Mohammad Syarif"
+      ],
+      "bm_focus_phrase": "Mandur Mohammad Syarif"
+    },
+    {
+      "source_id": "bab-4-7-extra-17",
+      "bm_original": "Imam Suhaili Yaakub",
+      "translate": "重点：Imam Suhaili Yaakub",
+      "key_points_zh": [
+        "重点：Imam Suhaili Yaakub"
+      ],
+      "bm_focus_phrase": "Imam Suhaili Yaakub"
+    },
+    {
+      "source_id": "bab-4-7-extra-18",
+      "bm_original": "Seruji Yaakub",
+      "translate": "重点：Seruji Yaakub",
+      "key_points_zh": [
+        "重点：Seruji Yaakub"
+      ],
+      "bm_focus_phrase": "Seruji Yaakub"
+    },
+    {
+      "source_id": "bab-4-7-extra-19",
+      "bm_original": "Zulkifli Apong Abang Abdul Hadi",
+      "translate": "重点：Zulkifli Apong Abang Abdul Hadi",
+      "key_points_zh": [
+        "重点：Zulkifli Apong Abang Abdul Hadi"
+      ],
+      "bm_focus_phrase": "Zulkifli Apong Abang Abdul Hadi"
+    },
+    {
+      "source_id": "bab-4-7-extra-20",
+      "bm_original": "Memperbaik keadaan ekonomi bumiputera",
+      "translate": "重点：Memperbaik keadaan ekonomi bumiputera",
+      "key_points_zh": [
+        "重点：Memperbaik keadaan ekonomi bumiputera"
+      ],
+      "bm_focus_phrase": "Memperbaik keadaan ekonomi bumiputera"
+    },
+    {
+      "source_id": "bab-4-7-extra-21",
+      "bm_original": "Meningkatkan kedudukan politik masyarakat tempatan",
+      "translate": "Meningkatkan kedudukan 政治 社会 本地",
+      "key_points_zh": [
+        "Meningkatkan kedudukan 政治 社会 本地"
+      ],
+      "bm_focus_phrase": "Meningkatkan kedudukan politik masyarakat tempatan"
+    },
+    {
+      "source_id": "bab-4-7-extra-22",
+      "bm_original": "Membangkitkan kesedaran politik",
+      "translate": "Membangkitkan kesedaran 政治",
+      "key_points_zh": [
+        "Membangkitkan kesedaran 政治"
+      ],
+      "bm_focus_phrase": "Membangkitkan kesedaran politik"
+    },
+    {
+      "source_id": "bab-4-7-extra-23",
+      "bm_original": "Menyedarkan masyarakat tentang hak mereka",
+      "translate": "Menyedarkan 社会 tentang 权利 mereka",
+      "key_points_zh": [
+        "Menyedarkan 社会 tentang 权利 mereka"
+      ],
+      "bm_focus_phrase": "Menyedarkan masyarakat tentang hak mereka"
+    },
+    {
+      "source_id": "bab-4-7-extra-24",
+      "bm_original": "Meniup semangat nasionalisme dalam kalangan penduduk Sabah",
+      "translate": "Meniup semangat 民族主义 在 kalangan penduduk Sabah",
+      "key_points_zh": [
+        "Meniup semangat 民族主义 在 kalangan penduduk Sabah"
+      ],
+      "bm_focus_phrase": "Meniup semangat nasionalisme dalam kalangan penduduk Sabah"
+    },
+    {
+      "source_id": "bab-4-7-extra-25",
+      "bm_original": "Menawarkan jawatan kerajaan",
+      "translate": "Menawarkan jawatan 政府",
+      "key_points_zh": [
+        "Menawarkan jawatan 政府"
+      ],
+      "bm_focus_phrase": "Menawarkan jawatan kerajaan"
+    },
+    {
+      "source_id": "bab-4-7-extra-26",
+      "bm_original": "Memberikan kenaikan pangkat",
+      "translate": "重点：Memberikan kenaikan pangkat",
+      "key_points_zh": [
+        "重点：Memberikan kenaikan pangkat"
+      ],
+      "bm_focus_phrase": "Memberikan kenaikan pangkat"
+    },
+    {
+      "source_id": "bab-4-7-extra-27",
+      "bm_original": "Memindahkan pemimpin aktif ke tempat lain",
+      "translate": "Memindahkan 领袖 aktif ke tempat lain",
+      "key_points_zh": [
+        "Memindahkan 领袖 aktif ke tempat lain"
+      ],
+      "bm_focus_phrase": "Memindahkan pemimpin aktif ke tempat lain"
+    },
+    {
+      "source_id": "bab-4-7-extra-28",
+      "bm_original": "Kegiatan berpersatuan menjadi lemah",
+      "translate": "重点：Kegiatan berpersatuan menjadi lemah",
+      "key_points_zh": [
+        "重点：Kegiatan berpersatuan menjadi lemah"
+      ],
+      "bm_focus_phrase": "Kegiatan berpersatuan menjadi lemah"
+    },
+    {
+      "source_id": "bab-4-7-extra-29",
+      "bm_original": "Pertubuhan mengalami masalah kewangan",
+      "translate": "重点：Pertubuhan mengalami masalah kewangan",
+      "key_points_zh": [
+        "重点：Pertubuhan mengalami masalah kewangan"
+      ],
+      "bm_focus_phrase": "Pertubuhan mengalami masalah kewangan"
+    },
+    {
+      "source_id": "bab-4-7-extra-30",
+      "bm_original": "Kekurangan pemimpin yang berkebolehan",
+      "translate": "Kekurangan 领袖 的 berkebolehan",
+      "key_points_zh": [
+        "Kekurangan 领袖 的 berkebolehan"
+      ],
+      "bm_focus_phrase": "Kekurangan pemimpin yang berkebolehan"
+    },
+    {
+      "source_id": "bab-4-7-extra-31",
+      "bm_original": "Pengiran Muhd Yusof Jamil Umar → dihantar berkursus ke SITC",
+      "translate": "重点：Pengiran Muhd Yusof Jamil Umar → dihantar berkursus ke SITC",
+      "key_points_zh": [
+        "重点：Pengiran Muhd Yusof Jamil Umar → dihantar berkursus ke SITC"
+      ],
+      "bm_focus_phrase": "Pengiran Muhd Yusof Jamil Umar → dihantar berkursus ke SITC"
+    },
+    {
+      "source_id": "bab-4-7-extra-32",
+      "bm_original": "H.M. Salleh → ditawarkan bekerja dengan kerajaan",
+      "translate": "H.M. Salleh → ditawarkan bekerja 以 政府",
+      "key_points_zh": [
+        "H.M. Salleh → ditawarkan bekerja 以 政府"
+      ],
+      "bm_focus_phrase": "H.M. Salleh → ditawarkan bekerja dengan kerajaan"
+    },
+    {
+      "source_id": "bab-4-7-extra-33",
+      "bm_original": "Mandur Syarif → pulang ke Indonesia",
+      "translate": "重点：Mandur Syarif → pulang ke Indonesia",
+      "key_points_zh": [
+        "重点：Mandur Syarif → pulang ke Indonesia"
+      ],
+      "bm_focus_phrase": "Mandur Syarif → pulang ke Indonesia"
+    },
+    {
+      "source_id": "bab-4-7-extra-34",
+      "bm_original": "Imam Suhaili Yaakub → berpindah ke Pulau Labuan",
+      "translate": "重点：Imam Suhaili Yaakub → berpindah ke Pulau Labuan",
+      "key_points_zh": [
+        "重点：Imam Suhaili Yaakub → berpindah ke Pulau Labuan"
+      ],
+      "bm_focus_phrase": "Imam Suhaili Yaakub → berpindah ke Pulau Labuan"
+    },
+    {
+      "source_id": "bab-4-7-extra-35",
+      "bm_original": "Seruji Yaakub → menyertai Khairat Jumaat Muslimin (KJM)",
+      "translate": "重点：Seruji Yaakub → menyertai Khairat Jumaat Muslimin (KJM)",
+      "key_points_zh": [
+        "重点：Seruji Yaakub → menyertai Khairat Jumaat Muslimin (KJM)"
+      ],
+      "bm_focus_phrase": "Seruji Yaakub → menyertai Khairat Jumaat Muslimin (KJM)"
+    },
+    {
+      "source_id": "bab-4-7-extra-36",
+      "bm_original": "Tengku Noordin → dipindahkan ke Jesselton pada September 1946",
+      "translate": "Tengku Noordin → dipindahkan ke Jesselton 于 September 1946",
+      "key_points_zh": [
+        "Tengku Noordin → dipindahkan ke Jesselton 于 September 1946"
+      ],
+      "bm_focus_phrase": "Tengku Noordin → dipindahkan ke Jesselton pada September 1946"
+    },
+    {
+      "source_id": "bab-4-7-extra-37",
+      "bm_original": "Tengku Noordin → kemudian ditawarkan bekerja di Treasury Jesselton sebelum pulang ke Tanah Melayu",
+      "translate": "重点：Tengku Noordin → kemudian ditawarkan bekerja di Treasury Jesselton sebelum pulang ke Tanah Melayu",
+      "key_points_zh": [
+        "重点：Tengku Noordin → kemudian ditawarkan bekerja di Treasury Jesselton sebelum pulang ke Tanah Melayu"
+      ],
+      "bm_focus_phrase": "Tengku Noordin → kemudian ditawarkan bekerja di Treasury Jesselton sebelum pulang ke Tanah Melayu"
+    },
+    {
+      "source_id": "bab-4-7-extra-38",
+      "bm_original": "Zakaria Gunn → ditukarkan ke Jesselton",
+      "translate": "重点：Zakaria Gunn → ditukarkan ke Jesselton",
+      "key_points_zh": [
+        "重点：Zakaria Gunn → ditukarkan ke Jesselton"
+      ],
+      "bm_focus_phrase": "Zakaria Gunn → ditukarkan ke Jesselton"
+    },
+    {
+      "source_id": "bab-4-7-extra-39",
+      "bm_original": "Apong Kerahu → ditukarkan dari Tawau ke Sandakan",
+      "translate": "重点：Apong Kerahu → ditukarkan dari Tawau ke Sandakan",
+      "key_points_zh": [
+        "重点：Apong Kerahu → ditukarkan dari Tawau ke Sandakan"
+      ],
+      "bm_focus_phrase": "Apong Kerahu → ditukarkan dari Tawau ke Sandakan"
+    },
+    {
+      "source_id": "bab-4-7-u03",
+      "bm_original": "Tindakan British ini berjaya melemahkan pengaruh pemimpin tempatan secara beransur-ansur.",
+      "translate": "Tindakan British 这 成功 melemahkan pengaruh 领袖 本地 secara beransur-ansur.",
+      "key_points_zh": [
+        "Tindakan British 这 成功 melemahkan pengaruh 领袖 本地 secara beransur-ansur."
+      ],
+      "bm_focus_phrase": "Tindakan British ini berjaya melemahkan pengaruh pemimpin tempatan secara beransur-ansur."
+    },
+    {
+      "source_id": "bab-4-7-extra-40",
+      "bm_original": "Kurang pengalaman dalam pentadbiran moden",
+      "translate": "Kurang pengalaman 在 行政 moden",
+      "key_points_zh": [
+        "Kurang pengalaman 在 行政 moden"
+      ],
+      "bm_focus_phrase": "Kurang pengalaman dalam pentadbiran moden"
+    },
+    {
+      "source_id": "bab-4-7-extra-41",
+      "bm_original": "Kurang pendedahan kepada sistem birokrasi Barat",
+      "translate": "Kurang pendedahan 向 sistem birokrasi Barat",
+      "key_points_zh": [
+        "Kurang pendedahan 向 sistem birokrasi Barat"
+      ],
+      "bm_focus_phrase": "Kurang pendedahan kepada sistem birokrasi Barat"
+    },
+    {
+      "source_id": "bab-4-7-extra-42",
+      "bm_original": "Kurang berpeluang memimpin negeri sendiri",
+      "translate": "Kurang berpeluang memimpin 州 sendiri",
+      "key_points_zh": [
+        "Kurang berpeluang memimpin 州 sendiri"
+      ],
+      "bm_focus_phrase": "Kurang berpeluang memimpin negeri sendiri"
+    },
+    {
+      "source_id": "bab-4-7-u04",
+      "bm_original": "Keadaan ini menyebabkan gerakan kebangsaan di Sabah berkembang dengan lebih perlahan.",
+      "translate": "Keadaan 这 menyebabkan gerakan kebangsaan di Sabah berkembang 以 更 perlahan.",
+      "key_points_zh": [
+        "Keadaan 这 menyebabkan gerakan kebangsaan di Sabah berkembang 以 更 perlahan."
+      ],
+      "bm_focus_phrase": "Keadaan ini menyebabkan gerakan kebangsaan di Sabah berkembang dengan lebih perlahan."
+    },
+    {
+      "source_id": "bab-4-7-extra-43",
+      "bm_original": "Membuka ruang dalam pentadbiran",
+      "translate": "Membuka ruang 在 行政",
+      "key_points_zh": [
+        "Membuka ruang 在 行政"
+      ],
+      "bm_focus_phrase": "Membuka ruang dalam pentadbiran"
+    },
+    {
+      "source_id": "bab-4-7-extra-44",
+      "bm_original": "Memajukan bidang perniagaan",
+      "translate": "重点：Memajukan bidang perniagaan",
+      "key_points_zh": [
+        "重点：Memajukan bidang perniagaan"
+      ],
+      "bm_focus_phrase": "Memajukan bidang perniagaan"
+    },
+    {
+      "source_id": "bab-4-7-extra-45",
+      "bm_original": "Meluaskan jaringan perdagangan",
+      "translate": "重点：Meluaskan jaringan perdagangan",
+      "key_points_zh": [
+        "重点：Meluaskan jaringan perdagangan"
+      ],
+      "bm_focus_phrase": "Meluaskan jaringan perdagangan"
+    },
+    {
+      "source_id": "bab-4-7-extra-46",
+      "bm_original": "Membangunkan semula Sabah selepas perang",
+      "translate": "Membangunkan semula Sabah 在…之后 perang",
+      "key_points_zh": [
+        "Membangunkan semula Sabah 在…之后 perang"
+      ],
+      "bm_focus_phrase": "Membangunkan semula Sabah selepas perang"
+    },
+    {
+      "source_id": "bab-4-7-extra-47",
+      "bm_original": "Tidak melibatkan diri dalam gerakan menentang penyerahan Sabah",
+      "translate": "Tidak melibatkan diri 在 gerakan 反对 penyerahan Sabah",
+      "key_points_zh": [
+        "Tidak melibatkan diri 在 gerakan 反对 penyerahan Sabah"
+      ],
+      "bm_focus_phrase": "Tidak melibatkan diri dalam gerakan menentang penyerahan Sabah"
+    },
+    {
+      "source_id": "bab-4-7-extra-48",
+      "bm_original": "Memilih untuk bekerjasama dengan pentadbiran British",
+      "translate": "Memilih 为了 bekerjasama 以 行政 British",
+      "key_points_zh": [
+        "Memilih 为了 bekerjasama 以 行政 British"
+      ],
+      "bm_focus_phrase": "Memilih untuk bekerjasama dengan pentadbiran British"
+    },
+    {
+      "source_id": "bab-4-7-u05",
+      "bm_original": "Reaksi ini menunjukkan bahawa pertimbangan ekonomi dan kehidupan harian sangat mempengaruhi sikap masyarakat tempatan ketika itu.",
+      "translate": "Reaksi 这 menunjukkan bahawa pertimbangan ekonomi 与 kehidupan harian sangat mempengaruhi sikap 社会 本地 ketika 那.",
+      "key_points_zh": [
+        "Reaksi 这 menunjukkan bahawa pertimbangan ekonomi 与 kehidupan harian sangat mempengaruhi sikap 社会 本地 ketika 那."
+      ],
+      "bm_focus_phrase": "Reaksi ini menunjukkan bahawa pertimbangan ekonomi dan kehidupan harian sangat mempengaruhi sikap masyarakat tempatan ketika itu."
+    },
+    {
+      "source_id": "bab-4-7-extra-49",
+      "bm_original": "British berjaya menekan dan melemahkan gerakan nasionalisme",
+      "translate": "British 成功 menekan 与 melemahkan gerakan 民族主义",
+      "key_points_zh": [
+        "British 成功 menekan 与 melemahkan gerakan 民族主义"
+      ],
+      "bm_focus_phrase": "British berjaya menekan dan melemahkan gerakan nasionalisme"
+    },
+    {
+      "source_id": "bab-4-7-extra-50",
+      "bm_original": "Peluang penduduk tempatan dalam pentadbiran amat terhad",
+      "translate": "Peluang penduduk 本地 在 行政 amat terhad",
+      "key_points_zh": [
+        "Peluang penduduk 本地 在 行政 amat terhad"
+      ],
+      "bm_focus_phrase": "Peluang penduduk tempatan dalam pentadbiran amat terhad"
+    },
+    {
+      "source_id": "bab-4-7-extra-51",
+      "bm_original": "Ramai penduduk melihat penyerahan itu sebagai peluang untuk membaiki kehidupan",
+      "translate": "Ramai penduduk melihat penyerahan 那 作为 peluang 为了 membaiki kehidupan",
+      "key_points_zh": [
+        "Ramai penduduk melihat penyerahan 那 作为 peluang 为了 membaiki kehidupan"
+      ],
+      "bm_focus_phrase": "Ramai penduduk melihat penyerahan itu sebagai peluang untuk membaiki kehidupan"
+    },
+    {
+      "source_id": "bab-4-7-u06",
+      "bm_original": "Namun begitu, pengalaman di bawah pemerintahan British tetap menanam kesedaran politik dalam kalangan penduduk tempatan.",
+      "translate": "Namun begitu, pengalaman di bawah pemerintahan British tetap menanam kesedaran 政治 在 kalangan penduduk 本地.",
+      "key_points_zh": [
+        "Namun begitu, pengalaman di bawah pemerintahan British tetap menanam kesedaran 政治 在 kalangan penduduk 本地."
+      ],
+      "bm_focus_phrase": "Namun begitu, pengalaman di bawah pemerintahan British tetap menanam kesedaran politik dalam kalangan penduduk tempatan."
+    },
+    {
+      "source_id": "bab-4-7-u11",
+      "bm_original": "Dasar British selepas Perang Dunia Kedua di Tanah Melayu , Sarawak dan Sabah telah mencetuskan reaksi yang berbeza dalam kalangan penduduk tempatan.",
+      "translate": "Dasar British 在…之后 第二次世界大战 di Tanah Melayu , Sarawak 与 Sabah 已经 mencetuskan reaksi 的 berbeza 在 kalangan penduduk 本地.",
+      "key_points_zh": [
+        "Dasar British 在…之后 第二次世界大战 di Tanah Melayu , Sarawak 与 Sabah 已经 mencetuskan reaksi 的 berbeza 在 kalangan penduduk 本地."
+      ],
+      "bm_focus_phrase": "Dasar British selepas Perang Dunia Kedua di Tanah Melayu , Sarawak dan Sabah telah mencetuskan reaksi yang berbeza dalam kalangan penduduk tempatan."
+    },
+    {
+      "source_id": "bab-4-7-u12",
+      "bm_original": "Di Tanah Melayu, orang Melayu bangkit menentang Malayan Union secara besar-besaran hingga gagasan itu gagal dilaksanakan.",
+      "translate": "Di Tanah Melayu, orang Melayu bangkit 反对 Malayan Union secara besar-besaran hingga gagasan 那 失败 dilaksanakan.",
+      "key_points_zh": [
+        "Di Tanah Melayu, orang Melayu bangkit 反对 Malayan Union secara besar-besaran hingga gagasan 那 失败 dilaksanakan."
+      ],
+      "bm_focus_phrase": "Di Tanah Melayu, orang Melayu bangkit menentang Malayan Union secara besar-besaran hingga gagasan itu gagal dilaksanakan."
+    },
+    {
+      "source_id": "bab-4-7-u13",
+      "bm_original": "Di Sarawak, penyerahan kepada British mencetuskan gerakan antipenyerahan yang kuat walaupun akhirnya tidak berjaya.",
+      "translate": "Di Sarawak, penyerahan 向 British mencetuskan gerakan antipenyerahan 的 kuat walaupun akhirnya 不 成功.",
+      "key_points_zh": [
+        "Di Sarawak, penyerahan 向 British mencetuskan gerakan antipenyerahan 的 kuat walaupun akhirnya 不 成功."
+      ],
+      "bm_focus_phrase": "Di Sarawak, penyerahan kepada British mencetuskan gerakan antipenyerahan yang kuat walaupun akhirnya tidak berjaya."
+    },
+    {
+      "source_id": "bab-4-7-u14",
+      "bm_original": "Di Sabah, penyerahan kepada British tidak mendapat tentangan terbuka yang besar kerana British berjaya melemahkan gerakan berpersatuan dan ramai penduduk lebih menumpukan kepentingan sosioekonomi.",
+      "translate": "Di Sabah, penyerahan 向 British 不 获得 tentangan terbuka 的 besar 因为 British 成功 melemahkan gerakan berpersatuan 与 ramai penduduk 更 menumpukan kepentingan sosioekonomi.",
+      "key_points_zh": [
+        "Di Sabah, penyerahan 向 British 不 获得 tentangan terbuka 的 besar 因为 British 成功 melemahkan gerakan berpersatuan 与 ramai penduduk 更 menumpukan kepentingan sosioekonomi."
+      ],
+      "bm_focus_phrase": "Di Sabah, penyerahan kepada British tidak mendapat tentangan terbuka yang besar kerana British berjaya melemahkan gerakan berpersatuan dan ramai penduduk lebih menumpukan kepentingan sosioekonomi."
+    },
+    {
+      "source_id": "bab-4-7-u15",
+      "bm_original": "Walaupun reaksi di ketiga-tiga wilayah berbeza, dasar British selepas perang telah menyemarakkan kebangkitan nasionalisme dan meningkatkan kesedaran rakyat untuk membebaskan tanah air daripada penjajahan.",
+      "translate": "Walaupun reaksi di ketiga-tiga wilayah berbeza, dasar British 在…之后 perang 已经 menyemarakkan kebangkitan 民族主义 与 提升 kesedaran 人民 为了 membebaskan tanah air daripada penjajahan.",
+      "key_points_zh": [
+        "Walaupun reaksi di ketiga-tiga wilayah berbeza, dasar British 在…之后 perang 已经 menyemarakkan kebangkitan 民族主义 与 提升 kesedaran 人民 为了 membebaskan tanah air daripada penjajahan."
+      ],
+      "bm_focus_phrase": "Walaupun reaksi di ketiga-tiga wilayah berbeza, dasar British selepas perang telah menyemarakkan kebangkitan nasionalisme dan meningkatkan kesedaran rakyat untuk membebaskan tanah air daripada penjajahan."
+    },
+    {
+      "source_id": "bab-4-7-u16",
+      "bm_original": "Perkembangan ini menjadi asas penting kepada perjuangan ke arah kemerdekaan negara pada peringkat seterusnya.",
+      "translate": "Perkembangan 这 menjadi asas penting 向 斗争 ke arah 独立 negara 于 peringkat seterusnya.",
+      "key_points_zh": [
+        "Perkembangan 这 menjadi asas penting 向 斗争 ke arah 独立 negara 于 peringkat seterusnya."
+      ],
+      "bm_focus_phrase": "Perkembangan ini menjadi asas penting kepada perjuangan ke arah kemerdekaan negara pada peringkat seterusnya."
+    }
+  ]
+}

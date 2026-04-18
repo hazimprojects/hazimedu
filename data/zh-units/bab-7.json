@@ -1,1 +1,44 @@
-{"units": []}
+{
+  "meta": {
+    "source_file": "notes/bab-7.html",
+    "rollout": "gelombang-1-manual-revision"
+  },
+  "units": [
+    {
+      "source_id": "bab-7-synopsis-1",
+      "bm_original": "Kesedaran politik selepas Perang Dunia Kedua mencetuskan aspirasi rakyat untuk mencapai kemerdekaan .",
+      "translate": "Kesedaran 政治 在…之后 第二次世界大战 mencetuskan aspirasi 人民 为了 mencapai 独立 .",
+      "key_points_zh": [
+        "Kesedaran 政治 在…之后 第二次世界大战 mencetuskan aspirasi 人民 为了 mencapai 独立 ."
+      ],
+      "bm_focus_phrase": "Kesedaran politik selepas Perang Dunia Kedua mencetuskan aspirasi rakyat untuk mencapai kemerdekaan ."
+    },
+    {
+      "source_id": "bab-7-synopsis-2",
+      "bm_original": "Idea negara merdeka dicetuskan oleh pelbagai golongan untuk membentuk negara yang berdaulat .",
+      "translate": "Idea negara merdeka dicetuskan 由 pelbagai golongan 为了 membentuk negara 的 berdaulat .",
+      "key_points_zh": [
+        "Idea negara merdeka dicetuskan 由 pelbagai golongan 为了 membentuk negara 的 berdaulat ."
+      ],
+      "bm_focus_phrase": "Idea negara merdeka dicetuskan oleh pelbagai golongan untuk membentuk negara yang berdaulat ."
+    },
+    {
+      "source_id": "bab-7-synopsis-3",
+      "bm_original": "Usaha mencapai kemerdekaan dilakukan bagi memenuhi gesaan British supaya perpaduan rakyat berbilang kaum dapat diwujudkan sebagai prasyarat untuk merdeka.",
+      "translate": "Usaha mencapai 独立 dilakukan bagi memenuhi gesaan British supaya perpaduan 人民 berbilang kaum dapat diwujudkan 作为 prasyarat 为了 merdeka.",
+      "key_points_zh": [
+        "Usaha mencapai 独立 dilakukan bagi memenuhi gesaan British supaya perpaduan 人民 berbilang kaum dapat diwujudkan 作为 prasyarat 为了 merdeka."
+      ],
+      "bm_focus_phrase": "Usaha mencapai kemerdekaan dilakukan bagi memenuhi gesaan British supaya perpaduan rakyat berbilang kaum dapat diwujudkan sebagai prasyarat untuk merdeka."
+    },
+    {
+      "source_id": "bab-7-synopsis-4",
+      "bm_original": "Oleh sebab itu, penubuhan Jawatankuasa Hubungan Antara Kaum (CLC) , pembentukan Sistem Ahli dan sistem pendidikan kebangsaan serta kerjasama parti politik dilakukan sebagai usaha ke arah kemerdekaan.",
+      "translate": "Oleh sebab 那, 成立 Jawatankuasa Hubungan Antara Kaum (CLC) , pembentukan Sistem Ahli 与 sistem pendidikan kebangsaan 以及 kerjasama parti 政治 dilakukan 作为 usaha ke arah 独立.",
+      "key_points_zh": [
+        "Oleh sebab 那, 成立 Jawatankuasa Hubungan Antara Kaum (CLC) , pembentukan Sistem Ahli 与 sistem pendidikan kebangsaan 以及 kerjasama parti 政治 dilakukan 作为 usaha ke arah 独立."
+      ],
+      "bm_focus_phrase": "Oleh sebab itu, penubuhan Jawatankuasa Hubungan Antara Kaum (CLC) , pembentukan Sistem Ahli dan sistem pendidikan kebangsaan serta kerjasama parti politik dilakukan sebagai usaha ke arah kemerdekaan."
+    }
+  ]
+}

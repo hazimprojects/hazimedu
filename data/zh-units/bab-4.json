@@ -1,1 +1,53 @@
-{"units": []}
+{
+  "meta": {
+    "source_file": "notes/bab-4.html",
+    "rollout": "gelombang-1-manual-revision"
+  },
+  "units": [
+    {
+      "source_id": "bab-4-synopsis-1",
+      "bm_original": "British Military Administration (BMA) diperkenalkan di negara kita selepas tamatnya Perang Dunia Kedua .",
+      "translate": "British Military Administration (BMA) diperkenalkan di negara kita 在…之后 tamatnya 第二次世界大战 .",
+      "key_points_zh": [
+        "British Military Administration (BMA) diperkenalkan di negara kita 在…之后 tamatnya 第二次世界大战 ."
+      ],
+      "bm_focus_phrase": "British Military Administration (BMA) diperkenalkan di negara kita selepas tamatnya Perang Dunia Kedua ."
+    },
+    {
+      "source_id": "bab-4-synopsis-2",
+      "bm_original": "Selepas itu, British melaksanakan Malayan Union di Tanah Melayu .",
+      "translate": "Selepas 那, British melaksanakan Malayan Union di Tanah Melayu .",
+      "key_points_zh": [
+        "Selepas 那, British melaksanakan Malayan Union di Tanah Melayu ."
+      ],
+      "bm_focus_phrase": "Selepas itu, British melaksanakan Malayan Union di Tanah Melayu ."
+    },
+    {
+      "source_id": "bab-4-synopsis-3",
+      "bm_original": "Pelaksanaan Malayan Union mencetuskan bantahan besar-besaran daripada penduduk tempatan hingga British menggantikannya dengan Persekutuan Tanah Melayu 1948 .",
+      "translate": "Pelaksanaan Malayan Union mencetuskan 抗议 besar-besaran daripada penduduk 本地 hingga British menggantikannya 以 Persekutuan Tanah Melayu 1948 .",
+      "key_points_zh": [
+        "Pelaksanaan Malayan Union mencetuskan 抗议 besar-besaran daripada penduduk 本地 hingga British menggantikannya 以 Persekutuan Tanah Melayu 1948 ."
+      ],
+      "bm_focus_phrase": "Pelaksanaan Malayan Union mencetuskan bantahan besar-besaran daripada penduduk tempatan hingga British menggantikannya dengan Persekutuan Tanah Melayu 1948 ."
+    },
+    {
+      "source_id": "bab-4-synopsis-4",
+      "bm_original": "Di Sarawak , tindakan Vyner Brooke menyerahkan negeri itu kepada British mencetuskan reaksi menyokong dan menentang, namun majoriti penduduk tempatan menentangnya.",
+      "translate": "Di Sarawak , tindakan Vyner Brooke menyerahkan 州 那 向 British mencetuskan reaksi menyokong 与 反对, namun majoriti penduduk 本地 menentangnya.",
+      "key_points_zh": [
+        "Di Sarawak , tindakan Vyner Brooke menyerahkan 州 那 向 British mencetuskan reaksi menyokong 与 反对, namun majoriti penduduk 本地 menentangnya."
+      ],
+      "bm_focus_phrase": "Di Sarawak , tindakan Vyner Brooke menyerahkan negeri itu kepada British mencetuskan reaksi menyokong dan menentang, namun majoriti penduduk tempatan menentangnya."
+    },
+    {
+      "source_id": "bab-4-synopsis-5",
+      "bm_original": "Di Sabah , British pula berjaya mengambil alih negeri itu daripada Syarikat Borneo Utara British (SBUB) tanpa penentangan yang besar.",
+      "translate": "Di Sabah , British pula 成功 mengambil alih 州 那 daripada Syarikat Borneo Utara British (SBUB) tanpa 反对 的 besar.",
+      "key_points_zh": [
+        "Di Sabah , British pula 成功 mengambil alih 州 那 daripada Syarikat Borneo Utara British (SBUB) tanpa 反对 的 besar."
+      ],
+      "bm_focus_phrase": "Di Sabah , British pula berjaya mengambil alih negeri itu daripada Syarikat Borneo Utara British (SBUB) tanpa penentangan yang besar."
+    }
+  ]
+}
