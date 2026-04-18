@@ -278,11 +278,11 @@
       var bmOriginal = typeof unit.bm_original === "string" ? unit.bm_original.trim() : "";
       if (!bmOriginal) return;
 
-      var zhExplain = typeof unit.zh_explain === "string" ? normalizeZhExplain(unit.zh_explain, getMergedGlossary()) : "";
-      if (!zhExplain) return;
+      var manualTranslate = typeof unit.translate === "string" ? normalizeZhExplain(unit.translate, getMergedGlossary()) : "";
+      if (!manualTranslate) return;
 
-      sentenceTranslationCache[bmOriginal] = zhExplain;
-      sentenceTranslationCache[normalize(bmOriginal)] = zhExplain;
+      sentenceTranslationCache[bmOriginal] = manualTranslate;
+      sentenceTranslationCache[normalize(bmOriginal)] = manualTranslate;
     });
   }
 
@@ -493,6 +493,19 @@
     return raw;
   }
 
+  function isTemplateLikeZhExplain(text) {
+    if (typeof text !== "string") return true;
+    var raw = text.trim();
+    if (!raw) return true;
+    if (/重点词|要点说明|术语说明|条目说明|此句是本节重要结论|本句说明本节核心内容/.test(raw)) {
+      return true;
+    }
+    if (/^[a-z][a-z\s'-]*（[^）]+）(?:；[a-z][a-z\s'-]*（[^）]+）)*。?$/i.test(raw)) {
+      return true;
+    }
+    return false;
+  }
+
   function buildChipBackContent(chip, sourceText, gl, comprehension) {
     var hasSentenceClass = chip.classList.contains("paper-chip-sentence");
     var defaultMode = hasSentenceClass ? ZH_MODE_EXPLAIN : ZH_MODE_GLOSSARY;
@@ -502,10 +515,11 @@
     var looksLikeLongSentence = isSentenceLikeChip(sourceText) && sourceText.length >= 36;
 
     if (mode === ZH_MODE_EXPLAIN) {
-      if (unit && typeof unit.zh_explain === "string" && unit.zh_explain.trim()) {
+      if (unit && typeof unit.translate === "string" && unit.translate.trim()) {
+        var normalizedExplain = normalizeZhExplain(unit.translate.trim(), gl);
         return {
           modeLabel: "句意解析",
-          text: normalizeZhExplain(unit.zh_explain.trim(), gl),
+          text: normalizedExplain,
           fallbackLabel: ""
         };
       }
@@ -516,12 +530,13 @@
       if (
         looksLikeLongSentence &&
         unit &&
-        typeof unit.zh_explain === "string" &&
-        unit.zh_explain.trim()
+        typeof unit.translate === "string" &&
+        unit.translate.trim()
       ) {
+        var normalizedGlossaryExplain = normalizeZhExplain(unit.translate.trim(), gl);
         return {
           modeLabel: "句意解析",
-          text: normalizeZhExplain(unit.zh_explain.trim(), gl),
+          text: normalizedGlossaryExplain,
           fallbackLabel: ""
         };
       }
@@ -897,10 +912,6 @@
   // ── Orphan Text Annotation ───────────────────────────────
 
   function buildPointExplainText(rawText, unit, gl) {
-    if (unit && typeof unit.zh_explain === "string" && unit.zh_explain.trim()) {
-      return Promise.resolve(normalizeZhExplain(unit.zh_explain.trim(), gl));
-    }
-
     var sentenceSource = "";
     if (unit && typeof unit.bm_original === "string" && unit.bm_original.trim()) {
       sentenceSource = unit.bm_original.trim();
@@ -908,10 +919,11 @@
       sentenceSource = rawText.trim();
     }
 
-    return fetchSentenceTranslation(sentenceSource).then(function (sentenceTranslation) {
-      if (sentenceTranslation) return sentenceTranslation;
-      return "";
-    });
+    if (unit && typeof unit.translate === "string" && unit.translate.trim()) {
+      var normalizedExplain = normalizeZhExplain(unit.translate.trim(), gl);
+      return Promise.resolve(normalizedExplain);
+    }
+    return Promise.resolve("");
   }
 
   function annotateOrphanText(gl, comprehension) {
