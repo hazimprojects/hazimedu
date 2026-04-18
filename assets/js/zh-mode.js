@@ -381,17 +381,15 @@
     return { modeLabel: "词汇注释", pairs: pairs, text: textStr, fallbackLabel: "" };
   }
 
-  function buildExplainFallback(unit) {
-    if (!unit || typeof unit !== "object") return null;
-    var focusPhrase = typeof unit.bm_focus_phrase === "string" ? unit.bm_focus_phrase.trim() : "";
-    var summaryParts = ["句意解析尚未提供"];
-    if (focusPhrase) {
-      summaryParts.push("BM重点摘要：" + focusPhrase);
-    }
+  function buildExplainFallback(sourceText) {
+    var textForTranslate = typeof sourceText === "string" ? sourceText.trim() : "";
+    if (!textForTranslate) return null;
     return {
       modeLabel: "句意解析",
-      text: summaryParts.join(" · "),
-      fallbackLabel: focusPhrase ? "仅提供BM重点摘要" : ""
+      text: "正在生成整句翻译…",
+      fallbackLabel: "",
+      autoTranslate: true,
+      autoTranslateSource: textForTranslate
     };
   }
 
@@ -460,7 +458,7 @@
           fallbackLabel: ""
         };
       }
-      return buildExplainFallback(unit);
+      return buildExplainFallback(sourceText);
     }
 
     if (mode === ZH_MODE_GLOSSARY) {
@@ -617,6 +615,14 @@
           '<span class="zh-chip-primary">' + chip.__zhOriginalHTML + '</span>' +
           translationHtml +
         '</span>';
+
+      if (backContent.autoTranslate && backContent.autoTranslateSource) {
+        fetchSentenceTranslation(backContent.autoTranslateSource).then(function (translated) {
+          var explainNode = chip.querySelector(".zh-chip-explain-text");
+          if (!explainNode) return;
+          explainNode.textContent = translated && translated.trim() ? translated.trim() : "暂无中文整句翻译。";
+        });
+      }
     });
   }
 
