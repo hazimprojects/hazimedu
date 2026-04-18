@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 regen-zh-units.py
-Re-generates zh_explain, key_points_zh, and bm_focus_phrase for every
+Re-generates translate, key_points_zh, and bm_focus_phrase for every
 auto-generated unit (source_id ending in -u\d+) in data/zh-units/bab-*.json,
 using the improved templates from gen-zh-units.py.
 
@@ -76,7 +76,7 @@ def regen_unit(unit: dict) -> dict:
         kp = []
     return {
         **unit,
-        'zh_explain':      explain,
+        'translate':       explain,
         'key_points_zh':   kp,
         'bm_focus_phrase': '',
     }

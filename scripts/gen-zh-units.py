@@ -82,7 +82,7 @@ def build_unit(stem: str, idx: int, text: str, vb: list) -> dict:
     return {
         'source_id':       sid,
         'bm_original':     text[:300],
-        'zh_explain':      explain,
+        'translate':       explain,
         'key_points_zh':   kp,
         'bm_focus_phrase': '',
     }
