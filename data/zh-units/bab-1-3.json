@@ -2,101 +2,822 @@
   "meta": {
     "source_file": "notes/bab-1-3.html",
     "rollout": "gelombang-1-clean-manual",
-    "notes": "Fully manual Chinese translation. Only essential proper nouns retained."
+    "notes": "Fully manual Chinese translation for Bab 1.3. Matched against actual data-zh-unit-id in HTML. Only critical proper nouns are retained in BM."
   },
   "units": [
     {
-      "source_id": "bab-1-3-chip-1",
-      "bm_original": "Kesultanan Johor-Riau meneruskan ciri-ciri negara bangsa Kesultanan Melayu Melaka.",
-      "translate": "Kesultanan Johor-Riau 延续了 Kesultanan Melayu Melaka 的国家体系特征。"
+      "source_id": "bab-1-3-u48",
+      "bm_original": "Kesultanan Melayu Melaka membuktikan keunggulannya melalui sistem pentadbiran yang tersusun.",
+      "translate": "Kesultanan Melayu Melaka 通过有序的行政制度展现了它的卓越。"
     },
     {
-      "source_id": "bab-1-3-chip-2",
-      "bm_original": "Kesultanan ini berjaya mengekalkan kedaulatan walaupun menghadapi pelbagai cabaran.",
-      "translate": "尽管面临各种挑战，该王朝仍成功维持其主权。"
+      "source_id": "bab-1-3-u49",
+      "bm_original": "Keunggulan turut terserlah melalui undang-undang yang teratur dan sistematik.",
+      "translate": "这种卓越也体现在完善而系统化的法律制度上。"
     },
     {
-      "source_id": "bab-1-3-chip-3",
-      "bm_original": "Ciri-ciri negara bangsa terus diperkukuh dalam pentadbiran Johor-Riau.",
-      "translate": "国家体系的特征在 Johor-Riau 的行政体系中持续得到加强。"
+      "source_id": "bab-1-3-u50",
+      "bm_original": "Kerjasama antara sultan dan para pembesar menjadikan pentadbiran berjalan lancar.",
+      "translate": "苏丹与诸位贵族之间的合作，使行政运作顺利进行。"
     },
     {
-      "source_id": "bab-1-3-chip-4",
-      "bm_original": "Johor-Riau menjadi penerus warisan Kesultanan Melayu Melaka.",
-      "translate": "Johor-Riau 成为 Kesultanan Melayu Melaka 传统的重要继承者。"
+      "source_id": "bab-1-3-u51",
+      "bm_original": "Keunggulan ini menjadikan Melaka sebagai kerajaan yang masyhur dan unggul.",
+      "translate": "这种卓越使 Melaka 成为一个著名而杰出的王国。"
     },
 
     {
       "source_id": "bab-1-3-soalan-heading",
-      "bm_original": "Bagaimanakah Kesultanan Johor-Riau meneruskan ciri-ciri negara bangsa?",
-      "translate": "Kesultanan Johor-Riau 是如何延续国家体系特征的？"
+      "bm_original": "Apakah yang dimaksudkan dengan keunggulan dalam sesebuah kerajaan?",
+      "translate": "一个王国的“卓越”指的是什么？"
     },
     {
       "source_id": "bab-1-3-soalan-line-1",
-      "bm_original": "Kesultanan Johor-Riau mengekalkan sistem pemerintahan, undang-undang dan hubungan rakyat seperti Melaka.",
-      "translate": "Kesultanan Johor-Riau 延续了 Melaka 的统治制度、法律体系以及人民关系结构。"
+      "bm_original": "Keunggulan bermaksud kesempurnaan dan keistimewaan yang dimiliki oleh sesebuah kerajaan.",
+      "translate": "“卓越”是指一个王国所拥有的完善性与独特优势。"
+    },
+    {
+      "source_id": "bab-1-3-u01",
+      "bm_original": "Dalam Kesultanan Melayu Melaka, keunggulan ini dapat dilihat dengan jelas melalui sistem pentadbiran yang tersusun dan undang-undang yang teratur.",
+      "translate": "在 Kesultanan Melayu Melaka，这种卓越清楚体现在有序的行政制度和完善的法律体系上。"
     },
 
     {
       "source_id": "bab-1-3-fokus-line",
-      "bm_original": "Subtopik ini membincangkan kesinambungan ciri-ciri negara bangsa dalam Kesultanan Johor-Riau.",
-      "translate": "本小节探讨 Kesultanan Johor-Riau 如何延续国家体系的特征。"
+      "bm_original": "Kesultanan Melayu Melaka mempunyai sistem pentadbiran dan undang-undang yang tersusun dan sistematik. Subtopik ini membincangkan dua aspek keunggulan Melaka:",
+      "translate": "Kesultanan Melayu Melaka 拥有有序而系统化的行政与法律制度。本小节将讨论 Melaka 卓越性的两个方面："
     },
 
     {
-      "source_id": "bab-1-3-u01",
-      "bm_original": "Kesinambungan ciri-ciri negara bangsa:",
-      "translate": "国家体系特征的延续："
+      "source_id": "bab-1-3-u02",
+      "bm_original": "Sistem ini memastikan pentadbiran berjalan lancar dan teratur.",
+      "translate": "这个制度确保行政顺利且有条理地运作。"
     },
 
     {
-      "source_id": "bab-1-3-raja",
-      "bm_original": "Sultan kekal sebagai pemerintah tertinggi.",
-      "translate": "苏丹仍然是最高统治者。"
+      "source_id": "bab-1-3-u03",
+      "bm_original": "Sistem pentadbiran Melaka bersifat:",
+      "translate": "Melaka 的行政制度具有以下特点："
     },
     {
-      "source_id": "bab-1-3-raja-2",
-      "bm_original": "Sultan dibantu oleh pembesar dalam pentadbiran.",
-      "translate": "苏丹在治理国家时继续由贵族协助。"
-    },
-
-    {
-      "source_id": "bab-1-3-undang",
-      "bm_original": "Undang-undang terus digunakan untuk menjaga keamanan dan kestabilan.",
-      "translate": "法律继续用于维护国家的安全与稳定。"
+      "source_id": "bab-1-3-extra-1",
+      "bm_original": "berhierarki",
+      "translate": "层级分明"
     },
     {
-      "source_id": "bab-1-3-undang-2",
-      "bm_original": "Peraturan diwarisi daripada sistem Melaka.",
-      "translate": "这些法律制度承袭自 Melaka 的体系。"
-    },
-
-    {
-      "source_id": "bab-1-3-wilayah",
-      "bm_original": "Wilayah pengaruh masih luas walaupun menghadapi cabaran luar.",
-      "translate": "尽管面临外部挑战，其势力范围仍然广阔。"
+      "source_id": "bab-1-3-extra-2",
+      "bm_original": "tersusun",
+      "translate": "组织有序"
     },
     {
-      "source_id": "bab-1-3-wilayah-2",
-      "bm_original": "Pengaruh ini menunjukkan kekuatan kerajaan.",
-      "translate": "这种影响力体现了王朝的实力。"
+      "source_id": "bab-1-3-extra-3",
+      "bm_original": "berpusat kepada sultan",
+      "translate": "以苏丹为中心"
     },
 
     {
-      "source_id": "bab-1-3-rakyat",
-      "bm_original": "Rakyat terus menunjukkan kesetiaan kepada pemerintah.",
-      "translate": "人民继续对统治者保持忠诚。"
+      "source_id": "bab-1-3-u04",
+      "bm_original": "Kuasa Sultan merangkumi:",
+      "translate": "苏丹的权力涵盖："
     },
     {
-      "source_id": "bab-1-3-rakyat-2",
-      "bm_original": "Hubungan ini penting untuk mengekalkan kestabilan negara.",
-      "translate": "这种关系对于维持国家稳定至关重要。"
+      "source_id": "bab-1-3-extra-4",
+      "bm_original": "pemerintahan",
+      "translate": "政务"
+    },
+    {
+      "source_id": "bab-1-3-extra-5",
+      "bm_original": "peperangan",
+      "translate": "战争"
+    },
+    {
+      "source_id": "bab-1-3-extra-6",
+      "bm_original": "hubungan diplomatik",
+      "translate": "外交关系"
+    },
+    {
+      "source_id": "bab-1-3-extra-7",
+      "bm_original": "agama",
+      "translate": "宗教事务"
     },
 
     {
-      "source_id": "bab-1-3-kesimpulan",
-      "bm_original": "Kesultanan Johor-Riau berjaya meneruskan warisan negara bangsa dari Kesultanan Melayu Melaka.",
-      "translate": "Kesultanan Johor-Riau 成功延续了 Kesultanan Melayu Melaka 的国家体系传统。"
+      "source_id": "bab-1-3-u05",
+      "bm_original": "Pembesar utama:",
+      "translate": "主要贵族官员："
+    },
+    {
+      "source_id": "bab-1-3-extra-8",
+      "bm_original": "1️⃣ Bendahara",
+      "translate": "1️⃣ Bendahara"
+    },
+    {
+      "source_id": "bab-1-3-extra-9",
+      "bm_original": "2️⃣ Penghulu Bendahari",
+      "translate": "2️⃣ Penghulu Bendahari"
+    },
+    {
+      "source_id": "bab-1-3-extra-10",
+      "bm_original": "3️⃣ Temenggung",
+      "translate": "3️⃣ Temenggung"
+    },
+    {
+      "source_id": "bab-1-3-extra-11",
+      "bm_original": "4️⃣ Laksamana",
+      "translate": "4️⃣ Laksamana"
+    },
+
+    {
+      "source_id": "bab-1-3-u06",
+      "bm_original": "Pembesar lain yang membantu:",
+      "translate": "其他协助行政的官员："
+    },
+    {
+      "source_id": "bab-1-3-extra-12",
+      "bm_original": "Syahbandar",
+      "translate": "Syahbandar"
+    },
+    {
+      "source_id": "bab-1-3-extra-13",
+      "bm_original": "Bentara",
+      "translate": "Bentara"
+    },
+    {
+      "source_id": "bab-1-3-extra-14",
+      "bm_original": "Orang Kaya",
+      "translate": "Orang Kaya"
+    },
+    {
+      "source_id": "bab-1-3-extra-15",
+      "bm_original": "Hulubalang",
+      "translate": "Hulubalang"
+    },
+    {
+      "source_id": "bab-1-3-extra-16",
+      "bm_original": "Penghulu",
+      "translate": "Penghulu"
+    },
+    {
+      "source_id": "bab-1-3-u07",
+      "bm_original": "Kerjasama semua pembesar menjadikan pentadbiran sangat sistematik dan berkesan.",
+      "translate": "所有贵族官员的合作使行政制度非常系统化且有效。"
+    },
+
+    {
+      "source_id": "bab-1-3-u08",
+      "bm_original": "Sistem pentadbiran terbahagi kepada:",
+      "translate": "行政制度分为："
+    },
+    {
+      "source_id": "bab-1-3-extra-17",
+      "bm_original": "1️⃣ Pentadbiran Pusat",
+      "translate": "1️⃣ 中央行政"
+    },
+    {
+      "source_id": "bab-1-3-extra-18",
+      "bm_original": "2️⃣ Pentadbiran Jajahan",
+      "translate": "2️⃣ 属地行政"
+    },
+
+    {
+      "source_id": "bab-1-3-u09",
+      "bm_original": "Dikendalikan oleh Pembesar Berempat.",
+      "translate": "由 Pembesar Berempat 负责管理。"
+    },
+    {
+      "source_id": "bab-1-3-u10",
+      "bm_original": "Hubungan antara sultan dan pembesar:",
+      "translate": "苏丹与贵族之间的关系："
+    },
+    {
+      "source_id": "bab-1-3-extra-19",
+      "bm_original": "kerjasama",
+      "translate": "合作"
+    },
+    {
+      "source_id": "bab-1-3-extra-20",
+      "bm_original": "persefahaman",
+      "translate": "相互理解"
+    },
+    {
+      "source_id": "bab-1-3-extra-21",
+      "bm_original": "permuafakatan",
+      "translate": "协商共识"
+    },
+    {
+      "source_id": "bab-1-3-extra-22",
+      "bm_original": "pentadbiran lebih sempurna",
+      "translate": "行政更完善"
+    },
+    {
+      "source_id": "bab-1-3-extra-23",
+      "bm_original": "elak penyalahgunaan kuasa",
+      "translate": "避免滥用权力"
+    },
+    {
+      "source_id": "bab-1-3-extra-24",
+      "bm_original": "wujud kestabilan politik",
+      "translate": "形成政治稳定"
+    },
+
+    {
+      "source_id": "bab-1-3-u11",
+      "bm_original": "Bendahara ialah pembesar paling penting.",
+      "translate": "Bendahara 是最重要的贵族官员。"
+    },
+    {
+      "source_id": "bab-1-3-u12",
+      "bm_original": "Peranan Bendahara:",
+      "translate": "Bendahara 的职责："
+    },
+    {
+      "source_id": "bab-1-3-extra-25",
+      "bm_original": "ketua pentadbir",
+      "translate": "最高行政长官"
+    },
+    {
+      "source_id": "bab-1-3-extra-26",
+      "bm_original": "ketua turus angkatan tentera",
+      "translate": "军队总参谋长"
+    },
+    {
+      "source_id": "bab-1-3-extra-27",
+      "bm_original": "penasihat sultan",
+      "translate": "苏丹顾问"
+    },
+    {
+      "source_id": "bab-1-3-extra-28",
+      "bm_original": "pemangku sultan",
+      "translate": "代理苏丹"
+    },
+
+    {
+      "source_id": "bab-1-3-u13",
+      "bm_original": "Berkhidmat di bawah:",
+      "translate": "曾在以下苏丹统治时期任职："
+    },
+    {
+      "source_id": "bab-1-3-extra-29",
+      "bm_original": "Sultan Muzaffar Shah",
+      "translate": "Sultan Muzaffar Shah"
+    },
+    {
+      "source_id": "bab-1-3-extra-30",
+      "bm_original": "Sultan Mansur Shah",
+      "translate": "Sultan Mansur Shah"
+    },
+    {
+      "source_id": "bab-1-3-extra-31",
+      "bm_original": "Sultan Alauddin Riayat Shah",
+      "translate": "Sultan Alauddin Riayat Shah"
+    },
+    {
+      "source_id": "bab-1-3-extra-32",
+      "bm_original": "Sultan Mahmud Shah",
+      "translate": "Sultan Mahmud Shah"
+    },
+
+    {
+      "source_id": "bab-1-3-u14",
+      "bm_original": "Kesultanan Melayu Melaka mempunyai sistem kewangan yang teratur.",
+      "translate": "Kesultanan Melayu Melaka 拥有有序的财政制度。"
+    },
+    {
+      "source_id": "bab-1-3-u15",
+      "bm_original": "Sumber pendapatan:",
+      "translate": "收入来源："
+    },
+    {
+      "source_id": "bab-1-3-extra-33",
+      "bm_original": "perdagangan",
+      "translate": "贸易"
+    },
+    {
+      "source_id": "bab-1-3-extra-34",
+      "bm_original": "cukai",
+      "translate": "税收"
+    },
+    {
+      "source_id": "bab-1-3-extra-35",
+      "bm_original": "ufti dari wilayah taklukan & naungan",
+      "translate": "来自征服地与附属地的贡品"
+    },
+    {
+      "source_id": "bab-1-3-u16",
+      "bm_original": "Peranan pembesar:",
+      "translate": "贵族官员的职责："
+    },
+    {
+      "source_id": "bab-1-3-extra-36",
+      "bm_original": "Penghulu Bendahari → urus perbendaharaan",
+      "translate": "Penghulu Bendahari → 管理国库"
+    },
+    {
+      "source_id": "bab-1-3-extra-37",
+      "bm_original": "Syahbandar → kutip cukai di pelabuhan",
+      "translate": "Syahbandar → 在港口征税"
+    },
+    {
+      "source_id": "bab-1-3-extra-38",
+      "bm_original": "Pembesar lain → kutip cukai di kawasan pegangan",
+      "translate": "其他贵族官员 → 在属地征税"
+    },
+    {
+      "source_id": "bab-1-3-u17",
+      "bm_original": "Hasil digunakan untuk:",
+      "translate": "财政收入用于："
+    },
+    {
+      "source_id": "bab-1-3-extra-39",
+      "bm_original": "membeli senjata",
+      "translate": "购买武器"
+    },
+    {
+      "source_id": "bab-1-3-extra-40",
+      "bm_original": "membina istana",
+      "translate": "建造王宫"
+    },
+    {
+      "source_id": "bab-1-3-u18",
+      "bm_original": "Kebijaksanaan mengurus kewangan menjadikan Melaka maju dan makmur.",
+      "translate": "善于管理财政使 Melaka 发展繁荣。"
+    },
+
+    {
+      "source_id": "bab-1-3-u19",
+      "bm_original": "Kawasan pegangan ialah kawasan yang dikurniakan oleh Sultan kepada pembesar untuk ditadbir.",
+      "translate": "“kawasan pegangan”是苏丹赐予贵族官员管理的地区。"
+    },
+    {
+      "source_id": "bab-1-3-u20",
+      "bm_original": "Sultan memberikan kuasa kepada pembesar untuk mentadbir:",
+      "translate": "苏丹授予贵族官员管理以下地区的权力："
+    },
+    {
+      "source_id": "bab-1-3-extra-41",
+      "bm_original": "wilayah",
+      "translate": "领土"
+    },
+    {
+      "source_id": "bab-1-3-extra-42",
+      "bm_original": "sungai",
+      "translate": "河流区域"
+    },
+    {
+      "source_id": "bab-1-3-extra-43",
+      "bm_original": "pulau",
+      "translate": "岛屿"
+    },
+
+    {
+      "source_id": "bab-1-3-u21",
+      "bm_original": "Melaka mempunyai sistem keselamatan yang kemas di:",
+      "translate": "Melaka 在以下方面拥有完善的安全体系："
+    },
+    {
+      "source_id": "bab-1-3-extra-44",
+      "bm_original": "darat",
+      "translate": "陆地"
+    },
+    {
+      "source_id": "bab-1-3-extra-45",
+      "bm_original": "laut",
+      "translate": "海上"
+    },
+    {
+      "source_id": "bab-1-3-u22",
+      "bm_original": "Peranan pembesar:",
+      "translate": "相关官员的职责："
+    },
+    {
+      "source_id": "bab-1-3-extra-46",
+      "bm_original": "Temenggung → menjaga keselamatan kota",
+      "translate": "Temenggung → 维护都城安全"
+    },
+    {
+      "source_id": "bab-1-3-extra-47",
+      "bm_original": "Laksamana → panglima angkatan laut",
+      "translate": "Laksamana → 海军统帅"
+    },
+    {
+      "source_id": "bab-1-3-u23",
+      "bm_original": "Keamanan menjadi asas kepada kemasyhuran Melaka.",
+      "translate": "安全稳定是 Melaka 闻名的重要基础。"
+    },
+
+    {
+      "source_id": "bab-1-3-u24",
+      "bm_original": "Pembesar dilantik untuk mentadbir:",
+      "translate": "贵族官员被委任管理："
+    },
+    {
+      "source_id": "bab-1-3-extra-48",
+      "bm_original": "daerah",
+      "translate": "地区"
+    },
+    {
+      "source_id": "bab-1-3-extra-49",
+      "bm_original": "kampung",
+      "translate": "村庄"
+    },
+    {
+      "source_id": "bab-1-3-u25",
+      "bm_original": "Peranan mereka:",
+      "translate": "他们的职责："
+    },
+    {
+      "source_id": "bab-1-3-extra-50",
+      "bm_original": "menjaga keamanan",
+      "translate": "维护治安"
+    },
+    {
+      "source_id": "bab-1-3-extra-51",
+      "bm_original": "mengutip cukai",
+      "translate": "征收税务"
+    },
+    {
+      "source_id": "bab-1-3-u26",
+      "bm_original": "Pelantikan oleh:",
+      "translate": "委任者："
+    },
+    {
+      "source_id": "bab-1-3-extra-52",
+      "bm_original": "Sultan",
+      "translate": "苏丹"
+    },
+    {
+      "source_id": "bab-1-3-extra-53",
+      "bm_original": "Pembesar Berempat",
+      "translate": "Pembesar Berempat"
+    },
+
+    {
+      "source_id": "bab-1-3-u27",
+      "bm_original": "Sistem pentadbiran Melaka menunjukkan:",
+      "translate": "Melaka 的行政制度展现出："
+    },
+    {
+      "source_id": "bab-1-3-extra-54",
+      "bm_original": "kebijaksanaan pemerintah",
+      "translate": "统治者的智慧"
+    },
+    {
+      "source_id": "bab-1-3-extra-55",
+      "bm_original": "agihan tugas yang jelas",
+      "translate": "明确的职务分配"
+    },
+    {
+      "source_id": "bab-1-3-extra-56",
+      "bm_original": "pentadbiran yang sistematik",
+      "translate": "系统化的行政制度"
+    },
+    {
+      "source_id": "bab-1-3-extra-57",
+      "bm_original": "Melaka muncul sebagai empayar yang unggul",
+      "translate": "Melaka 崛起为卓越的帝国"
+    },
+    {
+      "source_id": "bab-1-3-extra-58",
+      "bm_original": "setiap pembesar memainkan peranan penting",
+      "translate": "每位贵族官员都发挥重要作用"
+    },
+    {
+      "source_id": "bab-1-3-extra-59",
+      "bm_original": "pentadbiran berjalan lancar dan berkesan",
+      "translate": "行政运作顺利且有效"
+    },
+
+    {
+      "source_id": "bab-1-3-u28",
+      "bm_original": "Kesultanan Melayu Melaka mempunyai dua undang-undang utama:",
+      "translate": "Kesultanan Melayu Melaka 拥有两部主要法律："
+    },
+    {
+      "source_id": "bab-1-3-extra-60",
+      "bm_original": "Hukum Kanun Melaka",
+      "translate": "Hukum Kanun Melaka"
+    },
+    {
+      "source_id": "bab-1-3-extra-61",
+      "bm_original": "Undang-Undang Laut Melaka",
+      "translate": "Undang-Undang Laut Melaka"
+    },
+    {
+      "source_id": "bab-1-3-u29",
+      "bm_original": "Kedua-duanya berasaskan syariah Islam dan hukum adat.",
+      "translate": "两者都以 syariah Islam 与传统习惯法为基础。"
+    },
+    {
+      "source_id": "bab-1-3-extra-62",
+      "bm_original": "menjamin keselamatan",
+      "translate": "保障安全"
+    },
+    {
+      "source_id": "bab-1-3-extra-63",
+      "bm_original": "memastikan kesejahteraan",
+      "translate": "确保福祉"
+    },
+    {
+      "source_id": "bab-1-3-extra-64",
+      "bm_original": "memakmurkan kerajaan",
+      "translate": "使王国繁荣"
+    },
+
+    {
+      "source_id": "bab-1-3-u30",
+      "bm_original": "Mengandungi 44 fasal.",
+      "translate": "包含 44 条条文。"
+    },
+    {
+      "source_id": "bab-1-3-u31",
+      "bm_original": "Merangkumi aspek:",
+      "translate": "涵盖以下方面："
+    },
+    {
+      "source_id": "bab-1-3-extra-65",
+      "bm_original": "jenayah",
+      "translate": "刑事"
+    },
+    {
+      "source_id": "bab-1-3-extra-66",
+      "bm_original": "kuasa sultan & pembesar",
+      "translate": "苏丹与贵族的权力"
+    },
+    {
+      "source_id": "bab-1-3-extra-67",
+      "bm_original": "kekeluargaan",
+      "translate": "家庭事务"
+    },
+    {
+      "source_id": "bab-1-3-extra-68",
+      "bm_original": "ekonomi",
+      "translate": "经济"
+    },
+
+    {
+      "source_id": "bab-1-3-u32",
+      "bm_original": "Jenayah menggugat ketenteraman dan keharmonian.",
+      "translate": "犯罪行为会破坏社会安宁与和谐。"
+    },
+    {
+      "source_id": "bab-1-3-u33",
+      "bm_original": "Hukuman dikenakan atas jenayah seperti membunuh, menikam dan mencuri.",
+      "translate": "对于杀人、刺伤和偷窃等罪行都会施以刑罚。"
+    },
+    {
+      "source_id": "bab-1-3-extra-69",
+      "bm_original": "Fasal 5.1 → Membunuh tanpa pengetahuan raja/pembesar → hukuman bunuh",
+      "translate": "第 5.1 条 → 未经君主或贵族知情而杀人 → 处死"
+    },
+    {
+      "source_id": "bab-1-3-extra-70",
+      "bm_original": "Fasal 4 → Ingkar arahan & memalsukan titah sultan → hukuman bunuh",
+      "translate": "第 4 条 → 违抗命令或伪造苏丹 titah → 处死"
+    },
+
+    {
+      "source_id": "bab-1-3-u34",
+      "bm_original": "Pembesar perlu arif tentang undang-undang dan melaksanakan hukum dengan adil.",
+      "translate": "贵族官员必须熟悉法律，并公正地执行法令。"
+    },
+    {
+      "source_id": "bab-1-3-extra-71",
+      "bm_original": "Fasal 1 → menjelaskan tugas Sultan, Bendahara, Temenggung dan Penghulu Bendahari",
+      "translate": "第 1 条 → 说明 Sultan、Bendahara、Temenggung 和 Penghulu Bendahari 的职责"
+    },
+    {
+      "source_id": "bab-1-3-extra-72",
+      "bm_original": "Sultan berkuasa melantik pembesar",
+      "translate": "苏丹有权任命贵族官员"
+    },
+
+    {
+      "source_id": "bab-1-3-u35",
+      "bm_original": "Undang-undang keluarga bertujuan mewujudkan keharmonian dan menyelesaikan konflik.",
+      "translate": "家庭法的目的是建立和谐并解决冲突。"
+    },
+    {
+      "source_id": "bab-1-3-extra-73",
+      "bm_original": "Fasal 26 → perkahwinan memerlukan 4 orang saksi, jika tidak cukup minimum 2 orang",
+      "translate": "第 26 条 → 婚姻需要 4 名证人，若不足则至少 2 名"
+    },
+    {
+      "source_id": "bab-1-3-extra-74",
+      "bm_original": "hamba abdi tidak boleh jadi saksi",
+      "translate": "奴仆不能作证"
+    },
+    {
+      "source_id": "bab-1-3-extra-75",
+      "bm_original": "wanita tidak boleh jadi saksi",
+      "translate": "女性不能作证"
+    },
+
+    {
+      "source_id": "bab-1-3-u36",
+      "bm_original": "Perdagangan ialah asas kekuatan Melaka.",
+      "translate": "贸易是 Melaka 强盛的基础。"
+    },
+    {
+      "source_id": "bab-1-3-extra-76",
+      "bm_original": "Fasal 30 → riba diharamkan",
+      "translate": "第 30 条 → 禁止高利贷"
+    },
+    {
+      "source_id": "bab-1-3-extra-77",
+      "bm_original": "peniaga mesti akil baligh",
+      "translate": "商人必须成年"
+    },
+    {
+      "source_id": "bab-1-3-extra-78",
+      "bm_original": "peniaga mesti siuman",
+      "translate": "商人必须神志清醒"
+    },
+    {
+      "source_id": "bab-1-3-extra-79",
+      "bm_original": "perlu melafazkan niat jual beli",
+      "translate": "必须明确表达买卖意愿"
+    },
+
+    {
+      "source_id": "bab-1-3-u37",
+      "bm_original": "Perkataan khas diraja:",
+      "translate": "王室专用词："
+    },
+    {
+      "source_id": "bab-1-3-extra-80",
+      "bm_original": "titah",
+      "translate": "titah"
+    },
+    {
+      "source_id": "bab-1-3-extra-81",
+      "bm_original": "murka",
+      "translate": "murka"
+    },
+    {
+      "source_id": "bab-1-3-extra-82",
+      "bm_original": "kurnia",
+      "translate": "kurnia"
+    },
+    {
+      "source_id": "bab-1-3-extra-83",
+      "bm_original": "anugerah",
+      "translate": "anugerah"
+    },
+
+    {
+      "source_id": "bab-1-3-u38",
+      "bm_original": "Disusun oleh Nakhoda Jenal, Nakhoda Diri, dan Nakhoda Sahak.",
+      "translate": "由 Nakhoda Jenal、Nakhoda Diri 和 Nakhoda Sahak 编纂。"
+    },
+    {
+      "source_id": "bab-1-3-u39",
+      "bm_original": "Diperkenan oleh Sultan Mahmud Shah.",
+      "translate": "经 Sultan Mahmud Shah 批准。"
+    },
+    {
+      "source_id": "bab-1-3-extra-84",
+      "bm_original": "peranan nakhoda",
+      "translate": "船长的职责"
+    },
+    {
+      "source_id": "bab-1-3-extra-85",
+      "bm_original": "pelayaran",
+      "translate": "航海"
+    },
+    {
+      "source_id": "bab-1-3-extra-86",
+      "bm_original": "jenayah di laut",
+      "translate": "海上犯罪"
+    },
+    {
+      "source_id": "bab-1-3-extra-87",
+      "bm_original": "percukaian",
+      "translate": "税务制度"
+    },
+
+    {
+      "source_id": "bab-1-3-u40",
+      "bm_original": "Nakhoda ialah “raja di laut”.",
+      "translate": "Nakhoda 被称为“海上之王”。"
+    },
+    {
+      "source_id": "bab-1-3-u41",
+      "bm_original": "Semua mesti patuh arahan nakhoda.",
+      "translate": "所有人都必须服从船长的命令。"
+    },
+    {
+      "source_id": "bab-1-3-extra-88",
+      "bm_original": "Fasal 13.1 → Nakhoda diberi keutamaan berniaga selama 4 hari",
+      "translate": "第 13.1 条 → 船长享有 4 天优先经商权"
+    },
+    {
+      "source_id": "bab-1-3-extra-89",
+      "bm_original": "Fasal 13.3 → Jika ubah laluan perlu bermesyuarat dengan semua",
+      "translate": "第 13.3 条 → 若要更改航线，必须与所有人商议"
+    },
+
+    {
+      "source_id": "bab-1-3-u42",
+      "bm_original": "Pegawai penting:",
+      "translate": "重要航海人员："
+    },
+    {
+      "source_id": "bab-1-3-extra-90",
+      "bm_original": "Jurumudi",
+      "translate": "Jurumudi"
+    },
+    {
+      "source_id": "bab-1-3-extra-91",
+      "bm_original": "Malim",
+      "translate": "Malim"
+    },
+    {
+      "source_id": "bab-1-3-extra-92",
+      "bm_original": "Jurubatu",
+      "translate": "Jurubatu"
+    },
+    {
+      "source_id": "bab-1-3-extra-93",
+      "bm_original": "Fasal 9 → Malim mesti mahir tentang ombak, arus, bulan dan bintang",
+      "translate": "第 9 条 → Malim 必须精通海浪、水流、月相和星象"
+    },
+    {
+      "source_id": "bab-1-3-extra-94",
+      "bm_original": "Jika cuai hingga menyebabkan kemalangan → hukuman bunuh",
+      "translate": "若因疏忽导致事故 → 判处死刑"
+    },
+
+    {
+      "source_id": "bab-1-3-u43",
+      "bm_original": "Jenayah di kapal termasuk membunuh, mencuri dan memberontak.",
+      "translate": "船上的罪行包括杀人、偷窃和叛乱。"
+    },
+    {
+      "source_id": "bab-1-3-extra-95",
+      "bm_original": "Fasal 5 → Membunuh di atas kapal → hukuman mati",
+      "translate": "第 5 条 → 在船上杀人 → 判处死刑"
+    },
+
+    {
+      "source_id": "bab-1-3-u44",
+      "bm_original": "Sistem cukai bersifat teratur dan adil.",
+      "translate": "税务制度有序而公平。"
+    },
+    {
+      "source_id": "bab-1-3-u45",
+      "bm_original": "Jenis cukai:",
+      "translate": "税种包括："
+    },
+    {
+      "source_id": "bab-1-3-extra-96",
+      "bm_original": "cukai perjalanan",
+      "translate": "航行税"
+    },
+    {
+      "source_id": "bab-1-3-extra-97",
+      "bm_original": "hasil perniagaan",
+      "translate": "商业收益税"
+    },
+    {
+      "source_id": "bab-1-3-extra-98",
+      "bm_original": "Fasal 6.3 → Jika penumpang turun awal sebelum sampai, perlu bayar 1/10 daripada hasil",
+      "translate": "第 6.3 条 → 若乘客未到终点就提前下船，必须缴付收益的十分之一"
+    },
+
+    {
+      "source_id": "bab-1-3-u46",
+      "bm_original": "Keunggulan ini terbukti melalui:",
+      "translate": "这种卓越体现在："
+    },
+    {
+      "source_id": "bab-1-3-extra-99",
+      "bm_original": "sistem pentadbiran yang tersusun",
+      "translate": "有序的行政制度"
+    },
+    {
+      "source_id": "bab-1-3-extra-100",
+      "bm_original": "undang-undang yang sistematik",
+      "translate": "系统化的法律体系"
+    },
+    {
+      "source_id": "bab-1-3-extra-101",
+      "bm_original": "pentadbiran berjalan lancar",
+      "translate": "行政运作顺畅"
+    },
+    {
+      "source_id": "bab-1-3-extra-102",
+      "bm_original": "keselamatan terjamin",
+      "translate": "安全获得保障"
+    },
+    {
+      "source_id": "bab-1-3-extra-103",
+      "bm_original": "rakyat hidup harmoni",
+      "translate": "人民和谐生活"
+    },
+    {
+      "source_id": "bab-1-3-u47",
+      "bm_original": "Pematuhan kepada undang-undang mewujudkan kesejahteraan dan kemakmuran.",
+      "translate": "遵守法律能够带来安宁与繁荣。"
     }
   ]
 }
