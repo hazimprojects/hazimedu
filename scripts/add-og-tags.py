@@ -5,7 +5,7 @@ Run from the /home/user/zymnotes directory.
 """
 import os, re, glob
 
-OG_IMAGE = "https://zymnotes.com/assets/og-image.png?v=20260414"
+OG_IMAGE = "https://zymnotes.com/assets/og-image.png?v=20260420"
 SITE_NAME = "ZymNotes"
 DEFAULT_DESC = "Platform pendidikan digital yang membina nota visual, kemas dan mesra telefon untuk membantu pelajar belajar dengan lebih jelas dan berkesan."
 
@@ -29,8 +29,8 @@ def make_og_block(title, desc, url):
         f'  <meta property="og:image:url" content="{OG_IMAGE}" />\n'
         f'  <meta property="og:image:secure_url" content="{OG_IMAGE}" />\n'
         f'  <meta property="og:image:type" content="image/png" />\n'
-        f'  <meta property="og:image:width" content="1424" />\n'
-        f'  <meta property="og:image:height" content="748" />\n'
+        f'  <meta property="og:image:width" content="1200" />\n'
+        f'  <meta property="og:image:height" content="630" />\n'
         f'  <meta property="og:image:alt" content="ZymNotes — Platform Pendidikan Digital" />\n'
         f'  <meta property="og:type" content="website" />\n'
         f'  <meta property="og:site_name" content="{SITE_NAME}" />\n'
