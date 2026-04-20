@@ -1,251 +1,150 @@
 {
   "meta": {
     "source_file": "notes/bab-2-1.html",
-    "rollout": "gelombang-1-manual-revision"
+    "rollout": "gelombang-1-clean-manual",
+    "notes": "Fully manual Chinese translation for Bab 2.1. Matched against actual data-zh-unit-id in HTML."
   },
   "units": [
     {
       "source_id": "bab-2-1-u06",
       "bm_original": "Nasionalisme ialah perasaan cinta yang mendalam terhadap bangsa dan negara.",
-      "translate": "民族主义 是 perasaan cinta 的 mendalam 针对 bangsa 与 negara.",
-      "key_points_zh": [
-        "民族主义 是 perasaan cinta 的 mendalam 针对 bangsa 与 negara."
-      ],
-      "bm_focus_phrase": "Nasionalisme ialah perasaan cinta yang mendalam terhadap bangsa dan negara."
+      "translate": "民族主义是对民族与国家怀有深厚热爱的情感。"
     },
     {
       "source_id": "bab-2-1-u07",
       "bm_original": "Nasionalisme mendorong perjuangan untuk menentang penjajahan, membela bangsa dan tanah air serta mencapai kebebasan.",
-      "translate": "民族主义 mendorong 斗争 为了 反对 penjajahan, membela bangsa 与 tanah air 以及 mencapai kebebasan.",
-      "key_points_zh": [
-        "民族主义 mendorong 斗争 为了 反对 penjajahan, membela bangsa 与 tanah air 以及 mencapai kebebasan."
-      ],
-      "bm_focus_phrase": "Nasionalisme mendorong perjuangan untuk menentang penjajahan, membela bangsa dan tanah air serta mencapai kebebasan."
+      "translate": "民族主义推动人民奋斗，以反抗殖民统治、捍卫民族与祖国，并争取自由。"
     },
     {
       "source_id": "bab-2-1-u08",
       "bm_original": "Maksud nasionalisme tidak statik, sebaliknya berbeza mengikut keturunan, agama, bahasa, adat resam dan pengalaman sejarah.",
-      "translate": "Maksud 民族主义 不 statik, sebaliknya berbeza mengikut keturunan, agama, bahasa, adat resam 与 pengalaman 历史.",
-      "key_points_zh": [
-        "Maksud 民族主义 不 statik, sebaliknya berbeza mengikut keturunan, agama, bahasa, adat resam 与 pengalaman 历史."
-      ],
-      "bm_focus_phrase": "Maksud nasionalisme tidak statik, sebaliknya berbeza mengikut keturunan, agama, bahasa, adat resam dan pengalaman sejarah."
+      "translate": "民族主义的含义并非固定不变，而是会随着血统、宗教、语言、风俗习惯和历史经验而有所不同。"
     },
     {
       "source_id": "bab-2-1-u09",
       "bm_original": "Beberapa tokoh dan sejarawan memberikan tafsiran yang berbeza mengikut konteks masyarakat dan zamannya.",
-      "translate": "Beberapa tokoh 与 sejarawan memberikan tafsiran 的 berbeza mengikut konteks 社会 与 zamannya.",
-      "key_points_zh": [
-        "Beberapa tokoh 与 sejarawan memberikan tafsiran 的 berbeza mengikut konteks 社会 与 zamannya."
-      ],
-      "bm_focus_phrase": "Beberapa tokoh dan sejarawan memberikan tafsiran yang berbeza mengikut konteks masyarakat dan zamannya."
+      "translate": "不同的思想家与历史学家，会根据各自社会背景与时代处境，对民族主义作出不同诠释。"
     },
+
     {
       "source_id": "bab-2-1-soalan-heading",
       "bm_original": "Apa itu nasionalisme? Kenapa penting kita memahaminya?",
-      "translate": "Apa 那 民族主义? Kenapa penting kita memahaminya?",
-      "key_points_zh": [
-        "Apa 那 民族主义? Kenapa penting kita memahaminya?"
-      ],
-      "bm_focus_phrase": "Apa itu nasionalisme? Kenapa penting kita memahaminya?"
+      "translate": "什么是民族主义？为什么我们必须理解它？"
     },
     {
       "source_id": "bab-2-1-soalan-line-1",
       "bm_original": "Nasionalisme ialah perasaan cinta yang mendalam terhadap bangsa dan negara.",
-      "translate": "民族主义 是 perasaan cinta 的 mendalam 针对 bangsa 与 negara.",
-      "key_points_zh": [
-        "民族主义 是 perasaan cinta 的 mendalam 针对 bangsa 与 negara."
-      ],
-      "bm_focus_phrase": "Nasionalisme ialah perasaan cinta yang mendalam terhadap bangsa dan negara."
+      "translate": "民族主义是对民族与国家怀有深厚热爱的情感。"
     },
     {
       "source_id": "bab-2-1-u01",
       "bm_original": "Pemahaman terhadap nasionalisme penting kerana semangat ini mendorong rakyat untuk mempertahankan hak, menolak penjajahan dan membina negara yang berdaulat.",
-      "translate": "Pemahaman 针对 民族主义 penting 因为 semangat 这 mendorong 人民 为了 mempertahankan 权利, menolak penjajahan 与 membina negara 的 berdaulat.",
-      "key_points_zh": [
-        "Pemahaman 针对 民族主义 penting 因为 semangat 这 mendorong 人民 为了 mempertahankan 权利, menolak penjajahan 与 membina negara 的 berdaulat."
-      ],
-      "bm_focus_phrase": "Pemahaman terhadap nasionalisme penting kerana semangat ini mendorong rakyat untuk mempertahankan hak, menolak penjajahan dan membina negara yang berdaulat."
+      "translate": "理解民族主义非常重要，因为这种精神会推动人民捍卫自身权利、拒绝殖民统治，并建设一个拥有主权的国家。"
     },
     {
       "source_id": "bab-2-1-extra-1",
       "bm_original": "Menentang penjajahan",
-      "translate": "重点：Menentang penjajahan",
-      "key_points_zh": [
-        "重点：Menentang penjajahan"
-      ],
-      "bm_focus_phrase": "Menentang penjajahan"
+      "translate": "反抗殖民统治"
     },
     {
       "source_id": "bab-2-1-extra-2",
       "bm_original": "Membela bangsa dan tanah air",
-      "translate": "Membela bangsa 与 tanah air",
-      "key_points_zh": [
-        "Membela bangsa 与 tanah air"
-      ],
-      "bm_focus_phrase": "Membela bangsa dan tanah air"
+      "translate": "捍卫民族与祖国"
     },
     {
       "source_id": "bab-2-1-extra-3",
       "bm_original": "Mencapai kebebasan politik, ekonomi dan sosial daripada kuasa asing",
-      "translate": "Mencapai kebebasan 政治, ekonomi 与 sosial daripada kuasa asing",
-      "key_points_zh": [
-        "Mencapai kebebasan 政治, ekonomi 与 sosial daripada kuasa asing"
-      ],
-      "bm_focus_phrase": "Mencapai kebebasan politik, ekonomi dan sosial daripada kuasa asing"
+      "translate": "争取摆脱外来势力，在政治、经济与社会方面获得自由"
     },
+
     {
       "source_id": "bab-2-1-fokus-line",
       "bm_original": "Nasionalisme merupakan satu kesedaran yang mendorong sesuatu bangsa untuk mempertahankan dan membebaskan diri daripada penguasaan asing. Subtopik ini membincangkan definisi, faktor yang mempengaruhi maknanya, pandangan tokoh ilmuwan, dan matlamat perjuangannya:",
-      "translate": "民族主义 merupakan satu kesedaran 的 mendorong sesuatu bangsa 为了 mempertahankan 与 membebaskan diri daripada penguasaan asing. Subtopik 这 membincangkan definisi, 因素 的 mempengaruhi maknanya, pandangan tokoh ilmuwan, 与 matlamat perjuangannya:",
-      "key_points_zh": [
-        "民族主义 merupakan satu kesedaran 的 mendorong sesuatu bangsa 为了 mempertahankan 与 membebaskan diri daripada penguasaan asing. Subtopik 这 membincangkan definisi, 因素 的 mempengaruhi maknanya, pandangan tokoh ilmuwan, 与 matlamat perjuangannya:"
-      ],
-      "bm_focus_phrase": "Nasionalisme merupakan satu kesedaran yang mendorong sesuatu bangsa untuk mempertahankan dan membebaskan diri daripada penguasaan asing. Subtopik ini membincangkan definisi, faktor yang mempengaruhi maknanya, pandangan tokoh ilmuwan, dan matlamat perjuangannya:"
+      "translate": "民族主义是一种民族意识，它推动一个民族去维护自身，并摆脱外来势力的控制。本小节将讨论民族主义的定义、影响其含义的因素、学者与思想家的观点，以及它的奋斗目标："
     },
+
     {
       "source_id": "bab-2-1-u02",
       "bm_original": "Intipati: Nasionalisme timbul akibat tekanan luar dan keperluan mempertahankan identiti.",
-      "translate": "Intipati: 民族主义 timbul akibat tekanan luar 与 keperluan mempertahankan identiti.",
-      "key_points_zh": [
-        "Intipati: 民族主义 timbul akibat tekanan luar 与 keperluan mempertahankan identiti."
-      ],
-      "bm_focus_phrase": "Intipati: Nasionalisme timbul akibat tekanan luar dan keperluan mempertahankan identiti."
+      "translate": "要点：民族主义的产生，往往源自外来压力以及维护自身身份认同的需要。"
     },
     {
       "source_id": "bab-2-1-u03",
       "bm_original": "Intipati: Nasionalisme ialah usaha mengembalikan maruah dan kedudukan bangsa.",
-      "translate": "Intipati: 民族主义 是 usaha mengembalikan maruah 与 kedudukan bangsa.",
-      "key_points_zh": [
-        "Intipati: 民族主义 是 usaha mengembalikan maruah 与 kedudukan bangsa."
-      ],
-      "bm_focus_phrase": "Intipati: Nasionalisme ialah usaha mengembalikan maruah dan kedudukan bangsa."
+      "translate": "要点：民族主义也是恢复民族尊严与地位的一种努力。"
     },
+
     {
       "source_id": "bab-2-1-extra-4",
       "bm_original": "Cinta akan bangsa dan negara",
-      "translate": "Cinta 将会 bangsa 与 negara",
-      "key_points_zh": [
-        "Cinta 将会 bangsa 与 negara"
-      ],
-      "bm_focus_phrase": "Cinta akan bangsa dan negara"
+      "translate": "热爱民族与国家"
     },
     {
       "source_id": "bab-2-1-extra-5",
       "bm_original": "Mempertahankan hak dan identiti",
-      "translate": "Mempertahankan 权利 与 identiti",
-      "key_points_zh": [
-        "Mempertahankan 权利 与 identiti"
-      ],
-      "bm_focus_phrase": "Mempertahankan hak dan identiti"
+      "translate": "捍卫权利与身份认同"
     },
     {
       "source_id": "bab-2-1-extra-6",
       "bm_original": "Hak mentadbir negara sendiri",
-      "translate": "重点：Hak mentadbir negara sendiri",
-      "key_points_zh": [
-        "重点：Hak mentadbir negara sendiri"
-      ],
-      "bm_focus_phrase": "Hak mentadbir negara sendiri"
+      "translate": "拥有自主治理国家的权利"
     },
     {
       "source_id": "bab-2-1-extra-7",
       "bm_original": "Perpaduan dan persatuan",
-      "translate": "Perpaduan 与 协会",
-      "key_points_zh": [
-        "Perpaduan 与 协会"
-      ],
-      "bm_focus_phrase": "Perpaduan dan persatuan"
+      "translate": "团结与凝聚"
     },
     {
       "source_id": "bab-2-1-extra-8",
       "bm_original": "Kesetiaan kepada tanah air dan institusi bangsa",
-      "translate": "Kesetiaan 向 tanah air 与 institusi bangsa",
-      "key_points_zh": [
-        "Kesetiaan 向 tanah air 与 institusi bangsa"
-      ],
-      "bm_focus_phrase": "Kesetiaan kepada tanah air dan institusi bangsa"
+      "translate": "忠于祖国与民族体制"
     },
     {
       "source_id": "bab-2-1-extra-9",
       "bm_original": "Membina keyakinan dan maruah bangsa",
-      "translate": "Membina keyakinan 与 maruah bangsa",
-      "key_points_zh": [
-        "Membina keyakinan 与 maruah bangsa"
-      ],
-      "bm_focus_phrase": "Membina keyakinan dan maruah bangsa"
+      "translate": "建立民族自信与尊严"
     },
+
     {
       "source_id": "bab-2-1-u04",
       "bm_original": "Nasionalisme berubah mengikut zaman, sejarah dan pemimpin.",
-      "translate": "民族主义 berubah mengikut zaman, 历史 与 领袖.",
-      "key_points_zh": [
-        "民族主义 berubah mengikut zaman, 历史 与 领袖."
-      ],
-      "bm_focus_phrase": "Nasionalisme berubah mengikut zaman, sejarah dan pemimpin."
+      "translate": "民族主义会随着时代、历史背景与领导人物而发生变化。"
     },
     {
       "source_id": "bab-2-1-extra-10",
       "bm_original": "Berubah mengikut zaman, sejarah dan pemimpin",
-      "translate": "Berubah mengikut zaman, 历史 与 领袖",
-      "key_points_zh": [
-        "Berubah mengikut zaman, 历史 与 领袖"
-      ],
-      "bm_focus_phrase": "Berubah mengikut zaman, sejarah dan pemimpin"
+      "translate": "随着时代、历史与领导人物而变化"
     },
     {
       "source_id": "bab-2-1-extra-11",
       "bm_original": "Lahir dari cinta akan tanah air",
-      "translate": "Lahir dari cinta 将会 tanah air",
-      "key_points_zh": [
-        "Lahir dari cinta 将会 tanah air"
-      ],
-      "bm_focus_phrase": "Lahir dari cinta akan tanah air"
+      "translate": "源自对祖国的热爱"
     },
     {
       "source_id": "bab-2-1-extra-12",
       "bm_original": "Membina negara bangsa dan identiti sendiri",
-      "translate": "Membina negara bangsa 与 identiti sendiri",
-      "key_points_zh": [
-        "Membina negara bangsa 与 identiti sendiri"
-      ],
-      "bm_focus_phrase": "Membina negara bangsa dan identiti sendiri"
+      "translate": "建立国家体系与自身民族认同"
     },
+
     {
       "source_id": "bab-2-1-u05",
       "bm_original": "Gerakan ini bertujuan untuk:",
-      "translate": "Gerakan 这 bertujuan 为了:",
-      "key_points_zh": [
-        "Gerakan 这 bertujuan 为了:"
-      ],
-      "bm_focus_phrase": "Gerakan ini bertujuan untuk:"
+      "translate": "这项运动的目标是："
     },
     {
       "source_id": "bab-2-1-extra-13",
       "bm_original": "Melahirkan perasaan kekitaan",
-      "translate": "重点：Melahirkan perasaan kekitaan",
-      "key_points_zh": [
-        "重点：Melahirkan perasaan kekitaan"
-      ],
-      "bm_focus_phrase": "Melahirkan perasaan kekitaan"
+      "translate": "培养共同归属感"
     },
     {
       "source_id": "bab-2-1-extra-14",
       "bm_original": "Membebaskan negara daripada penjajahan",
-      "translate": "重点：Membebaskan negara daripada penjajahan",
-      "key_points_zh": [
-        "重点：Membebaskan negara daripada penjajahan"
-      ],
-      "bm_focus_phrase": "Membebaskan negara daripada penjajahan"
+      "translate": "使国家摆脱殖民统治"
     },
     {
       "source_id": "bab-2-1-extra-15",
       "bm_original": "Membina bangsa bersatu dan negara berdaulat",
-      "translate": "Membina bangsa bersatu 与 negara berdaulat",
-      "key_points_zh": [
-        "Membina bangsa bersatu 与 negara berdaulat"
-      ],
-      "bm_focus_phrase": "Membina bangsa bersatu dan negara berdaulat"
+      "translate": "建立团结的民族与拥有主权的国家"
     }
   ]
 }
