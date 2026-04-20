@@ -1,9 +1,12 @@
 {
   "style_css": "82",
-  "main_js": "74",
+  "main_js": "75",
   "zh_mode_js": "25",
-  "manifest": "4",
-  "sw_cache": "70",
+  "manifest": "5",
+  "sw_cache": "72",
+  "icon": "2",
+  "icon_maskable": "2",
+  "logo": "2",
   "css": {
     "base": "5",
     "layout": "9",

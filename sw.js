@@ -6,19 +6,19 @@
    - Everything else: network-first
 */
 
-const CACHE = 'zym-v71';
+const CACHE = 'zym-v72';
 
 const PRECACHE_URLS = [
   '/',
   '/index.html',
   '/notes/index.html',
   '/assets/css/style.css?v=82',
-  '/assets/js/main.js?v=74',
+  '/assets/js/main.js?v=75',
   '/assets/js/zh-mode.js?v=25',
   '/data/zh-glossary.json',
-  '/icons/icon.svg',
-  '/icons/icon-maskable.svg',
-  '/manifest.json?v=4'
+  '/icons/icon.svg?v=2',
+  '/icons/icon-maskable.svg?v=2',
+  '/manifest.json?v=5'
 ];
 
 // ── Install: precache core assets ─────────────────────────────────────────
