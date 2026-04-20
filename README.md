@@ -1,6 +1,6 @@
 # ZymNotes
 
-ZymNotes ialah **platform pendidikan digital tempatan** yang membina kandungan pembelajaran visual, mesra telefon dan lebih mudah diikuti untuk membantu pengguna belajar dengan lebih yakin.
+ZymNotes ialah **laman nota ulang kaji visual** yang kemas, mesra telefon dan mudah difahami untuk pelajar generasi baharu.
 
 Fokus semasa ZymNotes ialah **Sejarah Tingkatan 4**, dengan peluasan kandungan ke **Sejarah Tingkatan 5** dan bidang lain secara berperingkat. Platform ini dibina untuk menjadikan pengalaman ulang kaji lebih jelas, lebih tersusun dan lebih dekat dengan cara pelajar hari ini membaca serta belajar melalui skrin.
 
@@ -224,7 +224,7 @@ ZymNotes dikembangkan secara berperingkat dengan keutamaan kepada kualiti kandun
 
 ## Status Semasa
 
-ZymNotes sedang berkembang dengan arah yang semakin jelas sebagai **platform pendidikan digital**, bukan sekadar laman nota biasa.
+ZymNotes sedang berkembang dengan arah yang semakin jelas sebagai **laman nota ulang kaji generasi baharu**, bukan sekadar laman nota biasa.
 
 Status semasa yang boleh dikenal pasti daripada repo:
 

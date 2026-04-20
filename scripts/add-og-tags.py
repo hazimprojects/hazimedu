@@ -7,7 +7,7 @@ import os, re, glob
 
 OG_IMAGE = "https://zymnotes.com/assets/og-image.png?v=20260420"
 SITE_NAME = "ZymNotes"
-DEFAULT_DESC = "Platform pendidikan digital yang membina nota visual, kemas dan mesra telefon untuk membantu pelajar belajar dengan lebih jelas dan berkesan."
+DEFAULT_DESC = "Nota ulang kaji visual yang kemas, mesra telefon dan mudah difahami — dibina untuk pelajar generasi baharu."
 
 # Gather all HTML files (exclude scripts/)
 HTML_FILES = sorted(
@@ -31,7 +31,7 @@ def make_og_block(title, desc, url):
         f'  <meta property="og:image:type" content="image/png" />\n'
         f'  <meta property="og:image:width" content="1200" />\n'
         f'  <meta property="og:image:height" content="630" />\n'
-        f'  <meta property="og:image:alt" content="ZymNotes — Platform Pendidikan Digital" />\n'
+        f'  <meta property="og:image:alt" content="ZymNotes — Nota Ulang Kaji Generasi Baharu" />\n'
         f'  <meta property="og:type" content="website" />\n'
         f'  <meta property="og:site_name" content="{SITE_NAME}" />\n'
         f'  <meta property="og:locale" content="ms_MY" />\n'
