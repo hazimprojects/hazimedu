@@ -18,7 +18,7 @@ const PRECACHE_URLS = [
   '/data/zh-glossary.json',
   '/icons/icon.svg?v=3',
   '/icons/icon-maskable.svg?v=3',
-  '/manifest.json?v=7'
+  '/manifest.json?v=8'
 ];
 
 // ── Install: precache core assets ─────────────────────────────────────────
