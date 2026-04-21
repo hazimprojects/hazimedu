@@ -1,674 +1,469 @@
 {
   "meta": {
     "source_file": "notes/bab-2-6.html",
-    "rollout": "gelombang-1-manual-revision"
+    "rollout": "gelombang-1-clean-manual",
+    "notes": "Fully manual Chinese translation for Bab 2.6. Completed to match the updated HTML with added data-zh-unit-id."
   },
   "units": [
     {
       "source_id": "bab-2-6-u17",
       "bm_original": "Semangat nasionalisme semakin kuat pada abad ke-20 akibat gabungan pelbagai faktor dalaman dan luaran.",
-      "translate": "Semangat 民族主义 semakin kuat 于 abad ke-20 akibat gabungan pelbagai 因素 dalaman 与 luaran.",
-      "key_points_zh": [
-        "Semangat 民族主义 semakin kuat 于 abad ke-20 akibat gabungan pelbagai 因素 dalaman 与 luaran."
-      ],
-      "bm_focus_phrase": "Semangat nasionalisme semakin kuat pada abad ke-20 akibat gabungan pelbagai faktor dalaman dan luaran."
+      "translate": "到了二十世纪，民族主义精神之所以越来越强烈，是因为受到多种内部与外部因素共同推动。"
     },
     {
       "source_id": "bab-2-6-u18",
       "bm_original": "Agama, pendidikan, penulisan, media dan pengaruh antarabangsa memainkan peranan besar dalam membangkitkan kesedaran rakyat.",
-      "translate": "Agama, pendidikan, penulisan, media 与 pengaruh antarabangsa memainkan peranan besar 在 membangkitkan kesedaran 人民.",
-      "key_points_zh": [
-        "Agama, pendidikan, penulisan, media 与 pengaruh antarabangsa memainkan peranan besar 在 membangkitkan kesedaran 人民."
-      ],
-      "bm_focus_phrase": "Agama, pendidikan, penulisan, media dan pengaruh antarabangsa memainkan peranan besar dalam membangkitkan kesedaran rakyat."
+      "translate": "宗教、教育、写作、媒体以及国际影响，都在唤醒人民意识方面发挥了重要作用。"
     },
     {
       "source_id": "bab-2-6-u19",
       "bm_original": "Kesedaran ini disebarkan melalui karya kreatif, akhbar, madrasah, institusi pendidikan dan penubuhan persatuan.",
-      "translate": "Kesedaran 这 disebarkan 通过 karya kreatif, 报章, madrasah, institusi pendidikan 与 成立 协会.",
-      "key_points_zh": [
-        "Kesedaran 这 disebarkan 通过 karya kreatif, 报章, madrasah, institusi pendidikan 与 成立 协会."
-      ],
-      "bm_focus_phrase": "Kesedaran ini disebarkan melalui karya kreatif, akhbar, madrasah, institusi pendidikan dan penubuhan persatuan."
+      "translate": "这种意识通过文学创作、报刊、madrasah、教育机构以及组织的成立而被传播开来。"
     },
     {
       "source_id": "bab-2-6-u20",
       "bm_original": "Semua faktor ini akhirnya melahirkan tokoh dan gerakan yang menjadi asas perjuangan kemerdekaan Tanah Melayu.",
-      "translate": "Semua 因素 这 akhirnya melahirkan tokoh 与 gerakan 的 menjadi asas 斗争 独立 Tanah Melayu.",
-      "key_points_zh": [
-        "Semua 因素 这 akhirnya melahirkan tokoh 与 gerakan 的 menjadi asas 斗争 独立 Tanah Melayu."
-      ],
-      "bm_focus_phrase": "Semua faktor ini akhirnya melahirkan tokoh dan gerakan yang menjadi asas perjuangan kemerdekaan Tanah Melayu."
+      "translate": "这些因素最终孕育出重要人物与运动，并成为 Tanah Melayu 独立斗争的重要基础。"
     },
+
+    {
+      "source_id": "bab-2-6-u21",
+      "bm_original": "Subtopik ini menerangkan faktor-faktor yang menyebabkan semangat nasionalisme semakin kuat pada abad ke-20. Kesedaran ini tidak muncul secara tiba-tiba, sebaliknya dipengaruhi oleh agama, penulisan, media, pendidikan, golongan intelektual dan pengaruh luar.",
+      "translate": "本小节说明，为什么民族主义精神会在二十世纪变得更加强烈。这种意识并不是突然出现的，而是受到宗教、写作、媒体、教育、知识分子群体以及外来影响所推动。"
+    },
+
     {
       "source_id": "bab-2-6-soalan-heading",
       "bm_original": "Apa yang menyebabkan semangat nasionalisme semakin kuat pada abad ke-20?",
-      "translate": "Apa 的 menyebabkan semangat 民族主义 semakin kuat 于 abad ke-20?",
-      "key_points_zh": [
-        "Apa 的 menyebabkan semangat 民族主义 semakin kuat 于 abad ke-20?"
-      ],
-      "bm_focus_phrase": "Apa yang menyebabkan semangat nasionalisme semakin kuat pada abad ke-20?"
+      "translate": "是什么原因使民族主义精神在二十世纪变得越来越强烈？"
     },
     {
       "source_id": "bab-2-6-soalan-line-1",
       "bm_original": "Banyak faktor dalaman dan luaran seperti agama, pendidikan, penulisan, media dan pengaruh antarabangsa telah mencetuskan kesedaran rakyat untuk bangkit menentang penjajahan.",
-      "translate": "Banyak 因素 dalaman 与 luaran seperti agama, pendidikan, penulisan, media 与 pengaruh antarabangsa 已经 mencetuskan kesedaran 人民 为了 bangkit 反对 penjajahan.",
-      "key_points_zh": [
-        "Banyak 因素 dalaman 与 luaran seperti agama, pendidikan, penulisan, media 与 pengaruh antarabangsa 已经 mencetuskan kesedaran 人民 为了 bangkit 反对 penjajahan."
-      ],
-      "bm_focus_phrase": "Banyak faktor dalaman dan luaran seperti agama, pendidikan, penulisan, media dan pengaruh antarabangsa telah mencetuskan kesedaran rakyat untuk bangkit menentang penjajahan."
+      "translate": "宗教、教育、写作、媒体和国际影响等多种内外因素，激发了人民觉醒并奋起反抗殖民统治。"
     },
+
     {
       "source_id": "bab-2-6-fokus-line",
       "bm_original": "Nasionalisme Melayu pada abad ke-20 didorong oleh pelbagai faktor dalaman dan luaran yang saling berkaitan. Subtopik ini membincangkan enam faktor utama yang mendorong kemunculan dan perkembangan nasionalisme Melayu:",
-      "translate": "民族主义 Melayu 于 abad ke-20 didorong 由 pelbagai 因素 dalaman 与 luaran 的 saling berkaitan. Subtopik 这 membincangkan enam 因素 主要 的 mendorong kemunculan 与 perkembangan 民族主义 Melayu:",
-      "key_points_zh": [
-        "民族主义 Melayu 于 abad ke-20 didorong 由 pelbagai 因素 dalaman 与 luaran 的 saling berkaitan. Subtopik 这 membincangkan enam 因素 主要 的 mendorong kemunculan 与 perkembangan 民族主义 Melayu:"
-      ],
-      "bm_focus_phrase": "Nasionalisme Melayu pada abad ke-20 didorong oleh pelbagai faktor dalaman dan luaran yang saling berkaitan. Subtopik ini membincangkan enam faktor utama yang mendorong kemunculan dan perkembangan nasionalisme Melayu:"
+      "translate": "二十世纪的马来民族主义，是由多种彼此相关的内外因素推动形成的。本小节将讨论促成马来民族主义出现与发展的六个主要因素："
     },
     {
+      "source_id": "bab-2-6-extra-52",
+      "bm_original": "Peranan Agama",
+      "translate": "宗教的作用"
+    },
+    {
+      "source_id": "bab-2-6-extra-53",
+      "bm_original": "Penulisan Kreatif",
+      "translate": "创意写作"
+    },
+    {
+      "source_id": "bab-2-6-extra-54",
+      "bm_original": "Media Cetak",
+      "translate": "印刷媒体"
+    },
+    {
+      "source_id": "bab-2-6-extra-55",
+      "bm_original": "Sistem Pendidikan",
+      "translate": "教育制度"
+    },
+    {
+      "source_id": "bab-2-6-extra-56",
+      "bm_original": "Golongan Intelektual",
+      "translate": "知识分子群体"
+    },
+    {
+      "source_id": "bab-2-6-extra-57",
+      "bm_original": "Pengaruh Luar & Serantau",
+      "translate": "外来与区域影响"
+    },
+
+    {
       "source_id": "bab-2-6-u01",
-      "bm_original": "Pelajar dari Tanah Melayu yang melanjutkan pelajaran ke Mesir terpengaruh dengan Gerakan Islah .",
-      "translate": "Pelajar dari Tanah Melayu 的 melanjutkan pelajaran ke Mesir terpengaruh 以 Gerakan Islah .",
-      "key_points_zh": [
-        "Pelajar dari Tanah Melayu 的 melanjutkan pelajaran ke Mesir terpengaruh 以 Gerakan Islah ."
-      ],
-      "bm_focus_phrase": "Pelajar dari Tanah Melayu yang melanjutkan pelajaran ke Mesir terpengaruh dengan Gerakan Islah ."
+      "bm_original": "Pelajar dari Tanah Melayu yang melanjutkan pelajaran ke Mesir terpengaruh dengan Gerakan Islah.",
+      "translate": "来自 Tanah Melayu、到 Mesir 深造的学生，深受 Gerakan Islah 的影响。"
+    },
+    {
+      "source_id": "bab-2-6-u22",
+      "bm_original": "Tokoh penting gerakan ini:",
+      "translate": "这场运动的重要人物包括："
     },
     {
       "source_id": "bab-2-6-extra-1",
       "bm_original": "Sayyid Jamal al-Din al-Afghani",
-      "translate": "重点：Sayyid Jamal al-Din al-Afghani",
-      "key_points_zh": [
-        "重点：Sayyid Jamal al-Din al-Afghani"
-      ],
-      "bm_focus_phrase": "Sayyid Jamal al-Din al-Afghani"
+      "translate": "Sayyid Jamal al-Din al-Afghani"
     },
     {
       "source_id": "bab-2-6-extra-2",
       "bm_original": "Sheikh Muhammad Abduh",
-      "translate": "重点：Sheikh Muhammad Abduh",
-      "key_points_zh": [
-        "重点：Sheikh Muhammad Abduh"
-      ],
-      "bm_focus_phrase": "Sheikh Muhammad Abduh"
+      "translate": "Sheikh Muhammad Abduh"
     },
     {
       "source_id": "bab-2-6-extra-3",
       "bm_original": "Rashid Rida",
-      "translate": "重点：Rashid Rida",
-      "key_points_zh": [
-        "重点：Rashid Rida"
-      ],
-      "bm_focus_phrase": "Rashid Rida"
+      "translate": "Rashid Rida"
+    },
+    {
+      "source_id": "bab-2-6-u23",
+      "bm_original": "Seruan mereka ialah:",
+      "translate": "他们所提出的主张包括："
     },
     {
       "source_id": "bab-2-6-extra-4",
       "bm_original": "kembali kepada ajaran al-Quran dan Hadis",
-      "translate": "kembali 向 ajaran al-Quran 与 Hadis",
-      "key_points_zh": [
-        "kembali 向 ajaran al-Quran 与 Hadis"
-      ],
-      "bm_focus_phrase": "kembali kepada ajaran al-Quran dan Hadis"
+      "translate": "回归 al-Quran 与 Hadis 的教导"
     },
     {
       "source_id": "bab-2-6-extra-5",
       "bm_original": "menolak imperialisme Barat di negara Islam",
-      "translate": "重点：menolak imperialisme Barat di negara Islam",
-      "key_points_zh": [
-        "重点：menolak imperialisme Barat di negara Islam"
-      ],
-      "bm_focus_phrase": "menolak imperialisme Barat di negara Islam"
+      "translate": "拒绝西方帝国主义在伊斯兰国家的影响"
     },
     {
       "source_id": "bab-2-6-extra-6",
       "bm_original": "membangkitkan semangat pembaharuan dan pembebasan umat Islam",
-      "translate": "membangkitkan semangat pembaharuan 与 pembebasan umat Islam",
-      "key_points_zh": [
-        "membangkitkan semangat pembaharuan 与 pembebasan umat Islam"
-      ],
-      "bm_focus_phrase": "membangkitkan semangat pembaharuan dan pembebasan umat Islam"
+      "translate": "唤起穆斯林社会改革与解放的精神"
     },
+
     {
       "source_id": "bab-2-6-u02",
       "bm_original": "Karya kreatif memainkan peranan penting dalam menyedarkan masyarakat tentang penindasan penjajah.",
-      "translate": "Karya kreatif memainkan peranan penting 在 menyedarkan 社会 tentang penindasan penjajah.",
-      "key_points_zh": [
-        "Karya kreatif memainkan peranan penting 在 menyedarkan 社会 tentang penindasan penjajah."
-      ],
-      "bm_focus_phrase": "Karya kreatif memainkan peranan penting dalam menyedarkan masyarakat tentang penindasan penjajah."
+      "translate": "文学创作在唤醒社会认识殖民压迫方面发挥了重要作用。"
+    },
+    {
+      "source_id": "bab-2-6-u24",
+      "bm_original": "Antara karya dan penulis yang terkenal:",
+      "translate": "著名的作品与作者包括："
     },
     {
       "source_id": "bab-2-6-extra-7",
       "bm_original": "Melor Kuala Lumpur – Harun Aminurrashid",
-      "translate": "重点：Melor Kuala Lumpur – Harun Aminurrashid",
-      "key_points_zh": [
-        "重点：Melor Kuala Lumpur – Harun Aminurrashid"
-      ],
-      "bm_focus_phrase": "Melor Kuala Lumpur – Harun Aminurrashid"
+      "translate": "Melor Kuala Lumpur —— Harun Aminurrashid"
     },
     {
       "source_id": "bab-2-6-extra-8",
       "bm_original": "Cerita Awang Putat – Abdul Rahim Kajai",
-      "translate": "重点：Cerita Awang Putat – Abdul Rahim Kajai",
-      "key_points_zh": [
-        "重点：Cerita Awang Putat – Abdul Rahim Kajai"
-      ],
-      "bm_focus_phrase": "Cerita Awang Putat – Abdul Rahim Kajai"
+      "translate": "Cerita Awang Putat —— Abdul Rahim Kajai"
     },
     {
       "source_id": "bab-2-6-extra-9",
       "bm_original": "Putera Gunung Tahan – Ishak Haji Muhammad",
-      "translate": "重点：Putera Gunung Tahan – Ishak Haji Muhammad",
-      "key_points_zh": [
-        "重点：Putera Gunung Tahan – Ishak Haji Muhammad"
-      ],
-      "bm_focus_phrase": "Putera Gunung Tahan – Ishak Haji Muhammad"
+      "translate": "Putera Gunung Tahan —— Ishak Haji Muhammad"
     },
     {
       "source_id": "bab-2-6-extra-10",
       "bm_original": "Anak Mat Lela Gila – Ishak Haji Muhammad (Pak Sako)",
-      "translate": "重点：Anak Mat Lela Gila – Ishak Haji Muhammad (Pak Sako)",
-      "key_points_zh": [
-        "重点：Anak Mat Lela Gila – Ishak Haji Muhammad (Pak Sako)"
-      ],
-      "bm_focus_phrase": "Anak Mat Lela Gila – Ishak Haji Muhammad (Pak Sako)"
+      "translate": "Anak Mat Lela Gila —— Ishak Haji Muhammad（Pak Sako）"
     },
     {
       "source_id": "bab-2-6-u03",
       "bm_original": "Penulisan ini berfungsi untuk:",
-      "translate": "Penulisan 这 berfungsi 为了:",
-      "key_points_zh": [
-        "Penulisan 这 berfungsi 为了:"
-      ],
-      "bm_focus_phrase": "Penulisan ini berfungsi untuk:"
+      "translate": "这些写作的作用在于："
     },
     {
       "source_id": "bab-2-6-extra-11",
       "bm_original": "mengkritik penjajah",
-      "translate": "重点：mengkritik penjajah",
-      "key_points_zh": [
-        "重点：mengkritik penjajah"
-      ],
-      "bm_focus_phrase": "mengkritik penjajah"
+      "translate": "批评殖民者"
     },
     {
       "source_id": "bab-2-6-extra-12",
       "bm_original": "menyedarkan masyarakat",
-      "translate": "menyedarkan 社会",
-      "key_points_zh": [
-        "menyedarkan 社会"
-      ],
-      "bm_focus_phrase": "menyedarkan masyarakat"
+      "translate": "唤醒社会"
     },
     {
       "source_id": "bab-2-6-extra-13",
       "bm_original": "menanam semangat cinta akan kebebasan",
-      "translate": "menanam semangat cinta 将会 kebebasan",
-      "key_points_zh": [
-        "menanam semangat cinta 将会 kebebasan"
-      ],
-      "bm_focus_phrase": "menanam semangat cinta akan kebebasan"
+      "translate": "培养热爱自由的精神"
     },
+
     {
       "source_id": "bab-2-6-u04",
       "bm_original": "Akhbar dan majalah menjadi alat penting untuk menyebarkan idea nasionalisme.",
-      "translate": "报章 与 majalah menjadi alat penting 为了 menyebarkan idea 民族主义.",
-      "key_points_zh": [
-        "报章 与 majalah menjadi alat penting 为了 menyebarkan idea 民族主义."
-      ],
-      "bm_focus_phrase": "Akhbar dan majalah menjadi alat penting untuk menyebarkan idea nasionalisme."
+      "translate": "报纸和杂志成为传播民族主义思想的重要工具。"
     },
     {
       "source_id": "bab-2-6-u05",
       "bm_original": "Peranan media cetak:",
-      "translate": "重点：Peranan media cetak:",
-      "key_points_zh": [
-        "重点：Peranan media cetak:"
-      ],
-      "bm_focus_phrase": "Peranan media cetak:"
+      "translate": "印刷媒体的作用："
     },
     {
       "source_id": "bab-2-6-extra-14",
       "bm_original": "menyampaikan berita kepada masyarakat",
-      "translate": "menyampaikan berita 向 社会",
-      "key_points_zh": [
-        "menyampaikan berita 向 社会"
-      ],
-      "bm_focus_phrase": "menyampaikan berita kepada masyarakat"
+      "translate": "向社会传递消息"
     },
     {
       "source_id": "bab-2-6-extra-15",
       "bm_original": "menyebarkan idea pembaharuan",
-      "translate": "重点：menyebarkan idea pembaharuan",
-      "key_points_zh": [
-        "重点：menyebarkan idea pembaharuan"
-      ],
-      "bm_focus_phrase": "menyebarkan idea pembaharuan"
+      "translate": "传播改革思想"
     },
     {
       "source_id": "bab-2-6-extra-16",
       "bm_original": "meningkatkan kesedaran tentang hak rakyat",
-      "translate": "提升 kesedaran tentang 权利 人民",
-      "key_points_zh": [
-        "提升 kesedaran tentang 权利 人民"
-      ],
-      "bm_focus_phrase": "meningkatkan kesedaran tentang hak rakyat"
+      "translate": "提高人民对自身权利的意识"
+    },
+    {
+      "source_id": "bab-2-6-u25",
+      "bm_original": "Antara akhbar dan majalah yang penting:",
+      "translate": "重要的报纸与杂志包括："
     },
     {
       "source_id": "bab-2-6-extra-17",
       "bm_original": "Jawi Peranakan – mengkritik campur tangan British dalam agama dan bahasa Melayu",
-      "translate": "Jawi Peranakan – mengkritik campur tangan British 在 agama 与 bahasa Melayu",
-      "key_points_zh": [
-        "Jawi Peranakan – mengkritik campur tangan British 在 agama 与 bahasa Melayu"
-      ],
-      "bm_focus_phrase": "Jawi Peranakan – mengkritik campur tangan British dalam agama dan bahasa Melayu"
+      "translate": "Jawi Peranakan —— 批评 British 干涉宗教事务与 Bahasa Melayu"
     },
     {
       "source_id": "bab-2-6-extra-18",
       "bm_original": "Sekola Melayu – bahan bacaan di sekolah Melayu",
-      "translate": "重点：Sekola Melayu – bahan bacaan di sekolah Melayu",
-      "key_points_zh": [
-        "重点：Sekola Melayu – bahan bacaan di sekolah Melayu"
-      ],
-      "bm_focus_phrase": "Sekola Melayu – bahan bacaan di sekolah Melayu"
+      "translate": "Sekola Melayu —— 马来学校的阅读材料"
     },
     {
       "source_id": "bab-2-6-extra-19",
-      "bm_original": "Al-Imam , Neracha , Pengasuh – menyebarkan idea pembaharuan Islam",
-      "translate": "重点：Al-Imam , Neracha , Pengasuh – menyebarkan idea pembaharuan Islam",
-      "key_points_zh": [
-        "重点：Al-Imam , Neracha , Pengasuh – menyebarkan idea pembaharuan Islam"
-      ],
-      "bm_focus_phrase": "Al-Imam , Neracha , Pengasuh – menyebarkan idea pembaharuan Islam"
+      "bm_original": "Al-Imam, Neracha, Pengasuh – menyebarkan idea pembaharuan Islam",
+      "translate": "Al-Imam、Neracha、Pengasuh —— 传播伊斯兰改革思想"
     },
     {
       "source_id": "bab-2-6-extra-20",
       "bm_original": "Fajar Sarawak – membongkar kezaliman pemerintahan Brooke terhadap bumiputera Sarawak",
-      "translate": "Fajar Sarawak – membongkar kezaliman pemerintahan Brooke 针对 bumiputera Sarawak",
-      "key_points_zh": [
-        "Fajar Sarawak – membongkar kezaliman pemerintahan Brooke 针对 bumiputera Sarawak"
-      ],
-      "bm_focus_phrase": "Fajar Sarawak – membongkar kezaliman pemerintahan Brooke terhadap bumiputera Sarawak"
+      "translate": "Fajar Sarawak —— 揭露 Brooke 政权对 Sarawak 土著的不公与压迫"
+    },
+    {
+      "source_id": "bab-2-6-u26",
+      "bm_original": "Tokoh media:",
+      "translate": "媒体人物包括："
     },
     {
       "source_id": "bab-2-6-extra-21",
       "bm_original": "Muhammad Rakawi Yusuf",
-      "translate": "重点：Muhammad Rakawi Yusuf",
-      "key_points_zh": [
-        "重点：Muhammad Rakawi Yusuf"
-      ],
-      "bm_focus_phrase": "Muhammad Rakawi Yusuf"
+      "translate": "Muhammad Rakawi Yusuf"
     },
     {
       "source_id": "bab-2-6-extra-22",
       "bm_original": "Johari Anang",
-      "translate": "重点：Johari Anang",
-      "key_points_zh": [
-        "重点：Johari Anang"
-      ],
-      "bm_focus_phrase": "Johari Anang"
+      "translate": "Johari Anang"
     },
+
     {
       "source_id": "bab-2-6-u06",
       "bm_original": "Madrasah moden menyebarkan idea pembaharuan Islam.",
-      "translate": "重点：Madrasah moden menyebarkan idea pembaharuan Islam.",
-      "key_points_zh": [
-        "重点：Madrasah moden menyebarkan idea pembaharuan Islam."
-      ],
-      "bm_focus_phrase": "Madrasah moden menyebarkan idea pembaharuan Islam."
+      "translate": "现代 madrasah 传播伊斯兰改革思想。"
     },
     {
       "source_id": "bab-2-6-extra-23",
-      "bm_original": "Madrasah al-Attas , Johor Bahru ( 1914 )",
-      "translate": "重点：Madrasah al-Attas , Johor Bahru ( 1914 )",
-      "key_points_zh": [
-        "重点：Madrasah al-Attas , Johor Bahru ( 1914 )"
-      ],
-      "bm_focus_phrase": "Madrasah al-Attas , Johor Bahru ( 1914 )"
+      "bm_original": "Madrasah al-Attas, Johor Bahru (1914)",
+      "translate": "Madrasah al-Attas，Johor Bahru（1914）"
     },
     {
       "source_id": "bab-2-6-extra-24",
-      "bm_original": "Madrasah al-Masyhur , Pulau Pinang ( 1916 )",
-      "translate": "重点：Madrasah al-Masyhur , Pulau Pinang ( 1916 )",
-      "key_points_zh": [
-        "重点：Madrasah al-Masyhur , Pulau Pinang ( 1916 )"
-      ],
-      "bm_focus_phrase": "Madrasah al-Masyhur , Pulau Pinang ( 1916 )"
+      "bm_original": "Madrasah al-Masyhur, Pulau Pinang (1916)",
+      "translate": "Madrasah al-Masyhur，Pulau Pinang（1916）"
     },
     {
       "source_id": "bab-2-6-extra-25",
-      "bm_original": "Madrasah al-Idrisiyah , Kuala Kangsar ( 1926 )",
-      "translate": "重点：Madrasah al-Idrisiyah , Kuala Kangsar ( 1926 )",
-      "key_points_zh": [
-        "重点：Madrasah al-Idrisiyah , Kuala Kangsar ( 1926 )"
-      ],
-      "bm_focus_phrase": "Madrasah al-Idrisiyah , Kuala Kangsar ( 1926 )"
+      "bm_original": "Madrasah al-Idrisiyah, Kuala Kangsar (1926)",
+      "translate": "Madrasah al-Idrisiyah，Kuala Kangsar（1926）"
     },
     {
       "source_id": "bab-2-6-u07",
       "bm_original": "Madrasah ini menerima pengaruh Kaum Muda dari Sumatera serta pelajar yang pulang dari Mesir.",
-      "translate": "Madrasah 这 menerima pengaruh Kaum Muda dari Sumatera 以及 pelajar 的 pulang dari Mesir.",
-      "key_points_zh": [
-        "Madrasah 这 menerima pengaruh Kaum Muda dari Sumatera 以及 pelajar 的 pulang dari Mesir."
-      ],
-      "bm_focus_phrase": "Madrasah ini menerima pengaruh Kaum Muda dari Sumatera serta pelajar yang pulang dari Mesir."
+      "translate": "这些 madrasah 受到来自 Sumatera 的 Kaum Muda，以及从 Mesir 学成归来的学生所影响。"
     },
     {
       "source_id": "bab-2-6-u08",
       "bm_original": "Institusi pendidikan Barat turut melahirkan tokoh nasionalis.",
-      "translate": "重点：Institusi pendidikan Barat turut melahirkan tokoh nasionalis.",
-      "key_points_zh": [
-        "重点：Institusi pendidikan Barat turut melahirkan tokoh nasionalis."
-      ],
-      "bm_focus_phrase": "Institusi pendidikan Barat turut melahirkan tokoh nasionalis."
+      "translate": "西方教育机构也培养了民族主义人物。"
     },
     {
       "source_id": "bab-2-6-extra-26",
-      "bm_original": "Raffles Institution , Singapura",
-      "translate": "重点：Raffles Institution , Singapura",
-      "key_points_zh": [
-        "重点：Raffles Institution , Singapura"
-      ],
-      "bm_focus_phrase": "Raffles Institution , Singapura"
+      "bm_original": "Raffles Institution, Singapura",
+      "translate": "Raffles Institution，Singapura"
     },
     {
       "source_id": "bab-2-6-extra-27",
       "bm_original": "Malay College Kuala Kangsar (MCKK)",
-      "translate": "重点：Malay College Kuala Kangsar (MCKK)",
-      "key_points_zh": [
-        "重点：Malay College Kuala Kangsar (MCKK)"
-      ],
-      "bm_focus_phrase": "Malay College Kuala Kangsar (MCKK)"
+      "translate": "Malay College Kuala Kangsar（MCKK）"
     },
     {
       "source_id": "bab-2-6-extra-28",
       "bm_original": "Sultan Idris Training College (SITC)",
-      "translate": "Sultan Idris Training College (SITC)",
-      "key_points_zh": [
-        "Sultan Idris Training College (SITC)"
-      ],
-      "bm_focus_phrase": "Sultan Idris Training College (SITC)"
+      "translate": "Sultan Idris Training College（SITC）"
     },
     {
       "source_id": "bab-2-6-u09",
       "bm_original": "SITC menjadi pusat penting dalam melahirkan penulis dan pemimpin masyarakat.",
-      "translate": "SITC menjadi pusat penting 在 melahirkan penulis 与 领袖 社会.",
-      "key_points_zh": [
-        "SITC menjadi pusat penting 在 melahirkan penulis 与 领袖 社会."
-      ],
-      "bm_focus_phrase": "SITC menjadi pusat penting dalam melahirkan penulis dan pemimpin masyarakat."
+      "translate": "SITC 成为培养作家与社会领袖的重要中心。"
     },
     {
       "source_id": "bab-2-6-u10",
       "bm_original": "Di SITC, pelajar membincangkan idea nasionalisme dan menghasilkan penulisan untuk menyedarkan masyarakat.",
-      "translate": "Di SITC, pelajar membincangkan idea 民族主义 与 menghasilkan penulisan 为了 menyedarkan 社会.",
-      "key_points_zh": [
-        "Di SITC, pelajar membincangkan idea 民族主义 与 menghasilkan penulisan 为了 menyedarkan 社会."
-      ],
-      "bm_focus_phrase": "Di SITC, pelajar membincangkan idea nasionalisme dan menghasilkan penulisan untuk menyedarkan masyarakat."
+      "translate": "在 SITC，学生讨论民族主义思想，并通过写作来唤醒社会。"
     },
+
     {
       "source_id": "bab-2-6-u11",
       "bm_original": "Pendidikan telah melahirkan golongan intelektual yang memainkan peranan penting dalam gerakan nasionalisme.",
-      "translate": "Pendidikan 已经 melahirkan golongan intelektual 的 memainkan peranan penting 在 gerakan 民族主义.",
-      "key_points_zh": [
-        "Pendidikan 已经 melahirkan golongan intelektual 的 memainkan peranan penting 在 gerakan 民族主义."
-      ],
-      "bm_focus_phrase": "Pendidikan telah melahirkan golongan intelektual yang memainkan peranan penting dalam gerakan nasionalisme."
+      "translate": "教育培养出知识分子群体，而他们在民族主义运动中发挥了重要作用。"
     },
     {
       "source_id": "bab-2-6-u12",
       "bm_original": "Lepasan Timur Tengah:",
-      "translate": "重点：Lepasan Timur Tengah:",
-      "key_points_zh": [
-        "重点：Lepasan Timur Tengah:"
-      ],
-      "bm_focus_phrase": "Lepasan Timur Tengah:"
+      "translate": "中东留学归来的群体："
     },
     {
       "source_id": "bab-2-6-extra-29",
       "bm_original": "Syed Sheikh al-Hadi – pelopor reformasi pemikiran",
-      "translate": "重点：Syed Sheikh al-Hadi – pelopor reformasi pemikiran",
-      "key_points_zh": [
-        "重点：Syed Sheikh al-Hadi – pelopor reformasi pemikiran"
-      ],
-      "bm_focus_phrase": "Syed Sheikh al-Hadi – pelopor reformasi pemikiran"
+      "translate": "Syed Sheikh al-Hadi —— 思想改革的先驱"
+    },
+    {
+      "source_id": "bab-2-6-u27",
+      "bm_original": "Lepasan Inggeris & Melayu:",
+      "translate": "English 与 Malay 教育出身的群体："
     },
     {
       "source_id": "bab-2-6-extra-30",
       "bm_original": "Abdul Kadir Adabi",
-      "translate": "重点：Abdul Kadir Adabi",
-      "key_points_zh": [
-        "重点：Abdul Kadir Adabi"
-      ],
-      "bm_focus_phrase": "Abdul Kadir Adabi"
+      "translate": "Abdul Kadir Adabi"
     },
     {
       "source_id": "bab-2-6-extra-31",
       "bm_original": "Dato’ Undang Rembau Abdullah Haji Dahan",
-      "translate": "Dato’ Undang Rembau Abdullah Haji Dahan",
-      "key_points_zh": [
-        "Dato’ Undang Rembau Abdullah Haji Dahan"
-      ],
-      "bm_focus_phrase": "Dato’ Undang Rembau Abdullah Haji Dahan"
+      "translate": "Dato’ Undang Rembau Abdullah Haji Dahan"
     },
     {
       "source_id": "bab-2-6-extra-32",
       "bm_original": "Mohammad Eunos Abdullah",
-      "translate": "重点：Mohammad Eunos Abdullah",
-      "key_points_zh": [
-        "重点：Mohammad Eunos Abdullah"
-      ],
-      "bm_focus_phrase": "Mohammad Eunos Abdullah"
+      "translate": "Mohammad Eunos Abdullah"
     },
     {
       "source_id": "bab-2-6-extra-33",
       "bm_original": "Ustaz Abu Bakar Mohd Said (Abu Bakar al-Baqir)",
-      "translate": "重点：Ustaz Abu Bakar Mohd Said (Abu Bakar al-Baqir)",
-      "key_points_zh": [
-        "重点：Ustaz Abu Bakar Mohd Said (Abu Bakar al-Baqir)"
-      ],
-      "bm_focus_phrase": "Ustaz Abu Bakar Mohd Said (Abu Bakar al-Baqir)"
+      "translate": "Ustaz Abu Bakar Mohd Said（Abu Bakar al-Baqir）"
     },
     {
       "source_id": "bab-2-6-extra-34",
       "bm_original": "Ibrahim Haji Yaakob",
-      "translate": "重点：Ibrahim Haji Yaakob",
-      "key_points_zh": [
-        "重点：Ibrahim Haji Yaakob"
-      ],
-      "bm_focus_phrase": "Ibrahim Haji Yaakob"
+      "translate": "Ibrahim Haji Yaakob"
+    },
+    {
+      "source_id": "bab-2-6-u28",
+      "bm_original": "Mereka menyampaikan mesej melalui:",
+      "translate": "他们通过以下方式传播理念："
     },
     {
       "source_id": "bab-2-6-extra-35",
       "bm_original": "penulisan dalam akhbar",
-      "translate": "penulisan 在 报章",
-      "key_points_zh": [
-        "penulisan 在 报章"
-      ],
-      "bm_focus_phrase": "penulisan dalam akhbar"
+      "translate": "在报刊上写作"
     },
     {
       "source_id": "bab-2-6-extra-36",
       "bm_original": "penubuhan persatuan sosioekonomi dan politik",
-      "translate": "成立 协会 sosioekonomi 与 政治",
-      "key_points_zh": [
-        "成立 协会 sosioekonomi 与 政治"
-      ],
-      "bm_focus_phrase": "penubuhan persatuan sosioekonomi dan politik"
+      "translate": "成立社会经济与政治组织"
     },
+
     {
       "source_id": "bab-2-6-u13",
-      "bm_original": "Perkembangan nasionalisme di luar negara turut memberi inspirasi kepada masyarakat di Tanah Melayu .",
-      "translate": "Perkembangan 民族主义 di luar negara turut memberi inspirasi 向 社会 di Tanah Melayu .",
-      "key_points_zh": [
-        "Perkembangan 民族主义 di luar negara turut memberi inspirasi 向 社会 di Tanah Melayu ."
-      ],
-      "bm_focus_phrase": "Perkembangan nasionalisme di luar negara turut memberi inspirasi kepada masyarakat di Tanah Melayu ."
+      "bm_original": "Perkembangan nasionalisme di luar negara turut memberi inspirasi kepada masyarakat di Tanah Melayu.",
+      "translate": "国外民族主义的发展，也为 Tanah Melayu 社会带来了启发。"
     },
     {
       "source_id": "bab-2-6-u14",
       "bm_original": "Antara pengaruh penting:",
-      "translate": "重点：Antara pengaruh penting:",
-      "key_points_zh": [
-        "重点：Antara pengaruh penting:"
-      ],
-      "bm_focus_phrase": "Antara pengaruh penting:"
+      "translate": "其中重要影响包括："
     },
     {
       "source_id": "bab-2-6-extra-37",
       "bm_original": "Pan-Islamisme – menyeru perpaduan umat Islam menentang penjajahan",
-      "translate": "Pan-Islamisme – menyeru perpaduan umat Islam 反对 penjajahan",
-      "key_points_zh": [
-        "Pan-Islamisme – menyeru perpaduan umat Islam 反对 penjajahan"
-      ],
-      "bm_focus_phrase": "Pan-Islamisme – menyeru perpaduan umat Islam menentang penjajahan"
+      "translate": "Pan-Islamisme —— 呼吁穆斯林社会团结起来，共同反抗殖民统治"
     },
     {
       "source_id": "bab-2-6-extra-38",
       "bm_original": "Gerakan Islah – menggalakkan pembaharuan masyarakat Islam secara progresif",
-      "translate": "Gerakan Islah – menggalakkan pembaharuan 社会 Islam secara progresif",
-      "key_points_zh": [
-        "Gerakan Islah – menggalakkan pembaharuan 社会 Islam secara progresif"
-      ],
-      "bm_focus_phrase": "Gerakan Islah – menggalakkan pembaharuan masyarakat Islam secara progresif"
+      "translate": "Gerakan Islah —— 鼓励伊斯兰社会进行进步性的改革"
     },
     {
       "source_id": "bab-2-6-extra-39",
       "bm_original": "Kemenangan Jepun ke atas Rusia (1905) – membuktikan negara Asia mampu menewaskan kuasa Barat",
-      "translate": "重点：Kemenangan Jepun ke atas Rusia (1905) – membuktikan negara Asia mampu menewaskan kuasa Barat",
-      "key_points_zh": [
-        "重点：Kemenangan Jepun ke atas Rusia (1905) – membuktikan negara Asia mampu menewaskan kuasa Barat"
-      ],
-      "bm_focus_phrase": "Kemenangan Jepun ke atas Rusia (1905) – membuktikan negara Asia mampu menewaskan kuasa Barat"
+      "translate": "Jepun 战胜 Rusia（1905）—— 证明亚洲国家也有能力击败西方强国"
     },
     {
       "source_id": "bab-2-6-extra-40",
       "bm_original": "Revolusi China – Dr. Sun Yat Sen menumbangkan kerajaan Manchu dan menubuhkan republik",
-      "translate": "Revolusi China – Dr. Sun Yat Sen menumbangkan 政府 Manchu 与 成立 republik",
-      "key_points_zh": [
-        "Revolusi China – Dr. Sun Yat Sen menumbangkan 政府 Manchu 与 成立 republik"
-      ],
-      "bm_focus_phrase": "Revolusi China – Dr. Sun Yat Sen menumbangkan kerajaan Manchu dan menubuhkan republik"
+      "translate": "Revolusi China —— Dr. Sun Yat Sen 推翻 Manchu 政权并建立共和国"
     },
     {
       "source_id": "bab-2-6-extra-41",
       "bm_original": "Perjuangan Mahatma Gandhi – menentang British melalui gerakan tanpa kekerasan",
-      "translate": "斗争 Mahatma Gandhi – 反对 British 通过 gerakan tanpa kekerasan",
-      "key_points_zh": [
-        "斗争 Mahatma Gandhi – 反对 British 通过 gerakan tanpa kekerasan"
-      ],
-      "bm_focus_phrase": "Perjuangan Mahatma Gandhi – menentang British melalui gerakan tanpa kekerasan"
+      "translate": "Mahatma Gandhi 的斗争 —— 通过非暴力运动反抗 British"
     },
     {
       "source_id": "bab-2-6-extra-42",
       "bm_original": "gerakan nasionalisme di Filipina dan Indonesia – memberi inspirasi kepada rakyat Tanah Melayu",
-      "translate": "gerakan 民族主义 di Filipina 与 Indonesia – memberi inspirasi 向 人民 Tanah Melayu",
-      "key_points_zh": [
-        "gerakan 民族主义 di Filipina 与 Indonesia – memberi inspirasi 向 人民 Tanah Melayu"
-      ],
-      "bm_focus_phrase": "gerakan nasionalisme di Filipina dan Indonesia – memberi inspirasi kepada rakyat Tanah Melayu"
+      "translate": "Filipina 与 Indonesia 的民族主义运动 —— 为 Tanah Melayu 人民带来启发"
+    },
+
+    {
+      "source_id": "bab-2-6-u29",
+      "bm_original": "Gerakan nasionalisme di negara kita tidak muncul secara tiba-tiba.",
+      "translate": "我国的民族主义运动并不是突然出现的。"
     },
     {
       "source_id": "bab-2-6-u15",
       "bm_original": "Ia dipengaruhi oleh pelbagai faktor seperti:",
-      "translate": "Ia dipengaruhi 由 pelbagai 因素 seperti:",
-      "key_points_zh": [
-        "Ia dipengaruhi 由 pelbagai 因素 seperti:"
-      ],
-      "bm_focus_phrase": "Ia dipengaruhi oleh pelbagai faktor seperti:"
+      "translate": "它受到多种因素影响，例如："
     },
     {
       "source_id": "bab-2-6-extra-43",
       "bm_original": "peranan agama",
-      "translate": "重点：peranan agama",
-      "key_points_zh": [
-        "重点：peranan agama"
-      ],
-      "bm_focus_phrase": "peranan agama"
+      "translate": "宗教的作用"
     },
     {
       "source_id": "bab-2-6-extra-44",
       "bm_original": "penulisan kreatif",
-      "translate": "重点：penulisan kreatif",
-      "key_points_zh": [
-        "重点：penulisan kreatif"
-      ],
-      "bm_focus_phrase": "penulisan kreatif"
+      "translate": "创意写作"
     },
     {
       "source_id": "bab-2-6-extra-45",
       "bm_original": "media cetak",
-      "translate": "重点：media cetak",
-      "key_points_zh": [
-        "重点：media cetak"
-      ],
-      "bm_focus_phrase": "media cetak"
+      "translate": "印刷媒体"
     },
     {
       "source_id": "bab-2-6-extra-46",
       "bm_original": "sistem pendidikan",
-      "translate": "重点：sistem pendidikan",
-      "key_points_zh": [
-        "重点：sistem pendidikan"
-      ],
-      "bm_focus_phrase": "sistem pendidikan"
+      "translate": "教育制度"
     },
     {
       "source_id": "bab-2-6-extra-47",
       "bm_original": "kemunculan golongan intelektual",
-      "translate": "重点：kemunculan golongan intelektual",
-      "key_points_zh": [
-        "重点：kemunculan golongan intelektual"
-      ],
-      "bm_focus_phrase": "kemunculan golongan intelektual"
+      "translate": "知识分子群体的出现"
     },
     {
       "source_id": "bab-2-6-extra-48",
       "bm_original": "pengaruh luar dan serantau",
-      "translate": "pengaruh luar 与 serantau",
-      "key_points_zh": [
-        "pengaruh luar 与 serantau"
-      ],
-      "bm_focus_phrase": "pengaruh luar dan serantau"
+      "translate": "外来与区域影响"
     },
     {
       "source_id": "bab-2-6-u16",
       "bm_original": "Faktor-faktor ini melahirkan tokoh yang berjuang melalui:",
-      "translate": "因素-因素 这 melahirkan tokoh 的 berjuang 通过:",
-      "key_points_zh": [
-        "因素-因素 这 melahirkan tokoh 的 berjuang 通过:"
-      ],
-      "bm_focus_phrase": "Faktor-faktor ini melahirkan tokoh yang berjuang melalui:"
+      "translate": "这些因素造就了通过以下方式奋斗的重要人物："
     },
     {
       "source_id": "bab-2-6-extra-49",
       "bm_original": "penulisan",
-      "translate": "重点：penulisan",
-      "key_points_zh": [
-        "重点：penulisan"
-      ],
-      "bm_focus_phrase": "penulisan"
+      "translate": "写作"
     },
     {
       "source_id": "bab-2-6-extra-50",
       "bm_original": "penubuhan persatuan",
-      "translate": "成立 协会",
-      "key_points_zh": [
-        "成立 协会"
-      ],
-      "bm_focus_phrase": "penubuhan persatuan"
+      "translate": "成立协会"
     },
     {
       "source_id": "bab-2-6-extra-51",
       "bm_original": "penyebaran idea kesedaran",
-      "translate": "重点：penyebaran idea kesedaran",
-      "key_points_zh": [
-        "重点：penyebaran idea kesedaran"
-      ],
-      "bm_focus_phrase": "penyebaran idea kesedaran"
+      "translate": "传播觉醒思想"
+    },
+    {
+      "source_id": "bab-2-6-u30",
+      "bm_original": "Semua usaha ini akhirnya menjadi asas penting kepada perjuangan kemerdekaan Tanah Melayu.",
+      "translate": "所有这些努力，最终都成为 Tanah Melayu 独立斗争的重要基础。"
     }
   ]
 }
