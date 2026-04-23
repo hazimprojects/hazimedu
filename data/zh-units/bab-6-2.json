@@ -1,1104 +1,1105 @@
 {
   "meta": {
     "source_file": "notes/bab-6-2.html",
-    "rollout": "gelombang-1-manual-revision"
+    "rollout": "gelombang-1-ms-zh-regenerated",
+    "notes": "Translate fields regenerated from bm_original (ms→zh-CN) for fluent Simplified Chinese; proper names follow translator output—verify against BM notes."
   },
   "units": [
     {
       "source_id": "bab-6-2-u28",
       "bm_original": "Selepas Perang Dunia Kedua , PKM melancarkan perjuangan bersenjata untuk menubuhkan Republik Komunis di Tanah Melayu .",
-      "translate": "Selepas 第二次世界大战 , PKM melancarkan 斗争 bersenjata 为了 成立 Republik Komunis di Tanah Melayu .",
+      "translate": "第二次世界大战后，马来西亚共产党发起武装斗争，在马来亚建立共产主义共和国。",
       "key_points_zh": [
-        "Selepas 第二次世界大战 , PKM melancarkan 斗争 bersenjata 为了 成立 Republik Komunis di Tanah Melayu ."
+        "第二次世界大战后，马来西亚共产党发起武装斗争，在马来亚建立共产主义共和国。"
       ],
       "bm_focus_phrase": "Selepas Perang Dunia Kedua , PKM melancarkan perjuangan bersenjata untuk menubuhkan Republik Komunis di Tanah Melayu ."
     },
     {
       "source_id": "bab-6-2-u29",
       "bm_original": "Pembunuhan tiga pengurus ladang Eropah di Sungai Siput, Perak pada 16 Jun 1948 membawa kepada pengisytiharan darurat .",
-      "translate": "Pembunuhan tiga pengurus ladang Eropah di Sungai Siput, Perak 于 16 Jun 1948 membawa 向 pengisytiharan darurat .",
+      "translate": "1948 年 6 月 16 日，三名欧洲农场经理在霹雳州和丰被谋杀，导致霹雳州宣布进入紧急状态。",
       "key_points_zh": [
-        "Pembunuhan tiga pengurus ladang Eropah di Sungai Siput, Perak 于 16 Jun 1948 membawa 向 pengisytiharan darurat ."
+        "1948 年 6 月 16 日，三名欧洲农场经理在霹雳州和丰被谋杀，导致霹雳州宣布进入紧急状态。"
       ],
       "bm_focus_phrase": "Pembunuhan tiga pengurus ladang Eropah di Sungai Siput, Perak pada 16 Jun 1948 membawa kepada pengisytiharan darurat ."
     },
     {
       "source_id": "bab-6-2-u30",
       "bm_original": "Selepas darurat, komunis terus melancarkan tindakan yang melumpuhkan ekonomi , merosakkan infrastruktur , mengancam keselamatan rakyat dan menyerang pasukan keselamatan .",
-      "translate": "Selepas darurat, komunis terus melancarkan tindakan 的 melumpuhkan ekonomi , merosakkan infrastruktur , 威胁 keselamatan 人民 与 menyerang pasukan keselamatan .",
+      "translate": "紧急情况发生后，共产党人继续发动削弱经济、破坏基础设施、威胁人民安全并袭击安全部队的行动。",
       "key_points_zh": [
-        "Selepas darurat, komunis terus melancarkan tindakan 的 melumpuhkan ekonomi , merosakkan infrastruktur , 威胁 keselamatan 人民 与 menyerang pasukan keselamatan ."
+        "紧急情况发生后，共产党人继续发动削弱经济、破坏基础设施、威胁人民安全并袭击安全部队的行动。"
       ],
       "bm_focus_phrase": "Selepas darurat, komunis terus melancarkan tindakan yang melumpuhkan ekonomi , merosakkan infrastruktur , mengancam keselamatan rakyat dan menyerang pasukan keselamatan ."
     },
     {
       "source_id": "bab-6-2-u31",
       "bm_original": "Ancaman ini menyebabkan rakyat hidup dalam ketakutan dan mendorong kerajaan serta penduduk bekerjasama untuk membanteras komunis demi menjaga keamanan negara.",
-      "translate": "Ancaman 这 menyebabkan 人民 hidup 在 ketakutan 与 mendorong 政府 以及 penduduk bekerjasama 为了 membanteras komunis demi menjaga keamanan negara.",
+      "translate": "这种威胁使人民生活在恐惧之中，促使政府和人民共同努力对抗共产党，以维护国家的和平。",
       "key_points_zh": [
-        "Ancaman 这 menyebabkan 人民 hidup 在 ketakutan 与 mendorong 政府 以及 penduduk bekerjasama 为了 membanteras komunis demi menjaga keamanan negara."
+        "这种威胁使人民生活在恐惧之中，促使政府和人民共同努力对抗共产党，以维护国家的和平。"
       ],
       "bm_focus_phrase": "Ancaman ini menyebabkan rakyat hidup dalam ketakutan dan mendorong kerajaan serta penduduk bekerjasama untuk membanteras komunis demi menjaga keamanan negara."
     },
     {
       "source_id": "bab-6-2-u01",
       "bm_original": "Selepas Perang Dunia Kedua , Parti Komunis Malaya (PKM) melancarkan perjuangan bersenjata untuk menubuhkan Republik Komunis di Tanah Melayu .",
-      "translate": "Selepas 第二次世界大战 , Parti Komunis Malaya (PKM) melancarkan 斗争 bersenjata 为了 成立 Republik Komunis di Tanah Melayu .",
+      "translate": "第二次世界大战后，马来亚共产党（PKM）发动武装斗争，在马来亚建立共产主义共和国。",
       "key_points_zh": [
-        "Selepas 第二次世界大战 , Parti Komunis Malaya (PKM) melancarkan 斗争 bersenjata 为了 成立 Republik Komunis di Tanah Melayu ."
+        "第二次世界大战后，马来亚共产党（PKM）发动武装斗争，在马来亚建立共产主义共和国。"
       ],
       "bm_focus_phrase": "Selepas Perang Dunia Kedua , Parti Komunis Malaya (PKM) melancarkan perjuangan bersenjata untuk menubuhkan Republik Komunis di Tanah Melayu ."
     },
     {
       "source_id": "bab-6-2-u02",
       "bm_original": "Tindakan ini menyebabkan British mengisytiharkan darurat dan memulakan usaha membanteras ancaman komunis.",
-      "translate": "Tindakan 这 menyebabkan British mengisytiharkan darurat 与 memulakan usaha membanteras ancaman komunis.",
+      "translate": "这一行动导致英国宣布进入紧急状态，并开始努力对抗共产主义威胁。",
       "key_points_zh": [
-        "Tindakan 这 menyebabkan British mengisytiharkan darurat 与 memulakan usaha membanteras ancaman komunis."
+        "这一行动导致英国宣布进入紧急状态，并开始努力对抗共产主义威胁。"
       ],
       "bm_focus_phrase": "Tindakan ini menyebabkan British mengisytiharkan darurat dan memulakan usaha membanteras ancaman komunis."
     },
     {
       "source_id": "bab-6-2-u03",
       "bm_original": "Ancaman komunis di negara kita dapat difahami melalui dua bahagian utama:",
-      "translate": "Ancaman komunis di negara kita dapat difahami 通过 dua bahagian 主要:",
+      "translate": "我国的共产主义威胁可以通过两个主要部分来理解：",
       "key_points_zh": [
-        "Ancaman komunis di negara kita dapat difahami 通过 dua bahagian 主要:"
+        "我国的共产主义威胁可以通过两个主要部分来理解："
       ],
       "bm_focus_phrase": "Ancaman komunis di negara kita dapat difahami melalui dua bahagian utama:"
     },
     {
       "source_id": "bab-6-2-extra-1",
       "bm_original": "1️⃣ latar belakang dan perisytiharan darurat 🚨",
-      "translate": "1️⃣ latar belakang 与 perisytiharan darurat 🚨",
+      "translate": "1️⃣背景和紧急声明🚨",
       "key_points_zh": [
-        "1️⃣ latar belakang 与 perisytiharan darurat 🚨"
+        "1️⃣背景和紧急声明🚨"
       ],
       "bm_focus_phrase": "1️⃣ latar belakang dan perisytiharan darurat 🚨"
     },
     {
       "source_id": "bab-6-2-extra-2",
       "bm_original": "2️⃣ tindakan komunis selepas darurat 💣",
-      "translate": "2️⃣ tindakan komunis 在…之后 darurat 💣",
+      "translate": "2️⃣ 紧急情况后的共产主义行动💣",
       "key_points_zh": [
-        "2️⃣ tindakan komunis 在…之后 darurat 💣"
+        "2️⃣ 紧急情况后的共产主义行动💣"
       ],
       "bm_focus_phrase": "2️⃣ tindakan komunis selepas darurat 💣"
     },
     {
       "source_id": "bab-6-2-u04",
       "bm_original": "Gerakan Komunis Antarabangsa telah menganjurkan dua persidangan penting di Calcutta, India , iaitu:",
-      "translate": "Gerakan Komunis Antarabangsa 已经 menganjurkan dua persidangan penting di Calcutta, India , iaitu:",
+      "translate": "国际共产主义运动在印度加尔各答组织了两次重要会议，即：",
       "key_points_zh": [
-        "Gerakan Komunis Antarabangsa 已经 menganjurkan dua persidangan penting di Calcutta, India , iaitu:"
+        "国际共产主义运动在印度加尔各答组织了两次重要会议，即："
       ],
       "bm_focus_phrase": "Gerakan Komunis Antarabangsa telah menganjurkan dua persidangan penting di Calcutta, India , iaitu:"
     },
     {
       "source_id": "bab-6-2-u32",
       "bm_original": "19 Februari 1948 – 25 Februari 1948 → Persidangan Kongres Belia Asia",
-      "translate": "重点：19 Februari 1948 – 25 Februari 1948 → Persidangan Kongres Belia Asia",
+      "translate": "1948年2月19日 – 1948年2月25日 → 亚洲青年代表大会",
       "key_points_zh": [
-        "重点：19 Februari 1948 – 25 Februari 1948 → Persidangan Kongres Belia Asia"
+        "1948年2月19日 – 1948年2月25日 → 亚洲青年代表大会"
       ],
       "bm_focus_phrase": "19 Februari 1948 – 25 Februari 1948 → Persidangan Kongres Belia Asia"
     },
     {
       "source_id": "bab-6-2-u33",
       "bm_original": "Mac 1948 → Persidangan Parti Komunis India",
-      "translate": "重点：Mac 1948 → Persidangan Parti Komunis India",
+      "translate": "1948 年 3 月 → 印度共产党会议",
       "key_points_zh": [
-        "重点：Mac 1948 → Persidangan Parti Komunis India"
+        "1948 年 3 月 → 印度共产党会议"
       ],
       "bm_focus_phrase": "Mac 1948 → Persidangan Parti Komunis India"
     },
     {
       "source_id": "bab-6-2-u05",
       "bm_original": "PKM turut menghantar wakil ke persidangan tersebut.",
-      "translate": "重点：PKM turut menghantar wakil ke persidangan tersebut.",
+      "translate": "PKM也派代表出席了会议。",
       "key_points_zh": [
-        "重点：PKM turut menghantar wakil ke persidangan tersebut."
+        "PKM也派代表出席了会议。"
       ],
       "bm_focus_phrase": "PKM turut menghantar wakil ke persidangan tersebut."
     },
     {
       "source_id": "bab-6-2-u06",
       "bm_original": "Dalam persidangan itu, pengikut komunis di kawasan yang dijajah digesa supaya:",
-      "translate": "Dalam persidangan 那, pengikut komunis di kawasan 的 dijajah digesa supaya:",
+      "translate": "在会议上，敦促殖民地地区的共产主义追随者：",
       "key_points_zh": [
-        "Dalam persidangan 那, pengikut komunis di kawasan 的 dijajah digesa supaya:"
+        "在会议上，敦促殖民地地区的共产主义追随者："
       ],
       "bm_focus_phrase": "Dalam persidangan itu, pengikut komunis di kawasan yang dijajah digesa supaya:"
     },
     {
       "source_id": "bab-6-2-extra-3",
       "bm_original": "memperhebat perjuangan menentang kuasa imperialis di setiap negara Asia",
-      "translate": "memperhebat 斗争 反对 kuasa imperialis di setiap negara Asia",
+      "translate": "在亚洲各国加紧反对帝国主义势力的斗争",
       "key_points_zh": [
-        "memperhebat 斗争 反对 kuasa imperialis di setiap negara Asia"
+        "在亚洲各国加紧反对帝国主义势力的斗争"
       ],
       "bm_focus_phrase": "memperhebat perjuangan menentang kuasa imperialis di setiap negara Asia"
     },
     {
       "source_id": "bab-6-2-u07",
       "bm_original": "Berikutan itu, Jawatankuasa Eksekutif Pusat PKM mengambil keputusan untuk:",
-      "translate": "Berikutan 那, Jawatankuasa Eksekutif Pusat PKM mengambil keputusan 为了:",
+      "translate": "随后，马来西亚共产党中央执行委员会决定：",
       "key_points_zh": [
-        "Berikutan 那, Jawatankuasa Eksekutif Pusat PKM mengambil keputusan 为了:"
+        "随后，马来西亚共产党中央执行委员会决定："
       ],
       "bm_focus_phrase": "Berikutan itu, Jawatankuasa Eksekutif Pusat PKM mengambil keputusan untuk:"
     },
     {
       "source_id": "bab-6-2-extra-4",
       "bm_original": "melancarkan perjuangan bersenjata",
-      "translate": "melancarkan 斗争 bersenjata",
+      "translate": "发动武装斗争",
       "key_points_zh": [
-        "melancarkan 斗争 bersenjata"
+        "发动武装斗争"
       ],
       "bm_focus_phrase": "melancarkan perjuangan bersenjata"
     },
     {
       "source_id": "bab-6-2-extra-5",
       "bm_original": "menubuhkan Republik Komunis di Tanah Melayu",
-      "translate": "成立 Republik Komunis di Tanah Melayu",
+      "translate": "在马来亚建立共产主义共和国",
       "key_points_zh": [
-        "成立 Republik Komunis di Tanah Melayu"
+        "在马来亚建立共产主义共和国"
       ],
       "bm_focus_phrase": "menubuhkan Republik Komunis di Tanah Melayu"
     },
     {
       "source_id": "bab-6-2-u34",
       "bm_original": "16 Jun 1948 → komunis membunuh tiga orang pengurus ladang Eropah di Sungai Siput, Perak .",
-      "translate": "重点：16 Jun 1948 → komunis membunuh tiga orang pengurus ladang Eropah di Sungai Siput, Perak .",
+      "translate": "1948 年 6 月 16 日 → 共产党在霹雳州和丰杀害了三名欧洲农场经理。",
       "key_points_zh": [
-        "重点：16 Jun 1948 → komunis membunuh tiga orang pengurus ladang Eropah di Sungai Siput, Perak ."
+        "1948 年 6 月 16 日 → 共产党在霹雳州和丰杀害了三名欧洲农场经理。"
       ],
       "bm_focus_phrase": "16 Jun 1948 → komunis membunuh tiga orang pengurus ladang Eropah di Sungai Siput, Perak ."
     },
     {
       "source_id": "bab-6-2-extra-6",
       "bm_original": "Arthur Walker – pengurus Ladang Ephil",
-      "translate": "重点：Arthur Walker – pengurus Ladang Ephil",
+      "translate": "Arthur Walker – Ephil 农场经理",
       "key_points_zh": [
-        "重点：Arthur Walker – pengurus Ladang Ephil"
+        "Arthur Walker – Ephil 农场经理"
       ],
       "bm_focus_phrase": "Arthur Walker – pengurus Ladang Ephil"
     },
     {
       "source_id": "bab-6-2-extra-7",
       "bm_original": "John Allison – pengurus Ladang Phin Soon",
-      "translate": "重点：John Allison – pengurus Ladang Phin Soon",
+      "translate": "John Allison – Phin Soon 农场经理",
       "key_points_zh": [
-        "重点：John Allison – pengurus Ladang Phin Soon"
+        "John Allison – Phin Soon 农场经理"
       ],
       "bm_focus_phrase": "John Allison – pengurus Ladang Phin Soon"
     },
     {
       "source_id": "bab-6-2-extra-8",
       "bm_original": "Ian Cristian – pembantu John Allison",
-      "translate": "重点：Ian Cristian – pembantu John Allison",
+      "translate": "伊恩·克里斯蒂安 – 约翰·艾利森的助手",
       "key_points_zh": [
-        "重点：Ian Cristian – pembantu John Allison"
+        "伊恩·克里斯蒂安 – 约翰·艾利森的助手"
       ],
       "bm_focus_phrase": "Ian Cristian – pembantu John Allison"
     },
     {
       "source_id": "bab-6-2-u08",
       "bm_original": "Berikutan peristiwa itu, Sir Edward Gent , Pesuruhjaya Tinggi British di Tanah Melayu , mengisytiharkan darurat .",
-      "translate": "Berikutan peristiwa 那, Sir Edward Gent , Pesuruhjaya Tinggi British di Tanah Melayu , mengisytiharkan darurat .",
+      "translate": "事件发生后，英国驻马来亚高级专员爱德华·根特爵士宣布进入紧急状态。",
       "key_points_zh": [
-        "Berikutan peristiwa 那, Sir Edward Gent , Pesuruhjaya Tinggi British di Tanah Melayu , mengisytiharkan darurat ."
+        "事件发生后，英国驻马来亚高级专员爱德华·根特爵士宣布进入紧急状态。"
       ],
       "bm_focus_phrase": "Berikutan peristiwa itu, Sir Edward Gent , Pesuruhjaya Tinggi British di Tanah Melayu , mengisytiharkan darurat ."
     },
     {
       "source_id": "bab-6-2-u35",
       "bm_original": "16 Jun 1948 → dilaksanakan di kawasan tertentu di:",
-      "translate": "重点：16 Jun 1948 → dilaksanakan di kawasan tertentu di:",
+      "translate": "1948 年 6 月 16 日 → 在以下某些领域实施：",
       "key_points_zh": [
-        "重点：16 Jun 1948 → dilaksanakan di kawasan tertentu di:"
+        "1948 年 6 月 16 日 → 在以下某些领域实施："
       ],
       "bm_focus_phrase": "16 Jun 1948 → dilaksanakan di kawasan tertentu di:"
     },
     {
       "source_id": "bab-6-2-extra-9",
       "bm_original": "Perak – Ipoh dan Sungai Siput",
-      "translate": "Perak – Ipoh 与 Sungai Siput",
+      "translate": "霹雳州 – 怡保和双溪布",
       "key_points_zh": [
-        "Perak – Ipoh 与 Sungai Siput"
+        "霹雳州 – 怡保和双溪布"
       ],
       "bm_focus_phrase": "Perak – Ipoh dan Sungai Siput"
     },
     {
       "source_id": "bab-6-2-extra-10",
       "bm_original": "Johor – Muar , Kluang , Kulai dan Plentong",
-      "translate": "Johor – Muar , Kluang , Kulai 与 Plentong",
+      "translate": "柔佛 – 麻坡、居銮、古来和避兰东",
       "key_points_zh": [
-        "Johor – Muar , Kluang , Kulai 与 Plentong"
+        "柔佛 – 麻坡、居銮、古来和避兰东"
       ],
       "bm_focus_phrase": "Johor – Muar , Kluang , Kulai dan Plentong"
     },
     {
       "source_id": "bab-6-2-u36",
       "bm_original": "17 Jun 1948 → diperluas ke seluruh:",
-      "translate": "17 Jun 1948 → diperluas ke 全国:",
+      "translate": "1948 年 6 月 17 日 → 扩展到所有人：",
       "key_points_zh": [
-        "17 Jun 1948 → diperluas ke 全国:"
+        "1948 年 6 月 17 日 → 扩展到所有人："
       ],
       "bm_focus_phrase": "17 Jun 1948 → diperluas ke seluruh:"
     },
     {
       "source_id": "bab-6-2-extra-11",
       "bm_original": "negeri Perak",
-      "translate": "州 Perak",
+      "translate": "霹雳州",
       "key_points_zh": [
-        "州 Perak"
+        "霹雳州"
       ],
       "bm_focus_phrase": "negeri Perak"
     },
     {
       "source_id": "bab-6-2-extra-12",
       "bm_original": "negeri Johor",
-      "translate": "州 Johor",
+      "translate": "柔佛州",
       "key_points_zh": [
-        "州 Johor"
+        "柔佛州"
       ],
       "bm_focus_phrase": "negeri Johor"
     },
     {
       "source_id": "bab-6-2-u37",
       "bm_original": "18 Jun 1948 → dikuatkuasakan ke seluruh Tanah Melayu .",
-      "translate": "18 Jun 1948 → dikuatkuasakan ke 全国 Tanah Melayu .",
+      "translate": "1948 年 6 月 18 日 → 在整个马来亚实施。",
       "key_points_zh": [
-        "18 Jun 1948 → dikuatkuasakan ke 全国 Tanah Melayu ."
+        "1948 年 6 月 18 日 → 在整个马来亚实施。"
       ],
       "bm_focus_phrase": "18 Jun 1948 → dikuatkuasakan ke seluruh Tanah Melayu ."
     },
     {
       "source_id": "bab-6-2-u09",
       "bm_original": "Dengan itu, usaha membanteras ancaman komunis bermula secara rasmi.",
-      "translate": "Dengan 那, usaha membanteras ancaman komunis bermula secara rasmi.",
+      "translate": "从此，消除共产主义威胁的努力正式开始。",
       "key_points_zh": [
-        "Dengan 那, usaha membanteras ancaman komunis bermula secara rasmi."
+        "从此，消除共产主义威胁的努力正式开始。"
       ],
       "bm_focus_phrase": "Dengan itu, usaha membanteras ancaman komunis bermula secara rasmi."
     },
     {
       "source_id": "bab-6-2-u10",
       "bm_original": "Walaupun Undang-Undang Darurat dikuatkuasakan di seluruh Tanah Melayu , komunis tetap meneruskan aktiviti mereka untuk menggugat keamanan dan kestabilan negara.",
-      "translate": "Walaupun Undang-Undang Darurat dikuatkuasakan di 全国 Tanah Melayu , komunis tetap meneruskan aktiviti mereka 为了 menggugat keamanan 与 kestabilan negara.",
+      "translate": "尽管紧急法已在马来亚各地实施，但共产党人继续进行威胁国家和平与稳定的活动。",
       "key_points_zh": [
-        "Walaupun Undang-Undang Darurat dikuatkuasakan di 全国 Tanah Melayu , komunis tetap meneruskan aktiviti mereka 为了 menggugat keamanan 与 kestabilan negara."
+        "尽管紧急法已在马来亚各地实施，但共产党人继续进行威胁国家和平与稳定的活动。"
       ],
       "bm_focus_phrase": "Walaupun Undang-Undang Darurat dikuatkuasakan di seluruh Tanah Melayu , komunis tetap meneruskan aktiviti mereka untuk menggugat keamanan dan kestabilan negara."
     },
     {
       "source_id": "bab-6-2-u11",
       "bm_original": "Bagi memastikan kejayaan perjuangan mereka, komunis sengaja mencetuskan:",
-      "translate": "Bagi memastikan kejayaan 斗争 mereka, komunis sengaja mencetuskan:",
+      "translate": "为了确保斗争的成功，共产党人故意挑衅：",
       "key_points_zh": [
-        "Bagi memastikan kejayaan 斗争 mereka, komunis sengaja mencetuskan:"
+        "为了确保斗争的成功，共产党人故意挑衅："
       ],
       "bm_focus_phrase": "Bagi memastikan kejayaan perjuangan mereka, komunis sengaja mencetuskan:"
     },
     {
       "source_id": "bab-6-2-extra-13",
       "bm_original": "huru-hara",
-      "translate": "重点：huru-hara",
+      "translate": "混乱",
       "key_points_zh": [
-        "重点：huru-hara"
+        "混乱"
       ],
       "bm_focus_phrase": "huru-hara"
     },
     {
       "source_id": "bab-6-2-extra-14",
       "bm_original": "ketakutan",
-      "translate": "重点：ketakutan",
+      "translate": "害怕",
       "key_points_zh": [
-        "重点：ketakutan"
+        "害怕"
       ],
       "bm_focus_phrase": "ketakutan"
     },
     {
       "source_id": "bab-6-2-extra-15",
       "bm_original": "hilangnya keyakinan rakyat terhadap British",
-      "translate": "hilangnya keyakinan 人民 针对 British",
+      "translate": "公众对英国失去信心",
       "key_points_zh": [
-        "hilangnya keyakinan 人民 针对 British"
+        "公众对英国失去信心"
       ],
       "bm_focus_phrase": "hilangnya keyakinan rakyat terhadap British"
     },
     {
       "source_id": "bab-6-2-u12",
       "bm_original": "Tindakan komunis selepas darurat dapat dilihat dalam empat bentuk utama, iaitu:",
-      "translate": "Tindakan komunis 在…之后 darurat dapat dilihat 在 empat bentuk 主要, iaitu:",
+      "translate": "紧急状态后共产党的行动主要有四种形式，即：",
       "key_points_zh": [
-        "Tindakan komunis 在…之后 darurat dapat dilihat 在 empat bentuk 主要, iaitu:"
+        "紧急状态后共产党的行动主要有四种形式，即："
       ],
       "bm_focus_phrase": "Tindakan komunis selepas darurat dapat dilihat dalam empat bentuk utama, iaitu:"
     },
     {
       "source_id": "bab-6-2-extra-16",
       "bm_original": "melumpuhkan ekonomi",
-      "translate": "重点：melumpuhkan ekonomi",
+      "translate": "使经济瘫痪",
       "key_points_zh": [
-        "重点：melumpuhkan ekonomi"
+        "使经济瘫痪"
       ],
       "bm_focus_phrase": "melumpuhkan ekonomi"
     },
     {
       "source_id": "bab-6-2-extra-17",
       "bm_original": "merosakkan infrastruktur",
-      "translate": "重点：merosakkan infrastruktur",
+      "translate": "破坏基础设施",
       "key_points_zh": [
-        "重点：merosakkan infrastruktur"
+        "破坏基础设施"
       ],
       "bm_focus_phrase": "merosakkan infrastruktur"
     },
     {
       "source_id": "bab-6-2-extra-18",
       "bm_original": "mengancam keselamatan rakyat",
-      "translate": "威胁 keselamatan 人民",
+      "translate": "威胁人民群众生命安全",
       "key_points_zh": [
-        "威胁 keselamatan 人民"
+        "威胁人民群众生命安全"
       ],
       "bm_focus_phrase": "mengancam keselamatan rakyat"
     },
     {
       "source_id": "bab-6-2-extra-19",
       "bm_original": "mengancam pasukan keselamatan",
-      "translate": "威胁 pasukan keselamatan",
+      "translate": "威胁安全部队",
       "key_points_zh": [
-        "威胁 pasukan keselamatan"
+        "威胁安全部队"
       ],
       "bm_focus_phrase": "mengancam pasukan keselamatan"
     },
     {
       "source_id": "bab-6-2-u13",
       "bm_original": "Sejak darurat dikuatkuasakan, lombong bijih timah dan ladang getah menjadi sasaran utama serangan komunis untuk melemahkan ekonomi British .",
-      "translate": "Sejak darurat dikuatkuasakan, lombong bijih timah 与 ladang getah menjadi sasaran 主要 serangan komunis 为了 melemahkan ekonomi British .",
+      "translate": "自紧急状态实施以来，锡矿和橡胶种植园成为共产主义袭击的主要目标，削弱了英国经济。",
       "key_points_zh": [
-        "Sejak darurat dikuatkuasakan, lombong bijih timah 与 ladang getah menjadi sasaran 主要 serangan komunis 为了 melemahkan ekonomi British ."
+        "自紧急状态实施以来，锡矿和橡胶种植园成为共产主义袭击的主要目标，削弱了英国经济。"
       ],
       "bm_focus_phrase": "Sejak darurat dikuatkuasakan, lombong bijih timah dan ladang getah menjadi sasaran utama serangan komunis untuk melemahkan ekonomi British ."
     },
     {
       "source_id": "bab-6-2-u38",
       "bm_original": "1948–1956 → komunis menyerang 80 lombong bijih timah .",
-      "translate": "重点：1948–1956 → komunis menyerang 80 lombong bijih timah .",
+      "translate": "1948–1956 → 共产党袭击了 80 个锡矿。",
       "key_points_zh": [
-        "重点：1948–1956 → komunis menyerang 80 lombong bijih timah ."
+        "1948–1956 → 共产党袭击了 80 个锡矿。"
       ],
       "bm_focus_phrase": "1948–1956 → komunis menyerang 80 lombong bijih timah ."
     },
     {
       "source_id": "bab-6-2-extra-20",
       "bm_original": "Perak",
-      "translate": "重点：Perak",
+      "translate": "银",
       "key_points_zh": [
-        "重点：Perak"
+        "银"
       ],
       "bm_focus_phrase": "Perak"
     },
     {
       "source_id": "bab-6-2-extra-21",
       "bm_original": "Selangor",
-      "translate": "重点：Selangor",
+      "translate": "雪兰莪州",
       "key_points_zh": [
-        "重点：Selangor"
+        "雪兰莪州"
       ],
       "bm_focus_phrase": "Selangor"
     },
     {
       "source_id": "bab-6-2-extra-22",
       "bm_original": "Negeri Sembilan",
-      "translate": "重点：Negeri Sembilan",
+      "translate": "森美兰州",
       "key_points_zh": [
-        "重点：Negeri Sembilan"
+        "森美兰州"
       ],
       "bm_focus_phrase": "Negeri Sembilan"
     },
     {
       "source_id": "bab-6-2-u14",
       "bm_original": "Komunis turut bertindak:",
-      "translate": "重点：Komunis turut bertindak:",
+      "translate": "共产党人还采取行动：",
       "key_points_zh": [
-        "重点：Komunis turut bertindak:"
+        "共产党人还采取行动："
       ],
       "bm_focus_phrase": "Komunis turut bertindak:"
     },
     {
       "source_id": "bab-6-2-extra-23",
       "bm_original": "merosakkan pokok getah",
-      "translate": "重点：merosakkan pokok getah",
+      "translate": "损害橡胶树",
       "key_points_zh": [
-        "重点：merosakkan pokok getah"
+        "损害橡胶树"
       ],
       "bm_focus_phrase": "merosakkan pokok getah"
     },
     {
       "source_id": "bab-6-2-extra-24",
       "bm_original": "memusnahkan kilang estet",
-      "translate": "重点：memusnahkan kilang estet",
+      "translate": "摧毁庄园工厂",
       "key_points_zh": [
-        "重点：memusnahkan kilang estet"
+        "摧毁庄园工厂"
       ],
       "bm_focus_phrase": "memusnahkan kilang estet"
     },
     {
       "source_id": "bab-6-2-extra-25",
       "bm_original": "membakar rumah asap",
-      "translate": "重点：membakar rumah asap",
+      "translate": "烧掉烟房",
       "key_points_zh": [
-        "重点：membakar rumah asap"
+        "烧掉烟房"
       ],
       "bm_focus_phrase": "membakar rumah asap"
     },
     {
       "source_id": "bab-6-2-extra-26",
       "bm_original": "memusnahkan rumah kongsi",
-      "translate": "重点：memusnahkan rumah kongsi",
+      "translate": "摧毁共享房屋",
       "key_points_zh": [
-        "重点：memusnahkan rumah kongsi"
+        "摧毁共享房屋"
       ],
       "bm_focus_phrase": "memusnahkan rumah kongsi"
     },
     {
       "source_id": "bab-6-2-extra-27",
       "bm_original": "merosakkan kedai",
-      "translate": "重点：merosakkan kedai",
+      "translate": "毁掉商店",
       "key_points_zh": [
-        "重点：merosakkan kedai"
+        "毁掉商店"
       ],
       "bm_focus_phrase": "merosakkan kedai"
     },
     {
       "source_id": "bab-6-2-extra-28",
       "bm_original": "merosakkan sekolah",
-      "translate": "重点：merosakkan sekolah",
+      "translate": "毁了学校",
       "key_points_zh": [
-        "重点：merosakkan sekolah"
+        "毁了学校"
       ],
       "bm_focus_phrase": "merosakkan sekolah"
     },
     {
       "source_id": "bab-6-2-extra-29",
       "bm_original": "membunuh pekerja",
-      "translate": "重点：membunuh pekerja",
+      "translate": "杀死工人",
       "key_points_zh": [
-        "重点：membunuh pekerja"
+        "杀死工人"
       ],
       "bm_focus_phrase": "membunuh pekerja"
     },
     {
       "source_id": "bab-6-2-u15",
       "bm_original": "Tindakan ini menyebabkan pekerja ladang dan lombong menderita kerana pekerjaan harian terganggu dan nyawa mereka turut terancam.",
-      "translate": "Tindakan 这 menyebabkan pekerja ladang 与 lombong menderita 因为 pekerjaan harian terganggu 与 nyawa mereka turut terancam.",
+      "translate": "这一行为使农场和矿山工人的日常工作被中断，生命也受到威胁。",
       "key_points_zh": [
-        "Tindakan 这 menyebabkan pekerja ladang 与 lombong menderita 因为 pekerjaan harian terganggu 与 nyawa mereka turut terancam."
+        "这一行为使农场和矿山工人的日常工作被中断，生命也受到威胁。"
       ],
       "bm_focus_phrase": "Tindakan ini menyebabkan pekerja ladang dan lombong menderita kerana pekerjaan harian terganggu dan nyawa mereka turut terancam."
     },
     {
       "source_id": "bab-6-2-u16",
       "bm_original": "Komunis menjalankan pelbagai kegiatan sabotaj terhadap kemudahan asas, terutama dalam bidang:",
-      "translate": "Komunis menjalankan pelbagai kegiatan sabotaj 针对 kemudahan asas, terutama 在 bidang:",
+      "translate": "共产党人对基本设施进行各种破坏活动，特别是在以下领域：",
       "key_points_zh": [
-        "Komunis menjalankan pelbagai kegiatan sabotaj 针对 kemudahan asas, terutama 在 bidang:"
+        "共产党人对基本设施进行各种破坏活动，特别是在以下领域："
       ],
       "bm_focus_phrase": "Komunis menjalankan pelbagai kegiatan sabotaj terhadap kemudahan asas, terutama dalam bidang:"
     },
     {
       "source_id": "bab-6-2-extra-30",
       "bm_original": "pengangkutan",
-      "translate": "重点：pengangkutan",
+      "translate": "运输",
       "key_points_zh": [
-        "重点：pengangkutan"
+        "运输"
       ],
       "bm_focus_phrase": "pengangkutan"
     },
     {
       "source_id": "bab-6-2-extra-31",
       "bm_original": "perhubungan",
-      "translate": "重点：perhubungan",
+      "translate": "关系",
       "key_points_zh": [
-        "重点：perhubungan"
+        "关系"
       ],
       "bm_focus_phrase": "perhubungan"
     },
     {
       "source_id": "bab-6-2-u17",
       "bm_original": "Antara tindakan mereka ialah:",
-      "translate": "Antara tindakan mereka 是:",
+      "translate": "他们的行动包括：",
       "key_points_zh": [
-        "Antara tindakan mereka 是:"
+        "他们的行动包括："
       ],
       "bm_focus_phrase": "Antara tindakan mereka ialah:"
     },
     {
       "source_id": "bab-6-2-extra-32",
       "bm_original": "mengebom landasan kereta api",
-      "translate": "重点：mengebom landasan kereta api",
+      "translate": "轰炸铁轨",
       "key_points_zh": [
-        "重点：mengebom landasan kereta api"
+        "轰炸铁轨"
       ],
       "bm_focus_phrase": "mengebom landasan kereta api"
     },
     {
       "source_id": "bab-6-2-extra-33",
       "bm_original": "merosakkan landasan kereta api",
-      "translate": "重点：merosakkan landasan kereta api",
+      "translate": "损坏铁轨",
       "key_points_zh": [
-        "重点：merosakkan landasan kereta api"
+        "损坏铁轨"
       ],
       "bm_focus_phrase": "merosakkan landasan kereta api"
     },
     {
       "source_id": "bab-6-2-extra-34",
       "bm_original": "mengalihkan landasan kereta api",
-      "translate": "重点：mengalihkan landasan kereta api",
+      "translate": "移动铁轨",
       "key_points_zh": [
-        "重点：mengalihkan landasan kereta api"
+        "移动铁轨"
       ],
       "bm_focus_phrase": "mengalihkan landasan kereta api"
     },
     {
       "source_id": "bab-6-2-extra-35",
       "bm_original": "menembak kenderaan di jalan raya",
-      "translate": "重点：menembak kenderaan di jalan raya",
+      "translate": "拍摄路上的车辆",
       "key_points_zh": [
-        "重点：menembak kenderaan di jalan raya"
+        "拍摄路上的车辆"
       ],
       "bm_focus_phrase": "menembak kenderaan di jalan raya"
     },
     {
       "source_id": "bab-6-2-extra-36",
       "bm_original": "membakar kenderaan",
-      "translate": "重点：membakar kenderaan",
+      "translate": "放火焚烧车辆",
       "key_points_zh": [
-        "重点：membakar kenderaan"
+        "放火焚烧车辆"
       ],
       "bm_focus_phrase": "membakar kenderaan"
     },
     {
       "source_id": "bab-6-2-extra-37",
       "bm_original": "mensabotaj telefon dan telegraf",
-      "translate": "mensabotaj telefon 与 telegraf",
+      "translate": "破坏电话和电报",
       "key_points_zh": [
-        "mensabotaj telefon 与 telegraf"
+        "破坏电话和电报"
       ],
       "bm_focus_phrase": "mensabotaj telefon dan telegraf"
     },
     {
       "source_id": "bab-6-2-extra-38",
       "bm_original": "merosakkan paip air",
-      "translate": "重点：merosakkan paip air",
+      "translate": "损坏水管",
       "key_points_zh": [
-        "重点：merosakkan paip air"
+        "损坏水管"
       ],
       "bm_focus_phrase": "merosakkan paip air"
     },
     {
       "source_id": "bab-6-2-u18",
       "bm_original": "Mereka juga menyerang pekerja awam yang ditugaskan untuk:",
-      "translate": "Mereka 也 menyerang pekerja awam 的 ditugaskan 为了:",
+      "translate": "他们还袭击了负责以下工作的公务员：",
       "key_points_zh": [
-        "Mereka 也 menyerang pekerja awam 的 ditugaskan 为了:"
+        "他们还袭击了负责以下工作的公务员："
       ],
       "bm_focus_phrase": "Mereka juga menyerang pekerja awam yang ditugaskan untuk:"
     },
     {
       "source_id": "bab-6-2-extra-39",
       "bm_original": "membaiki jalan raya",
-      "translate": "重点：membaiki jalan raya",
+      "translate": "修路",
       "key_points_zh": [
-        "重点：membaiki jalan raya"
+        "修路"
       ],
       "bm_focus_phrase": "membaiki jalan raya"
     },
     {
       "source_id": "bab-6-2-extra-40",
       "bm_original": "memasang paip air",
-      "translate": "重点：memasang paip air",
+      "translate": "安装水管",
       "key_points_zh": [
-        "重点：memasang paip air"
+        "安装水管"
       ],
       "bm_focus_phrase": "memasang paip air"
     },
     {
       "source_id": "bab-6-2-extra-41",
       "bm_original": "membina sistem pengairan",
-      "translate": "重点：membina sistem pengairan",
+      "translate": "建立灌溉系统",
       "key_points_zh": [
-        "重点：membina sistem pengairan"
+        "建立灌溉系统"
       ],
       "bm_focus_phrase": "membina sistem pengairan"
     },
     {
       "source_id": "bab-6-2-extra-42",
       "bm_original": "menjalankan penyelidikan di tapak skim hidroelektrik",
-      "translate": "重点：menjalankan penyelidikan di tapak skim hidroelektrik",
+      "translate": "在水力发电项目现场进行研究",
       "key_points_zh": [
-        "重点：menjalankan penyelidikan di tapak skim hidroelektrik"
+        "在水力发电项目现场进行研究"
       ],
       "bm_focus_phrase": "menjalankan penyelidikan di tapak skim hidroelektrik"
     },
     {
       "source_id": "bab-6-2-u19",
       "bm_original": "Akibatnya, kehidupan harian penduduk tempatan terjejas kerana infrastruktur tidak dapat diselenggara dengan baik.",
-      "translate": "Akibatnya, kehidupan harian penduduk 本地 terjejas 因为 infrastruktur 不 dapat diselenggara 以 baik.",
+      "translate": "由于基础设施无法得到妥善维护，当地居民的日常生活受到影响。",
       "key_points_zh": [
-        "Akibatnya, kehidupan harian penduduk 本地 terjejas 因为 infrastruktur 不 dapat diselenggara 以 baik."
+        "由于基础设施无法得到妥善维护，当地居民的日常生活受到影响。"
       ],
       "bm_focus_phrase": "Akibatnya, kehidupan harian penduduk tempatan terjejas kerana infrastruktur tidak dapat diselenggara dengan baik."
     },
     {
       "source_id": "bab-6-2-u20",
       "bm_original": "Komunis melakukan pelbagai tindakan ganas terhadap penduduk yang enggan bekerjasama dengan mereka.",
-      "translate": "Komunis melakukan pelbagai tindakan ganas 针对 penduduk 的 enggan bekerjasama 以 mereka.",
+      "translate": "共产党人对拒绝与他们合作的民众实施了各种暴力行为。",
       "key_points_zh": [
-        "Komunis melakukan pelbagai tindakan ganas 针对 penduduk 的 enggan bekerjasama 以 mereka."
+        "共产党人对拒绝与他们合作的民众实施了各种暴力行为。"
       ],
       "bm_focus_phrase": "Komunis melakukan pelbagai tindakan ganas terhadap penduduk yang enggan bekerjasama dengan mereka."
     },
     {
       "source_id": "bab-6-2-extra-43",
       "bm_original": "mengugut",
-      "translate": "重点：mengugut",
+      "translate": "威胁",
       "key_points_zh": [
-        "重点：mengugut"
+        "威胁"
       ],
       "bm_focus_phrase": "mengugut"
     },
     {
       "source_id": "bab-6-2-extra-44",
       "bm_original": "mensabotaj",
-      "translate": "重点：mensabotaj",
+      "translate": "破坏",
       "key_points_zh": [
-        "重点：mensabotaj"
+        "破坏"
       ],
       "bm_focus_phrase": "mensabotaj"
     },
     {
       "source_id": "bab-6-2-extra-45",
       "bm_original": "menyerang",
-      "translate": "重点：menyerang",
+      "translate": "攻击",
       "key_points_zh": [
-        "重点：menyerang"
+        "攻击"
       ],
       "bm_focus_phrase": "menyerang"
     },
     {
       "source_id": "bab-6-2-extra-46",
       "bm_original": "melakukan kekejaman",
-      "translate": "重点：melakukan kekejaman",
+      "translate": "犯下暴行",
       "key_points_zh": [
-        "重点：melakukan kekejaman"
+        "犯下暴行"
       ],
       "bm_focus_phrase": "melakukan kekejaman"
     },
     {
       "source_id": "bab-6-2-extra-47",
       "bm_original": "menganiaya",
-      "translate": "重点：menganiaya",
+      "translate": "迫害",
       "key_points_zh": [
-        "重点：menganiaya"
+        "迫害"
       ],
       "bm_focus_phrase": "menganiaya"
     },
     {
       "source_id": "bab-6-2-extra-48",
       "bm_original": "menculik",
-      "translate": "重点：menculik",
+      "translate": "绑架",
       "key_points_zh": [
-        "重点：menculik"
+        "绑架"
       ],
       "bm_focus_phrase": "menculik"
     },
     {
       "source_id": "bab-6-2-extra-49",
       "bm_original": "merampas",
-      "translate": "重点：merampas",
+      "translate": "抢占",
       "key_points_zh": [
-        "重点：merampas"
+        "抢占"
       ],
       "bm_focus_phrase": "merampas"
     },
     {
       "source_id": "bab-6-2-extra-50",
       "bm_original": "membakar harta benda",
-      "translate": "重点：membakar harta benda",
+      "translate": "烧毁财产",
       "key_points_zh": [
-        "重点：membakar harta benda"
+        "烧毁财产"
       ],
       "bm_focus_phrase": "membakar harta benda"
     },
     {
       "source_id": "bab-6-2-extra-51",
       "bm_original": "membunuh penduduk",
-      "translate": "重点：membunuh penduduk",
+      "translate": "杀死人口",
       "key_points_zh": [
-        "重点：membunuh penduduk"
+        "杀死人口"
       ],
       "bm_focus_phrase": "membunuh penduduk"
     },
     {
       "source_id": "bab-6-2-extra-52",
       "bm_original": "5 Julai 1949",
-      "translate": "重点：5 Julai 1949",
+      "translate": "1949 年 7 月 5 日",
       "key_points_zh": [
-        "重点：5 Julai 1949"
+        "1949 年 7 月 5 日"
       ],
       "bm_focus_phrase": "5 Julai 1949"
     },
     {
       "source_id": "bab-6-2-extra-53",
       "bm_original": "Sheum Circus, Kampar, Perak",
-      "translate": "重点：Sheum Circus, Kampar, Perak",
+      "translate": "Sheum Circus, 金宝, 霹雳州",
       "key_points_zh": [
-        "重点：Sheum Circus, Kampar, Perak"
+        "Sheum Circus, 金宝, 霹雳州"
       ],
       "bm_focus_phrase": "Sheum Circus, Kampar, Perak"
     },
     {
       "source_id": "bab-6-2-extra-54",
       "bm_original": "komunis mencampakkan bom tangan",
-      "translate": "重点：komunis mencampakkan bom tangan",
+      "translate": "共产党人扔手榴弹",
       "key_points_zh": [
-        "重点：komunis mencampakkan bom tangan"
+        "共产党人扔手榴弹"
       ],
       "bm_focus_phrase": "komunis mencampakkan bom tangan"
     },
     {
       "source_id": "bab-6-2-u21",
       "bm_original": "Kesan serangan:",
-      "translate": "影响 serangan:",
+      "translate": "攻击效果：",
       "key_points_zh": [
-        "影响 serangan:"
+        "攻击效果："
       ],
       "bm_focus_phrase": "Kesan serangan:"
     },
     {
       "source_id": "bab-6-2-extra-55",
       "bm_original": "46 orang cedera parah",
-      "translate": "重点：46 orang cedera parah",
+      "translate": "46人重伤",
       "key_points_zh": [
-        "重点：46 orang cedera parah"
+        "46人重伤"
       ],
       "bm_focus_phrase": "46 orang cedera parah"
     },
     {
       "source_id": "bab-6-2-extra-56",
       "bm_original": "4 orang mati",
-      "translate": "重点：4 orang mati",
+      "translate": "4人死亡",
       "key_points_zh": [
-        "重点：4 orang mati"
+        "4人死亡"
       ],
       "bm_focus_phrase": "4 orang mati"
     },
     {
       "source_id": "bab-6-2-extra-57",
       "bm_original": "Terbunuh: 2473",
-      "translate": "重点：Terbunuh: 2473",
+      "translate": "死亡人数：2473",
       "key_points_zh": [
-        "重点：Terbunuh: 2473"
+        "死亡人数：2473"
       ],
       "bm_focus_phrase": "Terbunuh: 2473"
     },
     {
       "source_id": "bab-6-2-extra-58",
       "bm_original": "Tercedera: 1385",
-      "translate": "重点：Tercedera: 1385",
+      "translate": "受伤人数：1385",
       "key_points_zh": [
-        "重点：Tercedera: 1385"
+        "受伤人数：1385"
       ],
       "bm_focus_phrase": "Tercedera: 1385"
     },
     {
       "source_id": "bab-6-2-extra-59",
       "bm_original": "Hilang: 810",
-      "translate": "重点：Hilang: 810",
+      "translate": "失踪：810",
       "key_points_zh": [
-        "重点：Hilang: 810"
+        "失踪：810"
       ],
       "bm_focus_phrase": "Hilang: 810"
     },
     {
       "source_id": "bab-6-2-extra-60",
       "bm_original": "Jumlah: 4668",
-      "translate": "重点：Jumlah: 4668",
+      "translate": "总计：4668",
       "key_points_zh": [
-        "重点：Jumlah: 4668"
+        "总计：4668"
       ],
       "bm_focus_phrase": "Jumlah: 4668"
     },
     {
       "source_id": "bab-6-2-u22",
       "bm_original": "Tindakan komunis ini menyebabkan kesengsaraan dan penderitaan yang besar kepada rakyat.",
-      "translate": "Tindakan komunis 这 menyebabkan kesengsaraan 与 penderitaan 的 besar 向 人民.",
+      "translate": "共产主义的这些行为给人民带来了巨大的痛苦和苦难。",
       "key_points_zh": [
-        "Tindakan komunis 这 menyebabkan kesengsaraan 与 penderitaan 的 besar 向 人民."
+        "共产主义的这些行为给人民带来了巨大的痛苦和苦难。"
       ],
       "bm_focus_phrase": "Tindakan komunis ini menyebabkan kesengsaraan dan penderitaan yang besar kepada rakyat."
     },
     {
       "source_id": "bab-6-2-u23",
       "bm_original": "PKM turut menyasarkan pasukan keselamatan dan menyerang balai polis.",
-      "translate": "PKM turut menyasarkan pasukan keselamatan 与 menyerang balai polis.",
+      "translate": "PKM 还针对安全部队并袭击了警察局。",
       "key_points_zh": [
-        "PKM turut menyasarkan pasukan keselamatan 与 menyerang balai polis."
+        "PKM 还针对安全部队并袭击了警察局。"
       ],
       "bm_focus_phrase": "PKM turut menyasarkan pasukan keselamatan dan menyerang balai polis."
     },
     {
       "source_id": "bab-6-2-u24",
       "bm_original": "Tujuannya ialah:",
-      "translate": "Tujuannya 是:",
+      "translate": "目的是：",
       "key_points_zh": [
-        "Tujuannya 是:"
+        "目的是："
       ],
       "bm_focus_phrase": "Tujuannya ialah:"
     },
     {
       "source_id": "bab-6-2-extra-61",
       "bm_original": "mencetuskan keadaan huru-hara",
-      "translate": "重点：mencetuskan keadaan huru-hara",
+      "translate": "造成混乱",
       "key_points_zh": [
-        "重点：mencetuskan keadaan huru-hara"
+        "造成混乱"
       ],
       "bm_focus_phrase": "mencetuskan keadaan huru-hara"
     },
     {
       "source_id": "bab-6-2-extra-62",
       "bm_original": "menunjukkan kerajaan tidak berupaya melindungi keselamatan penduduk",
-      "translate": "menunjukkan 政府 不 berupaya melindungi keselamatan penduduk",
+      "translate": "表明政府无力保障民众安全",
       "key_points_zh": [
-        "menunjukkan 政府 不 berupaya melindungi keselamatan penduduk"
+        "表明政府无力保障民众安全"
       ],
       "bm_focus_phrase": "menunjukkan kerajaan tidak berupaya melindungi keselamatan penduduk"
     },
     {
       "source_id": "bab-6-2-extra-63",
       "bm_original": "Polis → Terkorban: 513 , Tercedera: 701 , Jumlah: 1214",
-      "translate": "重点：Polis → Terkorban: 513 , Tercedera: 701 , Jumlah: 1214",
+      "translate": "警察 → 死亡：513 人，受伤：701 人，总计：1214 人",
       "key_points_zh": [
-        "重点：Polis → Terkorban: 513 , Tercedera: 701 , Jumlah: 1214"
+        "警察 → 死亡：513 人，受伤：701 人，总计：1214 人"
       ],
       "bm_focus_phrase": "Polis → Terkorban: 513 , Tercedera: 701 , Jumlah: 1214"
     },
     {
       "source_id": "bab-6-2-extra-64",
       "bm_original": "Special Constable → Terkorban: 593 , Tercedera: 746 , Jumlah: 1339",
-      "translate": "重点：Special Constable → Terkorban: 593 , Tercedera: 746 , Jumlah: 1339",
+      "translate": "特警 → 死亡：593 人，受伤：746 人，总计：1339 人",
       "key_points_zh": [
-        "重点：Special Constable → Terkorban: 593 , Tercedera: 746 , Jumlah: 1339"
+        "特警 → 死亡：593 人，受伤：746 人，总计：1339 人"
       ],
       "bm_focus_phrase": "Special Constable → Terkorban: 593 , Tercedera: 746 , Jumlah: 1339"
     },
     {
       "source_id": "bab-6-2-extra-65",
       "bm_original": "Auxiliary Police → Terkorban: 242 , Tercedera: 154 , Jumlah: 396",
-      "translate": "重点：Auxiliary Police → Terkorban: 242 , Tercedera: 154 , Jumlah: 396",
+      "translate": "辅警 → 死亡：242 人，受伤：154 人，总计：396 人",
       "key_points_zh": [
-        "重点：Auxiliary Police → Terkorban: 242 , Tercedera: 154 , Jumlah: 396"
+        "辅警 → 死亡：242 人，受伤：154 人，总计：396 人"
       ],
       "bm_focus_phrase": "Auxiliary Police → Terkorban: 242 , Tercedera: 154 , Jumlah: 396"
     },
     {
       "source_id": "bab-6-2-extra-66",
       "bm_original": "Tentera → Terkorban: 519 , Tercedera: 959 , Jumlah: 1478",
-      "translate": "重点：Tentera → Terkorban: 519 , Tercedera: 959 , Jumlah: 1478",
+      "translate": "陆军 → 死亡：519 人，受伤：959 人，总计：1478 人",
       "key_points_zh": [
-        "重点：Tentera → Terkorban: 519 , Tercedera: 959 , Jumlah: 1478"
+        "陆军 → 死亡：519 人，受伤：959 人，总计：1478 人"
       ],
       "bm_focus_phrase": "Tentera → Terkorban: 519 , Tercedera: 959 , Jumlah: 1478"
     },
     {
       "source_id": "bab-6-2-u39",
       "bm_original": "13 September 1948 → Sir Henry Gurney dilantik sebagai Pesuruhjaya Tinggi British di Tanah Melayu menggantikan Sir Edward Gent .",
-      "translate": "13 September 1948 → Sir Henry Gurney dilantik 作为 Pesuruhjaya Tinggi British di Tanah Melayu menggantikan Sir Edward Gent .",
+      "translate": "1948 年 9 月 13 日 → 亨利·格尼爵士被任命为英国驻马来亚高级专员，接替爱德华·根特爵士。",
       "key_points_zh": [
-        "13 September 1948 → Sir Henry Gurney dilantik 作为 Pesuruhjaya Tinggi British di Tanah Melayu menggantikan Sir Edward Gent ."
+        "1948 年 9 月 13 日 → 亨利·格尼爵士被任命为英国驻马来亚高级专员，接替爱德华·根特爵士。"
       ],
       "bm_focus_phrase": "13 September 1948 → Sir Henry Gurney dilantik sebagai Pesuruhjaya Tinggi British di Tanah Melayu menggantikan Sir Edward Gent ."
     },
     {
       "source_id": "bab-6-2-u40",
       "bm_original": "6 Oktober 1951 → Sir Henry Gurney menjadi mangsa serang hendap komunis di Jalan Kuala Kubu Bharu semasa dalam perjalanan ke Bukit Fraser .",
-      "translate": "6 Oktober 1951 → Sir Henry Gurney menjadi mangsa serang hendap komunis di Jalan Kuala Kubu Bharu semasa 在 perjalanan ke Bukit Fraser .",
+      "translate": "1951 年 10 月 6 日 → 亨利·格尼爵士在前往福隆港的途中，在新古毛路 (Jalan Kuala Kubu Bharu) 遭到共产党伏击，成为受害者。",
       "key_points_zh": [
-        "6 Oktober 1951 → Sir Henry Gurney menjadi mangsa serang hendap komunis di Jalan Kuala Kubu Bharu semasa 在 perjalanan ke Bukit Fraser ."
+        "1951 年 10 月 6 日 → 亨利·格尼爵士在前往福隆港的途中，在新古毛路 (Jalan Kuala Kubu Bharu) 遭到共产党伏击，成为受害者。"
       ],
       "bm_focus_phrase": "6 Oktober 1951 → Sir Henry Gurney menjadi mangsa serang hendap komunis di Jalan Kuala Kubu Bharu semasa dalam perjalanan ke Bukit Fraser ."
     },
     {
       "source_id": "bab-6-2-extra-67",
       "bm_original": "17 Jun 1948 – Choh, Johor → menyerang Balai Polis Kampung Jeram",
-      "translate": "重点：17 Jun 1948 – Choh, Johor → menyerang Balai Polis Kampung Jeram",
+      "translate": "1948 年 6 月 17 日 – 柔佛州 Choh → 袭击 Kampung Jeram 警察局",
       "key_points_zh": [
-        "重点：17 Jun 1948 – Choh, Johor → menyerang Balai Polis Kampung Jeram"
+        "1948 年 6 月 17 日 – 柔佛州 Choh → 袭击 Kampung Jeram 警察局"
       ],
       "bm_focus_phrase": "17 Jun 1948 – Choh, Johor → menyerang Balai Polis Kampung Jeram"
     },
     {
       "source_id": "bab-6-2-extra-68",
       "bm_original": "26 Jun 1948 – Temerloh, Pahang → menyerang Balai Polis Kuala Krau",
-      "translate": "重点：26 Jun 1948 – Temerloh, Pahang → menyerang Balai Polis Kuala Krau",
+      "translate": "1948 年 6 月 26 日 – 彭亨州淡马鲁 → 袭击瓜拉克劳警察局",
       "key_points_zh": [
-        "重点：26 Jun 1948 – Temerloh, Pahang → menyerang Balai Polis Kuala Krau"
+        "1948 年 6 月 26 日 – 彭亨州淡马鲁 → 袭击瓜拉克劳警察局"
       ],
       "bm_focus_phrase": "26 Jun 1948 – Temerloh, Pahang → menyerang Balai Polis Kuala Krau"
     },
     {
       "source_id": "bab-6-2-extra-69",
       "bm_original": "28 Jun 1948 – Jerantut, Pahang → membakar balai polis",
-      "translate": "重点：28 Jun 1948 – Jerantut, Pahang → membakar balai polis",
+      "translate": "1948 年 6 月 28 日 – 彭亨州而连突 → 纵火焚烧警察局",
       "key_points_zh": [
-        "重点：28 Jun 1948 – Jerantut, Pahang → membakar balai polis"
+        "1948 年 6 月 28 日 – 彭亨州而连突 → 纵火焚烧警察局"
       ],
       "bm_focus_phrase": "28 Jun 1948 – Jerantut, Pahang → membakar balai polis"
     },
     {
       "source_id": "bab-6-2-extra-70",
       "bm_original": "17 Julai 1948 – Gua Musang, Kelantan → menyerang Balai Polis Gua Musang",
-      "translate": "重点：17 Julai 1948 – Gua Musang, Kelantan → menyerang Balai Polis Gua Musang",
+      "translate": "1948年7月17日 – 吉兰丹话望生 → 袭击话望生警察局",
       "key_points_zh": [
-        "重点：17 Julai 1948 – Gua Musang, Kelantan → menyerang Balai Polis Gua Musang"
+        "1948年7月17日 – 吉兰丹话望生 → 袭击话望生警察局"
       ],
       "bm_focus_phrase": "17 Julai 1948 – Gua Musang, Kelantan → menyerang Balai Polis Gua Musang"
     },
     {
       "source_id": "bab-6-2-extra-71",
       "bm_original": "8 Mac 1949 – Kajang, Selangor → menyerang jip tentera",
-      "translate": "重点：8 Mac 1949 – Kajang, Selangor → menyerang jip tentera",
+      "translate": "1949 年 3 月 8 日 – 雪兰莪加影 → 袭击一辆军用吉普车",
       "key_points_zh": [
-        "重点：8 Mac 1949 – Kajang, Selangor → menyerang jip tentera"
+        "1949 年 3 月 8 日 – 雪兰莪加影 → 袭击一辆军用吉普车"
       ],
       "bm_focus_phrase": "8 Mac 1949 – Kajang, Selangor → menyerang jip tentera"
     },
     {
       "source_id": "bab-6-2-extra-72",
       "bm_original": "22 Februari 1950 – Muar, Johor → menyerang Balai Polis Bukit Kepong",
-      "translate": "重点：22 Februari 1950 – Muar, Johor → menyerang Balai Polis Bukit Kepong",
+      "translate": "1950年2月22日 – 柔佛州麻坡 → 袭击武吉甲洞警察局",
       "key_points_zh": [
-        "重点：22 Februari 1950 – Muar, Johor → menyerang Balai Polis Bukit Kepong"
+        "1950年2月22日 – 柔佛州麻坡 → 袭击武吉甲洞警察局"
       ],
       "bm_focus_phrase": "22 Februari 1950 – Muar, Johor → menyerang Balai Polis Bukit Kepong"
     },
     {
       "source_id": "bab-6-2-extra-73",
       "bm_original": "24 Mac 1950 – Ulu Semur, Kelantan → menyerang hendap pasukan askar Melayu",
-      "translate": "重点：24 Mac 1950 – Ulu Semur, Kelantan → menyerang hendap pasukan askar Melayu",
+      "translate": "1950年3月24日 – 吉兰丹乌鲁瑟穆 → 伏击一群马来士兵",
       "key_points_zh": [
-        "重点：24 Mac 1950 – Ulu Semur, Kelantan → menyerang hendap pasukan askar Melayu"
+        "1950年3月24日 – 吉兰丹乌鲁瑟穆 → 伏击一群马来士兵"
       ],
       "bm_focus_phrase": "24 Mac 1950 – Ulu Semur, Kelantan → menyerang hendap pasukan askar Melayu"
     },
     {
       "source_id": "bab-6-2-extra-74",
       "bm_original": "28 Jun 1950 – Kota Tinggi, Johor → menyerang Balai Polis Kambau",
-      "translate": "重点：28 Jun 1950 – Kota Tinggi, Johor → menyerang Balai Polis Kambau",
+      "translate": "1950年6月28日 – 柔佛州哥打丁宜 → 袭击 Kambau 警察局",
       "key_points_zh": [
-        "重点：28 Jun 1950 – Kota Tinggi, Johor → menyerang Balai Polis Kambau"
+        "1950年6月28日 – 柔佛州哥打丁宜 → 袭击 Kambau 警察局"
       ],
       "bm_focus_phrase": "28 Jun 1950 – Kota Tinggi, Johor → menyerang Balai Polis Kambau"
     },
     {
       "source_id": "bab-6-2-extra-75",
       "bm_original": "21 Februari 1952 – Taiping, Perak → menyerang kenderaan polis",
-      "translate": "重点：21 Februari 1952 – Taiping, Perak → menyerang kenderaan polis",
+      "translate": "1952年2月21日 – 霹雳州太平 → 袭击警车",
       "key_points_zh": [
-        "重点：21 Februari 1952 – Taiping, Perak → menyerang kenderaan polis"
+        "1952年2月21日 – 霹雳州太平 → 袭击警车"
       ],
       "bm_focus_phrase": "21 Februari 1952 – Taiping, Perak → menyerang kenderaan polis"
     },
     {
       "source_id": "bab-6-2-extra-76",
       "bm_original": "28 Mei 1954 – Kedah → membunuh Ketua Polis Kedah",
-      "translate": "重点：28 Mei 1954 – Kedah → membunuh Ketua Polis Kedah",
+      "translate": "1954年5月28日 – 吉打 → 杀死吉打警察局长",
       "key_points_zh": [
-        "重点：28 Mei 1954 – Kedah → membunuh Ketua Polis Kedah"
+        "1954年5月28日 – 吉打 → 杀死吉打警察局长"
       ],
       "bm_focus_phrase": "28 Mei 1954 – Kedah → membunuh Ketua Polis Kedah"
     },
     {
       "source_id": "bab-6-2-extra-77",
       "bm_original": "18 Oktober 1954 – Pontian, Johor → menyerang Balai Polis Chuan Seng",
-      "translate": "重点：18 Oktober 1954 – Pontian, Johor → menyerang Balai Polis Chuan Seng",
+      "translate": "1954年10月18日 – 柔佛笨珍 → 袭击川盛警察局",
       "key_points_zh": [
-        "重点：18 Oktober 1954 – Pontian, Johor → menyerang Balai Polis Chuan Seng"
+        "1954年10月18日 – 柔佛笨珍 → 袭击川盛警察局"
       ],
       "bm_focus_phrase": "18 Oktober 1954 – Pontian, Johor → menyerang Balai Polis Chuan Seng"
     },
     {
       "source_id": "bab-6-2-u25",
       "bm_original": "Komunis cuba mewujudkan:",
-      "translate": "重点：Komunis cuba mewujudkan:",
+      "translate": "共产党人试图创造：",
       "key_points_zh": [
-        "重点：Komunis cuba mewujudkan:"
+        "共产党人试图创造："
       ],
       "bm_focus_phrase": "Komunis cuba mewujudkan:"
     },
     {
       "source_id": "bab-6-2-extra-78",
       "bm_original": "sebuah kerajaan republik komunis di Tanah Melayu",
-      "translate": "sebuah 政府 republik komunis di Tanah Melayu",
+      "translate": "马来亚共产主义共和国政府",
       "key_points_zh": [
-        "sebuah 政府 republik komunis di Tanah Melayu"
+        "马来亚共产主义共和国政府"
       ],
       "bm_focus_phrase": "sebuah kerajaan republik komunis di Tanah Melayu"
     },
     {
       "source_id": "bab-6-2-u26",
       "bm_original": "Untuk mencapai matlamat itu, mereka melancarkan perjuangan bersenjata dan melakukan pelbagai tindakan yang mengancam:",
-      "translate": "Untuk mencapai matlamat 那, mereka melancarkan 斗争 bersenjata 与 melakukan pelbagai tindakan 的 威胁:",
+      "translate": "为了达到这个目的，他们发动了武装斗争，并进行了各种威胁行动：",
       "key_points_zh": [
-        "Untuk mencapai matlamat 那, mereka melancarkan 斗争 bersenjata 与 melakukan pelbagai tindakan 的 威胁:"
+        "为了达到这个目的，他们发动了武装斗争，并进行了各种威胁行动："
       ],
       "bm_focus_phrase": "Untuk mencapai matlamat itu, mereka melancarkan perjuangan bersenjata dan melakukan pelbagai tindakan yang mengancam:"
     },
     {
       "source_id": "bab-6-2-extra-79",
       "bm_original": "ekonomi negara",
-      "translate": "重点：ekonomi negara",
+      "translate": "国民经济",
       "key_points_zh": [
-        "重点：ekonomi negara"
+        "国民经济"
       ],
       "bm_focus_phrase": "ekonomi negara"
     },
     {
       "source_id": "bab-6-2-extra-80",
       "bm_original": "infrastruktur",
-      "translate": "重点：infrastruktur",
+      "translate": "基础设施",
       "key_points_zh": [
-        "重点：infrastruktur"
+        "基础设施"
       ],
       "bm_focus_phrase": "infrastruktur"
     },
     {
       "source_id": "bab-6-2-extra-81",
       "bm_original": "keselamatan rakyat",
-      "translate": "keselamatan 人民",
+      "translate": "人民的安全",
       "key_points_zh": [
-        "keselamatan 人民"
+        "人民的安全"
       ],
       "bm_focus_phrase": "keselamatan rakyat"
     },
     {
       "source_id": "bab-6-2-extra-82",
       "bm_original": "pasukan keselamatan",
-      "translate": "重点：pasukan keselamatan",
+      "translate": "安全部队",
       "key_points_zh": [
-        "重点：pasukan keselamatan"
+        "安全部队"
       ],
       "bm_focus_phrase": "pasukan keselamatan"
     },
     {
       "source_id": "bab-6-2-u27",
       "bm_original": "Tindakan komunis ini menyebabkan rakyat hidup dalam ketakutan dan mendorong kerajaan serta penduduk bekerjasama untuk membanteras ancaman tersebut demi menjaga keamanan negara.",
-      "translate": "Tindakan komunis 这 menyebabkan 人民 hidup 在 ketakutan 与 mendorong 政府 以及 penduduk bekerjasama 为了 membanteras ancaman tersebut demi menjaga keamanan negara.",
+      "translate": "这些共产主义行为使人民生活在恐惧之中，并鼓励政府和人民共同努力对抗威胁，以维护国家的和平。",
       "key_points_zh": [
-        "Tindakan komunis 这 menyebabkan 人民 hidup 在 ketakutan 与 mendorong 政府 以及 penduduk bekerjasama 为了 membanteras ancaman tersebut demi menjaga keamanan negara."
+        "这些共产主义行为使人民生活在恐惧之中，并鼓励政府和人民共同努力对抗威胁，以维护国家的和平。"
       ],
       "bm_focus_phrase": "Tindakan komunis ini menyebabkan rakyat hidup dalam ketakutan dan mendorong kerajaan serta penduduk bekerjasama untuk membanteras ancaman tersebut demi menjaga keamanan negara."
     }
