@@ -624,6 +624,10 @@
       : stripCorruptedZhLeadPrefix(sourceText);
     var curated = unit && typeof unit.translate === "string" ? normalizeZhExplain(unit.translate, gl) : "";
     if (curated && curated.trim()) {
+      var noTransM = /^释义[：:](.+?)（原文[：:](.+?)）/.exec(curated.trim());
+      if (noTransM && noTransM[1].trim().toLowerCase() === noTransM[2].trim().toLowerCase()) {
+        return null;
+      }
       return {
         modeLabel: "Unit ZH",
         text: curated,
