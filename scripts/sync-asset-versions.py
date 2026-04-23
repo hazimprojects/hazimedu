@@ -122,6 +122,11 @@ def sync_service_worker(versions: dict) -> bool:
                        rf"\g<1>{versions['zh_mode_js']}", new_block)
     new_block = re.sub(r"(/manifest\.json\?v=)[^\"']+",
                        rf"\g<1>{versions['manifest']}", new_block)
+    if "'/data/zh-comprehension.json'" not in new_block:
+        new_block = new_block.replace(
+            "'/data/zh-glossary.json',",
+            "'/data/zh-glossary.json',\n  '/data/zh-comprehension.json',\n  '/data/zh-units/index.json',",
+        )
     updated = updated.replace(block, new_block)
 
     if updated != original:
