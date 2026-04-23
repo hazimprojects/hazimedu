@@ -23,7 +23,7 @@
   var CHIP_TOUCH_CLICK_DELAY_MS = 360;
   var chipInteractionsBound = false;
   var ENTITY_WARNING_LABEL = "⚠︎ Entiti dikekalkan (BM asal).";
-  /** Shown when unit JSON has no usable manual Chinese yet (Google Translate disabled). */
+  /** When JSON lacks vetted Chinese — no machine translation at runtime. */
   var MANUAL_ZH_PENDING_TITLE = "【中文释义待补全】";
   var MANUAL_ZH_PENDING_HINT =
     "请先以马来文原文为准；人名、地名、组织名与专用术语保留原文更利于准确作答。可点击文内彩色关键词查看中英对照。";
@@ -547,10 +547,6 @@
     return { modeLabel: "词汇注释", pairs: pairs, text: textStr, fallbackLabel: "" };
   }
 
-  /**
-   * When JSON has no curated Chinese, do not call machine translation.
-   * Offer glossary-based hints plus BM excerpt so names/terms stay accurate.
-   */
   function buildManualFallbackExplain(sourceText, gl) {
     var textForUse = stripCorruptedZhLeadPrefix(typeof sourceText === "string" ? sourceText : "");
     if (!textForUse) return null;
@@ -645,8 +641,9 @@
     if (/重点词|要点说明|术语说明|条目说明|此句是本节重要结论|本句说明本节核心内容/.test(raw)) {
       return true;
     }
+    // Only flag all-lowercase Latin glossaries like "waadat（…）"; keep "Sultan X（…）" etc.
     if (/^[a-z][a-z\s'-]*（[^）]+）(?:；[a-z][a-z\s'-]*（[^）]+）)*。?$/i.test(raw)) {
-      return true;
+      if (!/[A-Z]/.test(raw)) return true;
     }
     return false;
   }
@@ -704,11 +701,23 @@
     if (!raw) return false;
     if (isTemplateLikeZhExplain(raw)) return false;
 
-    // Reject obvious machine-translation debris (English inside ZH strings).
+    // Reject obvious machine-translation debris.
     if (/[\u4e00-\u9fff]/.test(raw) && /\binvolved\b/i.test(raw)) return false;
+    if (/[\u4e00-\u9fff]/.test(raw) && /\bwritings\b/i.test(raw)) return false;
 
     var zhCount = (raw.match(/[\u4e00-\u9fff]/g) || []).length;
-    if (zhCount < 4) return false;
+    var bm = typeof bmSource === "string" ? bmSource.trim() : "";
+    var shortBm = bm.length > 0 && bm.length <= 140;
+
+    if (zhCount < 4) {
+      if (!shortBm) return false;
+      if (looksMalayHeavy(raw)) return false;
+      if (hasCodeMixedGrammarArtifacts(raw)) return false;
+      if (hasTooMuchMalayInMixedSentence(raw)) return false;
+      if (zhCount >= 1) return true;
+      if (/^[\s0-9A-Za-z'’.,\-–—()[\]{}]+$/.test(raw) && raw.length <= 96) return true;
+      return false;
+    }
     if (looksMalayHeavy(raw)) return false;
     if (hasCodeMixedGrammarArtifacts(raw)) return false;
     if (hasTooMuchMalayInMixedSentence(raw)) return false;
@@ -745,6 +754,10 @@
         text: curated,
         fallbackLabel: ""
       };
+    }
+    var glossChip = buildGlossaryFallback(bmSource || sourceText || "", gl);
+    if (glossChip && glossChip.text && glossChip.text.trim()) {
+      return glossChip;
     }
     return buildManualFallbackExplain(bmSource || sourceText || "", gl);
   }

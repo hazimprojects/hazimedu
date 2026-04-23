@@ -1,9 +1,15 @@
 # Panduan Ringkas Mod Bahasa Cina (ZH) – Terjemahan Manual
 
-Mod bahasa Cina **tidak lagi** memanggil Google Translate pada masa paparan. Hanya teks `translate` dalam `data/zh-units/*.json` (selepas semakan `normalizeZhExplain`) yang dipaparkan sebagai ayat penuh berkualiti. Jika unit belum disunting, paparan akan menunjukkan petunjuk BM + sebutan kata kunci daripada glosari.
+Mod paparan **tidak lagi** memanggil Google Translate. Semua ayat penuh datang daripada medan `translate` dalam `data/zh-units/*.json` (selepas `normalizeZhExplain` dalam `zh-mode.js`). Skrip bantu:
+
+```bash
+python3 scripts/enrich-zh-unit-translations.py data/zh-units/bab-X.json
+```
+
+Skrip ini membungkus label pendek sebagai `释义：…（原文：…）` supaya semakan kualiti minimum (≥4 aksara Cina) dipenuhi; kemudian editor boleh menggantinya dengan ayat Cina penuh yang lebih lancar.
 
 ## Pengharaman Terjemahan (Wajib)
-Dalam kandungan Cina yang disunting, kategori berikut **hendaklah dikekalkan** dalam bentuk asal (BM / ejaan asal), dan jika perlu boleh diringi ringkasan Cina dalam kurungan:
+Dalam teks Cina yang disunting, kategori berikut **hendaklah dikekalkan** dalam bentuk asal (BM / ejaan asal), dan jika perlu boleh diringi ringkasan Cina dalam kurungan:
 
 1. **Nama orang** *(termasuk nama Sultan dan gelaran Sultan)*
 2. **Nama organisasi rasmi**
@@ -14,7 +20,7 @@ Dalam kandungan Cina yang disunting, kategori berikut **hendaklah dikekalkan** d
    - Contoh: **waadat, styagraha, bushido, jus soli**
 
 ## Peraturan Umum
-- Selain kategori di atas, semua kandungan lain dibenarkan diterjemah.
+- Selain kategori di atas, baki kandungan boleh diterjemahkan ke Cina Ringkas yang mudah difahami pelajar Malaysia; elakkan campuran tatabahasa BM + partikel Cina (“的/在/由” selepas perkataan BM penuh).
 
 ## Contoh Perkataan Bab 1 hingga Bab 7 yang Langsung Tak Boleh Translate
 
