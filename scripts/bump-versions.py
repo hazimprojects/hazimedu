@@ -37,6 +37,7 @@ RULES: list[tuple[str, list[str]]] = [
     ("data/zh-units/index.json",  ["sw_cache"]),
     ("assets/js/subtopic-lab.js", ["sw_cache"]),
     ("sw.js",                     ["sw_cache"]),
+    ("offline.html",              ["sw_cache"]),
     ("manifest.json",             ["manifest",       "sw_cache"]),
 ]
 

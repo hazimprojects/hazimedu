@@ -6,14 +6,15 @@
    - Everything else: network-first
 */
 
-const CACHE = 'zym-v102';
+const CACHE = 'zym-v104';
 
 const PRECACHE_URLS = [
   '/',
   '/index.html',
+  '/offline.html',
   '/notes/index.html',
   '/assets/css/style.css?v=83',
-  '/assets/js/main.js?v=89',
+  '/assets/js/main.js?v=90',
   '/assets/js/zh-mode.js?v=36',
   '/data/zh-glossary.json',
   '/data/zh-comprehension.json',
@@ -98,7 +99,10 @@ self.addEventListener('fetch', function (e) {
         return res;
       }).catch(function () {
         return caches.match(e.request).then(function (cached) {
-          return cached || caches.match('/index.html');
+          if (cached) return cached;
+          return caches.match('/offline.html').then(function (offlinePage) {
+            return offlinePage || caches.match('/index.html');
+          });
         });
       })
     );
