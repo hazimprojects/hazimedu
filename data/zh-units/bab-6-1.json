@@ -1,996 +1,997 @@
 {
   "meta": {
     "source_file": "notes/bab-6-1.html",
-    "rollout": "gelombang-1-manual-revision"
+    "rollout": "gelombang-1-ms-zh-regenerated",
+    "notes": "Translate fields regenerated from bm_original (ms→zh-CN) for fluent Simplified Chinese; proper names follow translator output—verify against BM notes."
   },
   "units": [
     {
       "source_id": "bab-6-1-u24",
       "bm_original": "Komunisme ialah ideologi yang diasaskan oleh Karl Marx dan Friedrich Engels melalui karya Communist Manifesto dan Das Kapital .",
-      "translate": "Komunisme 是 ideologi 的 diasaskan 由 Karl Marx 与 Friedrich Engels 通过 karya Communist Manifesto 与 Das Kapital .",
+      "translate": "共产主义是卡尔·马克思和弗里德里希·恩格斯通过《共产党宣言》和《资本论》创立的意识形态。",
       "key_points_zh": [
-        "Komunisme 是 ideologi 的 diasaskan 由 Karl Marx 与 Friedrich Engels 通过 karya Communist Manifesto 与 Das Kapital ."
+        "共产主义是卡尔·马克思和弗里德里希·恩格斯通过《共产党宣言》和《资本论》创立的意识形态。"
       ],
       "bm_focus_phrase": "Komunisme ialah ideologi yang diasaskan oleh Karl Marx dan Friedrich Engels melalui karya Communist Manifesto dan Das Kapital ."
     },
     {
       "source_id": "bab-6-1-u25",
       "bm_original": "Penyebaran ideologi ini di negara kita bermula sejak tahun 1920-an melalui pengaruh dari China dan Indonesia .",
-      "translate": "Penyebaran ideologi 这 di negara kita bermula sejak 年 1920-an 通过 pengaruh dari China 与 Indonesia .",
+      "translate": "这种意识形态在我国的传播始于20世纪20年代，受中国和印度尼西亚的影响。",
       "key_points_zh": [
-        "Penyebaran ideologi 这 di negara kita bermula sejak 年 1920-an 通过 pengaruh dari China 与 Indonesia ."
+        "这种意识形态在我国的传播始于20世纪20年代，受中国和印度尼西亚的影响。"
       ],
       "bm_focus_phrase": "Penyebaran ideologi ini di negara kita bermula sejak tahun 1920-an melalui pengaruh dari China dan Indonesia ."
     },
     {
       "source_id": "bab-6-1-u26",
       "bm_original": "Kemasukan pengaruh komunis berlaku melalui tiga saluran utama: dari China , dari Indonesia dan melalui penubuhan Parti Komunis Malaya (PKM) .",
-      "translate": "Kemasukan pengaruh komunis 发生 通过 tiga saluran 主要: dari China , dari Indonesia 与 通过 成立 Parti Komunis Malaya (PKM) .",
+      "translate": "共产主义影响力通过三个主要渠道进入：中国、印度尼西亚和马来亚共产党（PKM）的建立。",
       "key_points_zh": [
-        "Kemasukan pengaruh komunis 发生 通过 tiga saluran 主要: dari China , dari Indonesia 与 通过 成立 Parti Komunis Malaya (PKM) ."
+        "共产主义影响力通过三个主要渠道进入：中国、印度尼西亚和马来亚共产党（PKM）的建立。"
       ],
       "bm_focus_phrase": "Kemasukan pengaruh komunis berlaku melalui tiga saluran utama: dari China , dari Indonesia dan melalui penubuhan Parti Komunis Malaya (PKM) ."
     },
     {
       "source_id": "bab-6-1-u27",
       "bm_original": "Selepas Perang Dunia Kedua , keadaan kekosongan politik memberi peluang kepada PKM untuk meluaskan pengaruhnya.",
-      "translate": "Selepas 第二次世界大战 , keadaan kekosongan 政治 memberi peluang 向 PKM 为了 meluaskan pengaruhnya.",
+      "translate": "第二次世界大战后，政治真空给了PKM扩大影响力的机会。",
       "key_points_zh": [
-        "Selepas 第二次世界大战 , keadaan kekosongan 政治 memberi peluang 向 PKM 为了 meluaskan pengaruhnya."
+        "第二次世界大战后，政治真空给了PKM扩大影响力的机会。"
       ],
       "bm_focus_phrase": "Selepas Perang Dunia Kedua , keadaan kekosongan politik memberi peluang kepada PKM untuk meluaskan pengaruhnya."
     },
     {
       "source_id": "bab-6-1-u01",
       "bm_original": "Komunisme ialah ideologi yang diasaskan oleh Karl Marx dan Friedrich Engels melalui karya Communist Manifesto dan Das Kapital .",
-      "translate": "Komunisme 是 ideologi 的 diasaskan 由 Karl Marx 与 Friedrich Engels 通过 karya Communist Manifesto 与 Das Kapital .",
+      "translate": "共产主义是卡尔·马克思和弗里德里希·恩格斯通过《共产党宣言》和《资本论》创立的意识形态。",
       "key_points_zh": [
-        "Komunisme 是 ideologi 的 diasaskan 由 Karl Marx 与 Friedrich Engels 通过 karya Communist Manifesto 与 Das Kapital ."
+        "共产主义是卡尔·马克思和弗里德里希·恩格斯通过《共产党宣言》和《资本论》创立的意识形态。"
       ],
       "bm_focus_phrase": "Komunisme ialah ideologi yang diasaskan oleh Karl Marx dan Friedrich Engels melalui karya Communist Manifesto dan Das Kapital ."
     },
     {
       "source_id": "bab-6-1-u02",
       "bm_original": "Komunisme ialah fahaman politik yang menjadikan ekonomi dan barang pengguna sebagai milik negara sepenuhnya.",
-      "translate": "Komunisme 是 fahaman 政治 的 menjadikan ekonomi 与 barang pengguna 作为 milik negara sepenuhnya.",
+      "translate": "共产主义是一种政治意识形态，使经济和消费品完全归国家所有。",
       "key_points_zh": [
-        "Komunisme 是 fahaman 政治 的 menjadikan ekonomi 与 barang pengguna 作为 milik negara sepenuhnya."
+        "共产主义是一种政治意识形态，使经济和消费品完全归国家所有。"
       ],
       "bm_focus_phrase": "Komunisme ialah fahaman politik yang menjadikan ekonomi dan barang pengguna sebagai milik negara sepenuhnya."
     },
     {
       "source_id": "bab-6-1-u03",
       "bm_original": "Penyebaran ideologi ini di negara kita bermula sejak tahun 1920-an melalui pengaruh dari China dan Indonesia .",
-      "translate": "Penyebaran ideologi 这 di negara kita bermula sejak 年 1920-an 通过 pengaruh dari China 与 Indonesia .",
+      "translate": "这种意识形态在我国的传播始于20世纪20年代，受中国和印度尼西亚的影响。",
       "key_points_zh": [
-        "Penyebaran ideologi 这 di negara kita bermula sejak 年 1920-an 通过 pengaruh dari China 与 Indonesia ."
+        "这种意识形态在我国的传播始于20世纪20年代，受中国和印度尼西亚的影响。"
       ],
       "bm_focus_phrase": "Penyebaran ideologi ini di negara kita bermula sejak tahun 1920-an melalui pengaruh dari China dan Indonesia ."
     },
     {
       "source_id": "bab-6-1-u04",
       "bm_original": "Kemasukan pengaruh komunis berlaku melalui tiga saluran utama:",
-      "translate": "Kemasukan pengaruh komunis 发生 通过 tiga saluran 主要:",
+      "translate": "共产主义影响力的进入通过三个主要渠道发生：",
       "key_points_zh": [
-        "Kemasukan pengaruh komunis 发生 通过 tiga saluran 主要:"
+        "共产主义影响力的进入通过三个主要渠道发生："
       ],
       "bm_focus_phrase": "Kemasukan pengaruh komunis berlaku melalui tiga saluran utama:"
     },
     {
       "source_id": "bab-6-1-extra-1",
       "bm_original": "1️⃣ dari China 🇨🇳",
-      "translate": "重点：1️⃣ dari China 🇨🇳",
+      "translate": "1️⃣来自中国🇨🇳",
       "key_points_zh": [
-        "重点：1️⃣ dari China 🇨🇳"
+        "1️⃣来自中国🇨🇳"
       ],
       "bm_focus_phrase": "1️⃣ dari China 🇨🇳"
     },
     {
       "source_id": "bab-6-1-extra-2",
       "bm_original": "2️⃣ dari Indonesia 🇮🇩",
-      "translate": "重点：2️⃣ dari Indonesia 🇮🇩",
+      "translate": "2️⃣ 来自印度尼西亚🇮🇩",
       "key_points_zh": [
-        "重点：2️⃣ dari Indonesia 🇮🇩"
+        "2️⃣ 来自印度尼西亚🇮🇩"
       ],
       "bm_focus_phrase": "2️⃣ dari Indonesia 🇮🇩"
     },
     {
       "source_id": "bab-6-1-extra-3",
       "bm_original": "3️⃣ melalui penubuhan Parti Komunis Malaya (PKM) ☭",
-      "translate": "3️⃣ 通过 成立 Parti Komunis Malaya (PKM) ☭",
+      "translate": "3️⃣ 通过成立马来亚共产党（PKM）☭",
       "key_points_zh": [
-        "3️⃣ 通过 成立 Parti Komunis Malaya (PKM) ☭"
+        "3️⃣ 通过成立马来亚共产党（PKM）☭"
       ],
       "bm_focus_phrase": "3️⃣ melalui penubuhan Parti Komunis Malaya (PKM) ☭"
     },
     {
       "source_id": "bab-6-1-u05",
       "bm_original": "Ideologi komunis mula dibawa masuk melalui:",
-      "translate": "Ideologi komunis mula dibawa masuk 通过:",
+      "translate": "共产主义意识形态首先是通过以下方式引入的：",
       "key_points_zh": [
-        "Ideologi komunis mula dibawa masuk 通过:"
+        "共产主义意识形态首先是通过以下方式引入的："
       ],
       "bm_focus_phrase": "Ideologi komunis mula dibawa masuk melalui:"
     },
     {
       "source_id": "bab-6-1-extra-4",
       "bm_original": "cawangan Parti Kuomintang (KMT)",
-      "translate": "重点：cawangan Parti Kuomintang (KMT)",
+      "translate": "国民党支部",
       "key_points_zh": [
-        "重点：cawangan Parti Kuomintang (KMT)"
+        "国民党支部"
       ],
       "bm_focus_phrase": "cawangan Parti Kuomintang (KMT)"
     },
     {
       "source_id": "bab-6-1-extra-5",
       "bm_original": "yang berpusat di China",
-      "translate": "的 berpusat di China",
+      "translate": "总部位于中国",
       "key_points_zh": [
-        "的 berpusat di China"
+        "总部位于中国"
       ],
       "bm_focus_phrase": "yang berpusat di China"
     },
     {
       "source_id": "bab-6-1-u28",
       "bm_original": "Menjelang 1924 → cawangan KMT ditubuhkan di banyak bandar.",
-      "translate": "重点：Menjelang 1924 → cawangan KMT ditubuhkan di banyak bandar.",
+      "translate": "到1924年→国民党在许多城市建立了分支机构。",
       "key_points_zh": [
-        "重点：Menjelang 1924 → cawangan KMT ditubuhkan di banyak bandar."
+        "到1924年→国民党在许多城市建立了分支机构。"
       ],
       "bm_focus_phrase": "Menjelang 1924 → cawangan KMT ditubuhkan di banyak bandar."
     },
     {
       "source_id": "bab-6-1-u06",
       "bm_original": "Antara bandar tersebut ialah:",
-      "translate": "Antara bandar tersebut 是:",
+      "translate": "其中城市有：",
       "key_points_zh": [
-        "Antara bandar tersebut 是:"
+        "其中城市有："
       ],
       "bm_focus_phrase": "Antara bandar tersebut ialah:"
     },
     {
       "source_id": "bab-6-1-extra-6",
       "bm_original": "Muar",
-      "translate": "重点：Muar",
+      "translate": "麻坡",
       "key_points_zh": [
-        "重点：Muar"
+        "麻坡"
       ],
       "bm_focus_phrase": "Muar"
     },
     {
       "source_id": "bab-6-1-extra-7",
       "bm_original": "Melaka",
-      "translate": "重点：Melaka",
+      "translate": "马六甲",
       "key_points_zh": [
-        "重点：Melaka"
+        "马六甲"
       ],
       "bm_focus_phrase": "Melaka"
     },
     {
       "source_id": "bab-6-1-extra-8",
       "bm_original": "Seremban",
-      "translate": "重点：Seremban",
+      "translate": "芙蓉",
       "key_points_zh": [
-        "重点：Seremban"
+        "芙蓉"
       ],
       "bm_focus_phrase": "Seremban"
     },
     {
       "source_id": "bab-6-1-extra-9",
       "bm_original": "Klang",
-      "translate": "重点：Klang",
+      "translate": "巴生",
       "key_points_zh": [
-        "重点：Klang"
+        "巴生"
       ],
       "bm_focus_phrase": "Klang"
     },
     {
       "source_id": "bab-6-1-extra-10",
       "bm_original": "Kuala Lumpur",
-      "translate": "重点：Kuala Lumpur",
+      "translate": "吉隆坡",
       "key_points_zh": [
-        "重点：Kuala Lumpur"
+        "吉隆坡"
       ],
       "bm_focus_phrase": "Kuala Lumpur"
     },
     {
       "source_id": "bab-6-1-extra-11",
       "bm_original": "Sungai Petani",
-      "translate": "重点：Sungai Petani",
+      "translate": "农民河",
       "key_points_zh": [
-        "重点：Sungai Petani"
+        "农民河"
       ],
       "bm_focus_phrase": "Sungai Petani"
     },
     {
       "source_id": "bab-6-1-u07",
       "bm_original": "Selain KMT , terdapat pertubuhan lain:",
-      "translate": "重点：Selain KMT , terdapat pertubuhan lain:",
+      "translate": "除了国民党之外，还有其他组织：",
       "key_points_zh": [
-        "重点：Selain KMT , terdapat pertubuhan lain:"
+        "除了国民党之外，还有其他组织："
       ],
       "bm_focus_phrase": "Selain KMT , terdapat pertubuhan lain:"
     },
     {
       "source_id": "bab-6-1-extra-12",
       "bm_original": "Main School",
-      "translate": "重点：Main School",
+      "translate": "游戏学校",
       "key_points_zh": [
-        "重点：Main School"
+        "游戏学校"
       ],
       "bm_focus_phrase": "Main School"
     },
     {
       "source_id": "bab-6-1-extra-13",
       "bm_original": "bergerak dalam kalangan orang Hailam",
-      "translate": "bergerak 在 kalangan orang Hailam",
+      "translate": "在海拉姆人之间流动",
       "key_points_zh": [
-        "bergerak 在 kalangan orang Hailam"
+        "在海拉姆人之间流动"
       ],
       "bm_focus_phrase": "bergerak dalam kalangan orang Hailam"
     },
     {
       "source_id": "bab-6-1-extra-14",
       "bm_original": "di bawah arahan Parti Komunis China (PKC)",
-      "translate": "重点：di bawah arahan Parti Komunis China (PKC)",
+      "translate": "在中国共产党的指导下",
       "key_points_zh": [
-        "重点：di bawah arahan Parti Komunis China (PKC)"
+        "在中国共产党的指导下"
       ],
       "bm_focus_phrase": "di bawah arahan Parti Komunis China (PKC)"
     },
     {
       "source_id": "bab-6-1-u29",
       "bm_original": "1927 → berlaku perpecahan antara KMT dan PKC .",
-      "translate": "1927 → 发生 perpecahan 其中 KMT 与 PKC .",
+      "translate": "1927年→国共两党分裂。",
       "key_points_zh": [
-        "1927 → 发生 perpecahan 其中 KMT 与 PKC ."
+        "1927年→国共两党分裂。"
       ],
       "bm_focus_phrase": "1927 → berlaku perpecahan antara KMT dan PKC ."
     },
     {
       "source_id": "bab-6-1-u08",
       "bm_original": "Selepas itu:",
-      "translate": "Selepas 那:",
+      "translate": "在那之后：",
       "key_points_zh": [
-        "Selepas 那:"
+        "在那之后："
       ],
       "bm_focus_phrase": "Selepas itu:"
     },
     {
       "source_id": "bab-6-1-extra-15",
       "bm_original": "Communist International (Comintern)",
-      "translate": "重点：Communist International (Comintern)",
+      "translate": "共产国际（共产国际）",
       "key_points_zh": [
-        "重点：Communist International (Comintern)"
+        "共产国际（共产国际）"
       ],
       "bm_focus_phrase": "Communist International (Comintern)"
     },
     {
       "source_id": "bab-6-1-extra-16",
       "bm_original": "berpusat di Moscow",
-      "translate": "重点：berpusat di Moscow",
+      "translate": "总部设在莫斯科",
       "key_points_zh": [
-        "重点：berpusat di Moscow"
+        "总部设在莫斯科"
       ],
       "bm_focus_phrase": "berpusat di Moscow"
     },
     {
       "source_id": "bab-6-1-u30",
       "bm_original": "1928 → Comintern mengarahkan penubuhan Parti Komunis Nanyang (PKN) .",
-      "translate": "1928 → Comintern mengarahkan 成立 Parti Komunis Nanyang (PKN) .",
+      "translate": "1928 → 共产国际下令成立南洋共产党（PKN）。",
       "key_points_zh": [
-        "1928 → Comintern mengarahkan 成立 Parti Komunis Nanyang (PKN) ."
+        "1928 → 共产国际下令成立南洋共产党（PKN）。"
       ],
       "bm_focus_phrase": "1928 → Comintern mengarahkan penubuhan Parti Komunis Nanyang (PKN) ."
     },
     {
       "source_id": "bab-6-1-extra-17",
       "bm_original": "PKN gagal mencapai matlamat",
-      "translate": "PKN 失败 mencapai matlamat",
+      "translate": "PKN未能实现目标",
       "key_points_zh": [
-        "PKN 失败 mencapai matlamat"
+        "PKN未能实现目标"
       ],
       "bm_focus_phrase": "PKN gagal mencapai matlamat"
     },
     {
       "source_id": "bab-6-1-extra-18",
       "bm_original": "Parti Komunis Malaya (PKM)",
-      "translate": "重点：Parti Komunis Malaya (PKM)",
+      "translate": "马来亚共产党 (PKM)",
       "key_points_zh": [
-        "重点：Parti Komunis Malaya (PKM)"
+        "马来亚共产党 (PKM)"
       ],
       "bm_focus_phrase": "Parti Komunis Malaya (PKM)"
     },
     {
       "source_id": "bab-6-1-u31",
       "bm_original": "1920-an → fahaman komunis dibawa oleh tokoh Indonesia seperti:",
-      "translate": "1920-an → fahaman komunis dibawa 由 tokoh Indonesia seperti:",
+      "translate": "1920年代 → 印度尼西亚人物带来的共产主义意识形态，例如：",
       "key_points_zh": [
-        "1920-an → fahaman komunis dibawa 由 tokoh Indonesia seperti:"
+        "1920年代 → 印度尼西亚人物带来的共产主义意识形态，例如："
       ],
       "bm_focus_phrase": "1920-an → fahaman komunis dibawa oleh tokoh Indonesia seperti:"
     },
     {
       "source_id": "bab-6-1-extra-19",
       "bm_original": "Tan Malaka",
-      "translate": "重点：Tan Malaka",
+      "translate": "陈马六甲",
       "key_points_zh": [
-        "重点：Tan Malaka"
+        "陈马六甲"
       ],
       "bm_focus_phrase": "Tan Malaka"
     },
     {
       "source_id": "bab-6-1-extra-20",
       "bm_original": "Alimin",
-      "translate": "重点：Alimin",
+      "translate": "阿利敏",
       "key_points_zh": [
-        "重点：Alimin"
+        "阿利敏"
       ],
       "bm_focus_phrase": "Alimin"
     },
     {
       "source_id": "bab-6-1-extra-21",
       "bm_original": "Moeso",
-      "translate": "重点：Moeso",
+      "translate": "莫埃索",
       "key_points_zh": [
-        "重点：Moeso"
+        "莫埃索"
       ],
       "bm_focus_phrase": "Moeso"
     },
     {
       "source_id": "bab-6-1-extra-22",
       "bm_original": "Boedisoejitro",
-      "translate": "重点：Boedisoejitro",
+      "translate": "布埃迪索伊特罗",
       "key_points_zh": [
-        "重点：Boedisoejitro"
+        "布埃迪索伊特罗"
       ],
       "bm_focus_phrase": "Boedisoejitro"
     },
     {
       "source_id": "bab-6-1-extra-23",
       "bm_original": "Hasanoesi",
-      "translate": "重点：Hasanoesi",
+      "translate": "哈佐内西",
       "key_points_zh": [
-        "重点：Hasanoesi"
+        "哈佐内西"
       ],
       "bm_focus_phrase": "Hasanoesi"
     },
     {
       "source_id": "bab-6-1-extra-24",
       "bm_original": "Winanta",
-      "translate": "重点：Winanta",
+      "translate": "威南塔",
       "key_points_zh": [
-        "重点：Winanta"
+        "威南塔"
       ],
       "bm_focus_phrase": "Winanta"
     },
     {
       "source_id": "bab-6-1-extra-25",
       "bm_original": "Soebakat",
-      "translate": "重点：Soebakat",
+      "translate": "索巴卡特",
       "key_points_zh": [
-        "重点：Soebakat"
+        "索巴卡特"
       ],
       "bm_focus_phrase": "Soebakat"
     },
     {
       "source_id": "bab-6-1-extra-26",
       "bm_original": "Sutan Perpateh",
-      "translate": "重点：Sutan Perpateh",
+      "translate": "苏坦·佩尔帕特",
       "key_points_zh": [
-        "重点：Sutan Perpateh"
+        "苏坦·佩尔帕特"
       ],
       "bm_focus_phrase": "Sutan Perpateh"
     },
     {
       "source_id": "bab-6-1-u09",
       "bm_original": "Kawasan penyebaran:",
-      "translate": "重点：Kawasan penyebaran:",
+      "translate": "分布区域：",
       "key_points_zh": [
-        "重点：Kawasan penyebaran:"
+        "分布区域："
       ],
       "bm_focus_phrase": "Kawasan penyebaran:"
     },
     {
       "source_id": "bab-6-1-extra-27",
       "bm_original": "Seberang Perai",
-      "translate": "重点：Seberang Perai",
+      "translate": "横跨北赖",
       "key_points_zh": [
-        "重点：Seberang Perai"
+        "横跨北赖"
       ],
       "bm_focus_phrase": "Seberang Perai"
     },
     {
       "source_id": "bab-6-1-extra-28",
       "bm_original": "Pulau Pinang",
-      "translate": "重点：Pulau Pinang",
+      "translate": "槟城岛",
       "key_points_zh": [
-        "重点：Pulau Pinang"
+        "槟城岛"
       ],
       "bm_focus_phrase": "Pulau Pinang"
     },
     {
       "source_id": "bab-6-1-extra-29",
       "bm_original": "Perak Utara",
-      "translate": "重点：Perak Utara",
+      "translate": "北银",
       "key_points_zh": [
-        "重点：Perak Utara"
+        "北银"
       ],
       "bm_focus_phrase": "Perak Utara"
     },
     {
       "source_id": "bab-6-1-extra-30",
       "bm_original": "Kedah",
-      "translate": "重点：Kedah",
+      "translate": "吉打州",
       "key_points_zh": [
-        "重点：Kedah"
+        "吉打州"
       ],
       "bm_focus_phrase": "Kedah"
     },
     {
       "source_id": "bab-6-1-u32",
       "bm_original": "1926 → Partai Komunis Indonesia (PKI) gagal menguasai Pulau Jawa .",
-      "translate": "1926 → Partai Komunis Indonesia (PKI) 失败 menguasai Pulau Jawa .",
+      "translate": "1926 → 印度尼西亚共产党（PKI）未能控制爪哇岛。",
       "key_points_zh": [
-        "1926 → Partai Komunis Indonesia (PKI) 失败 menguasai Pulau Jawa ."
+        "1926 → 印度尼西亚共产党（PKI）未能控制爪哇岛。"
       ],
       "bm_focus_phrase": "1926 → Partai Komunis Indonesia (PKI) gagal menguasai Pulau Jawa ."
     },
     {
       "source_id": "bab-6-1-extra-31",
       "bm_original": "PKI cuba membuka cawangan di Tanah Melayu",
-      "translate": "重点：PKI cuba membuka cawangan di Tanah Melayu",
+      "translate": "PKI正尝试在马来亚开设分行",
       "key_points_zh": [
-        "重点：PKI cuba membuka cawangan di Tanah Melayu"
+        "PKI正尝试在马来亚开设分行"
       ],
       "bm_focus_phrase": "PKI cuba membuka cawangan di Tanah Melayu"
     },
     {
       "source_id": "bab-6-1-extra-32",
       "bm_original": "tidak mendapat sambutan daripada orang Melayu",
-      "translate": "不 获得 sambutan daripada orang Melayu",
+      "translate": "没有收到马来人的回应",
       "key_points_zh": [
-        "不 获得 sambutan daripada orang Melayu"
+        "没有收到马来人的回应"
       ],
       "bm_focus_phrase": "tidak mendapat sambutan daripada orang Melayu"
     },
     {
       "source_id": "bab-6-1-u10",
       "bm_original": "Sebab utama:",
-      "translate": "Sebab 主要:",
+      "translate": "主要原因：",
       "key_points_zh": [
-        "Sebab 主要:"
+        "主要原因："
       ],
       "bm_focus_phrase": "Sebab utama:"
     },
     {
       "source_id": "bab-6-1-extra-33",
       "bm_original": "komunis menggunakan kekerasan untuk mencapai matlamat",
-      "translate": "komunis menggunakan kekerasan 为了 mencapai matlamat",
+      "translate": "共产党人使用暴力来实现他们的目标",
       "key_points_zh": [
-        "komunis menggunakan kekerasan 为了 mencapai matlamat"
+        "共产党人使用暴力来实现他们的目标"
       ],
       "bm_focus_phrase": "komunis menggunakan kekerasan untuk mencapai matlamat"
     },
     {
       "source_id": "bab-6-1-extra-34",
       "bm_original": "30 April 1930",
-      "translate": "重点：30 April 1930",
+      "translate": "1930 年 4 月 30 日",
       "key_points_zh": [
-        "重点：30 April 1930"
+        "1930 年 4 月 30 日"
       ],
       "bm_focus_phrase": "30 April 1930"
     },
     {
       "source_id": "bab-6-1-extra-35",
       "bm_original": "Kuala Pilah, Negeri Sembilan",
-      "translate": "重点：Kuala Pilah, Negeri Sembilan",
+      "translate": "森美兰州瓜拉庇劳",
       "key_points_zh": [
-        "重点：Kuala Pilah, Negeri Sembilan"
+        "森美兰州瓜拉庇劳"
       ],
       "bm_focus_phrase": "Kuala Pilah, Negeri Sembilan"
     },
     {
       "source_id": "bab-6-1-extra-36",
       "bm_original": "Parti Komunis Malaya (PKM)",
-      "translate": "重点：Parti Komunis Malaya (PKM)",
+      "translate": "马来亚共产党 (PKM)",
       "key_points_zh": [
-        "重点：Parti Komunis Malaya (PKM)"
+        "马来亚共产党 (PKM)"
       ],
       "bm_focus_phrase": "Parti Komunis Malaya (PKM)"
     },
     {
       "source_id": "bab-6-1-u11",
       "bm_original": "PKM bergerak melalui:",
-      "translate": "PKM bergerak 通过:",
+      "translate": "PKM 移动通过：",
       "key_points_zh": [
-        "PKM bergerak 通过:"
+        "PKM 移动通过："
       ],
       "bm_focus_phrase": "PKM bergerak melalui:"
     },
     {
       "source_id": "bab-6-1-extra-37",
       "bm_original": "kesatuan sekerja",
-      "translate": "重点：kesatuan sekerja",
+      "translate": "工会",
       "key_points_zh": [
-        "重点：kesatuan sekerja"
+        "工会"
       ],
       "bm_focus_phrase": "kesatuan sekerja"
     },
     {
       "source_id": "bab-6-1-extra-38",
       "bm_original": "pertubuhan",
-      "translate": "重点：pertubuhan",
+      "translate": "组织",
       "key_points_zh": [
-        "重点：pertubuhan"
+        "组织"
       ],
       "bm_focus_phrase": "pertubuhan"
     },
     {
       "source_id": "bab-6-1-extra-39",
       "bm_original": "penerbitan akhbar",
-      "translate": "penerbitan 报章",
+      "translate": "报纸出版",
       "key_points_zh": [
-        "penerbitan 报章"
+        "报纸出版"
       ],
       "bm_focus_phrase": "penerbitan akhbar"
     },
     {
       "source_id": "bab-6-1-extra-40",
       "bm_original": "sekolah Cina",
-      "translate": "重点：sekolah Cina",
+      "translate": "中文学校",
       "key_points_zh": [
-        "重点：sekolah Cina"
+        "中文学校"
       ],
       "bm_focus_phrase": "sekolah Cina"
     },
     {
       "source_id": "bab-6-1-u12",
       "bm_original": "Selain itu:",
-      "translate": "Selain 那:",
+      "translate": "此外：",
       "key_points_zh": [
-        "Selain 那:"
+        "此外："
       ],
       "bm_focus_phrase": "Selain itu:"
     },
     {
       "source_id": "bab-6-1-extra-41",
       "bm_original": "PKM menyusup ke dalam kesatuan sekerja",
-      "translate": "PKM menyusup ke 在 kesatuan sekerja",
+      "translate": "PKM渗透到工会",
       "key_points_zh": [
-        "PKM menyusup ke 在 kesatuan sekerja"
+        "PKM渗透到工会"
       ],
       "bm_focus_phrase": "PKM menyusup ke dalam kesatuan sekerja"
     },
     {
       "source_id": "bab-6-1-extra-42",
       "bm_original": "untuk mengukuhkan pengaruh komunis",
-      "translate": "为了 加强 pengaruh komunis",
+      "translate": "加强共产主义影响",
       "key_points_zh": [
-        "为了 加强 pengaruh komunis"
+        "加强共产主义影响"
       ],
       "bm_focus_phrase": "untuk mengukuhkan pengaruh komunis"
     },
     {
       "source_id": "bab-6-1-u13",
       "bm_original": "PKM bertindak:",
-      "translate": "重点：PKM bertindak:",
+      "translate": "PKM 的作用：",
       "key_points_zh": [
-        "重点：PKM bertindak:"
+        "PKM 的作用："
       ],
       "bm_focus_phrase": "PKM bertindak:"
     },
     {
       "source_id": "bab-6-1-extra-43",
       "bm_original": "bekerjasama dengan British",
-      "translate": "bekerjasama 以 British",
+      "translate": "与英国人合作",
       "key_points_zh": [
-        "bekerjasama 以 British"
+        "与英国人合作"
       ],
       "bm_focus_phrase": "bekerjasama dengan British"
     },
     {
       "source_id": "bab-6-1-extra-44",
       "bm_original": "menentang Jepun",
-      "translate": "反对 Jepun",
+      "translate": "对日本",
       "key_points_zh": [
-        "反对 Jepun"
+        "对日本"
       ],
       "bm_focus_phrase": "menentang Jepun"
     },
     {
       "source_id": "bab-6-1-u33",
       "bm_original": "1942 → menubuhkan Malayan People’s Anti-Japanese Army (MPAJA) .",
-      "translate": "1942 → 成立 Malayan People’s Anti-Japanese Army (MPAJA) .",
+      "translate": "1942年 → 成立马来亚人民抗日军（MPAJA）。",
       "key_points_zh": [
-        "1942 → 成立 Malayan People’s Anti-Japanese Army (MPAJA) ."
+        "1942年 → 成立马来亚人民抗日军（MPAJA）。"
       ],
       "bm_focus_phrase": "1942 → menubuhkan Malayan People’s Anti-Japanese Army (MPAJA) ."
     },
     {
       "source_id": "bab-6-1-extra-45",
       "bm_original": "dikenali sebagai Bintang Tiga",
-      "translate": "dikenali 作为 Bintang Tiga",
+      "translate": "被称为 Bintang Tiga",
       "key_points_zh": [
-        "dikenali 作为 Bintang Tiga"
+        "被称为 Bintang Tiga"
       ],
       "bm_focus_phrase": "dikenali sebagai Bintang Tiga"
     },
     {
       "source_id": "bab-6-1-u14",
       "bm_original": "PKM menerima bantuan daripada British :",
-      "translate": "重点：PKM menerima bantuan daripada British :",
+      "translate": "PKM得到了英国人的帮助：",
       "key_points_zh": [
-        "重点：PKM menerima bantuan daripada British :"
+        "PKM得到了英国人的帮助："
       ],
       "bm_focus_phrase": "PKM menerima bantuan daripada British :"
     },
     {
       "source_id": "bab-6-1-extra-46",
       "bm_original": "senjata",
-      "translate": "重点：senjata",
+      "translate": "武器",
       "key_points_zh": [
-        "重点：senjata"
+        "武器"
       ],
       "bm_focus_phrase": "senjata"
     },
     {
       "source_id": "bab-6-1-extra-47",
       "bm_original": "latihan",
-      "translate": "重点：latihan",
+      "translate": "训练",
       "key_points_zh": [
-        "重点：latihan"
+        "训练"
       ],
       "bm_focus_phrase": "latihan"
     },
     {
       "source_id": "bab-6-1-extra-48",
       "bm_original": "kewangan",
-      "translate": "重点：kewangan",
+      "translate": "金融",
       "key_points_zh": [
-        "重点：kewangan"
+        "金融"
       ],
       "bm_focus_phrase": "kewangan"
     },
     {
       "source_id": "bab-6-1-extra-49",
       "bm_original": "logistik",
-      "translate": "重点：logistik",
+      "translate": "后勤",
       "key_points_zh": [
-        "重点：logistik"
+        "后勤"
       ],
       "bm_focus_phrase": "logistik"
     },
     {
       "source_id": "bab-6-1-extra-50",
       "bm_original": "perubatan",
-      "translate": "重点：perubatan",
+      "translate": "药品",
       "key_points_zh": [
-        "重点：perubatan"
+        "药品"
       ],
       "bm_focus_phrase": "perubatan"
     },
     {
       "source_id": "bab-6-1-extra-51",
       "bm_original": "kekosongan politik",
-      "translate": "kekosongan 政治",
+      "translate": "政治真空",
       "key_points_zh": [
-        "kekosongan 政治"
+        "政治真空"
       ],
       "bm_focus_phrase": "kekosongan politik"
     },
     {
       "source_id": "bab-6-1-extra-52",
       "bm_original": "kerana kelewatan British kembali",
-      "translate": "因为 kelewatan British kembali",
+      "translate": "因为英国人迟迟不回国",
       "key_points_zh": [
-        "因为 kelewatan British kembali"
+        "因为英国人迟迟不回国"
       ],
       "bm_focus_phrase": "kerana kelewatan British kembali"
     },
     {
       "source_id": "bab-6-1-u15",
       "bm_original": "Keadaan ini memberi peluang kepada PKM untuk:",
-      "translate": "Keadaan 这 memberi peluang 向 PKM 为了:",
+      "translate": "这种情况为 PKM 提供了一个机会：",
       "key_points_zh": [
-        "Keadaan 这 memberi peluang 向 PKM 为了:"
+        "这种情况为 PKM 提供了一个机会："
       ],
       "bm_focus_phrase": "Keadaan ini memberi peluang kepada PKM untuk:"
     },
     {
       "source_id": "bab-6-1-extra-53",
       "bm_original": "meluaskan pengaruh",
-      "translate": "重点：meluaskan pengaruh",
+      "translate": "扩大影响力",
       "key_points_zh": [
-        "重点：meluaskan pengaruh"
+        "扩大影响力"
       ],
       "bm_focus_phrase": "meluaskan pengaruh"
     },
     {
       "source_id": "bab-6-1-u16",
       "bm_original": "MPAJA keluar dari hutan dan:",
-      "translate": "MPAJA keluar dari hutan 与:",
+      "translate": "MPAJA 已走出困境，并且：",
       "key_points_zh": [
-        "MPAJA keluar dari hutan 与:"
+        "MPAJA 已走出困境，并且："
       ],
       "bm_focus_phrase": "MPAJA keluar dari hutan dan:"
     },
     {
       "source_id": "bab-6-1-extra-54",
       "bm_original": "melakukan kekacauan",
-      "translate": "重点：melakukan kekacauan",
+      "translate": "弄得一团糟",
       "key_points_zh": [
-        "重点：melakukan kekacauan"
+        "弄得一团糟"
       ],
       "bm_focus_phrase": "melakukan kekacauan"
     },
     {
       "source_id": "bab-6-1-extra-55",
       "bm_original": "pembunuhan",
-      "translate": "重点：pembunuhan",
+      "translate": "谋杀",
       "key_points_zh": [
-        "重点：pembunuhan"
+        "谋杀"
       ],
       "bm_focus_phrase": "pembunuhan"
     },
     {
       "source_id": "bab-6-1-extra-56",
       "bm_original": "Melayu",
-      "translate": "重点：Melayu",
+      "translate": "马来语",
       "key_points_zh": [
-        "重点：Melayu"
+        "马来语"
       ],
       "bm_focus_phrase": "Melayu"
     },
     {
       "source_id": "bab-6-1-extra-57",
       "bm_original": "Cina",
-      "translate": "重点：Cina",
+      "translate": "中国人",
       "key_points_zh": [
-        "重点：Cina"
+        "中国人"
       ],
       "bm_focus_phrase": "Cina"
     },
     {
       "source_id": "bab-6-1-extra-58",
       "bm_original": "India",
-      "translate": "重点：India",
+      "translate": "印度",
       "key_points_zh": [
-        "重点：India"
+        "印度"
       ],
       "bm_focus_phrase": "India"
     },
     {
       "source_id": "bab-6-1-u34",
       "bm_original": "1 Disember 1945 → MPAJA dibubarkan.",
-      "translate": "重点：1 Disember 1945 → MPAJA dibubarkan.",
+      "translate": "1945 年 12 月 1 日 → MPAJA 解散。",
       "key_points_zh": [
-        "重点：1 Disember 1945 → MPAJA dibubarkan."
+        "1945 年 12 月 1 日 → MPAJA 解散。"
       ],
       "bm_focus_phrase": "1 Disember 1945 → MPAJA dibubarkan."
     },
     {
       "source_id": "bab-6-1-extra-59",
       "bm_original": "PKM masih dibenarkan bergerak secara sah",
-      "translate": "PKM 仍然 dibenarkan bergerak secara sah",
+      "translate": "PKM仍获准合法搬迁",
       "key_points_zh": [
-        "PKM 仍然 dibenarkan bergerak secara sah"
+        "PKM仍获准合法搬迁"
       ],
       "bm_focus_phrase": "PKM masih dibenarkan bergerak secara sah"
     },
     {
       "source_id": "bab-6-1-extra-60",
       "bm_original": "menyebarkan ideologi komunis",
-      "translate": "重点：menyebarkan ideologi komunis",
+      "translate": "传播共产主义思想",
       "key_points_zh": [
-        "重点：menyebarkan ideologi komunis"
+        "传播共产主义思想"
       ],
       "bm_focus_phrase": "menyebarkan ideologi komunis"
     },
     {
       "source_id": "bab-6-1-extra-61",
       "bm_original": "mempengaruhi pertubuhan lain",
-      "translate": "重点：mempengaruhi pertubuhan lain",
+      "translate": "影响其他组织",
       "key_points_zh": [
-        "重点：mempengaruhi pertubuhan lain"
+        "影响其他组织"
       ],
       "bm_focus_phrase": "mempengaruhi pertubuhan lain"
     },
     {
       "source_id": "bab-6-1-u17",
       "bm_original": "PKM menyusup ke dalam:",
-      "translate": "PKM menyusup ke 在:",
+      "translate": "PKM 渗透到：",
       "key_points_zh": [
-        "PKM menyusup ke 在:"
+        "PKM 渗透到："
       ],
       "bm_focus_phrase": "PKM menyusup ke dalam:"
     },
     {
       "source_id": "bab-6-1-extra-62",
       "bm_original": "Pan-Malayan Federation of Trade Unions (PMFTU)",
-      "translate": "重点：Pan-Malayan Federation of Trade Unions (PMFTU)",
+      "translate": "泛马来亚工会联合会 (PMFTU)",
       "key_points_zh": [
-        "重点：Pan-Malayan Federation of Trade Unions (PMFTU)"
+        "泛马来亚工会联合会 (PMFTU)"
       ],
       "bm_focus_phrase": "Pan-Malayan Federation of Trade Unions (PMFTU)"
     },
     {
       "source_id": "bab-6-1-u35",
       "bm_original": "Dis 1947 – Mei 1948 → PKM berjaya menguasai 335 kesatuan sekerja .",
-      "translate": "Dis 1947 – Mei 1948 → PKM 成功 menguasai 335 kesatuan sekerja .",
+      "translate": "1947 年 12 月 – 1948 年 5 月 → PKM 成功控制了 335 个工会。",
       "key_points_zh": [
-        "Dis 1947 – Mei 1948 → PKM 成功 menguasai 335 kesatuan sekerja ."
+        "1947 年 12 月 – 1948 年 5 月 → PKM 成功控制了 335 个工会。"
       ],
       "bm_focus_phrase": "Dis 1947 – Mei 1948 → PKM berjaya menguasai 335 kesatuan sekerja ."
     },
     {
       "source_id": "bab-6-1-u18",
       "bm_original": "PKM juga menyusup ke dalam:",
-      "translate": "PKM 也 menyusup ke 在:",
+      "translate": "PKM 还渗透到：",
       "key_points_zh": [
-        "PKM 也 menyusup ke 在:"
+        "PKM 还渗透到："
       ],
       "bm_focus_phrase": "PKM juga menyusup ke dalam:"
     },
     {
       "source_id": "bab-6-1-extra-63",
       "bm_original": "PKMM",
-      "translate": "重点：PKMM",
+      "translate": "PKMM",
       "key_points_zh": [
-        "重点：PKMM"
+        "PKMM"
       ],
       "bm_focus_phrase": "PKMM"
     },
     {
       "source_id": "bab-6-1-extra-64",
       "bm_original": "MDU",
-      "translate": "重点：MDU",
+      "translate": "多地住宅单元",
       "key_points_zh": [
-        "重点：MDU"
+        "多地住宅单元"
       ],
       "bm_focus_phrase": "MDU"
     },
     {
       "source_id": "bab-6-1-extra-65",
       "bm_original": "PUTERA-AMCJA",
-      "translate": "重点：PUTERA-AMCJA",
+      "translate": "王子-AMCJA",
       "key_points_zh": [
-        "重点：PUTERA-AMCJA"
+        "王子-AMCJA"
       ],
       "bm_focus_phrase": "PUTERA-AMCJA"
     },
     {
       "source_id": "bab-6-1-u19",
       "bm_original": "Disebabkan ancaman komunis terhadap:",
-      "translate": "Disebabkan ancaman komunis 针对:",
+      "translate": "由于共产主义的威胁：",
       "key_points_zh": [
-        "Disebabkan ancaman komunis 针对:"
+        "由于共产主义的威胁："
       ],
       "bm_focus_phrase": "Disebabkan ancaman komunis terhadap:"
     },
     {
       "source_id": "bab-6-1-extra-66",
       "bm_original": "ekonomi",
-      "translate": "重点：ekonomi",
+      "translate": "经济",
       "key_points_zh": [
-        "重点：ekonomi"
+        "经济"
       ],
       "bm_focus_phrase": "ekonomi"
     },
     {
       "source_id": "bab-6-1-extra-67",
       "bm_original": "keselamatan negara",
-      "translate": "重点：keselamatan negara",
+      "translate": "国家安全",
       "key_points_zh": [
-        "重点：keselamatan negara"
+        "国家安全"
       ],
       "bm_focus_phrase": "keselamatan negara"
     },
     {
       "source_id": "bab-6-1-extra-68",
       "bm_original": "Trade Union Ordinance No. 9 of 1948",
-      "translate": "重点：Trade Union Ordinance No. 9 of 1948",
+      "translate": "1948 年第 9 号工会条例",
       "key_points_zh": [
-        "重点：Trade Union Ordinance No. 9 of 1948"
+        "1948 年第 9 号工会条例"
       ],
       "bm_focus_phrase": "Trade Union Ordinance No. 9 of 1948"
     },
     {
       "source_id": "bab-6-1-extra-69",
       "bm_original": "menyekat pengaruh komunis",
-      "translate": "重点：menyekat pengaruh komunis",
+      "translate": "阻止共产主义影响",
       "key_points_zh": [
-        "重点：menyekat pengaruh komunis"
+        "阻止共产主义影响"
       ],
       "bm_focus_phrase": "menyekat pengaruh komunis"
     },
     {
       "source_id": "bab-6-1-extra-70",
       "bm_original": "mengharamkan PKM",
-      "translate": "重点：mengharamkan PKM",
+      "translate": "禁止PKM",
       "key_points_zh": [
-        "重点：mengharamkan PKM"
+        "禁止PKM"
       ],
       "bm_focus_phrase": "mengharamkan PKM"
     },
     {
       "source_id": "bab-6-1-u20",
       "bm_original": "Ideologi komunis masuk ke negara kita melalui:",
-      "translate": "Ideologi komunis masuk ke negara kita 通过:",
+      "translate": "共产主义意识形态通过以下方式进入我国：",
       "key_points_zh": [
-        "Ideologi komunis masuk ke negara kita 通过:"
+        "共产主义意识形态通过以下方式进入我国："
       ],
       "bm_focus_phrase": "Ideologi komunis masuk ke negara kita melalui:"
     },
     {
       "source_id": "bab-6-1-extra-71",
       "bm_original": "China",
-      "translate": "重点：China",
+      "translate": "中国",
       "key_points_zh": [
-        "重点：China"
+        "中国"
       ],
       "bm_focus_phrase": "China"
     },
     {
       "source_id": "bab-6-1-extra-72",
       "bm_original": "Indonesia",
-      "translate": "重点：Indonesia",
+      "translate": "印度尼西亚",
       "key_points_zh": [
-        "重点：Indonesia"
+        "印度尼西亚"
       ],
       "bm_focus_phrase": "Indonesia"
     },
     {
       "source_id": "bab-6-1-u21",
       "bm_original": "Penyebaran ini berkembang melalui:",
-      "translate": "Penyebaran 这 berkembang 通过:",
+      "translate": "这种传播是通过以下方式发展的：",
       "key_points_zh": [
-        "Penyebaran 这 berkembang 通过:"
+        "这种传播是通过以下方式发展的："
       ],
       "bm_focus_phrase": "Penyebaran ini berkembang melalui:"
     },
     {
       "source_id": "bab-6-1-extra-73",
       "bm_original": "kesatuan sekerja",
-      "translate": "重点：kesatuan sekerja",
+      "translate": "工会",
       "key_points_zh": [
-        "重点：kesatuan sekerja"
+        "工会"
       ],
       "bm_focus_phrase": "kesatuan sekerja"
     },
     {
       "source_id": "bab-6-1-extra-74",
       "bm_original": "pertubuhan",
-      "translate": "重点：pertubuhan",
+      "translate": "组织",
       "key_points_zh": [
-        "重点：pertubuhan"
+        "组织"
       ],
       "bm_focus_phrase": "pertubuhan"
     },
     {
       "source_id": "bab-6-1-u22",
       "bm_original": "Selepas Perang Dunia Kedua , keadaan kekosongan politik memberi peluang kepada PKM meluaskan pengaruh.",
-      "translate": "Selepas 第二次世界大战 , keadaan kekosongan 政治 memberi peluang 向 PKM meluaskan pengaruh.",
+      "translate": "第二次世界大战后，政治真空给了PKM扩大影响力的机会。",
       "key_points_zh": [
-        "Selepas 第二次世界大战 , keadaan kekosongan 政治 memberi peluang 向 PKM meluaskan pengaruh."
+        "第二次世界大战后，政治真空给了PKM扩大影响力的机会。"
       ],
       "bm_focus_phrase": "Selepas Perang Dunia Kedua , keadaan kekosongan politik memberi peluang kepada PKM meluaskan pengaruh."
     },
     {
       "source_id": "bab-6-1-extra-75",
       "bm_original": "PKM akhirnya diharamkan oleh British",
-      "translate": "PKM akhirnya diharamkan 由 British",
+      "translate": "PKM最终被英国禁止",
       "key_points_zh": [
-        "PKM akhirnya diharamkan 由 British"
+        "PKM最终被英国禁止"
       ],
       "bm_focus_phrase": "PKM akhirnya diharamkan oleh British"
     },
     {
       "source_id": "bab-6-1-u23",
       "bm_original": "Peristiwa ini menunjukkan bahawa ideologi luar boleh mempengaruhi negara jika berlaku ketidakstabilan politik dan kelemahan pentadbiran.",
-      "translate": "Peristiwa 这 menunjukkan bahawa ideologi luar 可以 mempengaruhi negara jika 发生 ketidakstabilan 政治 与 kelemahan 行政.",
+      "translate": "这一事件表明，如果政治不稳定、行政薄弱，外部意识形态就会影响国家。",
       "key_points_zh": [
-        "Peristiwa 这 menunjukkan bahawa ideologi luar 可以 mempengaruhi negara jika 发生 ketidakstabilan 政治 与 kelemahan 行政."
+        "这一事件表明，如果政治不稳定、行政薄弱，外部意识形态就会影响国家。"
       ],
       "bm_focus_phrase": "Peristiwa ini menunjukkan bahawa ideologi luar boleh mempengaruhi negara jika berlaku ketidakstabilan politik dan kelemahan pentadbiran."
     }

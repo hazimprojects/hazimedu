@@ -1,51 +1,52 @@
 {
   "meta": {
     "source_file": "notes/bab-6.html",
-    "rollout": "gelombang-1-manual-revision"
+    "rollout": "gelombang-1-ms-zh-regenerated",
+    "notes": "Translate fields regenerated from bm_original (ms→zh-CN) for fluent Simplified Chinese; proper names follow translator output—verify against BM notes."
   },
   "units": [
     {
       "source_id": "bab-6-synopsis-1",
       "bm_original": "Perkembangan pengaruh komunis di negara kita berlaku sebelum meletusnya Perang Dunia Kedua .",
-      "translate": "Perkembangan pengaruh komunis di negara kita 发生 sebelum meletusnya 第二次世界大战 .",
+      "translate": "共产主义在我国的影响力的发展发生在第二次世界大战爆发之前。",
       "key_points_zh": [
-        "Perkembangan pengaruh komunis di negara kita 发生 sebelum meletusnya 第二次世界大战 ."
+        "共产主义在我国的影响力的发展发生在第二次世界大战爆发之前。"
       ],
       "bm_focus_phrase": "Perkembangan pengaruh komunis di negara kita berlaku sebelum meletusnya Perang Dunia Kedua ."
     },
     {
       "source_id": "bab-6-synopsis-2",
       "bm_original": "Komunis melakukan pelbagai tindakan untuk melumpuhkan ekonomi negara dan menggugat kestabilan politik.",
-      "translate": "Komunis melakukan pelbagai tindakan 为了 melumpuhkan ekonomi negara 与 menggugat kestabilan 政治.",
+      "translate": "共产党势力采取各种行动，企图瘫痪国家经济并动摇政治稳定。",
       "key_points_zh": [
-        "Komunis melakukan pelbagai tindakan 为了 melumpuhkan ekonomi negara 与 menggugat kestabilan 政治."
+        "共产党势力采取各种行动，企图瘫痪国家经济并动摇政治稳定。"
       ],
       "bm_focus_phrase": "Komunis melakukan pelbagai tindakan untuk melumpuhkan ekonomi negara dan menggugat kestabilan politik."
     },
     {
       "source_id": "bab-6-synopsis-3",
       "bm_original": "Matlamat komunis adalah untuk merampas kuasa daripada British dan menggantikannya dengan sebuah Republik Komunis .",
-      "translate": "Matlamat komunis 是 为了 merampas kuasa daripada British 与 menggantikannya 以 sebuah Republik Komunis .",
+      "translate": "共产党的目标是从英国手中夺取权力并用共产主义共和国取而代之。",
       "key_points_zh": [
-        "Matlamat komunis 是 为了 merampas kuasa daripada British 与 menggantikannya 以 sebuah Republik Komunis ."
+        "共产党的目标是从英国手中夺取权力并用共产主义共和国取而代之。"
       ],
       "bm_focus_phrase": "Matlamat komunis adalah untuk merampas kuasa daripada British dan menggantikannya dengan sebuah Republik Komunis ."
     },
     {
       "source_id": "bab-6-synopsis-4",
       "bm_original": "Namun begitu, British berjaya menawan hati dan fikiran rakyat untuk bersama-sama membanteras ancaman komunis.",
-      "translate": "Namun begitu, British 成功 menawan hati 与 fikiran 人民 为了 bersama-sama membanteras ancaman komunis.",
+      "translate": "尽管如此，英国仍成功争取民心，使各族人民愿意携手遏制共产主义威胁。",
       "key_points_zh": [
-        "Namun begitu, British 成功 menawan hati 与 fikiran 人民 为了 bersama-sama membanteras ancaman komunis."
+        "尽管如此，英国仍成功争取民心，使各族人民愿意携手遏制共产主义威胁。"
       ],
       "bm_focus_phrase": "Namun begitu, British berjaya menawan hati dan fikiran rakyat untuk bersama-sama membanteras ancaman komunis."
     },
     {
       "source_id": "bab-6-synopsis-5",
       "bm_original": "Zaman darurat telah membawa pelbagai kesan kepada politik, ekonomi dan sosial di negara kita.",
-      "translate": "Zaman darurat 已经 membawa pelbagai 影响 向 政治, ekonomi 与 sosial di negara kita.",
+      "translate": "紧急状态时期对我国政治、经济与社会产生了多方面影响。",
       "key_points_zh": [
-        "Zaman darurat 已经 membawa pelbagai 影响 向 政治, ekonomi 与 sosial di negara kita."
+        "紧急状态时期对我国政治、经济与社会产生了多方面影响。"
       ],
       "bm_focus_phrase": "Zaman darurat telah membawa pelbagai kesan kepada politik, ekonomi dan sosial di negara kita."
     }

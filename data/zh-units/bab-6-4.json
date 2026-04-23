@@ -1,978 +1,979 @@
 {
   "meta": {
     "source_file": "notes/bab-6-4.html",
-    "rollout": "gelombang-1-manual-revision"
+    "rollout": "gelombang-1-ms-zh-regenerated",
+    "notes": "Translate fields regenerated from bm_original (ms→zh-CN) for fluent Simplified Chinese; proper names follow translator output—verify against BM notes."
   },
   "units": [
     {
       "source_id": "bab-6-4-u43",
       "bm_original": "Zaman darurat memberikan kesan jangka panjang kepada negara kita, khususnya dalam aspek politik dan sosioekonomi .",
-      "translate": "Zaman darurat memberikan 影响 jangka panjang 向 negara kita, khususnya 在 aspek 政治 与 sosioekonomi .",
+      "translate": "紧急时期对我国产生长期影响，特别是在政治和社会经济方面。",
       "key_points_zh": [
-        "Zaman darurat memberikan 影响 jangka panjang 向 negara kita, khususnya 在 aspek 政治 与 sosioekonomi ."
+        "紧急时期对我国产生长期影响，特别是在政治和社会经济方面。"
       ],
       "bm_focus_phrase": "Zaman darurat memberikan kesan jangka panjang kepada negara kita, khususnya dalam aspek politik dan sosioekonomi ."
     },
     {
       "source_id": "bab-6-4-u44",
       "bm_original": "Darurat membawa kesan politik seperti peningkatan jumlah warganegara, penubuhan Malayan Chinese Association (MCA) dan mempercepat kemerdekaan.",
-      "translate": "Darurat membawa 影响 政治 seperti peningkatan jumlah warganegara, 成立 Malayan Chinese Association (MCA) 与 mempercepat 独立.",
+      "translate": "紧急状态带来了政治影响，如公民人数增加、马来亚华人公会成立和加速独立等。",
       "key_points_zh": [
-        "Darurat membawa 影响 政治 seperti peningkatan jumlah warganegara, 成立 Malayan Chinese Association (MCA) 与 mempercepat 独立."
+        "紧急状态带来了政治影响，如公民人数增加、马来亚华人公会成立和加速独立等。"
       ],
       "bm_focus_phrase": "Darurat membawa kesan politik seperti peningkatan jumlah warganegara, penubuhan Malayan Chinese Association (MCA) dan mempercepat kemerdekaan."
     },
     {
       "source_id": "bab-6-4-u45",
       "bm_original": "Dari sudut sosioekonomi, darurat meningkatkan kos perbelanjaan, menyebabkan penderitaan rakyat, merenggangkan hubungan kaum dan mengorbankan banyak nyawa.",
-      "translate": "Dari sudut sosioekonomi, darurat 提升 kos perbelanjaan, menyebabkan penderitaan 人民, merenggangkan hubungan kaum 与 mengorbankan banyak nyawa.",
+      "translate": "从社会经济角度来看，紧急情况会增加支出成本，造成人民痛苦，造成种族关系紧张，并导致许多人丧生。",
       "key_points_zh": [
-        "Dari sudut sosioekonomi, darurat 提升 kos perbelanjaan, menyebabkan penderitaan 人民, merenggangkan hubungan kaum 与 mengorbankan banyak nyawa."
+        "从社会经济角度来看，紧急情况会增加支出成本，造成人民痛苦，造成种族关系紧张，并导致许多人丧生。"
       ],
       "bm_focus_phrase": "Dari sudut sosioekonomi, darurat meningkatkan kos perbelanjaan, menyebabkan penderitaan rakyat, merenggangkan hubungan kaum dan mengorbankan banyak nyawa."
     },
     {
       "source_id": "bab-6-4-u46",
       "bm_original": "Darurat akhirnya tamat pada 31 Julai 1960 selepas berlangsung selama 12 tahun di negara kita.",
-      "translate": "Darurat akhirnya tamat 于 31 Julai 1960 在…之后 berlangsung selama 12 年 di negara kita.",
+      "translate": "我国持续了12年的紧急状态终于于1960年7月31日结束。",
       "key_points_zh": [
-        "Darurat akhirnya tamat 于 31 Julai 1960 在…之后 berlangsung selama 12 年 di negara kita."
+        "我国持续了12年的紧急状态终于于1960年7月31日结束。"
       ],
       "bm_focus_phrase": "Darurat akhirnya tamat pada 31 Julai 1960 selepas berlangsung selama 12 tahun di negara kita."
     },
     {
       "source_id": "bab-6-4-u01",
       "bm_original": "Zaman darurat memberikan kesan jangka panjang terhadap negara kita, khususnya dalam aspek politik dan sosioekonomi.",
-      "translate": "Zaman darurat memberikan 影响 jangka panjang 针对 negara kita, khususnya 在 aspek 政治 与 sosioekonomi.",
+      "translate": "紧急状态对我国产生长期影响，特别是在政治和社会经济方面。",
       "key_points_zh": [
-        "Zaman darurat memberikan 影响 jangka panjang 针对 negara kita, khususnya 在 aspek 政治 与 sosioekonomi."
+        "紧急状态对我国产生长期影响，特别是在政治和社会经济方面。"
       ],
       "bm_focus_phrase": "Zaman darurat memberikan kesan jangka panjang terhadap negara kita, khususnya dalam aspek politik dan sosioekonomi."
     },
     {
       "source_id": "bab-6-4-u02",
       "bm_original": "Peristiwa darurat juga mempercepat usaha ke arah rundingan kemerdekaan .",
-      "translate": "Peristiwa darurat 也 mempercepat usaha ke arah rundingan 独立 .",
+      "translate": "此次紧急事件也加速了独立谈判的进程。",
       "key_points_zh": [
-        "Peristiwa darurat 也 mempercepat usaha ke arah rundingan 独立 ."
+        "此次紧急事件也加速了独立谈判的进程。"
       ],
       "bm_focus_phrase": "Peristiwa darurat juga mempercepat usaha ke arah rundingan kemerdekaan ."
     },
     {
       "source_id": "bab-6-4-u03",
       "bm_original": "Kesan zaman darurat dapat dilihat melalui tiga bahagian utama:",
-      "translate": "影响 zaman darurat dapat dilihat 通过 tiga bahagian 主要:",
+      "translate": "紧急时期的影响可以通过三个主要部分看出：",
       "key_points_zh": [
-        "影响 zaman darurat dapat dilihat 通过 tiga bahagian 主要:"
+        "紧急时期的影响可以通过三个主要部分看出："
       ],
       "bm_focus_phrase": "Kesan zaman darurat dapat dilihat melalui tiga bahagian utama:"
     },
     {
       "source_id": "bab-6-4-extra-1",
       "bm_original": "1️⃣ aspek politik 🏛️",
-      "translate": "1️⃣ aspek 政治 🏛️",
+      "translate": "1️⃣政治方面🏛️",
       "key_points_zh": [
-        "1️⃣ aspek 政治 🏛️"
+        "1️⃣政治方面🏛️"
       ],
       "bm_focus_phrase": "1️⃣ aspek politik 🏛️"
     },
     {
       "source_id": "bab-6-4-extra-2",
       "bm_original": "2️⃣ aspek sosioekonomi 💰",
-      "translate": "重点：2️⃣ aspek sosioekonomi 💰",
+      "translate": "2️⃣社会经济方面💰",
       "key_points_zh": [
-        "重点：2️⃣ aspek sosioekonomi 💰"
+        "2️⃣社会经济方面💰"
       ],
       "bm_focus_phrase": "2️⃣ aspek sosioekonomi 💰"
     },
     {
       "source_id": "bab-6-4-extra-3",
       "bm_original": "3️⃣ penamatan darurat 🕊️",
-      "translate": "重点：3️⃣ penamatan darurat 🕊️",
+      "translate": "3️⃣紧急终止🕊️",
       "key_points_zh": [
-        "重点：3️⃣ penamatan darurat 🕊️"
+        "3️⃣紧急终止🕊️"
       ],
       "bm_focus_phrase": "3️⃣ penamatan darurat 🕊️"
     },
     {
       "source_id": "bab-6-4-u04",
       "bm_original": "Zaman darurat meninggalkan beberapa kesan penting dalam bidang politik, antaranya:",
-      "translate": "Zaman darurat meninggalkan beberapa 影响 penting 在 bidang 政治, antaranya:",
+      "translate": "紧急时代在政治领域留下了几个重要影响，其中包括：",
       "key_points_zh": [
-        "Zaman darurat meninggalkan beberapa 影响 penting 在 bidang 政治, antaranya:"
+        "紧急时代在政治领域留下了几个重要影响，其中包括："
       ],
       "bm_focus_phrase": "Zaman darurat meninggalkan beberapa kesan penting dalam bidang politik, antaranya:"
     },
     {
       "source_id": "bab-6-4-extra-4",
       "bm_original": "peningkatan jumlah warganegara",
-      "translate": "重点：peningkatan jumlah warganegara",
+      "translate": "公民人数增加",
       "key_points_zh": [
-        "重点：peningkatan jumlah warganegara"
+        "公民人数增加"
       ],
       "bm_focus_phrase": "peningkatan jumlah warganegara"
     },
     {
       "source_id": "bab-6-4-extra-5",
       "bm_original": "penubuhan Malayan Chinese Association (MCA)",
-      "translate": "成立 Malayan Chinese Association (MCA)",
+      "translate": "马来亚华人公会（MCA）成立",
       "key_points_zh": [
-        "成立 Malayan Chinese Association (MCA)"
+        "马来亚华人公会（MCA）成立"
       ],
       "bm_focus_phrase": "penubuhan Malayan Chinese Association (MCA)"
     },
     {
       "source_id": "bab-6-4-extra-6",
       "bm_original": "mempercepat kemerdekaan",
-      "translate": "mempercepat 独立",
+      "translate": "加速独立",
       "key_points_zh": [
-        "mempercepat 独立"
+        "加速独立"
       ],
       "bm_focus_phrase": "mempercepat kemerdekaan"
     },
     {
       "source_id": "bab-6-4-extra-7",
       "bm_original": "1952 → kerajaan melonggarkan syarat kewarganegaraan",
-      "translate": "1952 → 政府 melonggarkan syarat 公民权",
+      "translate": "1952 → 政府放宽公民身份要求",
       "key_points_zh": [
-        "1952 → 政府 melonggarkan syarat 公民权"
+        "1952 → 政府放宽公民身份要求"
       ],
       "bm_focus_phrase": "1952 → kerajaan melonggarkan syarat kewarganegaraan"
     },
     {
       "source_id": "bab-6-4-u05",
       "bm_original": "Kesan daripada kelonggaran ini:",
-      "translate": "影响 daripada kelonggaran 这:",
+      "translate": "这种放松的效果：",
       "key_points_zh": [
-        "影响 daripada kelonggaran 这:"
+        "这种放松的效果："
       ],
       "bm_focus_phrase": "Kesan daripada kelonggaran ini:"
     },
     {
       "source_id": "bab-6-4-extra-8",
       "bm_original": "lebih kurang 1.2 juta orang Cina menjadi warganegara Persekutuan Tanah Melayu",
-      "translate": "更 kurang 1.2 juta orang Cina menjadi warganegara Persekutuan Tanah Melayu",
+      "translate": "约120万华人成为马来亚联邦公民",
       "key_points_zh": [
-        "更 kurang 1.2 juta orang Cina menjadi warganegara Persekutuan Tanah Melayu"
+        "约120万华人成为马来亚联邦公民"
       ],
       "bm_focus_phrase": "lebih kurang 1.2 juta orang Cina menjadi warganegara Persekutuan Tanah Melayu"
     },
     {
       "source_id": "bab-6-4-extra-9",
       "bm_original": "lebih kurang 180 ribu orang India menjadi warganegara Persekutuan Tanah Melayu",
-      "translate": "更 kurang 180 ribu orang India menjadi warganegara Persekutuan Tanah Melayu",
+      "translate": "大约18万印度人成为马来亚联邦公民",
       "key_points_zh": [
-        "更 kurang 180 ribu orang India menjadi warganegara Persekutuan Tanah Melayu"
+        "大约18万印度人成为马来亚联邦公民"
       ],
       "bm_focus_phrase": "lebih kurang 180 ribu orang India menjadi warganegara Persekutuan Tanah Melayu"
     },
     {
       "source_id": "bab-6-4-u06",
       "bm_original": "Kelonggaran syarat ini menunjukkan pengorbanan orang Melayu terhadap kaum lain demi mewujudkan perpaduan rakyat.",
-      "translate": "Kelonggaran syarat 这 menunjukkan pengorbanan orang Melayu 针对 kaum lain demi mewujudkan perpaduan 人民.",
+      "translate": "这些条件的放宽表明马来人为了建立人民的团结而对其他种族做出的牺牲。",
       "key_points_zh": [
-        "Kelonggaran syarat 这 menunjukkan pengorbanan orang Melayu 针对 kaum lain demi mewujudkan perpaduan 人民."
+        "这些条件的放宽表明马来人为了建立人民的团结而对其他种族做出的牺牲。"
       ],
       "bm_focus_phrase": "Kelonggaran syarat ini menunjukkan pengorbanan orang Melayu terhadap kaum lain demi mewujudkan perpaduan rakyat."
     },
     {
       "source_id": "bab-6-4-u07",
       "bm_original": "Zaman darurat mendorong Sir Henry Gurney mengambil langkah menawan hati penduduk Cina dengan menggalakkan penubuhan parti politik yang berorientasikan tempatan.",
-      "translate": "Zaman darurat mendorong Sir Henry Gurney mengambil 步骤 menawan hati penduduk Cina 以 menggalakkan 成立 parti 政治 的 berorientasikan 本地.",
+      "translate": "紧急时期促使亨利·格尼爵士采取措施，通过鼓励建立以地方为导向的政党来赢得华人的支持。",
       "key_points_zh": [
-        "Zaman darurat mendorong Sir Henry Gurney mengambil 步骤 menawan hati penduduk Cina 以 menggalakkan 成立 parti 政治 的 berorientasikan 本地."
+        "紧急时期促使亨利·格尼爵士采取措施，通过鼓励建立以地方为导向的政党来赢得华人的支持。"
       ],
       "bm_focus_phrase": "Zaman darurat mendorong Sir Henry Gurney mengambil langkah menawan hati penduduk Cina dengan menggalakkan penubuhan parti politik yang berorientasikan tempatan."
     },
     {
       "source_id": "bab-6-4-extra-10",
       "bm_original": "27 Februari 1949",
-      "translate": "重点：27 Februari 1949",
+      "translate": "1949 年 2 月 27 日",
       "key_points_zh": [
-        "重点：27 Februari 1949"
+        "1949 年 2 月 27 日"
       ],
       "bm_focus_phrase": "27 Februari 1949"
     },
     {
       "source_id": "bab-6-4-extra-11",
       "bm_original": "Kuala Lumpur",
-      "translate": "重点：Kuala Lumpur",
+      "translate": "吉隆坡",
       "key_points_zh": [
-        "重点：Kuala Lumpur"
+        "吉隆坡"
       ],
       "bm_focus_phrase": "Kuala Lumpur"
     },
     {
       "source_id": "bab-6-4-extra-12",
       "bm_original": "Tan Cheng Lock menubuhkan Malayan Chinese Association (MCA)",
-      "translate": "Tan Cheng Lock 成立 Malayan Chinese Association (MCA)",
+      "translate": "陈祯禄成立马来亚华人公会（MCA）",
       "key_points_zh": [
-        "Tan Cheng Lock 成立 Malayan Chinese Association (MCA)"
+        "陈祯禄成立马来亚华人公会（MCA）"
       ],
       "bm_focus_phrase": "Tan Cheng Lock menubuhkan Malayan Chinese Association (MCA)"
     },
     {
       "source_id": "bab-6-4-u08",
       "bm_original": "Penubuhan MCA penting kerana:",
-      "translate": "Penubuhan MCA penting 因为:",
+      "translate": "马华的成立之所以重要，是因为：",
       "key_points_zh": [
-        "Penubuhan MCA penting 因为:"
+        "马华的成立之所以重要，是因为："
       ],
       "bm_focus_phrase": "Penubuhan MCA penting kerana:"
     },
     {
       "source_id": "bab-6-4-extra-13",
       "bm_original": "meyakinkan British bahawa bukan semua orang Cina menyokong komunis",
-      "translate": "重点：meyakinkan British bahawa bukan semua orang Cina menyokong komunis",
+      "translate": "让英国人相信并非所有中国人都支持共产主义",
       "key_points_zh": [
-        "重点：meyakinkan British bahawa bukan semua orang Cina menyokong komunis"
+        "让英国人相信并非所有中国人都支持共产主义"
       ],
       "bm_focus_phrase": "meyakinkan British bahawa bukan semua orang Cina menyokong komunis"
     },
     {
       "source_id": "bab-6-4-extra-14",
       "bm_original": "menunjukkan MCA bersedia bekerjasama dengan kerajaan untuk memerangi komunis",
-      "translate": "menunjukkan MCA bersedia bekerjasama 以 政府 为了 memerangi komunis",
+      "translate": "表明马华已准备好与政府合作对抗共产党",
       "key_points_zh": [
-        "menunjukkan MCA bersedia bekerjasama 以 政府 为了 memerangi komunis"
+        "表明马华已准备好与政府合作对抗共产党"
       ],
       "bm_focus_phrase": "menunjukkan MCA bersedia bekerjasama dengan kerajaan untuk memerangi komunis"
     },
     {
       "source_id": "bab-6-4-extra-15",
       "bm_original": "Februari 1953 → MCA mempunyai 250 ribu orang ahli",
-      "translate": "重点：Februari 1953 → MCA mempunyai 250 ribu orang ahli",
+      "translate": "1953年2月 → 马华有25万名党员",
       "key_points_zh": [
-        "重点：Februari 1953 → MCA mempunyai 250 ribu orang ahli"
+        "1953年2月 → 马华有25万名党员"
       ],
       "bm_focus_phrase": "Februari 1953 → MCA mempunyai 250 ribu orang ahli"
     },
     {
       "source_id": "bab-6-4-u09",
       "bm_original": "Sumbangan MCA kepada kerajaan dan rakyat:",
-      "translate": "Sumbangan MCA 向 政府 与 人民:",
+      "translate": "马华对政府和人民的贡献：",
       "key_points_zh": [
-        "Sumbangan MCA 向 政府 与 人民:"
+        "马华对政府和人民的贡献："
       ],
       "bm_focus_phrase": "Sumbangan MCA kepada kerajaan dan rakyat:"
     },
     {
       "source_id": "bab-6-4-extra-16",
       "bm_original": "membantu kerajaan dari segi kewangan",
-      "translate": "membantu 政府 dari segi kewangan",
+      "translate": "在财政上帮助政府",
       "key_points_zh": [
-        "membantu 政府 dari segi kewangan"
+        "在财政上帮助政府"
       ],
       "bm_focus_phrase": "membantu kerajaan dari segi kewangan"
     },
     {
       "source_id": "bab-6-4-extra-17",
       "bm_original": "membantu menempatkan 500 ribu orang penduduk semula ke Kampung Baru",
-      "translate": "重点：membantu menempatkan 500 ribu orang penduduk semula ke Kampung Baru",
+      "translate": "帮助50万人重新安置到甘榜巴鲁",
       "key_points_zh": [
-        "重点：membantu menempatkan 500 ribu orang penduduk semula ke Kampung Baru"
+        "帮助50万人重新安置到甘榜巴鲁"
       ],
       "bm_focus_phrase": "membantu menempatkan 500 ribu orang penduduk semula ke Kampung Baru"
     },
     {
       "source_id": "bab-6-4-u10",
       "bm_original": "Selain itu, MCA turut menjalankan:",
-      "translate": "Selain 那, MCA turut menjalankan:",
+      "translate": "此外，MCA 还开展：",
       "key_points_zh": [
-        "Selain 那, MCA turut menjalankan:"
+        "此外，MCA 还开展："
       ],
       "bm_focus_phrase": "Selain itu, MCA turut menjalankan:"
     },
     {
       "source_id": "bab-6-4-extra-18",
       "bm_original": "kutipan derma melalui jualan loteri kebajikan",
-      "translate": "kutipan derma 通过 jualan loteri kebajikan",
+      "translate": "通过慈善彩票销售筹款",
       "key_points_zh": [
-        "kutipan derma 通过 jualan loteri kebajikan"
+        "通过慈善彩票销售筹款"
       ],
       "bm_focus_phrase": "kutipan derma melalui jualan loteri kebajikan"
     },
     {
       "source_id": "bab-6-4-u11",
       "bm_original": "Hasil kutipan tersebut didermakan kepada penduduk di Kampung Baru .",
-      "translate": "Hasil kutipan tersebut didermakan 向 penduduk di Kampung Baru .",
+      "translate": "收集的收益将捐赠给甘榜峇鲁的居民。",
       "key_points_zh": [
-        "Hasil kutipan tersebut didermakan 向 penduduk di Kampung Baru ."
+        "收集的收益将捐赠给甘榜峇鲁的居民。"
       ],
       "bm_focus_phrase": "Hasil kutipan tersebut didermakan kepada penduduk di Kampung Baru ."
     },
     {
       "source_id": "bab-6-4-extra-19",
       "bm_original": "Sehingga pertengahan 1953 → MCA berjaya mengumpulkan $2.5 juta untuk memperbaik kehidupan penduduk Cina di Kampung Baru",
-      "translate": "Sehingga pertengahan 1953 → MCA 成功 mengumpulkan $2.5 juta 为了 memperbaik kehidupan penduduk Cina di Kampung Baru",
+      "translate": "至1953年中 → 马华筹得250万元改善甘榜巴鲁华人生活",
       "key_points_zh": [
-        "Sehingga pertengahan 1953 → MCA 成功 mengumpulkan $2.5 juta 为了 memperbaik kehidupan penduduk Cina di Kampung Baru"
+        "至1953年中 → 马华筹得250万元改善甘榜巴鲁华人生活"
       ],
       "bm_focus_phrase": "Sehingga pertengahan 1953 → MCA berjaya mengumpulkan $2.5 juta untuk memperbaik kehidupan penduduk Cina di Kampung Baru"
     },
     {
       "source_id": "bab-6-4-u12",
       "bm_original": "British sedar bahawa darurat tidak dapat ditamatkan melalui strategi ketenteraan semata-mata.",
-      "translate": "British sedar bahawa darurat 不 dapat ditamatkan 通过 strategi ketenteraan semata-mata.",
+      "translate": "英国人意识到仅靠军事战略无法结束紧急状态。",
       "key_points_zh": [
-        "British sedar bahawa darurat 不 dapat ditamatkan 通过 strategi ketenteraan semata-mata."
+        "英国人意识到仅靠军事战略无法结束紧急状态。"
       ],
       "bm_focus_phrase": "British sedar bahawa darurat tidak dapat ditamatkan melalui strategi ketenteraan semata-mata."
     },
     {
       "source_id": "bab-6-4-u13",
       "bm_original": "Oleh itu, darurat menjadi faktor yang mendorong British mempercepat kemerdekaan Persekutuan Tanah Melayu .",
-      "translate": "Oleh 那, darurat menjadi 因素 的 mendorong British mempercepat 独立 Persekutuan Tanah Melayu .",
+      "translate": "因此，紧急状态成为推动英国加速马来亚联邦独立的因素。",
       "key_points_zh": [
-        "Oleh 那, darurat menjadi 因素 的 mendorong British mempercepat 独立 Persekutuan Tanah Melayu ."
+        "因此，紧急状态成为推动英国加速马来亚联邦独立的因素。"
       ],
       "bm_focus_phrase": "Oleh itu, darurat menjadi faktor yang mendorong British mempercepat kemerdekaan Persekutuan Tanah Melayu ."
     },
     {
       "source_id": "bab-6-4-u14",
       "bm_original": "Penubuhan Jawatankuasa Hubungan Antara Kaum (CLC) meningkatkan kesedaran politik dalam kalangan pemimpin pelbagai kaum bahawa mereka boleh berkongsi:",
-      "translate": "Penubuhan Jawatankuasa Hubungan Antara Kaum (CLC) 提升 kesedaran 政治 在 kalangan 领袖 pelbagai kaum bahawa mereka 可以 berkongsi:",
+      "translate": "社区间联络委员会（CLC）的成立提高了多民族领导人的政治意识，他们可以分享：",
       "key_points_zh": [
-        "Penubuhan Jawatankuasa Hubungan Antara Kaum (CLC) 提升 kesedaran 政治 在 kalangan 领袖 pelbagai kaum bahawa mereka 可以 berkongsi:"
+        "社区间联络委员会（CLC）的成立提高了多民族领导人的政治意识，他们可以分享："
       ],
       "bm_focus_phrase": "Penubuhan Jawatankuasa Hubungan Antara Kaum (CLC) meningkatkan kesedaran politik dalam kalangan pemimpin pelbagai kaum bahawa mereka boleh berkongsi:"
     },
     {
       "source_id": "bab-6-4-extra-20",
       "bm_original": "kepentingan bersama",
-      "translate": "重点：kepentingan bersama",
+      "translate": "共同利益",
       "key_points_zh": [
-        "重点：kepentingan bersama"
+        "共同利益"
       ],
       "bm_focus_phrase": "kepentingan bersama"
     },
     {
       "source_id": "bab-6-4-extra-21",
       "bm_original": "hala tuju yang sama",
-      "translate": "hala tuju 的 sama",
+      "translate": "同一个方向",
       "key_points_zh": [
-        "hala tuju 的 sama"
+        "同一个方向"
       ],
       "bm_focus_phrase": "hala tuju yang sama"
     },
     {
       "source_id": "bab-6-4-u15",
       "bm_original": "Kesedaran ini membawa kepada penubuhan:",
-      "translate": "Kesedaran 这 membawa 向 成立:",
+      "translate": "这种认识导致了以下机构的成立：",
       "key_points_zh": [
-        "Kesedaran 这 membawa 向 成立:"
+        "这种认识导致了以下机构的成立："
       ],
       "bm_focus_phrase": "Kesedaran ini membawa kepada penubuhan:"
     },
     {
       "source_id": "bab-6-4-extra-22",
       "bm_original": "Parti Perikatan (UMNO–MCA–MIC)",
-      "translate": "Parti Perikatan (UMNO–MCA–MIC)",
+      "translate": "联盟党（巫统、马华、国大党）",
       "key_points_zh": [
-        "Parti Perikatan (UMNO–MCA–MIC)"
+        "联盟党（巫统、马华、国大党）"
       ],
       "bm_focus_phrase": "Parti Perikatan (UMNO–MCA–MIC)"
     },
     {
       "source_id": "bab-6-4-extra-23",
       "bm_original": "1955 → kemenangan Parti Perikatan dalam Pilihan Raya Umum 1955",
-      "translate": "1955 → kemenangan Parti Perikatan 在 Pilihan Raya Umum 1955",
+      "translate": "1955 → 联盟党在1955年大选中获胜",
       "key_points_zh": [
-        "1955 → kemenangan Parti Perikatan 在 Pilihan Raya Umum 1955"
+        "1955 → 联盟党在1955年大选中获胜"
       ],
       "bm_focus_phrase": "1955 → kemenangan Parti Perikatan dalam Pilihan Raya Umum 1955"
     },
     {
       "source_id": "bab-6-4-u16",
       "bm_original": "Kemenangan ini meyakinkan British bahawa Persekutuan Tanah Melayu dapat menewaskan komunis melalui perpaduan rakyat berbilang kaum.",
-      "translate": "Kemenangan 这 meyakinkan British bahawa Persekutuan Tanah Melayu dapat menewaskan komunis 通过 perpaduan 人民 berbilang kaum.",
+      "translate": "这次胜利使英国人相信，马来亚联邦可以通过各族人民的团结来击败共产党。",
       "key_points_zh": [
-        "Kemenangan 这 meyakinkan British bahawa Persekutuan Tanah Melayu dapat menewaskan komunis 通过 perpaduan 人民 berbilang kaum."
+        "这次胜利使英国人相信，马来亚联邦可以通过各族人民的团结来击败共产党。"
       ],
       "bm_focus_phrase": "Kemenangan ini meyakinkan British bahawa Persekutuan Tanah Melayu dapat menewaskan komunis melalui perpaduan rakyat berbilang kaum."
     },
     {
       "source_id": "bab-6-4-u17",
       "bm_original": "Dalam suasana inilah British bersetuju memberikan kemerdekaan kepada Persekutuan Tanah Melayu .",
-      "translate": "Dalam suasana inilah British bersetuju memberikan 独立 向 Persekutuan Tanah Melayu .",
+      "translate": "在这种气氛下，英国同意给予马来亚联邦独立。",
       "key_points_zh": [
-        "Dalam suasana inilah British bersetuju memberikan 独立 向 Persekutuan Tanah Melayu ."
+        "在这种气氛下，英国同意给予马来亚联邦独立。"
       ],
       "bm_focus_phrase": "Dalam suasana inilah British bersetuju memberikan kemerdekaan kepada Persekutuan Tanah Melayu ."
     },
     {
       "source_id": "bab-6-4-u18",
       "bm_original": "Dengan itu, PKM tidak lagi mempunyai alasan untuk meneruskan perjuangannya.",
-      "translate": "Dengan 那, PKM 不 lagi mempunyai alasan 为了 meneruskan perjuangannya.",
+      "translate": "如此一来，PKM就没有再继续挣扎的理由了。",
       "key_points_zh": [
-        "Dengan 那, PKM 不 lagi mempunyai alasan 为了 meneruskan perjuangannya."
+        "如此一来，PKM就没有再继续挣扎的理由了。"
       ],
       "bm_focus_phrase": "Dengan itu, PKM tidak lagi mempunyai alasan untuk meneruskan perjuangannya."
     },
     {
       "source_id": "bab-6-4-u19",
       "bm_original": "Zaman darurat turut meninggalkan kesan besar terhadap sosioekonomi negara, antaranya:",
-      "translate": "Zaman darurat turut meninggalkan 影响 besar 针对 sosioekonomi negara, antaranya:",
+      "translate": "紧急时代也对该国的社会经济产生了重大影响，包括：",
       "key_points_zh": [
-        "Zaman darurat turut meninggalkan 影响 besar 针对 sosioekonomi negara, antaranya:"
+        "紧急时代也对该国的社会经济产生了重大影响，包括："
       ],
       "bm_focus_phrase": "Zaman darurat turut meninggalkan kesan besar terhadap sosioekonomi negara, antaranya:"
     },
     {
       "source_id": "bab-6-4-extra-24",
       "bm_original": "meningkatkan kos perbelanjaan",
-      "translate": "提升 kos perbelanjaan",
+      "translate": "增加开支成本",
       "key_points_zh": [
-        "提升 kos perbelanjaan"
+        "增加开支成本"
       ],
       "bm_focus_phrase": "meningkatkan kos perbelanjaan"
     },
     {
       "source_id": "bab-6-4-extra-25",
       "bm_original": "menyebabkan penderitaan dan kesengsaraan kepada rakyat",
-      "translate": "menyebabkan penderitaan 与 kesengsaraan 向 人民",
+      "translate": "给人民带来痛苦和痛苦",
       "key_points_zh": [
-        "menyebabkan penderitaan 与 kesengsaraan 向 人民"
+        "给人民带来痛苦和痛苦"
       ],
       "bm_focus_phrase": "menyebabkan penderitaan dan kesengsaraan kepada rakyat"
     },
     {
       "source_id": "bab-6-4-extra-26",
       "bm_original": "merenggangkan hubungan kaum",
-      "translate": "重点：merenggangkan hubungan kaum",
+      "translate": "种族关系紧张",
       "key_points_zh": [
-        "重点：merenggangkan hubungan kaum"
+        "种族关系紧张"
       ],
       "bm_focus_phrase": "merenggangkan hubungan kaum"
     },
     {
       "source_id": "bab-6-4-extra-27",
       "bm_original": "mengorbankan banyak nyawa",
-      "translate": "重点：mengorbankan banyak nyawa",
+      "translate": "夺去了许多人的生命",
       "key_points_zh": [
-        "重点：mengorbankan banyak nyawa"
+        "夺去了许多人的生命"
       ],
       "bm_focus_phrase": "mengorbankan banyak nyawa"
     },
     {
       "source_id": "bab-6-4-u20",
       "bm_original": "Darurat menjejaskan perkembangan ekonomi dan meningkatkan kos perbelanjaan pihak British.",
-      "translate": "Darurat menjejaskan perkembangan ekonomi 与 提升 kos perbelanjaan pihak British.",
+      "translate": "紧急状态影响了经济发展并增加了英国的支出成本。",
       "key_points_zh": [
-        "Darurat menjejaskan perkembangan ekonomi 与 提升 kos perbelanjaan pihak British."
+        "紧急状态影响了经济发展并增加了英国的支出成本。"
       ],
       "bm_focus_phrase": "Darurat menjejaskan perkembangan ekonomi dan meningkatkan kos perbelanjaan pihak British."
     },
     {
       "source_id": "bab-6-4-u21",
       "bm_original": "Kerajaan terpaksa membelanjakan:",
-      "translate": "Kerajaan terpaksa membelanjakan:",
+      "translate": "政府必须花费：",
       "key_points_zh": [
-        "Kerajaan terpaksa membelanjakan:"
+        "政府必须花费："
       ],
       "bm_focus_phrase": "Kerajaan terpaksa membelanjakan:"
     },
     {
       "source_id": "bab-6-4-extra-28",
       "bm_original": "lebih $10 juta sebulan",
-      "translate": "更 $10 juta sebulan",
+      "translate": "每月超过 1000 万美元",
       "key_points_zh": [
-        "更 $10 juta sebulan"
+        "每月超过 1000 万美元"
       ],
       "bm_focus_phrase": "lebih $10 juta sebulan"
     },
     {
       "source_id": "bab-6-4-extra-29",
       "bm_original": "atau",
-      "translate": "重点：atau",
+      "translate": "或者",
       "key_points_zh": [
-        "重点：atau"
+        "或者"
       ],
       "bm_focus_phrase": "atau"
     },
     {
       "source_id": "bab-6-4-extra-30",
       "bm_original": "120 juta setahun",
-      "translate": "重点：120 juta setahun",
+      "translate": "每年1.2亿",
       "key_points_zh": [
-        "重点：120 juta setahun"
+        "每年1.2亿"
       ],
       "bm_focus_phrase": "120 juta setahun"
     },
     {
       "source_id": "bab-6-4-u22",
       "bm_original": "Anggaran purata kos darurat ialah:",
-      "translate": "Anggaran purata kos darurat 是:",
+      "translate": "平均紧急费用估算为：",
       "key_points_zh": [
-        "Anggaran purata kos darurat 是:"
+        "平均紧急费用估算为："
       ],
       "bm_focus_phrase": "Anggaran purata kos darurat ialah:"
     },
     {
       "source_id": "bab-6-4-extra-31",
       "bm_original": "250 ribu hingga $300 ribu sehari",
-      "translate": "重点：250 ribu hingga $300 ribu sehari",
+      "translate": "每天 25 万至 30 万美元",
       "key_points_zh": [
-        "重点：250 ribu hingga $300 ribu sehari"
+        "每天 25 万至 30 万美元"
       ],
       "bm_focus_phrase": "250 ribu hingga $300 ribu sehari"
     },
     {
       "source_id": "bab-6-4-u23",
       "bm_original": "Selain itu, kerajaan juga membelanjakan kos yang besar untuk penempatan semula penduduk di pinggir hutan.",
-      "translate": "Selain 那, 政府 也 membelanjakan kos 的 besar 为了 penempatan semula penduduk di pinggir hutan.",
+      "translate": "此外，政府还花费大量资金对森林边缘的人们进行安置。",
       "key_points_zh": [
-        "Selain 那, 政府 也 membelanjakan kos 的 besar 为了 penempatan semula penduduk di pinggir hutan."
+        "此外，政府还花费大量资金对森林边缘的人们进行安置。"
       ],
       "bm_focus_phrase": "Selain itu, kerajaan juga membelanjakan kos yang besar untuk penempatan semula penduduk di pinggir hutan."
     },
     {
       "source_id": "bab-6-4-extra-32",
       "bm_original": "1950–1953 → perbelanjaan kerajaan dianggarkan lebih $7 juta untuk pembangunan di Kampung Baru",
-      "translate": "1950–1953 → perbelanjaan 政府 dianggarkan 更 $7 juta 为了 pembangunan di Kampung Baru",
+      "translate": "1950–1953 → 政府支出估计超过 700 万美元用于 Kampung Baru 的发展",
       "key_points_zh": [
-        "1950–1953 → perbelanjaan 政府 dianggarkan 更 $7 juta 为了 pembangunan di Kampung Baru"
+        "1950–1953 → 政府支出估计超过 700 万美元用于 Kampung Baru 的发展"
       ],
       "bm_focus_phrase": "1950–1953 → perbelanjaan kerajaan dianggarkan lebih $7 juta untuk pembangunan di Kampung Baru"
     },
     {
       "source_id": "bab-6-4-u24",
       "bm_original": "Rakyat menghadapi pelbagai penderitaan sepanjang zaman darurat.",
-      "translate": "人民 menghadapi pelbagai penderitaan sepanjang zaman darurat.",
+      "translate": "在整个紧急时期，人民面临着各种苦难。",
       "key_points_zh": [
-        "人民 menghadapi pelbagai penderitaan sepanjang zaman darurat."
+        "在整个紧急时期，人民面临着各种苦难。"
       ],
       "bm_focus_phrase": "Rakyat menghadapi pelbagai penderitaan sepanjang zaman darurat."
     },
     {
       "source_id": "bab-6-4-u25",
       "bm_original": "Kawasan yang menjadi sasaran komunis:",
-      "translate": "Kawasan 的 menjadi sasaran komunis:",
+      "translate": "共产党的目标领域：",
       "key_points_zh": [
-        "Kawasan 的 menjadi sasaran komunis:"
+        "共产党的目标领域："
       ],
       "bm_focus_phrase": "Kawasan yang menjadi sasaran komunis:"
     },
     {
       "source_id": "bab-6-4-extra-33",
       "bm_original": "ladang",
-      "translate": "重点：ladang",
+      "translate": "农场",
       "key_points_zh": [
-        "重点：ladang"
+        "农场"
       ],
       "bm_focus_phrase": "ladang"
     },
     {
       "source_id": "bab-6-4-extra-34",
       "bm_original": "lombong",
-      "translate": "重点：lombong",
+      "translate": "矿",
       "key_points_zh": [
-        "重点：lombong"
+        "矿"
       ],
       "bm_focus_phrase": "lombong"
     },
     {
       "source_id": "bab-6-4-u26",
       "bm_original": "Kesan lain:",
-      "translate": "影响 lain:",
+      "translate": "其他效果：",
       "key_points_zh": [
-        "影响 lain:"
+        "其他效果："
       ],
       "bm_focus_phrase": "Kesan lain:"
     },
     {
       "source_id": "bab-6-4-extra-35",
       "bm_original": "pengeluaran tanaman padi dan makanan lain semakin berkurangan",
-      "translate": "pengeluaran tanaman padi 与 makanan lain semakin berkurangan",
+      "translate": "稻米和其他粮食作物的产量正在减少",
       "key_points_zh": [
-        "pengeluaran tanaman padi 与 makanan lain semakin berkurangan"
+        "稻米和其他粮食作物的产量正在减少"
       ],
       "bm_focus_phrase": "pengeluaran tanaman padi dan makanan lain semakin berkurangan"
     },
     {
       "source_id": "bab-6-4-extra-36",
       "bm_original": "harga barang makanan dan keperluan harian melambung tinggi",
-      "translate": "harga barang makanan 与 keperluan harian melambung tinggi",
+      "translate": "食品和生活必需品价格暴涨",
       "key_points_zh": [
-        "harga barang makanan 与 keperluan harian melambung tinggi"
+        "食品和生活必需品价格暴涨"
       ],
       "bm_focus_phrase": "harga barang makanan dan keperluan harian melambung tinggi"
     },
     {
       "source_id": "bab-6-4-u27",
       "bm_original": "Golongan yang turut mengalami kesukaran ialah:",
-      "translate": "Golongan 的 turut mengalami kesukaran 是:",
+      "translate": "同样遇到困难的还有：",
       "key_points_zh": [
-        "Golongan 的 turut mengalami kesukaran 是:"
+        "同样遇到困难的还有："
       ],
       "bm_focus_phrase": "Golongan yang turut mengalami kesukaran ialah:"
     },
     {
       "source_id": "bab-6-4-extra-37",
       "bm_original": "peniaga",
-      "translate": "重点：peniaga",
+      "translate": "商人",
       "key_points_zh": [
-        "重点：peniaga"
+        "商人"
       ],
       "bm_focus_phrase": "peniaga"
     },
     {
       "source_id": "bab-6-4-extra-38",
       "bm_original": "pekedai",
-      "translate": "重点：pekedai",
+      "translate": "店主",
       "key_points_zh": [
-        "重点：pekedai"
+        "店主"
       ],
       "bm_focus_phrase": "pekedai"
     },
     {
       "source_id": "bab-6-4-extra-39",
       "bm_original": "pengusaha kebun",
-      "translate": "重点：pengusaha kebun",
+      "translate": "园丁",
       "key_points_zh": [
-        "重点：pengusaha kebun"
+        "园丁"
       ],
       "bm_focus_phrase": "pengusaha kebun"
     },
     {
       "source_id": "bab-6-4-extra-40",
       "bm_original": "peladang",
-      "translate": "重点：peladang",
+      "translate": "农民",
       "key_points_zh": [
-        "重点：peladang"
+        "农民"
       ],
       "bm_focus_phrase": "peladang"
     },
     {
       "source_id": "bab-6-4-extra-41",
       "bm_original": "pelombong",
-      "translate": "重点：pelombong",
+      "translate": "矿工",
       "key_points_zh": [
-        "重点：pelombong"
+        "矿工"
       ],
       "bm_focus_phrase": "pelombong"
     },
     {
       "source_id": "bab-6-4-u28",
       "bm_original": "Mereka menjadi sasaran peras ugut komunis untuk mendapatkan:",
-      "translate": "Mereka menjadi sasaran peras ugut komunis 为了 取得:",
+      "translate": "他们成为共产主义勒索的目标，以获得：",
       "key_points_zh": [
-        "Mereka menjadi sasaran peras ugut komunis 为了 取得:"
+        "他们成为共产主义勒索的目标，以获得："
       ],
       "bm_focus_phrase": "Mereka menjadi sasaran peras ugut komunis untuk mendapatkan:"
     },
     {
       "source_id": "bab-6-4-extra-42",
       "bm_original": "wang",
-      "translate": "重点：wang",
+      "translate": "钱",
       "key_points_zh": [
-        "重点：wang"
+        "钱"
       ],
       "bm_focus_phrase": "wang"
     },
     {
       "source_id": "bab-6-4-extra-43",
       "bm_original": "bekalan makanan",
-      "translate": "重点：bekalan makanan",
+      "translate": "食品供应",
       "key_points_zh": [
-        "重点：bekalan makanan"
+        "食品供应"
       ],
       "bm_focus_phrase": "bekalan makanan"
     },
     {
       "source_id": "bab-6-4-u29",
       "bm_original": "Jika tuntutan komunis tidak dipenuhi:",
-      "translate": "Jika tuntutan komunis 不 dipenuhi:",
+      "translate": "如果共产主义的要求没有得到满足：",
       "key_points_zh": [
-        "Jika tuntutan komunis 不 dipenuhi:"
+        "如果共产主义的要求没有得到满足："
       ],
       "bm_focus_phrase": "Jika tuntutan komunis tidak dipenuhi:"
     },
     {
       "source_id": "bab-6-4-extra-44",
       "bm_original": "lombong, ladang dan kedai dimusnahkan",
-      "translate": "lombong, ladang 与 kedai dimusnahkan",
+      "translate": "矿山、农场和商店被毁",
       "key_points_zh": [
-        "lombong, ladang 与 kedai dimusnahkan"
+        "矿山、农场和商店被毁"
       ],
       "bm_focus_phrase": "lombong, ladang dan kedai dimusnahkan"
     },
     {
       "source_id": "bab-6-4-extra-45",
       "bm_original": "nyawa mereka turut terancam",
-      "translate": "重点：nyawa mereka turut terancam",
+      "translate": "他们的生命也受到威胁",
       "key_points_zh": [
-        "重点：nyawa mereka turut terancam"
+        "他们的生命也受到威胁"
       ],
       "bm_focus_phrase": "nyawa mereka turut terancam"
     },
     {
       "source_id": "bab-6-4-u30",
       "bm_original": "Penduduk juga menghadapi kesukaran untuk:",
-      "translate": "Penduduk 也 menghadapi kesukaran 为了:",
+      "translate": "居民还面临以下困难：",
       "key_points_zh": [
-        "Penduduk 也 menghadapi kesukaran 为了:"
+        "居民还面临以下困难："
       ],
       "bm_focus_phrase": "Penduduk juga menghadapi kesukaran untuk:"
     },
     {
       "source_id": "bab-6-4-extra-46",
       "bm_original": "bergerak",
-      "translate": "重点：bergerak",
+      "translate": "移动",
       "key_points_zh": [
-        "重点：bergerak"
+        "移动"
       ],
       "bm_focus_phrase": "bergerak"
     },
     {
       "source_id": "bab-6-4-extra-47",
       "bm_original": "memperoleh bekalan keperluan",
-      "translate": "重点：memperoleh bekalan keperluan",
+      "translate": "获得必要的物资",
       "key_points_zh": [
-        "重点：memperoleh bekalan keperluan"
+        "获得必要的物资"
       ],
       "bm_focus_phrase": "memperoleh bekalan keperluan"
     },
     {
       "source_id": "bab-6-4-extra-48",
       "bm_original": "penduduk tidak dapat menjalankan kegiatan harian",
-      "translate": "penduduk 不 dapat menjalankan kegiatan harian",
+      "translate": "居民无法进行日常活动",
       "key_points_zh": [
-        "penduduk 不 dapat menjalankan kegiatan harian"
+        "居民无法进行日常活动"
       ],
       "bm_focus_phrase": "penduduk tidak dapat menjalankan kegiatan harian"
     },
     {
       "source_id": "bab-6-4-extra-49",
       "bm_original": "ramai pekebun dan pekerja lombong tidak dapat bekerja",
-      "translate": "ramai pekebun 与 pekerja lombong 不 dapat bekerja",
+      "translate": "许多种植园主和矿工无法工作",
       "key_points_zh": [
-        "ramai pekebun 与 pekerja lombong 不 dapat bekerja"
+        "许多种植园主和矿工无法工作"
       ],
       "bm_focus_phrase": "ramai pekebun dan pekerja lombong tidak dapat bekerja"
     },
     {
       "source_id": "bab-6-4-extra-50",
       "bm_original": "perintah berkurung menyekat pergerakan mereka",
-      "translate": "重点：perintah berkurung menyekat pergerakan mereka",
+      "translate": "宵禁限制了他们的行动",
       "key_points_zh": [
-        "重点：perintah berkurung menyekat pergerakan mereka"
+        "宵禁限制了他们的行动"
       ],
       "bm_focus_phrase": "perintah berkurung menyekat pergerakan mereka"
     },
     {
       "source_id": "bab-6-4-u31",
       "bm_original": "Catuan makanan yang dikenakan kerajaan menyebabkan ramai penduduk bergantung pada makanan seperti:",
-      "translate": "Catuan makanan 的 dikenakan 政府 menyebabkan ramai penduduk bergantung 于 makanan seperti:",
+      "translate": "政府实施的食品配给导致许多居民依赖以下食物：",
       "key_points_zh": [
-        "Catuan makanan 的 dikenakan 政府 menyebabkan ramai penduduk bergantung 于 makanan seperti:"
+        "政府实施的食品配给导致许多居民依赖以下食物："
       ],
       "bm_focus_phrase": "Catuan makanan yang dikenakan kerajaan menyebabkan ramai penduduk bergantung pada makanan seperti:"
     },
     {
       "source_id": "bab-6-4-extra-51",
       "bm_original": "ubi kayu",
-      "translate": "重点：ubi kayu",
+      "translate": "木薯粉",
       "key_points_zh": [
-        "重点：ubi kayu"
+        "木薯粉"
       ],
       "bm_focus_phrase": "ubi kayu"
     },
     {
       "source_id": "bab-6-4-extra-52",
       "bm_original": "keledek",
-      "translate": "重点：keledek",
+      "translate": "甘薯",
       "key_points_zh": [
-        "重点：keledek"
+        "甘薯"
       ],
       "bm_focus_phrase": "keledek"
     },
     {
       "source_id": "bab-6-4-extra-53",
       "bm_original": "jagung",
-      "translate": "重点：jagung",
+      "translate": "玉米",
       "key_points_zh": [
-        "重点：jagung"
+        "玉米"
       ],
       "bm_focus_phrase": "jagung"
     },
     {
       "source_id": "bab-6-4-u32",
       "bm_original": "Rancangan penempatan semula Kampung Baru menyebabkan masyarakat hidup secara terpisah mengikut kaum.",
-      "translate": "Rancangan penempatan semula Kampung Baru menyebabkan 社会 hidup secara terpisah mengikut kaum.",
+      "translate": "甘榜巴鲁重新安置计划导致社区根据种族分开居住。",
       "key_points_zh": [
-        "Rancangan penempatan semula Kampung Baru menyebabkan 社会 hidup secara terpisah mengikut kaum."
+        "甘榜巴鲁重新安置计划导致社区根据种族分开居住。"
       ],
       "bm_focus_phrase": "Rancangan penempatan semula Kampung Baru menyebabkan masyarakat hidup secara terpisah mengikut kaum."
     },
     {
       "source_id": "bab-6-4-u33",
       "bm_original": "Keadaan yang berlaku:",
-      "translate": "Keadaan 的 发生:",
+      "translate": "目前情况：",
       "key_points_zh": [
-        "Keadaan 的 发生:"
+        "目前情况："
       ],
       "bm_focus_phrase": "Keadaan yang berlaku:"
     },
     {
       "source_id": "bab-6-4-extra-54",
       "bm_original": "kaum Cina dikumpulkan di petempatan baharu yang dilengkapi prasarana dan kemudiannya berkembang menjadi bandar baharu",
-      "translate": "kaum Cina dikumpulkan di petempatan baharu 的 dilengkapi prasarana 与 kemudiannya berkembang menjadi bandar baharu",
+      "translate": "中国人聚集在配备有基础设施的新定居点，后来发展成新城市",
       "key_points_zh": [
-        "kaum Cina dikumpulkan di petempatan baharu 的 dilengkapi prasarana 与 kemudiannya berkembang menjadi bandar baharu"
+        "中国人聚集在配备有基础设施的新定居点，后来发展成新城市"
       ],
       "bm_focus_phrase": "kaum Cina dikumpulkan di petempatan baharu yang dilengkapi prasarana dan kemudiannya berkembang menjadi bandar baharu"
     },
     {
       "source_id": "bab-6-4-extra-55",
       "bm_original": "kaum Melayu pula tinggal di kampung yang serba kekurangan",
-      "translate": "kaum Melayu pula tinggal di kampung 的 serba kekurangan",
+      "translate": "马来人生活在贫穷的村庄",
       "key_points_zh": [
-        "kaum Melayu pula tinggal di kampung 的 serba kekurangan"
+        "马来人生活在贫穷的村庄"
       ],
       "bm_focus_phrase": "kaum Melayu pula tinggal di kampung yang serba kekurangan"
     },
     {
       "source_id": "bab-6-4-extra-56",
       "bm_original": "kaum lain berada di petempatan yang berasingan",
-      "translate": "kaum lain berada di petempatan 的 berasingan",
+      "translate": "其他种族都在不同的定居点",
       "key_points_zh": [
-        "kaum lain berada di petempatan 的 berasingan"
+        "其他种族都在不同的定居点"
       ],
       "bm_focus_phrase": "kaum lain berada di petempatan yang berasingan"
     },
     {
       "source_id": "bab-6-4-u34",
       "bm_original": "Kawalan ketat pasukan keselamatan menyebabkan hubungan antara kaum menjadi terbatas.",
-      "translate": "Kawalan ketat pasukan keselamatan menyebabkan hubungan 其中 kaum menjadi terbatas.",
+      "translate": "安全部队的严格控制导致种族之间的关系受到限制。",
       "key_points_zh": [
-        "Kawalan ketat pasukan keselamatan menyebabkan hubungan 其中 kaum menjadi terbatas."
+        "安全部队的严格控制导致种族之间的关系受到限制。"
       ],
       "bm_focus_phrase": "Kawalan ketat pasukan keselamatan menyebabkan hubungan antara kaum menjadi terbatas."
     },
     {
       "source_id": "bab-6-4-u35",
       "bm_original": "Kehidupan yang terasing ini menjadikan hubungan antara kaum semakin renggang kerana penduduk tidak mempunyai banyak ruang untuk bersosial dengan kaum lain.",
-      "translate": "Kehidupan 的 terasing 这 menjadikan hubungan 其中 kaum semakin renggang 因为 penduduk 不 mempunyai banyak ruang 为了 bersosial 以 kaum lain.",
+      "translate": "这种与世隔绝的生活使得种族之间的关系更加紧张，因为居民没有太多的空间与其他种族交往。",
       "key_points_zh": [
-        "Kehidupan 的 terasing 这 menjadikan hubungan 其中 kaum semakin renggang 因为 penduduk 不 mempunyai banyak ruang 为了 bersosial 以 kaum lain."
+        "这种与世隔绝的生活使得种族之间的关系更加紧张，因为居民没有太多的空间与其他种族交往。"
       ],
       "bm_focus_phrase": "Kehidupan yang terasing ini menjadikan hubungan antara kaum semakin renggang kerana penduduk tidak mempunyai banyak ruang untuk bersosial dengan kaum lain."
     },
     {
       "source_id": "bab-6-4-u36",
       "bm_original": "Zaman darurat menyebabkan ramai yang terkorban, termasuk:",
-      "translate": "Zaman darurat menyebabkan ramai 的 terkorban, termasuk:",
+      "translate": "此次紧急事件造成多人伤亡，其中包括：",
       "key_points_zh": [
-        "Zaman darurat menyebabkan ramai 的 terkorban, termasuk:"
+        "此次紧急事件造成多人伤亡，其中包括："
       ],
       "bm_focus_phrase": "Zaman darurat menyebabkan ramai yang terkorban, termasuk:"
     },
     {
       "source_id": "bab-6-4-extra-57",
       "bm_original": "anggota pasukan keselamatan",
-      "translate": "重点：anggota pasukan keselamatan",
+      "translate": "安全部队成员",
       "key_points_zh": [
-        "重点：anggota pasukan keselamatan"
+        "安全部队成员"
       ],
       "bm_focus_phrase": "anggota pasukan keselamatan"
     },
     {
       "source_id": "bab-6-4-extra-58",
       "bm_original": "anggota komunis",
-      "translate": "重点：anggota komunis",
+      "translate": "共产主义者",
       "key_points_zh": [
-        "重点：anggota komunis"
+        "共产主义者"
       ],
       "bm_focus_phrase": "anggota komunis"
     },
     {
       "source_id": "bab-6-4-extra-59",
       "bm_original": "orang awam",
-      "translate": "重点：orang awam",
+      "translate": "民众",
       "key_points_zh": [
-        "重点：orang awam"
+        "民众"
       ],
       "bm_focus_phrase": "orang awam"
     },
     {
       "source_id": "bab-6-4-u37",
       "bm_original": "Keadaan ini membuktikan bahawa darurat membawa penderitaan dan kesengsaraan yang besar kepada penduduk Persekutuan Tanah Melayu .",
-      "translate": "Keadaan 这 membuktikan bahawa darurat membawa penderitaan 与 kesengsaraan 的 besar 向 penduduk Persekutuan Tanah Melayu .",
+      "translate": "这种情况证明紧急状态给马来亚联邦人民带来了巨大的痛苦和苦难。",
       "key_points_zh": [
-        "Keadaan 这 membuktikan bahawa darurat membawa penderitaan 与 kesengsaraan 的 besar 向 penduduk Persekutuan Tanah Melayu ."
+        "这种情况证明紧急状态给马来亚联邦人民带来了巨大的痛苦和苦难。"
       ],
       "bm_focus_phrase": "Keadaan ini membuktikan bahawa darurat membawa penderitaan dan kesengsaraan yang besar kepada penduduk Persekutuan Tanah Melayu ."
     },
     {
       "source_id": "bab-6-4-u38",
       "bm_original": "Darurat telah menyebabkan:",
-      "translate": "Darurat 已经 menyebabkan:",
+      "translate": "紧急情况导致：",
       "key_points_zh": [
-        "Darurat 已经 menyebabkan:"
+        "紧急情况导致："
       ],
       "bm_focus_phrase": "Darurat telah menyebabkan:"
     },
     {
       "source_id": "bab-6-4-extra-60",
       "bm_original": "banyak nyawa terkorban",
-      "translate": "重点：banyak nyawa terkorban",
+      "translate": "许多人丧生",
       "key_points_zh": [
-        "重点：banyak nyawa terkorban"
+        "许多人丧生"
       ],
       "bm_focus_phrase": "banyak nyawa terkorban"
     },
     {
       "source_id": "bab-6-4-extra-61",
       "bm_original": "kemusnahan harta benda",
-      "translate": "重点：kemusnahan harta benda",
+      "translate": "毁坏财产",
       "key_points_zh": [
-        "重点：kemusnahan harta benda"
+        "毁坏财产"
       ],
       "bm_focus_phrase": "kemusnahan harta benda"
     },
     {
       "source_id": "bab-6-4-extra-62",
       "bm_original": "kesengsaraan kepada rakyat",
-      "translate": "kesengsaraan 向 人民",
+      "translate": "给人民带来苦难",
       "key_points_zh": [
-        "kesengsaraan 向 人民"
+        "给人民带来苦难"
       ],
       "bm_focus_phrase": "kesengsaraan kepada rakyat"
     },
     {
       "source_id": "bab-6-4-extra-63",
       "bm_original": "31 Julai 1960 → penamatan zaman darurat di seluruh negara berkuat kuasa",
-      "translate": "31 Julai 1960 → penamatan zaman darurat di 全国 negara berkuat kuasa",
+      "translate": "1960年7月31日 → 全国紧急状态结束生效",
       "key_points_zh": [
-        "31 Julai 1960 → penamatan zaman darurat di 全国 negara berkuat kuasa"
+        "1960年7月31日 → 全国紧急状态结束生效"
       ],
       "bm_focus_phrase": "31 Julai 1960 → penamatan zaman darurat di seluruh negara berkuat kuasa"
     },
     {
       "source_id": "bab-6-4-u39",
       "bm_original": "Dengan itu, berakhirlah zaman darurat yang berlangsung selama:",
-      "translate": "Dengan 那, berakhirlah zaman darurat 的 berlangsung selama:",
+      "translate": "至此，紧急时代持续了：",
       "key_points_zh": [
-        "Dengan 那, berakhirlah zaman darurat 的 berlangsung selama:"
+        "至此，紧急时代持续了："
       ],
       "bm_focus_phrase": "Dengan itu, berakhirlah zaman darurat yang berlangsung selama:"
     },
     {
       "source_id": "bab-6-4-extra-64",
       "bm_original": "12 tahun",
-      "translate": "12 年",
+      "translate": "12年",
       "key_points_zh": [
-        "12 年"
+        "12年"
       ],
       "bm_focus_phrase": "12 tahun"
     },
     {
       "source_id": "bab-6-4-u40",
       "bm_original": "Zaman darurat meninggalkan kesan besar terhadap negara kita dari aspek:",
-      "translate": "Zaman darurat meninggalkan 影响 besar 针对 negara kita dari aspek:",
+      "translate": "紧急状态时期对我国造成的影响主要体现在以下几个方面：",
       "key_points_zh": [
-        "Zaman darurat meninggalkan 影响 besar 针对 negara kita dari aspek:"
+        "紧急状态时期对我国造成的影响主要体现在以下几个方面："
       ],
       "bm_focus_phrase": "Zaman darurat meninggalkan kesan besar terhadap negara kita dari aspek:"
     },
@@ -988,99 +989,99 @@
     {
       "source_id": "bab-6-4-extra-66",
       "bm_original": "sosioekonomi",
-      "translate": "重点：sosioekonomi",
+      "translate": "社会经济学",
       "key_points_zh": [
-        "重点：sosioekonomi"
+        "社会经济学"
       ],
       "bm_focus_phrase": "sosioekonomi"
     },
     {
       "source_id": "bab-6-4-u41",
       "bm_original": "Darurat juga menyebabkan rakyat hidup dalam:",
-      "translate": "Darurat 也 menyebabkan 人民 hidup 在:",
+      "translate": "紧急情况还会导致人们居住在：",
       "key_points_zh": [
-        "Darurat 也 menyebabkan 人民 hidup 在:"
+        "紧急情况还会导致人们居住在："
       ],
       "bm_focus_phrase": "Darurat juga menyebabkan rakyat hidup dalam:"
     },
     {
       "source_id": "bab-6-4-extra-67",
       "bm_original": "penderitaan",
-      "translate": "重点：penderitaan",
+      "translate": "痛苦",
       "key_points_zh": [
-        "重点：penderitaan"
+        "痛苦"
       ],
       "bm_focus_phrase": "penderitaan"
     },
     {
       "source_id": "bab-6-4-extra-68",
       "bm_original": "ketakutan",
-      "translate": "重点：ketakutan",
+      "translate": "害怕",
       "key_points_zh": [
-        "重点：ketakutan"
+        "害怕"
       ],
       "bm_focus_phrase": "ketakutan"
     },
     {
       "source_id": "bab-6-4-extra-69",
       "bm_original": "kesukaran hidup",
-      "translate": "重点：kesukaran hidup",
+      "translate": "生活困难",
       "key_points_zh": [
-        "重点：kesukaran hidup"
+        "生活困难"
       ],
       "bm_focus_phrase": "kesukaran hidup"
     },
     {
       "source_id": "bab-6-4-u42",
       "bm_original": "Walaupun zaman darurat membawa banyak kesan buruk, pengalaman ini turut menyedarkan rakyat dan pemimpin tentang pentingnya perpaduan, keselamatan dan kerjasama dalam mempertahankan negara.",
-      "translate": "Walaupun zaman darurat membawa banyak 影响 buruk, pengalaman 这 turut menyedarkan 人民 与 领袖 tentang pentingnya perpaduan, keselamatan 与 kerjasama 在 mempertahankan negara.",
+      "translate": "虽然紧急状态带来了很多不好的影响，但这次经历也让民众和领导人认识到团结、安全与合作保卫国家的重要性。",
       "key_points_zh": [
-        "Walaupun zaman darurat membawa banyak 影响 buruk, pengalaman 这 turut menyedarkan 人民 与 领袖 tentang pentingnya perpaduan, keselamatan 与 kerjasama 在 mempertahankan negara."
+        "虽然紧急状态带来了很多不好的影响，但这次经历也让民众和领导人认识到团结、安全与合作保卫国家的重要性。"
       ],
       "bm_focus_phrase": "Walaupun zaman darurat membawa banyak kesan buruk, pengalaman ini turut menyedarkan rakyat dan pemimpin tentang pentingnya perpaduan, keselamatan dan kerjasama dalam mempertahankan negara."
     },
     {
       "source_id": "bab-6-4-u47",
       "bm_original": "Tempoh darurat selama 12 tahun telah menyebabkan penduduk tempatan mengalami kesengsaraan , kesulitan hidup , ketakutan dan kemusnahan harta benda .",
-      "translate": "Tempoh darurat selama 12 年 已经 menyebabkan penduduk 本地 mengalami kesengsaraan , kesulitan hidup , ketakutan 与 kemusnahan harta benda .",
+      "translate": "长达12年的紧急状态使当地民众遭受痛苦、生活困难、恐惧和财产毁坏。",
       "key_points_zh": [
-        "Tempoh darurat selama 12 年 已经 menyebabkan penduduk 本地 mengalami kesengsaraan , kesulitan hidup , ketakutan 与 kemusnahan harta benda ."
+        "长达12年的紧急状态使当地民众遭受痛苦、生活困难、恐惧和财产毁坏。"
       ],
       "bm_focus_phrase": "Tempoh darurat selama 12 tahun telah menyebabkan penduduk tempatan mengalami kesengsaraan , kesulitan hidup , ketakutan dan kemusnahan harta benda ."
     },
     {
       "source_id": "bab-6-4-u48",
       "bm_original": "Tindakan komunis yang memusnahkan kemudahan asas serta menyerang penduduk dan anggota keselamatan telah mewujudkan keadaan huru-hara di negara kita.",
-      "translate": "Tindakan komunis 的 memusnahkan kemudahan asas 以及 menyerang penduduk 与 anggota keselamatan 已经 mewujudkan keadaan huru-hara di negara kita.",
+      "translate": "共产党破坏基本设施、袭击居民和安全人员的行动在我国造成了混乱。",
       "key_points_zh": [
-        "Tindakan komunis 的 memusnahkan kemudahan asas 以及 menyerang penduduk 与 anggota keselamatan 已经 mewujudkan keadaan huru-hara di negara kita."
+        "共产党破坏基本设施、袭击居民和安全人员的行动在我国造成了混乱。"
       ],
       "bm_focus_phrase": "Tindakan komunis yang memusnahkan kemudahan asas serta menyerang penduduk dan anggota keselamatan telah mewujudkan keadaan huru-hara di negara kita."
     },
     {
       "source_id": "bab-6-4-u49",
       "bm_original": "Bagi membanteras ancaman tersebut, kerajaan telah melaksanakan pelbagai langkah seperti penguatkuasaan undang-undang, pemerkasaan pasukan keselamatan, penempatan semula penduduk, kempen rakyat, perang saraf dan rundingan politik.",
-      "translate": "Bagi membanteras ancaman tersebut, 政府 已经 melaksanakan pelbagai 步骤 seperti penguatkuasaan undang-undang, pemerkasaan pasukan keselamatan, penempatan semula penduduk, kempen 人民, perang saraf 与 rundingan 政治.",
+      "translate": "为了应对这一威胁，政府采取了多种措施，如执法、增强安全部队、重新安置居民、民众运动、神经战和政治谈判等。",
       "key_points_zh": [
-        "Bagi membanteras ancaman tersebut, 政府 已经 melaksanakan pelbagai 步骤 seperti penguatkuasaan undang-undang, pemerkasaan pasukan keselamatan, penempatan semula penduduk, kempen 人民, perang saraf 与 rundingan 政治."
+        "为了应对这一威胁，政府采取了多种措施，如执法、增强安全部队、重新安置居民、民众运动、神经战和政治谈判等。"
       ],
       "bm_focus_phrase": "Bagi membanteras ancaman tersebut, kerajaan telah melaksanakan pelbagai langkah seperti penguatkuasaan undang-undang, pemerkasaan pasukan keselamatan, penempatan semula penduduk, kempen rakyat, perang saraf dan rundingan politik."
     },
     {
       "source_id": "bab-6-4-u50",
       "bm_original": "Usaha ini membuktikan bahawa kejayaan menentang ancaman komunis bukan sahaja bergantung pada kekuatan senjata, tetapi juga pada kerjasama rakyat , kebijaksanaan pemimpin dan semangat mempertahankan negara .",
-      "translate": "Usaha 这 membuktikan bahawa kejayaan 反对 ancaman komunis bukan sahaja bergantung 于 kekuatan senjata, tetapi 也 于 kerjasama 人民 , kebijaksanaan 领袖 与 semangat mempertahankan negara .",
+      "translate": "这一努力证明，成功抵御共产主义威胁不仅取决于武器的力量，还取决于人民的合作、领导人的智慧和卫国精神。",
       "key_points_zh": [
-        "Usaha 这 membuktikan bahawa kejayaan 反对 ancaman komunis bukan sahaja bergantung 于 kekuatan senjata, tetapi 也 于 kerjasama 人民 , kebijaksanaan 领袖 与 semangat mempertahankan negara ."
+        "这一努力证明，成功抵御共产主义威胁不仅取决于武器的力量，还取决于人民的合作、领导人的智慧和卫国精神。"
       ],
       "bm_focus_phrase": "Usaha ini membuktikan bahawa kejayaan menentang ancaman komunis bukan sahaja bergantung pada kekuatan senjata, tetapi juga pada kerjasama rakyat , kebijaksanaan pemimpin dan semangat mempertahankan negara ."
     },
     {
       "source_id": "bab-6-4-u51",
       "bm_original": "Oleh itu, keamanan yang dikecapi pada hari ini mesti dihargai dan dipertahankan bersama agar negara tidak lagi terjerumus ke dalam suasana huru-hara dan penderitaan seperti zaman darurat.",
-      "translate": "Oleh 那, keamanan 的 dikecapi 于 hari 这 mesti dihargai 与 dipertahankan bersama agar negara 不 lagi terjerumus ke 在 suasana huru-hara 与 penderitaan seperti zaman darurat.",
+      "translate": "因此，我们必须共同珍惜和捍卫今天所享有的和平，使国家不再陷入紧急时期那样的混乱和苦难之中。",
       "key_points_zh": [
-        "Oleh 那, keamanan 的 dikecapi 于 hari 这 mesti dihargai 与 dipertahankan bersama agar negara 不 lagi terjerumus ke 在 suasana huru-hara 与 penderitaan seperti zaman darurat."
+        "因此，我们必须共同珍惜和捍卫今天所享有的和平，使国家不再陷入紧急时期那样的混乱和苦难之中。"
       ],
       "bm_focus_phrase": "Oleh itu, keamanan yang dikecapi pada hari ini mesti dihargai dan dipertahankan bersama agar negara tidak lagi terjerumus ke dalam suasana huru-hara dan penderitaan seperti zaman darurat."
     }
