@@ -636,21 +636,6 @@
     return false;
   }
 
-  function looksMalayHeavy(text) {
-    if (typeof text !== "string") return false;
-    var lower = text.toLowerCase();
-    var malayMarkers = [
-      " ialah ", " yang ", " dan ", " dengan ", " kepada ", " oleh ",
-      " untuk ", " dalam ", " kerana ", " selepas ", " terhadap ", " rakyat ",
-      " kerajaan ", " pentadbiran ", " penentangan "
-    ];
-    var hits = 0;
-    for (var i = 0; i < malayMarkers.length; i++) {
-      if (lower.indexOf(malayMarkers[i]) !== -1) hits += 1;
-    }
-    return hits >= 3;
-  }
-
   function hasCodeMixedGrammarArtifacts(text) {
     if (typeof text !== "string") return false;
     var raw = text.trim();
@@ -669,67 +654,32 @@
     return false;
   }
 
-  function hasTooMuchMalayInMixedSentence(text) {
-    if (typeof text !== "string") return false;
-    var raw = text.trim();
-    if (!raw) return false;
-    if (!/[\u4e00-\u9fff]/.test(raw)) return false;
-
-    var zhCount = (raw.match(/[\u4e00-\u9fff]/g) || []).length;
-    var latinTokens = raw.match(/[A-Za-z][A-Za-z'’.-]*/g) || [];
-    if (latinTokens.length < 8) return false;
-
-    // Jika token latin jauh lebih banyak berbanding aksara Cina, ia hampir pasti code-mixed.
-    return latinTokens.length > Math.max(zhCount * 0.7, 10);
-  }
-
+  /**
+   * Use JSON `translate` whenever it exists, except for empty strings, UI
+   * placeholder text, obvious garbage, or legacy auto-gen template stubs.
+   * Do not reject long ms→zh-CN prose for "BM-heavy" or missing acronym substrings.
+   */
   function isUsableCuratedZhText(text, gl, bmSource) {
     if (typeof text !== "string") return false;
     var raw = text.trim();
     if (!raw) return false;
-    if (isTemplateLikeZhExplain(raw)) return false;
 
-    // Reject obvious machine-translation debris.
+    if (/暂无中文释义/.test(raw)) return false;
+
     if (/[\u4e00-\u9fff]/.test(raw) && /\binvolved\b/i.test(raw)) return false;
     if (/[\u4e00-\u9fff]/.test(raw) && /\bwritings\b/i.test(raw)) return false;
 
     var zhCount = (raw.match(/[\u4e00-\u9fff]/g) || []).length;
-    var bm = typeof bmSource === "string" ? bmSource.trim() : "";
-    var shortBm = bm.length > 0 && bm.length <= 140;
 
-    if (zhCount < 4) {
-      if (!shortBm) return false;
-      if (looksMalayHeavy(raw)) return false;
-      if (hasCodeMixedGrammarArtifacts(raw)) return false;
-      if (hasTooMuchMalayInMixedSentence(raw)) return false;
-      if (zhCount >= 1) return true;
-      if (/^[\s0-9A-Za-z'’.,\-–—()[\]{}]+$/.test(raw) && raw.length <= 96) return true;
-      return false;
-    }
-    // Longer curated strings (e.g. ms→zh-CN regen): accept even with many Latin
-    // proper nouns — only reject obvious broken hybrids, not “BM-heavy” heuristics.
-    if (zhCount < 8) {
-      if (looksMalayHeavy(raw)) return false;
-      if (hasCodeMixedGrammarArtifacts(raw)) return false;
-      if (hasTooMuchMalayInMixedSentence(raw)) return false;
-    } else {
-      if (hasCodeMixedGrammarArtifacts(raw)) return false;
-    }
+    // Legacy scaffold / tutor-template lines (short only — avoid false positives on real notes).
+    if (raw.length < 220 && isTemplateLikeZhExplain(raw)) return false;
 
-    // Strict entity substring check only for shorter strings (long translations may
-    // romanise or gloss names differently but remain correct).
-    if (zhCount < 24 && typeof bmSource === "string" && bmSource.trim()) {
-      var entities = extractProtectedEntities(bmSource, gl);
-      var placeholders = Array.isArray(entities.placeholders) ? entities.placeholders : [];
-      var map = entities.placeholderMap || {};
-      for (var i = 0; i < placeholders.length; i++) {
-        var original = map[placeholders[i]];
-        if (typeof original !== "string" || !original.trim()) continue;
-        if (original.length < 3) continue;
-        if (/[A-Z]{2,}/.test(original) || /\b(?:Raja|Sultan|Tun|Dato|Tunku|Tuanku)\b/.test(original)) {
-          if (raw.indexOf(original) === -1) return false;
-        }
-      }
+    // Obvious BM+particle junk without enough Chinese to be a deliberate mixed line.
+    if (zhCount < 6 && hasCodeMixedGrammarArtifacts(raw)) return false;
+
+    // Almost no Chinese and not a short proper-noun / label line.
+    if (zhCount < 1) {
+      return /^[\s0-9A-Za-z'’.,\-–—()[\]{}]+$/.test(raw) && raw.length <= 120;
     }
 
     return true;
