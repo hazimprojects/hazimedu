@@ -6,7 +6,7 @@
    - Same-origin non-document GET: cache-first
 */
 
-const CACHE = 'zym-v126';
+const CACHE = 'zym-v127';
 
 const PRECACHE_URLS = [
   '/',
@@ -30,7 +30,7 @@ const PRECACHE_URLS = [
   '/icons/apple-touch-icon.png?v=1',
   '/icons/icon-192.png?v=1',
   '/icons/icon-512.png?v=1',
-  '/manifest.json?v=10',
+  '/manifest.json?v=11',
   '/notes/bab-1-1.html',
   '/notes/bab-1-2.html',
   '/notes/bab-1-3.html',
