@@ -1,6 +1,6 @@
 {
   "style_css": "84",
-  "main_js": "93",
+  "main_js": "94",
   "zh_mode_js": "36",
   "manifest": "8",
   "sw_cache": "108",
@@ -9,8 +9,8 @@
   "logo": "3",
   "css": {
     "base": "5",
-    "layout": "10",
-    "ui": "18",
+    "layout": "11",
+    "ui": "19",
     "paper": "10",
     "keywords": "21",
     "responsive": "3",
