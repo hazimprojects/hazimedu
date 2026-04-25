@@ -670,6 +670,19 @@
       }
     }
 
+    /* Lift overlay above the fixed bottom nav (56px + safe-area) that is active ≤760px.
+       Without this, the nav (z-index:50) sits on top of the overlay (z-index:45)
+       and the peek bar disappears behind the nav when collapsed. */
+    @media (max-width: 760px) {
+      .lab-compact-game .learning-lab-stage[data-lab-feedback-wrap] {
+        bottom: calc(var(--bottom-nav-h, 56px) + var(--safe-bottom, env(safe-area-inset-bottom, 0px)));
+        border-radius: 22px 22px 0 0;
+      }
+
+      /* When peeking, translateY(100%-52px) moves sheet so only top 52px is visible —
+         which lands exactly above the nav bar with no gap or overlap. */
+    }
+
     @media (max-width: 899px) {
       body.quiz-page {
         height: 100dvh;
