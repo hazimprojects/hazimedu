@@ -135,30 +135,6 @@
       display: none;
     }
 
-    /* --- BUILDING (small & compact) — blueprint grid aesthetic --- */
-    .lab-compact-game .learning-lab-kingdom {
-      padding: 0.5rem 0.6rem 0.45rem;
-      flex-shrink: 0;
-      border-radius: 16px;
-      background:
-        repeating-linear-gradient(0deg, rgba(28, 52, 88, 0.06) 0px, transparent 1px, transparent 20px, rgba(28, 52, 88, 0.06) 21px),
-        repeating-linear-gradient(90deg, rgba(28, 52, 88, 0.06) 0px, transparent 1px, transparent 20px, rgba(28, 52, 88, 0.06) 21px),
-        linear-gradient(160deg, #dce9f5, #cfe1f0);
-      border-color: rgba(28, 52, 88, 0.14);
-    }
-
-    /* Override inline max-width from JS */
-    .lab-compact-game .learning-lab-kingdom-svg svg {
-      max-width: 100% !important;
-      max-height: 135px !important;
-      height: auto !important;
-    }
-
-    /* Hide part badges — distracting */
-    .lab-compact-game .learning-lab-parts {
-      display: none;
-    }
-
     /* ======================================
        PRE-GAME NOTICE SCREEN
        ====================================== */
@@ -458,11 +434,6 @@
       .lab-compact-game .learning-lab-top {
         display: flex;
       }
-
-      .lab-compact-game .learning-lab-kingdom-svg svg {
-        max-width: 100% !important;
-        max-height: 200px !important;
-      }
     }
 
     /* --- DARK MODE — candlelit archive --- */
@@ -481,14 +452,6 @@
       background: rgba(255, 255, 255, 0.04);
       color: #e8d4b0;
       border-color: rgba(180, 140, 60, 0.1);
-    }
-
-    [data-theme="dark"] .lab-compact-game .learning-lab-kingdom {
-      background:
-        repeating-linear-gradient(0deg, rgba(60, 100, 180, 0.07) 0px, transparent 1px, transparent 20px, rgba(60, 100, 180, 0.07) 21px),
-        repeating-linear-gradient(90deg, rgba(60, 100, 180, 0.07) 0px, transparent 1px, transparent 20px, rgba(60, 100, 180, 0.07) 21px),
-        linear-gradient(160deg, #121e2e, #0d1820);
-      border-color: rgba(60, 100, 180, 0.18);
     }
 
     /* ======================================
@@ -651,10 +614,10 @@
             </div>
 
             <div class="lab-compact-points">
-              <div class="lab-compact-point">🧠 Fokus pada fakta yang paling kerap mengelirukan pelajar.</div>
+              <div class="lab-compact-point">🧠 5 soalan rawak merentasi 5 aras Taksonomi Bloom setiap sesi.</div>
               <div class="lab-compact-point">🎯 Soalan dibina rapat dengan gaya fikir SPM.</div>
-              <div class="lab-compact-point">🏗️ Jawapan betul membantu membina visual kerajaan sedikit demi sedikit.</div>
-              <div class="lab-compact-point">🔁 Boleh diulang terus untuk pengukuhan segera.</div>
+              <div class="lab-compact-point">📈 Aras meningkat dari Mengingat hingga Menilai untuk kefahaman mendalam.</div>
+              <div class="lab-compact-point">🔁 Ulang kuiz untuk soalan berbeza — rekod terbaik disimpan.</div>
             </div>
           </article>
 
@@ -680,11 +643,11 @@
               <div class="lab-notice-body">
                 <div class="lab-notice-rule">
                   <span class="lab-notice-rule-icon">🧠</span>
-                  <span class="lab-notice-rule-text">6 soalan pelbagai jenis berdasarkan gaya soalan SPM</span>
+                  <span class="lab-notice-rule-text">5 soalan dipilih rawak — satu dari setiap aras Taksonomi Bloom</span>
                 </div>
                 <div class="lab-notice-rule">
-                  <span class="lab-notice-rule-icon">🏗️</span>
-                  <span class="lab-notice-rule-text">Jawapan betul membina bahagian kerajaan satu demi satu</span>
+                  <span class="lab-notice-rule-icon">📈</span>
+                  <span class="lab-notice-rule-text">Aras meningkat: Mengingat → Memahami → Mengaplikasi → Menganalisis → Menilai</span>
                 </div>
                 <div class="lab-notice-rule">
                   <span class="lab-notice-rule-icon">💡</span>
@@ -692,7 +655,7 @@
                 </div>
                 <div class="lab-notice-rule">
                   <span class="lab-notice-rule-icon">🔁</span>
-                  <span class="lab-notice-rule-text">Soalan diacak — ulang untuk latihan lebih berkesan</span>
+                  <span class="lab-notice-rule-text">Ulang kuiz untuk soalan berbeza — rekod terbaik disimpan</span>
                 </div>
               </div>
               <div class="lab-notice-footer">
@@ -702,7 +665,7 @@
           </div>
 
           <!-- Game shell (shown after notice dismissed) -->
-          <div class="learning-lab-shell" data-learning-lab="1-1" id="lab-game-shell" style="display:none">
+          <div class="learning-lab-shell" data-quiz-id="1-1" id="lab-game-shell" style="display:none">
             <div class="learning-lab-card">
               <div class="learning-lab-top">
                 <div>
@@ -715,33 +678,31 @@
                 </div>
 
                 <div class="learning-lab-stats">
-                  <span class="learning-lab-stat">6 bahagian binaan</span>
-                  <span class="learning-lab-stat">Pelbagai bentuk soalan</span>
-                  <span class="learning-lab-stat">Santai tetapi padat</span>
+                  <span class="learning-lab-stat">5 soalan per sesi</span>
+                  <span class="learning-lab-stat">5 aras Bloom</span>
+                  <span class="learning-lab-stat">Soalan rawak</span>
                 </div>
               </div>
 
               <div class="learning-lab-stage" data-lab-screen="intro">
-                <div class="learning-lab-kingdom">
-                  <div class="learning-lab-kingdom-svg" data-lab-kingdom></div>
-                  <div class="learning-lab-parts" data-lab-parts></div>
-                </div>
-
+                <p class="learning-lab-intro-stats" data-lab-intro-stats style="display:none;"></p>
                 <div class="learning-lab-actions">
                   <button class="learning-lab-btn" data-lab-action="start">Mulakan Kuiz 🧩</button>
                 </div>
               </div>
 
               <div class="learning-lab-stage is-hidden" data-lab-screen="game">
-                <div class="learning-lab-kingdom">
-                  <div class="learning-lab-kingdom-svg" data-lab-kingdom></div>
-                  <div class="learning-lab-parts" data-lab-parts></div>
+                <div class="learning-lab-progress-wrap">
+                  <div class="learning-lab-progress-label" data-lab-progress>Soalan 1 / 5</div>
+                  <div class="learning-lab-progress-bar" data-lab-progress-bar>
+                    <div class="learning-lab-progress-fill" data-lab-progress-fill></div>
+                  </div>
                 </div>
 
                 <div class="learning-lab-question">
                   <div class="learning-lab-chip-row">
                     <span class="learning-lab-chip type" data-lab-type></span>
-                    <span class="learning-lab-chip reward" data-lab-reward></span>
+                    <span class="learning-lab-chip level" data-lab-level></span>
                   </div>
 
                   <p class="learning-lab-prompt" data-lab-prompt></p>
@@ -778,16 +739,12 @@
               </div>
 
               <div class="learning-lab-stage is-hidden" data-lab-screen="result">
-                <div class="learning-lab-kingdom">
-                  <div class="learning-lab-kingdom-svg" data-lab-kingdom></div>
-                  <div class="learning-lab-parts" data-lab-parts></div>
-                </div>
-
                 <div class="learning-lab-summary-box">
                   <div class="learning-lab-feedback" data-lab-result-box>
                     <p class="learning-lab-feedback-title" data-lab-result-title></p>
                     <p class="learning-lab-feedback-text" data-lab-result-text></p>
                   </div>
+                  <p class="learning-lab-best-score" data-lab-best-score></p>
                 </div>
 
                 <div class="learning-lab-summary-list" data-lab-summary-list></div>
