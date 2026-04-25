@@ -1038,7 +1038,6 @@
       if (!cleanText || cleanText.length < 3) return;
 
       var unit = resolveUnit(el);
-      if (!unit) return;
       var toggleBtn = document.createElement("button");
       toggleBtn.type = "button";
       toggleBtn.className = "zh-heading-toggle";
