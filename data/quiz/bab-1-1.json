@@ -1,0 +1,216 @@
+{
+  "id": "1-1",
+  "title": "Latar Belakang Negara Bangsa Sebelum Kedatangan Barat",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Kerajaan Majapahit mengamalkan undang-undang tertentu. Apakah nama undang-undang tersebut?",
+      "options": [
+        "Kutara Manawa",
+        "Hukum Kanun Melaka",
+        "Undang-undang Laut Melaka",
+        "Adat Perpatih"
+      ],
+      "answer": "Kutara Manawa",
+      "explanation": "Kerajaan Majapahit mengamalkan undang-undang Kutara Manawa. Ini membuktikan unsur undang-undang telah wujud dalam kerajaan awal di Alam Melayu.",
+      "tip": "Majapahit = Kutara Manawa. Hafal sebagai pasangan tetap untuk soalan objektif."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Antara berikut, manakah yang merupakan kerajaan awal di Alam Melayu?",
+      "options": [
+        "Funan, Champa dan Kedah Tua",
+        "Johor, Perak dan Selangor",
+        "Singapura, Brunei dan Sulu",
+        "Aceh, Patani dan Majapahit"
+      ],
+      "answer": "Funan, Champa dan Kedah Tua",
+      "explanation": "Funan, Champa dan Kedah Tua ialah kerajaan awal yang membuktikan asas negara bangsa telah wujud di Alam Melayu sebelum kedatangan Barat.",
+      "tip": "Hafal tiga kerajaan awal ini: Funan, Champa, Kedah Tua — sering keluar dalam soalan objektif."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah ciri-ciri utama sebuah negara bangsa di Alam Melayu?",
+      "options": [
+        "Raja, rakyat, wilayah pengaruh dan undang-undang",
+        "Parlimen, perlembagaan, pilihan raya dan parti politik",
+        "Tentera, senjata, kubu dan benteng pertahanan",
+        "Pelabuhan, pedagang, mata wang dan cukai"
+      ],
+      "answer": "Raja, rakyat, wilayah pengaruh dan undang-undang",
+      "explanation": "Empat ciri negara bangsa di Alam Melayu ialah raja, rakyat, wilayah pengaruh dan undang-undang. Hafal keempat-empat ciri ini.",
+      "tip": "Empat ciri negara bangsa: Raja + Rakyat + Wilayah pengaruh + Undang-undang. Ingat dengan singkatan RRWU."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah nama undang-undang yang diamalkan oleh Kesultanan Melayu Melaka?",
+      "options": [
+        "Hukum Kanun Melaka",
+        "Kutara Manawa",
+        "Adat Temenggung",
+        "Undang-undang Lembaga"
+      ],
+      "answer": "Hukum Kanun Melaka",
+      "explanation": "Kesultanan Melayu Melaka mengamalkan Hukum Kanun Melaka sebagai sistem perundangan. Ini membuktikan unsur undang-undang dalam negara bangsa Melaka.",
+      "tip": "Melaka = Hukum Kanun Melaka. Bezakan dengan Majapahit = Kutara Manawa."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah kemunculan kerajaan awal seperti Funan, Champa dan Kedah Tua penting dalam sejarah Alam Melayu?",
+      "options": [
+        "Membuktikan asas negara bangsa telah wujud sebelum kedatangan Barat",
+        "Menunjukkan pengaruh penjajahan Barat telah lama bertapak di Alam Melayu",
+        "Memperkenalkan sistem demokrasi kepada masyarakat Alam Melayu",
+        "Menyebarkan agama Islam ke seluruh kepulauan Melayu"
+      ],
+      "answer": "Membuktikan asas negara bangsa telah wujud sebelum kedatangan Barat",
+      "explanation": "Kemunculan kerajaan awal membuktikan bahawa asas negara bangsa — raja, rakyat, wilayah pengaruh dan undang-undang — telah wujud jauh sebelum Barat tiba.",
+      "tip": "Soalan 'mengapa penting' = tanya implikasi. Kerajaan awal = bukti negara bangsa wujud sebelum Barat."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Apakah yang dimaksudkan dengan 'wilayah pengaruh' dalam konteks negara bangsa Alam Melayu?",
+      "options": [
+        "Kawasan yang rakyatnya menerima, mengakui dan mematuhi pemerintahan raja",
+        "Kawasan yang dikuasai secara paksa oleh tentera raja melalui peperangan",
+        "Sempadan geografi rasmi yang ditetapkan melalui perjanjian antarabangsa",
+        "Kawasan yang dikuasai oleh penjajah Barat semasa pemerintahan kolonial"
+      ],
+      "answer": "Kawasan yang rakyatnya menerima, mengakui dan mematuhi pemerintahan raja",
+      "explanation": "Wilayah pengaruh ialah kawasan yang rakyatnya secara sukarela menerima, mengakui dan mematuhi pemerintahan raja — bukan kawasan yang dikuasai secara paksa.",
+      "tip": "Tiga kata kunci definisi wilayah pengaruh: menerima, mengakui, mematuhi. Hafal tiga perkataan ini tepat-tepat."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah raja dianggap sebagai tonggak utama dalam kerajaan awal Alam Melayu?",
+      "options": [
+        "Raja merupakan simbol perpaduan dan pemegang kuasa pemerintahan tertinggi",
+        "Raja bertanggungjawab menguruskan perdagangan antarabangsa secara langsung",
+        "Raja dipilih melalui sistem pilihan raya oleh rakyat jelata",
+        "Raja hanya berfungsi sebagai pemimpin upacara keagamaan semata-mata"
+      ],
+      "answer": "Raja merupakan simbol perpaduan dan pemegang kuasa pemerintahan tertinggi",
+      "explanation": "Raja ialah tonggak kerajaan kerana baginda menjadi simbol perpaduan rakyat dan pemegang kuasa pemerintahan tertinggi. Tanpa raja, konsep negara bangsa tidak lengkap.",
+      "tip": "Raja = simbol perpaduan + kuasa pemerintahan tertinggi. Ini yang membezakan raja daripada pemimpin lain."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Kerajaan Srivijaya berjaya menguasai laluan perdagangan dan menerima ufti daripada kerajaan-kerajaan lain di sekitarnya. Rakyat dari pelbagai kawasan tunduk kepada pemerintahannya. Apakah yang digambarkan oleh petikan ini?",
+      "options": [
+        "Kesinambungan negara bangsa yang berkembang daripada kerajaan sebelumnya",
+        "Pengaruh penjajahan Barat ke atas struktur kerajaan tempatan",
+        "Sistem pilihan raya yang diamalkan dalam kerajaan Srivijaya",
+        "Kegagalan kerajaan Srivijaya mempertahankan wilayahnya"
+      ],
+      "answer": "Kesinambungan negara bangsa yang berkembang daripada kerajaan sebelumnya",
+      "explanation": "Srivijaya mewarisi dan mengembangkan tradisi negara bangsa daripada kerajaan-kerajaan sebelumnya seperti Funan dan Champa, menunjukkan kesinambungan negara bangsa di Alam Melayu.",
+      "tip": "Soalan 'apakah yang digambarkan' = tanya konsep di sebalik fakta. Srivijaya menggambarkan kesinambungan, bukan permulaan baru."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Rakyat di sebuah kawasan secara sukarela menghantar ufti kepada raja dan mematuhi perintahnya tanpa paksaan. Konsep apakah yang dirujuk oleh situasi ini?",
+      "options": [
+        "Wilayah pengaruh",
+        "Perjanjian perdamaian",
+        "Sistem feudal Barat",
+        "Demokrasi berparlimen"
+      ],
+      "answer": "Wilayah pengaruh",
+      "explanation": "Situasi ini menggambarkan konsep wilayah pengaruh — kawasan yang rakyatnya secara sukarela menerima, mengakui dan mematuhi pemerintahan raja.",
+      "tip": "Kata kunci: 'secara sukarela' + 'mematuhi raja' = wilayah pengaruh. Jika ada paksaan, konsepnya berbeza."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "\"Hukum Kanun Melaka mengandungi peraturan tentang hukuman jenayah, hak milik dan tata cara pemerintahan yang perlu dipatuhi oleh semua lapisan masyarakat.\" Apakah yang dibuktikan oleh petikan ini tentang Kesultanan Melayu Melaka?",
+      "options": [
+        "Unsur undang-undang sebagai ciri negara bangsa telah wujud",
+        "Melaka mengamalkan sistem perundangan Barat sepenuhnya",
+        "Undang-undang Melaka hanya terpakai kepada golongan bangsawan",
+        "Sistem pemerintahan Melaka tidak mempunyai struktur yang jelas"
+      ],
+      "answer": "Unsur undang-undang sebagai ciri negara bangsa telah wujud",
+      "explanation": "Kewujudan Hukum Kanun Melaka membuktikan bahawa unsur undang-undang — salah satu ciri negara bangsa — telah wujud dalam Kesultanan Melayu Melaka.",
+      "tip": "Soalan 'apakah yang dibuktikan' = tanya implikasi. Hukum Kanun Melaka = bukti wujudnya unsur undang-undang dalam negara bangsa."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah persamaan utama antara Funan, Champa dan Kedah Tua dari sudut sejarah Alam Melayu?",
+      "options": [
+        "Ketiga-tiganya merupakan kerajaan awal yang membuktikan kewujudan negara bangsa di Alam Melayu",
+        "Ketiga-tiganya ditubuhkan oleh penjajah Barat sebagai pusat pentadbiran kolonial",
+        "Ketiga-tiganya mengamalkan sistem demokrasi berparlimen yang sama",
+        "Ketiga-tiganya terletak di kepulauan yang sama dan berkongsi sempadan geografi"
+      ],
+      "answer": "Ketiga-tiganya merupakan kerajaan awal yang membuktikan kewujudan negara bangsa di Alam Melayu",
+      "explanation": "Persamaan utama Funan, Champa dan Kedah Tua ialah ketiga-tiganya merupakan kerajaan awal di Alam Melayu yang membuktikan bahawa asas negara bangsa telah wujud sebelum kedatangan Barat.",
+      "tip": "Soalan persamaan = cari satu ciri yang dimiliki oleh SEMUA pihak. Funan, Champa, Kedah Tua = sama-sama kerajaan awal Alam Melayu."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perbezaan utama antara Kutara Manawa (Majapahit) dengan Hukum Kanun Melaka?",
+      "options": [
+        "Kedua-duanya merupakan undang-undang bagi negara bangsa yang berbeza",
+        "Kutara Manawa dibawa oleh Barat manakala Hukum Kanun Melaka dibina sendiri",
+        "Hukum Kanun Melaka lebih tua daripada Kutara Manawa dari segi sejarah",
+        "Kutara Manawa hanya untuk golongan bangsawan manakala Hukum Kanun Melaka untuk semua"
+      ],
+      "answer": "Kedua-duanya merupakan undang-undang bagi negara bangsa yang berbeza",
+      "explanation": "Perbezaan utamanya ialah Kutara Manawa ialah undang-undang Majapahit manakala Hukum Kanun Melaka ialah undang-undang Kesultanan Melayu Melaka — dua negara bangsa yang berbeza dengan sistem undang-undang masing-masing.",
+      "tip": "Soalan perbezaan = tanya APA yang berbeza, bukan MENGAPA berbeza. Di sini, keduanya berbeza dari segi negara yang mengamalkannya."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah yang PALING kukuh untuk membuktikan bahawa negara bangsa telah wujud di Alam Melayu sebelum kedatangan Barat?",
+      "options": [
+        "Kewujudan kerajaan awal dengan ciri raja, rakyat, wilayah pengaruh dan undang-undang yang lengkap",
+        "Kegiatan perdagangan yang aktif antara pedagang tempatan dan pedagang asing",
+        "Penggunaan bahasa Melayu sebagai lingua franca di rantau Asia Tenggara",
+        "Kewujudan seni bina dan budaya tempatan yang unik dan berbeza"
+      ],
+      "answer": "Kewujudan kerajaan awal dengan ciri raja, rakyat, wilayah pengaruh dan undang-undang yang lengkap",
+      "explanation": "Hujah paling kukuh ialah kewujudan kerajaan awal yang memiliki KEEMPAT-EMPAT ciri negara bangsa secara lengkap — raja, rakyat, wilayah pengaruh dan undang-undang. Ini secara langsung membuktikan negara bangsa wujud.",
+      "tip": "Soalan 'paling kukuh' = pilih hujah yang PALING LANGSUNG menjawab. Ciri negara bangsa yang lengkap = bukti paling kuat berbanding bukti sampingan."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah yang PALING tepat tentang kepentingan kesinambungan negara bangsa di Alam Melayu?",
+      "options": [
+        "Kesinambungan negara bangsa membuktikan tradisi pemerintahan berterusan dari kerajaan awal hingga Malaysia moden",
+        "Kesinambungan negara bangsa hanya relevan untuk tujuan kajian akademik semata-mata",
+        "Kesinambungan negara bangsa menunjukkan bahawa Barat telah berjaya memodenkan Alam Melayu",
+        "Kesinambungan negara bangsa bermula hanya selepas kemerdekaan Malaysia pada tahun 1957"
+      ],
+      "answer": "Kesinambungan negara bangsa membuktikan tradisi pemerintahan berterusan dari kerajaan awal hingga Malaysia moden",
+      "explanation": "Kesinambungan negara bangsa dari Funan/Champa → Srivijaya → Melaka → Johor-Riau → Malaysia membuktikan bahawa tradisi pemerintahan dan identiti bangsa Melayu adalah berterusan, bukan ciptaan Barat.",
+      "tip": "Soalan 'paling tepat' = pilih yang PALING MENYELURUH dan PALING RELEVAN. Kesinambungan = tradisi berterusan dari awal hingga kini."
+    }
+  ]
+}
