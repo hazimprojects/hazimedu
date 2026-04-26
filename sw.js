@@ -24,7 +24,7 @@ const PRECACHE_URLS = [
   '/assets/css/style.css?v=126',
   '/assets/js/main.js?v=140',
   '/assets/js/zh-mode.js?v=41',
-  '/assets/js/subtopic-lab.js?v=3',
+  '/assets/js/subtopic-lab.js?v=4',
   '/data/zh-glossary.json',
   '/data/zh-comprehension.json',
   '/data/zh-units/index.json',
