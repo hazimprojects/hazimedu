@@ -569,7 +569,7 @@ function hzZymnotesIsNotesPathname(p) {
   return !!p && /\/notes(?:\/|$)/i.test(p);
 }
 
-/** Utama, indeks nota, tentang — sparkle menu + mindmap (tiada pada halaman bab). */
+/** Utama, indeks nota, tentang — sparkle menu + mindmap; bab induk + subtopik nota. */
 function hzZymnotesIsSparkleShellPathname(p) {
   if (!p || typeof p !== "string") return false;
   if (hzZymnotesIsHomePathname(p) || hzZymnotesIsNotesPathname(p)) return true;
@@ -581,6 +581,12 @@ function hzZymnotesIsSparkleShellPathname(p) {
 function hzZymnotesIsBabHubPathname(p) {
   if (!p || typeof p !== "string") return false;
   return /\/notes\/bab-[1-7](?:\.html)?(?:\/)?$/i.test(p);
+}
+
+/** Halaman nota subtopik: bab-X-Y.html (bukan bab induk). */
+function hzZymnotesIsSubtopicNotePathname(p) {
+  if (!p || typeof p !== "string") return false;
+  return /\/notes\/bab-\d+-\d+(?:\.html)?(?:\/)?$/i.test(p);
 }
 
 /** Site path prefix before "/notes/…" ("" or "/repo" style); always without trailing slash except "/". */
@@ -995,7 +1001,12 @@ var ZYMNOTES_NAV = { chapters: [
   document.addEventListener('DOMContentLoaded', function() {
     if (document.querySelector('.note-sparkle-wrap')) return;
     var _p = window.location.pathname;
-    if (!hzZymnotesIsSparkleShellPathname(_p) && !hzZymnotesIsBabHubPathname(_p)) return;
+    if (
+      !hzZymnotesIsSparkleShellPathname(_p) &&
+      !hzZymnotesIsBabHubPathname(_p) &&
+      !hzZymnotesIsSubtopicNotePathname(_p)
+    )
+      return;
 
     var audioEl = document.querySelector('.note-audio-player .audio-src');
     var zhModeApi = window.HzZhMode || null;
@@ -1366,7 +1377,12 @@ var ZYMNOTES_NAV = { chapters: [
 // =========================
 (function () {
   var _p = window.location.pathname;
-  if (!hzZymnotesIsSparkleShellPathname(_p) && !hzZymnotesIsBabHubPathname(_p)) return;
+  if (
+    !hzZymnotesIsSparkleShellPathname(_p) &&
+    !hzZymnotesIsBabHubPathname(_p) &&
+    !hzZymnotesIsSubtopicNotePathname(_p)
+  )
+    return;
 
   var overlay = null;
   var svgEl = null;
@@ -2208,7 +2224,7 @@ var ZYMNOTES_NAV = { chapters: [
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=166').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=167').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
