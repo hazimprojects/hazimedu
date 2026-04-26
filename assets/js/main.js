@@ -2099,6 +2099,97 @@ var ZYMNOTES_NAV = { chapters: [
 })();
 
 
+// ── Pull-to-refresh tersuai (ganti Chrome) — penunjuk Z / N bergantian ───────
+(function setupZymPullToRefresh() {
+  if (!window.matchMedia || !window.matchMedia('(max-width: 760px)').matches) return;
+
+  document.documentElement.classList.add('hz-ptr-enabled');
+
+  var indicator = document.createElement('div');
+  indicator.className = 'hz-ptr-indicator';
+  indicator.setAttribute('aria-hidden', 'true');
+  indicator.innerHTML =
+    '<div class="hz-ptr-sheen">' +
+      '<span class="hz-ptr-char hz-ptr-char--z">Z</span>' +
+      '<span class="hz-ptr-char hz-ptr-char--n">N</span>' +
+    '</div>';
+  document.body.appendChild(indicator);
+
+  var THRESH = 112;
+  var startY = 0;
+  var active = false;
+  var pulling = false;
+  var lastDy = 0;
+
+  function overlaysOpen() {
+    return (
+      document.querySelector('.hz-search-overlay.is-open') ||
+      document.body.classList.contains('mindmap-open') ||
+      document.body.classList.contains('sparkle-panel-open')
+    );
+  }
+
+  function setPull(dy, ready) {
+    lastDy = dy;
+    var clamped = Math.min(dy * 0.42, 80);
+    indicator.style.setProperty('--hz-ptr-pull', clamped + 'px');
+    indicator.classList.toggle('hz-ptr-pulling', dy > 4);
+    indicator.classList.toggle('hz-ptr-ready', ready);
+  }
+
+  function reset() {
+    pulling = false;
+    active = false;
+    lastDy = 0;
+    indicator.classList.remove('hz-ptr-pulling', 'hz-ptr-ready');
+    indicator.style.setProperty('--hz-ptr-pull', '0px');
+  }
+
+  window.addEventListener(
+    'touchstart',
+    function (e) {
+      if (overlaysOpen()) return;
+      if (window.scrollY > 2) return;
+      active = true;
+      lastDy = 0;
+      startY = e.touches[0].clientY;
+    },
+    { passive: true }
+  );
+
+  window.addEventListener(
+    'touchmove',
+    function (e) {
+      if (!active || overlaysOpen()) return;
+      if (window.scrollY > 2) {
+        reset();
+        return;
+      }
+      var dy = e.touches[0].clientY - startY;
+      if (dy <= 0) return;
+      pulling = true;
+      setPull(dy, dy >= THRESH);
+    },
+    { passive: true }
+  );
+
+  window.addEventListener(
+    'touchend',
+    function () {
+      if (!active) return;
+      if (pulling && lastDy >= THRESH) {
+        indicator.classList.add('hz-ptr-releasing');
+        window.location.reload();
+        return;
+      }
+      reset();
+    },
+    { passive: true }
+  );
+
+  window.addEventListener('touchcancel', reset, { passive: true });
+})();
+
 // =========================
 // SERVICE WORKER REGISTRATION
 // =========================
