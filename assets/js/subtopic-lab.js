@@ -101,14 +101,9 @@
     state.locked   = false;
     if (feedbackWrap) {
       feedbackWrap.classList.add('is-hidden');
-      feedbackWrap.classList.remove('is-peeking');
     }
     if (feedbackBox) feedbackBox.classList.remove('is-wrong');
     if (checkBtn)    checkBtn.classList.remove('is-disabled');
-    var peekBtn  = document.getElementById('lab-feedback-peek-btn');
-    var peekHint = document.getElementById('lab-feedback-peek-hint');
-    if (peekBtn)  peekBtn.textContent  = '🔽';
-    if (peekHint) peekHint.textContent = 'Sembunyikan';
   }
 
   function renderOptions() {
@@ -180,13 +175,6 @@
     if (!feedbackWrap) return;
 
     feedbackWrap.classList.remove('is-hidden');
-    /* Mula dalam mod “peek” — hanya bar pemegang kelihatan; elak sheet penuh menutup soalan */
-    feedbackWrap.classList.add('is-peeking');
-
-    var peekBtn  = document.getElementById('lab-feedback-peek-btn');
-    var peekHint = document.getElementById('lab-feedback-peek-hint');
-    if (peekBtn)  peekBtn.textContent = '🔼';
-    if (peekHint) peekHint.textContent = 'Lihat maklum balas';
 
     if (feedbackBox) feedbackBox.classList.toggle('is-wrong', !ok);
 
