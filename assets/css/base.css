@@ -1,4 +1,6 @@
 :root {
+  /* Lexend: jarak huruf mesra bacaan pelajar; Plus Jakarta sandaran untuk UI sedia ada */
+  --font-sans: "Lexend", "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --bg: #F6F7FF;
   --paper: #ffffff;
   --paper-soft: #F0F1FF;
@@ -407,7 +409,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: var(--font-sans);
   color: var(--ink);
   line-height: 1.6;
   background:
@@ -1049,6 +1051,215 @@ body[class*="page-theme-"].app-shell-page .home-brand-hero {
   display: inline-flex;
   font-size: 0.88rem;
   padding: 0.68rem 1.2rem;
+}
+
+/* ── Utama (index) — hierarki & visual lebih jelas ───────────────────── */
+body.page-theme-home.app-shell-page .home-main {
+  width: min(640px, 100%);
+  margin: 0 auto;
+  padding: 0 1rem 1.5rem;
+}
+
+body.page-theme-home.app-shell-page .home-brand-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 1.45rem 1.25rem 1.35rem;
+  margin-bottom: 1rem;
+}
+
+body.page-theme-home.app-shell-page .home-brand-hero::before {
+  content: "";
+  position: absolute;
+  inset: -40% -20% auto auto;
+  width: min(280px, 70vw);
+  height: min(280px, 70vw);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.18) 0%, transparent 68%);
+  pointer-events: none;
+}
+
+body.page-theme-home.app-shell-page .home-brand-name {
+  position: relative;
+  font-size: clamp(2.15rem, 6.5vw, 2.65rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+  margin-bottom: 0.55rem;
+  background: linear-gradient(115deg, #1e1b4b 0%, #4338ca 38%, #6366f1 72%, #0e7490 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+body.page-theme-home.app-shell-page .home-brand-tagline {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  padding: 0.32rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  color: #4338ca;
+  background: linear-gradient(135deg, rgba(238, 242, 255, 0.95), rgba(224, 231, 255, 0.88));
+  border: 1px solid rgba(99, 102, 241, 0.22);
+  box-shadow: 0 2px 10px rgba(79, 70, 229, 0.08);
+}
+
+body.page-theme-home.app-shell-page .home-brand-desc {
+  position: relative;
+  max-width: none;
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: #475569;
+  font-weight: 450;
+  margin: 0 0 1rem;
+}
+
+[data-theme="dark"] body.page-theme-home.app-shell-page .home-brand-desc {
+  color: rgba(203, 213, 225, 0.92);
+}
+
+body.page-theme-home.app-shell-page .home-hero-primary-cta {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: 0.15rem;
+  padding: 0.82rem 1.35rem;
+  border-radius: 14px;
+  font-size: 0.98rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(135deg, #4f46e5 0%, #6366f1 45%, #4338ca 100%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 28px rgba(79, 70, 229, 0.35), 0 2px 8px rgba(67, 56, 202, 0.2);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body.page-theme-home.app-shell-page .home-hero-primary-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(79, 70, 229, 0.42), 0 2px 10px rgba(67, 56, 202, 0.25);
+}
+
+body.page-theme-home.app-shell-page .home-feature-grid {
+  gap: 14px;
+  margin-bottom: 1.1rem;
+}
+
+body.page-theme-home.app-shell-page .home-feature-card {
+  border-radius: 18px;
+  padding: 1rem 1rem 0.95rem;
+  border-width: 1px;
+  box-shadow: 0 8px 26px rgba(55, 48, 100, 0.08), 0 1px 0 rgba(255, 255, 255, 0.65) inset;
+}
+
+body.page-theme-home.app-shell-page .home-feature-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px rgba(55, 48, 100, 0.12);
+}
+
+body.page-theme-home.app-shell-page .home-feature-icon {
+  font-size: 1.35rem;
+  margin-bottom: 0.55rem;
+}
+
+body.page-theme-home.app-shell-page .home-feature-title {
+  font-size: 0.98rem;
+  font-weight: 800;
+}
+
+body.page-theme-home.app-shell-page .home-feature-desc {
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: #64748b;
+}
+
+[data-theme="dark"] body.page-theme-home.app-shell-page .home-feature-desc {
+  color: rgba(148, 163, 184, 0.95);
+}
+
+body.page-theme-home.app-shell-page .home-feature-card.hfc-violet {
+  border-left: 3px solid #7c3aed;
+}
+body.page-theme-home.app-shell-page .home-feature-card.hfc-cyan {
+  border-left: 3px solid #0891b2;
+}
+body.page-theme-home.app-shell-page .home-feature-card.hfc-emerald {
+  border-left: 3px solid #059669;
+}
+body.page-theme-home.app-shell-page .home-feature-card.hfc-amber {
+  border-left: 3px solid #d97706;
+}
+
+body.page-theme-home.app-shell-page .home-scope-section {
+  margin-bottom: 1.1rem;
+}
+
+body.page-theme-home.app-shell-page .home-scope-label {
+  font-size: 0.74rem;
+  letter-spacing: 0.1em;
+}
+
+body.page-theme-home.app-shell-page .home-scope-item.home-scope-active {
+  font-weight: 700;
+  color: var(--ink);
+}
+
+body.page-theme-home.app-shell-page .home-cta-row {
+  gap: 10px;
+  margin-bottom: 0.85rem;
+}
+
+body.page-theme-home.app-shell-page .home-cta-tertiary {
+  flex: 1 1 100%;
+  text-align: center;
+  padding: 0.72rem 1rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--primary);
+  background: rgba(255, 255, 255, 0.55);
+  border: 1.5px dashed rgba(79, 70, 229, 0.35);
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+body.page-theme-home.app-shell-page .home-cta-tertiary:hover {
+  background: rgba(238, 242, 255, 0.95);
+  border-color: rgba(79, 70, 229, 0.5);
+}
+
+[data-theme="dark"] body.page-theme-home.app-shell-page .home-cta-tertiary {
+  background: rgba(30, 32, 48, 0.65);
+  border-color: rgba(129, 140, 248, 0.35);
+  color: #a5b4fc;
+}
+
+body.page-theme-home.app-shell-page .home-footer-copy {
+  opacity: 0.85;
+  font-size: 0.74rem;
+}
+
+@media (min-width: 520px) {
+  body.page-theme-home.app-shell-page .home-cta-tertiary {
+    flex: 1 1 auto;
+  }
+}
+
+[data-theme="dark"] body.page-theme-home.app-shell-page .home-brand-name {
+  background: linear-gradient(115deg, #e0e7ff 0%, #a5b4fc 45%, #67e8f9 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+[data-theme="dark"] body.page-theme-home.app-shell-page .home-brand-tagline {
+  color: #c7d2fe;
+  background: linear-gradient(135deg, rgba(49, 46, 129, 0.55), rgba(55, 48, 163, 0.4));
+  border-color: rgba(129, 140, 248, 0.35);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Feature 2×2 grid */
