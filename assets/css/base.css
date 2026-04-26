@@ -944,44 +944,6 @@ body.quiz-page.js-enhanced main.note-reading-main {
     flex-direction: column;
   }
 
-  /* Sheet maklum balas di atas bottom nav (z-index 50) */
-  body.quiz-page .lab-compact-game .learning-lab-stage[data-lab-feedback-wrap] {
-    z-index: 70;
-    max-height: min(88dvh, 520px);
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    max-width: 680px;
-    width: 100%;
-    box-sizing: border-box;
-    flex-direction: column;
-  }
-
-  /* Kandungan maklum balas scroll dalam sheet — tinggi sheet stabil untuk transform peek */
-  body.quiz-page .lab-compact-game .learning-lab-stage[data-lab-feedback-wrap] .learning-lab-feedback,
-  body.quiz-page .lab-compact-game .learning-lab-stage[data-lab-feedback-wrap] .learning-lab-tip {
-    flex-shrink: 0;
-    min-height: 0;
-  }
-
-  body.quiz-page .lab-compact-game .learning-lab-stage[data-lab-feedback-wrap] .learning-lab-actions {
-    flex-shrink: 0;
-    margin-top: auto;
-  }
-
-  /* Sheet dibuka penuh: tatal dalaman jika penjelasan panjang */
-  body.quiz-page .lab-compact-game .learning-lab-stage[data-lab-feedback-wrap]:not(.is-peeking):not(.is-hidden) {
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  /* Sembunyikan sepenuhnya bila .is-hidden (elak “strip” kelihatan bila scroll) */
-  body.quiz-page .lab-compact-game .learning-lab-stage[data-lab-feedback-wrap].is-hidden {
-    transform: translateY(130%) !important;
-    opacity: 0 !important;
-    visibility: hidden !important;
-    pointer-events: none !important;
-  }
 }
 
 /* =============================================================
