@@ -1055,7 +1055,7 @@ var ZYMNOTES_NAV = { chapters: [
       })();
     var labEmojiRaw = document.body.dataset.labEmoji || '🧩';
     var labEmoji = labEmojiRaw;
-    if (labHref && /(?:^|\/)quiz\/bab-1-1\.html(?:$|[?#])/.test(labHref)) {
+    if (labHref && /(?:^|\/)quiz\/bab-1-[1-4]\.html(?:$|[?#])/.test(labHref)) {
       labEmoji = '🧩';
     }
 
