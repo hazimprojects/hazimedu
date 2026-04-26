@@ -1040,8 +1040,6 @@ var ZYMNOTES_NAV = { chapters: [
     if (audioEl) itemsContainer.appendChild(makeSparkleItem('🎧', 'Main audio', 'audio'));
     if (labHref) itemsContainer.appendChild(makeSparkleItem(labEmoji, 'Kuiz', 'lab', labHref));
     if (zhModeApi) itemsContainer.appendChild(makeSparkleItem('华', 'Mod Bahasa Cina (Versi Awal)', 'zh-mode'));
-    var themeSparkleIcon = (document.documentElement.getAttribute('data-theme') || localStorage.getItem('zymnotes-theme') || 'light') === 'dark' ? '☀️' : '🌙';
-    itemsContainer.appendChild(makeSparkleItem(themeSparkleIcon, 'Tukar Tema', 'theme'));
 
     var fab = document.createElement('button');
     fab.className = 'note-sparkle-fab';
@@ -1245,16 +1243,6 @@ var ZYMNOTES_NAV = { chapters: [
       }
       if (type === 'zh-mode' && zhModeApi) {
         zhModeApi.toggle();
-        wrap.classList.remove('is-open');
-        syncSparklePanelState();
-      }
-      if (type === 'theme') {
-        var cur = document.documentElement.getAttribute('data-theme') || 'light';
-        var nxt = cur === 'dark' ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-theme', nxt);
-        localStorage.setItem('zymnotes-theme', nxt);
-        document.querySelectorAll('.display-fab').forEach(function (b) { b.textContent = nxt === 'dark' ? '🌙' : '☀️'; });
-        btn.textContent = nxt === 'dark' ? '☀️' : '🌙';
         wrap.classList.remove('is-open');
         syncSparklePanelState();
       }
@@ -2079,7 +2067,7 @@ var HZ_ICONS = (function () {
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=152').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=153').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
