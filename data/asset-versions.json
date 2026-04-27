@@ -1,9 +1,9 @@
 {
   "style_css": "150",
-  "main_js": "160",
+  "main_js": "161",
   "zh_mode_js": "41",
-  "manifest": "14",
-  "sw_cache": "219",
+  "manifest": "15",
+  "sw_cache": "220",
   "icon": "4",
   "icon_maskable": "4",
   "logo": "4",
