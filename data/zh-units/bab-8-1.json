@@ -1,0 +1,301 @@
+{
+  "meta": {
+    "source_file": "notes/bab-8-1.html",
+    "rollout": "bab-8-1-manual-zh",
+    "notes": "Bab 8.1: terjemahan zh-CN manual; bm_original selaras dengan teks pada halaman (tanpa span)."
+  },
+  "units": [
+    {
+      "source_id": "bab-8-1-sum-1",
+      "bm_original": "Pilihan raya ialah asas kepada sistem berkerajaan sendiri kerana memberi peluang kepada rakyat memilih wakil, menentukan parti pemerintah dan membentuk kerajaan.",
+      "translate": "选举是自治政府制度的基础，因为人民借此选出代表、决定执政党组阁并形成政府。",
+      "key_points_zh": [
+        "选举是自治政府制度的基础，因为人民借此选出代表、决定执政党组阁并形成政府。"
+      ],
+      "bm_focus_phrase": "Pilihan raya ialah asas kepada sistem berkerajaan sendiri kerana memberi peluang kepada rakyat memilih wakil, menentukan parti pemerintah dan membentuk kerajaan."
+    },
+    {
+      "source_id": "bab-8-1-sum-2",
+      "bm_original": "Di Persekutuan Tanah Melayu, pilihan raya berkembang secara berperingkat daripada majlis perbandaran ke peringkat negeri dan akhirnya peringkat Persekutuan (1955), selaras dengan Perjanjian Persekutuan Tanah Melayu 1948.",
+      "translate": "在马来亚联邦，选举分阶段发展：从市政局到州级，再到联邦层级（1955年），并与《1948年马来亚联合邦协定》相一致。",
+      "key_points_zh": [
+        "在马来亚联邦，选举分阶段发展：从市政局到州级，再到联邦层级（1955年），并与《1948年马来亚联合邦协定》相一致。"
+      ],
+      "bm_focus_phrase": "Di Persekutuan Tanah Melayu, pilihan raya berkembang secara berperingkat daripada majlis perbandaran ke peringkat negeri dan akhirnya peringkat Persekutuan (1955), selaras dengan Perjanjian Persekutuan Tanah Melayu 1948."
+    },
+    {
+      "source_id": "bab-8-1-sum-3",
+      "bm_original": "UMNO dan MCA mula bekerjasama dalam pilihan raya tempatan, membentuk Perikatan — asas kerjasama politik antara kaum sebelum kemerdekaan.",
+      "translate": "巫统与马华开始在地方选举中合作，组成“联盟”（Perikatan）——这是独立前跨族群政治合作的基础。",
+      "key_points_zh": [
+        "巫统与马华开始在地方选举中合作，组成“联盟”（Perikatan）——这是独立前跨族群政治合作的基础。"
+      ],
+      "bm_focus_phrase": "UMNO dan MCA mula bekerjasama dalam pilihan raya tempatan, membentuk Perikatan — asas kerjasama politik antara kaum sebelum kemerdekaan."
+    },
+    {
+      "source_id": "bab-8-1-orph-h1",
+      "bm_original": "Apakah kepentingan pilihan raya dalam pembentukan kerajaan di negara kita?",
+      "translate": "选举在我国的政府组成中有何重要性？",
+      "key_points_zh": [
+        "选举在我国的政府组成中有何重要性？"
+      ],
+      "bm_focus_phrase": "Apakah kepentingan pilihan raya dalam pembentukan kerajaan di negara kita?"
+    },
+    {
+      "source_id": "bab-8-1-u01",
+      "bm_original": "Pilihan raya merupakan asas kepada sistem berkerajaan sendiri kerana memberikan peluang kepada rakyat untuk:",
+      "translate": "选举是自治政府制度的基础，因为它让人民有机会：",
+      "key_points_zh": [
+        "选举是自治政府制度的基础，因为它让人民有机会："
+      ],
+      "bm_focus_phrase": "Pilihan raya merupakan asas kepada sistem berkerajaan sendiri kerana memberikan peluang kepada rakyat untuk:"
+    },
+    {
+      "source_id": "bab-8-1-extra-1",
+      "bm_original": "memilih wakil",
+      "translate": "选出代表",
+      "key_points_zh": ["选出代表"],
+      "bm_focus_phrase": "memilih wakil"
+    },
+    {
+      "source_id": "bab-8-1-extra-2",
+      "bm_original": "menentukan parti pemerintah",
+      "translate": "决定执政党",
+      "key_points_zh": ["决定执政党"],
+      "bm_focus_phrase": "menentukan parti pemerintah"
+    },
+    {
+      "source_id": "bab-8-1-extra-3",
+      "bm_original": "membentuk kerajaan",
+      "translate": "组成政府",
+      "key_points_zh": ["组成政府"],
+      "bm_focus_phrase": "membentuk kerajaan"
+    },
+    {
+      "source_id": "bab-8-1-u02",
+      "bm_original": "Di Persekutuan Tanah Melayu, pilihan raya berkembang secara berperingkat:",
+      "translate": "在马来亚联邦，选举分阶段发展：",
+      "key_points_zh": ["在马来亚联邦，选举分阶段发展："],
+      "bm_focus_phrase": "Di Persekutuan Tanah Melayu, pilihan raya berkembang secara berperingkat:"
+    },
+    {
+      "source_id": "bab-8-1-extra-4",
+      "bm_original": "peringkat majlis perbandaran",
+      "translate": "市政局阶段",
+      "key_points_zh": ["市政局阶段"],
+      "bm_focus_phrase": "peringkat majlis perbandaran"
+    },
+    {
+      "source_id": "bab-8-1-extra-5",
+      "bm_original": "peringkat negeri",
+      "translate": "州级阶段",
+      "key_points_zh": ["州级阶段"],
+      "bm_focus_phrase": "peringkat negeri"
+    },
+    {
+      "source_id": "bab-8-1-extra-6",
+      "bm_original": "peringkat Persekutuan (1955)",
+      "translate": "联邦阶段（1955年）",
+      "key_points_zh": ["联邦阶段（1955年）"],
+      "bm_focus_phrase": "peringkat Persekutuan (1955)"
+    },
+    {
+      "source_id": "bab-8-1-u03",
+      "bm_original": "Pelaksanaan pilihan raya ini selaras dengan Perjanjian Persekutuan Tanah Melayu 1948.",
+      "translate": "这些选举的实施与《1948年马来亚联合邦协定》相一致。",
+      "key_points_zh": [
+        "这些选举的实施与《1948年马来亚联合邦协定》相一致。"
+      ],
+      "bm_focus_phrase": "Pelaksanaan pilihan raya ini selaras dengan Perjanjian Persekutuan Tanah Melayu 1948."
+    },
+    {
+      "source_id": "bab-8-1-u04",
+      "bm_original": "Bagi melaksanakan sistem ini, kerajaan telah menubuhkan Jawatankuasa Pilihan Raya untuk mengkaji dan membuat cadangan berkaitan pilihan raya.",
+      "translate": "为落实这一制度，政府成立了选举委员会，以研究并就选举事宜提出建议。",
+      "key_points_zh": [
+        "为落实这一制度，政府成立了选举委员会，以研究并就选举事宜提出建议。"
+      ],
+      "bm_focus_phrase": "Bagi melaksanakan sistem ini, kerajaan telah menubuhkan Jawatankuasa Pilihan Raya untuk mengkaji dan membuat cadangan berkaitan pilihan raya."
+    },
+    {
+      "source_id": "bab-8-1-u05",
+      "bm_original": "Selain itu, pada 1950 diperkenalkan Ordinan Pilihan Raya Pihak Berkuasa Tempatan.",
+      "translate": "此外，1950年颁布了《地方政府选举条例》。",
+      "key_points_zh": ["此外，1950年颁布了《地方政府选举条例》。"],
+      "bm_focus_phrase": "Selain itu, pada 1950 diperkenalkan Ordinan Pilihan Raya Pihak Berkuasa Tempatan."
+    },
+    {
+      "source_id": "bab-8-1-u06",
+      "bm_original": "Ordinan ini memberikan kuasa kepada majlis tempatan untuk mengadakan pilihan raya sendiri.",
+      "translate": "该条例授权地方议会自行举行选举。",
+      "key_points_zh": ["该条例授权地方议会自行举行选举。"],
+      "bm_focus_phrase": "Ordinan ini memberikan kuasa kepada majlis tempatan untuk mengadakan pilihan raya sendiri."
+    },
+    {
+      "source_id": "bab-8-1-u07",
+      "bm_original": "Merupakan pilihan raya pertama diadakan di Tanah Melayu.",
+      "translate": "这是在马来亚举行的首次选举。",
+      "key_points_zh": ["这是在马来亚举行的首次选举。"],
+      "bm_focus_phrase": "Merupakan pilihan raya pertama diadakan di Tanah Melayu."
+    },
+    {
+      "source_id": "bab-8-1-u08",
+      "bm_original": "Tujuan: memilih 9 orang ahli Pesuruhjaya Perbandaran.",
+      "translate": "目的：选出9名市政委员。",
+      "key_points_zh": ["目的：选出9名市政委员。"],
+      "bm_focus_phrase": "Tujuan: memilih 9 orang ahli Pesuruhjaya Perbandaran."
+    },
+    {
+      "source_id": "bab-8-1-u09",
+      "bm_original": "Sebelum ini: ahli majlis dilantik oleh Gabenor Negeri-negeri Selat.",
+      "translate": "在此之前：市议员由海峡殖民地总督任命。",
+      "key_points_zh": ["在此之前：市议员由海峡殖民地总督任命。"],
+      "bm_focus_phrase": "Sebelum ini: ahli majlis dilantik oleh Gabenor Negeri-negeri Selat."
+    },
+    {
+      "source_id": "bab-8-1-u10",
+      "bm_original": "Proses pendaftaran: 17 Mei – 30 Jun 1951 (6 minggu) — 14,514 orang pengundi mendaftar.",
+      "translate": "登记期：1951年5月17日至6月30日（六周）——共14,514名选民登记。",
+      "key_points_zh": [
+        "登记期：1951年5月17日至6月30日（六周）——共14,514名选民登记。"
+      ],
+      "bm_focus_phrase": "Proses pendaftaran: 17 Mei – 30 Jun 1951 (6 minggu) — 14,514 orang pengundi mendaftar."
+    },
+    {
+      "source_id": "bab-8-1-u11",
+      "bm_original": "Ini menunjukkan permulaan penglibatan rakyat dalam sistem demokrasi.",
+      "translate": "这表明人民开始参与民主制度。",
+      "key_points_zh": ["这表明人民开始参与民主制度。"],
+      "bm_focus_phrase": "Ini menunjukkan permulaan penglibatan rakyat dalam sistem demokrasi."
+    },
+    {
+      "source_id": "bab-8-1-u12",
+      "bm_original": "Februari 1952 — tujuan: merebut 12 kerusi Majlis Perbandaran.",
+      "translate": "1952年2月——目的：争夺市议会12个席位。",
+      "key_points_zh": ["1952年2月——目的：争夺市议会12个席位。"],
+      "bm_focus_phrase": "Februari 1952 — tujuan: merebut 12 kerusi Majlis Perbandaran."
+    },
+    {
+      "source_id": "bab-8-1-u13",
+      "bm_original": "Kawasan terlibat: Sentul, Bangsar, Imbi, Petaling Jaya.",
+      "translate": "涉及选区：冼都、孟沙、燕美、八打灵再也。",
+      "key_points_zh": ["涉及选区：冼都、孟沙、燕美、八打灵再也。"],
+      "bm_focus_phrase": "Kawasan terlibat: Sentul, Bangsar, Imbi, Petaling Jaya."
+    },
+    {
+      "source_id": "bab-8-1-u14",
+      "bm_original": "Dalam pilihan raya ini, UMNO + MCA mula bekerjasama membentuk gabungan awal dikenali sebagai Perikatan.",
+      "translate": "在此次选举中，巫统与马华开始合作，组成最初称为“联盟”（Perikatan）的联合阵线。",
+      "key_points_zh": [
+        "在此次选举中，巫统与马华开始合作，组成最初称为“联盟”（Perikatan）的联合阵线。"
+      ],
+      "bm_focus_phrase": "Dalam pilihan raya ini, UMNO + MCA mula bekerjasama membentuk gabungan awal dikenali sebagai Perikatan."
+    },
+    {
+      "source_id": "bab-8-1-u15",
+      "bm_original": "Ini merupakan titik awal kerjasama antara kaum dalam politik dan asas kepada perpaduan politik negara.",
+      "translate": "这是跨族群政治合作的起点，也是国家政治团结的基础。",
+      "key_points_zh": [
+        "这是跨族群政治合作的起点，也是国家政治团结的基础。"
+      ],
+      "bm_focus_phrase": "Ini merupakan titik awal kerjasama antara kaum dalam politik dan asas kepada perpaduan politik negara."
+    },
+    {
+      "source_id": "bab-8-1-u16",
+      "bm_original": "Pilihan raya seterusnya diperluaskan ke bandar lain:",
+      "translate": "随后的选举扩展到其他城市：",
+      "key_points_zh": ["随后的选举扩展到其他城市："],
+      "bm_focus_phrase": "Pilihan raya seterusnya diperluaskan ke bandar lain:"
+    },
+    {
+      "source_id": "bab-8-1-extra-7",
+      "bm_original": "Johor Bahru",
+      "translate": "新山",
+      "key_points_zh": ["新山"],
+      "bm_focus_phrase": "Johor Bahru"
+    },
+    {
+      "source_id": "bab-8-1-extra-8",
+      "bm_original": "Ipoh",
+      "translate": "怡保",
+      "key_points_zh": ["怡保"],
+      "bm_focus_phrase": "Ipoh"
+    },
+    {
+      "source_id": "bab-8-1-extra-9",
+      "bm_original": "Alor Setar",
+      "translate": "亚罗士打",
+      "key_points_zh": ["亚罗士打"],
+      "bm_focus_phrase": "Alor Setar"
+    },
+    {
+      "source_id": "bab-8-1-extra-10",
+      "bm_original": "Melaka",
+      "translate": "马六甲",
+      "key_points_zh": ["马六甲"],
+      "bm_focus_phrase": "Melaka"
+    },
+    {
+      "source_id": "bab-8-1-extra-11",
+      "bm_original": "Seremban",
+      "translate": "芙蓉",
+      "key_points_zh": ["芙蓉"],
+      "bm_focus_phrase": "Seremban"
+    },
+    {
+      "source_id": "bab-8-1-u17",
+      "bm_original": "Gabungan UMNO–MCA terus memenangi banyak kerusi.",
+      "translate": "巫统—马华联盟继续赢得许多席位。",
+      "key_points_zh": ["巫统—马华联盟继续赢得许多席位。"],
+      "bm_focus_phrase": "Gabungan UMNO–MCA terus memenangi banyak kerusi."
+    },
+    {
+      "source_id": "bab-8-1-u18",
+      "bm_original": "Ini menunjukkan sokongan rakyat terhadap kerjasama antara kaum semakin kuat.",
+      "translate": "这表明人民对跨族群合作的支持日益增强。",
+      "key_points_zh": ["这表明人民对跨族群合作的支持日益增强。"],
+      "bm_focus_phrase": "Ini menunjukkan sokongan rakyat terhadap kerjasama antara kaum semakin kuat."
+    },
+    {
+      "source_id": "bab-8-1-u19",
+      "bm_original": "Pada 1954, pilihan raya mula diadakan pada peringkat negeri.",
+      "translate": "1954年开始举行州级选举。",
+      "key_points_zh": ["1954年开始举行州级选举。"],
+      "bm_focus_phrase": "Pada 1954, pilihan raya mula diadakan pada peringkat negeri."
+    },
+    {
+      "source_id": "bab-8-1-u20",
+      "bm_original": "Keputusan: Perikatan UMNO–MCA memenangi 226 daripada 268 kerusi.",
+      "translate": "结果：巫统—马华联盟在268席中赢得226席。",
+      "key_points_zh": ["结果：巫统—马华联盟在268席中赢得226席。"],
+      "bm_focus_phrase": "Keputusan: Perikatan UMNO–MCA memenangi 226 daripada 268 kerusi."
+    },
+    {
+      "source_id": "bab-8-1-u21",
+      "bm_original": "Ini membuktikan penerimaan rakyat terhadap politik kerjasama kaum dan keyakinan terhadap kepimpinan tempatan.",
+      "translate": "这证明人民接受跨族群合作政治，并对本地领导层抱有信心。",
+      "key_points_zh": [
+        "这证明人民接受跨族群合作政治，并对本地领导层抱有信心。"
+      ],
+      "bm_focus_phrase": "Ini membuktikan penerimaan rakyat terhadap politik kerjasama kaum dan keyakinan terhadap kepimpinan tempatan."
+    },
+    {
+      "source_id": "bab-8-1-u22",
+      "bm_original": "Pilihan raya peringkat awal berjaya menyedarkan rakyat tentang amalan demokrasi, memberi pengalaman mengendalikan pilihan raya, dan melatih rakyat ke arah berkerajaan sendiri.",
+      "translate": "早期选举成功让人民认识民主实践、积累办选经验，并训练人民走向自治。",
+      "key_points_zh": [
+        "早期选举成功让人民认识民主实践、积累办选经验，并训练人民走向自治。"
+      ],
+      "bm_focus_phrase": "Pilihan raya peringkat awal berjaya menyedarkan rakyat tentang amalan demokrasi, memberi pengalaman mengendalikan pilihan raya, dan melatih rakyat ke arah berkerajaan sendiri."
+    },
+    {
+      "source_id": "bab-8-1-u23",
+      "bm_original": "Pilihan raya ini menjadi langkah penting menuju kemerdekaan dan asas pembentukan sistem demokrasi negara.",
+      "translate": "这些选举成为迈向独立的重要一步，也是国家民主制度形成的基础。",
+      "key_points_zh": [
+        "这些选举成为迈向独立的重要一步，也是国家民主制度形成的基础。"
+      ],
+      "bm_focus_phrase": "Pilihan raya ini menjadi langkah penting menuju kemerdekaan dan asas pembentukan sistem demokrasi negara."
+    }
+  ]
+}
