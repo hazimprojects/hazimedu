@@ -21,7 +21,7 @@ const PRECACHE_URLS = [
   '/quiz/bab-1-2.html',
   '/quiz/bab-1-3.html',
   '/quiz/bab-1-4.html',
-  '/assets/css/style.css?v=136',
+  '/assets/css/style.css?v=137',
   '/assets/js/main.js?v=148',
   '/assets/js/zh-mode.js?v=41',
   '/assets/js/subtopic-lab.js?v=4',
