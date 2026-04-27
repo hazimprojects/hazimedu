@@ -13,10 +13,8 @@
         return navigator.standalone === true;
       }
       try {
-        if (localStorage.getItem(KEY)) {
-          document.documentElement.classList.add("about-pwa-hide-card");
-          return;
-        }
+        /* Hanya sembunyikan di first paint jika dalam tetingkap app — bukan
+           berdasarkan localStorage (tanda itu kekal selepas nyahpasang). */
         if (standalone()) {
           document.documentElement.classList.add("about-pwa-hide-card");
           localStorage.setItem(KEY, "1");
@@ -231,6 +229,11 @@
     <div class="home-cta-row">
       <a class="home-cta-btn home-cta-secondary" href="feedback.html">Hantar maklum balas</a>
     </div>
+
+    <p class="about-pwa-recover" id="about-pwa-recover" hidden>
+      <button type="button" class="about-pwa-recover-btn" id="about-pwa-recover-btn">Tunjuk semula arahan pasang</button>
+      <span class="about-pwa-recover-hint">Jika anda telah nyahpasang aplikasi tetapi arahan tidak muncul, ketik di sini.</span>
+    </p>
 
     <p class="home-footer-copy">&copy; 2026 ZymNotes · Semua hak cipta terpelihara</p>
 
