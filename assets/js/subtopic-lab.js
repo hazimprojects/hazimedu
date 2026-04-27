@@ -151,7 +151,8 @@
     renderProgress();
 
     if (typeEl) {
-      typeEl.textContent      = 'Objektif';
+      /* Nama jenis soalan: lalai objektif; boleh set per soalan dalam JSON (cth. "Objektif", "Benar / Palsu") */
+      typeEl.textContent      = q.type && String(q.type).trim() ? String(q.type).trim() : 'Objektif';
       typeEl.style.color      = '#3e5f8a';
       typeEl.style.background = 'rgba(62,95,138,0.1)';
     }
@@ -164,7 +165,7 @@
     }
 
     if (promptEl) promptEl.textContent = q.prompt;
-    if (helpEl)   helpEl.textContent   = q.help || 'Pilih satu jawapan terbaik.';
+    if (helpEl)   helpEl.textContent   = q.help || 'Pilih jawapan yang paling sesuai — tiada tekanan masa, ambil masa berfikir.';
 
     renderOptions();
     updateCheckButtonState();
