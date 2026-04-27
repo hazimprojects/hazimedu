@@ -6,7 +6,7 @@
       "id": "q1",
       "level": 1,
       "levelLabel": "Mengingat",
-      "prompt": "Berapakah bilangan saluran utama perkembangan nasionalisme di negara kita menurut ringkasan nota?",
+      "prompt": "Berapakah bilangan saluran utama perkembangan nasionalisme di negara kita?",
       "options": [
         "Tiga saluran",
         "Satu saluran",
@@ -36,7 +36,7 @@
       "id": "q3",
       "level": 1,
       "levelLabel": "Mengingat",
-      "prompt": "Apakah peranan penulisan menurut ringkasan nota?",
+      "prompt": "Apakah peranan penulisan?",
       "options": [
         "Menyebarkan idea nasionalisme melalui akhbar, majalah dan karya kreatif",
         "Menghapuskan bahasa",

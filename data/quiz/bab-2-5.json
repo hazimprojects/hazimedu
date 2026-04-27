@@ -6,7 +6,7 @@
       "id": "q1",
       "level": 1,
       "levelLabel": "Mengingat",
-      "prompt": "Sejak bilakah kesedaran nasionalisme di negara kita bermula menurut ringkasan nota?",
+      "prompt": "Sejak bilakah kesedaran nasionalisme di negara kita bermula?",
       "options": [
         "Sejak zaman Kesultanan Melayu Melaka",
         "Selepas tahun 3000 Masihi",
@@ -21,7 +21,7 @@
       "id": "q2",
       "level": 1,
       "levelLabel": "Mengingat",
-      "prompt": "Pada abad ke-20, apakah saluran utama kesedaran nasionalisme yang dinyatakan dalam ringkasan?",
+      "prompt": "Pada abad ke-20, apakah saluran utama kesedaran nasionalisme yang dinyatakan?",
       "options": [
         "Gerakan Islah, penulisan, akhbar dan pertubuhan",
         "Hanya radio antarabangsa",
@@ -36,7 +36,7 @@
       "id": "q3",
       "level": 1,
       "levelLabel": "Mengingat",
-      "prompt": "Apakah contoh perjuangan awal yang ditekankan nota pada zaman awal?",
+      "prompt": "Apakah contoh perjuangan awal yang biasanya ditekankan pada zaman awal?",
       "options": [
         "Usaha sultan dan tokoh tempatan mempertahankan wilayah daripada kuasa asing",
         "Penubuhan parti komputer",
@@ -51,7 +51,7 @@
       "id": "q4",
       "level": 1,
       "levelLabel": "Mengingat",
-      "prompt": "Apakah hasil akhir kesedaran nasionalisme yang dinyatakan dalam ringkasan?",
+      "prompt": "Apakah hasil akhir kesedaran nasionalisme yang dinyatakan?",
       "options": [
         "Menjadi asas kepada perjuangan kebangsaan dan kemerdekaan negara",
         "Menghapuskan semua bahasa tempatan",
@@ -141,7 +141,7 @@
       "id": "q10",
       "level": 3,
       "levelLabel": "Mengaplikasi",
-      "prompt": "Gerakan Islah memberi penekanan kepada pembaharuan masyarakat. Apakah kaitannya dengan nasionalisme dalam nota?",
+      "prompt": "Gerakan Islah memberi penekanan kepada pembaharuan masyarakat. Apakah kaitannya dengan nasionalisme?",
       "options": [
         "Ia merupakan saluran kesedaran nasionalisme pada abad ke-20",
         "Ia tidak berkaitan langsung",

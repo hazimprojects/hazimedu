@@ -6,7 +6,7 @@
       "id": "q1",
       "level": 1,
       "levelLabel": "Mengingat",
-      "prompt": "Apakah yang dimaksudkan dengan perkembangan nasionalisme di Asia dalam konteks nota?",
+      "prompt": "Apakah yang dimaksudkan dengan perkembangan nasionalisme di Asia dalam konteks sejarah?",
       "options": [
         "Kesinambungan idea dari Barat selepas pertembungan dengan kuasa Eropah",
         "Perkembangan tanpa pengaruh luar",
@@ -21,7 +21,7 @@
       "id": "q2",
       "level": 1,
       "levelLabel": "Mengingat",
-      "prompt": "Apakah faktor utama yang mendorong rakyat Asia bangkit menurut ringkasan nota?",
+      "prompt": "Apakah faktor utama yang mendorong rakyat Asia bangkit?",
       "options": [
         "Penjajahan",
         "Ketiadaan bahasa",
@@ -36,7 +36,7 @@
       "id": "q3",
       "level": 1,
       "levelLabel": "Mengingat",
-      "prompt": "Antara berikut, manakah contoh utama perkembangan nasionalisme di Asia yang disebut dalam ringkasan?",
+      "prompt": "Antara berikut, manakah contoh utama perkembangan nasionalisme di Asia yang disebut?",
       "options": [
         "India, China, Empayar Uthmaniyah dan Mesir serta Jepun",
         "Brazil, Argentina dan Chile",
@@ -51,7 +51,7 @@
       "id": "q4",
       "level": 1,
       "levelLabel": "Mengingat",
-      "prompt": "Apakah bentuk umum gerakan nasionalisme di Asia yang dinyatakan dalam nota?",
+      "prompt": "Apakah bentuk umum gerakan nasionalisme di Asia yang dinyatakan?",
       "options": [
         "Penentangan langsung, gerakan pembaharuan agama, penubuhan pertubuhan politik dan usaha pemodenan",
         "Hanya penentangan bersenjata tanpa usaha lain",
@@ -119,7 +119,7 @@
         "Nasionalisme terhad kepada satu strategi"
       ],
       "answer": "Nasionalisme berkembang dalam pelbagai bentuk serentak",
-      "explanation": "Nota menekankan pelbagai bentuk gerakan nasionalisme.",
+      "explanation": "Perbincangan ini menekankan pelbagai bentuk gerakan nasionalisme.",
       "tip": "Pelbagai bentuk boleh wujud serentak."
     },
     {
@@ -141,7 +141,7 @@
       "id": "q10",
       "level": 3,
       "levelLabel": "Mengaplikasi",
-      "prompt": "Jepun dan India sama-sama disebut sebagai contoh. Apakah persamaan konsep yang ditekankan nota?",
+      "prompt": "Jepun dan India sama-sama disebut sebagai contoh. Apakah persamaan konsep yang biasanya ditekankan?",
       "options": [
         "Keduanya menunjukkan perkembangan nasionalisme di Asia",
         "Keduanya bukan sebahagian Asia",

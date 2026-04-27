@@ -81,7 +81,7 @@
       "id": "q6",
       "level": 2,
       "levelLabel": "Memahami",
-      "prompt": "Apakah yang dimaksudkan dengan nasionalisme 'tidak statik' dalam nota subtopik ini?",
+      "prompt": "Apakah yang dimaksudkan dengan nasionalisme 'tidak statik' dalam subtopik ini?",
       "options": [
         "Maksudnya boleh berubah mengikut zaman dan konteks masyarakat",
         "Maksudnya sentiasa sama di setiap negara",
@@ -210,7 +210,7 @@
       ],
       "answer": "Ia menghubungkan definisi asas, pandangan tokoh dan matlamat perjuangan nasionalisme",
       "explanation": "Subtopik ini merangkumi definisi, konteks, tokoh dan matlamat perjuangan.",
-      "tip": "'Paling tepat' = pilih ringkasan yang paling menyeluruh."
+      "tip": "'Paling tepat' = pilih pernyataan yang paling menyeluruh."
     }
   ]
 }

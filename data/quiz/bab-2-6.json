@@ -6,7 +6,7 @@
       "id": "q1",
       "level": 1,
       "levelLabel": "Mengingat",
-      "prompt": "Pada abad berapakah semangat nasionalisme semakin kuat menurut ringkasan nota?",
+      "prompt": "Pada abad berapakah semangat nasionalisme semakin kuat?",
       "options": [
         "Abad ke-20",
         "Abad ke-5",
@@ -36,7 +36,7 @@
       "id": "q3",
       "level": 1,
       "levelLabel": "Mengingat",
-      "prompt": "Apakah contoh saluran penyebaran kesedaran yang disebut dalam ringkasan?",
+      "prompt": "Apakah contoh saluran penyebaran kesedaran yang disebut?",
       "options": [
         "Karya kreatif, akhbar, madrasah, institusi pendidikan dan penubuhan persatuan",
         "Hanya televisyen satelit moden",
@@ -45,13 +45,13 @@
       ],
       "answer": "Karya kreatif, akhbar, madrasah, institusi pendidikan dan penubuhan persatuan",
       "explanation": "Kesedaran disebarkan melalui karya, akhbar, madrasah, sekolah dan persatuan.",
-      "tip": "Senarai saluran dalam nota."
+      "tip": "Senarai saluran."
     },
     {
       "id": "q4",
       "level": 1,
       "levelLabel": "Mengingat",
-      "prompt": "Apakah hasil gabungan faktor menurut ringkasan nota?",
+      "prompt": "Apakah hasil gabungan faktor?",
       "options": [
         "Melahirkan tokoh dan gerakan yang menjadi asas perjuangan kemerdekaan Tanah Melayu",
         "Menghapuskan semua bahasa",
@@ -81,7 +81,7 @@
       "id": "q6",
       "level": 2,
       "levelLabel": "Memahami",
-      "prompt": "Apakah peranan agama dalam membangkitkan nasionalisme menurut nota?",
+      "prompt": "Apakah peranan agama dalam membangkitkan nasionalisme?",
       "options": [
         "Salah satu faktor penting yang membentuk kesedaran rakyat",
         "Tiada peranan",
@@ -156,7 +156,7 @@
       "id": "q11",
       "level": 4,
       "levelLabel": "Menganalisis",
-      "prompt": "Apakah persamaan utama antara faktor agama dan faktor pendidikan dalam konteks nota?",
+      "prompt": "Apakah persamaan utama antara faktor agama dan faktor pendidikan dalam konteks sejarah?",
       "options": [
         "Keduanya merupakan saluran dalaman yang membentuk nilai dan celik politik rakyat",
         "Keduanya tidak berkaitan",

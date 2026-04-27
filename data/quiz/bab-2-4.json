@@ -6,7 +6,7 @@
       "id": "q1",
       "level": 1,
       "levelLabel": "Mengingat",
-      "prompt": "Apakah punca umum semangat nasionalisme di Asia Tenggara menurut ringkasan nota?",
+      "prompt": "Apakah punca umum semangat nasionalisme di Asia Tenggara?",
       "options": [
         "Penjajahan Barat",
         "Ketiadaan sungai",
@@ -36,7 +36,7 @@
       "id": "q3",
       "level": 1,
       "levelLabel": "Mengingat",
-      "prompt": "Apakah matlamat umum gerakan nasionalisme di Asia Tenggara yang ditekankan nota?",
+      "prompt": "Apakah matlamat umum gerakan nasionalisme di Asia Tenggara yang biasanya ditekankan?",
       "options": [
         "Membebaskan negara daripada penjajahan, mempertahankan kedaulatan dan membina jati diri bangsa",
         "Menggalakkan penjajahan",
@@ -51,7 +51,7 @@
       "id": "q4",
       "level": 1,
       "levelLabel": "Mengingat",
-      "prompt": "Apakah tindakan khas Thailand yang disebut berbeza sedikit dalam ringkasan?",
+      "prompt": "Apakah tindakan khas Thailand yang disebut berbeza sedikit?",
       "options": [
         "Melaksanakan pembaharuan untuk mengekalkan kemerdekaan daripada penjajahan Barat",
         "Menyerahkan diri kepada penjajahan tanpa syarat",
@@ -96,7 +96,7 @@
       "id": "q7",
       "level": 2,
       "levelLabel": "Memahami",
-      "prompt": "Mengapakah contoh Filipina, Burma, Vietnam dan Indonesia dikumpulkan dalam nota?",
+      "prompt": "Mengapakah contoh Filipina, Burma, Vietnam dan Indonesia dikumpulkan?",
       "options": [
         "Untuk menunjukkan corak nasionalisme di pelbagai negara Asia Tenggara",
         "Kerana mereka berada di benua Eropah",
@@ -156,7 +156,7 @@
       "id": "q11",
       "level": 4,
       "levelLabel": "Menganalisis",
-      "prompt": "Apakah persamaan utama antara nasionalisme di Filipina dengan nasionalisme di Indonesia menurut corak nota?",
+      "prompt": "Apakah persamaan utama antara nasionalisme di Filipina dengan nasionalisme di Indonesia?",
       "options": [
         "Keduanya berkembang dalam konteks penjajahan Barat di Asia Tenggara",
         "Keduanya tidak berkaitan dengan politik",
@@ -171,7 +171,7 @@
       "id": "q12",
       "level": 4,
       "levelLabel": "Menganalisis",
-      "prompt": "Apakah perbezaan utama antara contoh Thailand dengan contoh Filipina atau Burma dalam nota?",
+      "prompt": "Apakah perbezaan utama antara contoh Thailand dengan contoh Filipina atau Burma?",
       "options": [
         "Thailand menekankan pembaharuan untuk kekal merdeka manakala banyak contoh lain menekankan pembebasan daripada penjajahan",
         "Tiada perbezaan",
