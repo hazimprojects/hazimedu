@@ -14,14 +14,14 @@
         "Di Alam Melayu pra-Islam"
       ],
       "answer": "Di Barat",
-      "explanation": "Nota menekankan perkembangan idea nasionalisme di Barat.",
+      "explanation": "Perbincangan ini menekankan perkembangan idea nasionalisme di Barat.",
       "tip": "Barat = fokus utama subtopik 2.2."
     },
     {
       "id": "q2",
       "level": 1,
       "levelLabel": "Mengingat",
-      "prompt": "Apakah tiga revolusi penting yang membentuk idea nasionalisme Barat menurut ringkasan nota?",
+      "prompt": "Apakah tiga revolusi penting yang membentuk idea nasionalisme Barat?",
       "options": [
         "Revolusi Keagungan, Revolusi Amerika dan Revolusi Perancis",
         "Revolusi Industri, Revolusi Hijau dan Revolusi Digital",
@@ -36,7 +36,7 @@
       "id": "q3",
       "level": 1,
       "levelLabel": "Mengingat",
-      "prompt": "Apakah reaksi utama masyarakat Barat terhadap pemerintahan beraja menurut nota?",
+      "prompt": "Apakah reaksi utama masyarakat Barat terhadap pemerintahan beraja?",
       "options": [
         "Menuntut kedaulatan rakyat dan kebebasan daripada pemerintahan mutlak",
         "Menerima pemerintahan mutlak tanpa syarat",
@@ -111,7 +111,7 @@
       "id": "q8",
       "level": 3,
       "levelLabel": "Mengaplikasi",
-      "prompt": "Seorang pelajar berkata: 'Tanpa revolusi di Barat, mungkin lambat bangkitnya semangat nasionalisme di Asia.' Apakah yang paling disokong oleh nota?",
+      "prompt": "Seorang pelajar berkata: 'Tanpa revolusi di Barat, mungkin lambat bangkitnya semangat nasionalisme di Asia.' Apakah jawapan yang paling disokong oleh hujah sejarah tersebut?",
       "options": [
         "Idea Barat menjadi inspirasi kepada kebangkitan di bahagian lain dunia",
         "Asia tidak terpengaruh oleh Barat langsung",
@@ -119,7 +119,7 @@
         "Nasionalisme Asia muncul tanpa sebarang konteks global"
       ],
       "answer": "Idea Barat menjadi inspirasi kepada kebangkitan di bahagian lain dunia",
-      "explanation": "Nota menekankan inspirasi daripada perkembangan Barat.",
+      "explanation": "Perbincangan ini menekankan inspirasi daripada perkembangan Barat.",
       "tip": "Inspirasi global: Barat mempengaruhi Asia."
     },
     {
@@ -156,7 +156,7 @@
       "id": "q11",
       "level": 4,
       "levelLabel": "Menganalisis",
-      "prompt": "Apakah persamaan utama antara perkembangan nasionalisme di Barat dengan kesan kepada Asia menurut nota?",
+      "prompt": "Apakah persamaan utama antara perkembangan nasionalisme di Barat dengan kesan kepada Asia?",
       "options": [
         "Keduanya berkaitan dengan semangat kebebasan dan penentangan terhadap penindasan atau penjajahan",
         "Keduanya sama sekali tidak berkaitan",

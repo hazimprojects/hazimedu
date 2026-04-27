@@ -6,7 +6,7 @@
       "id": "q1",
       "level": 1,
       "levelLabel": "Mengingat",
-      "prompt": "Dalam bidang politik, apakah kesan perkembangan nasionalisme yang ditekankan nota?",
+      "prompt": "Dalam bidang politik, apakah kesan perkembangan nasionalisme yang biasanya ditekankan?",
       "options": [
         "Meningkatkan kesedaran rakyat terhadap pentadbiran dan peluang berperanan dalam kerajaan",
         "Menurunkan minat terhadap politik",
@@ -51,7 +51,7 @@
       "id": "q4",
       "level": 1,
       "levelLabel": "Mengingat",
-      "prompt": "Apakah peranan keseluruhan kesan-kesan ini menurut ringkasan?",
+      "prompt": "Apakah peranan keseluruhan kesan-kesan ini?",
       "options": [
         "Menjadi titik tolak penting ke arah perjuangan kemerdekaan dan pembinaan negara bangsa",
         "Tiada kesan besar",
@@ -156,7 +156,7 @@
       "id": "q11",
       "level": 4,
       "levelLabel": "Menganalisis",
-      "prompt": "Apakah persamaan utama antara kesan politik dengan kesan ekonomi menurut nota?",
+      "prompt": "Apakah persamaan utama antara kesan politik dengan kesan ekonomi?",
       "options": [
         "Keduanya menunjukkan peningkatan kesedaran dan usaha rakyat memperbaiki kedudukan dalam sistem negara",
         "Keduanya tidak berkaitan dengan rakyat",
@@ -171,7 +171,7 @@
       "id": "q12",
       "level": 4,
       "levelLabel": "Menganalisis",
-      "prompt": "Apakah perbezaan utama antara kesan 'sosial' dengan kesan 'politik' dalam ringkasan?",
+      "prompt": "Apakah perbezaan utama antara kesan 'sosial' dengan kesan 'politik'?",
       "options": [
         "Sosial menekankan nilai masyarakat, wanita dan kebajian kaum manakala politik menekankan pentadbiran dan penyertaan",
         "Tiada perbezaan",
