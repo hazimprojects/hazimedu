@@ -6,7 +6,7 @@
       "id": "q1",
       "level": 1,
       "levelLabel": "Mengingat",
-      "prompt": "Apakah dua bidang utama yang menunjukkan keunggulan Kesultanan Melayu Melaka dalam subtopik ini?",
+      "prompt": "Apakah dua bidang utama yang menunjukkan keunggulan Kesultanan Melayu Melaka dalam bab ini?",
       "options": [
         "Sistem pentadbiran dan undang-undang",
         "Sistem perbankan dan insurans",
@@ -15,7 +15,7 @@
       ],
       "answer": "Sistem pentadbiran dan undang-undang",
       "explanation": "Subtopik menumpukan keunggulan Melaka melalui sistem pentadbiran yang tersusun dan undang-undang yang sistematik.",
-      "tip": "Tajuk subtopik sendiri ialah petunjuk terbesar — hafal pasangan pentadbiran + undang-undang."
+      "tip": "Tajuk bab sendiri petunjuk besar — ingat pasangan pentadbiran + undang-undang."
     },
     {
       "id": "q2",
@@ -55,13 +55,13 @@
       "options": ["Bendahara", "Laksamana", "Penghulu", "Syahbandar"],
       "answer": "Bendahara",
       "explanation": "Bendahara memegang peranan utama dalam pentadbiran dan sering menjadi pembesar tertinggi selepas sultan.",
-      "tip": "Hierarki: ingat Bendahara sebagai \"tangan kanan\" sultan dalam banyak soalan objektif."
+      "tip": "Hierarki: Bendahara sering digambarkan sebagai \"tangan kanan\" sultan — elak pilihan moden yang tidak wujud pada zaman itu."
     },
     {
       "id": "q5",
       "level": 2,
       "levelLabel": "Memahami",
-      "prompt": "Apakah maksud ringkas \"keunggulan\" sesebuah kerajaan dalam konteks nota ini?",
+      "prompt": "Apakah maksud ringkas \"keunggulan\" sesebuah kerajaan dalam konteks Sejarah Tingkatan 4 ini?",
       "options": [
         "Keupayaan kerajaan mentadbir dengan sistematik, teratur dan berkesan",
         "Kekayaan sultan seorang diri tanpa melibatkan pembesar",
@@ -189,8 +189,8 @@
         "Sultan tidak pernah berinteraksi dengan pembesar"
       ],
       "answer": "Wujudnya struktur berperingkat, peranan pembesar yang jelas, dan sistem hasil untuk menyokong kerajaan",
-      "explanation": "Hujah kukuh menyatukan struktur, manusia (pembesar) dan sumber kewangan — elemen penting keunggulan yang dibincangkan dalam nota.",
-      "tip": "\"Paling kukuh\" = gabungan beberapa bukti utama subtopik, bukan satu frasa umum."
+      "explanation": "Hujah kukuh menyatukan struktur, manusia (pembesar) dan sumber kewangan — elemen penting keunggulan yang dibincangkan dalam bab ini.",
+      "tip": "\"Paling kukuh\" = gabungkan beberapa bukti utama bab, bukan satu frasa umum."
     },
     {
       "id": "q14",

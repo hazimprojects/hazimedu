@@ -151,7 +151,7 @@
     renderProgress();
 
     if (typeEl) {
-      typeEl.textContent      = 'Objektif';
+      typeEl.textContent      = 'Pilihan berganda';
       typeEl.style.color      = '#3e5f8a';
       typeEl.style.background = 'rgba(62,95,138,0.1)';
     }
@@ -164,7 +164,7 @@
     }
 
     if (promptEl) promptEl.textContent = q.prompt;
-    if (helpEl)   helpEl.textContent   = q.help || 'Pilih satu jawapan terbaik.';
+    if (helpEl)   helpEl.textContent   = q.help || 'Pilih jawapan yang paling sesuai — tiada tekanan masa, ambil masa berfikir.';
 
     renderOptions();
     updateCheckButtonState();

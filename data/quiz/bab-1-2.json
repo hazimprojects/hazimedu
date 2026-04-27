@@ -6,11 +6,11 @@
       "id": "q1",
       "level": 1,
       "levelLabel": "Mengingat",
-      "prompt": "Berapakah bilangan ciri utama negara bangsa yang dibincangkan bagi Kesultanan Melayu Melaka dalam subtopik ini?",
+      "prompt": "Berapakah bilangan ciri utama negara bangsa Kesultanan Melayu Melaka yang dibincangkan dalam bab ini?",
       "options": ["Empat ciri", "Lima ciri", "Enam ciri", "Tujuh ciri"],
       "answer": "Enam ciri",
-      "explanation": "Nota menyatakan negara bangsa Melaka terbina melalui enam ciri utama: kerajaan, rakyat, kedaulatan, wilayah pengaruh, undang-undang dan lambang kebesaran.",
-      "tip": "Hafal nombor enam — sering digunakan sebagai soalan objektif ringkas."
+      "explanation": "Negara bangsa Melaka terbina melalui enam ciri utama: kerajaan, rakyat, kedaulatan, wilayah pengaruh, undang-undang dan lambang kebesaran.",
+      "tip": "Nombor enam mudah diuji — ingat enam ciri tadi sebagai senarai ringkas."
     },
     {
       "id": "q2",
@@ -61,7 +61,7 @@
       "id": "q5",
       "level": 2,
       "levelLabel": "Memahami",
-      "prompt": "Mengapakah hubungan antara sultan dan rakyat digambarkan sebagai \"timbal balik\" dalam nota?",
+      "prompt": "Mengapakah hubungan antara sultan dan rakyat digambarkan sebagai \"timbal balik\" dalam konteks negara bangsa Melaka?",
       "options": [
         "Sultan menjamin kesejahteraan manakala rakyat mengakui kekuasaan sultan",
         "Sultan dipilih oleh rakyat setiap tahun",
@@ -184,7 +184,7 @@
         "Kewujudan bangunan kayu di kawasan bandar"
       ],
       "answer": "Wujudnya raja, rakyat, kedaulatan, wilayah pengaruh, undang-undang dan lambang kebesaran secara lengkap",
-      "explanation": "Hujah paling kukuh ialah kombinensi lengkap ciri negara bangsa seperti dalam nota — bukti langsung kepada struktur politik dan undang-undang, bukan bukti sampingan.",
+      "explanation": "Hujah paling kukuh ialah gabungan lengkap ciri negara bangsa — bukti terus kepada struktur politik dan undang-undang, bukan bukti sampingan.",
       "tip": "Soalan \"paling kukuh\" = pilih jawapan yang menyenaraikan ciri inti negara bangsa, bukan geografi atau bahasa sahaja."
     },
     {
@@ -199,7 +199,7 @@
         "Konsep raja dan rakyat diganti sepenuhnya oleh sistem feudal Eropah"
       ],
       "answer": "Ciri-ciri tersebut menjadi rujukan nilai dan struktur asas negara bangsa kontemporari",
-      "explanation": "Nota menekankan ciri-ciri ini menjadi panduan kepada pembentukan negara bangsa Malaysia masa kini, menunjukkan kesinambungan nilai dan identiti.",
+      "explanation": "Ciri-ciri ini menjadi rujukan nilai dan struktur asas negara bangsa kontemporari, menunjukkan kesinambungan nilai dan identiti.",
       "tip": "Kesimpulan bab sering menghubungkan warisan → Malaysia — pilih jawapan yang menunjukkan kesinambungan, bukan pemutusan."
     }
   ]

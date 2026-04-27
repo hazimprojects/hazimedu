@@ -10,13 +10,13 @@
       "options": ["Waadat", "Feudalisme", "Demokrasi liberal", "Komunisme"],
       "answer": "Waadat",
       "explanation": "Waadat merujuk kepada perjanjian atau ikatan timbal balik antara pemerintah dan rakyat berdasarkan tanggungjawab dan hak masing-masing.",
-      "tip": "Waadat = ikatan — hafal istilah ini sebagai tajuk konsep subtopik."
+      "tip": "Waadat = ikatan — hafal istilah ini sebagai kata kunci konsep bab."
     },
     {
       "id": "q2",
       "level": 1,
       "levelLabel": "Mengingat",
-      "prompt": "Golongan pemerintah dalam konteks nota ini terutamanya merangkumi:",
+      "prompt": "Golongan pemerintah dalam sistem tradisi Melaka terutamanya merangkumi:",
       "options": [
         "Sultan dan pembesar",
         "Pedagang asing sahaja",
@@ -55,7 +55,7 @@
       ],
       "answer": "Menjamin kesejahteraan rakyat dan mengekalkan ketenteraman",
       "explanation": "Sultan bertanggungjawab memimpin, melindungi rakyat dan mengekalkan kestabilan serta keadilan dalam kerajaan.",
-      "tip": "Tanggungjawab sultan dalam nota sering ke arah perlindungan dan ketenteraman."
+      "tip": "Tanggungjawab sultan dalam bab ini biasanya ke arah perlindungan dan ketenteraman rakyat."
     },
     {
       "id": "q5",
@@ -205,7 +205,7 @@
       ],
       "answer": "Negara bangsa di Alam Melayu, terutamanya Melaka, dibina melalui ciri lengkap, pentadbiran, undang-undang dan hubungan pemerintah–rakyat yang kukuh",
       "explanation": "Bab 1 menyatukan asas negara bangsa, ciri Melaka, keunggulan sistem dan hubungan waadat sebagai warisan keseluruhan.",
-      "tip": "Rumusan bab → gabungkan 1.1–1.4 dalam satu ayat menyeluruh, bukan satu subtopik sahaja."
+      "tip": "Rumusan bab → cuba gabungkan idea 1.1–1.4 dalam satu ayat menyeluruh, bukan satu bahagian sahaja."
     }
   ]
 }
