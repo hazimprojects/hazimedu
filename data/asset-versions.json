@@ -1,9 +1,9 @@
 {
-  "style_css": "141",
+  "style_css": "142",
   "main_js": "149",
   "zh_mode_js": "41",
   "manifest": "11",
-  "sw_cache": "202",
+  "sw_cache": "203",
   "icon": "3",
   "icon_maskable": "3",
   "logo": "3",
@@ -20,6 +20,6 @@
     "keywords": "25",
     "responsive": "6",
     "themes": "14",
-    "lab": "6"
+    "lab": "7"
   }
 }
