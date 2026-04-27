@@ -2382,13 +2382,50 @@ var ZYMNOTES_NAV = { chapters: [
 })();
 
 // =========================
+// ABOUT PAGE — PWA INSTALL (Chrome/Edge prompt + standalone note)
+// =========================
+(function () {
+  var btn = document.getElementById('about-pwa-install-btn');
+  var note = document.getElementById('about-pwa-installed-note');
+  if (!btn || !note) return;
+
+  var deferredPrompt = null;
+
+  function isStandaloneDisplay() {
+    if (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) return true;
+    if (typeof navigator.standalone === 'boolean' && navigator.standalone) return true;
+    return false;
+  }
+
+  if (isStandaloneDisplay()) {
+    note.hidden = false;
+    return;
+  }
+
+  window.addEventListener('beforeinstallprompt', function (e) {
+    e.preventDefault();
+    deferredPrompt = e;
+    btn.hidden = false;
+  });
+
+  btn.addEventListener('click', function () {
+    if (!deferredPrompt) return;
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then(function () {
+      btn.hidden = true;
+      deferredPrompt = null;
+    });
+  });
+})();
+
+// =========================
 // SERVICE WORKER REGISTRATION
 // =========================
 (function () {
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=212').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=213').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
