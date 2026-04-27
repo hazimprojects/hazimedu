@@ -6,7 +6,7 @@
    - Same-origin non-document GET: cache-first
 */
 
-const CACHE = 'zym-v207';
+const CACHE = 'zym-v208';
 
 const PRECACHE_URLS = [
   '/',
