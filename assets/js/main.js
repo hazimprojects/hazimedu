@@ -585,12 +585,18 @@ function hzZymnotesIsNotesPathname(p) {
   return !!p && /\/notes(?:\/|$)/i.test(p);
 }
 
-/** Utama, indeks nota, tentang — sparkle menu + mindmap; bab induk + subtopik nota. */
+function hzZymnotesIsFeedbackPathname(p) {
+  if (!p || typeof p !== "string") return false;
+  var tail = p.replace(/\/+$/, "").split("/").pop() || "";
+  return /^feedback\.html$/i.test(tail);
+}
+
+/** Utama, indeks nota, tentang, maklum balas — sparkle menu + mindmap; bab induk + subtopik nota. */
 function hzZymnotesIsSparkleShellPathname(p) {
   if (!p || typeof p !== "string") return false;
   if (hzZymnotesIsHomePathname(p) || hzZymnotesIsNotesPathname(p)) return true;
   var tail = p.replace(/\/+$/, "").split("/").pop() || "";
-  return /^about\.html$/i.test(tail);
+  return /^about\.html$/i.test(tail) || hzZymnotesIsFeedbackPathname(p);
 }
 
 /** Halaman induk bab sahaja: bab-1.html … bab-7.html (bukan subtopik). */
@@ -2329,7 +2335,7 @@ var ZYMNOTES_NAV = { chapters: [
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=193').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=197').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
