@@ -440,18 +440,33 @@
   color: #9a5a5a;
 }
 
-/* Result screen: secondary button sits in same actions row as primary — keep readable on gradient */
+/* Result screen: secondary ("Kembali ke Nota") — light card needs dark text; dark theme uses glass on gradient */
 .learning-lab-stage[data-lab-screen="result"] .learning-lab-actions .learning-lab-btn.secondary {
+  background: rgba(92, 110, 132, 0.1);
+  color: #24313f;
+  border: 1.5px solid rgba(92, 110, 132, 0.24);
+  box-shadow: none;
+}
+
+.learning-lab-stage[data-lab-screen="result"] .learning-lab-actions .learning-lab-btn.secondary:hover {
+  background: rgba(92, 110, 132, 0.14);
+}
+
+.learning-lab-stage[data-lab-screen="result"] .learning-lab-actions .learning-lab-btn.secondary:active {
+  background: rgba(92, 110, 132, 0.08);
+}
+
+[data-theme="dark"] .learning-lab-stage[data-lab-screen="result"] .learning-lab-actions .learning-lab-btn.secondary {
   background: rgba(255, 255, 255, 0.22);
   color: #fff;
   border: 1.5px solid rgba(255, 255, 255, 0.45);
 }
 
-.learning-lab-stage[data-lab-screen="result"] .learning-lab-actions .learning-lab-btn.secondary:hover {
+[data-theme="dark"] .learning-lab-stage[data-lab-screen="result"] .learning-lab-actions .learning-lab-btn.secondary:hover {
   background: rgba(255, 255, 255, 0.3);
 }
 
-.learning-lab-stage[data-lab-screen="result"] .learning-lab-actions .learning-lab-btn.secondary:active {
+[data-theme="dark"] .learning-lab-stage[data-lab-screen="result"] .learning-lab-actions .learning-lab-btn.secondary:active {
   background: rgba(255, 255, 255, 0.18);
 }
 
