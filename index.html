@@ -125,6 +125,31 @@
       border-radius: 24px;
       box-shadow: 0 20px 56px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.08);
     }
+    /* Loading fasa (tunjuk segera selepas intro) */
+    .pwa-loader {
+      box-sizing: border-box;
+      position: fixed;
+      inset: 0;
+      z-index: 99998;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: max(12px, env(safe-area-inset-top, 0px)) 20px max(20px, env(safe-area-inset-bottom, 0px));
+      background: linear-gradient(168deg, #1a1828 0%, #12101a 50%, #0a090f 100%);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.35s ease, visibility 0.35s ease;
+    }
+    html.pwa-loader-show .pwa-loader {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+    html.pwa-loader-pending body {
+      overflow: hidden;
+    }
   </style>
 </head>
 <body class="page-theme-home app-shell-page">
@@ -132,15 +157,26 @@
     (function () {
       var p = location.pathname || "/";
       if (p !== "/" && p !== "/index.html") return;
+      var loaderDone = false;
+      var splashSeen = false;
       try {
-        if (sessionStorage.getItem("zym-splash-seen") === "1") return;
+        loaderDone = sessionStorage.getItem("zym-loader-done") === "1";
+        splashSeen = sessionStorage.getItem("zym-splash-seen") === "1";
       } catch (e) {}
+      if (loaderDone) return;
       var d = false;
       try {
         d = window.matchMedia("(display-mode: standalone)").matches;
       } catch (e) {}
       if (!d && typeof navigator.standalone === "boolean") d = navigator.standalone;
-      if (d) document.documentElement.classList.add("pwa-splash-pending");
+      if (!d) return;
+      if (!splashSeen) {
+        document.documentElement.classList.add("pwa-splash-pending");
+      } else {
+        document.documentElement.classList.add("pwa-loader-pending", "pwa-loader-show");
+        var el = document.getElementById("pwa-loader");
+        if (el) el.removeAttribute("hidden");
+      }
     })();
   </script>
   <div
@@ -161,6 +197,38 @@
         decoding="async"
         fetchpriority="high"
       />
+    </div>
+  </div>
+  <div
+    id="pwa-loader"
+    class="pwa-loader"
+    hidden
+    aria-hidden="true"
+    aria-busy="true"
+    aria-label="Memuatkan ZymNotes"
+  >
+    <div class="pwa-loader-bg" aria-hidden="true"></div>
+    <div class="pwa-loader-inner">
+      <div class="pwa-loader-icon-wrap">
+        <div class="pwa-loader-rings" aria-hidden="true">
+          <span class="pwa-loader-ring pwa-loader-ring-1"></span>
+          <span class="pwa-loader-ring pwa-loader-ring-2"></span>
+        </div>
+        <img
+          class="pwa-loader-icon"
+          src="/icons/icon-192.png?v=2"
+          width="80"
+          height="80"
+          alt=""
+          decoding="async"
+        />
+      </div>
+      <p class="pwa-loader-title">ZymNotes</p>
+      <p class="pwa-loader-sub">Sedang menyediakan halaman…</p>
+      <div class="pwa-loader-bar" role="progressbar" aria-label="Memuat">
+        <span class="pwa-loader-bar-track"></span>
+        <span class="pwa-loader-bar-glow"></span>
+      </div>
     </div>
   </div>
   <header class="site-header">
