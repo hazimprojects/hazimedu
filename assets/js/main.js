@@ -11,6 +11,72 @@ document.documentElement.classList.add("js-enhanced");
   }
 })();
 
+// =========================
+// HOME (/) — PWA intro overlay (uses OG art asset; not the OS splash screen)
+// =========================
+(function () {
+  var path = (location.pathname || "/").replace(/\/+$/, "") || "/";
+  if (path !== "/" && path !== "/index.html") return;
+
+  function dismissSplash(immediate) {
+    var root = document.documentElement;
+    var splash = document.getElementById("pwa-splash");
+    if (!splash || splash.getAttribute("data-splash-dismissed") === "1") {
+      root.classList.remove("pwa-splash-pending");
+      return;
+    }
+    splash.setAttribute("data-splash-dismissed", "1");
+    try {
+      sessionStorage.setItem("zym-splash-seen", "1");
+    } catch (e) {}
+
+    function cleanup() {
+      splash.remove();
+      root.classList.remove("pwa-splash-pending");
+    }
+
+    if (immediate) {
+      cleanup();
+      return;
+    }
+
+    splash.classList.add("pwa-splash--hide");
+    var done = false;
+    function finish() {
+      if (done) return;
+      done = true;
+      cleanup();
+    }
+    splash.addEventListener("transitionend", finish, { once: true });
+    setTimeout(finish, 520);
+  }
+
+  try {
+    if (sessionStorage.getItem("zym-splash-seen") === "1") {
+      dismissSplash(true);
+      return;
+    }
+  } catch (e) {}
+
+  if (!document.documentElement.classList.contains("pwa-splash-pending")) return;
+
+  window.addEventListener(
+    "load",
+    function () {
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+          dismissSplash(false);
+        });
+      });
+    },
+    { once: true }
+  );
+
+  window.addEventListener("pageshow", function (ev) {
+    if (ev.persisted) dismissSplash(true);
+  });
+})();
+
 // ── SVG Icon Library (shared: bottom nav, search, theme toggle) ─────────────
 var HZ_ICONS = (function () {
   var s = ' fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"';
@@ -2538,7 +2604,7 @@ var ZYMNOTES_NAV = { chapters: [
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=220').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=222').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
