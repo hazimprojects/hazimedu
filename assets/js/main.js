@@ -12,68 +12,173 @@ document.documentElement.classList.add("js-enhanced");
 })();
 
 // =========================
-// HOME (/) — PWA intro overlay (uses OG art asset; not the OS splash screen)
+// HOME (/) — PWA intro + animated loading (standalone only, once per session)
 // =========================
 (function () {
   var path = (location.pathname || "/").replace(/\/+$/, "") || "/";
   if (path !== "/" && path !== "/index.html") return;
 
-  function dismissSplash(immediate) {
-    var root = document.documentElement;
-    var splash = document.getElementById("pwa-splash");
+  var root = document.documentElement;
+  var splash = document.getElementById("pwa-splash");
+  var loader = document.getElementById("pwa-loader");
+  var splashSeenKey = "zym-splash-seen";
+  var loaderDoneKey = "zym-loader-done";
+
+  function isStandalonePwa() {
+    try {
+      if (window.matchMedia("(display-mode: standalone)").matches) return true;
+    } catch (e) {}
+    return typeof navigator.standalone === "boolean" && navigator.standalone;
+  }
+
+  function removeSplashFromDom() {
+    if (splash && splash.parentNode) splash.parentNode.removeChild(splash);
+    root.classList.remove("pwa-splash-pending");
+  }
+
+  function hideSplashAnimated() {
     if (!splash || splash.getAttribute("data-splash-dismissed") === "1") {
-      root.classList.remove("pwa-splash-pending");
+      removeSplashFromDom();
       return;
     }
     splash.setAttribute("data-splash-dismissed", "1");
-    try {
-      sessionStorage.setItem("zym-splash-seen", "1");
-    } catch (e) {}
-
-    function cleanup() {
-      splash.remove();
-      root.classList.remove("pwa-splash-pending");
-    }
-
-    if (immediate) {
-      cleanup();
-      return;
-    }
-
     splash.classList.add("pwa-splash--hide");
     var done = false;
     function finish() {
       if (done) return;
       done = true;
-      cleanup();
+      removeSplashFromDom();
     }
     splash.addEventListener("transitionend", finish, { once: true });
     setTimeout(finish, 520);
   }
 
+  function showLoader() {
+    if (!loader) return;
+    loader.removeAttribute("hidden");
+    root.classList.add("pwa-loader-pending", "pwa-loader-show");
+    requestAnimationFrame(function () {
+      loader.classList.remove("pwa-loader--hide");
+    });
+  }
+
+  function hideLoaderAnimated() {
+    if (!loader || loader.getAttribute("data-loader-dismissed") === "1") {
+      finishLoaderCleanup();
+      return;
+    }
+    loader.setAttribute("data-loader-dismissed", "1");
+    loader.classList.add("pwa-loader--hide");
+    root.classList.remove("pwa-loader-show");
+    var done = false;
+    function finish() {
+      if (done) return;
+      done = true;
+      finishLoaderCleanup();
+    }
+    loader.addEventListener("transitionend", finish, { once: true });
+    setTimeout(finish, 480);
+  }
+
+  function finishLoaderCleanup() {
+    root.classList.remove("pwa-loader-pending");
+    if (loader && loader.parentNode) loader.parentNode.removeChild(loader);
+  }
+
   try {
-    if (sessionStorage.getItem("zym-splash-seen") === "1") {
-      dismissSplash(true);
+    if (sessionStorage.getItem(loaderDoneKey) === "1") {
+      removeSplashFromDom();
+      if (loader) loader.remove();
+      root.classList.remove("pwa-loader-pending", "pwa-loader-show");
       return;
     }
   } catch (e) {}
 
-  if (!document.documentElement.classList.contains("pwa-splash-pending")) return;
+  if (!isStandalonePwa()) {
+    removeSplashFromDom();
+    if (loader) loader.remove();
+    return;
+  }
 
-  window.addEventListener(
-    "load",
-    function () {
-      requestAnimationFrame(function () {
-        requestAnimationFrame(function () {
-          dismissSplash(false);
+  try {
+    if (sessionStorage.getItem(splashSeenKey) === "1") {
+      removeSplashFromDom();
+      showLoader();
+    }
+  } catch (e) {
+    removeSplashFromDom();
+  }
+
+  var fontsPromise =
+    document.fonts && document.fonts.ready
+      ? document.fonts.ready.catch(function () {})
+      : Promise.resolve();
+
+  function runSplashSequence() {
+    var minSplashMs = 720;
+    try {
+      if (sessionStorage.getItem(splashSeenKey) === "1") minSplashMs = 0;
+    } catch (e) {}
+    var minLoaderMs = 1400;
+    var maxTotalMs = 11000;
+    var t0 = typeof performance !== "undefined" && performance.now ? performance.now() : Date.now();
+
+    function elapsed() {
+      var t = typeof performance !== "undefined" && performance.now ? performance.now() : Date.now();
+      return t - t0;
+    }
+
+    function afterSplashWindow() {
+      try {
+        sessionStorage.setItem(splashSeenKey, "1");
+      } catch (e) {}
+      hideSplashAnimated();
+      showLoader();
+    }
+
+    function waitForLoaderEnd() {
+      return Promise.all([
+        fontsPromise,
+        new Promise(function (r) {
+          setTimeout(r, minLoaderMs);
+        }),
+      ]).then(function () {
+        return new Promise(function (r) {
+          requestAnimationFrame(function () {
+            requestAnimationFrame(r);
+          });
         });
       });
-    },
-    { once: true }
-  );
+    }
+
+    setTimeout(function () {
+      afterSplashWindow();
+      var budget = Math.max(0, maxTotalMs - elapsed());
+      Promise.race([
+        waitForLoaderEnd(),
+        new Promise(function (r) {
+          setTimeout(r, budget);
+        }),
+      ]).then(function () {
+        try {
+          sessionStorage.setItem(loaderDoneKey, "1");
+        } catch (e) {}
+        hideLoaderAnimated();
+      });
+    }, minSplashMs);
+  }
+
+  if (document.readyState === "complete") {
+    runSplashSequence();
+  } else {
+    window.addEventListener("load", runSplashSequence, { once: true });
+  }
 
   window.addEventListener("pageshow", function (ev) {
-    if (ev.persisted) dismissSplash(true);
+    if (ev.persisted) {
+      removeSplashFromDom();
+      finishLoaderCleanup();
+    }
   });
 })();
 
@@ -2604,7 +2709,7 @@ var ZYMNOTES_NAV = { chapters: [
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=222').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=223').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
