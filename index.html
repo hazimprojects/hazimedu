@@ -31,7 +31,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap"></noscript>
-  <link rel="preload" as="style" href="assets/css/base.css?v=46">
+  <link rel="preload" as="image" href="assets/og-image.png?v=20260420c" fetchpriority="high" />
+  <link rel="preload" as="style" href="assets/css/base.css?v=47">
   <link rel="preload" as="style" href="assets/css/layout.css?v=15">
   <link rel="preload" as="style" href="assets/css/ui.css?v=50">
   <link rel="preload" as="style" href="assets/css/paper.css?v=14">
@@ -39,7 +40,7 @@
   <link rel="preload" as="style" href="assets/css/responsive.css?v=6">
   <link rel="preload" as="style" href="assets/css/themes.css?v=14">
   <link rel="preload" as="style" href="assets/css/lab.css?v=7">
-  <link rel="stylesheet" href="assets/css/style.css?v=150" />
+  <link rel="stylesheet" href="assets/css/style.css?v=151" />
 
   <!-- Google tag (gtag.js) — deferred for performance -->
 <script>
@@ -75,8 +76,90 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <meta name="apple-mobile-web-app-title" content="ZymNotes" />
   <meta name="msapplication-TileColor" content="#9B77FF" />
+  <style id="pwa-splash-critical">
+    /* Paparan intro PWA: mesti tersedia sebelum CSS penuh dimuat */
+    .pwa-splash {
+      box-sizing: border-box;
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: max(10px, env(safe-area-inset-top, 0px)) max(18px, env(safe-area-inset-right, 0px)) max(24px, env(safe-area-inset-bottom, 0px)) max(18px, env(safe-area-inset-left, 0px));
+      background: radial-gradient(125% 100% at 50% 0%, rgba(155, 119, 255, 0.32) 0%, transparent 52%),
+        linear-gradient(168deg, #1e1b2e 0%, #14121c 48%, #0c0a12 100%);
+    }
+    html.pwa-splash-pending .pwa-splash {
+      display: flex;
+    }
+    html.pwa-splash-pending, html.pwa-splash-pending body {
+      height: 100%;
+    }
+    html.pwa-splash-pending body {
+      overflow: hidden;
+    }
+    .pwa-splash-bg {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.45;
+      background: radial-gradient(ellipse 80% 50% at 20% 80%, rgba(85, 181, 255, 0.2) 0%, transparent 55%),
+        radial-gradient(ellipse 60% 45% at 85% 20%, rgba(255, 155, 106, 0.12) 0%, transparent 50%);
+    }
+    .pwa-splash-card {
+      position: relative;
+      z-index: 1;
+      width: min(92vw, 420px);
+      max-width: 100%;
+    }
+    .pwa-splash-art {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 20px 56px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.08);
+    }
+  </style>
 </head>
 <body class="page-theme-home app-shell-page">
+  <script>
+    (function () {
+      var p = location.pathname || "/";
+      if (p !== "/" && p !== "/index.html") return;
+      try {
+        if (sessionStorage.getItem("zym-splash-seen") === "1") return;
+      } catch (e) {}
+      var d = false;
+      try {
+        d = window.matchMedia("(display-mode: standalone)").matches;
+      } catch (e) {}
+      if (!d && typeof navigator.standalone === "boolean") d = navigator.standalone;
+      if (d) document.documentElement.classList.add("pwa-splash-pending");
+    })();
+  </script>
+  <div
+    id="pwa-splash"
+    class="pwa-splash"
+    role="img"
+    aria-label="ZymNotes"
+    aria-hidden="true"
+  >
+    <div class="pwa-splash-bg" aria-hidden="true"></div>
+    <div class="pwa-splash-card">
+      <img
+        class="pwa-splash-art"
+        src="assets/og-image.png?v=20260420c"
+        width="1200"
+        height="630"
+        alt=""
+        decoding="async"
+        fetchpriority="high"
+      />
+    </div>
+  </div>
   <header class="site-header">
     <div class="nav-wrap">
       <a class="app-logo-link" href="index.html" aria-label="ZymNotes — Utama">
@@ -155,7 +238,7 @@
 
   </main>
 
-  <script src="assets/js/main.js?v=160"></script>
+  <script src="assets/js/main.js?v=161"></script>
   <script type="application/ld+json">
   [
     {
