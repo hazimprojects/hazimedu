@@ -2029,7 +2029,7 @@ html.about-pwa-hide-card #about-pwa-card {
   opacity: 0.9;
 }
 
-/* Home — PWA in-app intro (overlays after OS splash; uses OG art) */
+/* Home — PWA in-app intro (portrait card art; not OS splash) */
 .pwa-splash {
   transition: opacity 0.38s ease, visibility 0.38s ease;
 }
