@@ -285,6 +285,38 @@ pd kad subtopik & pencetus accordion kekal berfungsi normal; swipe
 mendatar bermula drpd atas kad/accordion yg sama BETUL navigasi ke
 halaman sebelah, bukan ikut href kad tu).
 
+## Glosari Popover — kad "Glosari" digantikan popover (prototaip)
+
+`assets/js/main.js` (blok "GLOSARI POPOVER") jana popover kecil drpd
+kad `.glossary-paper` sedia ada (bukan struktur HTML baharu) —
+diinspirasi perbincangan "Info box → popover" awal, tapi dipakai pd
+glosari sbb definisi glosari pendek (1 ayat) & dah ada titik cetus
+semula jadi (istilah `.kw` dlm ayat).
+
+**Logik (per kad `.glossary-paper`)**: ambil istilah (teks span `.kw`
+pertama dlm `.point-line` kad) + definisi penuh (teks `.point-line`).
+Cari span `.kw` PERTAMA (ikut susunan DOKUMEN, bukan hanya sblm kad —
+literal pertama merentas seluruh halaman) di LUAR `.glossary-paper`
+yg teksnya sepadan (case-insensitive). Kalau jumpa: tanda `.kw-
+glossary-trigger` + `tabindex`/`role=button` (klik/Enter/Space buka
+popover teks ringkas, dicetus drpd `document.body.appendChild`,
+kedudukan dikira drpd `getBoundingClientRect()` + clamp tepi
+viewport), kad asal `display:none`. **Kalau TAK jumpa** (istilah tu
+tak muncul di mana-mana selain dlm kad glosari sendiri — cth.
+"Enakmen" pd bab-3-2.html), kad asal DIKEKALKAN tanpa transformasi —
+degradasi selamat, bukan ralat.
+
+`display:none` (bukan buang drpd DOM) SENGAJA — disahkan penjana PDF
+(`_bodyHtml` dlm main.js) berjalan berasaskan struktur DOM/kelas
+(`el.childNodes.forEach`), TIADA semakan `display`/visibility, jadi
+kandungan kad tetap disertakan dlm eksport PDF walau disembunyi drpd
+paparan biasa.
+
+**Skop semasa: `bab-3-2.html` sahaja** (prototaip, 3 drpd 4 istilah
+glosari halaman ni dpt popover — "Enakmen" kekal kad sbb tiada
+kemunculan lain). Tunggu pengesahan pengguna sblm luaskan ke 22
+halaman lain yg ada `.glossary-paper` (40 kad glosari kesemuanya).
+
 ## Aliran Kerja Versioning Aset (WAJIB lepas ubah CSS/JS/sw.js)
 
 Sumber kebenaran versi: `data/asset-versions.json`. Lepas ubah

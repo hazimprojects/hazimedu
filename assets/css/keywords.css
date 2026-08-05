@@ -43,6 +43,47 @@
 }
 
 /* =========================
+   GLOSARI — popover pd kemunculan pertama istilah (prototaip)
+========================= */
+
+/* Garis putus-putus bawah — petunjuk "boleh tap utk definisi", tak
+   ganggu warna latar palet kw-* sedia ada. Hanya kemunculan PERTAMA
+   istilah (ikut susunan dokumen) yg dpt kelas ni — main.js. */
+.kw-glossary-trigger {
+  cursor: pointer;
+  text-decoration: underline dotted;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.kw-glossary-popover {
+  position: absolute;
+  z-index: var(--z-toast);
+  max-width: min(320px, calc(100vw - 24px));
+  padding: 0.7rem 0.9rem;
+  border-radius: 14px;
+  background: rgba(255, 253, 248, 0.98);
+  border: 1px solid rgba(92, 110, 132, 0.14);
+  box-shadow: var(--shadow-medium);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--ink);
+  animation: kw-glossary-pop-in 0.15s ease;
+}
+
+@keyframes kw-glossary-pop-in {
+  from { opacity: 0; transform: translateY(-4px) scale(0.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+[data-theme="dark"] .kw-glossary-popover {
+  background: rgba(28, 28, 33, 0.98);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #e5e0d8;
+}
+
+/* =========================
    DARK MODE — GLOBAL
 ========================= */
 
