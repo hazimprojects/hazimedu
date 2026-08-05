@@ -196,6 +196,22 @@ html[data-theme="dark"] .kw-karya { color: #b8e3f3; background: #2c5b6c; }
   box-shadow: var(--shadow-soft);
 }
 
+/* Trigger padat KHUSUS legenda — padding lalai .paper-accordion-trigger
+   (1rem, direka utk accordion kandungan besar spt "Faktor 1"/"Kuasa
+   Paksi") terlalu lebar utk togol ringkas 1 baris. Skop ketat
+   (.keyword-legend-wrap ...) elak jejas accordion lain di laman. */
+.keyword-legend-wrap > .paper-accordion-trigger {
+  padding: 0.6rem 0.95rem;
+  gap: 0.5rem;
+}
+
+/* Chevron "+"/"−" warisi line-height 1.6 drpd body — kotak baris jadi
+   lebih tinggi drpd teks tajuk sendiri & tentukan tinggi baris flex.
+   Reset khusus di sini (bukan sejagat, elak jejas accordion lain). */
+.keyword-legend-wrap > .paper-accordion-trigger::after {
+  line-height: 1;
+}
+
 .keyword-legend-title {
   margin: 0 0 0.65rem;
   font-size: 0.88rem;
