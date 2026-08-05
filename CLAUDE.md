@@ -295,16 +295,34 @@ semula jadi (istilah `.kw` dlm ayat).
 
 **Logik (per kad `.glossary-paper`)**: ambil istilah (teks span `.kw`
 pertama dlm `.point-line` kad) + definisi penuh (teks `.point-line`).
-Cari span `.kw` PERTAMA (ikut susunan DOKUMEN, bukan hanya sblm kad —
-literal pertama merentas seluruh halaman) di LUAR `.glossary-paper`
-yg teksnya sepadan (case-insensitive). Kalau jumpa: tanda `.kw-
-glossary-trigger` + `tabindex`/`role=button` (klik/Enter/Space buka
-popover teks ringkas, dicetus drpd `document.body.appendChild`,
+Cari span `.kw` PERTAMA (ikut susunan DOKUMEN) di LUAR `.glossary-
+paper`, `.lead` (intro hero) & `.master-summary-paper` (meliputi
+"Ringkasan X.X" & "Rumusan Besar Bab N" — sama kelas) yg teksnya
+sepadan (case-insensitive) — arahan pengguna: kemunculan di intro/
+ringkasan TAK dikira, sbb bahagian tu selalu dibaca berulang, trigger
+di situ kurang berguna drpd dlm kandungan penuh. Kalau jumpa: tanda
+`.kw-glossary-trigger` + `tabindex`/`role=button` (klik/Enter/Space
+buka popover teks ringkas, dicetus drpd `document.body.appendChild`,
 kedudukan dikira drpd `getBoundingClientRect()` + clamp tepi
 viewport), kad asal `display:none`. **Kalau TAK jumpa** (istilah tu
-tak muncul di mana-mana selain dlm kad glosari sendiri — cth.
-"Enakmen" pd bab-3-2.html), kad asal DIKEKALKAN tanpa transformasi —
+tak muncul di mana-mana selain intro/ringkasan/kad glosari sendiri —
+cth. "Kuasa imperialis"/"Pakatan ketenteraan"/"Enakmen" pd
+bab-3-2.html, hanya "Deklarasi 14 Perkara" yg dpt popover di halaman
+tu selepas peraturan ni), kad asal DIKEKALKAN tanpa transformasi —
 degradasi selamat, bukan ralat.
+
+**AWAS — JANGAN tambah listener `scroll` utk tutup popover.**
+Trigger ada `tabindex="0"`; klik sebenar (Playwright `.click()`,
+jenis sama dgn tap peranti sebenar) bagi FOKUS asli pd elemen, yg
+kadang cetus pelayar auto-scroll SEDIKIT (bawa elemen fokus dlm
+pandangan penuh) SEBAIK SAHAJA popover terbuka. Scroll asal pelayar
+tu (bukan gerakan tatal pengguna) akan tutup popover SERTA-MERTA
+dlm gerakan yg SAMA — bermakna popover kelihatan terbuka+tertutup
+serentak, tak pernah nampak langsung. Ni bug SEBENAR (bukan artifak
+ujian) ditemui semasa bina — disahkan via Playwright `.click()`
+(bukan `dispatchEvent` sintetik, yg TAK cetus fokus/scroll natif jadi
+tersembunyi drpd ujian sintetik awal). Klik-luar & Escape dah cukup
+utk tutup, tak perlukan scroll-close.
 
 `display:none` (bukan buang drpd DOM) SENGAJA — disahkan penjana PDF
 (`_bodyHtml` dlm main.js) berjalan berasaskan struktur DOM/kelas
@@ -312,9 +330,9 @@ degradasi selamat, bukan ralat.
 kandungan kad tetap disertakan dlm eksport PDF walau disembunyi drpd
 paparan biasa.
 
-**Skop semasa: `bab-3-2.html` sahaja** (prototaip, 3 drpd 4 istilah
-glosari halaman ni dpt popover — "Enakmen" kekal kad sbb tiada
-kemunculan lain). Tunggu pengesahan pengguna sblm luaskan ke 22
+**Skop semasa: `bab-3-2.html` sahaja** (prototaip, 1 drpd 4 istilah
+glosari halaman ni dpt popover selepas peraturan intro/ringkasan —
+"Deklarasi 14 Perkara"). Tunggu pengesahan pengguna sblm luaskan ke 22
 halaman lain yg ada `.glossary-paper` (40 kad glosari kesemuanya).
 
 ## Aliran Kerja Versioning Aset (WAJIB lepas ubah CSS/JS/sw.js)
