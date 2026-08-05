@@ -862,6 +862,102 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("resize", refreshOpenAccordions);
 
   // =========================
+  // SWIPE NAV — swipe kiri/kanan ke subtopik sebelum/selepas
+  // (guna pautan sedia ada dlm .note-subsection .hero-actions di
+  // bahagian bawah halaman — btn-secondary = sebelum, btn-primary =
+  // selepas. Tiada anchor drpd tepi skrin diperlukan (elak konflik
+  // gerak isyarat "swipe balik" native Safari/Android).)
+  // =========================
+  (function () {
+    const main = document.querySelector("main.note-reading-main");
+    if (!main) return;
+
+    const bottomNav = document.querySelector(".note-subsection .hero-actions");
+    if (!bottomNav) return;
+
+    const prevLink = bottomNav.querySelector("a.btn-secondary");
+    const nextLink = bottomNav.querySelector("a.btn-primary");
+    const prevHref = prevLink ? prevLink.getAttribute("href") : null;
+    const nextHref = nextLink ? nextLink.getAttribute("href") : null;
+    if (!prevHref && !nextHref) return;
+
+    const MIN_DISTANCE = 70;
+    const MAX_VERTICAL_RATIO = 0.5;
+    const MAX_DURATION = 700;
+    const INTERACTIVE_SELECTOR = "a, button, input, select, textarea, [role='button']";
+
+    function buildArrow(side) {
+      const el = document.createElement("div");
+      el.className = "page-nav-arrow page-nav-arrow-" + side;
+      el.innerHTML = side === "left" ? "&#8249;" : "&#8250;";
+      el.setAttribute("aria-hidden", "true");
+      document.body.appendChild(el);
+      return el;
+    }
+
+    const arrowLeft = prevHref ? buildArrow("left") : null;
+    const arrowRight = nextHref ? buildArrow("right") : null;
+
+    function flashArrow(side) {
+      const el = side === "left" ? arrowLeft : arrowRight;
+      if (!el) return;
+      el.classList.add("is-visible");
+      setTimeout(function () {
+        el.classList.remove("is-visible");
+      }, 500);
+    }
+
+    let startX = null;
+    let startY = null;
+    let startTime = null;
+    let tracking = false;
+
+    main.addEventListener("touchstart", function (ev) {
+      if (ev.touches.length !== 1) {
+        tracking = false;
+        return;
+      }
+      const t = ev.touches[0];
+      if (t.target.closest && t.target.closest(INTERACTIVE_SELECTOR)) {
+        tracking = false;
+        return;
+      }
+      startX = t.clientX;
+      startY = t.clientY;
+      startTime = Date.now();
+      tracking = true;
+    }, { passive: true });
+
+    main.addEventListener("touchend", function (ev) {
+      if (!tracking || startX === null) return;
+      tracking = false;
+
+      const t = ev.changedTouches[0];
+      const deltaX = t.clientX - startX;
+      const deltaY = t.clientY - startY;
+      const duration = Date.now() - startTime;
+      startX = null;
+
+      if (duration > MAX_DURATION) return;
+      if (Math.abs(deltaX) < MIN_DISTANCE) return;
+      if (Math.abs(deltaY) > Math.abs(deltaX) * MAX_VERTICAL_RATIO) return;
+
+      if (deltaX > 0 && prevHref) {
+        flashArrow("left");
+        setTimeout(function () { window.location.href = prevHref; }, 150);
+      } else if (deltaX < 0 && nextHref) {
+        flashArrow("right");
+        setTimeout(function () { window.location.href = nextHref; }, 150);
+      }
+    }, { passive: true });
+
+    main.addEventListener("touchcancel", function () {
+      tracking = false;
+      startX = null;
+    }, { passive: true });
+  })();
+
+  // =========================
   // REVEAL ON SCROLL
   // =========================
   const revealElements = document.querySelectorAll(".reveal-on-scroll");
@@ -5197,7 +5293,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=446').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=447').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
