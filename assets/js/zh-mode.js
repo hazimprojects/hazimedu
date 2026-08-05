@@ -93,7 +93,7 @@
       .replace(/&/g, "&amp;")
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;")
-      .replace(/\"/g, "&quot;")
+      .replace(/"/g, "&quot;")
       .replace(/'/g, "&#39;");
   }
 
@@ -508,6 +508,10 @@
   function buildGlossaryFallback(text, gl) {
     if (!text || shouldSkipChipTranslation(text)) return null;
 
+    // TODO: char class tanpa flag u; kesan sebenar belum disahkan scr
+    // menyeluruh drpd pipeline Mod ZH (53 unit) — tak diubah dlm laluan
+    // tambah lint infra ni.
+    // eslint-disable-next-line no-misleading-character-class
     var cleanText = normalize(text.replace(/[\uD83C-\uDBFF\uDC00-\uDFFF]|\u00a9|\u00ae|[\u2000-\u3300]/g, "").replace(/^[\s📌💡📖🔍⬆️]+/, ""));
     if (!cleanText || cleanText.length < 2) return null;
 
@@ -574,7 +578,7 @@
   function stripCorruptedZhLeadPrefix(text) {
     if (typeof text !== "string") return "";
     return text
-      .replace(/^\s*['"“”‘’`「」\[\]（）()]*\s*重点\s*[：:]\s*/u, "")
+      .replace(/^\s*['"“”‘’`「」[\]（）()]*\s*重点\s*[：:]\s*/u, "")
       .replace(/^\s+/, "")
       .trim();
   }
@@ -1024,6 +1028,10 @@
   }
 
   function annotateOrphanText(gl, comprehension) {
+    // TODO: char class dgn combining sequence (cth. \u2b06+FE0F); kesan
+    // sebenar belum disahkan scr menyeluruh — tak diubah dlm laluan
+    // tambah lint infra ni.
+    // eslint-disable-next-line no-misleading-character-class
     var EMOJI_STRIP_RE = /[\uD83C-\uDBFF\uDC00-\uDFFF]|[\u2600-\u27BF]|[\u{1F000}-\u{1FFFF}]|[📌💡📖🔍⬆️]/gu;
     var mappedComprehension = comprehension || {};
 

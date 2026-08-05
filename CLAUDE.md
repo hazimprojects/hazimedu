@@ -75,9 +75,16 @@ SECARA MANUAL sebelum commit.
 - `python3 scripts/seo-audit.py` — audit meta tags/struktur SEO
   merentas semua halaman (mesti "passed"). Jalankan CI (`seo-audit.yml`)
   pada setiap PR/push ke `main` jugak.
-- Tiada linter/test framework (tiada `package.json`) — sahkan
-  perubahan JS/HTML scr manual (baca diff, run local server bila
-  perlu: `python3 -m http.server 8080`).
+- `npm run lint` (ESLint utk `assets/js/*.js`/`sw.js`/`scripts/*.mjs`,
+  Stylelint utk `assets/css/*.css`) — gate CI (`lint.yml`). Konfig
+  SENGAJA longgar (`eslint:recommended` + `stylelint-config-recommended`,
+  bukan `standard`) supaya tangkap ralat sebenar (var tak wujud, CSS tak
+  sah, dll.) tanpa paksa tulis semula 11k+ baris CSS/JS sedia ada dgn
+  peraturan gaya. `no-unused-vars` sengaja "warn" (bukan "error") —
+  byk fungsi/param sedia ada memang unused (kod dead/reserved), tak
+  patut block PR. Tiada test framework — sahkan perubahan JS/HTML lain
+  scr manual (baca diff, run local server bila perlu:
+  `python3 -m http.server 8080`).
 - Elak edit terus `data/updates.json` & `sitemap.xml` — dijana automatik
   oleh workflow `update-status.yml` (`scripts/generate-updates.py`) bila
   push ke `main`; perubahan tangan akan overridden/conflict.
