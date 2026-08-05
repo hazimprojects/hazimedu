@@ -575,10 +575,20 @@ def finalize_keyword_legend(html: str) -> str:
     )
     if not items:
         return html.replace(_LEGEND_PLACEHOLDER, "")
+    # Dibalut sbg accordion (guna semula mekanisme paper-accordion sedia
+    # ada, bukan togol baharu) — collapse lalai, jimat ~250px setiap
+    # halaman (legenda tak perlu dibaca berulang bila palet dah kanonik).
     legend = (
-        f'<div class="keyword-legend-wrap">\n'
-        f'<p class="keyword-legend-title">Warna kata kunci</p>\n'
+        f'<div class="paper-accordion keyword-legend-accordion">\n'
+        f'<article class="paper-accordion-item cv-unit keyword-legend-wrap" data-cv-collectible="false" '
+        f'data-cv-title="Warna kata kunci" data-cv-type="accordion">\n'
+        f'<button class="paper-accordion-trigger" data-accordion="acc-keyword-legend">\n'
+        f'<span class="paper-accordion-title keyword-legend-title">Warna kata kunci</span>\n'
+        f'</button>\n'
+        f'<div class="paper-accordion-panel" id="acc-keyword-legend"><div class="cv-unit-body">\n'
         f'<div class="keyword-legend-grid">\n{items}\n</div>\n'
+        f'</div></div>\n'
+        f'</article>\n'
         f'</div>\n'
     )
     return html.replace(_LEGEND_PLACEHOLDER, legend)
