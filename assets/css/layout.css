@@ -376,15 +376,16 @@ h3 {
   50% { opacity: 0.6; }
 }
 
-/* Swipe between notes: whole-page drag uses transform on body (see main.js) */
+/* Swipe antara subtopik: transform pd <main> sahaja (lihat main.js).
+   html.hz-swipe-dragging aktif sepanjang gerak isyarat (drag + animasi
+   susulan) — kunci overflow-x/overscroll supaya translateX <main>
+   (yg boleh lebih luas drpd viewport semasa diseret) tak cetus scroll
+   mendatar pd body/html. */
 html.hz-swipe-dragging {
   overflow-x: hidden;
   overscroll-behavior-x: none;
 }
 
-body.swipe-animating { overflow-x: hidden; }
-
-/* Subtopic swipe: transform on <main> only (see main.js) */
 main.note-reading-main.swipe-animating {
-  overflow-x: hidden;
+  will-change: transform, opacity;
 }

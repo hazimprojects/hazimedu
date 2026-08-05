@@ -2541,7 +2541,11 @@ body.mindmap-open { overflow: hidden; }
   stop-color: #38bdf8;
 }
 
-/* ── Swipe Nav — anak panah maklum balas swipe kiri/kanan subtopik ── */
+/* ── Swipe Nav — anak panah maklum balas progresif ikut jarak seret ──
+   Opacity/scale dikemas kini setiap bingkai (JS) SEPANJANG seretan
+   aktif — SENGAJA tiada transition drpd .page-nav-arrow asas (elak
+   susulan/lag drpd nilai sebenar jari). Transition hanya ditambah
+   sementara (.is-settling) bila seretan tamat, utk hilang lancar. */
 .page-nav-arrow {
   position: fixed;
   top: 50%;
@@ -2562,13 +2566,11 @@ body.mindmap-open { overflow: hidden; }
   opacity: 0;
   pointer-events: none;
   z-index: var(--z-toast);
-  transition: opacity 0.22s ease, transform 0.22s ease;
 }
 .page-nav-arrow-left { left: 0.6rem; }
 .page-nav-arrow-right { right: 0.6rem; }
-.page-nav-arrow.is-visible {
-  opacity: 1;
-  transform: translateY(-50%) scale(1);
+.page-nav-arrow.is-settling {
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 [data-theme="dark"] .page-nav-arrow {
   background: rgba(28, 28, 33, 0.92);
