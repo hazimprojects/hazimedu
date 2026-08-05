@@ -184,6 +184,17 @@ struktur rata lama di mana-mana halaman baharu, itu regresi — tukar
 ikut struktur di atas (rujuk `notes/bab-1-1.html` atau `_templates/
 nota-subtopik.html` sbg contoh).
 
+**TIADA auto-scroll bila togol** — handler klik accordion sejagat
+(`assets/js/main.js`, delegasi pada `document.body`) skrol-ke-posisi
+scroll-into-view secara lalai bila accordion lain dibuka (supaya
+kandungan panjang di bawah lipatan kekal kelihatan). Legenda kata
+kunci SENGAJA dikecualikan drpd tingkah laku ni — semak
+`currentItem.classList.contains("keyword-legend-wrap")` di awal
+handler, guna `setAccordionState()` terus tanpa `window.scrollTo`/
+stabilisasi. Sebabnya: legenda selalu dekat bahagian atas hero (dlm
+pandangan sedia ada), skrol paksa jadi tak perlu & mengganggu.
+JANGAN buang semakan ni bila ubah handler accordion sejagat.
+
 ## Aliran Kerja Versioning Aset (WAJIB lepas ubah CSS/JS/sw.js)
 
 Sumber kebenaran versi: `data/asset-versions.json`. Lepas ubah
