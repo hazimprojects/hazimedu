@@ -1096,7 +1096,29 @@ document.addEventListener("DOMContentLoaded", function () {
       var el = document.createElement("div");
       el.className = "kw-glossary-popover";
       el.setAttribute("role", "tooltip");
-      el.textContent = defText;
+
+      var head = document.createElement("div");
+      head.className = "kw-glossary-popover-head";
+      var icon = document.createElement("img");
+      icon.className = "fluent-3d-emoji openmoji--inline";
+      icon.src =
+        "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Open%20book/3D/open_book_3d.png";
+      icon.width = 16;
+      icon.height = 16;
+      icon.alt = "";
+      icon.decoding = "async";
+      icon.loading = "lazy";
+      var label = document.createElement("span");
+      label.textContent = "Glosari";
+      head.appendChild(icon);
+      head.appendChild(label);
+
+      var body = document.createElement("div");
+      body.className = "kw-glossary-popover-body";
+      body.textContent = defText;
+
+      el.appendChild(head);
+      el.appendChild(body);
       document.body.appendChild(el);
 
       var rect = trigger.getBoundingClientRect();
@@ -5576,7 +5598,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=462').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=463').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });

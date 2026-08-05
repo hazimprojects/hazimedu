@@ -61,7 +61,8 @@
   position: absolute;
   z-index: var(--z-toast);
   max-width: min(320px, calc(100vw - 24px));
-  padding: 0.7rem 0.9rem;
+  padding: 0;
+  overflow: hidden;
   border-radius: 14px;
   background: rgba(255, 253, 248, 0.98);
   border: 1px solid rgba(92, 110, 132, 0.14);
@@ -70,6 +71,29 @@
   line-height: 1.5;
   color: var(--ink);
   animation: kw-glossary-pop-in 0.15s ease;
+}
+
+/* Tajuk mini "Glosari" + ikon — samakan gaya visual dgn
+   .paper-strip.strip-glossary (paper.css) yg dulu kepala kad glosari
+   asal, supaya popover kekal terasa konsisten dgn identiti "Glosari". */
+.kw-glossary-popover-head {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.42rem 0.9rem;
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  background: linear-gradient(90deg, #ede9fe, #ddd4fe);
+  color: #6d28d9;
+}
+
+.kw-glossary-popover-head img {
+  flex: 0 0 auto;
+}
+
+.kw-glossary-popover-body {
+  padding: 0.65rem 0.9rem 0.75rem;
 }
 
 @keyframes kw-glossary-pop-in {
@@ -81,6 +105,11 @@
   background: rgba(28, 28, 33, 0.98);
   border-color: rgba(255, 255, 255, 0.1);
   color: #e5e0d8;
+}
+
+[data-theme="dark"] .kw-glossary-popover-head {
+  background: linear-gradient(90deg, rgba(109, 40, 217, 0.32), rgba(91, 33, 182, 0.32));
+  color: #c4b5fd;
 }
 
 /* =========================
