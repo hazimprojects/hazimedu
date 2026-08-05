@@ -89,6 +89,14 @@ self-host lebih ringkas drpd urus rule cache tambahan dlm `sw.js`.
     Manchukuo & jajahan British), bendera akan mengelirukan makna
     "bendera = negara berdaulat".
 
+  Kesemua 4 entiti di atas guna **satu** lencana glob bulat (emoji
+  Fluent sedia ada, kunci `"globe"` dlm `emoji_map.py` — "Globe showing
+  asia-australia", BUKAN "Globe with meridians" yg gaya wayar-grid)
+  + kelas `.flag-icon` (ring+bayang sama) supaya ritma visual konsisten
+  dgn chip berbendera sebenar tanpa palsukan makna "negara berdaulat".
+  JANGAN biar >1 ikon bertindan (cth. Czechoslovakia/Yugoslavia asalnya
+  ada 2-3 glob "meridians" bertindan — dah dinormal ke 1).
+
 ## Bug Chip Terputus Baris — combinator `.paper-chip-list .paper-chip`
 
 **Elak selector CSS bentuk `.paper-chip-list .paper-chip` (descendant,
