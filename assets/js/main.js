@@ -912,44 +912,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const SETTLE_MS = 260;
     const INTERACTIVE_SELECTOR = "a, button, input, select, textarea, [role='button']";
 
-    function buildArrow(side) {
-      const el = document.createElement("div");
-      el.className = "page-nav-arrow page-nav-arrow-" + side;
-      el.innerHTML = side === "left" ? "&#8249;" : "&#8250;";
-      el.setAttribute("aria-hidden", "true");
-      document.body.appendChild(el);
-      return el;
-    }
-
-    const arrowLeft = prevHref ? buildArrow("left") : null;
-    const arrowRight = nextHref ? buildArrow("right") : null;
-
-    function setArrowProgress(side, progress) {
-      const el = side === "left" ? arrowLeft : arrowRight;
-      if (!el) return;
-      el.classList.remove("is-settling");
-      const p = Math.max(0, Math.min(1, progress));
-      if (p <= 0.02) {
-        el.style.opacity = "";
-        el.style.transform = "";
-        return;
-      }
-      el.style.opacity = String(p);
-      el.style.transform = "translateY(-50%) scale(" + (0.8 + 0.2 * p).toFixed(3) + ")";
-    }
-
-    function clearArrows() {
-      [arrowLeft, arrowRight].forEach(function (el) {
-        if (!el) return;
-        el.classList.add("is-settling");
-        el.style.opacity = "";
-        el.style.transform = "";
-        setTimeout(function () {
-          el.classList.remove("is-settling");
-        }, 220);
-      });
-    }
-
     let phase = "idle"; // idle | pending | dragging | settling
     let startX = 0;
     let startY = 0;
@@ -965,17 +927,10 @@ document.addEventListener("DOMContentLoaded", function () {
     function applyTransform(dx) {
       main.style.transform = "translateX(" + dx + "px)";
       const commitDist = window.innerWidth * COMMIT_RATIO;
-      if (dx > 0) {
-        main.style.opacity = String(1 - Math.min(0.4, (dx / commitDist) * 0.4));
-        setArrowProgress("left", dx / commitDist);
-        setArrowProgress("right", 0);
-      } else if (dx < 0) {
-        main.style.opacity = String(1 - Math.min(0.4, (-dx / commitDist) * 0.4));
-        setArrowProgress("right", -dx / commitDist);
-        setArrowProgress("left", 0);
+      if (dx !== 0) {
+        main.style.opacity = String(1 - Math.min(0.4, (Math.abs(dx) / commitDist) * 0.4));
       } else {
         main.style.opacity = "1";
-        clearArrows();
       }
     }
 
@@ -997,7 +952,6 @@ document.addEventListener("DOMContentLoaded", function () {
       main.style.transition = "transform " + SETTLE_MS + "ms cubic-bezier(0.22, 1, 0.36, 1), opacity " + SETTLE_MS + "ms ease";
       main.style.transform = "translateX(0px)";
       main.style.opacity = "1";
-      clearArrows();
       setTimeout(cleanupAfterSettle, SETTLE_MS + 40);
     }
 
@@ -5430,7 +5384,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=452').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=453').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
