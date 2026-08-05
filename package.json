@@ -1,0 +1,23 @@
+{
+  "name": "zymnotes",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ZymNotes — platform nota ulang kaji digital KSSM (laman statik).",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idariq/zymnotes.git"
+  },
+  "scripts": {
+    "lint:js": "eslint .",
+    "lint:css": "stylelint \"assets/css/**/*.css\"",
+    "lint": "npm run lint:js && npm run lint:css"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.5",
+    "eslint": "9.39.5",
+    "globals": "15.15.0",
+    "stylelint": "16.26.1",
+    "stylelint-config-recommended": "14.0.1"
+  }
+}

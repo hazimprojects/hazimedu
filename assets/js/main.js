@@ -930,6 +930,7 @@ document.addEventListener("DOMContentLoaded", function () {
           iq.width = 18;
           iq.height = 18;
           iq.decoding = "async";
+          iq.loading = "lazy";
           iq.setAttribute("data-bab-badge", "quiz");
           wrap.appendChild(iq);
         }
@@ -941,6 +942,7 @@ document.addEventListener("DOMContentLoaded", function () {
           ia.width = 18;
           ia.height = 18;
           ia.decoding = "async";
+          ia.loading = "lazy";
           ia.setAttribute("data-bab-badge", "audio");
           wrap.appendChild(ia);
         }
@@ -1573,12 +1575,13 @@ function hzFluentSparkleImg(pair, extraClass, w, h) {
   img.width = w;
   img.height = h;
   img.decoding = "async";
+  img.loading = "lazy";
   return img;
 }
 
 function hzFluentImgHtml(pair, size) {
   var src = hzFluent3dAsset(pair[0], pair[1]);
-  return '<img class="fluent-3d-emoji" src="' + src + '" alt="" width="' + size + '" height="' + size + '" decoding="async">';
+  return '<img class="fluent-3d-emoji" src="' + src + '" alt="" width="' + size + '" height="' + size + '" decoding="async" loading="lazy">';
 }
 
 // Icons8 3D Fluency — sparkle menu & settings panel
@@ -1609,6 +1612,7 @@ function hzIcons8SparkleImg(url, extraClass, w, h) {
   img.width = w;
   img.height = h;
   img.decoding = 'async';
+  img.loading = 'lazy';
   if (url.indexOf('/3d-fluency/') !== -1) {
     img.onerror = function() { if (!this._fb) { this._fb = 1; this.src = this.src.replace('/3d-fluency/', '/fluency/'); } };
   }
@@ -1616,7 +1620,7 @@ function hzIcons8SparkleImg(url, extraClass, w, h) {
 }
 function hzIcons8ImgHtml(url, size) {
   var oe = url.indexOf('/3d-fluency/') !== -1 ? ' onerror="if(!this._fb){this._fb=1;this.src=this.src.replace(\'/3d-fluency/\',\'/fluency/\')}"' : '';
-  return '<img class="fluent-3d-emoji" src="' + url + '" alt="" width="' + size + '" height="' + size + '" decoding="async"' + oe + '>';
+  return '<img class="fluent-3d-emoji" src="' + url + '" alt="" width="' + size + '" height="' + size + '" decoding="async" loading="lazy"' + oe + '>';
 }
 
 function hzSparkleIcon(key) {
@@ -5161,13 +5165,31 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
 })();
 
 // =========================
+// FALLBACK IKON EMOJI CDN
+// =========================
+// Ikon fluent-3d-emoji (Fluent 3D Microsoft via jsdelivr) semuanya hiasan
+// (alt=""). Kalau CDN disekat/gagal, sorok imej rosak drpd terus paparkan
+// glyph "gambar pecah" pelayar merata-rata muka (sehingga ~100 ikon/muka).
+(function () {
+  document.addEventListener('error', function (e) {
+    var img = e.target;
+    if (!img || img.tagName !== 'IMG' || !img.classList.contains('fluent-3d-emoji')) return;
+    // Ikon icons8 3d-fluency cuba semula sekali (tukar ke /fluency/) via
+    // onerror sendiri (lihat hzIcons8SparkleImg/hzIcons8ImgHtml) — beri
+    // laluan pada percubaan semula tu dulu sebelum sorok terus.
+    if (img.src.indexOf('/3d-fluency/') !== -1 && !img._fb) return;
+    img.style.display = 'none';
+  }, true);
+})();
+
+// =========================
 // SERVICE WORKER REGISTRATION
 // =========================
 (function () {
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=427').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=429').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });

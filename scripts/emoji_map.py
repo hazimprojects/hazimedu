@@ -99,7 +99,7 @@ def get_emoji_img(name: str, size: int = 20, extra_class: str = "openmoji--inlin
     url = get_emoji_url(name)
     return (
         f'<img class="fluent-3d-emoji {extra_class}" '
-        f'src="{url}" width="{size}" height="{size}" alt="" decoding="async" />'
+        f'src="{url}" width="{size}" height="{size}" alt="" decoding="async" loading="lazy" />'
     )
 
 
@@ -108,5 +108,5 @@ def get_chip_img(name: str) -> str:
     url = get_emoji_url(name)
     return (
         f'<img class="fluent-3d-emoji openmoji--chip" '
-        f'src="{url}" width="20" height="20" alt="" decoding="async" />'
+        f'src="{url}" width="20" height="20" alt="" decoding="async" loading="lazy" />'
     )

@@ -562,9 +562,7 @@ def _footer() -> str:
 def _scripts(av: dict) -> str:
     return (
         f'<script src="../assets/js/zh-mode.js?v={av.get("zh_mode_js","1")}"></script>'
-        f'<script src="../assets/js/main.js?v={av.get("main_js","1")}"></script>'
-        f'<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.3/Sortable.min.js"></script>'
-        f'<script src="../assets/js/canvas.js?v=1"></script>\n'
+        f'<script src="../assets/js/main.js?v={av.get("main_js","1")}"></script>\n'
     )
 
 
