@@ -1129,7 +1129,13 @@ document.addEventListener("DOMContentLoaded", function () {
       var allKw = document.querySelectorAll(".kw");
       var target = null;
       for (var i = 0; i < allKw.length; i++) {
-        if (allKw[i].closest(".glossary-paper")) continue;
+        // Langkau kemunculan dlm kad glosari sendiri, intro (.lead)
+        // & ringkasan (.master-summary-paper — meliputi DUA-DUA
+        // "Ringkasan X.X" & "Rumusan Besar Bab N", sama kelas) — arah
+        // pengguna: istilah pertama TAK termasuk kemunculan di bahagian
+        // ni, sbb pembaca lazimnya balik baca ringkasan berulang kali,
+        // trigger di situ kurang berguna drpd dlm kandungan penuh.
+        if (allKw[i].closest(".glossary-paper, .lead, .master-summary-paper")) continue;
         if (allKw[i].textContent.trim().toLowerCase() === term) {
           target = allKw[i];
           break;
@@ -1168,7 +1174,14 @@ document.addEventListener("DOMContentLoaded", function () {
     document.addEventListener("keydown", function (ev) {
       if (ev.key === "Escape") closePopover();
     });
-    window.addEventListener("scroll", closePopover, { passive: true });
+    // SENGAJA TIADA listener "scroll" tutup popover di sini — trigger
+    // ada tabindex=0, jadi klik bagi fokus asli, yg kadang cetus
+    // pelayar auto-scroll SEDIKIT (bawa elemen fokus dlm pandangan
+    // penuh) SEBAIK SAHAJA popover dibuka. Scroll asal itu sendiri
+    // (bukan gerakan tatal pengguna) akan tutup popover serta-merta
+    // (dibuka+tutup dlm gerakan sama, disahkan Playwright — punca bug
+    // klik sebenar tak nampak popover langsung). Klik-luar & Escape
+    // dah cukup utk tutup.
   })();
 
   // =========================
@@ -5507,7 +5520,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=458').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=459').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
