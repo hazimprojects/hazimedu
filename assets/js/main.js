@@ -5165,13 +5165,31 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
 })();
 
 // =========================
+// FALLBACK IKON EMOJI CDN
+// =========================
+// Ikon fluent-3d-emoji (Fluent 3D Microsoft via jsdelivr) semuanya hiasan
+// (alt=""). Kalau CDN disekat/gagal, sorok imej rosak drpd terus paparkan
+// glyph "gambar pecah" pelayar merata-rata muka (sehingga ~100 ikon/muka).
+(function () {
+  document.addEventListener('error', function (e) {
+    var img = e.target;
+    if (!img || img.tagName !== 'IMG' || !img.classList.contains('fluent-3d-emoji')) return;
+    // Ikon icons8 3d-fluency cuba semula sekali (tukar ke /fluency/) via
+    // onerror sendiri (lihat hzIcons8SparkleImg/hzIcons8ImgHtml) — beri
+    // laluan pada percubaan semula tu dulu sebelum sorok terus.
+    if (img.src.indexOf('/3d-fluency/') !== -1 && !img._fb) return;
+    img.style.display = 'none';
+  }, true);
+})();
+
+// =========================
 // SERVICE WORKER REGISTRATION
 // =========================
 (function () {
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=428').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=429').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
