@@ -316,13 +316,21 @@ serentak (satu senarai tersusun, mana jumpa dulu menang):
   luar span, tak terjejas.
 
 Kalau jumpa (mana-mana jenis): tanda `.kw-glossary-trigger` +
-`tabindex`/`role=button` (klik/Enter/Space buka popover teks ringkas,
-dicetus drpd `document.body.appendChild`, kedudukan dikira drpd
+`tabindex`/`role=button` (klik/Enter/Space buka popover, dicetus drpd
+`document.body.appendChild`, kedudukan dikira drpd
 `getBoundingClientRect()` + clamp tepi viewport), kad asal
 `display:none`. **Kalau TAK jumpa** (istilah tu tak muncul di
-mana-mana selain intro/ringkasan/kad glosari sendiri — cth. "Enakmen"
-pd bab-3-2.html), kad asal DIKEKALKAN tanpa transformasi — degradasi
-selamat, bukan ralat.
+mana-mana selain intro/ringkasan/kad glosari sendiri), kad asal
+DIKEKALKAN tanpa transformasi — degradasi selamat, bukan ralat.
+
+Popover sendiri ada 2 bahagian (`showPopover()` bina via
+`document.createElement`/`appendChild`, bukan `innerHTML` — konsisten
+dgn corak sedia ada codebase ni): tajuk mini `.kw-glossary-popover-head`
+(ikon 3D "Open book" Fluent + label "Glosari", padanan visual dgn
+`.paper-strip.strip-glossary` asal — gradien ungu, `keywords.css`) +
+badan `.kw-glossary-popover-body` (teks definisi). Ditambah selepas
+pengguna minta popover "ada tajuk glosari dan ikon macam sebelum ini"
+supaya kekal konsisten dgn identiti kad asal yg digantikan.
 
 **AWAS — JANGAN tambah listener `scroll` utk tutup popover.**
 Trigger ada `tabindex="0"`; klik sebenar (Playwright `.click()`,
@@ -343,11 +351,13 @@ utk tutup, tak perlukan scroll-close.
 kandungan kad tetap disertakan dlm eksport PDF walau disembunyi drpd
 paparan biasa.
 
-**Skop semasa: `bab-3-2.html` sahaja** (prototaip, 3 drpd 4 istilah
-glosari halaman ni dpt popover — "Kuasa Imperialis" & "Pakatan
-Ketenteraan" via tajuk seksyen `.paper-strip.strip-sub`, "Deklarasi 14
-Perkara" via span `.kw` dlm perenggan penjelasan; "Enakmen" kekal kad
-asal, tiada kemunculan sah lain). Tunggu pengesahan pengguna sblm
+**Skop semasa: `bab-3-2.html` sahaja** (prototaip, keempat-empat
+istilah glosari halaman ni kini dpt popover — "Kuasa Imperialis" &
+"Pakatan Ketenteraan" via tajuk seksyen `.paper-strip.strip-sub`,
+"Deklarasi 14 Perkara" via span `.kw` dlm perenggan penjelasan,
+"Enakmen" via span `.kw kw-istilah` ditambah pd ayat "British turut
+meluluskan tiga enakmen penting semasa perang:" khusus utk beri
+kemunculan sah drpd kad glosarinya). Tunggu pengesahan pengguna sblm
 luaskan ke 22 halaman lain yg ada `.glossary-paper` (40 kad glosari
 kesemuanya).
 
