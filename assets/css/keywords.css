@@ -170,31 +170,11 @@ html[data-theme="dark"] .kw-karya { color: #b8e3f3; background: #2c5b6c; }
    KEYWORD LEGEND
 ========================= */
 
-/* NOTA: dua struktur wujud serentak buat masa peralihan —
-   (a) LAMA — kad rata "keyword-legend-wrap > title + grid" (majoriti
-       halaman, belum ditukar).
-   (b) BAHARU — dibalut sbg .paper-accordion-item (collapse lalai,
-       lihat finalize_keyword_legend() dlm html_generator.py). Rule
-       kedua di bawah (specificity lebih tinggi, 2 kelas) reset
-       padding/margin/border-radius drpd rule pertama supaya tak
-       bertindih dobel dgn kad .paper-accordion-item sedia ada.
-   JANGAN buang rule (a) sehingga SEMUA halaman ditukar ke (b). */
-.keyword-legend-wrap {
-  margin-top: 1rem;
-  padding: 0.85rem 0.95rem;
-  border-radius: 20px;
-  background: rgba(255, 253, 248, 0.6);
-  border: 1px solid rgba(92, 110, 132, 0.08);
-  box-shadow: var(--shadow-soft);
-  transition: background 0.35s ease, border-color 0.35s ease;
-}
-
-.paper-accordion-item.keyword-legend-wrap {
-  margin-top: 0;
-  padding: 0;
-  border-radius: 22px;
-  box-shadow: var(--shadow-soft);
-}
+/* Semua 50 halaman kini guna struktur accordion (.paper-accordion-item
+   .keyword-legend-wrap) — box/padding/border-radius/shadow diwarisi
+   penuh drpd .paper-accordion-item sedia ada (paper.css), jadi
+   .keyword-legend-wrap sendiri tak perlu rule box berasingan lagi.
+   Kekal sbg kelas penanda utk skop rule trigger padat di bawah. */
 
 /* Trigger padat KHUSUS legenda — padding lalai .paper-accordion-trigger
    (1rem, direka utk accordion kandungan besar spt "Faktor 1"/"Kuasa
