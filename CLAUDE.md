@@ -195,7 +195,7 @@ stabilisasi. Sebabnya: legenda selalu dekat bahagian atas hero (dlm
 pandangan sedia ada), skrol paksa jadi tak perlu & mengganggu.
 JANGAN buang semakan ni bila ubah handler accordion sejagat.
 
-## Swipe Nav — seret `<main>` ke subtopik sebelum/selepas (prototaip)
+## Swipe Nav — seret `<main>` ke subtopik sebelum/selepas
 
 `assets/js/main.js` (blok "SWIPE NAV") seret `main.note-reading-main`
 ikut jari secara langsung (`transform: translateX()`, 1:1, TIADA
@@ -233,9 +233,29 @@ toast, overlay) SENGAJA dilekap pd `document.body` terus (bukan dlm
 `<main>`** — kekalkan konvensyen `document.body.appendChild(...)` sedia
 ada, jika tidak berisiko hidupkan semula bug sejarah ni.
 
-Skop semasa: `bab-3-2.html` sahaja (prototaip, tunggu pengesahan
-pengguna sblm luaskan ke semua 44/45 halaman subtopik + nyahaktifkan
-zoom sejagat).
+**Skop: SEMUA halaman `notes/*.html` yg ada nav bawah** (subtopik +
+ringkasan bab) — swipe-nav TIDAK digerbangkan ikut fail/kelas body,
+cuma bergantung pd wujud `.note-subsection .hero-actions` dlm DOM,
+jadi automatik aktif di mana-mana pautan Kembali/Seterusnya wujud
+(main.js dikongsi semua halaman). `notes/index.html` (senarai bab,
+tiada `<main class="note-reading-main">`) & `quiz/*.html` (tiada
+`.note-subsection`) automatik TAK aktif.
+
+**Nyahaktif zoom (pinch + double-tap) TERIKAT kpd syarat aktif SAMA**
+(`document.body.style.touchAction = "pan-x pan-y"` + listener
+`gesturestart/change/end` — dua-dua ditulis DALAM blok IIFE swipe-nav,
+lepas confirm `prevHref`/`nextHref` wujud), BUKAN kelas body — cubaan
+awal guna rule CSS `body.note-reading-app:not(.quiz-page)` TERLEPAS
+halaman ringkasan bab (`body.bab-hub-page`, kelas body BERBEZA drpd
+halaman subtopik `body.note-reading-app`, walhal dua-dua ada nav bawah
+& patut nyahaktif zoom). **JANGAN kembali guna rule CSS berasaskan
+kelas body utk ni** — akan tak segerak semula drpd syarat sebenar bila
+struktur halaman berubah. Meta viewport (`maximum-scale=1.0,
+user-scalable=no`) turut ditambah pd semua halaman berkenaan sbg
+petunjuk sekunder (Android Chrome lama), tapi `touch-action` (CSS,
+via JS inline style) + `gesturestart` (JS, WebKit) ialah mekanisme
+SEBENAR — Safari iOS 10+ sengaja ABAIKAN atribut meta tu utk
+kebolehcapaian (a11y), jangan bergantung padanya sahaja.
 
 ## Aliran Kerja Versioning Aset (WAJIB lepas ubah CSS/JS/sw.js)
 

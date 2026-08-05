@@ -531,6 +531,16 @@ body.quiz-page.note-reading-app {
 
 /* Subtopic strip reader removed — normal document scroll on note pages */
 
+/* NOTA: Nyahaktif zoom (touch-action + gesturestart) diuruskan terus
+   dlm main.js (blok "SWIPE NAV"), TERIKAT kpd syarat aktif sebenar
+   ciri tu (.note-subsection .hero-actions wujud) — bukan kelas body
+   spt di sini, sbb halaman ringkasan bab (body.bab-hub-page) &
+   halaman subtopik (body.note-reading-app) DUA-DUA ada swipe-nav
+   tapi kelas body BERBEZA; rule berasaskan kelas body pernah tertinggal
+   halaman ringkasan bab drpd nyahaktif zoom (lihat CLAUDE.md
+   §"Swipe Nav"). JANGAN tambah rule touch-action berasingan di sini —
+   akan tak segerak drpd syarat sebenar ciri tu lagi. */
+
 body.app-shell-page .site-header,
 body.bab-hub-page .site-header,
 body.note-reading-app .site-header,
