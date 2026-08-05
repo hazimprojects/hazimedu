@@ -82,6 +82,31 @@ self-host lebih ringkas drpd urus rule cache tambahan dlm `sw.js`.
   Austria-Hungary — lihat bab-3-2.html) SENGAJA dilangkau buat masa
   ini — perlukan keputusan ketepatan sejarah, bukan padanan mekanikal.
 
+## Bug Chip Terputus Baris — combinator `.paper-chip-list .paper-chip`
+
+**Elak selector CSS bentuk `.paper-chip-list .paper-chip` (descendant,
+ruang kosong) — guna `.paper-chip-list > .paper-chip` (child, `>`).**
+
+Punca: `<span class="paper-chip bloc-chip-*">` (chip negara/blok PD1/
+PD2 dlm ayat, cth. `bab-3-2.html`–`bab-3-8.html`) selalu tersarang DUA
+lapis dlm `.paper-chip-list` (`.paper-chip-list > div.paper-chip.
+paper-chip-sentence > span.paper-chip.bloc-chip-axis`). Selector
+descendant `.paper-chip-list .paper-chip` (dlm `responsive.css`, mod
+mudah alih ≤760px) terkena BUKAN sahaja `div.paper-chip-sentence`
+(anak terus — betul, patut `display:block`) tapi JUGA `span.paper-chip`
+tersarang jauh di dlm ayat (salah — patut kekal `inline-block` ikut
+rule `span.paper-chip`). Sebab dua kelas (`.paper-chip-list .paper-chip`)
+kalahkan satu-kelas-satu-elemen (`span.paper-chip`) dlm spesifisiti CSS
+tanpa kira urutan fail, chip dlm ayat jadi block — sebab tu ayat macam
+"...ialah [Kuasa Paksi] dan [Kuasa Bersekutu]." pecah jadi setiap kata/
+chip/noktah baris berasingan pd skrin mudah alih.
+
+Dah dibetulkan (`.paper-chip-list > .paper-chip`, dsb.) — kekalkan
+combinator `>` tu bila sunting `responsive.css` seksyen chip-list.
+Kalau tambah selector `.paper-chip-list`-berkaitan baharu yg set
+`display`, SENTIASA guna `>` melainkan sengaja nak terkena keturunan
+jauh (jarang berlaku).
+
 ## Palet Kata Kunci — KANONIK, jangan tambah kelas baharu ikut bab
 
 Sistem warna kata kunci ialah janji kpd pembaca: **satu kelas = satu
