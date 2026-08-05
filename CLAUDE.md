@@ -345,6 +345,26 @@ ujian) ditemui semasa bina — disahkan via Playwright `.click()`
 tersembunyi drpd ujian sintetik awal). Klik-luar & Escape dah cukup
 utk tutup, tak perlukan scroll-close.
 
+**AWAS — kedudukan/lebar popover kena ukur via `offsetWidth`/
+`offsetHeight`, BUKAN `getBoundingClientRect()`.** Popover ada animasi
+masuk CSS (`kw-glossary-pop-in`, `scale(0.96)→scale(1)`) — panggilan
+`getBoundingClientRect()` sejurus lepas `appendChild` berlaku SEMASA
+animasi tu MASIH berjalan (transform belum sampai `scale(1)`), jadi
+lebar/tinggi yg diukur SEDIKIT terkurang drpd saiz sebenar akhir.
+Kiraan `maxLeft`/kedudukan tepi guna nilai "kurang tepat" tu punca
+BUG SEBENAR dilaporkan pengguna: popover nampak "terlalu lebar dan
+keluar dari kad utama" (bocor ke ruang kelabu sisi) — sbb kedudukan
+`left` dikira drpd lebar-semasa-animasi yg lebih kecil drpd lebar
+akhir, jadi selepas animasi selesai (kembali ke saiz penuh), tepi
+kanan popover melangkaui tepi kad. Fix: `el.offsetWidth`/
+`el.offsetHeight` (layout box, TAK terjejas `transform`) utk ukur
+saiz, `getBoundingClientRect()` kekal utk KEDUDUKAN pencetus (elemen
+biasa, tiada animasi). Popover juga kini clamp lebar/kedudukan kpd
+KAD INDUK (`.paper-board`/`.paper-flap-card`/`.cv-unit` via
+`.closest()`), bukan viewport penuh — sebelum ni `max-width:
+min(320px, 100vw-24px)` boleh jadi lebih lebar drpd kad yg
+mengandungi pencetus (terutama kad sempit di tengah senarai kad).
+
 `display:none` (bukan buang drpd DOM) SENGAJA — disahkan penjana PDF
 (`_bodyHtml` dlm main.js) berjalan berasaskan struktur DOM/kelas
 (`el.childNodes.forEach`), TIADA semakan `display`/visibility, jadi
