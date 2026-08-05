@@ -6,7 +6,7 @@
    - Same-origin non-document GET: cache-first
 */
 
-const CACHE = 'zym-v427';
+const CACHE = 'zym-v428';
 
 const PRECACHE_URLS = [
   '/',
@@ -35,7 +35,7 @@ const PRECACHE_URLS = [
   '/assets/css/fluent-shell-emoji.css?v=5',
   '/assets/css/bab-hub-fluent-3d.css?v=1',
   '/assets/css/shell-openmoji.css?v=13',
-  '/assets/js/main.js?v=327',
+  '/assets/js/main.js?v=328',
   '/assets/js/zh-mode.js?v=47',
   '/assets/js/subtopic-lab.js?v=7',
   '/data/zh-glossary.json',
@@ -162,6 +162,25 @@ self.addEventListener('fetch', function (e) {
   var isGoogleFonts = url.startsWith('https://fonts.googleapis.com/') ||
                       url.startsWith('https://fonts.gstatic.com/');
   if (isGoogleFonts) {
+    e.respondWith(
+      caches.match(e.request).then(function (cached) {
+        return cached || fetch(e.request).then(function (res) {
+          var clone = res.clone();
+          caches.open(CACHE).then(function (c) { c.put(e.request, clone); });
+          return res;
+        });
+      })
+    );
+    return;
+  }
+
+  // Cache emoji icon CDNs (jsdelivr fluentui-emoji, icons8) — cache-first.
+  // Notes render ~100+ decorative icons per page from these origins; without
+  // this, offline mode leaves every icon broken even though the HTML/CSS/JS
+  // shell is cached.
+  var isEmojiCdn = url.startsWith('https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji') ||
+                    url.startsWith('https://img.icons8.com/');
+  if (isEmojiCdn) {
     e.respondWith(
       caches.match(e.request).then(function (cached) {
         return cached || fetch(e.request).then(function (res) {
