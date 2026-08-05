@@ -1121,17 +1121,36 @@ document.addEventListener("DOMContentLoaded", function () {
       el.appendChild(body);
       document.body.appendChild(el);
 
+      // Kad induk (.paper-board / .paper-flap-card) — popover TAK
+      // boleh lebih lebar drpd kad ni, jika tidak ia "bocor" keluar
+      // drpd kad ke ruang kelabu di sisi (dilaporkan pengguna).
+      var card = trigger.closest(".paper-board, .paper-flap-card, .cv-unit");
+      var boundsLeft = 12;
+      var boundsRight = window.innerWidth - 12;
+      if (card) {
+        var cardRect = card.getBoundingClientRect();
+        boundsLeft = Math.max(boundsLeft, cardRect.left);
+        boundsRight = Math.min(boundsRight, cardRect.right);
+      }
+      el.style.maxWidth = Math.max(160, boundsRight - boundsLeft) + "px";
+
       var rect = trigger.getBoundingClientRect();
-      var popRect = el.getBoundingClientRect();
+      // offsetWidth/offsetHeight (bukan getBoundingClientRect) sbb
+      // popover ada animasi masuk CSS (scale 0.96→1) — rect terjejas
+      // transform semasa animasi tu MASIH berjalan pd saat ukur ni,
+      // beri lebar sedikit terkurang, punca sebenar bocor keluar kad
+      // (kiraan maxLeft/top guna lebar/tinggi "kurang tepat" tu).
+      var popWidth = el.offsetWidth;
+      var popHeight = el.offsetHeight;
 
       var left = rect.left;
-      var maxLeft = window.innerWidth - popRect.width - 12;
-      if (left > maxLeft) left = Math.max(12, maxLeft);
-      if (left < 12) left = 12;
+      var maxLeft = boundsRight - popWidth;
+      if (left > maxLeft) left = Math.max(boundsLeft, maxLeft);
+      if (left < boundsLeft) left = boundsLeft;
 
       var top = rect.bottom + 8;
-      if (top + popRect.height > window.innerHeight - 12) {
-        top = rect.top - popRect.height - 8;
+      if (top + popHeight > window.innerHeight - 12) {
+        top = rect.top - popHeight - 8;
       }
 
       el.style.left = left + "px";
@@ -5598,7 +5617,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=464').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=465').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
