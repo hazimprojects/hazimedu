@@ -13,9 +13,9 @@
   "icon_maskable_512": "3",
   "favicon_32": "3",
   "css": {
-    "base": "102",
+    "base": "103",
     "layout": "29",
-    "ui": "71",
+    "ui": "70",
     "paper": "24",
     "keywords": "48",
     "responsive": "14",
