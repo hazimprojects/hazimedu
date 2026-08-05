@@ -450,10 +450,17 @@
   /* ══════════════════════════════════════════════════
      KEYWORDS — penyerlah (warna + latar); kekalkan warna cetak
   ══════════════════════════════════════════════════ */
-  .kw-istilah, .kw-tokoh, .kw-tempat, .kw-tarikh,
-  .kw-kerajaan, .kw-masa, .kw-tahun, .kw-konsep,
-  .kw-perjanjian, .kw-peristiwa, .kw-gerakan,
-  .kw-pertubuhan, .kw-karya, .kw-pentadbiran {
+  .kw-tokoh,
+  .kw-masa,
+  .kw-tempat,
+  .kw-peristiwa,
+  .kw-pertubuhan,
+  .kw-gerakan,
+  .kw-kerajaan,
+  .kw-pentadbiran,
+  .kw-perjanjian,
+  .kw-istilah,
+  .kw-karya {
     font-weight: 700;
     text-decoration: none;
     -webkit-print-color-adjust: exact;

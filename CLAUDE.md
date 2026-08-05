@@ -50,6 +50,37 @@ sebelum imej load). `sw.js` cache ikon dari `cdn.jsdelivr.net` &
 supaya ikon still render dlm mod offline PWA — JANGAN buang rule ni
 tanpa gantikan strategi cache offline yg setara.
 
+## Palet Kata Kunci — KANONIK, jangan tambah kelas baharu ikut bab
+
+Sistem warna kata kunci ialah janji kpd pembaca: **satu kelas = satu
+makna = satu warna, sama pada SEMUA bab**. Dulu setiap bab cipta set
+sendiri (19 variasi legenda berbeza; `kw-tahun` vs `kw-masa` utk konsep
+sama) — ini sengaja dihapuskan. 11 kelas kanonik sahaja:
+
+`tokoh` · `masa` · `tempat` · `peristiwa` · `pertubuhan` · `gerakan` ·
+`kerajaan` · `pentadbiran` · `perjanjian` · `istilah` · `karya`
+
+- Label rasmi tiap kelas ada dlm `KEYWORD_LABELS`
+  (`scripts/html_generator.py`) — guna label tu, jangan karang sendiri.
+- JANGAN cipta kelas `kw-*` baharu utk bab tertentu. Kalau kandungan
+  baharu betul-betul tak muat mana-mana 11 ni, bincang dulu — menambah
+  warna ke-12 mengurangkan keupayaan pembaca bezakan yg sedia ada.
+- Kelas LAMA yg dah dimansuhkan (jangan hidupkan semula):
+  `kw-tahun`/`kw-tarikh` → guna `kw-masa`; `kw-konsep` → guna `kw-istilah`.
+- Warna ditakrif di **EMPAT** tempat yg mesti KEKAL SEGERAK:
+  `assets/css/keywords.css`, `assets/css/base.css` (salinan),
+  `assets/css/print.css` (senarai selektor), dan penjana PDF dlm
+  `assets/js/main.js` (kelas `zpkw-*` + regex `kw-(...)`).
+- Ketepuan/kecerahan latar SERAGAM (HSL L86/S85) — ini yg buat warna
+  boleh dibeza. Dulu alpha berbeza-beza (0.45–0.72) melunturkan latar
+  sampai ΔE 3 antara pasangan yg muncul serentak. Jangan ubah satu-satu.
+
+**Legenda dijana per halaman, ikut penggunaan SEBENAR** —
+`finalize_keyword_legend()` (`html_generator.py`) mengisi penanda
+`<!--KEYWORD_LEGEND-->` dgn HANYA jenis yg wujud pd halaman itu; kalau
+tiada langsung, legenda digugurkan. Jangan hardcode senarai legenda
+(dulu hardcoded 8 jenis → 68 entri "hantu" & 5 warna tanpa penjelasan).
+
 ## Aliran Kerja Versioning Aset (WAJIB lepas ubah CSS/JS/sw.js)
 
 Sumber kebenaran versi: `data/asset-versions.json`. Lepas ubah
