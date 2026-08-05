@@ -1067,6 +1067,111 @@ document.addEventListener("DOMContentLoaded", function () {
   })();
 
   // =========================
+  // GLOSARI POPOVER (prototaip) — kad "Glosari" penuh digantikan dgn
+  // popover kecil, dicetus drpd kemunculan PERTAMA istilah (ikut
+  // susunan dokumen) di luar kad glosari itu sendiri. Jika istilah tu
+  // tak muncul langsung di tempat lain (cth. "Enakmen" pd bab-3-2),
+  // kad asal dikekalkan tanpa transformasi — degradasi selamat.
+  // =========================
+  (function () {
+    var glossaryCards = document.querySelectorAll(".glossary-paper");
+    if (!glossaryCards.length) return;
+
+    var activePopover = null;
+
+    function closePopover() {
+      if (activePopover) {
+        activePopover.remove();
+        activePopover = null;
+      }
+      document.querySelectorAll(".kw-glossary-trigger.is-active").forEach(function (el) {
+        el.classList.remove("is-active");
+      });
+    }
+
+    function showPopover(trigger, defText) {
+      closePopover();
+      trigger.classList.add("is-active");
+
+      var el = document.createElement("div");
+      el.className = "kw-glossary-popover";
+      el.setAttribute("role", "tooltip");
+      el.textContent = defText;
+      document.body.appendChild(el);
+
+      var rect = trigger.getBoundingClientRect();
+      var popRect = el.getBoundingClientRect();
+
+      var left = rect.left;
+      var maxLeft = window.innerWidth - popRect.width - 12;
+      if (left > maxLeft) left = Math.max(12, maxLeft);
+      if (left < 12) left = 12;
+
+      var top = rect.bottom + 8;
+      if (top + popRect.height > window.innerHeight - 12) {
+        top = rect.top - popRect.height - 8;
+      }
+
+      el.style.left = left + "px";
+      el.style.top = (top + window.scrollY) + "px";
+
+      activePopover = el;
+    }
+
+    glossaryCards.forEach(function (card) {
+      var glossaryPara = card.querySelector(".point-line");
+      var termSpan = glossaryPara ? glossaryPara.querySelector(".kw") : null;
+      if (!glossaryPara || !termSpan) return;
+
+      var term = termSpan.textContent.trim().toLowerCase();
+      var defText = glossaryPara.textContent.trim();
+
+      var allKw = document.querySelectorAll(".kw");
+      var target = null;
+      for (var i = 0; i < allKw.length; i++) {
+        if (allKw[i].closest(".glossary-paper")) continue;
+        if (allKw[i].textContent.trim().toLowerCase() === term) {
+          target = allKw[i];
+          break;
+        }
+      }
+
+      if (!target) return; // tiada kemunculan lain — kekalkan kad asal
+
+      target.classList.add("kw-glossary-trigger");
+      target.setAttribute("tabindex", "0");
+      target.setAttribute("role", "button");
+      target.setAttribute("aria-label", "Lihat definisi: " + termSpan.textContent.trim());
+
+      target.addEventListener("click", function (ev) {
+        ev.stopPropagation();
+        if (target.classList.contains("is-active")) {
+          closePopover();
+        } else {
+          showPopover(target, defText);
+        }
+      });
+
+      target.addEventListener("keydown", function (ev) {
+        if (ev.key === "Enter" || ev.key === " ") {
+          ev.preventDefault();
+          target.click();
+        }
+      });
+
+      card.style.display = "none";
+    });
+
+    document.addEventListener("click", function (ev) {
+      if (activePopover && !activePopover.contains(ev.target)) closePopover();
+    });
+    document.addEventListener("keydown", function (ev) {
+      if (ev.key === "Escape") closePopover();
+    });
+    window.addEventListener("scroll", closePopover, { passive: true });
+  })();
+
+  // =========================
   // REVEAL ON SCROLL
   // =========================
   const revealElements = document.querySelectorAll(".reveal-on-scroll");
@@ -5402,7 +5507,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=456').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=457').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
