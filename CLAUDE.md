@@ -153,7 +153,7 @@ sama) — ini sengaja dihapuskan. 11 kelas kanonik sahaja:
 tiada langsung, legenda digugurkan. Jangan hardcode senarai legenda
 (dulu hardcoded 8 jenis → 68 entri "hantu" & 5 warna tanpa penjelasan).
 
-## Legenda Kata Kunci — Peralihan ke Struktur Accordion (Collapse Lalai)
+## Legenda Kata Kunci — Struktur Accordion (Collapse Lalai)
 
 Analisis ruang skrin (viewport mobile 390px) dedah hero setiap halaman
 subtopik makan **~936px SEBELUM nota sebenar** — lebih tinggi drpd satu
@@ -161,31 +161,28 @@ skrin penuh (844px). Penyumbang terbesar: legenda kata kunci (277px,
 sentiasa terbuka penuh) walaupun palet dah kanonik sejagat (pembaca
 kembali tak perlu baca semula tiap halaman).
 
-`finalize_keyword_legend()` (`html_generator.py`) kini jana legenda
-sbg **satu accordion item** (guna semula mekanisme `paper-accordion`
-sedia ada — bukan komponen togol baharu), **collapse lalai**. Jimat
-~150-175px setiap halaman yg ditukar.
+`finalize_keyword_legend()` (`html_generator.py`) jana legenda sbg
+**satu accordion item** (guna semula mekanisme `paper-accordion` sedia
+ada — bukan komponen togol baharu), **collapse lalai**:
+`.paper-accordion.keyword-legend-accordion > article.paper-accordion-
+item.keyword-legend-wrap > button.paper-accordion-trigger + div.
+paper-accordion-panel`. Jimat ~150-175px setiap halaman (+ ~26px
+tambahan drpd pemadatan trigger — lihat commit "padatkan trigger").
 
-**STATUS PERALIHAN — dua struktur wujud serentak:**
-- **(a) LAMA** — kad rata `<div class="keyword-legend-wrap"><p class=
-  "keyword-legend-title">...</p><div class="keyword-legend-grid">`.
-  Majoriti halaman (44 drpd 45) MASIH guna ni — belum ditukar.
-- **(b) BAHARU** — dibalut `.paper-accordion > .paper-accordion-item.
-  keyword-legend-wrap > button.paper-accordion-trigger + div.
-  paper-accordion-panel`. Baru `bab-3-2.html` (prototaip).
-
-CSS (`assets/css/keywords.css`) SENGAJA simpan KEDUA-DUA rule —
-`.keyword-legend-wrap` (padding/margin/border-radius penuh, utk (a))
-DAN `.paper-accordion-item.keyword-legend-wrap` (reset ke 0, warisi
-drpd kad accordion, utk (b), specificity 2-kelas menang). **JANGAN
-buang rule (a)** sehingga SEMUA 45 halaman ditukar ke (b) — buang
-awal akan pecahkan padding/bucu bulat/bayang pd halaman yg belum
-ditukar (pernah berlaku semasa prototaip ni, dibetulkan).
-
-Nak sambung tukar halaman lain: cari corak `<div class="keyword-
-legend-wrap">\n<p class="keyword-legend-title">Warna kata kunci</p>
-\n<div class="keyword-legend-grid">...` dan gantikan ikut struktur
-(b) — rujuk commit prototaip `bab-3-2.html` sbg contoh transform.
+**SEMUA 50 halaman `notes/*.html`** (+ kedua-dua `_templates/nota-
+bab.html` & `_templates/nota-subtopik.html`) kini guna struktur ni —
+migrasi drpd struktur lama (kad rata `<div class="keyword-legend-
+wrap"><p class="keyword-legend-title">...</p><div class="keyword-
+legend-grid">`) SIAP sepenuhnya (prototaip `bab-3-2.html` → 44
+halaman subtopik + 8 halaman ringkasan bab, PR susulan). CSS
+(`assets/css/keywords.css`) dah dibersihkan — rule box/padding/
+border-radius/shadow LAMA (khusus struktur rata) dibuang sepenuhnya
+sebab kini diwarisi terus drpd `.paper-accordion-item` (paper.css);
+`.keyword-legend-wrap` kekal sbg kelas penanda kosong utk skop rule
+trigger padat (`> .paper-accordion-trigger`) sahaja. Jika nampak
+struktur rata lama di mana-mana halaman baharu, itu regresi — tukar
+ikut struktur di atas (rujuk `notes/bab-1-1.html` atau `_templates/
+nota-subtopik.html` sbg contoh).
 
 ## Aliran Kerja Versioning Aset (WAJIB lepas ubah CSS/JS/sw.js)
 
