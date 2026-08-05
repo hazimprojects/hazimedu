@@ -75,12 +75,19 @@ self-host lebih ringkas drpd urus rule cache tambahan dlm `sw.js`.
 - **Hanya** ganti/tambah ikon pada chip yg teksnya **tepat** nama
   negara (cth. `Jerman`, bukan `Adolf Hitler – pemimpin Jerman`) — elak
   bendera muncul pada chip nama tokoh/ayat yg sekadar sebut negara.
-  Skop semasa: 21 negara (rujuk senarai kod ISO dlm `assets/flags/`)
-  merentas 12 halaman — bab-3-2, bab-3-3 s/d bab-3-8 (PD1/PD2),
-  bab-4-6, bab-5-2, bab-6-1, bab-6-3, bab-7-5. Entiti sejarah yg tak
-  sepadan bersih dgn negara moden (cth. Empayar Uthmaniyah,
-  Austria-Hungary — lihat bab-3-2.html) SENGAJA dilangkau buat masa
-  ini — perlukan keputusan ketepatan sejarah, bukan padanan mekanikal.
+  Skop semasa: 36 negara (rujuk senarai kod ISO dlm `assets/flags/`)
+  merentas 13 halaman — bab-3-2, bab-3-3 s/d bab-3-8 (PD1/PD2),
+  bab-4-6, bab-5-1, bab-5-2, bab-6-1, bab-6-3, bab-7-5. Entiti sejarah
+  yg SENGAJA dilangkau (bukan negara berdaulat moden yg bersih; perlu
+  keputusan ketepatan sejarah, bukan padanan mekanikal) — JANGAN tambah
+  bendera utk ni tanpa tanya user dulu:
+  - Czechoslovakia, Yugoslavia — dah pupus, >2 negara pengganti,
+    tiada 1 bendera "betul" (beza drpd Austria-Hungary yg guna 2
+    bendera sbg petunjuk — Czechoslovakia/Yugoslavia lagi teruk,
+    bukan 2 entiti asal yg jelas).
+  - Manchuria, Hong Kong — bukan negara berdaulat (negara boneka
+    Manchukuo & jajahan British), bendera akan mengelirukan makna
+    "bendera = negara berdaulat".
 
 ## Bug Chip Terputus Baris — combinator `.paper-chip-list .paper-chip`
 
