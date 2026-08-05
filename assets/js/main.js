@@ -892,25 +892,36 @@ document.addEventListener("DOMContentLoaded", function () {
     // Nyahaktif zoom TERIKAT terus kpd syarat aktif ciri ni (bukan
     // kelas body — halaman ringkasan bab & subtopik guna kelas body
     // BERBEZA, tapi dua-dua patut nyahaktif zoom sbb dua-dua ada
-    // swipe-nav; rujuk CLAUDE.md §"Swipe Nav"). touch-action ialah
-    // mekanisme utama (disokong meluas, TAK diabaikan spt meta
-    // viewport user-scalable=no oleh Safari iOS 10+ atas sebab
-    // kebolehcapaian); gesturestart/change/end ialah event proprietari
-    // WebKit tambahan utk Safari/WebKit lama yg belum sokong
-    // touch-action penuh.
+    // swipe-nav; rujuk CLAUDE.md §"Swipe Nav"). TIGA lapisan (setiap
+    // satu sasar isu pelayar/kes berbeza, gagal senyap kalau cuma
+    // satu dipakai — disahkan pengguna masih boleh pinch walau
+    // touch-action+gesturestart sahaja):
+    // (a) touch-action pd html & body — mekanisme CSS piawai, TAK
+    //     diabaikan spt meta viewport user-scalable=no (Safari iOS
+    //     10+ sengaja abaikan meta tu atas sebab kebolehcapaian).
+    // (b) gesturestart/change/end (event proprietari WebKit) —
+    //     tambahan Safari/WebKit lama yg belum sokong touch-action
+    //     penuh.
+    // (c) touchmove sejagat, preventDefault() bila >1 jari — teknik
+    //     JS PALING dipercayai merentas pelayar (Android Chrome DAN
+    //     iOS Safari), tak bergantung pd sokongan touch-action pelayar
+    //     langsung. Lapisan paling penting/robust drpd tiga-tiga ni.
+    document.documentElement.style.touchAction = "pan-x pan-y";
     document.body.style.touchAction = "pan-x pan-y";
     ["gesturestart", "gesturechange", "gestureend"].forEach(function (evtName) {
       document.addEventListener(evtName, function (ev) {
         ev.preventDefault();
       });
     });
+    document.addEventListener("touchmove", function (ev) {
+      if (ev.touches.length > 1) ev.preventDefault();
+    }, { passive: false });
 
     const AXIS_LOCK_DISTANCE = 8;
     const COMMIT_RATIO = 0.22; // % lebar viewport utk sah navigasi
     const FLICK_VELOCITY = 0.5; // px/ms — sentakan pantas walau jarak pendek
     const RESIST_FACTOR = 0.35; // seretan getah bila tiada halaman ke arah tu
     const SETTLE_MS = 260;
-    const INTERACTIVE_SELECTOR = "a, button, input, select, textarea, [role='button']";
 
     let phase = "idle"; // idle | pending | dragging | settling
     let startX = 0;
@@ -975,6 +986,17 @@ document.addEventListener("DOMContentLoaded", function () {
       phase = "idle";
     }
 
+    // TIADA pengecualian elemen interaktif (a/button/kad subtopik/
+    // pencetus accordion) di sini SENGAJA — halaman ringkasan bab
+    // (bab-N.html) hampir sepenuhnya kad & accordion, jadi
+    // pengecualian awal (INTERACTIVE_SELECTOR) sekat swipe bermula
+    // drpd mana-mana kawasan, buat ciri ni nyaris tak boleh guna di
+    // sana. Axis-lock (AXIS_LOCK_DISTANCE) + preventDefault() HANYA
+    // bila phase==="dragging" (bukan touchstart) dah cukup bezakan
+    // tap tulen (gerakan kecil, klik asli tetap jalan sbb
+    // preventDefault tak pernah dipanggil) drpd swipe sebenar (gerakan
+    // mendatar ketara, preventDefault sekat klik asli & navigasi guna
+    // logik seret sebaliknya).
     main.addEventListener("touchstart", function (ev) {
       if (phase === "settling") return;
       if (ev.touches.length !== 1) {
@@ -982,10 +1004,6 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
       const t = ev.touches[0];
-      if (t.target.closest && t.target.closest(INTERACTIVE_SELECTOR)) {
-        phase = "idle";
-        return;
-      }
       startX = t.clientX;
       startY = t.clientY;
       startTime = Date.now();
@@ -5384,7 +5402,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=453').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=454').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
