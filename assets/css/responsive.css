@@ -99,12 +99,16 @@
   }
 
   .paper-chip-list { gap: 0.62rem; }
-  .paper-chip-list .paper-chip { display: block; white-space: normal; }
-  .paper-chip-list .paper-chip:not(.paper-chip-sentence) { width: fit-content; min-width: 0; }
+  /* Combinator ">" (anak TERUS) sengaja digunakan drpd " " (keturunan) —
+     elak terkena span.paper-chip (kw/bloc-chip) yg tersarang di dlm ayat
+     .paper-chip-sentence, yg patut kekal inline-block (lihat CLAUDE.md
+     "Bug Chip Terputus Baris"). */
+  .paper-chip-list > .paper-chip { display: block; white-space: normal; }
+  .paper-chip-list > .paper-chip:not(.paper-chip-sentence) { width: fit-content; min-width: 0; }
 
   .paper-chip-sentence,
   .paper-chip.paper-chip-sentence,
-  .paper-chip-list .paper-chip.paper-chip-sentence {
+  .paper-chip-list > .paper-chip.paper-chip-sentence {
     display: block; width: 100%; max-width: 100%; flex: none;
   }
 
