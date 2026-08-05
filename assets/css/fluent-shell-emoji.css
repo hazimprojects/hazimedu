@@ -1,6 +1,18 @@
 /* Microsoft Fluent UI Emoji (3D PNG) — shell + bab induk + sparkle UI
    Sumber: https://github.com/microsoft/fluentui-emoji (MIT) — aset dihos melalui jsDelivr */
 
+/* PROTOTAIP — bendera bulat negara (bloc-chip PD2, bab-3-3 sahaja buat masa ini)
+   Sumber: https://github.com/HatScripts/circle-flags (MIT) — SVG, tiada atribusi wajib.
+   Ring nipis + shadow lembut supaya nampak macam lencana, selaras estetika 3D emoji sekeliling. */
+.flag-icon {
+  border-radius: 50%;
+  box-shadow: 0 0 0 1.5px rgba(255, 255, 255, 0.9), 0 1px 3px rgba(15, 23, 42, 0.25);
+}
+
+[data-theme="dark"] .flag-icon {
+  box-shadow: 0 0 0 1.5px rgba(15, 23, 42, 0.65), 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
 .fluent-3d-emoji {
   display: inline-block;
   vertical-align: -0.18em;

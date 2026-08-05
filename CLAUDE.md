@@ -50,6 +50,34 @@ sebelum imej load). `sw.js` cache ikon dari `cdn.jsdelivr.net` &
 supaya ikon still render dlm mod offline PWA — JANGAN buang rule ni
 tanpa gantikan strategi cache offline yg setara.
 
+## Bendera Negara — self-hosted (`assets/flags/`), BUKAN CDN luar
+
+Fluent Emoji (pembekal ikon utama) sengaja TIADA bendera negara (isu
+neutraliti politik Microsoft). Pembekal rasmi bendera ZymNotes ialah
+**`circle-flags`** (github.com/HatScripts/circle-flags, MIT, SVG bulat
+minimal) — dipilih drpd Icons8 sbb Icons8 wajib pautan-balik atribusi
+utk tier percuma, `circle-flags` tidak. Beza drpd ikon emoji: bendera
+**di-self-host** dlm `assets/flags/<kod-iso2>.svg` (cth. `de.svg`,
+`jp.svg`), BUKAN dirujuk terus dari CDN luar — sebab (1) sandbox/
+rangkaian tertentu boleh sekat domain CDN baharu yg belum "dipercayai",
+(2) elak ulang isu offline-cache yg pernah timbul dgn ikon emoji CDN,
+(3) set yg diperlukan kecil & tetap (bukan >400 bendera penuh), jadi
+self-host lebih ringkas drpd urus rule cache tambahan dlm `sw.js`.
+
+- Tambah bendera baharu: salin fail SVG relevan dari repo
+  `circle-flags` (`flags/<kod>.svg`) ke `assets/flags/`, KEKALKAN
+  `assets/flags/LICENSE.md` (keperluan MIT — teks lesen mesti disertakan
+  bersama salinan).
+- Kelas CSS `.flag-icon` (dlm `assets/css/fluent-shell-emoji.css`)
+  tambah ring putih/gelap + shadow supaya nampak macam lencana,
+  digunakan BERSAMA `fluent-3d-emoji openmoji--inline` (bukan ganti) —
+  kekalkan kedua-dua kelas bila tambah bendera baharu.
+- **Hanya** ganti/tambah ikon pada chip yg teksnya **tepat** nama
+  negara (cth. `Jerman`, bukan `Adolf Hitler – pemimpin Jerman`) — elak
+  bendera muncul pada chip nama tokoh/ayat yg sekadar sebut negara.
+  Skop semasa (bab-3-3.html sahaja, PD2 Eropah): 19 negara — rujuk
+  senarai kod ISO dlm `assets/flags/`. BELUM digunakan pd bab lain.
+
 ## Palet Kata Kunci — KANONIK, jangan tambah kelas baharu ikut bab
 
 Sistem warna kata kunci ialah janji kpd pembaca: **satu kelas = satu
