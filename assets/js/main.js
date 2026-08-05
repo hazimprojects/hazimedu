@@ -1118,36 +1118,42 @@ document.addEventListener("DOMContentLoaded", function () {
       activePopover = el;
     }
 
-    glossaryCards.forEach(function (card) {
-      var glossaryPara = card.querySelector(".point-line");
-      var termSpan = glossaryPara ? glossaryPara.querySelector(".kw") : null;
-      if (!glossaryPara || !termSpan) return;
+    // Bungkus SEBAHAGIAN teks node (bukan .kw) dgn span pencetus baharu
+    // — utk tajuk seksyen (.paper-strip.strip-sub) yg mengandungi
+    // istilah sbg SEBAHAGIAN teks tajuk (cth. "A. Persaingan Kuasa
+    // Imperialis"), bukan span .kw berasingan.
+    function wrapTermInHeading(headingEl, term) {
+      var nodes = headingEl.childNodes;
+      for (var i = 0; i < nodes.length; i++) {
+        var node = nodes[i];
+        if (node.nodeType !== 3) continue; // teks sahaja
+        var idx = node.textContent.toLowerCase().indexOf(term);
+        if (idx === -1) continue;
 
-      var term = termSpan.textContent.trim().toLowerCase();
-      var defText = glossaryPara.textContent.trim();
+        var before = node.textContent.slice(0, idx);
+        var match = node.textContent.slice(idx, idx + term.length);
+        var after = node.textContent.slice(idx + term.length);
 
-      var allKw = document.querySelectorAll(".kw");
-      var target = null;
-      for (var i = 0; i < allKw.length; i++) {
-        // Langkau kemunculan dlm kad glosari sendiri, intro (.lead)
-        // & ringkasan (.master-summary-paper — meliputi DUA-DUA
-        // "Ringkasan X.X" & "Rumusan Besar Bab N", sama kelas) — arah
-        // pengguna: istilah pertama TAK termasuk kemunculan di bahagian
-        // ni, sbb pembaca lazimnya balik baca ringkasan berulang kali,
-        // trigger di situ kurang berguna drpd dlm kandungan penuh.
-        if (allKw[i].closest(".glossary-paper, .lead, .master-summary-paper")) continue;
-        if (allKw[i].textContent.trim().toLowerCase() === term) {
-          target = allKw[i];
-          break;
-        }
+        var span = document.createElement("span");
+        span.className = "kw-glossary-trigger";
+        span.textContent = match;
+
+        var frag = document.createDocumentFragment();
+        if (before) frag.appendChild(document.createTextNode(before));
+        frag.appendChild(span);
+        if (after) frag.appendChild(document.createTextNode(after));
+
+        node.parentNode.replaceChild(frag, node);
+        return span;
       }
+      return null;
+    }
 
-      if (!target) return; // tiada kemunculan lain — kekalkan kad asal
-
+    function activateTrigger(target, label, defText) {
       target.classList.add("kw-glossary-trigger");
       target.setAttribute("tabindex", "0");
       target.setAttribute("role", "button");
-      target.setAttribute("aria-label", "Lihat definisi: " + termSpan.textContent.trim());
+      target.setAttribute("aria-label", "Lihat definisi: " + label);
 
       target.addEventListener("click", function (ev) {
         ev.stopPropagation();
@@ -1164,7 +1170,57 @@ document.addEventListener("DOMContentLoaded", function () {
           target.click();
         }
       });
+    }
 
+    glossaryCards.forEach(function (card) {
+      var glossaryPara = card.querySelector(".point-line");
+      var termSpan = glossaryPara ? glossaryPara.querySelector(".kw") : null;
+      if (!glossaryPara || !termSpan) return;
+
+      var termLabel = termSpan.textContent.trim();
+      var term = termLabel.toLowerCase();
+      var defText = glossaryPara.textContent.trim();
+
+      // Calon disatukan dlm SATU senarai tersusun ikut susunan dokumen
+      // (querySelectorAll jamin susunan dokumen walau selector gabungan)
+      // — span .kw (padanan TEPAT) & tajuk seksyen .paper-strip.strip-sub
+      // (padanan SEBAHAGIAN teks, cth. istilah dlm "A. Persaingan Kuasa
+      // Imperialis") — mana yg jumpa dulu ikut dokumen, itu yg menang.
+      var candidates = document.querySelectorAll(".kw, .paper-strip.strip-sub");
+      var target = null;
+      var isHeading = false;
+      for (var i = 0; i < candidates.length; i++) {
+        var el = candidates[i];
+        // Langkau kemunculan dlm kad glosari sendiri, intro (.lead) &
+        // ringkasan (.master-summary-paper — meliputi DUA-DUA
+        // "Ringkasan X.X" & "Rumusan Besar Bab N", sama kelas) — arah
+        // pengguna: istilah pertama TAK termasuk kemunculan di bahagian
+        // ni, sbb pembaca lazimnya balik baca ringkasan berulang kali,
+        // trigger di situ kurang berguna drpd dlm kandungan penuh.
+        if (el.closest(".glossary-paper, .lead, .master-summary-paper")) continue;
+
+        if (el.classList.contains("kw")) {
+          if (el.textContent.trim().toLowerCase() === term) {
+            target = el;
+            isHeading = false;
+            break;
+          }
+        } else if (el.textContent.toLowerCase().indexOf(term) !== -1) {
+          target = el;
+          isHeading = true;
+          break;
+        }
+      }
+
+      if (!target) return; // tiada kemunculan lain — kekalkan kad asal
+
+      if (isHeading) {
+        var wrapped = wrapTermInHeading(target, term);
+        if (!wrapped) return; // sepatutnya tak berlaku (dah sah indexOf di atas), tapi degradasi selamat
+        target = wrapped;
+      }
+
+      activateTrigger(target, termLabel, defText);
       card.style.display = "none";
     });
 
@@ -5520,7 +5576,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=459').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=460').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
