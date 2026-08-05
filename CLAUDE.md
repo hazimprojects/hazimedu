@@ -75,8 +75,12 @@ self-host lebih ringkas drpd urus rule cache tambahan dlm `sw.js`.
 - **Hanya** ganti/tambah ikon pada chip yg teksnya **tepat** nama
   negara (cth. `Jerman`, bukan `Adolf Hitler – pemimpin Jerman`) — elak
   bendera muncul pada chip nama tokoh/ayat yg sekadar sebut negara.
-  Skop semasa (bab-3-3.html sahaja, PD2 Eropah): 19 negara — rujuk
-  senarai kod ISO dlm `assets/flags/`. BELUM digunakan pd bab lain.
+  Skop semasa: 21 negara (rujuk senarai kod ISO dlm `assets/flags/`)
+  merentas 12 halaman — bab-3-2, bab-3-3 s/d bab-3-8 (PD1/PD2),
+  bab-4-6, bab-5-2, bab-6-1, bab-6-3, bab-7-5. Entiti sejarah yg tak
+  sepadan bersih dgn negara moden (cth. Empayar Uthmaniyah,
+  Austria-Hungary — lihat bab-3-2.html) SENGAJA dilangkau buat masa
+  ini — perlukan keputusan ketepatan sejarah, bukan padanan mekanikal.
 
 ## Palet Kata Kunci — KANONIK, jangan tambah kelas baharu ikut bab
 
