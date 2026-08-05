@@ -889,6 +889,22 @@ document.addEventListener("DOMContentLoaded", function () {
     const nextHref = nextLink ? nextLink.getAttribute("href") : null;
     if (!prevHref && !nextHref) return;
 
+    // Nyahaktif zoom TERIKAT terus kpd syarat aktif ciri ni (bukan
+    // kelas body — halaman ringkasan bab & subtopik guna kelas body
+    // BERBEZA, tapi dua-dua patut nyahaktif zoom sbb dua-dua ada
+    // swipe-nav; rujuk CLAUDE.md §"Swipe Nav"). touch-action ialah
+    // mekanisme utama (disokong meluas, TAK diabaikan spt meta
+    // viewport user-scalable=no oleh Safari iOS 10+ atas sebab
+    // kebolehcapaian); gesturestart/change/end ialah event proprietari
+    // WebKit tambahan utk Safari/WebKit lama yg belum sokong
+    // touch-action penuh.
+    document.body.style.touchAction = "pan-x pan-y";
+    ["gesturestart", "gesturechange", "gestureend"].forEach(function (evtName) {
+      document.addEventListener(evtName, function (ev) {
+        ev.preventDefault();
+      });
+    });
+
     const AXIS_LOCK_DISTANCE = 8;
     const COMMIT_RATIO = 0.22; // % lebar viewport utk sah navigasi
     const FLICK_VELOCITY = 0.5; // px/ms — sentakan pantas walau jarak pendek
@@ -5414,7 +5430,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=449').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=450').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
