@@ -862,11 +862,19 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("resize", refreshOpenAccordions);
 
   // =========================
-  // SWIPE NAV — swipe kiri/kanan ke subtopik sebelum/selepas
-  // (guna pautan sedia ada dlm .note-subsection .hero-actions di
+  // SWIPE NAV — seret <main> ikut jari ke subtopik sebelum/selepas
+  // (diinspirasi carousel scroll-snap idariq-system App.jsx — drag
+  // ikut jari secara berterusan, snap/commit lepas lepas jari, BUKAN
+  // klik/swipe pantas sekali sahaja. Beza drpd idariq-system: di sini
+  // TIADA carousel track sebenar (setiap subtopik fail HTML berasingan,
+  // bukan pane dlm satu SPA) — jadi hanya <main> semasa yg diseret
+  // (transform), tiada pratonton kandungan sebenar halaman sebelah;
+  // lepas commit, navigasi penuh (window.location.href) spt biasa.
+  // Guna pautan sedia ada dlm .note-subsection .hero-actions di
   // bahagian bawah halaman — btn-secondary = sebelum, btn-primary =
-  // selepas. Tiada anchor drpd tepi skrin diperlukan (elak konflik
-  // gerak isyarat "swipe balik" native Safari/Android).)
+  // selepas. Paksi dikunci lepas ~8px gerakan (axis-lock) supaya
+  // scroll menegak biasa tak terjejas — hanya seret mendatar ketara
+  // panggil preventDefault(); seret menegak terus biar scroll asli.
   // =========================
   (function () {
     const main = document.querySelector("main.note-reading-main");
@@ -881,9 +889,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const nextHref = nextLink ? nextLink.getAttribute("href") : null;
     if (!prevHref && !nextHref) return;
 
-    const MIN_DISTANCE = 70;
-    const MAX_VERTICAL_RATIO = 0.5;
-    const MAX_DURATION = 700;
+    const AXIS_LOCK_DISTANCE = 8;
+    const COMMIT_RATIO = 0.22; // % lebar viewport utk sah navigasi
+    const FLICK_VELOCITY = 0.5; // px/ms — sentakan pantas walau jarak pendek
+    const RESIST_FACTOR = 0.35; // seretan getah bila tiada halaman ke arah tu
+    const SETTLE_MS = 260;
     const INTERACTIVE_SELECTOR = "a, button, input, select, textarea, [role='button']";
 
     function buildArrow(side) {
@@ -898,62 +908,173 @@ document.addEventListener("DOMContentLoaded", function () {
     const arrowLeft = prevHref ? buildArrow("left") : null;
     const arrowRight = nextHref ? buildArrow("right") : null;
 
-    function flashArrow(side) {
+    function setArrowProgress(side, progress) {
       const el = side === "left" ? arrowLeft : arrowRight;
       if (!el) return;
-      el.classList.add("is-visible");
-      setTimeout(function () {
-        el.classList.remove("is-visible");
-      }, 500);
+      el.classList.remove("is-settling");
+      const p = Math.max(0, Math.min(1, progress));
+      if (p <= 0.02) {
+        el.style.opacity = "";
+        el.style.transform = "";
+        return;
+      }
+      el.style.opacity = String(p);
+      el.style.transform = "translateY(-50%) scale(" + (0.8 + 0.2 * p).toFixed(3) + ")";
     }
 
-    let startX = null;
-    let startY = null;
-    let startTime = null;
-    let tracking = false;
+    function clearArrows() {
+      [arrowLeft, arrowRight].forEach(function (el) {
+        if (!el) return;
+        el.classList.add("is-settling");
+        el.style.opacity = "";
+        el.style.transform = "";
+        setTimeout(function () {
+          el.classList.remove("is-settling");
+        }, 220);
+      });
+    }
+
+    let phase = "idle"; // idle | pending | dragging | settling
+    let startX = 0;
+    let startY = 0;
+    let startTime = 0;
+    let lastDeltaX = 0;
+
+    // Tulisan transform terus (tanpa balut requestAnimationFrame) —
+    // hanya SATU tulisan gaya (translateX), tiada bacaan layout
+    // bersisipan, jadi tiada risiko "layout thrashing" utk dielakkan.
+    // Pembalut rAF sebenarnya BOLEH cetus race: touchmove seterusnya
+    // boleh batal rAF tertunda sebelum sempat render langsung (disahkan
+    // via ujian Playwright — transform kekal kosong walau seret jauh).
+    function applyTransform(dx) {
+      main.style.transform = "translateX(" + dx + "px)";
+      const commitDist = window.innerWidth * COMMIT_RATIO;
+      if (dx > 0) {
+        main.style.opacity = String(1 - Math.min(0.4, (dx / commitDist) * 0.4));
+        setArrowProgress("left", dx / commitDist);
+        setArrowProgress("right", 0);
+      } else if (dx < 0) {
+        main.style.opacity = String(1 - Math.min(0.4, (-dx / commitDist) * 0.4));
+        setArrowProgress("right", -dx / commitDist);
+        setArrowProgress("left", 0);
+      } else {
+        main.style.opacity = "1";
+        clearArrows();
+      }
+    }
+
+    function beginDrag() {
+      phase = "dragging";
+      document.documentElement.classList.add("hz-swipe-dragging");
+      main.classList.add("swipe-animating");
+      // .js-enhanced main { animation: hz-page-in ... both; } (base.css) kekal
+      // "pegang" transform (animation menang drpd inline style dlm cascade CSS
+      // walau lepas animasi tamat, sbb fill-mode:both). Lumpuhkan animation
+      // di sini (sekali sahaja, kekal sepanjang hayat halaman) supaya transform
+      // inline drag boleh berkuat kuasa.
+      main.style.animation = "none";
+      main.style.transition = "none";
+    }
+
+    function settleBack() {
+      phase = "settling";
+      main.style.transition = "transform " + SETTLE_MS + "ms cubic-bezier(0.22, 1, 0.36, 1), opacity " + SETTLE_MS + "ms ease";
+      main.style.transform = "translateX(0px)";
+      main.style.opacity = "1";
+      clearArrows();
+      setTimeout(cleanupAfterSettle, SETTLE_MS + 40);
+    }
+
+    function commitTo(href) {
+      phase = "settling";
+      const offscreen = href === prevHref ? window.innerWidth : -window.innerWidth;
+      main.style.transition = "transform " + SETTLE_MS + "ms cubic-bezier(0.4, 0, 1, 1), opacity " + SETTLE_MS + "ms ease";
+      main.style.transform = "translateX(" + offscreen + "px)";
+      main.style.opacity = "0";
+      setTimeout(function () {
+        window.location.href = href;
+      }, SETTLE_MS);
+    }
+
+    function cleanupAfterSettle() {
+      document.documentElement.classList.remove("hz-swipe-dragging");
+      main.classList.remove("swipe-animating");
+      main.style.transition = "";
+      main.style.transform = "";
+      main.style.opacity = "";
+      phase = "idle";
+    }
 
     main.addEventListener("touchstart", function (ev) {
+      if (phase === "settling") return;
       if (ev.touches.length !== 1) {
-        tracking = false;
+        phase = "idle";
         return;
       }
       const t = ev.touches[0];
       if (t.target.closest && t.target.closest(INTERACTIVE_SELECTOR)) {
-        tracking = false;
+        phase = "idle";
         return;
       }
       startX = t.clientX;
       startY = t.clientY;
       startTime = Date.now();
-      tracking = true;
+      lastDeltaX = 0;
+      phase = "pending";
     }, { passive: true });
 
-    main.addEventListener("touchend", function (ev) {
-      if (!tracking || startX === null) return;
-      tracking = false;
-
-      const t = ev.changedTouches[0];
+    main.addEventListener("touchmove", function (ev) {
+      if (phase === "idle" || phase === "settling") return;
+      const t = ev.touches[0];
       const deltaX = t.clientX - startX;
       const deltaY = t.clientY - startY;
-      const duration = Date.now() - startTime;
-      startX = null;
 
-      if (duration > MAX_DURATION) return;
-      if (Math.abs(deltaX) < MIN_DISTANCE) return;
-      if (Math.abs(deltaY) > Math.abs(deltaX) * MAX_VERTICAL_RATIO) return;
-
-      if (deltaX > 0 && prevHref) {
-        flashArrow("left");
-        setTimeout(function () { window.location.href = prevHref; }, 150);
-      } else if (deltaX < 0 && nextHref) {
-        flashArrow("right");
-        setTimeout(function () { window.location.href = nextHref; }, 150);
+      if (phase === "pending") {
+        if (Math.abs(deltaX) < AXIS_LOCK_DISTANCE && Math.abs(deltaY) < AXIS_LOCK_DISTANCE) return;
+        if (Math.abs(deltaX) <= Math.abs(deltaY)) {
+          phase = "idle"; // gerakan menegak — biar scroll asli, jangan campur tangan
+          return;
+        }
+        beginDrag();
       }
-    }, { passive: true });
 
+      if (phase !== "dragging") return;
+      ev.preventDefault();
+
+      let dx = deltaX;
+      if (dx > 0 && !prevHref) dx *= RESIST_FACTOR;
+      if (dx < 0 && !nextHref) dx *= RESIST_FACTOR;
+      lastDeltaX = dx;
+      applyTransform(dx);
+    }, { passive: false });
+
+    function finishGesture() {
+      if (phase !== "dragging") {
+        phase = "idle";
+        return;
+      }
+      const duration = Math.max(1, Date.now() - startTime);
+      const velocity = lastDeltaX / duration;
+      const commitDist = window.innerWidth * COMMIT_RATIO;
+      const pastDistance = Math.abs(lastDeltaX) >= commitDist;
+      const pastVelocity = Math.abs(velocity) >= FLICK_VELOCITY;
+
+      if (lastDeltaX > 0 && prevHref && (pastDistance || pastVelocity)) {
+        commitTo(prevHref);
+      } else if (lastDeltaX < 0 && nextHref && (pastDistance || pastVelocity)) {
+        commitTo(nextHref);
+      } else {
+        settleBack();
+      }
+    }
+
+    main.addEventListener("touchend", finishGesture, { passive: true });
     main.addEventListener("touchcancel", function () {
-      tracking = false;
-      startX = null;
+      if (phase === "dragging") {
+        settleBack();
+      } else {
+        phase = "idle";
+      }
     }, { passive: true });
   })();
 
@@ -5293,7 +5414,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=447').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=448').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });

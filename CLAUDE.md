@@ -195,6 +195,48 @@ stabilisasi. Sebabnya: legenda selalu dekat bahagian atas hero (dlm
 pandangan sedia ada), skrol paksa jadi tak perlu & mengganggu.
 JANGAN buang semakan ni bila ubah handler accordion sejagat.
 
+## Swipe Nav — seret `<main>` ke subtopik sebelum/selepas (prototaip)
+
+`assets/js/main.js` (blok "SWIPE NAV") seret `main.note-reading-main`
+ikut jari secara langsung (`transform: translateX()`, 1:1, TIADA
+`requestAnimationFrame` — pembalut rAF pernah cuba tapi cetus race:
+touchmove seterusnya boleh batal rAF tertunda sebelum sempat render,
+transform kekal `0px` walau dah seret jauh, disahkan via ujian
+Playwright) semasa gerak isyarat aktif, snap/navigasi lepas lepas jari
+— diinspirasi carousel scroll-snap `idariq-system/src/App.jsx`, tapi
+diselaraskan utk ZymNotes: setiap subtopik fail HTML BERASINGAN
+(bukan pane SPA), jadi tiada carousel track/pratonton sebenar — hanya
+`<main>` semasa diseret, lepas commit terus `window.location.href`.
+
+**AWAS — `.js-enhanced main { animation: hz-page-in ... both; }`
+(base.css) "pegang" `transform` scr kekal** (animation menang drpd
+inline style dlm cascade CSS, walau lepas animasi tamat, sbb
+`fill-mode: both`) — `beginDrag()` MESTI set `main.style.animation =
+"none"` sebelum cuba tulis `transform` inline, jika tidak seretan
+takkan kelihatan langsung (transform inline "kalah" senyap, tiada
+ralat console). Ni PUNCA SEBENAR bug awal semasa bina ciri ni (bukan
+isu rAF/timing spt disyaki mula-mula).
+
+**AWAS — sejarah `layout.css` catat**: "Page transition animation
+removed — it caused stacking context / compositing bugs on mobile
+that broke accordion panel rendering." (komen baris 1, sejak fail ni
+dipisah PR #507). Animasi transisi HALAMAN PENUH (site-wide, setiap
+navigasi) yg dimaksudkan tu BEZA skop drpd ciri swipe ni (transform
+hanya aktif SEMENTARA drpd gerak isyarat, bukan kekal), tapi mekanisme
+risiko SAMA (transform pd `<main>` cipta stacking context baharu utk
+semua descendant, boleh pecahkan `position: fixed` bersarang/
+z-index). Disahkan (Playwright, seret aktif + settle-back +
+functional re-check) TIADA kerosakan render accordion setakat ni —
+sebabnya semua UI `position: fixed` (FAB sparkle, sheet tetapan,
+toast, overlay) SENGAJA dilekap pd `document.body` terus (bukan dlm
+`<main>`), bukan kebetulan. **JANGAN lekap UI fixed baharu dlm
+`<main>`** — kekalkan konvensyen `document.body.appendChild(...)` sedia
+ada, jika tidak berisiko hidupkan semula bug sejarah ni.
+
+Skop semasa: `bab-3-2.html` sahaja (prototaip, tunggu pengesahan
+pengguna sblm luaskan ke semua 44/45 halaman subtopik + nyahaktifkan
+zoom sejagat).
+
 ## Aliran Kerja Versioning Aset (WAJIB lepas ubah CSS/JS/sw.js)
 
 Sumber kebenaran versi: `data/asset-versions.json`. Lepas ubah
