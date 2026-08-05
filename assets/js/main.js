@@ -2883,7 +2883,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       var h = node.getAttribute('height') || (node.height ? String(node.height) : '20');
       return '<img class="zp-emoji" src="' + _escPdfAttr(src) + '" alt="" width="' + _escPdfAttr(String(w)) + '" height="' + _escPdfAttr(String(h)) + '" decoding="async" />';
     }
-    var m = (node.className || '').match(/\bkw-(istilah|tempat|tokoh|masa|tahun|konsep|kerajaan|pentadbiran|perjanjian|peristiwa|gerakan|pertubuhan|karya|tarikh)\b/);
+    var m = (node.className || '').match(/\bkw-(tokoh|masa|tempat|peristiwa|pertubuhan|gerakan|kerajaan|pentadbiran|perjanjian|istilah|karya)\b/);
     if (m) return '<span class="zpkw zpkw-' + m[1] + '">' + _escPdfHtml(node.textContent) + '</span>';
     return _kwHtml(node, { freeze: !!o.freeze });
   }
@@ -3265,20 +3265,17 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       '#zym-pr p.zp-sentence{font-size:12.5px;color:#3a3a5a;margin:5px 0;padding:6px 11px;border-left:3px solid #c7d2fe;line-height:1.55}',
       // Kata kunci — penyerlah: inline-block + translateY supaya latar selari Fredoka/html2canvas
       '#zym-pr .zpkw{display:inline-block;vertical-align:text-bottom;line-height:1.1;padding:0.05em 0.26em 0.09em;margin:0;border-radius:0.35em;font-size:inherit;font-weight:700;transform:translateY(0.11em);-webkit-box-decoration-break:clone;box-decoration-break:clone;-webkit-print-color-adjust:exact;print-color-adjust:exact}',
-      '#zym-pr .zpkw-tokoh{color:#7f1d1d;background:rgba(254,202,211,0.62)}',
-      '#zym-pr .zpkw-masa{color:#1e3a8a;background:rgba(191,219,254,0.62)}',
-      '#zym-pr .zpkw-tahun{color:#0c4a6e;background:rgba(125,211,252,0.45)}',
-      '#zym-pr .zpkw-tempat{color:#14532d;background:rgba(187,247,208,0.62)}',
-      '#zym-pr .zpkw-konsep{color:#7c2d12;background:rgba(254,215,170,0.62)}',
-      '#zym-pr .zpkw-kerajaan{color:#4c1d95;background:rgba(221,214,254,0.62)}',
-      '#zym-pr .zpkw-istilah{color:#115e59;background:rgba(153,246,228,0.55)}',
-      '#zym-pr .zpkw-pentadbiran{color:#78350f;background:rgba(254,243,199,0.72)}',
-      '#zym-pr .zpkw-perjanjian{color:#831843;background:rgba(251,207,232,0.62)}',
-      '#zym-pr .zpkw-peristiwa{color:#713f12;background:rgba(254,249,195,0.65)}',
-      '#zym-pr .zpkw-gerakan{color:#581c87;background:rgba(233,213,255,0.58)}',
-      '#zym-pr .zpkw-pertubuhan{color:#312e81;background:rgba(199,210,254,0.62)}',
-      '#zym-pr .zpkw-karya{color:#0e7490;background:rgba(165,243,252,0.55)}',
-      '#zym-pr .zpkw-tarikh{color:#1e3a8a;background:rgba(191,219,254,0.55)}',
+      '#zym-pr .zpkw-tokoh{color:#731b25;background:#f9bcc4}',
+      '#zym-pr .zpkw-masa{color:#1b3573;background:#bccff9}',
+      '#zym-pr .zpkw-tempat{color:#1b7338;background:#bcf9d1}',
+      '#zym-pr .zpkw-peristiwa{color:#735f1b;background:#f9ebbc}',
+      '#zym-pr .zpkw-pertubuhan{color:#1e1b73;background:#bebcf9}',
+      '#zym-pr .zpkw-gerakan{color:#531b73;background:#e3bcf9}',
+      '#zym-pr .zpkw-kerajaan{color:#3b1b73;background:#d3bcf9}',
+      '#zym-pr .zpkw-pentadbiran{color:#73411b;background:#f9d7bc}',
+      '#zym-pr .zpkw-perjanjian{color:#731b4a;background:#f9bcdd}',
+      '#zym-pr .zpkw-istilah{color:#1b736d;background:#bcf9f5}',
+      '#zym-pr .zpkw-karya{color:#1b5c73;background:#bce9f9}',
       // Saiz 1em; imej duduk sedikit lebih rendah berbanding rentak teks yang dibungkus .zp-txt-up
       '#zym-pr .zp-emoji{display:inline-block;width:1em;height:1em;vertical-align:middle;margin:0 .24em 0 0;object-fit:contain;flex-shrink:0;line-height:1;position:relative;top:0.06em}',
     ];
@@ -5189,7 +5186,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=430').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=431').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });

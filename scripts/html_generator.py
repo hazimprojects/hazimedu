@@ -533,19 +533,55 @@ def _header(data: dict) -> str:
 """
 
 
+# Palet kata kunci KANONIK — satu kelas = satu makna, sama pada semua bab.
+# Urutan di sini menetapkan urutan paparan dlm legenda.
+# Warna sebenar ditakrif dlm assets/css/keywords.css (+ base.css, print.css,
+# dan penjana PDF dlm main.js) — kekalkan keempat-empat SEGERAK.
+KEYWORD_LABELS = [
+    ("tokoh", "Tokoh / Pemimpin"),
+    ("masa", "Masa / Tarikh"),
+    ("tempat", "Tempat / Negeri"),
+    ("peristiwa", "Peristiwa / Konflik"),
+    ("pertubuhan", "Pertubuhan / Parti"),
+    ("gerakan", "Gerakan / Fahaman"),
+    ("kerajaan", "Kerajaan / Entiti Politik"),
+    ("pentadbiran", "Pentadbiran / Dasar"),
+    ("perjanjian", "Perjanjian / Dokumen"),
+    ("istilah", "Istilah / Konsep"),
+    ("karya", "Karya / Media"),
+]
+
+_LEGEND_PLACEHOLDER = "<!--KEYWORD_LEGEND-->\n"
+
+
 def _keyword_legend() -> str:
-    kws = ["tokoh", "tahun", "tempat", "peristiwa", "gerakan", "pertubuhan", "karya", "istilah"]
-    labels = ["Tokoh", "Tahun", "Tempat", "Peristiwa", "Gerakan", "Pertubuhan", "Karya", "Istilah"]
+    """Letak penanda; legenda sebenar diisi oleh finalize_keyword_legend()
+    selepas kandungan halaman siap dibina (legenda mesti padan penggunaan
+    SEBENAR halaman itu, bukan senarai tetap)."""
+    return _LEGEND_PLACEHOLDER
+
+
+def finalize_keyword_legend(html: str) -> str:
+    """Ganti penanda dgn legenda yg mengandungi HANYA jenis kata kunci yang
+    betul-betul digunakan pada halaman ini. Kalau tiada langsung, legenda
+    digugurkan terus (elak janji warna yg tak wujud)."""
+    if _LEGEND_PLACEHOLDER not in html:
+        return html
+    used = set(re.findall(r'class="kw kw-([a-z]+)"', html))
     items = "".join(
         f'<span class="keyword-legend-item"><span class="kw kw-{k}">{l}</span></span>'
-        for k, l in zip(kws, labels)
+        for k, l in KEYWORD_LABELS
+        if k in used
     )
-    return (
+    if not items:
+        return html.replace(_LEGEND_PLACEHOLDER, "")
+    legend = (
         f'<div class="keyword-legend-wrap">\n'
         f'<p class="keyword-legend-title">Warna kata kunci</p>\n'
         f'<div class="keyword-legend-grid">\n{items}\n</div>\n'
         f'</div>\n'
     )
+    return html.replace(_LEGEND_PLACEHOLDER, legend)
 
 
 def _footer() -> str:
@@ -731,7 +767,7 @@ def gen_page_subtopik(data: dict, av: dict) -> str:
     # JSON-LD
     jsonld = _jsonld_subtopik(data, fail_ini)
 
-    return (
+    html = (
         _head(data, av, fail_ini, title, description) +
         f'<body {body_attrs}>\n' +
         _header(data) +
@@ -766,6 +802,7 @@ def gen_page_subtopik(data: dict, av: dict) -> str:
         jsonld +
         '</body>\n</html>\n'
     )
+    return finalize_keyword_legend(html)
 
 
 def gen_page_bab(data: dict, av: dict) -> str:
@@ -830,7 +867,7 @@ def gen_page_bab(data: dict, av: dict) -> str:
 
     jsonld = _jsonld_bab(data, fail_ini)
 
-    return (
+    html = (
         _head(data, av, fail_ini, title, description) +
         f'<body class="{tema} bab-hub-page">\n' +
         _header(data) +
@@ -867,3 +904,4 @@ def gen_page_bab(data: dict, av: dict) -> str:
         jsonld +
         '</body>\n</html>\n'
     )
+    return finalize_keyword_legend(html)
