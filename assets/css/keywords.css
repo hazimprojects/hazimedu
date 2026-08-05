@@ -170,6 +170,15 @@ html[data-theme="dark"] .kw-karya { color: #b8e3f3; background: #2c5b6c; }
    KEYWORD LEGEND
 ========================= */
 
+/* NOTA: dua struktur wujud serentak buat masa peralihan —
+   (a) LAMA — kad rata "keyword-legend-wrap > title + grid" (majoriti
+       halaman, belum ditukar).
+   (b) BAHARU — dibalut sbg .paper-accordion-item (collapse lalai,
+       lihat finalize_keyword_legend() dlm html_generator.py). Rule
+       kedua di bawah (specificity lebih tinggi, 2 kelas) reset
+       padding/margin/border-radius drpd rule pertama supaya tak
+       bertindih dobel dgn kad .paper-accordion-item sedia ada.
+   JANGAN buang rule (a) sehingga SEMUA halaman ditukar ke (b). */
 .keyword-legend-wrap {
   margin-top: 1rem;
   padding: 0.85rem 0.95rem;
@@ -180,11 +189,24 @@ html[data-theme="dark"] .kw-karya { color: #b8e3f3; background: #2c5b6c; }
   transition: background 0.35s ease, border-color 0.35s ease;
 }
 
+.paper-accordion-item.keyword-legend-wrap {
+  margin-top: 0;
+  padding: 0;
+  border-radius: 22px;
+  box-shadow: var(--shadow-soft);
+}
+
 .keyword-legend-title {
   margin: 0 0 0.65rem;
   font-size: 0.88rem;
   font-weight: 800;
   color: var(--ink);
+}
+
+/* Struktur baharu (b) — tajuk skrg dlm <span> di dlm butang trigger
+   (paparan baris, bukan tumpuk), tak perlukan margin-bawah lama. */
+.paper-accordion-trigger .keyword-legend-title {
+  margin: 0;
 }
 
 .keyword-legend-grid {

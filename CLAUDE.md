@@ -153,6 +153,40 @@ sama) — ini sengaja dihapuskan. 11 kelas kanonik sahaja:
 tiada langsung, legenda digugurkan. Jangan hardcode senarai legenda
 (dulu hardcoded 8 jenis → 68 entri "hantu" & 5 warna tanpa penjelasan).
 
+## Legenda Kata Kunci — Peralihan ke Struktur Accordion (Collapse Lalai)
+
+Analisis ruang skrin (viewport mobile 390px) dedah hero setiap halaman
+subtopik makan **~936px SEBELUM nota sebenar** — lebih tinggi drpd satu
+skrin penuh (844px). Penyumbang terbesar: legenda kata kunci (277px,
+sentiasa terbuka penuh) walaupun palet dah kanonik sejagat (pembaca
+kembali tak perlu baca semula tiap halaman).
+
+`finalize_keyword_legend()` (`html_generator.py`) kini jana legenda
+sbg **satu accordion item** (guna semula mekanisme `paper-accordion`
+sedia ada — bukan komponen togol baharu), **collapse lalai**. Jimat
+~150-175px setiap halaman yg ditukar.
+
+**STATUS PERALIHAN — dua struktur wujud serentak:**
+- **(a) LAMA** — kad rata `<div class="keyword-legend-wrap"><p class=
+  "keyword-legend-title">...</p><div class="keyword-legend-grid">`.
+  Majoriti halaman (44 drpd 45) MASIH guna ni — belum ditukar.
+- **(b) BAHARU** — dibalut `.paper-accordion > .paper-accordion-item.
+  keyword-legend-wrap > button.paper-accordion-trigger + div.
+  paper-accordion-panel`. Baru `bab-3-2.html` (prototaip).
+
+CSS (`assets/css/keywords.css`) SENGAJA simpan KEDUA-DUA rule —
+`.keyword-legend-wrap` (padding/margin/border-radius penuh, utk (a))
+DAN `.paper-accordion-item.keyword-legend-wrap` (reset ke 0, warisi
+drpd kad accordion, utk (b), specificity 2-kelas menang). **JANGAN
+buang rule (a)** sehingga SEMUA 45 halaman ditukar ke (b) — buang
+awal akan pecahkan padding/bucu bulat/bayang pd halaman yg belum
+ditukar (pernah berlaku semasa prototaip ni, dibetulkan).
+
+Nak sambung tukar halaman lain: cari corak `<div class="keyword-
+legend-wrap">\n<p class="keyword-legend-title">Warna kata kunci</p>
+\n<div class="keyword-legend-grid">...` dan gantikan ikut struktur
+(b) — rujuk commit prototaip `bab-3-2.html` sbg contoh transform.
+
 ## Aliran Kerja Versioning Aset (WAJIB lepas ubah CSS/JS/sw.js)
 
 Sumber kebenaran versi: `data/asset-versions.json`. Lepas ubah
