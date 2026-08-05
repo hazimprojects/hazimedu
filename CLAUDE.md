@@ -242,20 +242,48 @@ tiada `<main class="note-reading-main">`) & `quiz/*.html` (tiada
 `.note-subsection`) automatik TAK aktif.
 
 **Nyahaktif zoom (pinch + double-tap) TERIKAT kpd syarat aktif SAMA**
-(`document.body.style.touchAction = "pan-x pan-y"` + listener
-`gesturestart/change/end` — dua-dua ditulis DALAM blok IIFE swipe-nav,
-lepas confirm `prevHref`/`nextHref` wujud), BUKAN kelas body — cubaan
-awal guna rule CSS `body.note-reading-app:not(.quiz-page)` TERLEPAS
-halaman ringkasan bab (`body.bab-hub-page`, kelas body BERBEZA drpd
-halaman subtopik `body.note-reading-app`, walhal dua-dua ada nav bawah
-& patut nyahaktif zoom). **JANGAN kembali guna rule CSS berasaskan
-kelas body utk ni** — akan tak segerak semula drpd syarat sebenar bila
-struktur halaman berubah. Meta viewport (`maximum-scale=1.0,
-user-scalable=no`) turut ditambah pd semua halaman berkenaan sbg
-petunjuk sekunder (Android Chrome lama), tapi `touch-action` (CSS,
-via JS inline style) + `gesturestart` (JS, WebKit) ialah mekanisme
-SEBENAR — Safari iOS 10+ sengaja ABAIKAN atribut meta tu utk
-kebolehcapaian (a11y), jangan bergantung padanya sahaja.
+(dlm blok IIFE swipe-nav, lepas confirm `prevHref`/`nextHref` wujud),
+BUKAN kelas body — cubaan awal guna rule CSS
+`body.note-reading-app:not(.quiz-page)` TERLEPAS halaman ringkasan bab
+(`body.bab-hub-page`, kelas body BERBEZA drpd halaman subtopik
+`body.note-reading-app`, walhal dua-dua ada nav bawah & patut
+nyahaktif zoom). **JANGAN kembali guna rule CSS berasaskan kelas body
+utk ni** — akan tak segerak semula drpd syarat sebenar bila struktur
+halaman berubah.
+
+**TIGA lapisan nyahaktif zoom** (satu lapisan sahaja — touch-action +
+gesturestart — TERBUKTI TAK CUKUP, pengguna masih boleh pinch;
+disahkan perlu tambah lapisan ketiga):
+1. `touch-action: pan-x pan-y` pd `document.documentElement` DAN
+   `document.body` (CSS piawai, TAK diabaikan spt meta viewport).
+2. Listener `gesturestart/change/end` (event proprietari WebKit) +
+   `preventDefault()` — tambahan Safari/WebKit lama.
+3. **Listener `touchmove` SEJAGAT (`document`), `preventDefault()`
+   bila `ev.touches.length > 1`** — teknik JS PALING dipercayai
+   merentas pelayar (Android Chrome DAN iOS Safari), tak bergantung pd
+   sokongan `touch-action` pelayar. Lapisan PALING penting/robust drpd
+   tiga-tiga — jangan buang walau nampak berlebihan drpd lapisan 1&2.
+
+Meta viewport (`maximum-scale=1.0, user-scalable=no`) turut ditambah
+pd semua halaman berkenaan sbg petunjuk sekunder (Android Chrome
+lama), tapi Safari iOS 10+ sengaja ABAIKAN atribut meta tu utk
+kebolehcapaian (a11y) — JANGAN bergantung padanya sahaja, tiga lapisan
+JS/CSS di atas ialah mekanisme SEBENAR.
+
+**Swipe TIADA pengecualian elemen interaktif** (a/button/kad
+subtopik/pencetus accordion) di `touchstart` — cubaan awal kecualikan
+elemen ni (elak konflik dgn klik/tap normal) sebenarnya PECAHKAN ciri
+sepenuhnya pd halaman ringkasan bab (`bab-N.html`), sbb halaman tu
+hampir sepenuhnya kad & accordion — nyaris tiada "ruang kosong" utk
+mula swipe. Axis-lock (`AXIS_LOCK_DISTANCE`, 8px) + `preventDefault()`
+HANYA dipanggil bila `phase === "dragging"` (bukan di `touchstart`)
+dah cukup bezakan tap tulen (gerakan kecil, `preventDefault` tak
+pernah dipanggil, klik/tap asli jalan spt biasa) drpd swipe sebenar
+(gerakan mendatar ketara, `preventDefault` sekat klik asli & navigasi
+guna logik seret sebaliknya) — disahkan Playwright (`.tap()` native
+pd kad subtopik & pencetus accordion kekal berfungsi normal; swipe
+mendatar bermula drpd atas kad/accordion yg sama BETUL navigasi ke
+halaman sebelah, bukan ikut href kad tu).
 
 ## Aliran Kerja Versioning Aset (WAJIB lepas ubah CSS/JS/sw.js)
 
