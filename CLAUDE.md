@@ -295,21 +295,34 @@ semula jadi (istilah `.kw` dlm ayat).
 
 **Logik (per kad `.glossary-paper`)**: ambil istilah (teks span `.kw`
 pertama dlm `.point-line` kad) + definisi penuh (teks `.point-line`).
-Cari span `.kw` PERTAMA (ikut susunan DOKUMEN) di LUAR `.glossary-
-paper`, `.lead` (intro hero) & `.master-summary-paper` (meliputi
-"Ringkasan X.X" & "Rumusan Besar Bab N" — sama kelas) yg teksnya
-sepadan (case-insensitive) — arahan pengguna: kemunculan di intro/
-ringkasan TAK dikira, sbb bahagian tu selalu dibaca berulang, trigger
-di situ kurang berguna drpd dlm kandungan penuh. Kalau jumpa: tanda
-`.kw-glossary-trigger` + `tabindex`/`role=button` (klik/Enter/Space
-buka popover teks ringkas, dicetus drpd `document.body.appendChild`,
-kedudukan dikira drpd `getBoundingClientRect()` + clamp tepi
-viewport), kad asal `display:none`. **Kalau TAK jumpa** (istilah tu
-tak muncul di mana-mana selain intro/ringkasan/kad glosari sendiri —
-cth. "Kuasa imperialis"/"Pakatan ketenteraan"/"Enakmen" pd
-bab-3-2.html, hanya "Deklarasi 14 Perkara" yg dpt popover di halaman
-tu selepas peraturan ni), kad asal DIKEKALKAN tanpa transformasi —
-degradasi selamat, bukan ralat.
+Cari calon PERTAMA (ikut susunan DOKUMEN — `querySelectorAll(".kw,
+.paper-strip.strip-sub")` jamin susunan dokumen walau selector
+gabungan) di LUAR `.glossary-paper`, `.lead` (intro hero) &
+`.master-summary-paper` (meliputi "Ringkasan X.X" & "Rumusan Besar
+Bab N" — sama kelas) — arahan pengguna: kemunculan di intro/ringkasan
+TAK dikira, sbb bahagian tu selalu dibaca berulang, trigger di situ
+kurang berguna drpd dlm kandungan penuh. DUA jenis calon disemak
+serentak (satu senarai tersusun, mana jumpa dulu menang):
+- **Span `.kw`** — padanan TEPAT (case-insensitive) teks penuh span.
+- **Tajuk seksyen `.paper-strip.strip-sub`** — padanan SEBAHAGIAN
+  teks (case-insensitive `indexOf`), sbb istilah selalunya sbhg drpd
+  tajuk lebih panjang (cth. "Kuasa Imperialis" dlm tajuk "A.
+  Persaingan Kuasa Imperialis") — BUKAN span `.kw` berasingan.
+  `wrapTermInHeading()` cari nod teks dlm tajuk yg mengandungi
+  istilah, PECAHKAN kpd 3 (sebelum/padanan/selepas), bungkus HANYA
+  bahagian padanan dgn `<span class="kw-glossary-trigger">` baharu
+  (guna `document.createDocumentFragment()`, gantikan nod teks asal
+  via `replaceChild`) — teks lain (cth. "A. Persaingan ") KEKAL di
+  luar span, tak terjejas.
+
+Kalau jumpa (mana-mana jenis): tanda `.kw-glossary-trigger` +
+`tabindex`/`role=button` (klik/Enter/Space buka popover teks ringkas,
+dicetus drpd `document.body.appendChild`, kedudukan dikira drpd
+`getBoundingClientRect()` + clamp tepi viewport), kad asal
+`display:none`. **Kalau TAK jumpa** (istilah tu tak muncul di
+mana-mana selain intro/ringkasan/kad glosari sendiri — cth. "Enakmen"
+pd bab-3-2.html), kad asal DIKEKALKAN tanpa transformasi — degradasi
+selamat, bukan ralat.
 
 **AWAS — JANGAN tambah listener `scroll` utk tutup popover.**
 Trigger ada `tabindex="0"`; klik sebenar (Playwright `.click()`,
@@ -330,10 +343,13 @@ utk tutup, tak perlukan scroll-close.
 kandungan kad tetap disertakan dlm eksport PDF walau disembunyi drpd
 paparan biasa.
 
-**Skop semasa: `bab-3-2.html` sahaja** (prototaip, 1 drpd 4 istilah
-glosari halaman ni dpt popover selepas peraturan intro/ringkasan —
-"Deklarasi 14 Perkara"). Tunggu pengesahan pengguna sblm luaskan ke 22
-halaman lain yg ada `.glossary-paper` (40 kad glosari kesemuanya).
+**Skop semasa: `bab-3-2.html` sahaja** (prototaip, 3 drpd 4 istilah
+glosari halaman ni dpt popover — "Kuasa Imperialis" & "Pakatan
+Ketenteraan" via tajuk seksyen `.paper-strip.strip-sub`, "Deklarasi 14
+Perkara" via span `.kw` dlm perenggan penjelasan; "Enakmen" kekal kad
+asal, tiada kemunculan sah lain). Tunggu pengesahan pengguna sblm
+luaskan ke 22 halaman lain yg ada `.glossary-paper` (40 kad glosari
+kesemuanya).
 
 ## Aliran Kerja Versioning Aset (WAJIB lepas ubah CSS/JS/sw.js)
 
