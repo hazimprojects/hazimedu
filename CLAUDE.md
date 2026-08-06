@@ -75,9 +75,28 @@ self-host lebih ringkas drpd urus rule cache tambahan dlm `sw.js`.
 - **Hanya** ganti/tambah ikon pada chip yg teksnya **tepat** nama
   negara (cth. `Jerman`, bukan `Adolf Hitler – pemimpin Jerman`) — elak
   bendera muncul pada chip nama tokoh/ayat yg sekadar sebut negara.
-  Skop semasa: 36 negara (rujuk senarai kod ISO dlm `assets/flags/`)
-  merentas 13 halaman — bab-3-2, bab-3-3 s/d bab-3-8 (PD1/PD2),
-  bab-4-6, bab-5-1, bab-5-2, bab-6-1, bab-6-3, bab-7-5. Entiti sejarah
+  **Skop diluaskan** (pengguna tunjuk tangkapan skrin kad "Filipina/
+  Burma/Vietnam/Indonesia/Thailand" masih guna glob generik, minta
+  imbasan MENYELURUH 8 bab + accordion/chip). Kajian sistematik (regex
+  cari kesemua `.paper-chip` di SELURUH `notes/*.html` yg teksnya
+  SAMA PERSIS nama negara ATAU bermula "NEGARA –/—/→ ringkasan"
+  pendek — SENGAJA elak padan ayat prosa penuh yg cuma SEBUT nama
+  negara di tengah, cth. "British bertindak mengekang..." — itu BUKAN
+  cip identiti, jgn diberi bendera) dedah **10 cip** merentas 2
+  halaman terlepas drpd imbasan asal: `bab-2-4.html` (5 — Filipina,
+  Burma, Vietnam, Indonesia, Thailand, dlm kad "Kesimpulan 2.4") &
+  `bab-3-2.html` (5 — Jerman×2, Austria-Hungary, Rusia×2, corak "NEGARA
+  → akibat" dlm accordion "A. Keruntuhan Pemerintahan Beraja", TERLEPAS
+  drpd imbasan asal walau halaman ni SUDAH dlm skop 13-halaman —
+  akibat berlainan corak cip: "NEGARA sahaja" vs "NEGARA → ringkasan").
+  2 negara BAHARU (Vietnam, Thailand) tiada SVG lagi — ditarik dari
+  `circle-flags` (git proxy baca awanama, klon cetek `--depth 1`,
+  salin `flags/vn.svg`+`flags/th.svg` ke `assets/flags/`, padam klon
+  lepas siap — LICENSE.md sedia ada sudah cukup, MIT sama). Skop
+  semasa: **42 negara** (rujuk senarai kod ISO dlm `assets/flags/`)
+  merentas **14 halaman** — bab-2-4 (baharu), bab-3-2, bab-3-3 s/d
+  bab-3-8 (PD1/PD2), bab-4-6, bab-5-1, bab-5-2, bab-6-1, bab-6-3,
+  bab-7-5. Entiti sejarah
   yg SENGAJA dilangkau (bukan negara berdaulat moden yg bersih; perlu
   keputusan ketepatan sejarah, bukan padanan mekanikal) — JANGAN tambah
   bendera utk ni tanpa tanya user dulu:
