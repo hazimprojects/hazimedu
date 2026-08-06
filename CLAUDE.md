@@ -416,15 +416,35 @@ hanyut ikut tatal halaman di sebalik scrim).
 kandungan kad tetap disertakan dlm eksport PDF walau disembunyi drpd
 paparan biasa.
 
-**Skop semasa: `bab-3-2.html` sahaja** (prototaip, keempat-empat
-istilah glosari halaman ni kini dpt popover — "Kuasa Imperialis" &
-"Pakatan Ketenteraan" via tajuk seksyen `.paper-strip.strip-sub`,
-"Deklarasi 14 Perkara" via span `.kw` dlm perenggan penjelasan,
-"Enakmen" via span `.kw kw-istilah` ditambah pd ayat "British turut
-meluluskan tiga enakmen penting semasa perang:" khusus utk beri
-kemunculan sah drpd kad glosarinya). Tunggu pengesahan pengguna sblm
-luaskan ke 22 halaman lain yg ada `.glossary-paper` (40 kad glosari
-kesemuanya).
+**Skop: SELURUH LAMAN** (semua halaman `notes/*.html` yg ada
+`.glossary-paper` — 23 halaman, 40 kad glosari kesemuanya). Prototaip
+asal dibina & disahkan di `bab-3-2.html` sahaja (keempat-empat istilah
+glosari halaman tu dpt popover — "Kuasa Imperialis" & "Pakatan
+Ketenteraan" via tajuk seksyen `.paper-strip.strip-sub`, "Deklarasi 14
+Perkara" via span `.kw` dlm perenggan penjelasan, "Enakmen" via span
+`.kw kw-istilah` ditambah pd ayat "British turut meluluskan tiga
+enakmen penting semasa perang:" khusus utk beri kemunculan sah drpd
+kad glosarinya). Logiknya sendiri SUDAH sejagat drpd awal (`main.js`
+dikongsi SEMUA halaman, `querySelectorAll(".glossary-paper")` tak
+terikat halaman tertentu) — "luaskan" bermakna SAHKAN ia berfungsi
+betul merentas kesemua 23 halaman, bukan tulis kod baharu. Disahkan
+via Playwright (audit automatik semua 23 halaman): 15/40 kad dpt
+popover (kemunculan sah drpd kad glosari sendiri), 25/40 kekal kad
+asal (degradasi selamat — tiada kemunculan sah), SIFAR ralat JS,
+kiraan `trigger + kad-kekal = jumlah-kad` KONSISTEN pd SETIAP halaman,
+setiap halaman berpencetus diuji buka+tutup penuh (scrim+klon+
+popover) berjaya.
+
+**Nota**: `.glossary-paper`/`.paper-strip.strip-glossary` TAK semestinya
+bermaksud kad "istilah: definisi" ringkas spt bab-3-2.html — cth.
+`bab-1-1.html` ada kad `.glossary-paper` berlabel "Info Tambahan"
+(pecahan makna kata, cth. "Sri = bercahaya" + "Vijaya = kemenangan")
+dgn struktur berbeza (span `.kw` PERTAMA dlm `.point-line` ialah FRASA
+definisi itu sendiri, bukan nama istilah). Degradasi selamat sedia ada
+(pencarian gagal jumpa kemunculan lain drpd frasa panjang tu) sudah
+kendalikan kes ni betul TANPA kod tambahan — kad kekal kad asal
+sepenuhnya, tiada ralat. JANGAN anggap semua `.glossary-paper` sama
+bentuk bila debug/kembangkan ciri ni lagi.
 
 ## Aliran Kerja Versioning Aset (WAJIB lepas ubah CSS/JS/sw.js)
 
