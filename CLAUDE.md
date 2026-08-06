@@ -541,32 +541,56 @@ kedua-dua syarat: `bab-2-4` "Isu Kasut", `bab-5-1` "hartal").
 kemunculan lain di halaman langsung.** Pengguna tunjuk tangkapan skrin
 kad "Golongan Mandarin" (bab-2-4.html) MASIH kad penuh walau dah lulus
 penapis label+tanda ayat, minta semakan menyeluruh ("masih ada lagi
-info kecil yang tak diberi popover"). Kajian dedah 7/19 kad LULUS
-kelayakan (label+bentuk ayat) tapi istilahnya **TIADA langsung**
-kemunculan lain (bukan `.kw` padanan tepat, bukan substring tajuk) di
-SELURUH halaman tu — cuma wujud sekali, di dlm kad glosarinya sendiri:
-`bab-2-4` "Golongan Mandarin", `bab-3-4` "Orde baharu" & "Sekatan
-ekonomi", `bab-3-7` "Gerila", `bab-3-8` "Giyu Gun", `bab-3-9` "Teluk
-Intan", `bab-5-1` "Persekutuan". Reka bentuk asal (popover HANYA pd
-kemunculan sedia ada dlm ayat/tajuk) mustahil layan kes ni — tiada
-titik lekat utk dijadikan pencetus.
+info kecil yang tak diberi popover"). Kajian PERTAMA (silap — lihat
+pembetulan di bawah) sangka 7/19 kad LULUS kelayakan tapi istilahnya
+tiada langsung kemunculan lain — fix asal (versi ni SUDAH DIGANTI):
+GANTI kad penuh dgn CIP PADAT (`<button class="kw-glossary-standalone-chip">`)
+yg jadi pencetus SENDIRI bila `!target` (tiada kemunculan lain jumpa)
+— cip klik terus buka popover SAMA persis (scrim+klon+popover), guna
+`activateTrigger()` fungsi SAMA yg dikongsi dgn pencetus `.kw`/tajuk
+biasa. **Kod fallback cip ni KEKAL** (masih perlu utk kes SEBENAR
+tiada kemunculan lain — cth. `bab-3-9` "Teluk Intan", lihat di bawah),
+tapi PUNCA masalah sbnrnya BUKAN "tiada kemunculan lain" — carian
+CALON asal (`.kw` + `.paper-strip.strip-sub` sahaja) TERLALU SEMPIT.
 
-Fix: bila `!target` (tiada kemunculan lain jumpa), GANTI kad penuh dgn
-CIP PADAT (`<button class="kw-glossary-standalone-chip">`, ikon+label
-istilah, sempadan putus-putus) — cip ITU SENDIRI jadi pencetus (via
-`activateTrigger()`, fungsi SAMA yg dikongsi dgn pencetus `.kw`/tajuk
-biasa), buka popover SAMA persis (scrim+klon+popover, `showPopover()`
-tak berubah). `card.parentNode.insertBefore(chip, card)` sebelum
-`card.style.display = "none"` — cip ambil "slot" kad dlm aliran
-dokumen. Ini BUKAN mekanisme baharu, cuma SUMBER pencetus berbeza
-(cip klik terus, bukan istilah sedia ada dlm ayat) — semua logik
-popover/scrim/klon/tutup dikongsi 100% dgn laluan sedia ada.
+**Pembetulan (susulan)**: pengguna tunjuk BUKTI "golongan mandarin"
+SEBENARNYA wujud sbg **TEKS POLOS** (bukan span `.kw`) dlm accordion
+"Perubahan kepimpinan" — carian asal terlepas kemunculan ni sbb HANYA
+semak `.kw` (padanan tepat) & `.paper-strip.strip-sub` (tajuk seksyen,
+substring). Kajian menyeluruh (regex cari SEMUA kemunculan case-
+insensitive tiap istilah, bandingkan dgn context HTML sekeliling)
+dedah **6 drpd 7** kad "cip mandiri" tu SEBENARNYA ADA kemunculan
+lain SAH — cuma dlm bentuk yg carian asal tak liputi: ayat biasa
+(`.point-line`/`.point-heading`), tajuk accordion (`.paper-accordion-title`,
+kelas BERBEZA drpd `.paper-strip.strip-sub`), & cip pendek
+(`.paper-chip`, cth. `<div class="paper-chip"><img/> Giyu Gun</div>`).
 
-**Hasil: 12/40 → 19/40 kad dpt popover** (7 kad tambahan via cip
-mandiri). 21/40 baki kekal kad asal — SEMUA sbb gagal kelayakan
-label/bentuk ayat (Info Tambahan/Petikan/tajuk custom/tiada `.point-line`/
-tiada span `.kw`/tamat `:`), BUKAN sbb tiada kemunculan lain lagi
-(jurang tu dah ditutup sepenuhnya oleh cip mandiri).
+**Fix (kekal)**: luaskan senarai `candidates` drpd `.kw, .paper-strip.strip-sub`
+kpd `.kw, .paper-strip.strip-sub, .paper-accordion-title, .point-line,
+.point-heading, .paper-chip` — SEMUA jenis SELAIN `.kw` disemak via
+padanan SUBSTRING (`wrapTermInHeading()`, fungsi generik yg dah wujud
+utk tajuk, kini dipakai lebih meluas — nama fungsi kekal drpd asal
+tapi kini bukan khusus tajuk). **Struktur gelung diubah PENTING**:
+cubaan `wrapTermInHeading()` kini berlaku SERTA-MERTA dlm gelung
+(bukan lepas gelung tamat) — kalau wrap GAGAL (istilah tu SEBENARNYA
+terkurung dlm span `.kw` bersarang, cth. "Persekutuan" di dlm
+"Persekutuan Tanah Melayu 1948" yg dah bertag), gelung TERUS cari
+calon SETERUSNYA (bukan `return`/abai terus spt versi lama) — elak
+bug "textContent nampak padan tapi nod teks langsung xde padanan
+sebenar (istilah tersembunyi dlm anak bersarang)". `wrapTermInHeading()`
+sendiri SUDAH selamat drpd awal (cuma semak `childNodes` nodeType===3,
+takkan turun ke span bersarang) — cuma gelung PANGGIL-nya yg perlu
+dibetulkan supaya GAGAL SATU calon bukan bermakna GAGAL SEMUA.
+
+**Hasil (selepas kedua-dua fix)**: 19/40 kad dpt popover (bilangan
+SAMA, tapi 6/7 drpd kad tadinya guna cip mandiri kini guna teks
+SEDIA ADA dlm ayat/tajuk/cip — lebih semula jadi, cip mandiri jadi
+fallback TULEN bukan default). **Hanya `bab-3-9` "Teluk Intan" KEKAL
+guna cip mandiri** — disahkan genuin: SATU-SATUNYA kemunculan lain
+"Teluk Intan" di halaman tu (2 kali) kedua-duanya dlm `.point-line`
+YG SAMA kad glosarinya sendiri (kad tu ada 4 `.point-line` — mini-
+naratif), jadi TERKECUALI oleh `.closest(".glossary-paper", ...)`
+sedia ada, betul-betul tiada titik lekat luar.
 
 ## Aliran Kerja Versioning Aset (WAJIB lepas ubah CSS/JS/sw.js)
 

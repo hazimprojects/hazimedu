@@ -1236,9 +1236,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Bungkus SEBAHAGIAN teks node (bukan .kw) dgn span pencetus baharu
-    // — utk tajuk seksyen (.paper-strip.strip-sub) yg mengandungi
-    // istilah sbg SEBAHAGIAN teks tajuk (cth. "A. Persaingan Kuasa
-    // Imperialis"), bukan span .kw berasingan.
+    // — utk mana-mana elemen prosa/tajuk (tajuk seksyen
+    // .paper-strip.strip-sub, tajuk accordion .paper-accordion-title,
+    // ayat .point-line/.point-heading) yg mengandungi istilah sbg
+    // SEBAHAGIAN teks (cth. "A. Persaingan Kuasa Imperialis" atau
+    // "...golongan bangsawan dan golongan mandarin yang mahu..."),
+    // bukan span .kw berasingan. HANYA cari nod TEKS LANGSUNG
+    // (childNodes nodeType===3) — SENGAJA elak turun ke anak
+    // bersarang (cth. span .kw sedia ada), jadi pulang `null` dgn
+    // selamat kalau padanan textContent sebenarnya datang drpd span
+    // bersarang tu, bukan teks polos elemen ni sendiri.
     function wrapTermInHeading(headingEl, term) {
       var nodes = headingEl.childNodes;
       for (var i = 0; i < nodes.length; i++) {
@@ -1329,12 +1336,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Calon disatukan dlm SATU senarai tersusun ikut susunan dokumen
       // (querySelectorAll jamin susunan dokumen walau selector gabungan)
-      // — span .kw (padanan TEPAT) & tajuk seksyen .paper-strip.strip-sub
-      // (padanan SEBAHAGIAN teks, cth. istilah dlm "A. Persaingan Kuasa
-      // Imperialis") — mana yg jumpa dulu ikut dokumen, itu yg menang.
-      var candidates = document.querySelectorAll(".kw, .paper-strip.strip-sub");
+      // — span .kw (padanan TEPAT) & elemen prosa/tajuk/cip (padanan
+      // SEBAHAGIAN teks — tajuk seksyen `.paper-strip.strip-sub`, tajuk
+      // accordion `.paper-accordion-title`, ayat biasa `.point-line`/
+      // `.point-heading`, cip pendek `.paper-chip` cth. "Giyu Gun" dlm
+      // `<div class="paper-chip"><img/> Giyu Gun</div>`) — mana yg
+      // jumpa dulu ikut dokumen, itu yg menang. Diluaskan drpd
+      // `.kw`+tajuk sahaja lepas pengguna tunjuk istilah spt "golongan
+      // mandarin" wujud sbg TEKS POLOS (bukan span .kw) dlm accordion
+      // — carian asal (`.kw`/tajuk sahaja) terlepas kemunculan sedia
+      // ada ni, ganti kad dgn cip mandiri WALAU sebenarnya ada titik
+      // lekat semula jadi. `.paper-chip` selamat ditambah — disahkan
+      // TIADA click handler generik lain terpasang pd `.paper-chip`
+      // polos (hanya subset `.zh-chip-can-flip` ada kelakuan sendiri,
+      // tak bertindih dgn kes ni).
+      var candidates = document.querySelectorAll(
+        ".kw, .paper-strip.strip-sub, .paper-accordion-title, .point-line, .point-heading, .paper-chip"
+      );
       var target = null;
-      var isHeading = false;
       for (var i = 0; i < candidates.length; i++) {
         var el = candidates[i];
         // Langkau kemunculan dlm kad glosari sendiri, intro (.lead) &
@@ -1348,12 +1367,27 @@ document.addEventListener("DOMContentLoaded", function () {
         if (el.classList.contains("kw")) {
           if (el.textContent.trim().toLowerCase() === term) {
             target = el;
-            isHeading = false;
             break;
           }
-        } else if (el.textContent.toLowerCase().indexOf(term) !== -1) {
-          target = el;
-          isHeading = true;
+          continue;
+        }
+
+        if (el.textContent.toLowerCase().indexOf(term) === -1) continue;
+
+        // Calon SUBSTRING (tajuk/ayat) — `textContent` termasuk
+        // keturunan (cth. span .kw bersarang), jadi PADAN di sini TAK
+        // semestinya bermakna ada NOD TEKS LANGSUNG yg boleh dibungkus
+        // (`wrapTermInHeading` cuma cari `childNodes` nodeType===3,
+        // SENGAJA elak bungkus separuh span .kw sedia ada yg bersarang
+        // — cth. "Persekutuan" jgn dibungkus dlm-dlm span
+        // "Persekutuan Tanah Melayu 1948" yg dah bertag betul). Kalau
+        // wrap GAGAL (istilah tu SEBENARNYA terkurung dlm span
+        // bersarang), JANGAN abai terus — teruskan cari calon
+        // SETERUSNYA (mungkin span .kw bersarang tu sendiri, muncul
+        // kemudian dlm senarai candidates).
+        var wrapped = wrapTermInHeading(el, term);
+        if (wrapped) {
+          target = wrapped;
           break;
         }
       }
@@ -1388,12 +1422,6 @@ document.addEventListener("DOMContentLoaded", function () {
         activateTrigger(chip, termLabel, defText, stripLabel, iconSrc);
         card.style.display = "none";
         return;
-      }
-
-      if (isHeading) {
-        var wrapped = wrapTermInHeading(target, term);
-        if (!wrapped) return; // sepatutnya tak berlaku (dah sah indexOf di atas), tapi degradasi selamat
-        target = wrapped;
       }
 
       activateTrigger(target, termLabel, defText, stripLabel, iconSrc);
@@ -5752,7 +5780,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=475').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=476').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
