@@ -128,6 +128,47 @@ def format_list(values: list[str], limit: int = 30) -> list[str]:
     return values[:limit] + [f"... (+{remaining} lagi)"]
 
 
+def check_index_registration(units_dir: Path) -> tuple[list[str], list[str], list[str]]:
+    """Sahkan data/zh-units/index.json (senarai fail SEBENAR yg zh-mode.js
+    muat semasa runtime) padan tepat dgn fail *.json di disk.
+
+    PUNCA bug sebenar (ditemui semasa siasatan pengguna): bab-8-2.json wujud
+    di disk dgn 68 unit betul, check-zh-coverage.py laporkan 100% coverage
+    (kerana extract_source_ids() imbas terus fail *.json di disk, bukan
+    baca index.json) — tapi index.json TAK PERNAH disunting utk sebut
+    "bab-8-2.json", jadi zh-mode.js (yg fetch ikut index.json sahaja, bukan
+    imbas direktori) TAK PERNAH muat data tu. 100% coverage jadi angka palsu
+    yg tak cerminkan realiti runtime. Semakan ni tutup jurang tu.
+    """
+    index_path = units_dir / "index.json"
+    errors: list[str] = []
+    unregistered: list[str] = []
+    ghost: list[str] = []
+
+    if not index_path.exists():
+        errors.append(f"{index_path}: fail tidak wujud.")
+        return errors, unregistered, ghost
+
+    try:
+        payload = json.loads(index_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as err:
+        errors.append(f"{index_path}: JSON tidak sah / gagal baca ({err})")
+        return errors, unregistered, ghost
+
+    listed = payload.get("files") if isinstance(payload, dict) else None
+    if not isinstance(listed, list):
+        errors.append(f"{index_path}: tiada kunci 'files' (senarai) yang sah.")
+        return errors, unregistered, ghost
+
+    listed_set = {name.strip() for name in listed if isinstance(name, str) and name.strip()}
+    on_disk = {path.name for path in units_dir.glob("*.json") if path.name != "index.json"}
+
+    unregistered = sorted(on_disk - listed_set)
+    ghost = sorted(listed_set - on_disk)
+
+    return errors, unregistered, ghost
+
+
 def report_chapter_coverage(note_ids_by_chapter: dict[str, set[str]], source_ids: set[str]) -> None:
     print("\nLaporan liputan per bab:")
     print("-----------------------")
@@ -155,8 +196,12 @@ def main() -> int:
     missing_ids = sorted(note_ids - source_ids)
     extra_ids = sorted(source_ids - note_ids)
     duplicate_conflicts = sorted((sid, sorted(files)) for sid, files in source_locations.items() if len(files) > 1)
+    index_errors, unregistered_files, ghost_files = check_index_registration(units_dir)
 
-    has_error = bool(note_errors or source_errors or missing_ids or extra_ids or duplicate_conflicts)
+    has_error = bool(
+        note_errors or source_errors or missing_ids or extra_ids or duplicate_conflicts
+        or index_errors or unregistered_files or ghost_files
+    )
 
     print("Ringkasan semakan ZH coverage")
     print("============================")
@@ -184,6 +229,21 @@ def main() -> int:
         print("\nKonflik source_id pendua merentas fail unit:")
         for source_id, files in duplicate_conflicts:
             print(f"- {source_id}: {', '.join(files)}")
+
+    if index_errors:
+        print("\nRalat index.json:")
+        for msg in index_errors:
+            print(f"- {msg}")
+
+    if unregistered_files:
+        print("\nFail wujud di disk TAPI TIADA dlm index.json 'files' (zh-mode.js TAK PERNAH muat data ni):")
+        for name in unregistered_files:
+            print(f"- {name}")
+
+    if ghost_files:
+        print("\nFail disenaraikan dlm index.json TAPI TIADA di disk (zh-mode.js akan gagal fetch, 404):")
+        for name in ghost_files:
+            print(f"- {name}")
 
     if has_error:
         print("\nKeputusan: GAGAL (betulkan isu sebelum release).")
