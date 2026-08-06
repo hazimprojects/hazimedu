@@ -116,6 +116,53 @@ self-host lebih ringkas drpd urus rule cache tambahan dlm `sw.js`.
   JANGAN biar >1 ikon bertindan (cth. Czechoslovakia/Yugoslavia asalnya
   ada 2-3 glob "meridians" bertindan — dah dinormal ke 1).
 
+  **Skop diluaskan lagi (pusingan 2)**: pengguna tunjuk tangkapan skrin
+  kad navigasi `.paper-kingdom` (grid nombor keycap di atas seksyen,
+  cth. "1️⃣ Nasionalisme di India 🌐") + `<h2>` seksyen sepadan (teks +
+  ikon SAMA berulang) — corak BERBEZA drpd `.paper-chip`, TERLEPAS drpd
+  KEDUA-DUA imbasan asal. Minta imbasan MENYELURUH "jangan terlepas
+  satu pun" — dibuat 2 pusingan imbasan agen berasingan (kad
+  kingdom/h2 dahulu, accordion bersarang `.paper-accordion-item`
+  kemudian, sbb corak accordion baharu ditemui semasa imbasan pertama).
+  Kes kabur (negara sbg PENYERANG/aktor sepintas lalu dlm tajuk ttg
+  sejarah TEMPATAN kita, cth. "Penentangan terhadap British di Kedah",
+  "Faktor/Serangan Jepun terhadap **Negara Kita**") — user sahkan KEKAL
+  DIKECUALIKAN (ikut precedent Czechoslovakia/dll di atas — bukan
+  keputusan mekanikal, perlu tanya dulu). Kes tajuk yg negara jelas jadi
+  SUBJEK biarpun tatabahasa jadi objek (cth. "Sekatan Ekonomi terhadap
+  Jepun", "Garisan Masa Serangan Jepun", "Kerjasama dengan Amerika")
+  KEKAL diberi bendera — beza drpd kes "Negara Kita" sbb fokus naratif
+  tetap negara asing tu, bukan Malaysia/tempatan.
+  - Kad `.paper-kingdom` + `<h2>` sepadan (lebar 20px kad / 22px h2,
+    KEKALKAN beza ni bila ganti ikon): bab-2-2 (England→`gb.svg`,
+    Amerika Syarikat→`us.svg`, Perancis→`fr.svg`), bab-2-3 (India→`in.svg`,
+    China→`cn.svg`, Jepun→`jp.svg`, Empayar Uthmaniyah & Mesir→
+    `tr.svg`+`eg.svg` DWI-bendera), bab-2-4 (Filipina→`ph.svg`, Burma→
+    `mm.svg`, Vietnam→`vn.svg`, Indonesia→`id.svg`, Thailand→`th.svg`),
+    bab-3-4 (Peluasan Kuasa Jepun & Sekatan Ekonomi terhadap Jepun→
+    `jp.svg`), bab-6-1 (Komunis dari China→`cn.svg`, dari Indonesia→
+    `id.svg`; kad kingdom di sini TIADA ikon ekor asal — bendera
+    DITAMBAH, bukan ganti).
+  - Kad `.paper-accordion-item` (ikon dlm `.paper-accordion-no`, 20px,
+    kekalkan lebar) + `.paper-strip.strip-sub` sepadan bila wujud:
+    bab-2-3 (Dahagi India 1857→`in.svg`; Kemerdekaan India dan
+    Pakistan→`in.svg`+`pk.svg` DWI-bendera, Pakistan svg BAHARU), bab-2-4
+    (Kerjasama dengan Amerika→`us.svg`, Kesudahan perjuangan di
+    Vietnam→`vn.svg`, Revolusi Thai→`th.svg`), bab-3-3 (Fasisme di
+    Itali→`it.svg`, Nazisme di Jerman→`de.svg`, Kesan terhadap
+    Jerman/Itali→`de.svg`/`it.svg`, Krisis Habsyah→`et.svg` Ethiopia svg
+    BAHARU gantikan 2 ikon glob bertindan, Penaklukan Jerman di Eropah
+    Barat→`de.svg`, Pengeboman Britain→`gb.svg`, Penyertaan Itali dalam
+    Perang→`it.svg`, Serangan ke atas Rusia – Operasi Barbarossa→
+    `ru.svg`), bab-3-4 (Garisan Masa Serangan Jepun→`jp.svg`), bab-6-1
+    (Kegagalan di Indonesia→`id.svg`). **Krisis Manchuria** (bab-3-3)
+    SENGAJA dikekalkan tanpa bendera tunggal — Manchuria bukan negara
+    berdaulat (rujuk entiti dilangkau di atas), badan teks dah guna
+    cip bendera berasingan (`jp.svg` penyerang / `cn.svg` pemilik).
+  - Skop semasa selepas 2 pusingan ni: **45 negara** (rujuk
+    `assets/flags/`, +3 baharu drpd pusingan ni: `eg.svg`, `pk.svg`,
+    `et.svg`).
+
 ## Bug Chip Terputus Baris — combinator `.paper-chip-list .paper-chip`
 
 **Elak selector CSS bentuk `.paper-chip-list .paper-chip` (descendant,
@@ -700,3 +747,15 @@ Pages) — tiada aliran staging/main berasingan macam projek Vercel lain
 dlm ekosistem Idariq. Kerja pada cabang berasingan & push macam biasa;
 JANGAN auto-cipta PR selepas push melainkan diminta eksplisit (beza
 drpd repo `idariq-system` yg ada automasi PR→staging tersendiri).
+
+**Tak perlu tunggu/semak CI sebelum merge** — user dah nyatakan ni
+BERKALI-KALI (arahan berulang, bukan sekali sahaja, jadi kekal berkuat
+kuasa merentas sesi/PR akan datang, JANGAN anggap ia luput lepas satu
+PR). Lepas pengesahan manual dah lulus (`python3 scripts/seo-audit.py`,
+`npm run lint`, semak diff/tag-balance dll ikut jenis perubahan),
+squash-merge PR TERUS tanpa tunggu keputusan check GitHub Actions
+(`seo-audit.yml`/`lint.yml`) — JANGAN `send_later`/`ScheduleWakeup`
+semata² utk tunggu CI lulus dulu sebelum merge. Ni khusus repo
+`zymnotes` (satu cabang produksi, bukan aliran staging→main
+`idariq-system`) — pengesahan manual tempatan dah cukup, CI cuma
+lapisan kedua/rekod, bukan get merge.
