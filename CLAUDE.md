@@ -484,31 +484,64 @@ kendalikan kes ni betul TANPA kod tambahan — kad kekal kad asal
 sepenuhnya, tiada ralat. JANGAN anggap semua `.glossary-paper` sama
 bentuk bila debug/kembangkan ciri ni lagi.
 
-**Penapis label — WAJIB semak teks jalur SEBENAR = "Glosari" sebelum
-popover-kan kad.** Kelas CSS `.glossary-paper`/`.strip-glossary` (gaya
-jalur ungu + ikon buku "Open book") DIKONGSI SEMULA merentas laman utk
-PELBAGAI jenis kad kandungan, bukan eksklusif utk definisi istilah —
-disahkan via audit teks jalur SEBENAR pd kesemua 40 kad: label
-sebenarnya termasuk "Info", "Info Tambahan", "Info Penting", "Petikan
-Penting"/"Petikan Surat Sultan Perak" (petikan/kutipan), malah tajuk
-custom spt "Rayuan Anthony Brooke"/"Rombakan Sistem Ahli 1954". HANYA
-10 drpd 40 kad memang berlabel tepat "Glosari". Versi awal ciri ni
-(sblm fix) popover-kan 5 kad SALAH (label sebenar bukan "Glosari")
-kerana logik lama cuma semak kelas `.glossary-paper` + kewujudan span
-`.kw` PERTAMA dlm `.point-line`, tanpa semak teks jalur — dilaporkan
-pengguna dgn tangkapan skrin (kad "Isu Kasut" berlabel "Info" &
-"Anthony Brooke" berlabel "Rayuan Anthony Brooke" muncul dgn tajuk
-popover "Glosari" walhal BUKAN definisi istilah, cuma fakta tambahan
-kontekstual — cth. "Anthony Brooke turut menentang penyerahan Sarawak"
-andaikan pembaca dah tahu siapa Anthony Brooke drpd tempat lain, bukan
-takrifan makna). Fix: `glossaryCards.forEach` kini semak
-`card.querySelector(".paper-strip.strip-glossary").textContent.trim()
-=== "Glosari"` SEBELUM apa-apa logik lain — kad label lain `return`
-awal (kekal kad asal, `display` tak disentuh langsung, degradasi
-selamat sepenuhnya). 5 kad terjejas (kini kekal kad asal): `bab-2-4`
-"Isu Kasut" (Info), `bab-4-3` "Tanah Melayu" (Info Tambahan), `bab-4-4`
-"Sarawak" (Info Tambahan), `bab-4-5` "Anthony Brooke" (Rayuan Anthony
-Brooke), `bab-5-1` "hartal" (Info).
+**Penapis label — WAJIB semak teks jalur SEBENAR sebelum popover-kan
+kad, popover PAPAR LABEL+IKON SEBENAR kad (bukan hardcode "Glosari").**
+Kelas CSS `.glossary-paper`/`.strip-glossary` (gaya jalur ungu + ikon)
+DIKONGSI SEMULA merentas laman utk PELBAGAI jenis kad kandungan, bukan
+eksklusif definisi istilah — disahkan via audit teks jalur SEBENAR +
+kandungan PENUH (semua `.point-line`, bukan cuma yg pertama) pd
+kesemua 40 kad: label sebenar termasuk "Glosari" (10 kad — definisi
+istilah tulen), "Info" (14 kad — CAMPURAN fakta tunggal berdiri
+sendiri DAN pengenalan senarai/chip-list berasingan), "Info Tambahan"/
+"Info Penting"/"Petikan Penting"/"Petikan Surat..." /tajuk custom cth.
+"Rayuan Anthony Brooke" (16 kad — naratif berbilang ayat/petikan/
+senarai bergantung chip-list).
+
+Versi awal ciri ni (PR #529–532) popover-kan SEBARANG kad
+`.glossary-paper` (tanpa semak label) drpd hanya kewujudan span `.kw`
+PERTAMA dlm `.point-line` — dilaporkan pengguna dgn tangkapan skrin
+("Isu Kasut"/"Anthony Brooke" muncul dgn tajuk popover "Glosari"
+walhal BUKAN takrifan istilah). PR #534 (fix pertama) MENGETATKAN
+kpd label EXACT "Glosari" sahaja (10/40) — TERLALU KETAT, buang
+kad "Info" yg sebenarnya SESUAI (cth. "Isu Kasut", "Hartal" — format
+sama spt Glosari: "Subjek ialah/→ penerangan", cuma label berbeza).
+Pengguna minta kajian semula: "sebahagian bukan glosari juga sesuai
+dijadikan popover dengan label yang betul".
+
+**Peraturan KELAYAKAN semasa** (`glossaryCards.forEach`,
+`assets/js/main.js`) — DUA syarat, kedua-dua MESTI lulus:
+1. Label jalur SEBENAR (`.paper-strip.strip-glossary` textContent)
+   MESTI "Glosari" ATAU "Info" (exact match) — label lain (Info
+   Tambahan/Info Penting/Petikan.../tajuk custom) `return` awal,
+   TIADA pengecualian (disahkan via kajian: SEMUA contoh label lain
+   ni ialah naratif/petikan/senarai bergantung chip-list, tiada
+   satu pun kad fakta tunggal berdiri sendiri).
+2. Teks `.point-line` PERTAMA (bakal jadi `defText` popover) TAK
+   BOLEH tamat dgn `:` (regex `/:\s*$/`) — tanda ayat tu cuma
+   PENGENALAN kpd senarai/chip-list BERASINGAN yg TAK disertakan dlm
+   popover (popover guna SATU `.point-line` sahaja); disahkan
+   merentas SEMUA 40 kad — corak ni 100% membezakan "fakta tunggal
+   berdiri sendiri" (tamat `.`) drpd "pengenalan senarai" (tamat `:`)
+   tanpa kecuali, termasuk dlm kad berlabel "Info" yg CAMPURAN
+   kedua-dua jenis (cth. bab-5-1.html ada 4 kad label "Info" — 2
+   fakta tunggal LULUS penapis [Persekutuan, Hartal], 2 pengenalan
+   senarai DITAPIS [Istilah radikal, protes]).
+
+Popover kini papar LABEL+IKON kad SUMBER SEBENAR (bukan hardcode) —
+`showPopover(trigger, defText, labelText, iconSrc)` terima parameter
+baharu, `iconSrc` diambil terus drpd `stripEl.querySelector("img").src`
+kad sumber (cth. kad "Info" guna ikon "Magnifying glass tilted left"
+🔍, BUKAN ikon buku 📖 "Glosari") — popover jadi JUJUR cerminkan jenis
+kandungan sebenar, bukan panggil semuanya "Glosari".
+
+**Hasil semasa: 12/40 kad dpt popover** (10 "Glosari" + 2 "Info" lulus
+kedua-dua syarat: `bab-2-4` "Isu Kasut", `bab-5-1` "hartal"). Nota:
+sesetengah kad "Info" yg LULUS penapis label+tanda ayat (cth.
+"Golongan Mandarin", "Persekutuan", "Teluk Intan") TETAP kekal kad
+asal — BUKAN sbb ditapis di sini, tapi sbb mekanisme SEDIA ADA
+("cari kemunculan sah calon SELAIN kad glosari sendiri" — lihat
+bahagian atas) gagal jumpa kemunculan lain istilah tu di luar kad
+sendiri (degradasi selamat, tiada kaitan dgn fix ni).
 
 ## Aliran Kerja Versioning Aset (WAJIB lepas ubah CSS/JS/sw.js)
 

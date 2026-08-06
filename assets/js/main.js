@@ -1110,7 +1110,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "textUnderlineOffset"
     ];
 
-    function showPopover(trigger, defText) {
+    function showPopover(trigger, defText, labelText, iconSrc) {
       closePopover();
       trigger.classList.add("is-active");
 
@@ -1168,19 +1168,23 @@ document.addEventListener("DOMContentLoaded", function () {
       el.className = "kw-glossary-popover";
       el.setAttribute("role", "tooltip");
 
+      // Tajuk + ikon popover ikut label SEBENAR kad sumber (bukan
+      // hardcode "Glosari") — kad `.glossary-paper` dikongsi utk
+      // pelbagai label ("Glosari", "Info", dll., lihat nota di
+      // glossaryCards.forEach), jadi popover MESTI jujur cerminkan
+      // label asal kad, bukan panggil semuanya "Glosari".
       var head = document.createElement("div");
       head.className = "kw-glossary-popover-head";
       var icon = document.createElement("img");
       icon.className = "fluent-3d-emoji openmoji--inline";
-      icon.src =
-        "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Open%20book/3D/open_book_3d.png";
+      icon.src = iconSrc;
       icon.width = 16;
       icon.height = 16;
       icon.alt = "";
       icon.decoding = "async";
       icon.loading = "lazy";
       var label = document.createElement("span");
-      label.textContent = "Glosari";
+      label.textContent = labelText;
       head.appendChild(icon);
       head.appendChild(label);
 
@@ -1262,18 +1266,18 @@ document.addEventListener("DOMContentLoaded", function () {
       return null;
     }
 
-    function activateTrigger(target, label, defText) {
+    function activateTrigger(target, label, defText, labelText, iconSrc) {
       target.classList.add("kw-glossary-trigger");
       target.setAttribute("tabindex", "0");
       target.setAttribute("role", "button");
-      target.setAttribute("aria-label", "Lihat definisi: " + label);
+      target.setAttribute("aria-label", "Lihat " + labelText + ": " + label);
 
       target.addEventListener("click", function (ev) {
         ev.stopPropagation();
         if (target.classList.contains("is-active")) {
           closePopover();
         } else {
-          showPopover(target, defText);
+          showPopover(target, defText, labelText, iconSrc);
         }
       });
 
@@ -1287,16 +1291,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     glossaryCards.forEach(function (card) {
       // Kelas CSS .glossary-paper/.strip-glossary (gaya jalur ungu +
-      // ikon buku) DIKONGSI semula utk pelbagai jenis kad BUKAN glosari
-      // (label sebenar pd jalur: "Info", "Info Tambahan", "Petikan
-      // Penting/Surat", malah tajuk custom cth. "Rayuan Anthony
-      // Brooke") — bukan sekadar kad definisi "istilah: makna". Popover
-      // "Glosari" HANYA sesuai utk kad label SEBENAR "Glosari" — kad
-      // lain (fakta tambahan/petikan/tajuk custom) kekal kad asal
-      // (dilaporkan pengguna: "Isu Kasut"/"Anthony Brooke" dipopoverkan
-      // walhal bukan istilah glosari sebenar).
-      var stripLabel = card.querySelector(".paper-strip.strip-glossary");
-      if (!stripLabel || stripLabel.textContent.trim() !== "Glosari") return;
+      // ikon) DIKONGSI semula merentas laman utk PELBAGAI jenis kad —
+      // bukan eksklusif definisi istilah. Label SEBENAR pd jalur (teks
+      // + ikon) dedah jenis kad sebenar: "Glosari" (definisi istilah
+      // tulen) & "Info" (fakta ringkas tunggal, selalunya format sama
+      // "Subjek ialah/→ penerangan") kedua-duanya SESUAI utk popover
+      // (disahkan via kajian kandungan PENUH kesemua 40 kad — lihat
+      // CLAUDE.md). Label lain ("Info Tambahan"/"Info Penting"/
+      // "Petikan Penting"/"Petikan Surat..."/tajuk custom cth. "Rayuan
+      // Anthony Brooke") kekal kad asal — biasanya naratif berbilang
+      // ayat/petikan/senarai bergantung chip-list, TAK sesuai
+      // dimampatkan jadi satu popover ringkas.
+      var stripEl = card.querySelector(".paper-strip.strip-glossary");
+      var stripLabel = stripEl ? stripEl.textContent.trim() : "";
+      if (stripLabel !== "Glosari" && stripLabel !== "Info") return;
 
       var glossaryPara = card.querySelector(".point-line");
       var termSpan = glossaryPara ? glossaryPara.querySelector(".kw") : null;
@@ -1305,6 +1313,19 @@ document.addEventListener("DOMContentLoaded", function () {
       var termLabel = termSpan.textContent.trim();
       var term = termLabel.toLowerCase();
       var defText = glossaryPara.textContent.trim();
+
+      // Kad label "Info" kdg cuma PENGENALAN kpd senarai berasingan
+      // (cth. "Istilah radikal digunakan oleh British kerana:") — isi
+      // sebenar dlm chip-list yg TAK disertakan dlm popover (popover
+      // guna SATU .point-line sahaja) — bukan boleh berdiri sendiri.
+      // Tanda ":" di hujung ayat ialah isyarat mudah & boleh
+      // dipercayai (disahkan merentas SEMUA 40 kad — setiap kad
+      // "Info"/"Glosari" berbentuk senarai/petikan tamat dgn ":",
+      // setiap kad fakta tunggal berdiri sendiri tamat dgn ".").
+      if (/:\s*$/.test(defText)) return;
+
+      var iconEl = stripEl.querySelector("img");
+      var iconSrc = iconEl ? iconEl.src : "";
 
       // Calon disatukan dlm SATU senarai tersusun ikut susunan dokumen
       // (querySelectorAll jamin susunan dokumen walau selector gabungan)
@@ -1345,7 +1366,7 @@ document.addEventListener("DOMContentLoaded", function () {
         target = wrapped;
       }
 
-      activateTrigger(target, termLabel, defText);
+      activateTrigger(target, termLabel, defText, stripLabel, iconSrc);
       card.style.display = "none";
     });
 
@@ -5701,7 +5722,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=471').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=472').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
