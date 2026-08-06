@@ -108,7 +108,6 @@ zymnotes/
 │   ├── asset-versions.json
 │   ├── updates.json
 │   ├── zh-glossary.json
-│   ├── zh-comprehension.json
 │   └── zh-units/
 ├── scripts/
 │   ├── sync-asset-versions.py

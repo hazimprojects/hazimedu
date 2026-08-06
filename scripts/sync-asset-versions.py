@@ -172,11 +172,6 @@ def sync_service_worker(versions: dict) -> bool:
             rf"\g<1>{ver}",
             new_block,
         )
-    if "'/data/zh-comprehension.json'" not in new_block:
-        new_block = new_block.replace(
-            "'/data/zh-glossary.json',",
-            "'/data/zh-glossary.json',\n  '/data/zh-comprehension.json',\n  '/data/zh-units/index.json',",
-        )
     updated = updated.replace(block, new_block)
 
     if updated != original:
