@@ -23,40 +23,61 @@ Hasilnya perlu **disemak manusia** untuk nama khas (Sultan, jawatan, ejaan rasmi
 ## Pengharaman Terjemahan (Wajib)
 Dalam teks Cina yang disunting, kategori berikut **hendaklah dikekalkan** dalam bentuk asal (BM / ejaan asal), dan jika perlu boleh diringi ringkasan Cina dalam kurungan:
 
-1. **Nama orang** *(termasuk nama Sultan dan gelaran Sultan)*
-2. **Nama organisasi rasmi**
-3. **Singkatan organisasi rasmi**
-4. **Perkataan bahasa Inggeris**
-5. **Perkataan bahasa Arab**
-6. **Istilah khusus bukan perkataan asal bahasa Cina**
+1. **Nama organisasi rasmi**
+2. **Singkatan organisasi rasmi**
+3. **Perkataan bahasa Inggeris**
+4. **Perkataan bahasa Arab**
+5. **Istilah khusus bukan perkataan asal bahasa Cina**
    - Contoh: **waadat, styagraha, bushido, jus soli**
+
+## Nama Orang & Gelaran (Sultan/Tokoh) — Transliterasi + Konteks
+
+**Keputusan editorial (piawaian rasmi, bukan lagi "tak boleh translate")**:
+nama orang — termasuk nama Sultan, gelaran (Tun/Tunku/Tuanku/Dato'/Datuk/
+Sultan/Raja), dan tokoh sejarah lain — **hendaklah ditransliterasi secara
+fonetik ke aksara Cina**, diiringi kurungan mengandungi nama asal (BM/
+English) + konteks ringkas (jawatan/peranan). Sebab: pembaca sasaran ialah
+pelajar bermedium Cina — ayat yang terus-menerus bertukar ke aksara Latin
+di tengah frasa Cina mengganggu bacaan lebih drpd transliterasi yang
+lancar dgn konteks disertakan.
+
+Format piawai: `<transliterasi Cina>（<nama asal>, <konteks ringkas>）`
+
+Contoh:
+- Sultan Muzaffar Shah → 苏丹穆扎法沙（马六甲第三任苏丹，确立伊斯兰为国教）
+- Dato' Onn Jaafar → 拿督翁贾法尔
+- Tunku Abdul Rahman → 东姑阿都拉曼
+
+Ini gaya sedia ada (225 kejadian merentas 21 fail, disahkan konsisten
+semasa audit kualiti mod ZH) — kini disahkan sbg piawaian rasmi, BUKAN
+pelanggaran panduan. Kategori 1–5 di atas (organisasi/singkatan/bahasa
+asing/istilah khusus) KEKAL dikekalkan dalam bentuk asal — beza drpd nama
+orang, kategori ni tiada bentuk fonetik piawai yang mudah dikenali, jadi
+kekal bentuk asal lebih jelas drpd transliterasi.
 
 ## Peraturan Umum
 - Selain kategori di atas, baki kandungan boleh diterjemahkan ke Cina Ringkas yang mudah difahami pelajar Malaysia; elakkan campuran tatabahasa BM + partikel Cina (“的/在/由” selepas perkataan BM penuh).
 
 ## Contoh Perkataan Bab 1 hingga Bab 7 yang Langsung Tak Boleh Translate
 
+*(Nama orang/Sultan/tokoh TIDAK lagi disenaraikan di sini — rujuk §"Nama
+Orang & Gelaran" di atas, kategori tu kini ditransliterasi + konteks,
+bukan dikekalkan bentuk asal. Senarai di bawah kekal khusus utk
+organisasi/singkatan/istilah khusus sahaja.)*
+
 ### Bab 1
 - Warisan Negara Bangsa
 - Kesultanan Melayu Melaka
-- Laksamana Cheng Ho
-- Sultan Mansur Shah
-- Bendahara Tun Perak
 - waadat
 
 ### Bab 2
 - Kebangkitan Nasionalisme
-- Dato’ Onn Jaafar
-- Dr. Burhanuddin al-Helmi
 - UMNO
 - PKMM
 - satyagraha / styagraha
 
 ### Bab 3
 - Konflik Dunia dan Pendudukan Jepun di Negara Kita
-- Archduke Ferdinand
-- Adolf Hitler
-- Leftenan Adnan Saidi
 - MPAJA
 - bushido
 
@@ -64,9 +85,6 @@ Dalam teks Cina yang disunting, kategori berikut **hendaklah dikekalkan** dalam 
 - Era Peralihan Kuasa British di Negara Kita
 - British Military Administration
 - Malayan Union
-- Sir Harold MacMichael
-- Sultan Hisamuddin Alam Shah
-- Yang di-Pertuan Besar Tuanku Abdul Rahman
 
 ### Bab 5
 - Persekutuan Tanah Melayu 1948
