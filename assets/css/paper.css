@@ -589,6 +589,201 @@ span.paper-chip {
 }
 
 /* =========================
+   DONUT (pecahan drpd satu keseluruhan)
+========================= */
+
+.paper-donut-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.9rem;
+}
+
+.paper-donut {
+  --donut-size: 148px;
+  position: relative;
+  flex: 0 0 auto;
+  width: var(--donut-size);
+  height: var(--donut-size);
+  border-radius: 50%;
+  background: var(--donut-gradient);
+  box-shadow: var(--shadow-soft);
+}
+
+.paper-donut::before {
+  content: "";
+  position: absolute;
+  inset: 22%;
+  border-radius: 50%;
+  background: var(--paper);
+  box-shadow: inset 0 1px 3px rgba(31, 41, 55, 0.1);
+}
+
+.paper-donut-total {
+  position: absolute;
+  inset: 22%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.3rem;
+  font-weight: 800;
+  font-size: 0.76rem;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.paper-donut-legend {
+  display: flex;
+  flex: 1 1 200px;
+  min-width: 180px;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.paper-donut-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.paper-donut-swatch {
+  flex: 0 0 auto;
+  width: 0.85rem;
+  height: 0.85rem;
+  border-radius: 0.3rem;
+  box-shadow: 0 0 0 1px rgba(31, 41, 55, 0.08);
+}
+
+.paper-donut-legend-value {
+  margin-left: auto;
+  padding-left: 0.5rem;
+  color: var(--muted);
+  font-weight: 800;
+  font-size: 0.84rem;
+  white-space: nowrap;
+}
+
+[data-theme="dark"] .paper-donut::before {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme="dark"] .paper-donut-swatch {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+@media (max-width: 480px) {
+  .paper-donut-wrap {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* =========================
+   SPLIT BAR (satu bar dibahagi dua pihak)
+========================= */
+
+.paper-split-bar {
+  display: flex;
+  height: 2.3rem;
+  margin-top: 0.9rem;
+  overflow: hidden;
+  border-radius: 999px;
+  box-shadow: var(--shadow-soft);
+  font-weight: 800;
+  font-size: 0.82rem;
+}
+
+.paper-split-bar-seg {
+  display: flex;
+  min-width: 2.6rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.5rem;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.paper-split-bar-seg.seg-a {
+  background: linear-gradient(90deg,
+    rgba(var(--theme-accent-rgb, 79, 70, 229), 0.95),
+    rgba(var(--theme-accent-rgb, 79, 70, 229), 0.75));
+}
+
+.paper-split-bar-seg.seg-b {
+  background: linear-gradient(90deg, rgba(148, 163, 184, 0.6), rgba(148, 163, 184, 0.45));
+  color: var(--ink);
+}
+
+.paper-split-bar-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+/* =========================
+   GROWTH (sebelum → selepas, satu perkara berubah merentas masa)
+========================= */
+
+.paper-growth {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  margin-top: 0.9rem;
+}
+
+.paper-growth-point {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+}
+
+.paper-growth-value {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--muted);
+}
+
+.paper-growth-point.is-after .paper-growth-value {
+  color: rgba(var(--theme-accent-rgb, 79, 70, 229), 1);
+}
+
+.paper-growth-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.paper-growth-arrow {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: rgba(var(--theme-accent-rgb, 79, 70, 229), 0.7);
+}
+
+.paper-growth-delta {
+  padding: 0.18rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(var(--theme-accent-rgb, 79, 70, 229), 0.14);
+  color: rgba(var(--theme-accent-rgb, 79, 70, 229), 1);
+  font-weight: 800;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+[data-theme="dark"] .paper-growth-delta {
+  color: var(--ink);
+}
+
+/* =========================
    TABS / PROCESS / TIMELINE
 ========================= */
 
