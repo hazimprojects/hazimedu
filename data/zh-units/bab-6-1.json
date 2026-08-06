@@ -656,7 +656,7 @@
     {
       "source_id": "bab-6-1-extra-56",
       "bm_original": "Melayu",
-      "translate": "马来语",
+      "translate": "马来人",
       "key_points_zh": [
         "马来语"
       ],
@@ -665,7 +665,7 @@
     {
       "source_id": "bab-6-1-extra-57",
       "bm_original": "Cina",
-      "translate": "中国人",
+      "translate": "华人",
       "key_points_zh": [
         "中国人"
       ],
@@ -674,7 +674,7 @@
     {
       "source_id": "bab-6-1-extra-58",
       "bm_original": "India",
-      "translate": "印度",
+      "translate": "印度人",
       "key_points_zh": [
         "印度"
       ],
@@ -764,7 +764,7 @@
     {
       "source_id": "bab-6-1-extra-64",
       "bm_original": "MDU",
-      "translate": "多地住宅单元",
+      "translate": "MDU（马来亚民主同盟）",
       "key_points_zh": [
         "多地住宅单元"
       ],
@@ -773,7 +773,7 @@
     {
       "source_id": "bab-6-1-extra-65",
       "bm_original": "PUTERA-AMCJA",
-      "translate": "王子-AMCJA",
+      "translate": "人民力量中心—全马联合行动理事会（PUTERA-AMCJA）",
       "key_points_zh": [
         "王子-AMCJA"
       ],

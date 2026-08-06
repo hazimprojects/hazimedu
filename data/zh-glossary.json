@@ -1,1 +1,12 @@
-{}
+{
+  "_meta": {
+    "description": "Glosari BM→ZH kanonik — satu istilah, satu padanan utama. Rujuk docs/zh-glossary-editorial-guideline.md.",
+    "seeded_from": "Audit mod ZH — kluster istilah tak konsisten paling kerap (Malayan Union/Persekutuan 1948, BMA, MPAJA, Onn Jaafar)."
+  },
+  "Malayan Union": "马来亚联盟",
+  "Persekutuan Tanah Melayu 1948": "马来亚联合邦",
+  "Perjanjian Persekutuan Tanah Melayu 1948": "马来亚联合邦协定",
+  "British Military Administration": "英国军事管理局",
+  "MPAJA": "马来亚人民抗日军（MPAJA）",
+  "Dato' Onn Jaafar": "拿督翁贾法尔"
+}

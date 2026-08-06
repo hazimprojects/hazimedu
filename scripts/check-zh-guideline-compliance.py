@@ -27,6 +27,7 @@ MALAY_MARKERS = (
 TITLE_RE = re.compile(r"\b(?:Tun|Tunku|Tuanku|Dato'?|Datuk|Sultan|Raja)\s+[A-Z][\w'’.-]+(?:\s+[A-Z][\w'’.-]+){0,4}\b")
 ACRO_RE = re.compile(r"\b[A-Z]{2,}(?:-[A-Z]{2,})?\b")
 ZH_RE = re.compile(r"[\u4e00-\u9fff]")
+UNPOLISHED_RE = re.compile(r"^\s*\u91ca\u4e49[\uff1a:]")
 
 
 def iter_units(payload: object):
@@ -40,9 +41,12 @@ def extract_entities(text: str) -> list[str]:
     out: list[str] = []
     out.extend(TITLE_RE.findall(text))
     out.extend(ACRO_RE.findall(text))
-    for fixed in ("Malayan Union", "Persekutuan Tanah Melayu", "Tanah Melayu", "Raja-raja Melayu"):
-        if fixed in text:
-            out.append(fixed)
+    # NOTA: "Tanah Melayu"/"Raja-raja Melayu" SENGAJA dibuang drpd senarai ni —
+    # bukan nama khas (org rasmi/orang), terjemahan ke 马来亚/马来统治者 ialah
+    # amalan BETUL, bukan pelanggaran (disahkan audit — 425 "pelanggaran" palsu).
+    # "Malayan Union"/"Persekutuan Tanah Melayu" turut dibuang atas sebab sama —
+    # istilah ni MEMANG patut diterjemah (马来亚联盟/马来亚联合邦), konsistensi
+    # antara terjemahan diselia oleh data/zh-glossary.json, bukan semakan ni.
     dedup: list[str] = []
     for item in out:
         if item not in dedup:
@@ -54,6 +58,20 @@ def malay_heavy(text: str) -> bool:
     lower = f" {text.lower()} "
     hits = sum(1 for token in MALAY_MARKERS if token in lower)
     return hits >= 3
+
+
+def translation_unpolished(zh: str) -> bool:
+    """Kesan pembalut placeholder "释义：…（原文：…）" drpd enrich-zh-unit-translations.py.
+
+    Panduan editorial sendiri terangkan corak ni sbg penanda kandungan BELUM
+    disunting jadi ayat Cina lancar penuh — semakan tepat ni gantikan heuristik
+    kiraan-aksara lama (lantai mutlak ≥4 aksara) yg terbukti hasilkan 2 jenis
+    positif-palsu: frasa pendek yg SAH pendek (cth. "Jerman"→"德国"), DAN ayat
+    panjang yg SAH tapi banyak nama khas dikekalkan asal (cth. "Kesultanan
+    Melayu Melaka" dikekalkan ejaan asal, jadi nisbah aksara Cina rendah
+    walaupun terjemahan betul).
+    """
+    return bool(UNPOLISHED_RE.match(zh))
 
 
 def main() -> int:
@@ -78,9 +96,8 @@ def main() -> int:
                 issues.append(f"{path} -> {sid}: bm_original/translate kosong.")
                 continue
 
-            zh_count = len(ZH_RE.findall(zh))
-            if zh_count < 4:
-                issues.append(f"{path} -> {sid}: terjemahan terlalu sedikit aksara Cina.")
+            if translation_unpolished(zh):
+                issues.append(f"{path} -> {sid}: terjemahan masih placeholder \"释义：…（原文：…）\" — belum disunting jadi ayat Cina lancar.")
 
             if malay_heavy(zh):
                 issues.append(f"{path} -> {sid}: terjemahan bercampur BM terlalu tinggi.")

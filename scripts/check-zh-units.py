@@ -10,7 +10,10 @@ from pathlib import Path
 from typing import Iterable
 
 DEFAULT_PATTERNS = ["data/zh-units.json", "data/zh-units/*.json"]
-REQUIRED_FIELDS = ("key_points_zh", "bm_focus_phrase")
+# NOTA: sebelum ni REQUIRED_FIELDS = ("key_points_zh", "bm_focus_phrase") — medan skema
+# lapuk drpd generator lama yg langsung tak dibaca assets/js/zh-mode.js (disahkan audit).
+# Medan sebenar yg runtime guna (source_id/bm_original/translate) disemak di sini.
+REQUIRED_FIELDS = ("source_id", "bm_original", "translate")
 
 
 def expand_patterns(patterns: list[str]) -> list[Path]:
