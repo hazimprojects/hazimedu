@@ -24,8 +24,6 @@ MALAY_MARKERS = (
     " terhadap ",
 )
 
-ACRO_RE = re.compile(r"\b[A-Z]{2,}(?:-[A-Z]{2,})?\b")
-ZH_RE = re.compile(r"[\u4e00-\u9fff]")
 UNPOLISHED_RE = re.compile(r"^\s*\u91ca\u4e49[\uff1a:]")
 
 
@@ -36,27 +34,14 @@ def iter_units(payload: object):
                 yield unit
 
 
-def extract_entities(text: str) -> list[str]:
-    out: list[str] = []
-    out.extend(ACRO_RE.findall(text))
-    # NOTA: TITLE_RE (nama Sultan/Tun/Tunku/Dato' dll.) SENGAJA dibuang drpd
-    # senarai wajib-kekal ni — keputusan editorial (docs/zh-mode-editorial-
-    # guideline.md §"Nama Orang & Gelaran") ialah nama orang MESTI
-    # ditransliterasi ke aksara Cina + konteks kurungan, BUKAN dikekalkan
-    # bentuk asal — jadi kehadiran nama asal BM dlm translate bukan lagi
-    # kriteria yg betul (piawaian rasmi ialah 苏丹穆扎法沙（Sultan Muzaffar
-    # Shah, konteks）, bukan Sultan Muzaffar Shah dikekalkan verbatim).
-    # NOTA: "Tanah Melayu"/"Raja-raja Melayu" SENGAJA dibuang drpd senarai ni —
-    # bukan nama khas (org rasmi/orang), terjemahan ke 马来亚/马来统治者 ialah
-    # amalan BETUL, bukan pelanggaran (disahkan audit — 425 "pelanggaran" palsu).
-    # "Malayan Union"/"Persekutuan Tanah Melayu" turut dibuang atas sebab sama —
-    # istilah ni MEMANG patut diterjemah (马来亚联盟/马来亚联合邦), konsistensi
-    # antara terjemahan diselia oleh data/zh-glossary.json, bukan semakan ni.
-    dedup: list[str] = []
-    for item in out:
-        if item not in dedup:
-            dedup.append(item)
-    return dedup
+# NOTA: extract_entities()/TITLE_RE/ACRO_RE (semakan "entiti wajib-kekal
+# verbatim" — nama Sultan/Tun/Tunku/Dato' & singkatan organisasi spt
+# UMNO/MCA/PAS/PKM) DIBUANG SEPENUHNYA — kedua-dua kategori kini piawaian
+# rasmi TERJEMAH/TRANSLITERASI (docs/zh-mode-editorial-guideline.md
+# §"Nama Orang & Gelaran" & §"Nama & Singkatan Organisasi"), BUKAN kekal
+# bentuk asal. Disahkan audit: SEMUA 67 "pelanggaran" ACRO_RE yg tinggal
+# (UMNO→巫统, KMT→国民党, PBB→联合国, dll.) ialah terjemahan piawai BETUL,
+# bukan pelanggaran — semakan ni jadi tiada isyarat sah lagi, dibuang.
 
 
 def malay_heavy(text: str) -> bool:
@@ -106,13 +91,6 @@ def main() -> int:
 
             if malay_heavy(zh):
                 issues.append(f"{path} -> {sid}: terjemahan bercampur BM terlalu tinggi.")
-
-            entities = extract_entities(bm)
-            for ent in entities:
-                if len(ent) < 3:
-                    continue
-                if ent not in zh:
-                    issues.append(f"{path} -> {sid}: entiti '{ent}' tidak dikekalkan dalam translate.")
 
     if issues:
         print("Semakan pematuhan ZH gagal:")
