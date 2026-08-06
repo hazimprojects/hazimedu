@@ -57,6 +57,19 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+/* Lencana ikon kecil SELEPAS teks pencetus — garis putus-putus sahaja
+   senyap/mudah terlepas pandang, terutama bacaan pantas mudah alih.
+   Saiz em (bukan px tetap) supaya skala ikut konteks fon sekeliling
+   (tajuk lebih besar drpd perenggan biasa). */
+.kw-glossary-badge {
+  display: inline-block;
+  width: 0.85em;
+  height: 0.85em;
+  margin-left: 0.22em;
+  vertical-align: middle;
+  flex: 0 0 auto;
+}
+
 /* Cip padat — GANTI kad "Glosari"/"Info" penuh bila istilahnya TIADA
    kemunculan lain di halaman (tiada titik lekat sedia ada utk pencetus
    biasa) — sendiri jadi pencetus (klik terus buka popover sama), jauh

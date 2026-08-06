@@ -592,6 +592,35 @@ YG SAMA kad glosarinya sendiri (kad tu ada 4 `.point-line` — mini-
 naratif), jadi TERKECUALI oleh `.closest(".glossary-paper", ...)`
 sedia ada, betul-betul tiada titik lekat luar.
 
+**Lencana ikon (`.kw-glossary-badge`) — SELEPAS pengguna nyata semua
+kandungan popover BUKAN sekadar hiasan yg selamat dilangkau** (kajian
+kandungan penuh 40 kad dedah kebanyakan istilah/fakta berpotensi
+relevan peperiksaan, bukan trivia semata), pengguna bimbang garis
+putus-putus sahaja terlalu senyap/mudah terlepas pandang, cadang
+lencana ikon SELEPAS perkataan pencetus. Fix (`activateTrigger()`,
+`assets/js/main.js`): tambah `<img class="kw-glossary-badge">` sbg
+anak TERAKHIR setiap pencetus (guna `iconSrc` SAMA drpd label kad
+sumber — buku utk "Glosari", kaca pembesar utk "Info", dll. — SAMA
+ikon yg muncul di kepala popover, konsisten). Cip mandiri
+(`.kw-glossary-standalone-chip`) DILANGKAU (`if
+(!target.classList.contains("kw-glossary-standalone-chip"))`) sbb dah
+ada ikon sendiri di HADAPAN, elak ikon berganda. CSS
+(`keywords.css`): saiz `em` (bukan `px` tetap) supaya skala ikut
+konteks fon (tajuk lebih besar drpd perenggan biasa),
+`vertical-align: middle` (bukan `-0.05em` custom — percubaan pertama
+duduk terlalu tinggi berbanding baseline teks, `middle` lebih
+seimbang secara visual, disahkan via ukuran `getBoundingClientRect()`
+lencana vs pencetus).
+
+**Nota persekitaran ujian**: Playwright dlm sandbox ni TIADA akses
+CDN (`cdn.jsdelivr.net` — sama isu `ERR_TUNNEL_CONNECTION_FAILED`
+didokumenkan sblm ni utk semua ikon emoji laman, BUKAN isu baharu
+khusus lencana ni) — imej ikon (termasuk ikon SEDIA ADA di kepala
+popover) TAK boleh disahkan visual dlm sandbox, cuma geometri/DOM
+(saiz kotak, kedudukan, `src` betul ikut label) boleh disahkan.
+Produksi (CDN sebenar boleh dicapai) patut render normal — SAMA CDN
+yg dah berfungsi utk beribu ikon lain di seluruh laman.
+
 ## Aliran Kerja Versioning Aset (WAJIB lepas ubah CSS/JS/sw.js)
 
 Sumber kebenaran versi: `data/asset-versions.json`. Lepas ubah

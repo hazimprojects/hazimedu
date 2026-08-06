@@ -1279,6 +1279,24 @@ document.addEventListener("DOMContentLoaded", function () {
       target.setAttribute("role", "button");
       target.setAttribute("aria-label", "Lihat " + labelText + ": " + label);
 
+      // Lencana ikon kecil SELEPAS teks — garis putus-putus sahaja
+      // senyap/mudah terlepas pandang (terutama bacaan pantas mudah
+      // alih); ikon guna label kad SUMBER SEBENAR (sama drpd popover)
+      // beri isyarat lebih menonjol "ada maklumat tambahan" tanpa
+      // ganggu bacaan. Cip mandiri (.kw-glossary-standalone-chip) dah
+      // ada ikon sendiri di HADAPAN, tak perlu lencana tambahan.
+      if (!target.classList.contains("kw-glossary-standalone-chip")) {
+        var badge = document.createElement("img");
+        badge.className = "kw-glossary-badge";
+        badge.src = iconSrc;
+        badge.width = 14;
+        badge.height = 14;
+        badge.alt = "";
+        badge.decoding = "async";
+        badge.loading = "lazy";
+        target.appendChild(badge);
+      }
+
       target.addEventListener("click", function (ev) {
         ev.stopPropagation();
         if (target.classList.contains("is-active")) {
@@ -5780,7 +5798,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=476').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=477').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
