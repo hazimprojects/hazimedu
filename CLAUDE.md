@@ -465,12 +465,13 @@ kad glosarinya). Logiknya sendiri SUDAH sejagat drpd awal (`main.js`
 dikongsi SEMUA halaman, `querySelectorAll(".glossary-paper")` tak
 terikat halaman tertentu) — "luaskan" bermakna SAHKAN ia berfungsi
 betul merentas kesemua 23 halaman, bukan tulis kod baharu. Disahkan
-via Playwright (audit automatik semua 23 halaman): 15/40 kad dpt
-popover (kemunculan sah drpd kad glosari sendiri), 25/40 kekal kad
-asal (degradasi selamat — tiada kemunculan sah), SIFAR ralat JS,
-kiraan `trigger + kad-kekal = jumlah-kad` KONSISTEN pd SETIAP halaman,
-setiap halaman berpencetus diuji buka+tutup penuh (scrim+klon+
-popover) berjaya.
+via Playwright (audit automatik semua 23 halaman): 10/40 kad dpt
+popover (label jalur SEBENAR "Glosari" + kemunculan sah drpd kad
+glosari sendiri), 30/40 kekal kad asal (degradasi selamat ATAU bukan
+kad "Glosari" sebenar — lihat "Penapis label" di bawah), SIFAR ralat
+JS, kiraan `trigger + kad-kekal = jumlah-kad` KONSISTEN pd SETIAP
+halaman, setiap halaman berpencetus diuji buka+tutup penuh (scrim+
+klon+popover) berjaya.
 
 **Nota**: `.glossary-paper`/`.paper-strip.strip-glossary` TAK semestinya
 bermaksud kad "istilah: definisi" ringkas spt bab-3-2.html — cth.
@@ -482,6 +483,32 @@ definisi itu sendiri, bukan nama istilah). Degradasi selamat sedia ada
 kendalikan kes ni betul TANPA kod tambahan — kad kekal kad asal
 sepenuhnya, tiada ralat. JANGAN anggap semua `.glossary-paper` sama
 bentuk bila debug/kembangkan ciri ni lagi.
+
+**Penapis label — WAJIB semak teks jalur SEBENAR = "Glosari" sebelum
+popover-kan kad.** Kelas CSS `.glossary-paper`/`.strip-glossary` (gaya
+jalur ungu + ikon buku "Open book") DIKONGSI SEMULA merentas laman utk
+PELBAGAI jenis kad kandungan, bukan eksklusif utk definisi istilah —
+disahkan via audit teks jalur SEBENAR pd kesemua 40 kad: label
+sebenarnya termasuk "Info", "Info Tambahan", "Info Penting", "Petikan
+Penting"/"Petikan Surat Sultan Perak" (petikan/kutipan), malah tajuk
+custom spt "Rayuan Anthony Brooke"/"Rombakan Sistem Ahli 1954". HANYA
+10 drpd 40 kad memang berlabel tepat "Glosari". Versi awal ciri ni
+(sblm fix) popover-kan 5 kad SALAH (label sebenar bukan "Glosari")
+kerana logik lama cuma semak kelas `.glossary-paper` + kewujudan span
+`.kw` PERTAMA dlm `.point-line`, tanpa semak teks jalur — dilaporkan
+pengguna dgn tangkapan skrin (kad "Isu Kasut" berlabel "Info" &
+"Anthony Brooke" berlabel "Rayuan Anthony Brooke" muncul dgn tajuk
+popover "Glosari" walhal BUKAN definisi istilah, cuma fakta tambahan
+kontekstual — cth. "Anthony Brooke turut menentang penyerahan Sarawak"
+andaikan pembaca dah tahu siapa Anthony Brooke drpd tempat lain, bukan
+takrifan makna). Fix: `glossaryCards.forEach` kini semak
+`card.querySelector(".paper-strip.strip-glossary").textContent.trim()
+=== "Glosari"` SEBELUM apa-apa logik lain — kad label lain `return`
+awal (kekal kad asal, `display` tak disentuh langsung, degradasi
+selamat sepenuhnya). 5 kad terjejas (kini kekal kad asal): `bab-2-4`
+"Isu Kasut" (Info), `bab-4-3` "Tanah Melayu" (Info Tambahan), `bab-4-4`
+"Sarawak" (Info Tambahan), `bab-4-5` "Anthony Brooke" (Rayuan Anthony
+Brooke), `bab-5-1` "hartal" (Info).
 
 ## Aliran Kerja Versioning Aset (WAJIB lepas ubah CSS/JS/sw.js)
 
