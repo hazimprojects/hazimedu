@@ -1,0 +1,349 @@
+{
+  "meta": {
+    "source_file": "notes/bab-8-2.html",
+    "rollout": "bab-8-2-manual-zh",
+    "notes": "Bab 8.2: terjemahan zh-CN manual (bukan mesin) - ditulis terus ikut docs/zh-mode-editorial-guideline.md, guna istilah kanonik data/zh-glossary.json + gaya transliterasi nama Sultan/tokoh yg dipiawaikan."
+  },
+  "units": [
+    {
+      "source_id": "bab-8-2-sum-1",
+      "bm_original": "Pilihan Raya Umum Pertama diadakan sebagai langkah penting ke arah berkerajaan sendiri dan kemerdekaan, selepas Raja-raja Melayu bersetuju mengadakan pilihan raya untuk memilih anggota Majlis Perundangan Persekutuan (MPP).",
+      "translate": "在马来统治者们同意举行选举以选出联邦立法议会（MPP）议员后，第一届普选举行，成为迈向自治与独立的重要一步。"
+    },
+    {
+      "source_id": "bab-8-2-sum-2",
+      "bm_original": "Sebelum pilihan raya, Tunku Abdul Rahman merundingkan bilangan anggota MPP yang dipilih dengan kerajaan British, termasuk rombongan ke London pada 1954.",
+      "translate": "选举举行之前，东姑阿都拉曼与英国政府就民选议员人数展开谈判，其中包括1954年前往伦敦的代表团。"
+    },
+    {
+      "source_id": "bab-8-2-sum-3",
+      "bm_original": "Pilihan raya diadakan pada 27 Julai 1955; Parti Perikatan menang 51 daripada 52 kerusi, membuktikan sokongan rakyat terhadap kerjasama antara kaum.",
+      "translate": "选举于1955年7月27日举行；联盟党在52席中赢得51席，证明人民支持跨族群合作。"
+    },
+    {
+      "source_id": "bab-8-2-orph-h1",
+      "bm_original": "Bagaimanakah proses Pilihan Raya Umum Pertama dijalankan di Persekutuan Tanah Melayu?",
+      "translate": "马来亚联合邦第一届普选的程序是如何进行的？"
+    },
+    {
+      "source_id": "bab-8-2-u01",
+      "bm_original": "Raja-raja Melayu bersetuju mengadakan pilihan raya untuk memilih anggota Majlis Perundangan Persekutuan (MPP), manakala pengisytiharan pilihan raya dibuat oleh Sir Donald MacGillivray.",
+      "translate": "马来统治者们同意举行选举以选出联邦立法议会（MPP）议员，选举则由唐纳德·麦吉利夫雷爵士（Sir Donald MacGillivray，英国驻马来亚最高专员）宣布举行。"
+    },
+    {
+      "source_id": "bab-8-2-u02",
+      "bm_original": "Prosesnya melibatkan beberapa peringkat utama, daripada rundingan awal, pelaksanaan lapan peringkat, hinggalah pengumuman keputusan.",
+      "translate": "整个程序包含几个主要阶段，从最初的谈判、八个阶段的落实，一直到最终结果的公布。"
+    },
+    {
+      "source_id": "bab-8-2-fokus-line",
+      "bm_original": "Proses Pilihan Raya Umum Pertama melibatkan rundingan, pelaksanaan dan keputusan. Empat bahagian:",
+      "translate": "第一届普选的过程涵盖谈判、落实与结果三大环节，共分为四个部分："
+    },
+    {
+      "source_id": "bab-8-2-extra-1",
+      "bm_original": "Rundingan Sebelum Pilihan Raya Umum",
+      "translate": "普选前的谈判"
+    },
+    {
+      "source_id": "bab-8-2-extra-2",
+      "bm_original": "Proses Pilihan Raya Majlis Perundangan Persekutuan 1955",
+      "translate": "1955年联邦立法议会选举的程序"
+    },
+    {
+      "source_id": "bab-8-2-extra-3",
+      "bm_original": "Keputusan Pilihan Raya Majlis Perundangan Persekutuan 1955",
+      "translate": "1955年联邦立法议会选举结果"
+    },
+    {
+      "source_id": "bab-8-2-extra-4",
+      "bm_original": "Pilihan Raya Awal di Sarawak dan Sabah",
+      "translate": "砂拉越与沙巴的早期选举"
+    },
+    {
+      "source_id": "bab-8-2-u03",
+      "bm_original": "Sebelum pilihan raya diadakan, beberapa isu penting perlu dipersetujui, terutama mengenai bilangan anggota Majlis Perundangan Persekutuan (MPP).",
+      "translate": "选举举行之前，须先议定几项重要课题，尤其是联邦立法议会（MPP）议员的人数。"
+    },
+    {
+      "source_id": "bab-8-2-u04",
+      "bm_original": "Pada 1 Februari 1954, Jawatankuasa Pilihan Raya ditubuhkan dengan keanggotaan seramai 46 orang ahli.",
+      "translate": "1954年2月1日，选举委员会成立，共有46名委员。"
+    },
+    {
+      "source_id": "bab-8-2-u05",
+      "bm_original": "Tugas jawatankuasa ini ialah mengkaji hal ehwal pilihan raya dan mengemukakan cadangan berkaitan pilihan raya, iaitu dua bentuk susunan MPP: Bentuk A dan Bentuk B.",
+      "translate": "该委员会的任务是研究选举事宜并提出建议，即两种MPP组成方案：A方案与B方案。"
+    },
+    {
+      "source_id": "bab-8-2-u06",
+      "bm_original": "Pilihan Raya Persekutuan hendaklah diadakan tidak lewat daripada November 1954.",
+      "translate": "联邦选举须不迟于1954年11月举行。"
+    },
+    {
+      "source_id": "bab-8-2-u07",
+      "bm_original": "Tiada tarikh atau tempoh tertentu ditetapkan untuk Pilihan Raya Persekutuan.",
+      "translate": "联邦选举并未订定确切的日期或期限。"
+    },
+    {
+      "source_id": "bab-8-2-u08",
+      "bm_original": "Tunku Abdul Rahman dan Parti Perikatan memilih Bentuk A, manakala Jawatankuasa Pilihan Raya memilih Bentuk B — perbezaan pendirian inilah yang membawa kepada rundingan seterusnya di London.",
+      "translate": "东姑阿都拉曼与联盟党支持A方案，选举委员会则支持B方案——正是这项立场分歧，促成了后续在伦敦的谈判。"
+    },
+    {
+      "source_id": "bab-8-2-u09",
+      "bm_original": "Pada 21 April 1954, Tunku Abdul Rahman berangkat ke London bersama Tan Cheng Lock dan T.H. Tan, kemudian disertai oleh Dato' Abdul Razak Hussein.",
+      "translate": "1954年4月21日，东姑阿都拉曼与陈祯禄、T.H. Tan一同启程前往伦敦，随后拿督阿都拉萨（Dato' Abdul Razak Hussein）也加入代表团。"
+    },
+    {
+      "source_id": "bab-8-2-u10",
+      "bm_original": "Tujuan rundingan: menuntut supaya 3/5 (tiga perlima) daripada anggota MPP dipilih melalui pilihan raya.",
+      "translate": "谈判目的：要求联邦立法议会五分之三（3/5）的议员须经由选举产生。"
+    },
+    {
+      "source_id": "bab-8-2-u11",
+      "bm_original": "Dengan bantuan Lord Ogmore, Tunku berjaya bertemu ahli Parlimen daripada beberapa parti British:",
+      "translate": "在奥格莫尔勋爵（Lord Ogmore）的协助下，东姑成功会晤了英国多个政党的国会议员："
+    },
+    {
+      "source_id": "bab-8-2-extra-5",
+      "bm_original": "Parti Buruh British",
+      "translate": "英国工党"
+    },
+    {
+      "source_id": "bab-8-2-extra-6",
+      "bm_original": "Parti Konservatif",
+      "translate": "保守党"
+    },
+    {
+      "source_id": "bab-8-2-extra-7",
+      "bm_original": "Parti Liberal",
+      "translate": "自由党"
+    },
+    {
+      "source_id": "bab-8-2-u12",
+      "bm_original": "Tunku juga menggunakan akhbar British untuk menjelaskan hasrat rakyat Tanah Melayu kepada rakyat British dan ahli Parlimen British.",
+      "translate": "东姑也借助英国报章，向英国民众与国会议员阐明马来亚人民的诉求。"
+    },
+    {
+      "source_id": "bab-8-2-u13",
+      "bm_original": "Pada 14 Mei 1954, Tunku berjaya mengadakan rundingan dengan Oliver Lyttelton, Setiausaha Tanah Jajahan British.",
+      "translate": "1954年5月14日，东姑成功与英国殖民地大臣奥利弗·利特尔顿（Oliver Lyttelton）举行谈判。"
+    },
+    {
+      "source_id": "bab-8-2-u14",
+      "bm_original": "Namun begitu, rundingan masih gagal mendapatkan persetujuan supaya 3/5 ahli MPP dipilih melalui pilihan raya.",
+      "translate": "然而，这次谈判仍未能取得联邦立法议会五分之三议员经选举产生的协议。"
+    },
+    {
+      "source_id": "bab-8-2-u15",
+      "bm_original": "Walaupun gagal, rombongan tersebut tetap disambut dengan meriah apabila pulang ke Tanah Melayu.",
+      "translate": "尽管未能如愿，代表团返回马来亚时仍受到热烈欢迎。"
+    },
+    {
+      "source_id": "bab-8-2-u16",
+      "bm_original": "Akhirnya satu persetujuan berjaya dicapai antara kerajaan British dan Parti Perikatan yang diwakili oleh Tunku Abdul Rahman: bilangan anggota MPP yang dipilih melalui pilihan raya ialah 52 orang.",
+      "translate": "最终，英国政府与东姑阿都拉曼代表的联盟党达成协议：联邦立法议会经选举产生的议员人数定为52名。"
+    },
+    {
+      "source_id": "bab-8-2-u17",
+      "bm_original": "Oleh sebab persetujuan hanya dicapai pada awal Julai 1954, Pilihan Raya Persekutuan hanya dapat diadakan pada 1955.",
+      "translate": "由于协议直到1954年7月初才达成，联邦选举因此延至1955年才得以举行。"
+    },
+    {
+      "source_id": "bab-8-2-u18",
+      "bm_original": "Pada 18–19 Ogos 1954, Rang Undang-Undang Pilihan Raya Persekutuan Tanah Melayu diluluskan, membolehkan Pilihan Raya Persekutuan diadakan sebagai langkah awal menuju kemerdekaan.",
+      "translate": "1954年8月18日至19日，《马来亚联合邦选举法案》获得通过，使联邦选举得以举行，成为迈向独立的第一步。"
+    },
+    {
+      "source_id": "bab-8-2-u19",
+      "bm_original": "Sebelum pilihan raya diadakan, anggota Majlis Perundangan Persekutuan (MPP) dilantik oleh Pesuruhjaya Tinggi British, yang menjemput wakil daripada:",
+      "translate": "选举举行之前，联邦立法议会（MPP）议员由英国最高专员委任，其邀请对象包括来自以下各方的代表："
+    },
+    {
+      "source_id": "bab-8-2-u20",
+      "bm_original": "Pada 1954, ketika Tunku Abdul Rahman dan rombongannya memerlukan dana untuk berangkat ke London bagi mengadakan rundingan dengan pihak British, satu majlis kutipan derma telah diadakan.",
+      "translate": "1954年，东姑阿都拉曼与代表团为筹措前往伦敦与英方谈判的经费，举办了一场募捐大会。"
+    },
+    {
+      "source_id": "bab-8-2-u21",
+      "bm_original": "Siti Rahmah Kassim, seorang wanita muda berusia 23 tahun, tampil ke hadapan lalu menanggalkan gelang emas yang dipakainya dan menyerahkannya kepada Tunku untuk membiayai perjalanan rombongan.",
+      "translate": "西蒂拉哈玛·卡欣（Siti Rahmah Kassim），一名23岁的年轻女子，走上前摘下自己佩戴的金手镯，交给东姑以资助代表团的行程。"
+    },
+    {
+      "source_id": "bab-8-2-u22",
+      "bm_original": "Tindakan berani itu menyentuh hati para hadirin — tanpa dipaksa, orang ramai mula menanggalkan gelang, subang, rantai, kerongsang, cincin dan pin baju, lalu meletakkannya ke dalam selendang merah milik Siti Rahmah.",
+      "translate": "这一勇敢的举动感动了在场群众——无需劝说，众人纷纷主动摘下手镯、耳环、项链、胸针、戒指与领针，投入西蒂拉哈玛的红色披肩中。"
+    },
+    {
+      "source_id": "bab-8-2-u23",
+      "bm_original": "Suasana menjadi semakin mengharukan apabila para hadirin di tingkat atas dewan turut menggugurkan wang kertas dan wang syiling ke arah selendang merah tersebut, memenuhinya sebagai lambang kesungguhan rakyat.",
+      "translate": "楼上的观众也纷纷将纸币与硬币抛向那条红色披肩，场面愈发感人，象征着人民的赤诚之心。"
+    },
+    {
+      "source_id": "bab-8-2-u24",
+      "bm_original": "Peristiwa Selendang Merah menjadi antara kisah paling ikonik dalam sejarah negara kerana membuktikan bahawa perjuangan kemerdekaan turut didukung oleh rakyat biasa yang sanggup mengorbankan harta benda demi masa depan tanah air.",
+      "translate": "红披肩事件（Peristiwa Selendang Merah）成为我国历史上最具代表性的故事之一，证明独立斗争同样获得平民百姓的支持——他们甘愿牺牲自己的财物，只为国家的未来。"
+    },
+    {
+      "source_id": "bab-8-2-u25",
+      "bm_original": "Lapan peringkat dijalankan mengikut tarikh dan syarat yang ditetapkan.",
+      "translate": "整个选举依既定日期与条件，分八个阶段进行。"
+    },
+    {
+      "source_id": "bab-8-2-u26",
+      "bm_original": "Pada 26 April 1954, Suruhanjaya Penentuan Sempadan Kawasan ditubuhkan dan berjaya membentuk 52 kawasan pilihan raya.",
+      "translate": "1954年4月26日，划界委员会成立，成功划定52个选区。"
+    },
+    {
+      "source_id": "bab-8-2-u27",
+      "bm_original": "Pada Ogos 1954, Rang Undang-Undang Pilihan Raya diluluskan bagi membolehkan Pilihan Raya Persekutuan dijalankan (lihat Bahagian Pertama).",
+      "translate": "1954年8月，《选举法案》获得通过，使联邦选举得以举行（见第一部分）。"
+    },
+    {
+      "source_id": "bab-8-2-u28",
+      "bm_original": "Pendaftaran bermula 18 Oktober 1954 di seluruh Tanah Melayu, dan 29 Oktober 1954 di Terengganu.",
+      "translate": "选民登记于1954年10月18日在马来亚全境展开，登嘉楼则于1954年10月29日开始。"
+    },
+    {
+      "source_id": "bab-8-2-u29",
+      "bm_original": "Syarat menjadi pengundi:",
+      "translate": "成为选民的条件："
+    },
+    {
+      "source_id": "bab-8-2-u30",
+      "bm_original": "Syarat menjadi calon:",
+      "translate": "成为候选人的条件："
+    },
+    {
+      "source_id": "bab-8-2-u31",
+      "bm_original": "Bagi memastikan pilihan raya berjalan secara sistematik, T.E. Smith dilantik oleh British untuk menyelia urusan pilihan raya.",
+      "translate": "为确保选举有系统地进行，英方委任T.E. Smith监督选举事务。"
+    },
+    {
+      "source_id": "bab-8-2-u32",
+      "bm_original": "Hari penamaan calon diadakan pada 15 Jun 1955.",
+      "translate": "候选人提名日订于1955年6月15日。"
+    },
+    {
+      "source_id": "bab-8-2-u33",
+      "bm_original": "Tempoh kempen berlangsung selama 45 hari.",
+      "translate": "竞选活动为期45天。"
+    },
+    {
+      "source_id": "bab-8-2-u34",
+      "bm_original": "Pada 27 Julai 1955, rakyat keluar mengundi untuk memilih wakil mereka.",
+      "translate": "1955年7月27日，人民出门投票，选出自己的代表。"
+    },
+    {
+      "source_id": "bab-8-2-u35",
+      "bm_original": "Selepas tamat pengundian, peti undi dibawa ke pusat pengiraan undi dan proses pengiraan undi dijalankan.",
+      "translate": "投票结束后，票箱被送往计票中心进行点票。"
+    },
+    {
+      "source_id": "bab-8-2-u36",
+      "bm_original": "Keputusan pilihan raya diumumkan selepas selesai proses pengiraan undi.",
+      "translate": "点票完成后，选举结果随即公布。"
+    },
+    {
+      "source_id": "bab-8-2-u37",
+      "bm_original": "Jumlah pengundi berdaftar: 1,280,000 orang.",
+      "translate": "登记选民总数：128万人。"
+    },
+    {
+      "source_id": "bab-8-2-u38",
+      "bm_original": "Jelas menunjukkan bahawa orang Melayu merupakan majoriti pengundi dalam Pilihan Raya Umum 1955.",
+      "translate": "清楚显示马来人在1955年普选中占选民的多数。"
+    },
+    {
+      "source_id": "bab-8-2-u39",
+      "bm_original": "Sebanyak 52 kerusi dipertandingkan di seluruh Persekutuan Tanah Melayu:",
+      "translate": "马来亚联合邦全境共有52个议席角逐："
+    },
+    {
+      "source_id": "bab-8-2-u40",
+      "bm_original": "Negeri Perak mempunyai jumlah kerusi paling banyak, manakala Perlis hanya mempunyai 1 kerusi.",
+      "translate": "霹雳州议席数目最多，玻璃市则只有1个议席。"
+    },
+    {
+      "source_id": "bab-8-2-u41a",
+      "bm_original": "Peratusan undi setiap parti:",
+      "translate": "各政党得票率："
+    },
+    {
+      "source_id": "bab-8-2-u41",
+      "bm_original": "Sentuh setiap parti untuk lihat pecahan penuh keputusan (bilangan calon, kerusi, undi).",
+      "translate": "点选各政党可查看完整结果详情（候选人数、议席、得票）。"
+    },
+    {
+      "source_id": "bab-8-2-u42",
+      "bm_original": "Daripada 52 kerusi yang dipertandingkan, Parti Perikatan memenangi 51 kerusi manakala PAS memenangi 1 kerusi — kemenangan besar ini membuktikan bahawa rakyat memberikan sokongan padu kepada kerjasama antara kaum yang dibawa oleh Parti Perikatan.",
+      "translate": "在角逐的52个议席中，联盟党赢得51席，PAS赢得1席——这场大捷证明人民坚定支持联盟党所倡导的跨族群合作。"
+    },
+    {
+      "source_id": "bab-8-2-u43",
+      "bm_original": "Pada 1956, pilihan raya tempatan pertama diadakan di Sarawak sebagai persediaan ke arah berkerajaan sendiri; Kuching dibahagikan kepada 9 kawasan (ward).",
+      "translate": "1956年，砂拉越举行首次地方选举，作为迈向自治的准备；古晋被划分为9个选区（ward）。"
+    },
+    {
+      "source_id": "bab-8-2-u44",
+      "bm_original": "Selepas pilihan raya, William Tan dipilih sebagai Pengerusi pertama KMC dan Ong Kee Hui sebagai Timbalan Pengerusi.",
+      "translate": "选举过后，陈威廉（William Tan）当选为古晋市议会（KMC）首任主席，王其辉（Ong Kee Hui）则出任副主席。"
+    },
+    {
+      "source_id": "bab-8-2-u45",
+      "bm_original": "Pada 1957, pilihan raya turut diadakan bagi Sibu, yang turut dibahagikan kepada 9 kawasan (ward).",
+      "translate": "1957年，诗巫同样举行选举，该地也被划分为9个选区（ward）。"
+    },
+    {
+      "source_id": "bab-8-2-u46",
+      "bm_original": "Selepas pilihan raya, Ting Chew Huat dipilih sebagai Pengerusi SUDC dan John Loo Ling Chong sebagai Timbalan Pengerusi.",
+      "translate": "选举过后，丁秋发（Ting Chew Huat）当选为诗巫市区议会（SUDC）主席，卢凌宗（John Loo Ling Chong）则出任副主席。"
+    },
+    {
+      "source_id": "bab-8-2-u47",
+      "bm_original": "Pilihan raya ini mendapat sambutan baik daripada rakyat pelbagai kaum kerana mereka dapat memilih wakil sendiri dalam kerajaan tempatan.",
+      "translate": "这次选举获得各族人民的热烈响应，因为他们得以在地方政府中选出自己的代表。"
+    },
+    {
+      "source_id": "bab-8-2-u48",
+      "bm_original": "Pada 16 Disember 1962, pilihan raya kerajaan tempatan pertama diadakan di Sabah di bawah Local Government Elections Ordinance, melibatkan 118 kawasan (ward); Setiausaha Kolonial bagi Kerajaan Tempatan bertindak sebagai Penguasa Pilihan Raya.",
+      "translate": "1962年12月16日，沙巴根据《地方政府选举法令》（Local Government Elections Ordinance）举行首次地方政府选举，涵盖118个选区（ward）；地方政府殖民地大臣担任选举总监。"
+    },
+    {
+      "source_id": "bab-8-2-u49",
+      "bm_original": "Seramai 202 calon bertanding, dan 53 kawasan menang tanpa bertanding.",
+      "translate": "共有202名候选人参选，另有53个选区无对手自动当选。"
+    },
+    {
+      "source_id": "bab-8-2-u50",
+      "bm_original": "Pembahagian kerusi Majlis Undangan Borneo Utara (Majlis Kebangsaan Perikatan Sabah): USNO 8 kerusi, UNKO 5 kerusi, BUNAP 4 kerusi, UNPMP 1 kerusi.",
+      "translate": "北婆罗洲立法议会（沙巴联盟国民议会）议席分配：USNO 8席、UNKO 5席、BUNAP 4席、UNPMP 1席。"
+    },
+    {
+      "source_id": "bab-8-2-u51",
+      "bm_original": "Pilihan raya umum atau pilihan raya kecil di Malaysia melalui 6 peringkat utama:",
+      "translate": "马来西亚的大选或补选须经历六个主要阶段："
+    },
+    {
+      "source_id": "bab-8-2-u52",
+      "bm_original": "Pilihan Raya Umum 1955 merupakan pilihan raya umum pertama yang membuka jalan kepada pembentukan kerajaan sendiri di Persekutuan Tanah Melayu.",
+      "translate": "1955年普选是首届普选，为马来亚联合邦自治政府的组成铺平了道路。"
+    },
+    {
+      "source_id": "bab-8-2-u53",
+      "bm_original": "Kemenangan besar Parti Perikatan membuktikan bahawa rakyat menyokong kerjasama antara kaum, sekali gus meyakinkan British bahawa Tanah Melayu mampu ditadbir oleh pemimpin tempatan.",
+      "translate": "联盟党的大捷证明人民支持跨族群合作，同时也让英国相信马来亚有能力由本地领袖来治理。"
+    },
+    {
+      "source_id": "bab-8-2-u54",
+      "bm_original": "Di Sarawak dan Sabah, pilihan raya tempatan turut menjadi latihan penting ke arah pemerintahan sendiri serta penyertaan rakyat dalam sistem demokrasi.",
+      "translate": "在砂拉越与沙巴，地方选举同样成为迈向自治、以及人民参与民主制度的重要历练。"
+    },
+    {
+      "source_id": "bab-8-2-u55",
+      "bm_original": "Pilihan Raya Umum 1955 bukan sekadar memilih wakil rakyat, tetapi menjadi bukti bahawa rakyat Tanah Melayu telah bersedia memikul tanggungjawab mentadbir negara secara demokratik.",
+      "translate": "1955年普选不仅是选出人民代表，更证明马来亚人民已准备好以民主方式承担治理国家的责任。"
+    }
+  ]
+}
