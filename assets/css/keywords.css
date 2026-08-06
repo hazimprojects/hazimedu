@@ -57,9 +57,48 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+/* Scrim pudar seluruh latar (fokus mod) — sorotan supaya istilah yg
+   ditekan + popover sahaja kelihatan jelas, selebihnya pudar. Dicipta
+   BAHARU setiap kali dibuka (bukan togol is-open) sbb elemen ni
+   sentiasa "lahir baharu" — sama corak dgn animasi masuk popover
+   sendiri, tak perlu force-reflow utk cetus animasi. */
+.kw-glossary-scrim {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-overlay);
+  background: rgba(20, 18, 26, 0.5);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  animation: kw-glossary-scrim-in 0.18s ease;
+}
+
+@keyframes kw-glossary-scrim-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+[data-theme="dark"] .kw-glossary-scrim {
+  background: rgba(0, 0, 0, 0.66);
+}
+
+/* Klon istilah terapung DI ATAS scrim (position:fixed, dilekat terus
+   pd <body>) — istilah SEBENAR di dlm <main> tak dpt dinaikkan atas
+   scrim guna z-index sahaja sbb <main> dah bentuk stacking context
+   sendiri (animation .js-enhanced main), jadi z-index anaknya tak
+   pernah lepasi lapisan di luar <main>. Klon (main.js) yg "kelihatan
+   jelas" penyelesaiannya — gaya (saiz fon/warna/bantalan) disalin
+   terus drpd getComputedStyle istilah asal, bukan diwarisi drpd
+   konteks baharu (elak "font-size: inherit" dll. tersasar).*/
+.kw-glossary-clone {
+  position: fixed;
+  z-index: var(--z-glossary-focus);
+  pointer-events: none;
+  margin: 0;
+}
+
 .kw-glossary-popover {
-  position: absolute;
-  z-index: var(--z-toast);
+  position: fixed;
+  z-index: var(--z-glossary-focus);
   max-width: min(320px, calc(100vw - 24px));
   padding: 0;
   overflow: hidden;
@@ -399,6 +438,7 @@ html[data-theme="dark"] .zh-mode-fab.is-active {
   --z-floating: 60;
   --z-toast: 70;
   --z-overlay: 300;
+  --z-glossary-focus: 301;
   --floating-bottom-offset: calc(var(--bottom-nav-h, 56px) + var(--safe-bottom, env(safe-area-inset-bottom, 0px)) + 0.9rem);
   --floating-bottom-offset-avoid-sparkle: calc(var(--floating-bottom-offset) + 4.25rem);
 }
