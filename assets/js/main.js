@@ -1358,7 +1358,37 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
 
-      if (!target) return; // tiada kemunculan lain — kekalkan kad asal
+      if (!target) {
+        // Istilah TIADA kemunculan lain di HALAMAN ni langsung (disahkan
+        // via kajian menyeluruh — cth. "Golongan Mandarin", "Persekutuan",
+        // "Teluk Intan" — kelayakan label+bentuk ayat lulus, tapi tiada
+        // titik lekat sedia ada dlm ayat/tajuk). GANTI kad penuh dgn CIP
+        // padat (bukan kekalkan kad penuh yg makan ruang) — cip ni SENDIRI
+        // jadi pencetus (klik terus, bukan istilah dlm ayat sedia ada),
+        // buka popover SAMA persis (scrim+klon+popover, bukan mekanisme
+        // baharu) — kurangkan kekaburan halaman spt diminta pengguna
+        // ("masih ada lagi info kecil yang tak diberi popover"), tanpa
+        // hilang kandungan (popover papar definisi PENUH spt biasa).
+        var chip = document.createElement("button");
+        chip.type = "button";
+        chip.className = "kw-glossary-standalone-chip";
+        var chipIcon = document.createElement("img");
+        chipIcon.className = "fluent-3d-emoji openmoji--inline";
+        chipIcon.src = iconSrc;
+        chipIcon.width = 16;
+        chipIcon.height = 16;
+        chipIcon.alt = "";
+        chipIcon.decoding = "async";
+        chipIcon.loading = "lazy";
+        var chipLabel = document.createElement("span");
+        chipLabel.textContent = termLabel;
+        chip.appendChild(chipIcon);
+        chip.appendChild(chipLabel);
+        card.parentNode.insertBefore(chip, card);
+        activateTrigger(chip, termLabel, defText, stripLabel, iconSrc);
+        card.style.display = "none";
+        return;
+      }
 
       if (isHeading) {
         var wrapped = wrapTermInHeading(target, term);
@@ -5722,7 +5752,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=472').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=473').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
