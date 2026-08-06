@@ -511,6 +511,84 @@ span.paper-chip {
 }
 
 /* =========================
+   BAR LIST (perbandingan magnitud data)
+========================= */
+
+.paper-bar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 0.9rem;
+}
+
+.paper-bar {
+  display: grid;
+  grid-template-columns: minmax(6.5rem, 9rem) 1fr auto;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.paper-bar-label {
+  display: flex;
+  align-items: center;
+  gap: 0.32rem;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.25;
+}
+
+.paper-bar-track {
+  position: relative;
+  height: 0.8rem;
+  border-radius: 999px;
+  background: rgba(92, 110, 132, 0.12);
+  box-shadow: inset 0 1px 2px rgba(31, 41, 55, 0.08);
+  overflow: hidden;
+}
+
+.paper-bar-fill {
+  position: absolute;
+  inset: 0;
+  width: var(--bar-pct, 0%);
+  border-radius: 999px;
+  background: linear-gradient(90deg,
+    rgba(var(--theme-accent-rgb, 79, 70, 229), 0.55),
+    rgba(var(--theme-accent-rgb, 79, 70, 229), 0.9));
+  transition: width 0.6s ease;
+}
+
+.paper-bar-value {
+  font-size: 0.84rem;
+  font-weight: 800;
+  color: var(--muted);
+  white-space: nowrap;
+  text-align: right;
+}
+
+[data-theme="dark"] .paper-bar-track {
+  background: rgba(148, 163, 184, 0.14);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .paper-bar-fill {
+  background: linear-gradient(90deg,
+    rgba(var(--theme-accent-rgb, 34, 211, 238), 0.5),
+    rgba(var(--theme-accent-rgb, 34, 211, 238), 0.85));
+}
+
+@media (max-width: 560px) {
+  .paper-bar {
+    grid-template-columns: 1fr;
+    row-gap: 0.3rem;
+  }
+
+  .paper-bar-value {
+    text-align: left;
+  }
+}
+
+/* =========================
    TABS / PROCESS / TIMELINE
 ========================= */
 
