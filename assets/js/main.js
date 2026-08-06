@@ -1078,20 +1078,64 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!glossaryCards.length) return;
 
     var activePopover = null;
+    var activeScrim = null;
+    var activeClone = null;
 
     function closePopover() {
       if (activePopover) {
         activePopover.remove();
         activePopover = null;
       }
+      if (activeScrim) {
+        activeScrim.remove();
+        activeScrim = null;
+      }
+      if (activeClone) {
+        activeClone.remove();
+        activeClone = null;
+      }
       document.querySelectorAll(".kw-glossary-trigger.is-active").forEach(function (el) {
         el.classList.remove("is-active");
       });
     }
 
+    // Salin gaya TERHASIL (bukan warisi semula drpd konteks baharu) drpd
+    // istilah asal ke klon — elak "font-size: inherit"/"line-height:
+    // inherit" (.kw, keywords.css) tersasar bila klon dilekat terus pd
+    // <body>, bukan di dlm perenggan asal yg tentukan saiz sebenar.
+    var CLONE_STYLE_PROPS = [
+      "fontSize", "fontWeight", "fontFamily", "lineHeight", "color",
+      "backgroundColor", "padding", "borderRadius", "letterSpacing",
+      "textDecorationLine", "textDecorationStyle", "textDecorationThickness",
+      "textUnderlineOffset"
+    ];
+
     function showPopover(trigger, defText) {
       closePopover();
       trigger.classList.add("is-active");
+
+      var rect = trigger.getBoundingClientRect();
+
+      // Scrim pudar seluruh latar + klon istilah terapung jelas di
+      // atasnya — mod fokus spt diminta pengguna ("perkataan dan kad
+      // glosari sahaja yang jelas, yang lain macam blur").
+      var scrim = document.createElement("div");
+      scrim.className = "kw-glossary-scrim";
+      document.body.appendChild(scrim);
+
+      var clone = trigger.cloneNode(true);
+      clone.removeAttribute("tabindex");
+      clone.removeAttribute("role");
+      clone.removeAttribute("aria-label");
+      clone.setAttribute("aria-hidden", "true");
+      clone.className = trigger.className + " kw-glossary-clone";
+      var triggerStyle = window.getComputedStyle(trigger);
+      CLONE_STYLE_PROPS.forEach(function (prop) {
+        clone.style[prop] = triggerStyle[prop];
+      });
+      clone.style.left = rect.left + "px";
+      clone.style.top = rect.top + "px";
+      document.body.appendChild(clone);
 
       var el = document.createElement("div");
       el.className = "kw-glossary-popover";
@@ -1134,7 +1178,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       el.style.maxWidth = Math.max(160, boundsRight - boundsLeft) + "px";
 
-      var rect = trigger.getBoundingClientRect();
       // offsetWidth/offsetHeight (bukan getBoundingClientRect) sbb
       // popover ada animasi masuk CSS (scale 0.96→1) — rect terjejas
       // transform semasa animasi tu MASIH berjalan pd saat ukur ni,
@@ -1154,9 +1197,11 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       el.style.left = left + "px";
-      el.style.top = (top + window.scrollY) + "px";
+      el.style.top = top + "px";
 
       activePopover = el;
+      activeScrim = scrim;
+      activeClone = clone;
     }
 
     // Bungkus SEBAHAGIAN teks node (bukan .kw) dgn span pencetus baharu
@@ -5617,7 +5662,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=465').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=466').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });

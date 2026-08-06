@@ -365,6 +365,51 @@ KAD INDUK (`.paper-board`/`.paper-flap-card`/`.cv-unit` via
 min(320px, 100vw-24px)` boleh jadi lebih lebar drpd kad yg
 mengandungi pencetus (terutama kad sempit di tengah senarai kad).
 
+**Mod fokus (scrim + klon terapung)** — lepas laporan pengguna popover
+"kelihatan agak padat" pd halaman berkandungan banyak, `showPopover()`
+kini juga: (1) cipta `.kw-glossary-scrim` (`position:fixed; inset:0`,
+latar gelap lutsinar + `backdrop-filter: blur(2px)` ringan) menutup
+SELURUH viewport termasuk header/nav bawah/FAB — pudarkan semuanya
+KECUALI istilah yg ditekan & popover; (2) cipta `.kw-glossary-clone`
+— SATU SALINAN nod istilah asal (`trigger.cloneNode(true)`),
+`position:fixed` terapung DI ATAS scrim pd kedudukan/saiz sama persis
+dgn istilah asal (`getBoundingClientRect()`), supaya kelihatan JELAS
+walau istilah SEBENAR (di dlm `<main>`) turut terlindung/pudar oleh
+scrim.
+
+**KENAPA klon, bukan naikkan istilah SEBENAR guna z-index sahaja**:
+`<main class="note-reading-main">` (base.css, `.js-enhanced main {
+animation: hz-page-in ... both; }`) SUDAH bentuk stacking context
+sendiri (mana-mana elemen dgn `animation` yg berpotensi jejas
+opacity/transform automatik bentuk stacking context baharu, spt
+dijelaskan §"Swipe Nav" di atas). Ini bermakna z-index MANA-MANA anak
+di dlm `<main>` HANYA bersaing dlm stacking context tempatan tu —
+`<main>` itu sendiri (kotak keseluruhan, `position:static`) sentiasa
+dilukis PADA tahap "kandungan susunan-dokumen" drpd `<body>`
+(SEBELUM/DI BAWAH mana-mana anak `<body>` yg positioned+z-index
+positif, spt scrim kita), tak kira nilai z-index anak dlm-dalamannya.
+Jadi istilah asal TAK PERNAH boleh dinaikkan atas scrim ni via
+z-index — SATU-SATUNYA cara "kelihatan jelas" ialah salinan berasingan
+yg dilekat TERUS pd `<body>` (di luar `<main>`), sama corak dgn
+keperluan sedia ada "semua UI `position:fixed` MESTI dilekat pd
+`document.body`" (§"Swipe Nav").
+
+**Gaya klon**: disalin drpd `getComputedStyle(trigger)` (bukan warisi
+semula drpd konteks `<body>` baharu) utk `fontSize`/`fontWeight`/
+`color`/`backgroundColor`/`padding`/dll. — elak "font-size: inherit"
+(`.kw`, keywords.css) tersasar kpd saiz asas `<body>` bukan saiz
+sebenar dlm perenggan/tajuk asal. Klon `pointer-events:none` (murni
+visual, ketukan di situ jatuh terus ke scrim di bawahnya → tutup
+popover, sama spt ketukan di luar) + `aria-hidden="true"` (elak
+pembaca skrin umum dua kali — elemen ASAL kekal dlm DOM utk
+keakksesan, klon murni visual).
+
+Popover sendiri turut ditukar drpd `position:absolute` (+ `scrollY`)
+kpd `position:fixed` (kedudukan terus drpd `getBoundingClientRect()`,
+tiada `scrollY` lagi) — konsisten dgn scrim+klon yg turut `fixed`,
+supaya keseluruhan "mod fokus" kekal terkunci pd viewport (bukan
+hanyut ikut tatal halaman di sebalik scrim).
+
 `display:none` (bukan buang drpd DOM) SENGAJA — disahkan penjana PDF
 (`_bodyHtml` dlm main.js) berjalan berasaskan struktur DOM/kelas
 (`el.childNodes.forEach`), TIADA semakan `display`/visibility, jadi
