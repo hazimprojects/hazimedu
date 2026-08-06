@@ -57,6 +57,46 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+/* Cip padat — GANTI kad "Glosari"/"Info" penuh bila istilahnya TIADA
+   kemunculan lain di halaman (tiada titik lekat sedia ada utk pencetus
+   biasa) — sendiri jadi pencetus (klik terus buka popover sama), jauh
+   lebih padat drpd kad penuh yg digantikan. Sempadan putus-putus sengaja
+   (bukan pepejal) — bahasa visual sama dgn garis bawah .kw-glossary-trigger
+   (petunjuk "boleh tap utk lebih"), diterjemah ke bentuk cip. */
+.kw-glossary-standalone-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 0.9rem;
+  margin: 0.2rem 0;
+  border: 1.5px dashed rgba(92, 110, 132, 0.32);
+  border-radius: 999px;
+  background: rgba(255, 253, 248, 0.9);
+  box-shadow: var(--shadow-soft);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.kw-glossary-standalone-chip img {
+  flex: 0 0 auto;
+}
+
+.kw-glossary-standalone-chip:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-medium);
+}
+
+[data-theme="dark"] .kw-glossary-standalone-chip {
+  background: rgba(28, 28, 33, 0.85);
+  border-color: rgba(255, 255, 255, 0.22);
+  color: #e5e0d8;
+}
+
 /* Scrim pudar seluruh latar (fokus mod) — sorotan supaya istilah yg
    ditekan + popover sahaja kelihatan jelas, selebihnya pudar. Dicipta
    BAHARU setiap kali dibuka (bukan togol is-open) sbb elemen ni

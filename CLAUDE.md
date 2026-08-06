@@ -535,13 +535,38 @@ kad sumber (cth. kad "Info" guna ikon "Magnifying glass tilted left"
 kandungan sebenar, bukan panggil semuanya "Glosari".
 
 **Hasil semasa: 12/40 kad dpt popover** (10 "Glosari" + 2 "Info" lulus
-kedua-dua syarat: `bab-2-4` "Isu Kasut", `bab-5-1` "hartal"). Nota:
-sesetengah kad "Info" yg LULUS penapis label+tanda ayat (cth.
-"Golongan Mandarin", "Persekutuan", "Teluk Intan") TETAP kekal kad
-asal — BUKAN sbb ditapis di sini, tapi sbb mekanisme SEDIA ADA
-("cari kemunculan sah calon SELAIN kad glosari sendiri" — lihat
-bahagian atas) gagal jumpa kemunculan lain istilah tu di luar kad
-sendiri (degradasi selamat, tiada kaitan dgn fix ni).
+kedua-dua syarat: `bab-2-4` "Isu Kasut", `bab-5-1` "hartal").
+
+**Cip mandiri (`.kw-glossary-standalone-chip`) — fallback bila TIADA
+kemunculan lain di halaman langsung.** Pengguna tunjuk tangkapan skrin
+kad "Golongan Mandarin" (bab-2-4.html) MASIH kad penuh walau dah lulus
+penapis label+tanda ayat, minta semakan menyeluruh ("masih ada lagi
+info kecil yang tak diberi popover"). Kajian dedah 7/19 kad LULUS
+kelayakan (label+bentuk ayat) tapi istilahnya **TIADA langsung**
+kemunculan lain (bukan `.kw` padanan tepat, bukan substring tajuk) di
+SELURUH halaman tu — cuma wujud sekali, di dlm kad glosarinya sendiri:
+`bab-2-4` "Golongan Mandarin", `bab-3-4` "Orde baharu" & "Sekatan
+ekonomi", `bab-3-7` "Gerila", `bab-3-8` "Giyu Gun", `bab-3-9` "Teluk
+Intan", `bab-5-1` "Persekutuan". Reka bentuk asal (popover HANYA pd
+kemunculan sedia ada dlm ayat/tajuk) mustahil layan kes ni — tiada
+titik lekat utk dijadikan pencetus.
+
+Fix: bila `!target` (tiada kemunculan lain jumpa), GANTI kad penuh dgn
+CIP PADAT (`<button class="kw-glossary-standalone-chip">`, ikon+label
+istilah, sempadan putus-putus) — cip ITU SENDIRI jadi pencetus (via
+`activateTrigger()`, fungsi SAMA yg dikongsi dgn pencetus `.kw`/tajuk
+biasa), buka popover SAMA persis (scrim+klon+popover, `showPopover()`
+tak berubah). `card.parentNode.insertBefore(chip, card)` sebelum
+`card.style.display = "none"` — cip ambil "slot" kad dlm aliran
+dokumen. Ini BUKAN mekanisme baharu, cuma SUMBER pencetus berbeza
+(cip klik terus, bukan istilah sedia ada dlm ayat) — semua logik
+popover/scrim/klon/tutup dikongsi 100% dgn laluan sedia ada.
+
+**Hasil: 12/40 → 19/40 kad dpt popover** (7 kad tambahan via cip
+mandiri). 21/40 baki kekal kad asal — SEMUA sbb gagal kelayakan
+label/bentuk ayat (Info Tambahan/Petikan/tajuk custom/tiada `.point-line`/
+tiada span `.kw`/tamat `:`), BUKAN sbb tiada kemunculan lain lagi
+(jurang tu dah ditutup sepenuhnya oleh cip mandiri).
 
 ## Aliran Kerja Versioning Aset (WAJIB lepas ubah CSS/JS/sw.js)
 
