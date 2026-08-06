@@ -201,3 +201,4 @@ Email: **hello@zymnotes.com**
 Belum ditetapkan secara rasmi.
 
 Jika projek dibuka untuk pengedaran/sumbangan awam pada skala lebih luas, fail lesen akan ditambah kemudian.
+
