@@ -1133,8 +1133,35 @@ document.addEventListener("DOMContentLoaded", function () {
       CLONE_STYLE_PROPS.forEach(function (prop) {
         clone.style[prop] = triggerStyle[prop];
       });
-      clone.style.left = rect.left + "px";
-      clone.style.top = rect.top + "px";
+
+      // Istilah dlm tajuk (.paper-strip.strip-sub) TIADA latar sendiri
+      // — cuma teks berwarna atas latar GRADIEN TAJUK INDUK (bukan span
+      // tu sendiri). Bila diapungkan berasingan drpd tajuk tu (klon di
+      // luar konteks asal), teks jadi kurang jelas atas scrim gelap
+      // (dilaporkan pengguna: "perkataan yang berada di tajuk masih tak
+      // jelas"). Beri latar cip lalai HANYA bila elemen asal memang
+      // tiada latar sendiri — span .kw (dah ada latar warna sendiri drpd
+      // kelas kw-*) tak disentuh, elak latar berganda/bertindan.
+      var hasOwnBackground =
+        triggerStyle.backgroundColor &&
+        triggerStyle.backgroundColor !== "rgba(0, 0, 0, 0)" &&
+        triggerStyle.backgroundColor !== "transparent";
+      // offsetX/Y "bayar balik" ruang padding baharu supaya TEKS di
+      // dlm klon kekal pd kedudukan asal (rect.left/top) — kotak klon
+      // tumbuh KE LUAR (bukan teks tersasar ke kanan/bawah).
+      var offsetX = 0;
+      var offsetY = 0;
+      if (!hasOwnBackground) {
+        offsetX = 6;
+        offsetY = 2;
+        clone.style.backgroundColor = "var(--paper, #fffdf8)";
+        clone.style.padding = offsetY + "px " + offsetX + "px";
+        clone.style.borderRadius = "6px";
+        clone.style.boxShadow = "var(--shadow-soft)";
+      }
+
+      clone.style.left = (rect.left - offsetX) + "px";
+      clone.style.top = (rect.top - offsetY) + "px";
       document.body.appendChild(clone);
 
       var el = document.createElement("div");
@@ -5662,7 +5689,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=468').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=469').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });

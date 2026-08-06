@@ -404,6 +404,43 @@ popover, sama spt ketukan di luar) + `aria-hidden="true"` (elak
 pembaca skrin umum dua kali — elemen ASAL kekal dlm DOM utk
 keakksesan, klon murni visual).
 
+**AWAS — istilah dlm TAJUK (`.paper-strip.strip-sub`, substring wrap
+via `wrapTermInHeading`) PERLUKAN latar cip fallback, span `.kw`
+TIDAK.** Span `.kw` (cth. "Deklarasi 14 Perkara") dah ada latar warna
+sendiri drpd kelas `kw-*` (keywords.css) — cukup jelas terapung atas
+scrim tanpa apa-apa tambahan. TAPI istilah dlm tajuk (cth. "Kuasa
+Imperialis" dlm "A. Persaingan Kuasa Imperialis") ialah span POLOS
+TIADA latar sendiri — warna latar yg nampak sebelum ni datang drpd
+GRADIEN TAJUK INDUK (`.paper-strip.strip-sub`), bukan span tu sendiri.
+Bila diklon berasingan drpd tajuk (`getComputedStyle().backgroundColor`
+= `rgba(0, 0, 0, 0)`), teks jadi HAMPIR TAK JELAS atas scrim gelap
+(warna teks gelap dirancang utk latar TERANG asal, kontra lemah atas
+scrim) — dilaporkan pengguna dgn tangkapan skrin: "perkataan yang
+berada di tajuk masih tak jelas". Fix: semak
+`triggerStyle.backgroundColor` — kalau `rgba(0, 0, 0, 0)`/`transparent`
+(tiada latar sendiri), beri latar cip fallback (`var(--paper)` + sedikit
+padding/border-radius/shadow, PADANAN gaya cip `.kw` semula jadi) pd
+klon SAHAJA (bukan istilah asal). Padding baharu tu "dibayar balik" via
+`offsetX`/`offsetY` (kurangkan drpd `left`/`top`) supaya TEKS kekal pd
+kedudukan asal — kotak klon tumbuh KE LUAR, bukan teks tersasar.
+
+**Istilah dlm ACCORDION TERTUTUP — TAK diskip, berfungsi dgn betul.**
+Carian calon (`.kw`, `.paper-strip.strip-sub`) sejagat merentas SELURUH
+DOM tanpa kira status buka/tutup accordion (`.paper-accordion-panel`
+guna `max-height:0; overflow:hidden` bila tertutup — BUKAN
+`display:none` — jadi `querySelectorAll` tetap jumpa, `getBoundingClientRect()`
+tetap sah). Disahkan empirik: 6 drpd 23 halaman ada pencetus di dlm
+accordion tertutup lalai (`bab-2-4` "Isu Kasut" — jenis tajuk pula,
+`bab-3-2` "enakmen", `bab-3-3` "Blitzkrieg", `bab-3-8` "Kakeo Kokokai",
+`bab-5-1` "hartal", `bab-5-2` "dekolonisasi") — diuji ALIRAN SEBENAR
+pengguna (buka accordion DULU, br klik pencetus) utk kedua-dua
+"hartal" & "Isu Kasut" (gabungan tajuk+accordion), scrim+klon+popover
+semua betul. (Nota ujian: klik SINTETIK pd pencetus SEBELUM accordion
+dibuka turut "berjaya" via Playwright kerana `getBoundingClientRect()`
+elemen di dlm panel `overflow:hidden` tetap pulangkan geometri sah —
+tapi ni BUKAN aliran sebenar pengguna, sbb pencetus scr visual tak
+boleh dicapai/tekan sehingga accordion dibuka dulu; tak perlu risau.)
+
 Popover sendiri turut ditukar drpd `position:absolute` (+ `scrollY`)
 kpd `position:fixed` (kedudukan terus drpd `getBoundingClientRect()`,
 tiada `scrollY` lagi) — konsisten dgn scrim+klon yg turut `fixed`,
