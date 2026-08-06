@@ -1286,6 +1286,18 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     glossaryCards.forEach(function (card) {
+      // Kelas CSS .glossary-paper/.strip-glossary (gaya jalur ungu +
+      // ikon buku) DIKONGSI semula utk pelbagai jenis kad BUKAN glosari
+      // (label sebenar pd jalur: "Info", "Info Tambahan", "Petikan
+      // Penting/Surat", malah tajuk custom cth. "Rayuan Anthony
+      // Brooke") — bukan sekadar kad definisi "istilah: makna". Popover
+      // "Glosari" HANYA sesuai utk kad label SEBENAR "Glosari" — kad
+      // lain (fakta tambahan/petikan/tajuk custom) kekal kad asal
+      // (dilaporkan pengguna: "Isu Kasut"/"Anthony Brooke" dipopoverkan
+      // walhal bukan istilah glosari sebenar).
+      var stripLabel = card.querySelector(".paper-strip.strip-glossary");
+      if (!stripLabel || stripLabel.textContent.trim() !== "Glosari") return;
+
       var glossaryPara = card.querySelector(".point-line");
       var termSpan = glossaryPara ? glossaryPara.querySelector(".kw") : null;
       if (!glossaryPara || !termSpan) return;
