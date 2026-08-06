@@ -747,3 +747,15 @@ Pages) — tiada aliran staging/main berasingan macam projek Vercel lain
 dlm ekosistem Idariq. Kerja pada cabang berasingan & push macam biasa;
 JANGAN auto-cipta PR selepas push melainkan diminta eksplisit (beza
 drpd repo `idariq-system` yg ada automasi PR→staging tersendiri).
+
+**Tak perlu tunggu/semak CI sebelum merge** — user dah nyatakan ni
+BERKALI-KALI (arahan berulang, bukan sekali sahaja, jadi kekal berkuat
+kuasa merentas sesi/PR akan datang, JANGAN anggap ia luput lepas satu
+PR). Lepas pengesahan manual dah lulus (`python3 scripts/seo-audit.py`,
+`npm run lint`, semak diff/tag-balance dll ikut jenis perubahan),
+squash-merge PR TERUS tanpa tunggu keputusan check GitHub Actions
+(`seo-audit.yml`/`lint.yml`) — JANGAN `send_later`/`ScheduleWakeup`
+semata² utk tunggu CI lulus dulu sebelum merge. Ni khusus repo
+`zymnotes` (satu cabang produksi, bukan aliran staging→main
+`idariq-system`) — pengesahan manual tempatan dah cukup, CI cuma
+lapisan kedua/rekod, bukan get merge.
