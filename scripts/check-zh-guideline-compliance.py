@@ -24,7 +24,6 @@ MALAY_MARKERS = (
     " terhadap ",
 )
 
-TITLE_RE = re.compile(r"\b(?:Tun|Tunku|Tuanku|Dato'?|Datuk|Sultan|Raja)\s+[A-Z][\w'’.-]+(?:\s+[A-Z][\w'’.-]+){0,4}\b")
 ACRO_RE = re.compile(r"\b[A-Z]{2,}(?:-[A-Z]{2,})?\b")
 ZH_RE = re.compile(r"[\u4e00-\u9fff]")
 UNPOLISHED_RE = re.compile(r"^\s*\u91ca\u4e49[\uff1a:]")
@@ -39,8 +38,14 @@ def iter_units(payload: object):
 
 def extract_entities(text: str) -> list[str]:
     out: list[str] = []
-    out.extend(TITLE_RE.findall(text))
     out.extend(ACRO_RE.findall(text))
+    # NOTA: TITLE_RE (nama Sultan/Tun/Tunku/Dato' dll.) SENGAJA dibuang drpd
+    # senarai wajib-kekal ni — keputusan editorial (docs/zh-mode-editorial-
+    # guideline.md §"Nama Orang & Gelaran") ialah nama orang MESTI
+    # ditransliterasi ke aksara Cina + konteks kurungan, BUKAN dikekalkan
+    # bentuk asal — jadi kehadiran nama asal BM dlm translate bukan lagi
+    # kriteria yg betul (piawaian rasmi ialah 苏丹穆扎法沙（Sultan Muzaffar
+    # Shah, konteks）, bukan Sultan Muzaffar Shah dikekalkan verbatim).
     # NOTA: "Tanah Melayu"/"Raja-raja Melayu" SENGAJA dibuang drpd senarai ni —
     # bukan nama khas (org rasmi/orang), terjemahan ke 马来亚/马来统治者 ialah
     # amalan BETUL, bukan pelanggaran (disahkan audit — 425 "pelanggaran" palsu).
