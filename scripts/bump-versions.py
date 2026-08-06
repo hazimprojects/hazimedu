@@ -37,7 +37,6 @@ RULES: list[tuple[str, list[str]]] = [
     ("assets/js/main.js",                ["main_js",          "sw_cache"]),
     ("assets/js/zh-mode.js",             ["zh_mode_js",       "sw_cache"]),
     ("data/zh-glossary.json",            ["sw_cache"]),
-    ("data/zh-comprehension.json",       ["sw_cache"]),
     ("data/zh-units/index.json",         ["sw_cache"]),
     ("assets/js/subtopic-lab.js",        ["sw_cache"]),
     ("sw.js",                            ["sw_cache"]),
