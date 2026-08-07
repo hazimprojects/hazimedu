@@ -25,7 +25,10 @@
   var CHIP_DISPLAY_INLINE = "inline";
   var CHIP_DISPLAY_STACKED = "stacked";
   var CHIP_TOUCH_CLICK_DELAY_MS = 360;
+  /** Jarak pergerakan jari (px) sblm sentuhan dianggap scroll/seret, bukan tap tulen. */
+  var CHIP_TAP_MOVE_TOLERANCE_PX = 10;
   var chipInteractionsBound = false;
+  var revealAllActive = false;
   var ENTITY_WARNING_LABEL = "⚠︎ Entiti dikekalkan (BM asal).";
   var HARD_PROTECTED_ENTITIES = [
     "Raja-raja Melayu", "Majlis Raja-raja",
@@ -825,7 +828,8 @@
     });
   }
 
-  function toggleChipFlip(chip, triggerType) {
+  /** Tetapkan keadaan flip cip terus (bukan togol) — dikongsi antara tap tunggal & "papar semua". */
+  function setChipFlip(chip, flipped, triggerType) {
     if (!chip || !chip.classList || !chip.classList.contains("paper-chip")) return;
     var state = chip.__zhChipState;
     if (!state) {
@@ -844,19 +848,49 @@
       return;
     }
 
-    state.isFlipped = !state.isFlipped;
-    chip.classList.toggle("zh-chip-flipped", state.isFlipped);
-    chip.setAttribute("aria-pressed", state.isFlipped ? "true" : "false");
+    state.isFlipped = flipped;
+    chip.classList.toggle("zh-chip-flipped", flipped);
+    chip.setAttribute("aria-pressed", flipped ? "true" : "false");
+  }
+
+  function toggleChipFlip(chip, triggerType) {
+    if (!chip || !chip.__zhChipState) return;
+    setChipFlip(chip, !chip.__zhChipState.isFlipped, triggerType);
   }
 
   function bindChipInteractions() {
     if (chipInteractionsBound) return;
     chipInteractionsBound = true;
 
+    document.addEventListener("touchstart", function (event) {
+      var chip = event.target && event.target.closest ? event.target.closest(".paper-chip.zh-chip-translated") : null;
+      if (!chip) return;
+      var t = event.touches && event.touches[0];
+      if (!t) return;
+      chip.__zhTouchStartX = t.clientX;
+      chip.__zhTouchStartY = t.clientY;
+    }, { passive: true });
+
     document.addEventListener("touchend", function (event) {
       var chip = event.target && event.target.closest ? event.target.closest(".paper-chip.zh-chip-translated") : null;
       if (!chip) return;
       chip.__zhLastTouchTs = Date.now();
+
+      // Jari mula sentuh pd cip ni tapi berakhir jauh (scroll/seret halaman) —
+      // touchend.target KEKAL pd elemen touchstart walau jari dah gerak jauh
+      // (bukan spt mouse), jadi WAJIB semak jarak sebenar, bukan sekadar target.
+      var startX = chip.__zhTouchStartX;
+      var startY = chip.__zhTouchStartY;
+      chip.__zhTouchStartX = null;
+      chip.__zhTouchStartY = null;
+
+      var t = event.changedTouches && event.changedTouches[0];
+      if (t && typeof startX === "number" && typeof startY === "number") {
+        var dx = t.clientX - startX;
+        var dy = t.clientY - startY;
+        if (Math.hypot(dx, dy) > CHIP_TAP_MOVE_TOLERANCE_PX) return; // scroll, bukan tap
+      }
+
       toggleChipFlip(chip, "touchend");
     }, { passive: true });
 
@@ -1172,6 +1206,45 @@
     });
   }
 
+  // ── Papar Semua Terjemahan (bulk reveal) ─────────────────
+
+  function setAllChipFlips(active) {
+    document.querySelectorAll(".paper-chip.zh-chip-translated").forEach(function (chip) {
+      setChipFlip(chip, active, "reveal-all");
+    });
+  }
+
+  function setAllHeadingAnns(active) {
+    document.querySelectorAll(".zh-heading-toggle").forEach(function (toggleBtn) {
+      var annSpan = toggleBtn.parentElement
+        ? toggleBtn.parentElement.querySelector(".zh-heading-ann")
+        : null;
+      if (!annSpan) return;
+      var isOpen = !annSpan.hasAttribute("hidden");
+      if (active && !isOpen) toggleBtn.click();
+      if (!active && isOpen) toggleBtn.click();
+    });
+  }
+
+  function updateRevealAllButtons() {
+    document.querySelectorAll(".zh-reveal-all-fab").forEach(function (btn) {
+      btn.setAttribute("aria-pressed", revealAllActive ? "true" : "false");
+      btn.classList.toggle("is-active", revealAllActive);
+      btn.setAttribute(
+        "aria-label",
+        revealAllActive ? "Sembunyikan semua terjemahan Cina" : "Papar semua terjemahan Cina"
+      );
+    });
+  }
+
+  function toggleRevealAll() {
+    if (!isZhMode()) return;
+    revealAllActive = !revealAllActive;
+    setAllChipFlips(revealAllActive);
+    setAllHeadingAnns(revealAllActive);
+    updateRevealAllButtons();
+  }
+
   function applyZhMode(active, options) {
     var opts = options || {};
     var requestId = ++applyRequestId;
@@ -1198,6 +1271,8 @@
       resetChipFlips();
       removeComprehensionPanels();
       removeOrphanAnnotations();
+      revealAllActive = false;
+      updateRevealAllButtons();
     }
   }
 
@@ -1229,6 +1304,18 @@
         applyZhMode(!isZhMode());
       });
 
+      var revealBtn = document.createElement("button");
+      revealBtn.type = "button";
+      revealBtn.className = "zh-reveal-all-fab";
+      revealBtn.setAttribute("aria-pressed", revealAllActive ? "true" : "false");
+      revealBtn.setAttribute(
+        "aria-label",
+        revealAllActive ? "Sembunyikan semua terjemahan Cina" : "Papar semua terjemahan Cina"
+      );
+      revealBtn.textContent = "全";
+      if (revealAllActive) revealBtn.classList.add("is-active");
+      revealBtn.addEventListener("click", toggleRevealAll);
+
       var themeFab = nav.querySelector(".display-fab");
       var end = nav.querySelector(".nav-wrap-end");
       if (!end) {
@@ -1248,7 +1335,9 @@
       }
       if (themeFab) {
         end.insertBefore(btn, themeFab);
+        end.insertBefore(revealBtn, themeFab);
       } else {
+        end.insertBefore(revealBtn, end.firstChild);
         end.insertBefore(btn, end.firstChild);
       }
     });
