@@ -1,0 +1,765 @@
+{
+  "meta": {
+    "source_file": "notes/bab-9-4.html",
+    "rollout": "bab-9-4-manual-zh",
+    "notes": "Bab 9.4 (Perjanjian Persekutuan Tanah Melayu 1957) + Rumusan Besar Bab 9: terjemahan zh-CN manual; bm_original selaras dengan teks pada halaman (tanpa span)."
+  },
+  "units": [
+    {
+      "source_id": "bab-9-4-sum-1",
+      "bm_original": "Perjanjian Persekutuan Tanah Melayu 1957 ditandatangani bagi membentuk Perlembagaan Persekutuan Tanah Melayu 1957 sebagai asas negara merdeka.",
+      "translate": "《1957年马来亚联合邦协定》签署，以制定作为独立国家基础的1957年马来亚联合邦宪法。",
+      "key_points_zh": [
+        "《1957年马来亚联合邦协定》签署，以制定作为独立国家基础的1957年马来亚联合邦宪法。"
+      ],
+      "bm_focus_phrase": "Perjanjian Persekutuan Tanah Melayu 1957 ditandatangani bagi membentuk Perlembagaan Persekutuan Tanah Melayu 1957 sebagai asas negara merdeka."
+    },
+    {
+      "source_id": "bab-9-4-sum-2",
+      "bm_original": "Perjanjian ini ditandatangani pada 5 Ogos 1957 di King's House, Kuala Lumpur antara Raja-raja Melayu dan Sir Donald MacGillivray yang mewakili Ratu Elizabeth II.",
+      "translate": "这项协定于1957年8月5日在吉隆坡King's House签署，签署方为马来统治者与代表伊丽莎白二世女王（Ratu Elizabeth II）的唐纳德·麦吉利夫雷爵士（Sir Donald MacGillivray）。",
+      "key_points_zh": [
+        "这项协定于1957年8月5日在吉隆坡King's House签署，签署方为马来统治者与代表伊丽莎白二世女王（Ratu Elizabeth II）的唐纳德·麦吉利夫雷爵士（Sir Donald MacGillivray）。"
+      ],
+      "bm_focus_phrase": "Perjanjian ini ditandatangani pada 5 Ogos 1957 di King's House, Kuala Lumpur antara Raja-raja Melayu dan Sir Donald MacGillivray yang mewakili Ratu Elizabeth II."
+    },
+    {
+      "source_id": "bab-9-4-sum-3",
+      "bm_original": "Perjanjian ini menjadi asas kepada sistem Raja Berperlembagaan, Demokrasi Berparlimen, kewarganegaraan dan hak rakyat yang masih diamalkan hingga hari ini.",
+      "translate": "这项协定成为君主立宪制、议会民主制、公民权与人民权利制度的基础，至今仍然沿用。",
+      "key_points_zh": [
+        "这项协定成为君主立宪制、议会民主制、公民权与人民权利制度的基础，至今仍然沿用。"
+      ],
+      "bm_focus_phrase": "Perjanjian ini menjadi asas kepada sistem Raja Berperlembagaan, Demokrasi Berparlimen, kewarganegaraan dan hak rakyat yang masih diamalkan hingga hari ini."
+    },
+    {
+      "source_id": "bab-9-4-orph-h1",
+      "bm_original": "Apakah inti pati Perjanjian Persekutuan Tanah Melayu 1957?",
+      "translate": "《1957年马来亚联合邦协定》的核心内容是什么？",
+      "key_points_zh": [
+        "《1957年马来亚联合邦协定》的核心内容是什么？"
+      ],
+      "bm_focus_phrase": "Apakah inti pati Perjanjian Persekutuan Tanah Melayu 1957?"
+    },
+    {
+      "source_id": "bab-9-4-u01",
+      "bm_original": "Perjanjian ini menjadi asas kepada Perlembagaan Persekutuan Tanah Melayu 1957 melalui persetujuan antara Raja-raja Melayu dengan kerajaan British. Inti pati perjanjian merangkumi:",
+      "translate": "这项协定是马来统治者与英国政府达成协议后，成为1957年马来亚联合邦宪法的基础。协定的核心内容包括：",
+      "key_points_zh": [
+        "这项协定是马来统治者与英国政府达成协议后，成为1957年马来亚联合邦宪法的基础。协定的核心内容包括："
+      ],
+      "bm_focus_phrase": "Perjanjian ini menjadi asas kepada Perlembagaan Persekutuan Tanah Melayu 1957 melalui persetujuan antara Raja-raja Melayu dengan kerajaan British. Inti pati perjanjian merangkumi:"
+    },
+    {
+      "source_id": "bab-9-4-extra-1",
+      "bm_original": "Raja Berperlembagaan dan Demokrasi Berparlimen",
+      "translate": "君主立宪制与议会民主制",
+      "key_points_zh": [
+        "君主立宪制与议会民主制"
+      ],
+      "bm_focus_phrase": "Raja Berperlembagaan dan Demokrasi Berparlimen"
+    },
+    {
+      "source_id": "bab-9-4-extra-2",
+      "bm_original": "kewarganegaraan",
+      "translate": "公民权",
+      "key_points_zh": [
+        "公民权"
+      ],
+      "bm_focus_phrase": "kewarganegaraan"
+    },
+    {
+      "source_id": "bab-9-4-extra-3",
+      "bm_original": "kedudukan istimewa orang Melayu dan kepentingan sah kaum lain",
+      "translate": "马来人的特殊地位与其他族群的合法权益",
+      "key_points_zh": [
+        "马来人的特殊地位与其他族群的合法权益"
+      ],
+      "bm_focus_phrase": "kedudukan istimewa orang Melayu dan kepentingan sah kaum lain"
+    },
+    {
+      "source_id": "bab-9-4-extra-4",
+      "bm_original": "kedudukan agama Islam",
+      "translate": "伊斯兰教的地位",
+      "key_points_zh": [
+        "伊斯兰教的地位"
+      ],
+      "bm_focus_phrase": "kedudukan agama Islam"
+    },
+    {
+      "source_id": "bab-9-4-extra-5",
+      "bm_original": "kedudukan Bahasa Melayu",
+      "translate": "马来语的地位",
+      "key_points_zh": [
+        "马来语的地位"
+      ],
+      "bm_focus_phrase": "kedudukan Bahasa Melayu"
+    },
+    {
+      "source_id": "bab-9-4-fokus-line",
+      "bm_original": "Perjanjian Persekutuan Tanah Melayu 1957 dapat difahami melalui lima bahagian utama:",
+      "translate": "《1957年马来亚联合邦协定》可从五个主要部分加以理解：",
+      "key_points_zh": [
+        "《1957年马来亚联合邦协定》可从五个主要部分加以理解："
+      ],
+      "bm_focus_phrase": "Perjanjian Persekutuan Tanah Melayu 1957 dapat difahami melalui lima bahagian utama:"
+    },
+    {
+      "source_id": "bab-9-4-extra-6",
+      "bm_original": "Raja Berperlembagaan dan Demokrasi Berparlimen",
+      "translate": "君主立宪制与议会民主制",
+      "key_points_zh": [
+        "君主立宪制与议会民主制"
+      ],
+      "bm_focus_phrase": "Raja Berperlembagaan dan Demokrasi Berparlimen"
+    },
+    {
+      "source_id": "bab-9-4-extra-7",
+      "bm_original": "Kewarganegaraan",
+      "translate": "公民权",
+      "key_points_zh": [
+        "公民权"
+      ],
+      "bm_focus_phrase": "Kewarganegaraan"
+    },
+    {
+      "source_id": "bab-9-4-extra-8",
+      "bm_original": "Kedudukan Istimewa Orang Melayu dan Kepentingan Sah Kaum Lain",
+      "translate": "马来人的特殊地位与其他族群的合法权益",
+      "key_points_zh": [
+        "马来人的特殊地位与其他族群的合法权益"
+      ],
+      "bm_focus_phrase": "Kedudukan Istimewa Orang Melayu dan Kepentingan Sah Kaum Lain"
+    },
+    {
+      "source_id": "bab-9-4-extra-9",
+      "bm_original": "Kedudukan Agama Islam",
+      "translate": "伊斯兰教的地位",
+      "key_points_zh": [
+        "伊斯兰教的地位"
+      ],
+      "bm_focus_phrase": "Kedudukan Agama Islam"
+    },
+    {
+      "source_id": "bab-9-4-extra-10",
+      "bm_original": "Kedudukan Bahasa Melayu",
+      "translate": "马来语的地位",
+      "key_points_zh": [
+        "马来语的地位"
+      ],
+      "bm_focus_phrase": "Kedudukan Bahasa Melayu"
+    },
+    {
+      "source_id": "bab-9-4-u02",
+      "bm_original": "Perjanjian Persekutuan Tanah Melayu 1957 ditandatangani pada 5 Ogos 1957.",
+      "translate": "《1957年马来亚联合邦协定》于1957年8月5日签署。",
+      "key_points_zh": [
+        "《1957年马来亚联合邦协定》于1957年8月5日签署。"
+      ],
+      "bm_focus_phrase": "Perjanjian Persekutuan Tanah Melayu 1957 ditandatangani pada 5 Ogos 1957."
+    },
+    {
+      "source_id": "bab-9-4-u03",
+      "bm_original": "Perjanjian ditandatangani di King's House, Kuala Lumpur.",
+      "translate": "协定在吉隆坡King's House签署。",
+      "key_points_zh": [
+        "协定在吉隆坡King's House签署。"
+      ],
+      "bm_focus_phrase": "Perjanjian ditandatangani di King's House, Kuala Lumpur."
+    },
+    {
+      "source_id": "bab-9-4-u04",
+      "bm_original": "Perjanjian ditandatangani antara:",
+      "translate": "协定由以下双方签署：",
+      "key_points_zh": [
+        "协定由以下双方签署："
+      ],
+      "bm_focus_phrase": "Perjanjian ditandatangani antara:"
+    },
+    {
+      "source_id": "bab-9-4-extra-11",
+      "bm_original": "Raja-raja Melayu",
+      "translate": "马来统治者",
+      "key_points_zh": [
+        "马来统治者"
+      ],
+      "bm_focus_phrase": "Raja-raja Melayu"
+    },
+    {
+      "source_id": "bab-9-4-extra-12",
+      "bm_original": "Sir Donald MacGillivray yang mewakili Ratu Elizabeth II",
+      "translate": "代表伊丽莎白二世女王的唐纳德·麦吉利夫雷爵士（Sir Donald MacGillivray）",
+      "key_points_zh": [
+        "代表伊丽莎白二世女王的唐纳德·麦吉利夫雷爵士（Sir Donald MacGillivray）"
+      ],
+      "bm_focus_phrase": "Sir Donald MacGillivray yang mewakili Ratu Elizabeth II"
+    },
+    {
+      "source_id": "bab-9-4-u05",
+      "bm_original": "Perjanjian ini menjadi asas kepada Perlembagaan Persekutuan Tanah Melayu 1957.",
+      "translate": "这项协定成为1957年马来亚联合邦宪法的基础。",
+      "key_points_zh": [
+        "这项协定成为1957年马来亚联合邦宪法的基础。"
+      ],
+      "bm_focus_phrase": "Perjanjian ini menjadi asas kepada Perlembagaan Persekutuan Tanah Melayu 1957."
+    },
+    {
+      "source_id": "bab-9-4-u06",
+      "bm_original": "Perjanjian menetapkan bahawa:",
+      "translate": "协定规定：",
+      "key_points_zh": [
+        "协定规定："
+      ],
+      "bm_focus_phrase": "Perjanjian menetapkan bahawa:"
+    },
+    {
+      "source_id": "bab-9-4-extra-13",
+      "bm_original": "Ketua Negara ialah Yang di-Pertuan Agong",
+      "translate": "国家元首为最高元首（Yang di-Pertuan Agong）",
+      "key_points_zh": [
+        "国家元首为最高元首（Yang di-Pertuan Agong）"
+      ],
+      "bm_focus_phrase": "Ketua Negara ialah Yang di-Pertuan Agong"
+    },
+    {
+      "source_id": "bab-9-4-extra-14",
+      "bm_original": "Yang di-Pertuan Agong dipilih daripada kalangan Raja-raja Melayu",
+      "translate": "最高元首从马来统治者当中选出",
+      "key_points_zh": [
+        "最高元首从马来统治者当中选出"
+      ],
+      "bm_focus_phrase": "Yang di-Pertuan Agong dipilih daripada kalangan Raja-raja Melayu"
+    },
+    {
+      "source_id": "bab-9-4-extra-15",
+      "bm_original": "Tempoh pemerintahan Yang di-Pertuan Agong ialah lima tahun",
+      "translate": "最高元首的任期为五年",
+      "key_points_zh": [
+        "最高元首的任期为五年"
+      ],
+      "bm_focus_phrase": "Tempoh pemerintahan Yang di-Pertuan Agong ialah lima tahun"
+    },
+    {
+      "source_id": "bab-9-4-u07",
+      "bm_original": "Perkara ini diperuntukkan dalam Perkara 32 Perlembagaan Persekutuan.",
+      "translate": "此事项载明于联邦宪法第32条。",
+      "key_points_zh": [
+        "此事项载明于联邦宪法第32条。"
+      ],
+      "bm_focus_phrase": "Perkara ini diperuntukkan dalam Perkara 32 Perlembagaan Persekutuan."
+    },
+    {
+      "source_id": "bab-9-4-u08",
+      "bm_original": "Yang di-Pertuan Agong ialah Ketua Utama Negara.",
+      "translate": "最高元首是国家最高元首。",
+      "key_points_zh": [
+        "最高元首是国家最高元首。"
+      ],
+      "bm_focus_phrase": "Yang di-Pertuan Agong ialah Ketua Utama Negara."
+    },
+    {
+      "source_id": "bab-9-4-u09",
+      "bm_original": "Kedudukan baginda mengatasi semua orang di Persekutuan.",
+      "translate": "其地位凌驾于联合邦所有人之上。",
+      "key_points_zh": [
+        "其地位凌驾于联合邦所有人之上。"
+      ],
+      "bm_focus_phrase": "Kedudukan baginda mengatasi semua orang di Persekutuan."
+    },
+    {
+      "source_id": "bab-9-4-u10",
+      "bm_original": "Permaisuri Yang di-Pertuan Agong ialah Raja Permaisuri Agong.",
+      "translate": "最高元首的配偶称为最高元首后（Raja Permaisuri Agong）。",
+      "key_points_zh": [
+        "最高元首的配偶称为最高元首后（Raja Permaisuri Agong）。"
+      ],
+      "bm_focus_phrase": "Permaisuri Yang di-Pertuan Agong ialah Raja Permaisuri Agong."
+    },
+    {
+      "source_id": "bab-9-4-u11",
+      "bm_original": "Pemilihan dibuat oleh Majlis Raja-Raja.",
+      "translate": "遴选由统治者会议进行。",
+      "key_points_zh": [
+        "遴选由统治者会议进行。"
+      ],
+      "bm_focus_phrase": "Pemilihan dibuat oleh Majlis Raja-Raja."
+    },
+    {
+      "source_id": "bab-9-4-u12",
+      "bm_original": "Yang di-Pertuan Agong boleh meletakkan jawatan atau dilucutkan melalui Majlis Raja-Raja mengikut Perlembagaan.",
+      "translate": "最高元首可依宪法辞职，或经统治者会议罢免。",
+      "key_points_zh": [
+        "最高元首可依宪法辞职，或经统治者会议罢免。"
+      ],
+      "bm_focus_phrase": "Yang di-Pertuan Agong boleh meletakkan jawatan atau dilucutkan melalui Majlis Raja-Raja mengikut Perlembagaan."
+    },
+    {
+      "source_id": "bab-9-4-u13",
+      "bm_original": "Setiap orang yang lahir di Persekutuan Tanah Melayu pada atau selepas Hari Merdeka boleh menjadi warganegara.",
+      "translate": "凡在马来亚联合邦独立日或之后出生者，均可成为公民。",
+      "key_points_zh": [
+        "凡在马来亚联合邦独立日或之后出生者，均可成为公民。"
+      ],
+      "bm_focus_phrase": "Setiap orang yang lahir di Persekutuan Tanah Melayu pada atau selepas Hari Merdeka boleh menjadi warganegara."
+    },
+    {
+      "source_id": "bab-9-4-u14",
+      "bm_original": "Terdapat tiga cara memperoleh kewarganegaraan.",
+      "translate": "取得公民权有三种途径。",
+      "key_points_zh": [
+        "取得公民权有三种途径。"
+      ],
+      "bm_focus_phrase": "Terdapat tiga cara memperoleh kewarganegaraan."
+    },
+    {
+      "source_id": "bab-9-4-u15",
+      "bm_original": "Individu yang telah menjadi rakyat Persekutuan sebelum Merdeka.",
+      "translate": "在独立前已是联合邦子民者。",
+      "key_points_zh": [
+        "在独立前已是联合邦子民者。"
+      ],
+      "bm_focus_phrase": "Individu yang telah menjadi rakyat Persekutuan sebelum Merdeka."
+    },
+    {
+      "source_id": "bab-9-4-u16",
+      "bm_original": "Individu yang lahir di Persekutuan pada atau selepas Hari Merdeka.",
+      "translate": "在独立日或之后于联合邦出生者。",
+      "key_points_zh": [
+        "在独立日或之后于联合邦出生者。"
+      ],
+      "bm_focus_phrase": "Individu yang lahir di Persekutuan pada atau selepas Hari Merdeka."
+    },
+    {
+      "source_id": "bab-9-4-u17",
+      "bm_original": "Individu yang lahir di luar Persekutuan tetapi bapanya ialah warganegara ketika kelahirannya.",
+      "translate": "在联合邦境外出生，但其父在其出生时为公民者。",
+      "key_points_zh": [
+        "在联合邦境外出生，但其父在其出生时为公民者。"
+      ],
+      "bm_focus_phrase": "Individu yang lahir di luar Persekutuan tetapi bapanya ialah warganegara ketika kelahirannya."
+    },
+    {
+      "source_id": "bab-9-4-u18",
+      "bm_original": "Individu yang lahir di luar negara tetapi memenuhi syarat pendaftaran yang ditetapkan.",
+      "translate": "在国外出生但符合所订登记条件者。",
+      "key_points_zh": [
+        "在国外出生但符合所订登记条件者。"
+      ],
+      "bm_focus_phrase": "Individu yang lahir di luar negara tetapi memenuhi syarat pendaftaran yang ditetapkan."
+    },
+    {
+      "source_id": "bab-9-4-u19",
+      "bm_original": "Memohon didaftarkan sebagai rakyat.",
+      "translate": "申请登记成为公民。",
+      "key_points_zh": [
+        "申请登记成为公民。"
+      ],
+      "bm_focus_phrase": "Memohon didaftarkan sebagai rakyat."
+    },
+    {
+      "source_id": "bab-9-4-u20",
+      "bm_original": "Memohon menjadi warganegara selepas memenuhi syarat yang ditetapkan.",
+      "translate": "在符合所订条件后申请成为公民。",
+      "key_points_zh": [
+        "在符合所订条件后申请成为公民。"
+      ],
+      "bm_focus_phrase": "Memohon menjadi warganegara selepas memenuhi syarat yang ditetapkan."
+    },
+    {
+      "source_id": "bab-9-4-u21",
+      "bm_original": "Perjanjian menjamin kedudukan istimewa orang Melayu dipelihara.",
+      "translate": "协定保证马来人的特殊地位受到维护。",
+      "key_points_zh": [
+        "协定保证马来人的特殊地位受到维护。"
+      ],
+      "bm_focus_phrase": "Perjanjian menjamin kedudukan istimewa orang Melayu dipelihara."
+    },
+    {
+      "source_id": "bab-9-4-u22",
+      "bm_original": "Hak semua rakyat tetap dijamin.",
+      "translate": "所有公民的权利仍受保障。",
+      "key_points_zh": [
+        "所有公民的权利仍受保障。"
+      ],
+      "bm_focus_phrase": "Hak semua rakyat tetap dijamin."
+    },
+    {
+      "source_id": "bab-9-4-u23",
+      "bm_original": "Kaum lain terus menikmati hak sebagai warganegara.",
+      "translate": "其他族群继续享有公民权利。",
+      "key_points_zh": [
+        "其他族群继续享有公民权利。"
+      ],
+      "bm_focus_phrase": "Kaum lain terus menikmati hak sebagai warganegara."
+    },
+    {
+      "source_id": "bab-9-4-u24",
+      "bm_original": "Yang di-Pertuan Agong bertanggungjawab memelihara kedudukan istimewa orang Melayu.",
+      "translate": "最高元首负责维护马来人的特殊地位。",
+      "key_points_zh": [
+        "最高元首负责维护马来人的特殊地位。"
+      ],
+      "bm_focus_phrase": "Yang di-Pertuan Agong bertanggungjawab memelihara kedudukan istimewa orang Melayu."
+    },
+    {
+      "source_id": "bab-9-4-u25",
+      "bm_original": "Yang di-Pertuan Agong turut melindungi kepentingan sah kaum-kaum lain.",
+      "translate": "最高元首也保护其他族群的合法权益。",
+      "key_points_zh": [
+        "最高元首也保护其他族群的合法权益。"
+      ],
+      "bm_focus_phrase": "Yang di-Pertuan Agong turut melindungi kepentingan sah kaum-kaum lain."
+    },
+    {
+      "source_id": "bab-9-4-u26",
+      "bm_original": "Peruntukan khas boleh diberikan dalam:",
+      "translate": "特别配额可给予以下方面：",
+      "key_points_zh": [
+        "特别配额可给予以下方面："
+      ],
+      "bm_focus_phrase": "Peruntukan khas boleh diberikan dalam:"
+    },
+    {
+      "source_id": "bab-9-4-extra-16",
+      "bm_original": "jawatan perkhidmatan awam",
+      "translate": "公共服务职位",
+      "key_points_zh": [
+        "公共服务职位"
+      ],
+      "bm_focus_phrase": "jawatan perkhidmatan awam"
+    },
+    {
+      "source_id": "bab-9-4-extra-17",
+      "bm_original": "biasiswa",
+      "translate": "奖学金",
+      "key_points_zh": [
+        "奖学金"
+      ],
+      "bm_focus_phrase": "biasiswa"
+    },
+    {
+      "source_id": "bab-9-4-extra-18",
+      "bm_original": "pendidikan",
+      "translate": "教育",
+      "key_points_zh": [
+        "教育"
+      ],
+      "bm_focus_phrase": "pendidikan"
+    },
+    {
+      "source_id": "bab-9-4-extra-19",
+      "bm_original": "latihan",
+      "translate": "培训",
+      "key_points_zh": [
+        "培训"
+      ],
+      "bm_focus_phrase": "latihan"
+    },
+    {
+      "source_id": "bab-9-4-extra-20",
+      "bm_original": "permit atau lesen tertentu mengikut undang-undang",
+      "translate": "依法特定的准证或执照",
+      "key_points_zh": [
+        "依法特定的准证或执照"
+      ],
+      "bm_focus_phrase": "permit atau lesen tertentu mengikut undang-undang"
+    },
+    {
+      "source_id": "bab-9-4-u27",
+      "bm_original": "Perjanjian menetapkan Islam sebagai agama Persekutuan.",
+      "translate": "协定规定伊斯兰教为联合邦的宗教。",
+      "key_points_zh": [
+        "协定规定伊斯兰教为联合邦的宗教。"
+      ],
+      "bm_focus_phrase": "Perjanjian menetapkan Islam sebagai agama Persekutuan."
+    },
+    {
+      "source_id": "bab-9-4-u28",
+      "bm_original": "Agama lain boleh diamalkan dengan aman dan damai.",
+      "translate": "其他宗教可在和平安宁中奉行。",
+      "key_points_zh": [
+        "其他宗教可在和平安宁中奉行。"
+      ],
+      "bm_focus_phrase": "Agama lain boleh diamalkan dengan aman dan damai."
+    },
+    {
+      "source_id": "bab-9-4-orph-h2",
+      "bm_original": "Perkara 3",
+      "translate": "第3条",
+      "key_points_zh": [
+        "第3条"
+      ],
+      "bm_focus_phrase": "Perkara 3"
+    },
+    {
+      "source_id": "bab-9-4-u29",
+      "bm_original": "Islam ialah agama Persekutuan.",
+      "translate": "伊斯兰教为联合邦的宗教。",
+      "key_points_zh": [
+        "伊斯兰教为联合邦的宗教。"
+      ],
+      "bm_focus_phrase": "Islam ialah agama Persekutuan."
+    },
+    {
+      "source_id": "bab-9-4-orph-h3",
+      "bm_original": "Perkara 11",
+      "translate": "第11条",
+      "key_points_zh": [
+        "第11条"
+      ],
+      "bm_focus_phrase": "Perkara 11"
+    },
+    {
+      "source_id": "bab-9-4-extra-21",
+      "bm_original": "Setiap individu berhak menganut agama sendiri",
+      "translate": "人人有权信奉自己的宗教",
+      "key_points_zh": [
+        "人人有权信奉自己的宗教"
+      ],
+      "bm_focus_phrase": "Setiap individu berhak menganut agama sendiri"
+    },
+    {
+      "source_id": "bab-9-4-extra-22",
+      "bm_original": "Setiap individu berhak mengamalkan agamanya",
+      "translate": "人人有权奉行自己的宗教",
+      "key_points_zh": [
+        "人人有权奉行自己的宗教"
+      ],
+      "bm_focus_phrase": "Setiap individu berhak mengamalkan agamanya"
+    },
+    {
+      "source_id": "bab-9-4-extra-23",
+      "bm_original": "Setiap individu berhak mengurus hal ehwal agamanya",
+      "translate": "人人有权处理本身的宗教事务",
+      "key_points_zh": [
+        "人人有权处理本身的宗教事务"
+      ],
+      "bm_focus_phrase": "Setiap individu berhak mengurus hal ehwal agamanya"
+    },
+    {
+      "source_id": "bab-9-4-extra-24",
+      "bm_original": "Setiap individu berhak menubuhkan institusi agama",
+      "translate": "人人有权设立宗教机构",
+      "key_points_zh": [
+        "人人有权设立宗教机构"
+      ],
+      "bm_focus_phrase": "Setiap individu berhak menubuhkan institusi agama"
+    },
+    {
+      "source_id": "bab-9-4-extra-25",
+      "bm_original": "Setiap individu berhak memiliki dan mentadbir harta agama",
+      "translate": "人人有权拥有及管理宗教财产",
+      "key_points_zh": [
+        "人人有权拥有及管理宗教财产"
+      ],
+      "bm_focus_phrase": "Setiap individu berhak memiliki dan mentadbir harta agama"
+    },
+    {
+      "source_id": "bab-9-4-u30",
+      "bm_original": "Perjanjian menetapkan Bahasa Melayu sebagai bahasa kebangsaan.",
+      "translate": "协定规定马来语为国语。",
+      "key_points_zh": [
+        "协定规定马来语为国语。"
+      ],
+      "bm_focus_phrase": "Perjanjian menetapkan Bahasa Melayu sebagai bahasa kebangsaan."
+    },
+    {
+      "source_id": "bab-9-4-u31",
+      "bm_original": "Bahasa Melayu menjadi bahasa rasmi pentadbiran.",
+      "translate": "马来语成为行政官方语言。",
+      "key_points_zh": [
+        "马来语成为行政官方语言。"
+      ],
+      "bm_focus_phrase": "Bahasa Melayu menjadi bahasa rasmi pentadbiran."
+    },
+    {
+      "source_id": "bab-9-4-u32",
+      "bm_original": "Bahasa kebangsaan ialah Bahasa Melayu.",
+      "translate": "国语为马来语。",
+      "key_points_zh": [
+        "国语为马来语。"
+      ],
+      "bm_focus_phrase": "Bahasa kebangsaan ialah Bahasa Melayu."
+    },
+    {
+      "source_id": "bab-9-4-u33",
+      "bm_original": "Tulisan yang ditetapkan oleh Parlimen boleh digunakan.",
+      "translate": "可使用国会所订定的文字。",
+      "key_points_zh": [
+        "可使用国会所订定的文字。"
+      ],
+      "bm_focus_phrase": "Tulisan yang ditetapkan oleh Parlimen boleh digunakan."
+    },
+    {
+      "source_id": "bab-9-4-u34",
+      "bm_original": "Hak mempelajari dan menggunakan bahasa lain tidak dihalang.",
+      "translate": "学习及使用其他语言的权利不受阻碍。",
+      "key_points_zh": [
+        "学习及使用其他语言的权利不受阻碍。"
+      ],
+      "bm_focus_phrase": "Hak mempelajari dan menggunakan bahasa lain tidak dihalang."
+    },
+    {
+      "source_id": "bab-9-4-u35",
+      "bm_original": "Kerajaan Persekutuan dan kerajaan negeri boleh memelihara penggunaan bahasa kaum lain.",
+      "translate": "联邦政府与州政府可维护其他族群语言的使用。",
+      "key_points_zh": [
+        "联邦政府与州政府可维护其他族群语言的使用。"
+      ],
+      "bm_focus_phrase": "Kerajaan Persekutuan dan kerajaan negeri boleh memelihara penggunaan bahasa kaum lain."
+    },
+    {
+      "source_id": "bab-9-4-u36",
+      "bm_original": "Perjanjian Persekutuan Tanah Melayu 1957 menjadi asas kepada pembentukan Perlembagaan Persekutuan dan negara merdeka yang berdaulat:",
+      "translate": "《1957年马来亚联合邦协定》成为联邦宪法制定与主权独立国家建立的基础：",
+      "key_points_zh": [
+        "《1957年马来亚联合邦协定》成为联邦宪法制定与主权独立国家建立的基础："
+      ],
+      "bm_focus_phrase": "Perjanjian Persekutuan Tanah Melayu 1957 menjadi asas kepada pembentukan Perlembagaan Persekutuan dan negara merdeka yang berdaulat:"
+    },
+    {
+      "source_id": "bab-9-4-extra-26",
+      "bm_original": "Raja Berperlembagaan",
+      "translate": "君主立宪制",
+      "key_points_zh": [
+        "君主立宪制"
+      ],
+      "bm_focus_phrase": "Raja Berperlembagaan"
+    },
+    {
+      "source_id": "bab-9-4-extra-27",
+      "bm_original": "Demokrasi Berparlimen",
+      "translate": "议会民主制",
+      "key_points_zh": [
+        "议会民主制"
+      ],
+      "bm_focus_phrase": "Demokrasi Berparlimen"
+    },
+    {
+      "source_id": "bab-9-4-extra-28",
+      "bm_original": "Hak kewarganegaraan",
+      "translate": "公民权利",
+      "key_points_zh": [
+        "公民权利"
+      ],
+      "bm_focus_phrase": "Hak kewarganegaraan"
+    },
+    {
+      "source_id": "bab-9-4-extra-29",
+      "bm_original": "Agama Persekutuan",
+      "translate": "联合邦宗教",
+      "key_points_zh": [
+        "联合邦宗教"
+      ],
+      "bm_focus_phrase": "Agama Persekutuan"
+    },
+    {
+      "source_id": "bab-9-4-extra-30",
+      "bm_original": "Bahasa kebangsaan",
+      "translate": "国语",
+      "key_points_zh": [
+        "国语"
+      ],
+      "bm_focus_phrase": "Bahasa kebangsaan"
+    },
+    {
+      "source_id": "bab-9-4-extra-31",
+      "bm_original": "Kedudukan istimewa orang Melayu",
+      "translate": "马来人的特殊地位",
+      "key_points_zh": [
+        "马来人的特殊地位"
+      ],
+      "bm_focus_phrase": "Kedudukan istimewa orang Melayu"
+    },
+    {
+      "source_id": "bab-9-4-u37",
+      "bm_original": "Perjanjian ini membuktikan bahawa permuafakatan antara Raja-raja Melayu, pemimpin tempatan dan British berjaya melahirkan sebuah negara yang merdeka tanpa pertumpahan darah. Perjanjian ini terus menjadi asas kepada sistem pemerintahan Malaysia hingga hari ini.",
+      "translate": "这项协定证明，马来统治者、本地领袖与英国之间的协商，成功不流血地缔造了一个独立国家。这项协定至今仍是马来西亚政治体制的基础。",
+      "key_points_zh": [
+        "这项协定证明，马来统治者、本地领袖与英国之间的协商，成功不流血地缔造了一个独立国家。这项协定至今仍是马来西亚政治体制的基础。"
+      ],
+      "bm_focus_phrase": "Perjanjian ini membuktikan bahawa permuafakatan antara Raja-raja Melayu, pemimpin tempatan dan British berjaya melahirkan sebuah negara yang merdeka tanpa pertumpahan darah. Perjanjian ini terus menjadi asas kepada sistem pemerintahan Malaysia hingga hari ini."
+    },
+    {
+      "source_id": "bab-9-4-u38",
+      "bm_original": "Bab ini menerangkan usaha ke arah mencapai kemerdekaan melalui rundingan, penggubalan perlembagaan dan pemeteraian Perjanjian Persekutuan Tanah Melayu 1957. Kerjasama erat antara Raja-raja Melayu, pemimpin tempatan dan kerajaan British berjaya melahirkan sebuah negara yang merdeka berlandaskan Perlembagaan Persekutuan.",
+      "translate": "本章说明了通过谈判、宪法制定与签署《1957年马来亚联合邦协定》争取独立的努力。马来统治者、本地领袖与英国政府之间的密切合作，成功缔造了一个以联邦宪法为基础的独立国家。",
+      "key_points_zh": [
+        "本章说明了通过谈判、宪法制定与签署《1957年马来亚联合邦协定》争取独立的努力。马来统治者、本地领袖与英国政府之间的密切合作，成功缔造了一个以联邦宪法为基础的独立国家。"
+      ],
+      "bm_focus_phrase": "Bab ini menerangkan usaha ke arah mencapai kemerdekaan melalui rundingan, penggubalan perlembagaan dan pemeteraian Perjanjian Persekutuan Tanah Melayu 1957. Kerjasama erat antara Raja-raja Melayu, pemimpin tempatan dan kerajaan British berjaya melahirkan sebuah negara yang merdeka berlandaskan Perlembagaan Persekutuan."
+    },
+    {
+      "source_id": "bab-9-4-u39",
+      "bm_original": "Fokus utama bab ini ialah:",
+      "translate": "本章的主要重点是：",
+      "key_points_zh": [
+        "本章的主要重点是："
+      ],
+      "bm_focus_phrase": "Fokus utama bab ini ialah:"
+    },
+    {
+      "source_id": "bab-9-4-extra-32",
+      "bm_original": "usaha rundingan kemerdekaan",
+      "translate": "争取独立的谈判",
+      "key_points_zh": [
+        "争取独立的谈判"
+      ],
+      "bm_focus_phrase": "usaha rundingan kemerdekaan"
+    },
+    {
+      "source_id": "bab-9-4-extra-33",
+      "bm_original": "Suruhanjaya Reid",
+      "translate": "里德委员会",
+      "key_points_zh": [
+        "里德委员会"
+      ],
+      "bm_focus_phrase": "Suruhanjaya Reid"
+    },
+    {
+      "source_id": "bab-9-4-extra-34",
+      "bm_original": "penggubalan Perlembagaan Persekutuan",
+      "translate": "联邦宪法的制定",
+      "key_points_zh": [
+        "联邦宪法的制定"
+      ],
+      "bm_focus_phrase": "penggubalan Perlembagaan Persekutuan"
+    },
+    {
+      "source_id": "bab-9-4-extra-35",
+      "bm_original": "Perjanjian Persekutuan Tanah Melayu 1957",
+      "translate": "1957年马来亚联合邦协定",
+      "key_points_zh": [
+        "1957年马来亚联合邦协定"
+      ],
+      "bm_focus_phrase": "Perjanjian Persekutuan Tanah Melayu 1957"
+    },
+    {
+      "source_id": "bab-9-4-extra-36",
+      "bm_original": "Raja Berperlembagaan dan Demokrasi Berparlimen",
+      "translate": "君主立宪制与议会民主制",
+      "key_points_zh": [
+        "君主立宪制与议会民主制"
+      ],
+      "bm_focus_phrase": "Raja Berperlembagaan dan Demokrasi Berparlimen"
+    },
+    {
+      "source_id": "bab-9-4-extra-37",
+      "bm_original": "pembentukan negara merdeka",
+      "translate": "独立国家的建立",
+      "key_points_zh": [
+        "独立国家的建立"
+      ],
+      "bm_focus_phrase": "pembentukan negara merdeka"
+    },
+    {
+      "source_id": "bab-9-4-u40",
+      "bm_original": "Bab ini membuktikan bahawa kemerdekaan negara dicapai melalui kebijaksanaan, permuafakatan dan toleransi semua pihak. Sebagai rakyat Malaysia, kita hendaklah menghormati Perlembagaan, mempertahankan kedaulatan negara dan terus memelihara perpaduan yang menjadi asas keamanan negara.",
+      "translate": "本章证明，国家独立是通过各方的智慧、协商与包容而达成的。身为马来西亚人民，我们应尊重宪法、捍卫国家主权，并持续维护作为国家安宁基础的团结精神。",
+      "key_points_zh": [
+        "本章证明，国家独立是通过各方的智慧、协商与包容而达成的。身为马来西亚人民，我们应尊重宪法、捍卫国家主权，并持续维护作为国家安宁基础的团结精神。"
+      ],
+      "bm_focus_phrase": "Bab ini membuktikan bahawa kemerdekaan negara dicapai melalui kebijaksanaan, permuafakatan dan toleransi semua pihak. Sebagai rakyat Malaysia, kita hendaklah menghormati Perlembagaan, mempertahankan kedaulatan negara dan terus memelihara perpaduan yang menjadi asas keamanan negara."
+    }
+  ]
+}
