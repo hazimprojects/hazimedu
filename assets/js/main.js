@@ -1639,10 +1639,10 @@ function hzZymnotesIsSparkleShellPathname(p) {
   return /^about\.html$/i.test(tail) || hzZymnotesIsFeedbackPathname(p);
 }
 
-/** Halaman induk bab sahaja: bab-1.html … bab-8.html (bukan subtopik). */
+/** Halaman induk bab sahaja: bab-1.html … bab-9.html (bukan subtopik). */
 function hzZymnotesIsBabHubPathname(p) {
   if (!p || typeof p !== "string") return false;
-  return /\/notes\/bab-[1-8](?:\.html)?(?:\/)?$/i.test(p);
+  return /\/notes\/bab-[1-9](?:\.html)?(?:\/)?$/i.test(p);
 }
 
 /** Halaman nota subtopik: bab-X-Y.html (bukan bab induk). */
@@ -1746,6 +1746,12 @@ var HZ_NOTES_SEARCH_PAGES = [
   { title: "8.2 · Proses Pilihan Raya Umum Pertama", tag: "Subtopik 8.2", href: "bab-8-2.html" },
   { title: "8.3 · Penubuhan Majlis Perundangan Persekutuan", tag: "Subtopik 8.3", href: "bab-8-3.html" },
   { title: "8.4 · Peranan Kabinet Pertama Persekutuan Tanah Melayu", tag: "Subtopik 8.4", href: "bab-8-4.html" },
+
+  { title: "Bab 9 · Perlembagaan Persekutuan Tanah Melayu 1957", tag: "Bab Induk", href: "bab-9.html" },
+  { title: "9.1 · Usaha Rundingan Kemerdekaan", tag: "Subtopik 9.1", href: "bab-9-1.html" },
+  { title: "9.2 · Peranan Suruhanjaya Perlembagaan Persekutuan Tanah Melayu", tag: "Subtopik 9.2", href: "bab-9-2.html" },
+  { title: "9.3 · Langkah Penggubalan Perlembagaan Persekutuan Tanah Melayu yang Merdeka", tag: "Subtopik 9.3", href: "bab-9-3.html" },
+  { title: "9.4 · Perjanjian Persekutuan Tanah Melayu", tag: "Subtopik 9.4", href: "bab-9-4.html" },
 ];
 
 // =========================
@@ -2067,19 +2073,27 @@ var ZYMNOTES_NAV = { chapters: [
     { num: '8.3', title: 'Penubuhan Majlis Perundangan Persekutuan', url: 'bab-8-3.html' },
     { num: '8.4', title: 'Peranan Kabinet Pertama Persekutuan Tanah Melayu', url: 'bab-8-4.html' },
   ]},
+  { num: 9, title: 'Perlembagaan Persekutuan Tanah Melayu 1957', url: 'bab-9.html',
+    color: { bg: '#e8f3f1', text: '#1f4a44', accent: '#348078' },
+    subtopics: [
+    { num: '9.1', title: 'Usaha Rundingan Kemerdekaan', url: 'bab-9-1.html' },
+    { num: '9.2', title: 'Peranan Suruhanjaya Perlembagaan Persekutuan Tanah Melayu', url: 'bab-9-2.html' },
+    { num: '9.3', title: 'Langkah Penggubalan Perlembagaan Persekutuan Tanah Melayu yang Merdeka', url: 'bab-9-3.html' },
+    { num: '9.4', title: 'Perjanjian Persekutuan Tanah Melayu', url: 'bab-9-4.html' },
+  ]},
 ]};
 
 // ── CTA indeks bab induk seterusnya (subtopik terakhir sahaja) ──────────────────
 // Pada halaman subtopik terakhir dalam bab: ganti butang utama "Kembali ke Bab N"
 // (ke indeks bab semasa) dengan "Seterusnya: Bab M" ke indeks bab berikutnya.
-// Subtopik lain tidak diubah. Tiada bab selepas 8 — kekalkan CTA asal.
+// Subtopik lain tidak diubah. Tiada bab selepas 9 — kekalkan CTA asal.
 (function () {
   var pathname = window.location.pathname;
   var fileMatch = pathname.match(/(bab-(\d+)-\d+\.html)$/i);
   if (!fileMatch) return;
   var currentFile = fileMatch[1].toLowerCase();
   var chNum = parseInt(fileMatch[2], 10);
-  if (!(chNum >= 1 && chNum <= 8)) return;
+  if (!(chNum >= 1 && chNum <= 9)) return;
   if (!window.ZYMNOTES_NAV || !ZYMNOTES_NAV.chapters || !ZYMNOTES_NAV.chapters.length) return;
   var idx = chNum - 1;
   var chapter = ZYMNOTES_NAV.chapters[idx];
