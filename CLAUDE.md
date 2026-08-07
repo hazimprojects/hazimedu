@@ -64,6 +64,18 @@ berfungsi via salah satu:
   wujud terus di CDN sebelum commit (cth. `curl -sI` URL penuh, jangkakan
   `200`) — JANGAN percaya sahaja ejaan/format nama dlm `emoji_map.py`.
 
+**AWAS — nama fail ikon majmuk KEKALKAN sengkang, jangan tukar semua
+ke underscore bila jana laluan secara program.** Skrip `slugify()`
+ringkas (`name.replace('-', '_')`) pecahkan nama fail spt
+`globe_showing_asia-australia_3d.png` (BUKAN `..._asia_australia_...`)
+& `globe_showing_europe-africa_3d.png` (BUKAN `..._europe_africa_...`)
+— sengkang dlm "asia-australia"/"europe-africa" KEKAL sebahagian nama
+fail SEBENAR CDN, bukan pemisah perkataan spt "%20" utk ruang. Kalau
+jana laluan ikon secara program (bukan taip manual), SENTIASA sahkan
+laluan yg terhasil (grep count>0 §atas) sebelum push — 3 laluan pecah
+camni ditemui & dibetulkan lepas jana 70 ikon baharu secara pukal
+(rujuk PR "Tambah ikon tema kedua yg hilang pd 70 item Fokus X.Y").
+
 ## Bendera Negara — self-hosted (`assets/flags/`), BUKAN CDN luar
 
 Fluent Emoji (pembekal ikon utama) sengaja TIADA bendera negara (isu
@@ -306,6 +318,53 @@ kesan (di-override rule lebih spesifik `themes.css` — `body.note-
 reading-app.page-theme-notes .paper-board`) tapi KEKALKAN dlm markup
 setiap kad Kesimpulan/Rumusan Besar utk konsisten dgn corak sedia ada
 merentas korpus — jangan alih keluar ikut sangkaan ia "tak berguna".
+
+## Kad "Fokus X.Y" — MESTI padan bilangan & tajuk Bahagian sebenar
+
+**Kad "Fokus X.Y" (`data-cv-title="Fokus X.Y"`, grid `compact-kingdom-
+grid` berisi `.paper-kingdom` bernombor keycap) ialah PRATONTON
+struktur "Bahagian Pertama/Kedua/..." halaman yg sama — bilangan &
+tajuk item MESTI padan tepat dgn label `<div class="paper-label
+small">Bahagian N</div>` sebenar di bawahnya.** Bila subtopik disunting
+kemudian (Bahagian ditambah/digabung/disusun semula), kad Fokus SERING
+"tertinggal" pd struktur lama kalau tak dikemas kini serentak — 8
+subtopik (bab-2-5, bab-3-5, bab-3-7, bab-4-2, bab-4-3, bab-4-5, bab-5-1,
+bab-6-3) ditemui & dibetulkan (rujuk PR "Betulkan kad Fokus X.Y yang
+ketinggalan drpd Bahagian sebenar"). **Lepas sunting mana-mana Bahagian
+dlm subtopik sedia ada, SENTIASA semak semula kad Fokus X.Y padanan
+di atasnya** — bandingkan bilangan item & tajuk terus dgn label
+Bahagian sebenar, jangan andaikan ia masih betul.
+
+Setiap item `.paper-kingdom` dlm Fokus bernombor keycap MESTI ada
+**DUA** ikon: keycap (`Keycap N`) DIIKUTI ikon tema (lepas teks) —
+konsisten dgn corak "keycap + teks + ikon" merentas korpus. 70 item
+di 25 fail ditemui cuma ada keycap tanpa ikon tema (pra-wujud, tak
+ketara sblm pembetulan `.paper-kingdom` di bawah — rujuk PR "Tambah
+ikon tema kedua yg hilang pd 70 item Fokus X.Y"). Ikon tema baharu
+patut diambil (ikut keutamaan): ikon sedia ada pd tajuk "Bahagian N"
+berkenaan dlm fail sama (bila item Fokus padan Bahagian), atau ikon
+accordion/body berkaitan dlm fail sama, atau ikon bertema sesuai yg
+disahkan wujud merentas korpus (rujuk disiplin grep §"Ikon Emoji").
+
+**JANGAN keliru dgn corak BERBEZA** yg turut guna `.paper-kingdom`:
+senarai contoh rata (cth. senarai nama kerajaan purba Funan/Champa/
+Kedah Tua di bab-1-1, senarai pejuang individu di bab-2-5) SENGAJA
+guna SATU ikon sahaja (ikon tema di HADAPAN teks, bukan keycap) —
+bukan pecahan Bahagian bernombor, jadi tak perlu/patut ditambah ikon
+kedua. Bezakan ikut: keycap-led (`Keycap N` sbg ikon PERTAMA) = perlu
+2 ikon; ikon-tema-led (bukan keycap) = 1 ikon sudah betul.
+
+**`.paper-kingdom` MESTI `flex-direction: column`** (paper.css) — row
+(lalai flex) + `align-items: center` jadikan keycap/teks/ikon TIGA
+item flex berasingan dlm SATU baris, so ikon terpusat MENEGAK
+berbanding TINGGI KESELURUHAN baris. Utk tajuk pendek okay, tapi
+tajuk panjang (item Fokus yg padan penuh tajuk Bahagian, > 1 baris)
+menyebabkan ikon "terapung" di tengah paragraf (bukan di atas/lepas
+teks) — pepijat visual sebenar (disahkan tangkapan skrin pengguna +
+ujian layout sintetik). `flex-direction: column` betulkan (keycap
+baris atas, teks tengah, ikon tema baris bawah) — JANGAN tukar balik
+ke row tanpa faham sebab ni; kesan sejagat (SEMUA 45 fail guna
+`.paper-kingdom`), bukan boleh disunting per-fail.
 
 ## Swipe Nav — seret `<main>` ke subtopik sebelum/selepas
 
