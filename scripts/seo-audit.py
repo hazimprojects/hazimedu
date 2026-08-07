@@ -56,6 +56,7 @@ def sitemap_paths() -> set[str]:
 def expected_indexable_pages() -> set[str]:
     pages = {'index.html', 'about.html', 'feedback.html', 'notes/index.html'}
     pages.update(glob.glob('notes/bab-*.html'))
+    pages.update(glob.glob('quiz/bab-*.html'))
     return pages
 
 
