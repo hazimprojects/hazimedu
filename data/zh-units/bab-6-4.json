@@ -1056,6 +1056,41 @@
       "source_id": "bab-6-4-orph-l6",
       "bm_original": "di negara kita.",
       "translate": "在我国。"
+    },
+    {
+      "source_id": "bab-6-4-lead",
+      "bm_original": "Subtopik ini menerangkan kesan zaman darurat terhadap negara kita dari aspek politik dan sosioekonomi, serta bagaimana peristiwa darurat turut mempercepat usaha ke arah rundingan kemerdekaan.",
+      "translate": "此小节讲解紧急状态时期对我国在政治与社会经济方面所造成的影响，以及紧急状态事件如何加速了独立谈判的进程。"
+    },
+    {
+      "source_id": "bab-6-4-fokus-1",
+      "bm_original": "Kesan Politik — Kewarganegaraan dan MCA",
+      "translate": "政治影响——公民权与马华公会（MCA）"
+    },
+    {
+      "source_id": "bab-6-4-fokus-2",
+      "bm_original": "Kesan Sosioekonomi",
+      "translate": "社会经济影响"
+    },
+    {
+      "source_id": "bab-6-4-fokus-3",
+      "bm_original": "Penamatan Darurat (1960)",
+      "translate": "紧急状态的结束（1960年）"
+    },
+    {
+      "source_id": "bab-6-4-bahagian-1",
+      "bm_original": "Aspek Politik",
+      "translate": "政治层面"
+    },
+    {
+      "source_id": "bab-6-4-bahagian-2",
+      "bm_original": "Aspek Sosioekonomi",
+      "translate": "社会经济层面"
+    },
+    {
+      "source_id": "bab-6-4-bahagian-3",
+      "bm_original": "Penamatan Darurat",
+      "translate": "紧急状态的结束"
     }
   ]
 }
