@@ -7,6 +7,31 @@
   const LEVEL_LABELS = { 1: 'Mengingat', 2: 'Memahami', 3: 'Mengaplikasi', 4: 'Menganalisis', 5: 'Menilai' };
   const LEVEL_COLORS = { 1: '#3e5f8a', 2: '#2f7a67', 3: '#8a7158', 4: '#6a7b5a', 5: '#9a5a5a' };
 
+  /* Ikon Fluent 3D (PNG, Microsoft, MIT) — gantikan emoji Unicode teks dalam
+     kandungan yang dijana JS supaya konsisten dgn cengkerang statik halaman
+     kuiz. Setiap laluan disahkan wujud & digunakan di tempat lain (grep
+     count>0) sebelum dipakai di sini. */
+  const LAB_ICON_BASE = 'https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets';
+  const LAB_ICONS = {
+    checkmark: ['Check mark button', 'check_mark_button_3d.png'],
+    crossmark: ['Cross mark', 'cross_mark_3d.png'],
+    sparkles:  ['Sparkles', 'sparkles_3d.png'],
+    bullseye:  ['Bullseye', 'bullseye_3d.png'],
+    trophy:    ['Trophy', 'trophy_3d.png'],
+    star:      ['Star', 'star_3d.png'],
+    books:     ['Books', 'books_3d.png'],
+    fire:      ['Fire', 'fire_3d.png'],
+    openBook:  ['Open book', 'open_book_3d.png'],
+    puzzle:    ['Puzzle piece', 'puzzle_piece_3d.png'],
+    warning:   ['Warning', 'warning_3d.png'],
+  };
+  function labIcon(key) {
+    const pair = LAB_ICONS[key];
+    const src  = LAB_ICON_BASE + '/' + encodeURIComponent(pair[0]) + '/3D/' + pair[1];
+    return '<img class="fluent-3d-emoji openmoji--lab-compact" src="' + src +
+      '" width="18" height="18" alt="" decoding="async" loading="lazy" />';
+  }
+
   const screens = {
     game:   root.querySelector('[data-lab-screen="game"]'),
     result: root.querySelector('[data-lab-screen="result"]'),
@@ -154,7 +179,7 @@
       }
 
       const icon = state.locked
-        ? (option === q.answer ? '✅' : state.selected === option ? '❌' : '•')
+        ? (option === q.answer ? labIcon('checkmark') : state.selected === option ? labIcon('crossmark') : '•')
         : (isPicked ? '▶' : '▸');
 
       return '<button class="' + cls + '" type="button" data-option="' +
@@ -211,7 +236,7 @@
     if (feedbackBox) feedbackBox.classList.toggle('is-wrong', !ok);
 
     if (feedbackTitle) {
-      feedbackTitle.textContent = ok ? '🎉 Betul!' : '😔 Belum tepat.';
+      feedbackTitle.innerHTML   = (ok ? labIcon('sparkles') : labIcon('bullseye')) + ' ' + (ok ? 'Betul!' : 'Belum tepat.');
       feedbackTitle.style.color = ok ? '#2f7a67' : '#9a5a5a';
     }
 
@@ -266,25 +291,25 @@
 
     let title, titleColor, bg, border;
     if (score === total) {
-      title = 'Cemerlang! Skor penuh! 🏆';
+      title = labIcon('trophy') + ' Cemerlang! Skor penuh!';
       titleColor = '#2f7a67'; bg = 'rgba(47,122,103,0.07)'; border = 'rgba(47,122,103,0.16)';
     } else if (score >= total - 1 && total > 1) {
-      title = 'Bagus! Hampir sempurna 🎖️';
+      title = labIcon('star') + ' Bagus! Hampir sempurna';
       titleColor = '#3e5f8a'; bg = 'rgba(62,95,138,0.07)'; border = 'rgba(62,95,138,0.16)';
     } else if (score >= Math.ceil(total * 0.57)) {
-      title = 'Baik! Teruskan ulang kaji 📚';
+      title = labIcon('books') + ' Baik! Teruskan ulang kaji';
       titleColor = '#8a7158'; bg = 'rgba(138,113,88,0.07)'; border = 'rgba(138,113,88,0.16)';
     } else {
-      title = 'Semak semula nota dan cuba lagi 💪';
+      title = labIcon('fire') + ' Semak semula nota dan cuba lagi';
       titleColor = '#9a5a5a'; bg = 'rgba(154,90,90,0.07)'; border = 'rgba(154,90,90,0.16)';
     }
 
     if (resultBox)   { resultBox.style.background = bg; resultBox.style.borderColor = border; }
-    if (resultTitle) { resultTitle.textContent = title; resultTitle.style.color = titleColor; }
+    if (resultTitle) { resultTitle.innerHTML = title; resultTitle.style.color = titleColor; }
     if (resultText)  resultText.textContent = score + ' / ' + total + ' soalan betul (' + Math.round(score / total * 100) + '%)';
 
     if (bestScoreEl) {
-      bestScoreEl.textContent = 'Rekod terbaik: ' + newBest + '%' + (isRecord ? ' 🎉 Rekod Baru!' : '');
+      bestScoreEl.innerHTML = 'Rekod terbaik: ' + newBest + '%' + (isRecord ? ' ' + labIcon('sparkles') + ' Rekod Baru!' : '');
       bestScoreEl.style.color = '';
       bestScoreEl.classList.toggle('is-record', isRecord);
     }
@@ -303,13 +328,13 @@
           '<span class="learning-lab-summary-level" data-level="' + item.question.level + '">Aras ' + item.question.level + ' · ' + label + '</span>' +
           '</div>' +
           '<span class="learning-lab-summary-right' + (item.ok ? ' is-correct' : ' is-wrong') + '">' +
-          (item.ok ? '✓ Betul' : '✗ Salah') + '</span></div>';
+          (item.ok ? labIcon('checkmark') + ' Betul' : labIcon('crossmark') + ' Salah') + '</span></div>';
       }).join('');
 
       const wrong = state.history.filter(function(item) { return !item.ok; });
       if (wrong.length) {
         summaryList.innerHTML += '<div class="learning-lab-tip" style="margin-top:0.55rem;">' +
-          '<p class="learning-lab-tip-label">📖 Perkara yang patut ulang kaji</p>' +
+          '<p class="learning-lab-tip-label">' + labIcon('openBook') + ' Perkara yang patut ulang kaji</p>' +
           wrong.map(function(item) {
             return '<p class="learning-lab-tip-text" style="margin:0 0 0.22rem;">• ' + item.question.tip + '</p>';
           }).join('') + '</div>';
@@ -347,8 +372,8 @@
       window.__labStartQuiz = function() { startGame(allQuestions); };
 
       if (noticeBtn) {
-        noticeBtn.disabled    = false;
-        noticeBtn.textContent = 'Mulakan Kuiz 🧩';
+        noticeBtn.disabled  = false;
+        noticeBtn.innerHTML = 'Mulakan Kuiz ' + labIcon('puzzle');
       }
 
       root.querySelector('[data-lab-action="restart"]').addEventListener('click', function() {
@@ -370,8 +395,8 @@
     })
     .catch(function(err) {
       if (noticeBtn) {
-        noticeBtn.disabled    = false;
-        noticeBtn.textContent = '⚠️ Gagal memuatkan — cuba semula';
+        noticeBtn.disabled  = false;
+        noticeBtn.innerHTML = labIcon('warning') + ' Gagal memuatkan — cuba semula';
       }
       console.error('Gagal memuatkan soalan:', err);
     });
