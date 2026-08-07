@@ -276,6 +276,10 @@ def write_sitemap():
         changefreq = 'weekly' if is_subtopic else 'monthly'
         pages.append((f'{BASE}/{path}', priority, changefreq))
 
+    quiz_pages = sorted(glob.glob('quiz/bab-*.html'))
+    for path in quiz_pages:
+        pages.append((f'{BASE}/{path}', '0.6', 'monthly'))
+
     url_entries = '\n'.join(
         f'  <url>\n    <loc>{loc}</loc>\n    <lastmod>{today}</lastmod>'
         f'\n    <changefreq>{freq}</changefreq>\n    <priority>{pri}</priority>\n  </url>'

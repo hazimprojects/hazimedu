@@ -2352,7 +2352,7 @@ function hzLabQuizSparklePair() {
     var labQuizSparklePair = hzLabQuizSparklePair();
     if (
       labHref &&
-      /(?:^|\/)quiz\/bab-(?:1-[1-4]|2-[1-8])\.html(?:$|[?#])/.test(labHref)
+      /(?:^|\/)quiz\/bab-\d+-\d+\.html(?:$|[?#])/.test(labHref)
     ) {
       labQuizSparklePair = HZ_ICONS8_SPARKLE.puzzlePiece;
     }
