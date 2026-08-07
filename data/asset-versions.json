@@ -1,6 +1,6 @@
 {
-  "style_css": "305",
-  "main_js": "375",
+  "style_css": "306",
+  "main_js": "376",
   "zh_mode_js": "48",
   "manifest": "18",
   "sw_cache": "498",
@@ -13,7 +13,7 @@
   "icon_maskable_512": "3",
   "favicon_32": "3",
   "css": {
-    "base": "104",
+    "base": "105",
     "layout": "29",
     "ui": "72",
     "paper": "30",
@@ -24,6 +24,6 @@
     "openmoji": "13",
     "fluent_shell": "7",
     "bab_hub": "1",
-    "shell_openmoji": "14"
+    "shell_openmoji": "15"
   }
 }

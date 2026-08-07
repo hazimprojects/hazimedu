@@ -1,0 +1,63 @@
+{
+  "meta": {
+    "source_file": "notes/bab-10.html",
+    "rollout": "bab-10-hub-manual-zh",
+    "notes": "Bab 10 induk (Pemasyhuran Kemerdekaan): terjemahan zh-CN manual, bm_original selaras dengan chip sinopsis pada bab-10.html."
+  },
+  "units": [
+    {
+      "source_id": "bab-10-synopsis-1",
+      "bm_original": "Merdeka ditakrifkan sebagai kebebasan dan usaha mendaulatkan nusa dan bangsa yang telah diperjuangkan oleh pelbagai pihak.",
+      "translate": "“独立”被定义为自由，以及各方共同争取民族与国家主权的努力。",
+      "key_points_zh": [
+        "“独立”被定义为自由，以及各方共同争取民族与国家主权的努力。"
+      ],
+      "bm_focus_phrase": "Merdeka ditakrifkan sebagai kebebasan dan usaha mendaulatkan nusa dan bangsa yang telah diperjuangkan oleh pelbagai pihak."
+    },
+    {
+      "source_id": "bab-10-synopsis-2",
+      "bm_original": "Tarikh 31 Ogos 1957 menjadi detik bersejarah bagi negara kita.",
+      "translate": "1957年8月31日成为我国的历史性时刻。",
+      "key_points_zh": [
+        "1957年8月31日成为我国的历史性时刻。"
+      ],
+      "bm_focus_phrase": "Tarikh 31 Ogos 1957 menjadi detik bersejarah bagi negara kita."
+    },
+    {
+      "source_id": "bab-10-synopsis-3",
+      "bm_original": "Rakyat berjuang untuk membebaskan negara daripada cengkaman kuasa asing.",
+      "translate": "人民为使国家摆脱外国势力的控制而奋斗。",
+      "key_points_zh": [
+        "人民为使国家摆脱外国势力的控制而奋斗。"
+      ],
+      "bm_focus_phrase": "Rakyat berjuang untuk membebaskan negara daripada cengkaman kuasa asing."
+    },
+    {
+      "source_id": "bab-10-synopsis-4",
+      "bm_original": "Bagi memastikan detik bersejarah pemasyhuran kemerdekaan ini diingati, pelbagai persediaan telah dibuat.",
+      "translate": "为了让这历史性的独立宣言时刻永留记忆，各项准备工作已经展开。",
+      "key_points_zh": [
+        "为了让这历史性的独立宣言时刻永留记忆，各项准备工作已经展开。"
+      ],
+      "bm_focus_phrase": "Bagi memastikan detik bersejarah pemasyhuran kemerdekaan ini diingati, pelbagai persediaan telah dibuat."
+    },
+    {
+      "source_id": "bab-10-synopsis-5",
+      "bm_original": "Selain itu, kemerdekaan meninggalkan kesan yang penting untuk dihayati oleh generasi kini.",
+      "translate": "此外，独立也留下重要的影响，值得现今世代深刻体会。",
+      "key_points_zh": [
+        "此外，独立也留下重要的影响，值得现今世代深刻体会。"
+      ],
+      "bm_focus_phrase": "Selain itu, kemerdekaan meninggalkan kesan yang penting untuk dihayati oleh generasi kini."
+    },
+    {
+      "source_id": "bab-10-synopsis-6",
+      "bm_original": "Kita perlu menghayati pengorbanan, mempertahankan perpaduan dan nilai kesetiaan dengan tidak berbelah bahagi supaya negara kekal berdaulat.",
+      "translate": "我们必须体会先辈的牺牲，维护团结，并秉持不分裂的忠诚价值观，以确保国家持续保有主权。",
+      "key_points_zh": [
+        "我们必须体会先辈的牺牲，维护团结，并秉持不分裂的忠诚价值观，以确保国家持续保有主权。"
+      ],
+      "bm_focus_phrase": "Kita perlu menghayati pengorbanan, mempertahankan perpaduan dan nilai kesetiaan dengan tidak berbelah bahagi supaya negara kekal berdaulat."
+    }
+  ]
+}
