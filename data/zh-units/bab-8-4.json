@@ -1,0 +1,249 @@
+{
+  "meta": {
+    "source_file": "notes/bab-8-4.html",
+    "rollout": "bab-8-4-manual-zh",
+    "notes": "Bab 8.4: terjemahan zh-CN manual - ikut docs/zh-mode-editorial-guideline.md, guna istilah kanonik data/zh-glossary.json + gaya transliterasi nama Sultan/tokoh & organisasi yg dipiawaikan."
+  },
+  "units": [
+    {
+      "source_id": "bab-8-4-sum-1",
+      "bm_original": "Kabinet Pertama Persekutuan Tanah Melayu dibentuk selepas Pilihan Raya Umum 1955 bagi mengurus pentadbiran negara ke arah berkerajaan sendiri, dianggotai 10 menteri tempatan dan 3 pegawai British.",
+      "translate": "马来亚联合邦首届内阁在1955年普选后成立，负责领导国家迈向自治的行政工作，成员包括10名本地部长与3名英籍官员。"
+    },
+    {
+      "source_id": "bab-8-4-sum-2",
+      "bm_original": "Tunku Abdul Rahman dilantik sebagai Ketua Menteri dan diberi kuasa menubuhkan kabinet pertama untuk memastikan pentadbiran negara berjalan lancar.",
+      "translate": "东姑阿都拉曼获委任为首席部长，并获授权组织首届内阁，以确保国家行政顺利运作。"
+    },
+    {
+      "source_id": "bab-8-4-sum-3",
+      "bm_original": "Kabinet pertama memainkan peranan penting mengurangkan kuasa pentadbiran British secara berperingkat, sekali gus menyediakan Tanah Melayu ke arah kemerdekaan.",
+      "translate": "首届内阁在逐步削弱英国行政权力方面扮演重要角色，同时为马来亚迈向独立作好准备。"
+    },
+    {
+      "source_id": "bab-8-4-orph-h1",
+      "bm_original": "Apakah peranan Kabinet Pertama Persekutuan Tanah Melayu selepas Pilihan Raya Umum 1955?",
+      "translate": "1955年普选后，马来亚联合邦首届内阁扮演了什么角色？"
+    },
+    {
+      "source_id": "bab-8-4-u01",
+      "bm_original": "Kabinet Pertama Persekutuan Tanah Melayu dibentuk selepas Pilihan Raya Umum 1955 bagi mengurus pentadbiran negara ke arah berkerajaan sendiri. Tunku Abdul Rahman dilantik sebagai Ketua Menteri dan diberi kuasa menubuhkan kabinet pertama untuk memastikan pentadbiran negara berjalan dengan lancar.",
+      "translate": "马来亚联合邦首届内阁在1955年普选后成立，负责领导国家迈向自治的行政工作。东姑阿都拉曼获委任为首席部长，并获授权组织首届内阁，以确保国家行政顺利运作。"
+    },
+    {
+      "source_id": "bab-8-4-fokus-line",
+      "bm_original": "Peranan Kabinet Pertama merangkumi pembentukan, keahlian dan sumbangan pemimpinnya. Empat bahagian:",
+      "translate": "首届内阁的角色涵盖其组成、成员与领袖的贡献，共分为四个部分："
+    },
+    {
+      "source_id": "bab-8-4-extra-1",
+      "bm_original": "Pembentukan Kabinet Pertama",
+      "translate": "首届内阁的组成"
+    },
+    {
+      "source_id": "bab-8-4-extra-2",
+      "bm_original": "Kabinet Pertama Persekutuan Tanah Melayu",
+      "translate": "马来亚联合邦首届内阁"
+    },
+    {
+      "source_id": "bab-8-4-extra-3",
+      "bm_original": "Peranan Kabinet Pertama",
+      "translate": "首届内阁的角色"
+    },
+    {
+      "source_id": "bab-8-4-extra-4",
+      "bm_original": "Peranan Pemimpin Kabinet",
+      "translate": "内阁领袖的角色"
+    },
+    {
+      "source_id": "bab-8-4-u02",
+      "bm_original": "Tahun 1955: Kabinet pertama Persekutuan Tanah Melayu dibentuk selepas Pilihan Raya Umum 1955.",
+      "translate": "1955年：马来亚联合邦首届内阁在1955年普选后成立。"
+    },
+    {
+      "source_id": "bab-8-4-u03",
+      "bm_original": "Kabinet ini dianggotai oleh 10 orang menteri tempatan.",
+      "translate": "内阁由10名本地部长组成。"
+    },
+    {
+      "source_id": "bab-8-4-u04",
+      "bm_original": "Dan 3 orang pegawai British yang memegang portfolio:",
+      "translate": "以及3名掌管特定职务的英籍官员："
+    },
+    {
+      "source_id": "bab-8-4-extra-5",
+      "bm_original": "Setiausaha Kewangan",
+      "translate": "财政司"
+    },
+    {
+      "source_id": "bab-8-4-extra-6",
+      "bm_original": "Setiausaha Hal Ehwal Ekonomi",
+      "translate": "经济事务司"
+    },
+    {
+      "source_id": "bab-8-4-extra-7",
+      "bm_original": "Setiausaha Pertahanan",
+      "translate": "国防司"
+    },
+    {
+      "source_id": "bab-8-4-u05",
+      "bm_original": "Kabinet ini mendapat perkenan Raja-raja Melayu sebagaimana yang diperuntukkan dalam Perjanjian Persekutuan.",
+      "translate": "此内阁按照联邦协定的规定，获得马来统治者的恩准。"
+    },
+    {
+      "source_id": "bab-8-4-u06",
+      "bm_original": "Pada 4 Ogos 1955, kabinet diumumkan secara rasmi oleh Sir Donald MacGillivray, Pesuruhjaya Tinggi British.",
+      "translate": "1955年8月4日，内阁由英国高级专员唐纳德·麦吉利夫雷爵士（Sir Donald MacGillivray）正式宣布成立。"
+    },
+    {
+      "source_id": "bab-8-4-u07",
+      "bm_original": "Pengumuman dibuat di King's House, Kuala Lumpur.",
+      "translate": "宣布仪式在吉隆坡King's House举行。"
+    },
+    {
+      "source_id": "bab-8-4-u08",
+      "bm_original": "Pembentukan kabinet ini membolehkan pemimpin tempatan mentadbir negara menjelang kemerdekaan.",
+      "translate": "此内阁的成立，使本地领袖得以在迈向独立之际参与治理国家。"
+    },
+    {
+      "source_id": "bab-8-4-u09",
+      "bm_original": "Tunku Abdul Rahman Putra Al-Haj — Ketua Menteri.",
+      "translate": "东姑阿都拉曼——首席部长。"
+    },
+    {
+      "source_id": "bab-8-4-u10",
+      "bm_original": "Dato' Abdul Razak Hussein — Menteri Pelajaran.",
+      "translate": "拿督阿都拉萨（Dato' Abdul Razak Hussein）——教育部长。"
+    },
+    {
+      "source_id": "bab-8-4-u11",
+      "bm_original": "Dato' Sulaiman Dato' Abdul Rahman — Menteri Kerajaan Tempatan, Perumahan dan Perancang Bandar.",
+      "translate": "拿督苏莱曼（Dato' Sulaiman Dato' Abdul Rahman）——地方政府、房屋与市镇规划部长。"
+    },
+    {
+      "source_id": "bab-8-4-u12",
+      "bm_original": "Dr. Ismail Abdul Rahman — Menteri Tanah dan Galian.",
+      "translate": "伊斯迈医生（Dr. Ismail Abdul Rahman）——土地与矿务部长。"
+    },
+    {
+      "source_id": "bab-8-4-u13",
+      "bm_original": "H.S. Lee — Menteri Pengangkutan.",
+      "translate": "李孝式（H.S. Lee）——交通部长。"
+    },
+    {
+      "source_id": "bab-8-4-u14",
+      "bm_original": "Sardon Jubir — Menteri Kerja Raya.",
+      "translate": "沙顿·祖比尔（Sardon Jubir）——工程部长。"
+    },
+    {
+      "source_id": "bab-8-4-u15",
+      "bm_original": "V.T. Sambanthan — Menteri Buruh.",
+      "translate": "V.T.桑班丹（V.T. Sambanthan）——劳工部长。"
+    },
+    {
+      "source_id": "bab-8-4-u16",
+      "bm_original": "Leong Yew Koh — Menteri Kesihatan.",
+      "translate": "梁宇皋（Leong Yew Koh）——卫生部长。"
+    },
+    {
+      "source_id": "bab-8-4-u17",
+      "bm_original": "Ong Yoke Lin — Menteri Pos dan Telekom.",
+      "translate": "王玉麟（Ong Yoke Lin）——邮电部长。"
+    },
+    {
+      "source_id": "bab-8-4-u18",
+      "bm_original": "Abdul Aziz Ishak — Menteri Pertanian.",
+      "translate": "阿都阿兹·依萨（Abdul Aziz Ishak）——农业部长。"
+    },
+    {
+      "source_id": "bab-8-4-u19",
+      "bm_original": "Kabinet pertama memainkan beberapa peranan penting:",
+      "translate": "首届内阁扮演了以下几项重要角色："
+    },
+    {
+      "source_id": "bab-8-4-u20",
+      "bm_original": "Membincangkan soal kewangan serta keperluan orang tempatan dalam perkhidmatan awam.",
+      "translate": "商讨财政事务，以及本地人民在公共服务中的需求。"
+    },
+    {
+      "source_id": "bab-8-4-u21",
+      "bm_original": "Menyambung sistem pentadbiran Majlis Mesyuarat Persekutuan yang berasaskan Model Westminster.",
+      "translate": "延续以西敏寺模式（Model Westminster）为基础的联邦议政会行政制度。"
+    },
+    {
+      "source_id": "bab-8-4-u22",
+      "bm_original": "Mengurangkan kuasa pentadbiran British secara berperingkat.",
+      "translate": "逐步削弱英国的行政权力。"
+    },
+    {
+      "source_id": "bab-8-4-u23",
+      "bm_original": "Meminta Kuasa Veto Pesuruhjaya Tinggi British dibatalkan.",
+      "translate": "要求废除英国高级专员的否决权。"
+    },
+    {
+      "source_id": "bab-8-4-u24",
+      "bm_original": "Membincangkan isu keselamatan dalam negeri dan pertahanan negara.",
+      "translate": "商讨国内治安与国防事务。"
+    },
+    {
+      "source_id": "bab-8-4-u25",
+      "bm_original": "Model Westminster — Sistem pemerintahan demokrasi mengikut Britain.",
+      "translate": "西敏寺模式——仿效英国的民主政府制度。"
+    },
+    {
+      "source_id": "bab-8-4-u26",
+      "bm_original": "Kuasa Veto — Hak atau kuasa penuh yang membolehkan sesuatu keputusan dibatalkan oleh pihak tertentu.",
+      "translate": "否决权——赋予特定一方推翻某项决定的完全权力。"
+    },
+    {
+      "source_id": "bab-8-4-u27",
+      "bm_original": "Tunku Abdul Rahman menunaikan mandat rakyat untuk mencapai kemerdekaan.",
+      "translate": "东姑阿都拉曼履行人民赋予的使命，致力实现独立。"
+    },
+    {
+      "source_id": "bab-8-4-u28",
+      "bm_original": "Dato' Abdul Razak Hussein membina bangsa yang bersatu melalui sistem pendidikan.",
+      "translate": "拿督阿都拉萨通过教育制度建设团结的民族。"
+    },
+    {
+      "source_id": "bab-8-4-u29",
+      "bm_original": "V.T. Sambanthan menjadikan perkhidmatan awam bercorak tempatan.",
+      "translate": "V.T.桑班丹推动公共服务本地化。"
+    },
+    {
+      "source_id": "bab-8-4-u30",
+      "bm_original": "Beliau turut mengurangkan pegawai Eropah dalam Malayan Civil Service (MCS) secara berperingkat.",
+      "translate": "他也逐步减少马来亚公务员体系（Malayan Civil Service，MCS）中的欧籍官员人数。"
+    },
+    {
+      "source_id": "bab-8-4-u31",
+      "bm_original": "Leong Yew Koh memenuhi manifesto Parti Perikatan.",
+      "translate": "梁宇皋落实联盟党的竞选宣言。"
+    },
+    {
+      "source_id": "bab-8-4-u32",
+      "bm_original": "Beliau meningkatkan mutu perkhidmatan perubatan dan kesihatan dalam tempoh negara menuju berkerajaan sendiri.",
+      "translate": "他在国家迈向自治期间，提升了医疗与卫生服务的素质。"
+    },
+    {
+      "source_id": "bab-8-4-u33",
+      "bm_original": "Kabinet Pertama Persekutuan Tanah Melayu memperlihatkan barisan pemimpin tempatan yang berwibawa dan berkebolehan mentadbir negara.",
+      "translate": "马来亚联合邦首届内阁展现了一批有威望且有能力治理国家的本地领袖。"
+    },
+    {
+      "source_id": "bab-8-4-u34",
+      "bm_original": "Mereka bekerjasama serta berkongsi kuasa untuk membangunkan negara dan menyediakan Tanah Melayu ke arah kemerdekaan.",
+      "translate": "他们同心协力、共享权力，共同建设国家，并为马来亚迈向独立作好准备。"
+    },
+    {
+      "source_id": "bab-8-4-u35",
+      "bm_original": "Bab 8 membuktikan bahawa amalan demokrasi, pilihan raya dan kepimpinan rakyat tempatan menjadi asas penting dalam perjalanan Tanah Melayu menuju kemerdekaan. Melalui pilihan raya, penubuhan Majlis Perundangan Persekutuan dan pembentukan Kabinet Pertama, rakyat mula memainkan peranan secara langsung dalam pentadbiran negara. Kerjasama antara pelbagai kaum, sikap bertolak ansur dan perkongsian kuasa telah mewujudkan kestabilan politik yang meyakinkan British untuk memberikan kemerdekaan.",
+      "translate": "第8章证明了民主实践、选举与本地人民的领导，是马来亚迈向独立道路上的重要基础。通过选举、联邦立法议会的成立以及首届内阁的组成，人民开始直接参与国家行政。各族群之间的合作、互相包容的态度以及权力共享，营造了政治稳定的局面，使英国相信可以赋予马来亚独立。"
+    },
+    {
+      "source_id": "bab-8-4-u36",
+      "bm_original": "Sebagai warganegara yang bertanggungjawab, kita hendaklah menggunakan hak mengundi dengan bijak, menghormati amalan demokrasi serta memilih pemimpin yang berintegriti demi menjamin keamanan, kestabilan dan kemajuan negara.",
+      "translate": "作为负责任的公民，我们应当明智地行使投票权，尊重民主实践，并选出有诚信的领袖，以确保国家的安全、稳定与发展。"
+    }
+  ]
+}
