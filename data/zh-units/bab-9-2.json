@@ -43,39 +43,48 @@
     },
     {
       "source_id": "bab-9-2-u01",
-      "bm_original": "Suruhanjaya ini ditubuhkan untuk merangka Perlembagaan Persekutuan Tanah Melayu yang merdeka. Peranan tersebut melibatkan:",
-      "translate": "该委员会成立的目的是草拟独立的马来亚联合邦宪法。其角色包括：",
+      "bm_original": "Suruhanjaya ini ditubuhkan pada 8 Mac 1956 oleh kerajaan British bagi merangka Perlembagaan Persekutuan Tanah Melayu yang merdeka. Antara fakta pentingnya ialah:",
+      "translate": "该委员会于1956年3月8日由英国政府成立，负责草拟马来亚联合邦独立宪法。其中重要事实包括：",
       "key_points_zh": [
-        "该委员会成立的目的是草拟独立的马来亚联合邦宪法。其角色包括："
+        "该委员会于1956年3月8日由英国政府成立，负责草拟马来亚联合邦独立宪法。其中重要事实包括："
       ],
-      "bm_focus_phrase": "Suruhanjaya ini ditubuhkan untuk merangka Perlembagaan Persekutuan Tanah Melayu yang merdeka. Peranan tersebut melibatkan:"
+      "bm_focus_phrase": "Suruhanjaya ini ditubuhkan pada 8 Mac 1956 oleh kerajaan British bagi merangka Perlembagaan Persekutuan Tanah Melayu yang merdeka. Antara fakta pentingnya ialah:"
     },
     {
-      "source_id": "bab-9-2-extra-1",
-      "bm_original": "terma rujukan suruhanjaya",
-      "translate": "委员会的职权范围",
+      "source_id": "bab-9-2-suq-1",
+      "bm_original": "Ditubuhkan dengan persetujuan Raja-raja Melayu, mula bertugas akhir Jun 1956",
+      "translate": "在马来统治者同意下成立，于1956年6月底开始履行职务",
       "key_points_zh": [
-        "委员会的职权范围"
+        "在马来统治者同意下成立，于1956年6月底开始履行职务"
       ],
-      "bm_focus_phrase": "terma rujukan suruhanjaya"
+      "bm_focus_phrase": "Ditubuhkan dengan persetujuan Raja-raja Melayu, mula bertugas akhir Jun 1956"
     },
     {
-      "source_id": "bab-9-2-extra-2",
-      "bm_original": "gerak kerja suruhanjaya",
-      "translate": "委员会的工作进程",
+      "source_id": "bab-9-2-suq-2",
+      "bm_original": "Dianggotai lima ahli berlatar belakang undang-undang dan Perundangan Komanwel",
+      "translate": "由五名具有法律背景及英联邦法律经验的成员组成",
       "key_points_zh": [
-        "委员会的工作进程"
+        "由五名具有法律背景及英联邦法律经验的成员组成"
       ],
-      "bm_focus_phrase": "gerak kerja suruhanjaya"
+      "bm_focus_phrase": "Dianggotai lima ahli berlatar belakang undang-undang dan Perundangan Komanwel"
     },
     {
-      "source_id": "bab-9-2-extra-3",
-      "bm_original": "anggota suruhanjaya",
-      "translate": "委员会成员",
+      "source_id": "bab-9-2-suq-3",
+      "bm_original": "Mengadakan 118 perjumpaan dari Jun hingga Oktober 1956",
+      "translate": "从1956年6月至10月共举行118次会议",
       "key_points_zh": [
-        "委员会成员"
+        "从1956年6月至10月共举行118次会议"
       ],
-      "bm_focus_phrase": "anggota suruhanjaya"
+      "bm_focus_phrase": "Mengadakan 118 perjumpaan dari Jun hingga Oktober 1956"
+    },
+    {
+      "source_id": "bab-9-2-suq-4",
+      "bm_original": "Menerima memorandum bertulis daripada pelbagai pihak berkaitan perlembagaan",
+      "translate": "接获来自各方有关宪法的书面备忘录",
+      "key_points_zh": [
+        "接获来自各方有关宪法的书面备忘录"
+      ],
+      "bm_focus_phrase": "Menerima memorandum bertulis daripada pelbagai pihak berkaitan perlembagaan"
     },
     {
       "source_id": "bab-9-2-fokus-line",
