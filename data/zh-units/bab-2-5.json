@@ -42,8 +42,8 @@
     },
     {
       "source_id": "bab-2-5-fokus-line",
-      "bm_original": "Penentangan penjajahan di Tanah Melayu bermula seawal Melaka. Lima peringkat nasionalisme Melayu:",
-      "translate": "马来亚反抗殖民的斗争早在马六甲时期就已开始。马来民族主义的五个阶段："
+      "bm_original": "Penentangan penjajahan di Tanah Melayu bermula seawal Melaka. Enam peringkat nasionalisme Melayu:",
+      "translate": "马来亚反抗殖民的斗争早在马六甲时期就已开始。马来民族主义的六个阶段："
     },
     {
       "source_id": "bab-2-5-extra-32",
@@ -314,6 +314,11 @@
       "source_id": "bab-2-5-u14",
       "bm_original": "Kesedaran ini akhirnya menjadi asas kepada perjuangan kebangsaan yang membawa kepada kemerdekaan negara.",
       "translate": "这种意识最终成为民族斗争的基础，并推动国家走向独立。"
+    },
+    {
+      "source_id": "bab-2-5-extra-44",
+      "bm_original": "Pertubuhan Sosioekonomi oleh Intelektual",
+      "translate": "知识分子创立的社会经济团体"
     }
   ]
 }
