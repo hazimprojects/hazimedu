@@ -448,6 +448,14 @@ html[data-theme="dark"] .paper-chip.bloc-chip-allies {
   box-sizing: border-box;
 }
 
+.nav-wrap-end .zh-reveal-all-fab {
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .nav-wrap-end .zh-mode-fab {
   /* line-height 0 + flex = glyph 华 ditegah secara optik selari dengan ikon SVG */
   line-height: 0;
@@ -481,6 +489,46 @@ html[data-theme="dark"] .paper-chip.bloc-chip-allies {
 }
 
 html[data-theme="dark"] .zh-mode-fab.is-active {
+  background: rgba(129, 140, 248, 0.16);
+  border-color: rgba(165, 180, 252, 0.42);
+  color: #a5b4fc;
+}
+
+/* Papar Semua Terjemahan — togol tambahan, hanya nampak bila Mod Bahasa
+   Cina aktif (data-lang-mode="zh"). Sama gaya visual dgn .zh-mode-fab
+   supaya sepasang butang nampak selaras. */
+.zh-reveal-all-fab {
+  display: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  border: 1px solid var(--line-strong);
+  background: var(--paper);
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--ink);
+  flex-shrink: 0;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+html[data-lang-mode="zh"] .zh-reveal-all-fab {
+  display: flex;
+}
+
+.zh-reveal-all-fab:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-soft);
+}
+
+.zh-reveal-all-fab.is-active {
+  background: rgba(99, 102, 241, 0.12);
+  border-color: rgba(99, 102, 241, 0.35);
+  color: #4f46e5;
+}
+
+html[data-theme="dark"] .zh-reveal-all-fab.is-active {
   background: rgba(129, 140, 248, 0.16);
   border-color: rgba(165, 180, 252, 0.42);
   color: #a5b4fc;
