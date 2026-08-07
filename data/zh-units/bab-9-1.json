@@ -1,0 +1,882 @@
+{
+  "meta": {
+    "source_file": "notes/bab-9-1.html",
+    "rollout": "bab-9-1-manual-zh",
+    "notes": "Bab 9.1 (Usaha Rundingan Kemerdekaan): terjemahan zh-CN manual; bm_original selaras dengan teks pada halaman (tanpa span)."
+  },
+  "units": [
+    {
+      "source_id": "bab-9-1-sum-1",
+      "bm_original": "Usaha Rundingan Kemerdekaan ialah siri rundingan antara Raja-raja Melayu, Parti Perikatan dan British untuk mencapai kemerdekaan Persekutuan Tanah Melayu.",
+      "translate": "“争取独立谈判”是马来统治者、联盟党与英国之间为争取马来亚联合邦独立而进行的一系列谈判。",
+      "key_points_zh": [
+        "“争取独立谈判”是马来统治者、联盟党与英国之间为争取马来亚联合邦独立而进行的一系列谈判。"
+      ],
+      "bm_focus_phrase": "Usaha Rundingan Kemerdekaan ialah siri rundingan antara Raja-raja Melayu, Parti Perikatan dan British untuk mencapai kemerdekaan Persekutuan Tanah Melayu."
+    },
+    {
+      "source_id": "bab-9-1-sum-2",
+      "bm_original": "Rundingan berlangsung di Lancaster House, London dari 18 Januari 1956 hingga 6 Februari 1956, sebelum dimeterai melalui Perjanjian Kemerdekaan Tanah Melayu pada 8 Februari 1956.",
+      "translate": "谈判于1956年1月18日至2月6日在伦敦兰开斯特宫（Lancaster House）举行，随后于1956年2月8日通过《马来亚独立协定》正式落实。",
+      "key_points_zh": [
+        "谈判于1956年1月18日至2月6日在伦敦兰开斯特宫（Lancaster House）举行，随后于1956年2月8日通过《马来亚独立协定》正式落实。"
+      ],
+      "bm_focus_phrase": "Rundingan berlangsung di Lancaster House, London dari 18 Januari 1956 hingga 6 Februari 1956, sebelum dimeterai melalui Perjanjian Kemerdekaan Tanah Melayu pada 8 Februari 1956."
+    },
+    {
+      "source_id": "bab-9-1-sum-3",
+      "bm_original": "Rundingan ini berjaya membuka jalan kepada pembentukan Suruhanjaya Perlembagaan dan penetapan tarikh kemerdekaan pada 31 Ogos 1957.",
+      "translate": "这次谈判成功为成立宪法委员会及订定1957年8月31日独立日铺平了道路。",
+      "key_points_zh": [
+        "这次谈判成功为成立宪法委员会及订定1957年8月31日独立日铺平了道路。"
+      ],
+      "bm_focus_phrase": "Rundingan ini berjaya membuka jalan kepada pembentukan Suruhanjaya Perlembagaan dan penetapan tarikh kemerdekaan pada 31 Ogos 1957."
+    },
+    {
+      "source_id": "bab-9-1-orph-h1",
+      "bm_original": "Apakah usaha yang dilakukan untuk mencapai kemerdekaan Persekutuan Tanah Melayu?",
+      "translate": "为争取马来亚联合邦独立进行了哪些努力？",
+      "key_points_zh": [
+        "为争取马来亚联合邦独立进行了哪些努力？"
+      ],
+      "bm_focus_phrase": "Apakah usaha yang dilakukan untuk mencapai kemerdekaan Persekutuan Tanah Melayu?"
+    },
+    {
+      "source_id": "bab-9-1-u01",
+      "bm_original": "Kemerdekaan dicapai melalui rundingan antara Raja-raja Melayu, Parti Perikatan dan British. Rundingan tersebut melibatkan:",
+      "translate": "独立是通过马来统治者、联盟党与英国之间的谈判取得的。谈判内容包括：",
+      "key_points_zh": [
+        "独立是通过马来统治者、联盟党与英国之间的谈判取得的。谈判内容包括："
+      ],
+      "bm_focus_phrase": "Kemerdekaan dicapai melalui rundingan antara Raja-raja Melayu, Parti Perikatan dan British. Rundingan tersebut melibatkan:"
+    },
+    {
+      "source_id": "bab-9-1-extra-1",
+      "bm_original": "faktor yang mendorong rundingan",
+      "translate": "促成谈判的因素",
+      "key_points_zh": [
+        "促成谈判的因素"
+      ],
+      "bm_focus_phrase": "faktor yang mendorong rundingan"
+    },
+    {
+      "source_id": "bab-9-1-extra-2",
+      "bm_original": "perwakilan rundingan",
+      "translate": "谈判代表团",
+      "key_points_zh": [
+        "谈判代表团"
+      ],
+      "bm_focus_phrase": "perwakilan rundingan"
+    },
+    {
+      "source_id": "bab-9-1-extra-3",
+      "bm_original": "perjalanan rombongan ke London",
+      "translate": "代表团前往伦敦的行程",
+      "key_points_zh": [
+        "代表团前往伦敦的行程"
+      ],
+      "bm_focus_phrase": "perjalanan rombongan ke London"
+    },
+    {
+      "source_id": "bab-9-1-extra-4",
+      "bm_original": "rundingan di Lancaster House",
+      "translate": "在兰开斯特宫的谈判",
+      "key_points_zh": [
+        "在兰开斯特宫的谈判"
+      ],
+      "bm_focus_phrase": "rundingan di Lancaster House"
+    },
+    {
+      "source_id": "bab-9-1-extra-5",
+      "bm_original": "hasil rundingan",
+      "translate": "谈判成果",
+      "key_points_zh": [
+        "谈判成果"
+      ],
+      "bm_focus_phrase": "hasil rundingan"
+    },
+    {
+      "source_id": "bab-9-1-extra-6",
+      "bm_original": "sambutan pengumuman kemerdekaan",
+      "translate": "独立宣布的庆祝活动",
+      "key_points_zh": [
+        "独立宣布的庆祝活动"
+      ],
+      "bm_focus_phrase": "sambutan pengumuman kemerdekaan"
+    },
+    {
+      "source_id": "bab-9-1-fokus-line",
+      "bm_original": "Usaha Rundingan Kemerdekaan dapat difahami melalui enam bahagian utama:",
+      "translate": "争取独立谈判的努力可从六个主要部分加以理解：",
+      "key_points_zh": [
+        "争取独立谈判的努力可从六个主要部分加以理解："
+      ],
+      "bm_focus_phrase": "Usaha Rundingan Kemerdekaan dapat difahami melalui enam bahagian utama:"
+    },
+    {
+      "source_id": "bab-9-1-extra-7",
+      "bm_original": "Faktor yang Mendorong Usaha Rundingan Kemerdekaan",
+      "translate": "促成争取独立谈判的因素",
+      "key_points_zh": [
+        "促成争取独立谈判的因素"
+      ],
+      "bm_focus_phrase": "Faktor yang Mendorong Usaha Rundingan Kemerdekaan"
+    },
+    {
+      "source_id": "bab-9-1-extra-8",
+      "bm_original": "Kepentingan Rundingan Kemerdekaan",
+      "translate": "独立谈判的重要性",
+      "key_points_zh": [
+        "独立谈判的重要性"
+      ],
+      "bm_focus_phrase": "Kepentingan Rundingan Kemerdekaan"
+    },
+    {
+      "source_id": "bab-9-1-extra-9",
+      "bm_original": "Perjalanan Rombongan ke London",
+      "translate": "代表团前往伦敦的行程",
+      "key_points_zh": [
+        "代表团前往伦敦的行程"
+      ],
+      "bm_focus_phrase": "Perjalanan Rombongan ke London"
+    },
+    {
+      "source_id": "bab-9-1-extra-10",
+      "bm_original": "Rundingan Kemerdekaan di London",
+      "translate": "在伦敦的独立谈判",
+      "key_points_zh": [
+        "在伦敦的独立谈判"
+      ],
+      "bm_focus_phrase": "Rundingan Kemerdekaan di London"
+    },
+    {
+      "source_id": "bab-9-1-extra-11",
+      "bm_original": "Hasil Rundingan",
+      "translate": "谈判成果",
+      "key_points_zh": [
+        "谈判成果"
+      ],
+      "bm_focus_phrase": "Hasil Rundingan"
+    },
+    {
+      "source_id": "bab-9-1-extra-12",
+      "bm_original": "Sambutan Bersejarah",
+      "translate": "历史性的庆祝活动",
+      "key_points_zh": [
+        "历史性的庆祝活动"
+      ],
+      "bm_focus_phrase": "Sambutan Bersejarah"
+    },
+    {
+      "source_id": "bab-9-1-u02",
+      "bm_original": "Beberapa faktor mendorong usaha mencapai kemerdekaan melalui rundingan.",
+      "translate": "数个因素促成了通过谈判争取独立的努力。",
+      "key_points_zh": [
+        "数个因素促成了通过谈判争取独立的努力。"
+      ],
+      "bm_focus_phrase": "Beberapa faktor mendorong usaha mencapai kemerdekaan melalui rundingan."
+    },
+    {
+      "source_id": "bab-9-1-u03",
+      "bm_original": "Keadaan selepas Perang Dunia Kedua menyaksikan banyak negara membebaskan diri daripada penjajahan:",
+      "translate": "第二次世界大战后的局势见证了许多国家摆脱殖民统治，取得独立：",
+      "key_points_zh": [
+        "第二次世界大战后的局势见证了许多国家摆脱殖民统治，取得独立："
+      ],
+      "bm_focus_phrase": "Keadaan selepas Perang Dunia Kedua menyaksikan banyak negara membebaskan diri daripada penjajahan:"
+    },
+    {
+      "source_id": "bab-9-1-extra-13",
+      "bm_original": "Mesir mencapai kemerdekaan",
+      "translate": "埃及取得独立",
+      "key_points_zh": [
+        "埃及取得独立"
+      ],
+      "bm_focus_phrase": "Mesir mencapai kemerdekaan"
+    },
+    {
+      "source_id": "bab-9-1-extra-14",
+      "bm_original": "India mencapai kemerdekaan",
+      "translate": "印度取得独立",
+      "key_points_zh": [
+        "印度取得独立"
+      ],
+      "bm_focus_phrase": "India mencapai kemerdekaan"
+    },
+    {
+      "source_id": "bab-9-1-extra-15",
+      "bm_original": "Burma mencapai kemerdekaan",
+      "translate": "缅甸取得独立",
+      "key_points_zh": [
+        "缅甸取得独立"
+      ],
+      "bm_focus_phrase": "Burma mencapai kemerdekaan"
+    },
+    {
+      "source_id": "bab-9-1-extra-16",
+      "bm_original": "Filipina mencapai kemerdekaan",
+      "translate": "菲律宾取得独立",
+      "key_points_zh": [
+        "菲律宾取得独立"
+      ],
+      "bm_focus_phrase": "Filipina mencapai kemerdekaan"
+    },
+    {
+      "source_id": "bab-9-1-u04",
+      "bm_original": "Kebangkitan negara-negara tersebut mendorong perjuangan kemerdekaan di Persekutuan Tanah Melayu.",
+      "translate": "这些国家的崛起激励了马来亚联合邦的独立斗争。",
+      "key_points_zh": [
+        "这些国家的崛起激励了马来亚联合邦的独立斗争。"
+      ],
+      "bm_focus_phrase": "Kebangkitan negara-negara tersebut mendorong perjuangan kemerdekaan di Persekutuan Tanah Melayu."
+    },
+    {
+      "source_id": "bab-9-1-u05",
+      "bm_original": "Kerajaan British memberikan jaminan untuk membantu Persekutuan Tanah Melayu mencapai berkerajaan sendiri secepat mungkin.",
+      "translate": "英国政府保证协助马来亚联合邦尽快实现自治。",
+      "key_points_zh": [
+        "英国政府保证协助马来亚联合邦尽快实现自治。"
+      ],
+      "bm_focus_phrase": "Kerajaan British memberikan jaminan untuk membantu Persekutuan Tanah Melayu mencapai berkerajaan sendiri secepat mungkin."
+    },
+    {
+      "source_id": "bab-9-1-u06",
+      "bm_original": "Pilihan Raya Umum 1955 menjadi asas pembentukan perlembagaan ke arah berkerajaan sendiri.",
+      "translate": "1955年普选成为迈向自治宪法制定的基础。",
+      "key_points_zh": [
+        "1955年普选成为迈向自治宪法制定的基础。"
+      ],
+      "bm_focus_phrase": "Pilihan Raya Umum 1955 menjadi asas pembentukan perlembagaan ke arah berkerajaan sendiri."
+    },
+    {
+      "source_id": "bab-9-1-u07",
+      "bm_original": "Tunku Abdul Rahman dan wakil Raja-raja Melayu menjelaskan kepentingan misi rundingan ke London.",
+      "translate": "东姑阿都拉曼与马来统治者代表说明了赴伦敦谈判使命的重要性。",
+      "key_points_zh": [
+        "东姑阿都拉曼与马来统治者代表说明了赴伦敦谈判使命的重要性。"
+      ],
+      "bm_focus_phrase": "Tunku Abdul Rahman dan wakil Raja-raja Melayu menjelaskan kepentingan misi rundingan ke London."
+    },
+    {
+      "source_id": "bab-9-1-u08",
+      "bm_original": "Rundingan bertujuan membincangkan:",
+      "translate": "谈判旨在商讨：",
+      "key_points_zh": [
+        "谈判旨在商讨："
+      ],
+      "bm_focus_phrase": "Rundingan bertujuan membincangkan:"
+    },
+    {
+      "source_id": "bab-9-1-extra-17",
+      "bm_original": "hal keselamatan",
+      "translate": "安全事务",
+      "key_points_zh": [
+        "安全事务"
+      ],
+      "bm_focus_phrase": "hal keselamatan"
+    },
+    {
+      "source_id": "bab-9-1-extra-18",
+      "bm_original": "hubungan British–Tanah Melayu",
+      "translate": "英国与马来亚的关系",
+      "key_points_zh": [
+        "英国与马来亚的关系"
+      ],
+      "bm_focus_phrase": "hubungan British–Tanah Melayu"
+    },
+    {
+      "source_id": "bab-9-1-extra-19",
+      "bm_original": "perkara berkaitan perlembagaan negara merdeka",
+      "translate": "有关独立国家宪法的事项",
+      "key_points_zh": [
+        "有关独立国家宪法的事项"
+      ],
+      "bm_focus_phrase": "perkara berkaitan perlembagaan negara merdeka"
+    },
+    {
+      "source_id": "bab-9-1-u09",
+      "bm_original": "Rundingan ini mendapat sokongan pelbagai kaum tanpa mengira ideologi politik.",
+      "translate": "这次谈判获得各族群不分政治意识形态的支持。",
+      "key_points_zh": [
+        "这次谈判获得各族群不分政治意识形态的支持。"
+      ],
+      "bm_focus_phrase": "Rundingan ini mendapat sokongan pelbagai kaum tanpa mengira ideologi politik."
+    },
+    {
+      "source_id": "bab-9-1-u10",
+      "bm_original": "Antara penyokong rundingan ialah:",
+      "translate": "支持这次谈判者包括：",
+      "key_points_zh": [
+        "支持这次谈判者包括："
+      ],
+      "bm_focus_phrase": "Antara penyokong rundingan ialah:"
+    },
+    {
+      "source_id": "bab-9-1-extra-20",
+      "bm_original": "E.E.C. Thuraisingham",
+      "translate": "杜莱辛甘（E.E.C. Thuraisingham）",
+      "key_points_zh": [
+        "杜莱辛甘（E.E.C. Thuraisingham）"
+      ],
+      "bm_focus_phrase": "E.E.C. Thuraisingham"
+    },
+    {
+      "source_id": "bab-9-1-extra-21",
+      "bm_original": "Ahmad Boestamam",
+      "translate": "阿末波斯达曼（Ahmad Boestamam）",
+      "key_points_zh": [
+        "阿末波斯达曼（Ahmad Boestamam）"
+      ],
+      "bm_focus_phrase": "Ahmad Boestamam"
+    },
+    {
+      "source_id": "bab-9-1-extra-22",
+      "bm_original": "wakil Parti Negara",
+      "translate": "国家党（Parti Negara）代表",
+      "key_points_zh": [
+        "国家党（Parti Negara）代表"
+      ],
+      "bm_focus_phrase": "wakil Parti Negara"
+    },
+    {
+      "source_id": "bab-9-1-extra-23",
+      "bm_original": "wakil Parti Buruh",
+      "translate": "工党（Parti Buruh）代表",
+      "key_points_zh": [
+        "工党（Parti Buruh）代表"
+      ],
+      "bm_focus_phrase": "wakil Parti Buruh"
+    },
+    {
+      "source_id": "bab-9-1-extra-24",
+      "bm_original": "wakil kaum Serani",
+      "translate": "欧亚裔（Serani）代表",
+      "key_points_zh": [
+        "欧亚裔（Serani）代表"
+      ],
+      "bm_focus_phrase": "wakil kaum Serani"
+    },
+    {
+      "source_id": "bab-9-1-u11",
+      "bm_original": "Ahmad Boestamam menyeru rakyat supaya menyokong rombongan ke London.",
+      "translate": "阿末波斯达曼呼吁人民支持前往伦敦的代表团。",
+      "key_points_zh": [
+        "阿末波斯达曼呼吁人民支持前往伦敦的代表团。"
+      ],
+      "bm_focus_phrase": "Ahmad Boestamam menyeru rakyat supaya menyokong rombongan ke London."
+    },
+    {
+      "source_id": "bab-9-1-extra-25",
+      "bm_original": "Dato' Panglima Bukit Gantang (Dato' Haji Wahab Abd Aziz) – Menteri Besar Perak",
+      "translate": "拿督武吉干当（Dato' Panglima Bukit Gantang，本名Dato' Haji Wahab Abd Aziz）——霹雳州务大臣",
+      "key_points_zh": [
+        "拿督武吉干当（Dato' Panglima Bukit Gantang，本名Dato' Haji Wahab Abd Aziz）——霹雳州务大臣"
+      ],
+      "bm_focus_phrase": "Dato' Panglima Bukit Gantang (Dato' Haji Wahab Abd Aziz) – Menteri Besar Perak"
+    },
+    {
+      "source_id": "bab-9-1-extra-26",
+      "bm_original": "Encik Abdul Aziz Abdul Majid – Menteri Besar Selangor",
+      "translate": "阿都亚兹阿都马吉（Encik Abdul Aziz Abdul Majid）——雪兰莪州务大臣",
+      "key_points_zh": [
+        "阿都亚兹阿都马吉（Encik Abdul Aziz Abdul Majid）——雪兰莪州务大臣"
+      ],
+      "bm_focus_phrase": "Encik Abdul Aziz Abdul Majid – Menteri Besar Selangor"
+    },
+    {
+      "source_id": "bab-9-1-extra-27",
+      "bm_original": "Dato' Mohamad Seth Mohammad Said – Menteri Besar Johor",
+      "translate": "拿督莫哈末沙益（Dato' Mohamad Seth Mohammad Said）——柔佛州务大臣",
+      "key_points_zh": [
+        "拿督莫哈末沙益（Dato' Mohamad Seth Mohammad Said）——柔佛州务大臣"
+      ],
+      "bm_focus_phrase": "Dato' Mohamad Seth Mohammad Said – Menteri Besar Johor"
+    },
+    {
+      "source_id": "bab-9-1-extra-28",
+      "bm_original": "Dato' Nik Ahmad Kamil Haji Mahmood – Menteri Besar Kelantan",
+      "translate": "拿督尼克阿末卡米（Dato' Nik Ahmad Kamil Haji Mahmood）——吉兰丹州务大臣",
+      "key_points_zh": [
+        "拿督尼克阿末卡米（Dato' Nik Ahmad Kamil Haji Mahmood）——吉兰丹州务大臣"
+      ],
+      "bm_focus_phrase": "Dato' Nik Ahmad Kamil Haji Mahmood – Menteri Besar Kelantan"
+    },
+    {
+      "source_id": "bab-9-1-extra-29",
+      "bm_original": "Tunku Abdul Rahman",
+      "translate": "东姑阿都拉曼",
+      "key_points_zh": [
+        "东姑阿都拉曼"
+      ],
+      "bm_focus_phrase": "Tunku Abdul Rahman"
+    },
+    {
+      "source_id": "bab-9-1-extra-30",
+      "bm_original": "Dato' Abdul Razak Hussein",
+      "translate": "拿督阿都拉萨（Dato' Abdul Razak Hussein）",
+      "key_points_zh": [
+        "拿督阿都拉萨（Dato' Abdul Razak Hussein）"
+      ],
+      "bm_focus_phrase": "Dato' Abdul Razak Hussein"
+    },
+    {
+      "source_id": "bab-9-1-extra-31",
+      "bm_original": "H.S. Lee",
+      "translate": "李孝式（H.S. Lee）",
+      "key_points_zh": [
+        "李孝式（H.S. Lee）"
+      ],
+      "bm_focus_phrase": "H.S. Lee"
+    },
+    {
+      "source_id": "bab-9-1-extra-32",
+      "bm_original": "Dr. Ismail Abdul Rahman",
+      "translate": "伊斯迈医生（Dr. Ismail Abdul Rahman）",
+      "key_points_zh": [
+        "伊斯迈医生（Dr. Ismail Abdul Rahman）"
+      ],
+      "bm_focus_phrase": "Dr. Ismail Abdul Rahman"
+    },
+    {
+      "source_id": "bab-9-1-u12",
+      "bm_original": "Perjalanan rombongan kemerdekaan berlaku mengikut kronologi berikut:",
+      "translate": "独立代表团的行程按以下顺序进行：",
+      "key_points_zh": [
+        "独立代表团的行程按以下顺序进行："
+      ],
+      "bm_focus_phrase": "Perjalanan rombongan kemerdekaan berlaku mengikut kronologi berikut:"
+    },
+    {
+      "source_id": "bab-9-1-u13",
+      "bm_original": "Tunku Abdul Rahman berangkat dari Kuala Lumpur ke Singapura dengan kapal terbang.",
+      "translate": "东姑阿都拉曼从吉隆坡搭乘飞机前往新加坡。",
+      "key_points_zh": [
+        "东姑阿都拉曼从吉隆坡搭乘飞机前往新加坡。"
+      ],
+      "bm_focus_phrase": "Tunku Abdul Rahman berangkat dari Kuala Lumpur ke Singapura dengan kapal terbang."
+    },
+    {
+      "source_id": "bab-9-1-u14",
+      "bm_original": "1 Januari 1956, pukul 5.00 petang, rombongan menaiki kapal laut M.V. Asia dari Pelabuhan Tanjung Pagar, Singapura.",
+      "translate": "1956年1月1日下午5时，代表团从新加坡丹戎巴葛港乘坐M.V. Asia号轮船启程。",
+      "key_points_zh": [
+        "1956年1月1日下午5时，代表团从新加坡丹戎巴葛港乘坐M.V. Asia号轮船启程。"
+      ],
+      "bm_focus_phrase": "1 Januari 1956, pukul 5.00 petang, rombongan menaiki kapal laut M.V. Asia dari Pelabuhan Tanjung Pagar, Singapura."
+    },
+    {
+      "source_id": "bab-9-1-u15",
+      "bm_original": "Rombongan singgah di Karachi, Pakistan.",
+      "translate": "代表团途经巴基斯坦卡拉奇。",
+      "key_points_zh": [
+        "代表团途经巴基斯坦卡拉奇。"
+      ],
+      "bm_focus_phrase": "Rombongan singgah di Karachi, Pakistan."
+    },
+    {
+      "source_id": "bab-9-1-u16",
+      "bm_original": "Dari Karachi, rombongan menaiki kapal terbang menuju ke London.",
+      "translate": "从卡拉奇，代表团搭乘飞机前往伦敦。",
+      "key_points_zh": [
+        "从卡拉奇，代表团搭乘飞机前往伦敦。"
+      ],
+      "bm_focus_phrase": "Dari Karachi, rombongan menaiki kapal terbang menuju ke London."
+    },
+    {
+      "source_id": "bab-9-1-u17",
+      "bm_original": "14 Januari 1956, rombongan tiba di London.",
+      "translate": "1956年1月14日，代表团抵达伦敦。",
+      "key_points_zh": [
+        "1956年1月14日，代表团抵达伦敦。"
+      ],
+      "bm_focus_phrase": "14 Januari 1956, rombongan tiba di London."
+    },
+    {
+      "source_id": "bab-9-1-u18",
+      "bm_original": "Dianggarkan 10 ribu orang menghantar rombongan kemerdekaan di Tanjung Pagar, Singapura.",
+      "translate": "估计有一万人在新加坡丹戎巴葛为独立代表团送行。",
+      "key_points_zh": [
+        "估计有一万人在新加坡丹戎巴葛为独立代表团送行。"
+      ],
+      "bm_focus_phrase": "Dianggarkan 10 ribu orang menghantar rombongan kemerdekaan di Tanjung Pagar, Singapura."
+    },
+    {
+      "source_id": "bab-9-1-u19",
+      "bm_original": "Tunku Abdul Rahman memilih perjalanan melalui laut ke Karachi.",
+      "translate": "东姑阿都拉曼选择经海路前往卡拉奇。",
+      "key_points_zh": [
+        "东姑阿都拉曼选择经海路前往卡拉奇。"
+      ],
+      "bm_focus_phrase": "Tunku Abdul Rahman memilih perjalanan melalui laut ke Karachi."
+    },
+    {
+      "source_id": "bab-9-1-u20",
+      "bm_original": "Tempoh pelayaran digunakan untuk berbincang dengan wakil Raja-raja Melayu.",
+      "translate": "航行期间用于与马来统治者代表商讨。",
+      "key_points_zh": [
+        "航行期间用于与马来统治者代表商讨。"
+      ],
+      "bm_focus_phrase": "Tempoh pelayaran digunakan untuk berbincang dengan wakil Raja-raja Melayu."
+    },
+    {
+      "source_id": "bab-9-1-u21",
+      "bm_original": "Perbincangan ini bertujuan menyusun strategi sebelum berunding dengan kerajaan British.",
+      "translate": "这项商讨旨在与英国政府谈判前拟定策略。",
+      "key_points_zh": [
+        "这项商讨旨在与英国政府谈判前拟定策略。"
+      ],
+      "bm_focus_phrase": "Perbincangan ini bertujuan menyusun strategi sebelum berunding dengan kerajaan British."
+    },
+    {
+      "source_id": "bab-9-1-u22",
+      "bm_original": "Rundingan berlangsung dari 18 Januari 1956 hingga 6 Februari 1956.",
+      "translate": "谈判从1956年1月18日进行至2月6日。",
+      "key_points_zh": [
+        "谈判从1956年1月18日进行至2月6日。"
+      ],
+      "bm_focus_phrase": "Rundingan berlangsung dari 18 Januari 1956 hingga 6 Februari 1956."
+    },
+    {
+      "source_id": "bab-9-1-u23",
+      "bm_original": "Rundingan diadakan di Lancaster House, London.",
+      "translate": "谈判在伦敦兰开斯特宫（Lancaster House）举行。",
+      "key_points_zh": [
+        "谈判在伦敦兰开斯特宫（Lancaster House）举行。"
+      ],
+      "bm_focus_phrase": "Rundingan diadakan di Lancaster House, London."
+    },
+    {
+      "source_id": "bab-9-1-u24",
+      "bm_original": "Rundingan melibatkan wakil Raja-raja Melayu, Parti Perikatan dan British.",
+      "translate": "谈判涉及马来统治者代表、联盟党与英国。",
+      "key_points_zh": [
+        "谈判涉及马来统治者代表、联盟党与英国。"
+      ],
+      "bm_focus_phrase": "Rundingan melibatkan wakil Raja-raja Melayu, Parti Perikatan dan British."
+    },
+    {
+      "source_id": "bab-9-1-orph-l1",
+      "bm_original": "\"Rombongan saya sedang berusaha bagi mendapatkan taraf berkerajaan sendiri untuk Persekutuan Tanah Melayu dengan serta-merta dan kemerdekaan penuh pada tahun hadapan.\"",
+      "translate": "“我的代表团正努力争取马来亚联合邦立即实行自治，并于明年实现完全独立。”",
+      "key_points_zh": [
+        "“我的代表团正努力争取马来亚联合邦立即实行自治，并于明年实现完全独立。”"
+      ],
+      "bm_focus_phrase": "\"Rombongan saya sedang berusaha bagi mendapatkan taraf berkerajaan sendiri untuk Persekutuan Tanah Melayu dengan serta-merta dan kemerdekaan penuh pada tahun hadapan.\""
+    },
+    {
+      "source_id": "bab-9-1-orph-l2",
+      "bm_original": "— Tunku Abdul Rahman",
+      "translate": "——东姑阿都拉曼",
+      "key_points_zh": [
+        "——东姑阿都拉曼"
+      ],
+      "bm_focus_phrase": "— Tunku Abdul Rahman"
+    },
+    {
+      "source_id": "bab-9-1-u25",
+      "bm_original": "Perkara yang dipersetujui oleh pihak British:",
+      "translate": "英方同意的事项：",
+      "key_points_zh": [
+        "英方同意的事项："
+      ],
+      "bm_focus_phrase": "Perkara yang dipersetujui oleh pihak British:"
+    },
+    {
+      "source_id": "bab-9-1-extra-33",
+      "bm_original": "Ahli Majlis Eksekutif dilantik oleh Pesuruhjaya Tinggi dengan nasihat Ketua Menteri",
+      "translate": "行政议员由最高专员根据首席部长的建议委任",
+      "key_points_zh": [
+        "行政议员由最高专员根据首席部长的建议委任"
+      ],
+      "bm_focus_phrase": "Ahli Majlis Eksekutif dilantik oleh Pesuruhjaya Tinggi dengan nasihat Ketua Menteri"
+    },
+    {
+      "source_id": "bab-9-1-extra-34",
+      "bm_original": "Persekutuan Tanah Melayu memberikan ganti rugi kepada pegawai British yang diberhentikan",
+      "translate": "马来亚联合邦向被解职的英籍官员发放赔偿",
+      "key_points_zh": [
+        "马来亚联合邦向被解职的英籍官员发放赔偿"
+      ],
+      "bm_focus_phrase": "Persekutuan Tanah Melayu memberikan ganti rugi kepada pegawai British yang diberhentikan"
+    },
+    {
+      "source_id": "bab-9-1-extra-35",
+      "bm_original": "Mengadakan Perjanjian Pertahanan dan Bantuan Bersama antara Persekutuan Tanah Melayu dengan British",
+      "translate": "马来亚联合邦与英国签订《共同防御与互助协定》",
+      "key_points_zh": [
+        "马来亚联合邦与英国签订《共同防御与互助协定》"
+      ],
+      "bm_focus_phrase": "Mengadakan Perjanjian Pertahanan dan Bantuan Bersama antara Persekutuan Tanah Melayu dengan British"
+    },
+    {
+      "source_id": "bab-9-1-extra-36",
+      "bm_original": "British dan negara Komanwel akan membantu dalam bidang pertahanan",
+      "translate": "英国及英联邦国家将在国防方面提供协助",
+      "key_points_zh": [
+        "英国及英联邦国家将在国防方面提供协助"
+      ],
+      "bm_focus_phrase": "British dan negara Komanwel akan membantu dalam bidang pertahanan"
+    },
+    {
+      "source_id": "bab-9-1-u26",
+      "bm_original": "Tuntutan Perwakilan Tanah Melayu:",
+      "translate": "马来亚代表团的要求：",
+      "key_points_zh": [
+        "马来亚代表团的要求："
+      ],
+      "bm_focus_phrase": "Tuntutan Perwakilan Tanah Melayu:"
+    },
+    {
+      "source_id": "bab-9-1-extra-37",
+      "bm_original": "Menghapuskan jawatan Setiausaha Kewangan dan menggantikannya dengan Menteri Kewangan",
+      "translate": "废除财政司一职，改设财政部长",
+      "key_points_zh": [
+        "废除财政司一职，改设财政部长"
+      ],
+      "bm_focus_phrase": "Menghapuskan jawatan Setiausaha Kewangan dan menggantikannya dengan Menteri Kewangan"
+    },
+    {
+      "source_id": "bab-9-1-extra-38",
+      "bm_original": "Menuntut Menteri Hal Ehwal Ekonomi daripada rakyat Persekutuan Tanah Melayu",
+      "translate": "要求由马来亚联合邦公民出任经济事务部长",
+      "key_points_zh": [
+        "要求由马来亚联合邦公民出任经济事务部长"
+      ],
+      "bm_focus_phrase": "Menuntut Menteri Hal Ehwal Ekonomi daripada rakyat Persekutuan Tanah Melayu"
+    },
+    {
+      "source_id": "bab-9-1-extra-39",
+      "bm_original": "Menuntut Menteri Pertahanan daripada rakyat tempatan menggantikan Pengarah Gerakan British",
+      "translate": "要求由本地公民出任国防部长，取代英籍作战总监",
+      "key_points_zh": [
+        "要求由本地公民出任国防部长，取代英籍作战总监"
+      ],
+      "bm_focus_phrase": "Menuntut Menteri Pertahanan daripada rakyat tempatan menggantikan Pengarah Gerakan British"
+    },
+    {
+      "source_id": "bab-9-1-extra-40",
+      "bm_original": "Menuntut tarikh kemerdekaan tidak lewat daripada 31 Ogos 1957",
+      "translate": "要求独立日期不迟于1957年8月31日",
+      "key_points_zh": [
+        "要求独立日期不迟于1957年8月31日"
+      ],
+      "bm_focus_phrase": "Menuntut tarikh kemerdekaan tidak lewat daripada 31 Ogos 1957"
+    },
+    {
+      "source_id": "bab-9-1-u27",
+      "bm_original": "Berunding mengenai:",
+      "translate": "商讨事项包括：",
+      "key_points_zh": [
+        "商讨事项包括："
+      ],
+      "bm_focus_phrase": "Berunding mengenai:"
+    },
+    {
+      "source_id": "bab-9-1-extra-41",
+      "bm_original": "Suruhanjaya Perlembagaan",
+      "translate": "宪法委员会",
+      "key_points_zh": [
+        "宪法委员会"
+      ],
+      "bm_focus_phrase": "Suruhanjaya Perlembagaan"
+    },
+    {
+      "source_id": "bab-9-1-extra-42",
+      "bm_original": "kewangan",
+      "translate": "财政",
+      "key_points_zh": [
+        "财政"
+      ],
+      "bm_focus_phrase": "kewangan"
+    },
+    {
+      "source_id": "bab-9-1-extra-43",
+      "bm_original": "keselamatan dalam negeri",
+      "translate": "国内治安",
+      "key_points_zh": [
+        "国内治安"
+      ],
+      "bm_focus_phrase": "keselamatan dalam negeri"
+    },
+    {
+      "source_id": "bab-9-1-extra-44",
+      "bm_original": "perkhidmatan awam",
+      "translate": "公共服务",
+      "key_points_zh": [
+        "公共服务"
+      ],
+      "bm_focus_phrase": "perkhidmatan awam"
+    },
+    {
+      "source_id": "bab-9-1-u28",
+      "bm_original": "Sheikh Abdullah Fahim diminta memberikan pandangan tentang penetapan tarikh kemerdekaan.",
+      "translate": "阿都拉发欣长老（Sheikh Abdullah Fahim）受邀就独立日期的订定提供意见。",
+      "key_points_zh": [
+        "阿都拉发欣长老（Sheikh Abdullah Fahim）受邀就独立日期的订定提供意见。"
+      ],
+      "bm_focus_phrase": "Sheikh Abdullah Fahim diminta memberikan pandangan tentang penetapan tarikh kemerdekaan."
+    },
+    {
+      "source_id": "bab-9-1-u29",
+      "bm_original": "Tarikh 31 Ogos 1957 dipilih selepas pandangan beliau diambil kira.",
+      "translate": "在采纳他的意见后，1957年8月31日被选定为独立日。",
+      "key_points_zh": [
+        "在采纳他的意见后，1957年8月31日被选定为独立日。"
+      ],
+      "bm_focus_phrase": "Tarikh 31 Ogos 1957 dipilih selepas pandangan beliau diambil kira."
+    },
+    {
+      "source_id": "bab-9-1-u30",
+      "bm_original": "Rundingan menghasilkan laporan setebal 20 halaman.",
+      "translate": "谈判产生了一份20页的报告。",
+      "key_points_zh": [
+        "谈判产生了一份20页的报告。"
+      ],
+      "bm_focus_phrase": "Rundingan menghasilkan laporan setebal 20 halaman."
+    },
+    {
+      "source_id": "bab-9-1-u31",
+      "bm_original": "8 Februari 1956, kerajaan British bersetuju memberikan kemerdekaan melalui Perjanjian Kemerdekaan Tanah Melayu.",
+      "translate": "1956年2月8日，英国政府同意通过《马来亚独立协定》给予独立。",
+      "key_points_zh": [
+        "1956年2月8日，英国政府同意通过《马来亚独立协定》给予独立。"
+      ],
+      "bm_focus_phrase": "8 Februari 1956, kerajaan British bersetuju memberikan kemerdekaan melalui Perjanjian Kemerdekaan Tanah Melayu."
+    },
+    {
+      "source_id": "bab-9-1-u32",
+      "bm_original": "Kedua-dua pihak bersetuju membentuk Suruhanjaya Perlembagaan.",
+      "translate": "双方同意成立宪法委员会。",
+      "key_points_zh": [
+        "双方同意成立宪法委员会。"
+      ],
+      "bm_focus_phrase": "Kedua-dua pihak bersetuju membentuk Suruhanjaya Perlembagaan."
+    },
+    {
+      "source_id": "bab-9-1-u33",
+      "bm_original": "Suruhanjaya tersebut bertanggungjawab merangka perlembagaan negara.",
+      "translate": "该委员会负责草拟国家宪法。",
+      "key_points_zh": [
+        "该委员会负责草拟国家宪法。"
+      ],
+      "bm_focus_phrase": "Suruhanjaya tersebut bertanggungjawab merangka perlembagaan negara."
+    },
+    {
+      "source_id": "bab-9-1-u34",
+      "bm_original": "20 Februari 1956, rombongan merdeka tiba di Lapangan Terbang Batu Berendam, Melaka.",
+      "translate": "1956年2月20日，独立代表团抵达马六甲Batu Berendam机场。",
+      "key_points_zh": [
+        "1956年2月20日，独立代表团抵达马六甲Batu Berendam机场。"
+      ],
+      "bm_focus_phrase": "20 Februari 1956, rombongan merdeka tiba di Lapangan Terbang Batu Berendam, Melaka."
+    },
+    {
+      "source_id": "bab-9-1-u35",
+      "bm_original": "Rombongan diarak ke Padang Banda Hilir, Melaka.",
+      "translate": "代表团被游行护送至马六甲Banda Hilir广场。",
+      "key_points_zh": [
+        "代表团被游行护送至马六甲Banda Hilir广场。"
+      ],
+      "bm_focus_phrase": "Rombongan diarak ke Padang Banda Hilir, Melaka."
+    },
+    {
+      "source_id": "bab-9-1-u36",
+      "bm_original": "Lebih kurang 100 ribu orang hadir dari seluruh negara, datang menaiki bas, lori dan berjalan kaki.",
+      "translate": "估计有十万人从全国各地赶来出席，乘搭巴士、罗厘或徒步而至。",
+      "key_points_zh": [
+        "估计有十万人从全国各地赶来出席，乘搭巴士、罗厘或徒步而至。"
+      ],
+      "bm_focus_phrase": "Lebih kurang 100 ribu orang hadir dari seluruh negara, datang menaiki bas, lori dan berjalan kaki."
+    },
+    {
+      "source_id": "bab-9-1-u37",
+      "bm_original": "Tunku Abdul Rahman mengumumkan tarikh kemerdekaan pada 31 Ogos 1957.",
+      "translate": "东姑阿都拉曼宣布独立日期为1957年8月31日。",
+      "key_points_zh": [
+        "东姑阿都拉曼宣布独立日期为1957年8月31日。"
+      ],
+      "bm_focus_phrase": "Tunku Abdul Rahman mengumumkan tarikh kemerdekaan pada 31 Ogos 1957."
+    },
+    {
+      "source_id": "bab-9-1-u38",
+      "bm_original": "Orang ramai melaungkan \"Merdeka\" dengan penuh semangat.",
+      "translate": "群众满怀激情地高呼“默迪卡”（独立）。",
+      "key_points_zh": [
+        "群众满怀激情地高呼“默迪卡”（独立）。"
+      ],
+      "bm_focus_phrase": "Orang ramai melaungkan \"Merdeka\" dengan penuh semangat."
+    },
+    {
+      "source_id": "bab-9-1-u39",
+      "bm_original": "Sambutan ini membuktikan kesungguhan semua pihak dalam memperjuangkan kemerdekaan.",
+      "translate": "这场庆祝活动证明了各方争取独立的诚意与决心。",
+      "key_points_zh": [
+        "这场庆祝活动证明了各方争取独立的诚意与决心。"
+      ],
+      "bm_focus_phrase": "Sambutan ini membuktikan kesungguhan semua pihak dalam memperjuangkan kemerdekaan."
+    },
+    {
+      "source_id": "bab-9-1-u40",
+      "bm_original": "Keputusan pemimpin negara perlu dihormati demi mengekalkan keharmonian negara.",
+      "translate": "国家领袖的决定应受到尊重，以维护国家的和谐。",
+      "key_points_zh": [
+        "国家领袖的决定应受到尊重，以维护国家的和谐。"
+      ],
+      "bm_focus_phrase": "Keputusan pemimpin negara perlu dihormati demi mengekalkan keharmonian negara."
+    },
+    {
+      "source_id": "bab-9-1-u41",
+      "bm_original": "Usaha Rundingan Kemerdekaan berjaya membuka jalan kepada kemerdekaan Persekutuan Tanah Melayu melalui perundingan dan kerjasama pelbagai pihak:",
+      "translate": "争取独立谈判通过各方的协商与合作，成功为马来亚联合邦的独立铺平了道路：",
+      "key_points_zh": [
+        "争取独立谈判通过各方的协商与合作，成功为马来亚联合邦的独立铺平了道路："
+      ],
+      "bm_focus_phrase": "Usaha Rundingan Kemerdekaan berjaya membuka jalan kepada kemerdekaan Persekutuan Tanah Melayu melalui perundingan dan kerjasama pelbagai pihak:"
+    },
+    {
+      "source_id": "bab-9-1-extra-45",
+      "bm_original": "Perjanjian Kemerdekaan Tanah Melayu",
+      "translate": "《马来亚独立协定》",
+      "key_points_zh": [
+        "《马来亚独立协定》"
+      ],
+      "bm_focus_phrase": "Perjanjian Kemerdekaan Tanah Melayu"
+    },
+    {
+      "source_id": "bab-9-1-extra-46",
+      "bm_original": "Suruhanjaya Perlembagaan",
+      "translate": "宪法委员会",
+      "key_points_zh": [
+        "宪法委员会"
+      ],
+      "bm_focus_phrase": "Suruhanjaya Perlembagaan"
+    },
+    {
+      "source_id": "bab-9-1-extra-47",
+      "bm_original": "31 Ogos 1957",
+      "translate": "1957年8月31日",
+      "key_points_zh": [
+        "1957年8月31日"
+      ],
+      "bm_focus_phrase": "31 Ogos 1957"
+    },
+    {
+      "source_id": "bab-9-1-extra-48",
+      "bm_original": "Sambutan di Banda Hilir",
+      "translate": "在Banda Hilir的庆祝活动",
+      "key_points_zh": [
+        "在Banda Hilir的庆祝活动"
+      ],
+      "bm_focus_phrase": "Sambutan di Banda Hilir"
+    },
+    {
+      "source_id": "bab-9-1-u42",
+      "bm_original": "Rundingan ini membuktikan bahawa kebijaksanaan pemimpin, sokongan rakyat dan semangat perpaduan menjadi asas penting dalam mencapai kemerdekaan negara.",
+      "translate": "这次谈判证明，领袖的智慧、人民的支持与团结精神是国家取得独立的重要基础。",
+      "key_points_zh": [
+        "这次谈判证明，领袖的智慧、人民的支持与团结精神是国家取得独立的重要基础。"
+      ],
+      "bm_focus_phrase": "Rundingan ini membuktikan bahawa kebijaksanaan pemimpin, sokongan rakyat dan semangat perpaduan menjadi asas penting dalam mencapai kemerdekaan negara."
+    }
+  ]
+}

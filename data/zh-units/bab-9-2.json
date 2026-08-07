@@ -1,0 +1,486 @@
+{
+  "meta": {
+    "source_file": "notes/bab-9-2.html",
+    "rollout": "bab-9-2-manual-zh",
+    "notes": "Bab 9.2 (Peranan Suruhanjaya Perlembagaan Persekutuan Tanah Melayu): terjemahan zh-CN manual; bm_original selaras dengan teks pada halaman (tanpa span)."
+  },
+  "units": [
+    {
+      "source_id": "bab-9-2-sum-1",
+      "bm_original": "Suruhanjaya Perlembagaan Persekutuan Tanah Melayu atau Suruhanjaya Reid ditubuhkan untuk membincangkan, menyusun dan merangka Perlembagaan Persekutuan Tanah Melayu yang merdeka.",
+      "translate": "马来亚联合邦宪法委员会，又称里德委员会（Suruhanjaya Reid），成立目的是商讨、编排并草拟独立的马来亚联合邦宪法。",
+      "key_points_zh": [
+        "马来亚联合邦宪法委员会，又称里德委员会（Suruhanjaya Reid），成立目的是商讨、编排并草拟独立的马来亚联合邦宪法。"
+      ],
+      "bm_focus_phrase": "Suruhanjaya Perlembagaan Persekutuan Tanah Melayu atau Suruhanjaya Reid ditubuhkan untuk membincangkan, menyusun dan merangka Perlembagaan Persekutuan Tanah Melayu yang merdeka."
+    },
+    {
+      "source_id": "bab-9-2-sum-2",
+      "bm_original": "Suruhanjaya ini diumumkan pada 8 Mac 1956 selepas mendapat persetujuan Raja-raja Melayu dan mula menjalankan tugas pada akhir Jun 1956.",
+      "translate": "该委员会于1956年3月8日在获得马来统治者同意后宣布成立，并于1956年6月底开始展开工作。",
+      "key_points_zh": [
+        "该委员会于1956年3月8日在获得马来统治者同意后宣布成立，并于1956年6月底开始展开工作。"
+      ],
+      "bm_focus_phrase": "Suruhanjaya ini diumumkan pada 8 Mac 1956 selepas mendapat persetujuan Raja-raja Melayu dan mula menjalankan tugas pada akhir Jun 1956."
+    },
+    {
+      "source_id": "bab-9-2-sum-3",
+      "bm_original": "Suruhanjaya ini memainkan peranan penting dalam membentuk asas sistem pemerintahan negara merdeka yang berteraskan Demokrasi Berparlimen, Raja Berperlembagaan dan perpaduan rakyat.",
+      "translate": "该委员会在建立以议会民主制、君主立宪制与人民团结为基础的独立国家政治体制方面，扮演了重要角色。",
+      "key_points_zh": [
+        "该委员会在建立以议会民主制、君主立宪制与人民团结为基础的独立国家政治体制方面，扮演了重要角色。"
+      ],
+      "bm_focus_phrase": "Suruhanjaya ini memainkan peranan penting dalam membentuk asas sistem pemerintahan negara merdeka yang berteraskan Demokrasi Berparlimen, Raja Berperlembagaan dan perpaduan rakyat."
+    },
+    {
+      "source_id": "bab-9-2-orph-h1",
+      "bm_original": "Apakah peranan Suruhanjaya Perlembagaan Persekutuan Tanah Melayu dalam pembentukan negara merdeka?",
+      "translate": "马来亚联合邦宪法委员会在建国过程中扮演什么角色？",
+      "key_points_zh": [
+        "马来亚联合邦宪法委员会在建国过程中扮演什么角色？"
+      ],
+      "bm_focus_phrase": "Apakah peranan Suruhanjaya Perlembagaan Persekutuan Tanah Melayu dalam pembentukan negara merdeka?"
+    },
+    {
+      "source_id": "bab-9-2-u01",
+      "bm_original": "Suruhanjaya ini ditubuhkan untuk merangka Perlembagaan Persekutuan Tanah Melayu yang merdeka. Peranan tersebut melibatkan:",
+      "translate": "该委员会成立的目的是草拟独立的马来亚联合邦宪法。其角色包括：",
+      "key_points_zh": [
+        "该委员会成立的目的是草拟独立的马来亚联合邦宪法。其角色包括："
+      ],
+      "bm_focus_phrase": "Suruhanjaya ini ditubuhkan untuk merangka Perlembagaan Persekutuan Tanah Melayu yang merdeka. Peranan tersebut melibatkan:"
+    },
+    {
+      "source_id": "bab-9-2-extra-1",
+      "bm_original": "terma rujukan suruhanjaya",
+      "translate": "委员会的职权范围",
+      "key_points_zh": [
+        "委员会的职权范围"
+      ],
+      "bm_focus_phrase": "terma rujukan suruhanjaya"
+    },
+    {
+      "source_id": "bab-9-2-extra-2",
+      "bm_original": "gerak kerja suruhanjaya",
+      "translate": "委员会的工作进程",
+      "key_points_zh": [
+        "委员会的工作进程"
+      ],
+      "bm_focus_phrase": "gerak kerja suruhanjaya"
+    },
+    {
+      "source_id": "bab-9-2-extra-3",
+      "bm_original": "anggota suruhanjaya",
+      "translate": "委员会成员",
+      "key_points_zh": [
+        "委员会成员"
+      ],
+      "bm_focus_phrase": "anggota suruhanjaya"
+    },
+    {
+      "source_id": "bab-9-2-fokus-line",
+      "bm_original": "Peranan Suruhanjaya Perlembagaan Persekutuan Tanah Melayu dapat difahami melalui tiga bahagian utama:",
+      "translate": "马来亚联合邦宪法委员会的角色可从三个主要部分加以理解：",
+      "key_points_zh": [
+        "马来亚联合邦宪法委员会的角色可从三个主要部分加以理解："
+      ],
+      "bm_focus_phrase": "Peranan Suruhanjaya Perlembagaan Persekutuan Tanah Melayu dapat difahami melalui tiga bahagian utama:"
+    },
+    {
+      "source_id": "bab-9-2-extra-4",
+      "bm_original": "Terma Rujukan Suruhanjaya",
+      "translate": "委员会的职权范围",
+      "key_points_zh": [
+        "委员会的职权范围"
+      ],
+      "bm_focus_phrase": "Terma Rujukan Suruhanjaya"
+    },
+    {
+      "source_id": "bab-9-2-extra-5",
+      "bm_original": "Gerak Kerja Suruhanjaya",
+      "translate": "委员会的工作进程",
+      "key_points_zh": [
+        "委员会的工作进程"
+      ],
+      "bm_focus_phrase": "Gerak Kerja Suruhanjaya"
+    },
+    {
+      "source_id": "bab-9-2-extra-6",
+      "bm_original": "Anggota Suruhanjaya",
+      "translate": "委员会成员",
+      "key_points_zh": [
+        "委员会成员"
+      ],
+      "bm_focus_phrase": "Anggota Suruhanjaya"
+    },
+    {
+      "source_id": "bab-9-2-u02",
+      "bm_original": "Pada 8 Mac 1956, kerajaan British mengumumkan pembentukan Suruhanjaya Perlembagaan Persekutuan Tanah Melayu atau Suruhanjaya Reid.",
+      "translate": "1956年3月8日，英国政府宣布成立马来亚联合邦宪法委员会，又称里德委员会。",
+      "key_points_zh": [
+        "1956年3月8日，英国政府宣布成立马来亚联合邦宪法委员会，又称里德委员会。"
+      ],
+      "bm_focus_phrase": "Pada 8 Mac 1956, kerajaan British mengumumkan pembentukan Suruhanjaya Perlembagaan Persekutuan Tanah Melayu atau Suruhanjaya Reid."
+    },
+    {
+      "source_id": "bab-9-2-u03",
+      "bm_original": "Pembentukan suruhanjaya ini mendapat persetujuan Raja-raja Melayu.",
+      "translate": "该委员会的成立获得马来统治者的同意。",
+      "key_points_zh": [
+        "该委员会的成立获得马来统治者的同意。"
+      ],
+      "bm_focus_phrase": "Pembentukan suruhanjaya ini mendapat persetujuan Raja-raja Melayu."
+    },
+    {
+      "source_id": "bab-9-2-u04",
+      "bm_original": "Suruhanjaya ini memulakan tugas pada akhir Jun 1956.",
+      "translate": "该委员会于1956年6月底开始展开工作。",
+      "key_points_zh": [
+        "该委员会于1956年6月底开始展开工作。"
+      ],
+      "bm_focus_phrase": "Suruhanjaya ini memulakan tugas pada akhir Jun 1956."
+    },
+    {
+      "source_id": "bab-9-2-u05",
+      "bm_original": "Tugas utama suruhanjaya ialah membincangkan, menyusun dan merangka Perlembagaan Persekutuan Tanah Melayu yang merdeka.",
+      "translate": "委员会的主要任务是商讨、编排并草拟独立的马来亚联合邦宪法。",
+      "key_points_zh": [
+        "委员会的主要任务是商讨、编排并草拟独立的马来亚联合邦宪法。"
+      ],
+      "bm_focus_phrase": "Tugas utama suruhanjaya ialah membincangkan, menyusun dan merangka Perlembagaan Persekutuan Tanah Melayu yang merdeka."
+    },
+    {
+      "source_id": "bab-9-2-u06",
+      "bm_original": "Terma rujukan suruhanjaya ialah:",
+      "translate": "委员会的职权范围如下：",
+      "key_points_zh": [
+        "委员会的职权范围如下："
+      ],
+      "bm_focus_phrase": "Terma rujukan suruhanjaya ialah:"
+    },
+    {
+      "source_id": "bab-9-2-extra-7",
+      "bm_original": "memeriksa aturan perlembagaan yang wujud di seluruh Tanah Melayu dengan mengambil kira kedudukan dan martabat Ratu England serta Raja-raja Melayu",
+      "translate": "审查马来亚各地现行的宪制安排，同时兼顾英女王与马来统治者的地位和尊严",
+      "key_points_zh": [
+        "审查马来亚各地现行的宪制安排，同时兼顾英女王与马来统治者的地位和尊严"
+      ],
+      "bm_focus_phrase": "memeriksa aturan perlembagaan yang wujud di seluruh Tanah Melayu dengan mengambil kira kedudukan dan martabat Ratu England serta Raja-raja Melayu"
+    },
+    {
+      "source_id": "bab-9-2-extra-8",
+      "bm_original": "mencadangkan Perlembagaan Persekutuan sebagai unit tunggal, bebas dan berkerajaan sendiri dalam lingkungan Komanwel berdasarkan Demokrasi Berparlimen dengan dua Dewan Perundangan",
+      "translate": "建议联合邦宪法应使国家成为英联邦内一个统一、独立、自治的单位，并以设有上下两院的议会民主制为基础",
+      "key_points_zh": [
+        "建议联合邦宪法应使国家成为英联邦内一个统一、独立、自治的单位，并以设有上下两院的议会民主制为基础"
+      ],
+      "bm_focus_phrase": "mencadangkan Perlembagaan Persekutuan sebagai unit tunggal, bebas dan berkerajaan sendiri dalam lingkungan Komanwel berdasarkan Demokrasi Berparlimen dengan dua Dewan Perundangan"
+    },
+    {
+      "source_id": "bab-9-2-extra-9",
+      "bm_original": "mewujudkan kerajaan pusat yang kuat dengan kerajaan negeri mempunyai autonomi tertentu",
+      "translate": "建立一个强有力的中央政府，同时让州政府享有一定程度的自治权",
+      "key_points_zh": [
+        "建立一个强有力的中央政府，同时让州政府享有一定程度的自治权"
+      ],
+      "bm_focus_phrase": "mewujudkan kerajaan pusat yang kuat dengan kerajaan negeri mempunyai autonomi tertentu"
+    },
+    {
+      "source_id": "bab-9-2-extra-10",
+      "bm_original": "melindungi kedudukan Raja-raja Melayu sebagai Raja Berperlembagaan di negeri masing-masing",
+      "translate": "保障马来统治者在各自州属作为立宪君主的地位",
+      "key_points_zh": [
+        "保障马来统治者在各自州属作为立宪君主的地位"
+      ],
+      "bm_focus_phrase": "melindungi kedudukan Raja-raja Melayu sebagai Raja Berperlembagaan di negeri masing-masing"
+    },
+    {
+      "source_id": "bab-9-2-extra-11",
+      "bm_original": "mencadangkan jawatan ketua negara, iaitu Yang di-Pertuan Besar yang kemudiannya dikenali sebagai Yang di-Pertuan Agong",
+      "translate": "建议设立国家元首一职，即“Yang di-Pertuan Besar”，该职位其后改称为最高元首（Yang di-Pertuan Agong）",
+      "key_points_zh": [
+        "建议设立国家元首一职，即“Yang di-Pertuan Besar”，该职位其后改称为最高元首（Yang di-Pertuan Agong）"
+      ],
+      "bm_focus_phrase": "mencadangkan jawatan ketua negara, iaitu Yang di-Pertuan Besar yang kemudiannya dikenali sebagai Yang di-Pertuan Agong"
+    },
+    {
+      "source_id": "bab-9-2-extra-12",
+      "bm_original": "mengadakan satu bentuk kewarganegaraan bagi Persekutuan Tanah Melayu",
+      "translate": "为马来亚联合邦设立统一的公民权制度",
+      "key_points_zh": [
+        "为马来亚联合邦设立统一的公民权制度"
+      ],
+      "bm_focus_phrase": "mengadakan satu bentuk kewarganegaraan bagi Persekutuan Tanah Melayu"
+    },
+    {
+      "source_id": "bab-9-2-extra-13",
+      "bm_original": "menjaga kedudukan istimewa orang Melayu serta kepentingan sah kaum lain",
+      "translate": "维护马来人的特殊地位以及其他族群的合法权益",
+      "key_points_zh": [
+        "维护马来人的特殊地位以及其他族群的合法权益"
+      ],
+      "bm_focus_phrase": "menjaga kedudukan istimewa orang Melayu serta kepentingan sah kaum lain"
+    },
+    {
+      "source_id": "bab-9-2-u07",
+      "bm_original": "Anggota Suruhanjaya Reid mempunyai latar belakang dalam bidang undang-undang.",
+      "translate": "里德委员会的成员皆具有法律背景。",
+      "key_points_zh": [
+        "里德委员会的成员皆具有法律背景。"
+      ],
+      "bm_focus_phrase": "Anggota Suruhanjaya Reid mempunyai latar belakang dalam bidang undang-undang."
+    },
+    {
+      "source_id": "bab-9-2-u08",
+      "bm_original": "Mereka juga berpengalaman dalam sistem Perundangan Komanwel.",
+      "translate": "他们也在英联邦法律制度方面拥有丰富经验。",
+      "key_points_zh": [
+        "他们也在英联邦法律制度方面拥有丰富经验。"
+      ],
+      "bm_focus_phrase": "Mereka juga berpengalaman dalam sistem Perundangan Komanwel."
+    },
+    {
+      "source_id": "bab-9-2-u09",
+      "bm_original": "Suruhanjaya menjalankan beberapa gerak kerja bagi menyediakan perlembagaan negara merdeka.",
+      "translate": "委员会展开了多项工作，以拟定独立国家的宪法。",
+      "key_points_zh": [
+        "委员会展开了多项工作，以拟定独立国家的宪法。"
+      ],
+      "bm_focus_phrase": "Suruhanjaya menjalankan beberapa gerak kerja bagi menyediakan perlembagaan negara merdeka."
+    },
+    {
+      "source_id": "bab-9-2-u10",
+      "bm_original": "Suruhanjaya meminta cadangan daripada semua penduduk yang berminat.",
+      "translate": "委员会向所有有意提出意见的居民征求建议。",
+      "key_points_zh": [
+        "委员会向所有有意提出意见的居民征求建议。"
+      ],
+      "bm_focus_phrase": "Suruhanjaya meminta cadangan daripada semua penduduk yang berminat."
+    },
+    {
+      "source_id": "bab-9-2-u11",
+      "bm_original": "Cadangan boleh dikemukakan secara bertulis atau lisan.",
+      "translate": "建议可以书面或口头方式提出。",
+      "key_points_zh": [
+        "建议可以书面或口头方式提出。"
+      ],
+      "bm_focus_phrase": "Cadangan boleh dikemukakan secara bertulis atau lisan."
+    },
+    {
+      "source_id": "bab-9-2-u12",
+      "bm_original": "Suruhanjaya menerima memorandum bertulis daripada pelbagai pihak untuk diteliti.",
+      "translate": "委员会接获各方提交的书面备忘录，以作详细审阅。",
+      "key_points_zh": [
+        "委员会接获各方提交的书面备忘录，以作详细审阅。"
+      ],
+      "bm_focus_phrase": "Suruhanjaya menerima memorandum bertulis daripada pelbagai pihak untuk diteliti."
+    },
+    {
+      "source_id": "bab-9-2-u13",
+      "bm_original": "Suruhanjaya meneliti kedudukan perlembagaan setiap negeri dalam Persekutuan:",
+      "translate": "委员会审查联合邦内各州的宪制地位：",
+      "key_points_zh": [
+        "委员会审查联合邦内各州的宪制地位："
+      ],
+      "bm_focus_phrase": "Suruhanjaya meneliti kedudukan perlembagaan setiap negeri dalam Persekutuan:"
+    },
+    {
+      "source_id": "bab-9-2-extra-14",
+      "bm_original": "menghadap Raja-raja Melayu",
+      "translate": "觐见马来统治者",
+      "key_points_zh": [
+        "觐见马来统治者"
+      ],
+      "bm_focus_phrase": "menghadap Raja-raja Melayu"
+    },
+    {
+      "source_id": "bab-9-2-extra-15",
+      "bm_original": "bertemu Menteri Besar",
+      "translate": "会晤州务大臣",
+      "key_points_zh": [
+        "会晤州务大臣"
+      ],
+      "bm_focus_phrase": "bertemu Menteri Besar"
+    },
+    {
+      "source_id": "bab-9-2-extra-16",
+      "bm_original": "berbincang dengan Penasihat British",
+      "translate": "与英国顾问官商讨",
+      "key_points_zh": [
+        "与英国顾问官商讨"
+      ],
+      "bm_focus_phrase": "berbincang dengan Penasihat British"
+    },
+    {
+      "source_id": "bab-9-2-extra-17",
+      "bm_original": "bertemu pegawai negeri",
+      "translate": "会晤州政府官员",
+      "key_points_zh": [
+        "会晤州政府官员"
+      ],
+      "bm_focus_phrase": "bertemu pegawai negeri"
+    },
+    {
+      "source_id": "bab-9-2-extra-18",
+      "bm_original": "bermesyuarat dan melawat Negeri-negeri Melayu serta Negeri-negeri Selat",
+      "translate": "举行会议并走访马来各邦与海峡殖民地",
+      "key_points_zh": [
+        "举行会议并走访马来各邦与海峡殖民地"
+      ],
+      "bm_focus_phrase": "bermesyuarat dan melawat Negeri-negeri Melayu serta Negeri-negeri Selat"
+    },
+    {
+      "source_id": "bab-9-2-u14",
+      "bm_original": "Sebanyak 118 perjumpaan diadakan dari Jun hingga Oktober 1956.",
+      "translate": "从1956年6月至10月，共举行了118场会面。",
+      "key_points_zh": [
+        "从1956年6月至10月，共举行了118场会面。"
+      ],
+      "bm_focus_phrase": "Sebanyak 118 perjumpaan diadakan dari Jun hingga Oktober 1956."
+    },
+    {
+      "source_id": "bab-9-2-u15",
+      "bm_original": "Persidangan diadakan bagi membincangkan pelbagai isu.",
+      "translate": "会议的举行旨在商讨各项课题。",
+      "key_points_zh": [
+        "会议的举行旨在商讨各项课题。"
+      ],
+      "bm_focus_phrase": "Persidangan diadakan bagi membincangkan pelbagai isu."
+    },
+    {
+      "source_id": "bab-9-2-u16",
+      "bm_original": "Suruhanjaya mengkaji, menyediakan laporan dan mengemukakan cadangan pembentukan perlembagaan negara merdeka.",
+      "translate": "委员会进行研究、编写报告，并就制定独立国家宪法提出建议。",
+      "key_points_zh": [
+        "委员会进行研究、编写报告，并就制定独立国家宪法提出建议。"
+      ],
+      "bm_focus_phrase": "Suruhanjaya mengkaji, menyediakan laporan dan mengemukakan cadangan pembentukan perlembagaan negara merdeka."
+    },
+    {
+      "source_id": "bab-9-2-u17",
+      "bm_original": "Suruhanjaya berunding dengan pelbagai pihak bagi mendapatkan idea dan pandangan.",
+      "translate": "委员会与各方磋商，以征集意见与看法。",
+      "key_points_zh": [
+        "委员会与各方磋商，以征集意见与看法。"
+      ],
+      "bm_focus_phrase": "Suruhanjaya berunding dengan pelbagai pihak bagi mendapatkan idea dan pandangan."
+    },
+    {
+      "source_id": "bab-9-2-u18",
+      "bm_original": "Sikap prihatin dan terbuka dizahirkan dalam proses penggubalan perlembagaan negara yang merdeka.",
+      "translate": "在草拟独立国家宪法的过程中，展现出关怀与开放的态度。",
+      "key_points_zh": [
+        "在草拟独立国家宪法的过程中，展现出关怀与开放的态度。"
+      ],
+      "bm_focus_phrase": "Sikap prihatin dan terbuka dizahirkan dalam proses penggubalan perlembagaan negara yang merdeka."
+    },
+    {
+      "source_id": "bab-9-2-u19",
+      "bm_original": "Suruhanjaya Perlembagaan Persekutuan Tanah Melayu dianggotai oleh lima orang ahli:",
+      "translate": "马来亚联合邦宪法委员会由五名成员组成：",
+      "key_points_zh": [
+        "马来亚联合邦宪法委员会由五名成员组成："
+      ],
+      "bm_focus_phrase": "Suruhanjaya Perlembagaan Persekutuan Tanah Melayu dianggotai oleh lima orang ahli:"
+    },
+    {
+      "source_id": "bab-9-2-extra-19",
+      "bm_original": "Lord Reid – Pengerusi",
+      "translate": "里德勋爵（Lord Reid）——主席",
+      "key_points_zh": [
+        "里德勋爵（Lord Reid）——主席"
+      ],
+      "bm_focus_phrase": "Lord Reid – Pengerusi"
+    },
+    {
+      "source_id": "bab-9-2-extra-20",
+      "bm_original": "Sir William Ivor Jennings",
+      "translate": "詹宁斯爵士（Sir William Ivor Jennings）",
+      "key_points_zh": [
+        "詹宁斯爵士（Sir William Ivor Jennings）"
+      ],
+      "bm_focus_phrase": "Sir William Ivor Jennings"
+    },
+    {
+      "source_id": "bab-9-2-extra-21",
+      "bm_original": "Sir William McKell",
+      "translate": "麦克尔爵士（Sir William McKell）",
+      "key_points_zh": [
+        "麦克尔爵士（Sir William McKell）"
+      ],
+      "bm_focus_phrase": "Sir William McKell"
+    },
+    {
+      "source_id": "bab-9-2-extra-22",
+      "bm_original": "Hakim B. Malik",
+      "translate": "马利克法官（Hakim B. Malik）",
+      "key_points_zh": [
+        "马利克法官（Hakim B. Malik）"
+      ],
+      "bm_focus_phrase": "Hakim B. Malik"
+    },
+    {
+      "source_id": "bab-9-2-extra-23",
+      "bm_original": "Hakim Abdul Hamid",
+      "translate": "阿都哈密法官（Hakim Abdul Hamid）",
+      "key_points_zh": [
+        "阿都哈密法官（Hakim Abdul Hamid）"
+      ],
+      "bm_focus_phrase": "Hakim Abdul Hamid"
+    },
+    {
+      "source_id": "bab-9-2-u20",
+      "bm_original": "Suruhanjaya Perlembagaan Persekutuan Tanah Melayu memainkan peranan penting dalam merangka perlembagaan sebagai asas pembentukan negara yang merdeka:",
+      "translate": "马来亚联合邦宪法委员会在草拟宪法、作为独立建国基础方面扮演了重要角色：",
+      "key_points_zh": [
+        "马来亚联合邦宪法委员会在草拟宪法、作为独立建国基础方面扮演了重要角色："
+      ],
+      "bm_focus_phrase": "Suruhanjaya Perlembagaan Persekutuan Tanah Melayu memainkan peranan penting dalam merangka perlembagaan sebagai asas pembentukan negara yang merdeka:"
+    },
+    {
+      "source_id": "bab-9-2-extra-24",
+      "bm_original": "Suruhanjaya Reid",
+      "translate": "里德委员会",
+      "key_points_zh": [
+        "里德委员会"
+      ],
+      "bm_focus_phrase": "Suruhanjaya Reid"
+    },
+    {
+      "source_id": "bab-9-2-extra-25",
+      "bm_original": "Demokrasi Berparlimen",
+      "translate": "议会民主制",
+      "key_points_zh": [
+        "议会民主制"
+      ],
+      "bm_focus_phrase": "Demokrasi Berparlimen"
+    },
+    {
+      "source_id": "bab-9-2-extra-26",
+      "bm_original": "Raja Berperlembagaan",
+      "translate": "君主立宪制",
+      "key_points_zh": [
+        "君主立宪制"
+      ],
+      "bm_focus_phrase": "Raja Berperlembagaan"
+    },
+    {
+      "source_id": "bab-9-2-extra-27",
+      "bm_original": "Kewarganegaraan dan perpaduan",
+      "translate": "公民权与团结",
+      "key_points_zh": [
+        "公民权与团结"
+      ],
+      "bm_focus_phrase": "Kewarganegaraan dan perpaduan"
+    },
+    {
+      "source_id": "bab-9-2-u21",
+      "bm_original": "Peranan suruhanjaya ini membuktikan bahawa pembentukan perlembagaan negara dilakukan melalui perundingan, penelitian dan kerjasama pelbagai pihak bagi menjamin kestabilan negara selepas mencapai kemerdekaan.",
+      "translate": "委员会的角色证明了，国家宪法的制定是通过各方的协商、审议与合作完成的，旨在确保国家独立后的稳定。",
+      "key_points_zh": [
+        "委员会的角色证明了，国家宪法的制定是通过各方的协商、审议与合作完成的，旨在确保国家独立后的稳定。"
+      ],
+      "bm_focus_phrase": "Peranan suruhanjaya ini membuktikan bahawa pembentukan perlembagaan negara dilakukan melalui perundingan, penelitian dan kerjasama pelbagai pihak bagi menjamin kestabilan negara selepas mencapai kemerdekaan."
+    }
+  ]
+}
