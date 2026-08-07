@@ -1139,6 +1139,8 @@
       ".lead",
       ".paper-process-panel",
       ".paper-timeline-panel > p",
+      "h1",
+      ".section-heading > p",
       "h2[data-zh-unit-id]",
       ".conclusion-paper h2",
       ".summary-paper h2",
