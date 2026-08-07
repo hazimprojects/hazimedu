@@ -50,6 +50,20 @@ sebelum imej load). `sw.js` cache ikon dari `cdn.jsdelivr.net` &
 supaya ikon still render dlm mod offline PWA — JANGAN buang rule ni
 tanpa gantikan strategi cache offline yg setara.
 
+**AWAS — laluan ikon dlm `scripts/emoji_map.py` BUKAN bukti ia
+berfungsi.** Sekurang-kurangnya satu kunci (`"building"` →
+`Building/3D/building_3d.png`) didapati PECAH di CDN sebenar walaupun
+"betul" ikut fail tu — hanya ketara selepas PR dah merge, drpd
+screenshot pengguna nampak ikon kosong. **Sebelum guna laluan ikon
+BAHARU (belum pernah dipakai) dlm kandungan**, sahkan ia benar-benar
+berfungsi via salah satu:
+- `grep -rl --include=*.html -F "<laluan-penuh-ikon>" notes/` dan
+  pastikan COUNT > 0 (ikon tu dah dipakai & render betul di halaman
+  lain yg dah live) — cara paling pantas & selamat.
+- Kalau ikon betul-betul baharu (tiada di mana-mana lagi), sahkan
+  wujud terus di CDN sebelum commit (cth. `curl -sI` URL penuh, jangkakan
+  `200`) — JANGAN percaya sahaja ejaan/format nama dlm `emoji_map.py`.
+
 ## Bendera Negara — self-hosted (`assets/flags/`), BUKAN CDN luar
 
 Fluent Emoji (pembekal ikon utama) sengaja TIADA bendera negara (isu
@@ -260,6 +274,38 @@ handler, guna `setAccordionState()` terus tanpa `window.scrollTo`/
 stabilisasi. Sebabnya: legenda selalu dekat bahagian atas hero (dlm
 pandangan sedia ada), skrol paksa jadi tak perlu & mengganggu.
 JANGAN buang semakan ni bila ubah handler accordion sejagat.
+
+## Struktur Kandungan — Kad "Kesimpulan" & "Rumusan Besar Bab N"
+
+**Kad "Kesimpulan" setiap subtopik (`class="paper-board summary-paper
+conclusion-paper cv-unit"`) WAJIB ada `paper-chip-list`, bukan cuma
+ayat `point-line` berturutan.** Corak piawai (disahkan konsisten di
+36/39 subtopik Bab 1–7 semasa audit; Bab 7.1–7.4 & Bab 8.1–8.4 dulu
+tersasar drpd corak ni sebelum dibetulkan — rujuk PR "Selaraskan
+konsistensi visual & struktur kad Kesimpulan Bab 7 & Bab 8"):
+
+1. 1 ayat pembuka (`point-line`) diakhiri `:` merumus pencapaian/kesan
+   topik tersebut.
+2. `paper-chip-list` — 2–3 chip PENDEK (frasa, bukan ayat penuh),
+   ambil drpd fakta/statistik yg SUDAH tertulis dlm Bahagian
+   sebelumnya pd halaman sama (bukan kandungan baharu, sekadar
+   pecahan visual poin sedia ada).
+3. 1–2 ayat penutup (`point-line`) reflektif tentang kepentingan/kesan
+   lebih besar (kaitan dgn kemerdekaan, demokrasi, perpaduan, dll.).
+
+Kad "Rumusan Besar Bab N" (`class="paper-board master-summary-paper
+reveal-on-scroll cv-unit"`, ikon "Globe showing asia-australia")
+ikut corak SAMA (intro + chip-list + penutup, kadang berulang
+beberapa pusingan — rujuk `bab-7-5.html` utk contoh 4 pusingan), tapi
+letaknya BEZA drpd Kesimpulan biasa: **hanya pada subtopik TERAKHIR
+sesebuah bab** (cth. `bab-8-4.html` utk Bab 8, bukan `bab-8.html` hub),
+sbg kad penutup keseluruhan bab sebelum bar navigasi akhir.
+
+**Nota class `summary-paper`**: modifier ni SECARA VISUAL tak beri
+kesan (di-override rule lebih spesifik `themes.css` — `body.note-
+reading-app.page-theme-notes .paper-board`) tapi KEKALKAN dlm markup
+setiap kad Kesimpulan/Rumusan Besar utk konsisten dgn corak sedia ada
+merentas korpus — jangan alih keluar ikut sangkaan ia "tak berguna".
 
 ## Swipe Nav — seret `<main>` ke subtopik sebelum/selepas
 
@@ -706,6 +752,60 @@ propagate `?v=N` ke semua rujukan HTML + `CACHE` const dlm `sw.js` +
 (install sekali: `git config core.hooksPath .githooks`), tapi dlm sesi
 agen (clone segar, hooks tak configured), jalankan skrip di atas
 SECARA MANUAL sebelum commit.
+
+## Bab Baharu — Senarai Semak Scaffold (bukan sekadar tambah subtopik)
+
+Tambah **subtopik baharu** dlm bab sedia ada (cth. `bab-8-3.html`)
+cuma perlukan 1 fail HTML + entri ZH. Tapi tambah **BAB baharu**
+(cth. Bab 9) perlukan scaffold navigasi/carian merentas ~10 fail lain
+yg SENYAP gagal (halaman "nampak siap" tapi navigasi/carian pincang)
+kalau terlepas. Guna senarai ni penuh, bukan sebahagian:
+
+1. **`notes/bab-N.html`** — kad hub (rujuk `notes/bab-8.html` sbg
+   templat): hero + lead, kad "Sinopsis" (`paper-chip-sentence` x5-6),
+   grid `bab-card` utk setiap subtopik.
+2. **`notes/bab-N-1.html` … `bab-N-M.html`** — stub "Akan datang" utk
+   tiap subtopik (rujuk sejarah git `bab-8-3.html` SEBELUM diisi, cth.
+   `git show <commit-lama>:notes/bab-8-3.html`), nav Kembali/Seterusnya
+   penuh antara subtopik (termasuk hab).
+3. **`notes/index.html`** — blok baris + panel `<div class="nota-row-
+   item">...<div id="panel-bab-N">` (ikut corak bab sebelumnya), PLUS
+   breadcrumb `JSON-LD` posisi seterusnya di hujung fail.
+4. **`assets/js/main.js`** — TIGA struktur data berasingan, semua
+   kena dikemas kini:
+   - `HZ_NOTES_SEARCH_PAGES` (sumber carian — hub + tiap subtopik)
+   - `ZYMNOTES_NAV.chapters` (tambah entri `num: N` + skema warna +
+     senarai `subtopics`)
+   - Regex/guard CTA "Seterusnya: Bab N" (2 tempat: fungsi
+     `hzZymnotesIsBabHubPathname` & guard `chNum >= 1 && chNum <= N`
+     dlm blok IIFE "CTA indeks bab induk seterusnya") — kalau
+     terlepas, subtopik terakhir bab SEBELUMNYA takkan auto-tunjuk
+     "Seterusnya: Bab N" (btn kekal "Kembali ke Bab N-1").
+5. **`assets/css/base.css`** (2 blok: tint rata + gradien vibrant,
+   masing² light+dark) **& `assets/css/shell-openmoji.css`** (light+
+   dark) — tambah `.nota-row-icon-N` di KEEMPAT-EMPAT tempat. Kalau
+   `bab-theme-N` dah pra-sedia dlm `themes.css` (semak dulu — beberapa
+   bab akan datang mungkin dah disediakan awal), guna
+   `--theme-accent-rgb` sedia ada tu supaya warna ikon padan tema bab.
+6. **`sw.js`** — tambah laluan `bab-N*.html` dlm `PRECACHE_URLS`.
+   Nombor versi `CACHE` const TAK perlu disentuh manual di sini (rujuk
+   §"Aliran Kerja Versioning Aset" di atas).
+7. **`data/zh-units/bab-N.json`** (unit sinopsis hub) + daftar dlm
+   `data/zh-units/index.json` SERENTAK dgn penciptaan fail (elak isu
+   fail ZH tak didaftar — rujuk §"Mod Bahasa Cina" di bawah).
+8. **`README.md`** & **`index.html`** (root) — kemas kini teks skop
+   "Bab 1 hingga Bab N-1" → "Bab 1 hingga Bab N".
+9. **`sitemap.xml`** — jana semula via
+   `python3 scripts/generate-updates.py` (auto-discover
+   `notes/bab-*.html` via glob, tak perlu edit manual) — TAPI abaikan/
+   `git checkout --` balik perubahan `data/updates.json` yg skrip sama
+   turut jana (fail tu diselenggara automasi CI selepas merge, bukan
+   sebahagian kerja bab baharu).
+
+Sahkan siap dgn `python3 scripts/seo-audit.py` (kena lulus, termasuk
+semua fail baharu dlm sitemap) + uji fungsian Playwright CTA "Seterusnya"
+pd subtopik terakhir bab sebelumnya (sahkan href/teks btn berubah
+selepas load JS).
 
 ## Semakan Sebelum Commit
 
