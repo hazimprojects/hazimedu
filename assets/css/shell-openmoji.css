@@ -307,6 +307,10 @@ body.app-shell-page .nota-row-icon-8 {
   background: linear-gradient(145deg, rgba(236, 254, 255, 0.95), rgba(165, 243, 252, 0.52)) !important;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.65) inset, 0 8px 18px rgba(8, 145, 178, 0.1) !important;
 }
+body.app-shell-page .nota-row-icon-9 {
+  background: linear-gradient(145deg, rgba(224, 242, 239, 0.95), rgba(148, 205, 194, 0.52)) !important;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.65) inset, 0 8px 18px rgba(52, 120, 116, 0.1) !important;
+}
 
 [data-theme="dark"] body.app-shell-page .nota-row-icon-1 {
   background: linear-gradient(145deg, rgba(5, 150, 105, 0.22), rgba(52, 211, 153, 0.12)) !important;
@@ -338,6 +342,10 @@ body.app-shell-page .nota-row-icon-8 {
 }
 [data-theme="dark"] body.app-shell-page .nota-row-icon-8 {
   background: linear-gradient(145deg, rgba(8, 145, 178, 0.2), rgba(165, 243, 252, 0.1)) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
+}
+[data-theme="dark"] body.app-shell-page .nota-row-icon-9 {
+  background: linear-gradient(145deg, rgba(52, 120, 116, 0.22), rgba(94, 214, 200, 0.1)) !important;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
 }
 

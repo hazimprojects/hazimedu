@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "source_file": "notes/bab-9.html",
+    "rollout": "bab-9-hub-manual-zh",
+    "notes": "Bab 9 induk (Perlembagaan Persekutuan Tanah Melayu 1957): terjemahan zh-CN manual, bm_original selaras dengan chip sinopsis pada bab-9.html."
+  },
+  "units": [
+    {
+      "source_id": "bab-9-synopsis-1",
+      "bm_original": "Kesungguhan Raja-raja Melayu, pemimpin dan rakyat dalam usaha menuntut kemerdekaan membawa misi kemerdekaan ke London.",
+      "translate": "马来统治者、领袖与人民努力争取独立，将独立使命团带往伦敦。",
+      "key_points_zh": [
+        "马来统治者、领袖与人民努力争取独立，将独立使命团带往伦敦。"
+      ],
+      "bm_focus_phrase": "Kesungguhan Raja-raja Melayu, pemimpin dan rakyat dalam usaha menuntut kemerdekaan membawa misi kemerdekaan ke London."
+    },
+    {
+      "source_id": "bab-9-synopsis-2",
+      "bm_original": "Misi rombongan ini berjaya mendapatkan persetujuan kerajaan British untuk memberikan kemerdekaan melalui Perjanjian Kemerdekaan Tanah Melayu.",
+      "translate": "这支使命团成功获得英国政府同意，通过《马来亚独立协定》给予马来亚独立。",
+      "key_points_zh": [
+        "这支使命团成功获得英国政府同意，通过《马来亚独立协定》给予马来亚独立。"
+      ],
+      "bm_focus_phrase": "Misi rombongan ini berjaya mendapatkan persetujuan kerajaan British untuk memberikan kemerdekaan melalui Perjanjian Kemerdekaan Tanah Melayu."
+    },
+    {
+      "source_id": "bab-9-synopsis-3",
+      "bm_original": "Selepas mendapat persetujuan Raja-raja Melayu, Suruhanjaya Perlembagaan Persekutuan Tanah Melayu dibentuk lalu menghasilkan Perlembagaan Persekutuan Tanah Melayu 1957.",
+      "translate": "在获得马来统治者同意后，马来亚联合邦宪法委员会成立，最终制定了1957年马来亚联合邦宪法。",
+      "key_points_zh": [
+        "在获得马来统治者同意后，马来亚联合邦宪法委员会成立，最终制定了1957年马来亚联合邦宪法。"
+      ],
+      "bm_focus_phrase": "Selepas mendapat persetujuan Raja-raja Melayu, Suruhanjaya Perlembagaan Persekutuan Tanah Melayu dibentuk lalu menghasilkan Perlembagaan Persekutuan Tanah Melayu 1957."
+    },
+    {
+      "source_id": "bab-9-synopsis-4",
+      "bm_original": "Sementara itu, Perjanjian Persekutuan Tanah Melayu ditandatangani bagi membentuk sebuah negara yang merdeka.",
+      "translate": "与此同时，马来亚联合邦协定签署，以组成一个独立国家。",
+      "key_points_zh": [
+        "与此同时，马来亚联合邦协定签署，以组成一个独立国家。"
+      ],
+      "bm_focus_phrase": "Sementara itu, Perjanjian Persekutuan Tanah Melayu ditandatangani bagi membentuk sebuah negara yang merdeka."
+    },
+    {
+      "source_id": "bab-9-synopsis-5",
+      "bm_original": "Kandungan perjanjian ini menunjukkan nilai toleransi, pengorbanan dan permuafakatan rakyat demi kestabilan dan kemakmuran negara.",
+      "translate": "协定内容体现了人民为国家的稳定与繁荣所展现的容忍、牺牲与协商精神。",
+      "key_points_zh": [
+        "协定内容体现了人民为国家的稳定与繁荣所展现的容忍、牺牲与协商精神。"
+      ],
+      "bm_focus_phrase": "Kandungan perjanjian ini menunjukkan nilai toleransi, pengorbanan dan permuafakatan rakyat demi kestabilan dan kemakmuran negara."
+    }
+  ]
+}

@@ -101,6 +101,11 @@ const PRECACHE_URLS = [
   '/notes/bab-8-3.html',
   '/notes/bab-8-4.html',
   '/notes/bab-8.html',
+  '/notes/bab-9-1.html',
+  '/notes/bab-9-2.html',
+  '/notes/bab-9-3.html',
+  '/notes/bab-9-4.html',
+  '/notes/bab-9.html',
 ];
 
 function normalizeHtmlCacheKeys(fullUrl) {
