@@ -1,0 +1,244 @@
+{
+  "meta": {
+    "source_file": "notes/bab-8-3.html",
+    "rollout": "bab-8-3-manual-zh",
+    "notes": "Bab 8.3: terjemahan zh-CN manual - ikut docs/zh-mode-editorial-guideline.md, guna istilah kanonik data/zh-glossary.json + gaya transliterasi nama Sultan/tokoh & organisasi yg dipiawaikan."
+  },
+  "units": [
+    {
+      "source_id": "bab-8-3-sum-1",
+      "bm_original": "Selepas kemenangan besar Parti Perikatan dalam Pilihan Raya Persekutuan 1955, Kerajaan Persekutuan berjaya dibentuk dan Tunku Abdul Rahman dilantik sebagai Ketua Menteri Persekutuan Tanah Melayu yang pertama.",
+      "translate": "联盟党在1955年联邦选举中大获全胜后，联邦政府成功组成，东姑阿都拉曼获委任为马来亚联合邦首任首席部长。"
+    },
+    {
+      "source_id": "bab-8-3-sum-2",
+      "bm_original": "Keanggotaan Majlis Perundangan Persekutuan (MPP) berkembang daripada 77 orang (1948) kepada 100 orang (1955), dengan lebih ramai ahli dipilih dan dilantik daripada kalangan tempatan.",
+      "translate": "联邦立法议会（MPP）议员人数从77人（1948年）增至100人（1955年），更多议员由本地民选或委任产生。"
+    },
+    {
+      "source_id": "bab-8-3-sum-3",
+      "bm_original": "MPP baharu bersidang buat julung kalinya pada 31 Ogos 1955 di Dewan Tunku Abdul Rahman, Kuala Lumpur — langkah penting ke arah berkerajaan sendiri.",
+      "translate": "新一届联邦立法议会于1955年8月31日在吉隆坡东姑阿都拉曼会堂首次召开会议——这是迈向自治的重要一步。"
+    },
+    {
+      "source_id": "bab-8-3-orph-h1",
+      "bm_original": "Apakah perubahan yang berlaku selepas Pilihan Raya Majlis Perundangan Persekutuan (MPP) 1955?",
+      "translate": "1955年联邦立法议会（MPP）选举后发生了哪些变化？"
+    },
+    {
+      "source_id": "bab-8-3-u01",
+      "bm_original": "Selepas kemenangan besar Parti Perikatan dalam Pilihan Raya Persekutuan 1955, Kerajaan Persekutuan berjaya dibentuk. Peristiwa ini menjadi titik penting dalam perkembangan demokrasi negara apabila Tunku Abdul Rahman dilantik sebagai Ketua Menteri Persekutuan Tanah Melayu yang pertama.",
+      "translate": "联盟党在1955年联邦选举中大获全胜后，联邦政府成功组成。东姑阿都拉曼获委任为马来亚联合邦首任首席部长，这成为我国民主发展的重要里程碑。"
+    },
+    {
+      "source_id": "bab-8-3-u02",
+      "bm_original": "Pada masa yang sama, Majlis Perundangan Persekutuan (MPP) turut mengalami perubahan dari segi keanggotaan dan peranannya dalam pentadbiran negara.",
+      "translate": "与此同时，联邦立法议会（MPP）在议员组成与国家行政角色方面也经历了变革。"
+    },
+    {
+      "source_id": "bab-8-3-fokus-line",
+      "bm_original": "Penubuhan MPP melibatkan perbandingan keanggotaan dan kesan pentadbirannya. Tiga bahagian:",
+      "translate": "联邦立法议会的成立涉及议员组成的比较及其行政影响，共分为三个部分："
+    },
+    {
+      "source_id": "bab-8-3-extra-1",
+      "bm_original": "Majlis Perundangan Persekutuan (MPP) 1948",
+      "translate": "1948年联邦立法议会（MPP）"
+    },
+    {
+      "source_id": "bab-8-3-extra-2",
+      "bm_original": "Majlis Perundangan Persekutuan (MPP) 1955",
+      "translate": "1955年联邦立法议会（MPP）"
+    },
+    {
+      "source_id": "bab-8-3-extra-3",
+      "bm_original": "Kesan Penubuhan Majlis Perundangan Persekutuan",
+      "translate": "联邦立法议会成立的影响"
+    },
+    {
+      "source_id": "bab-8-3-u03",
+      "bm_original": "MPP pada tahun 1948 terdiri daripada wakil pentadbiran pusat, Majlis Negeri, anggota kerajaan pusat dan ahli tidak rasmi.",
+      "translate": "1948年的联邦立法议会由中央行政代表、州议会代表、中央政府成员及非官守议员组成。"
+    },
+    {
+      "source_id": "bab-8-3-u04",
+      "bm_original": "52 orang ahli tidak rasmi dilantik dalam kalangan masyarakat tertentu.",
+      "translate": "52名非官守议员从特定社会群体中委任产生。"
+    },
+    {
+      "source_id": "bab-8-3-u05",
+      "bm_original": "3 orang ex officio: Ketua Setiausaha Kerajaan, Setiausaha Kewangan, dan Peguam Besar Persekutuan.",
+      "translate": "3名当然官守议员：布政司、财政司与联邦总检察长。"
+    },
+    {
+      "source_id": "bab-8-3-u06",
+      "bm_original": "9 orang Residen British mewakili sembilan buah Majlis Negeri.",
+      "translate": "9名英国参政司代表九个州议会。"
+    },
+    {
+      "source_id": "bab-8-3-u07",
+      "bm_original": "2 orang wakil Negeri-negeri Selat: Pulau Pinang dan Melaka.",
+      "translate": "2名海峡殖民地代表：槟城与马六甲。"
+    },
+    {
+      "source_id": "bab-8-3-u08",
+      "bm_original": "11 orang ahli rasmi merupakan pegawai pentadbiran kerajaan.",
+      "translate": "11名官守议员为政府行政官员。"
+    },
+    {
+      "source_id": "bab-8-3-u09",
+      "bm_original": "Jumlah keseluruhan ahli MPP 1948 ialah 77 orang.",
+      "translate": "1948年联邦立法议会议员总数为77人。"
+    },
+    {
+      "source_id": "bab-8-3-u10",
+      "bm_original": "Selepas Pilihan Raya Majlis Perundangan Persekutuan 1955, beberapa perubahan berlaku secara berperingkat dalam pentadbiran negara.",
+      "translate": "1955年联邦立法议会选举后，国家行政制度逐步出现多项变化。"
+    },
+    {
+      "source_id": "bab-8-3-u11",
+      "bm_original": "52 orang ahli dipilih melalui pilihan raya.",
+      "translate": "52名议员通过选举产生。"
+    },
+    {
+      "source_id": "bab-8-3-u12",
+      "bm_original": "35 orang ahli lantikan mewakili kumpulan berkepentingan seperti:",
+      "translate": "35名委任议员代表以下各利益团体："
+    },
+    {
+      "source_id": "bab-8-3-extra-4",
+      "bm_original": "perindustrian",
+      "translate": "工业界"
+    },
+    {
+      "source_id": "bab-8-3-extra-5",
+      "bm_original": "perlombongan",
+      "translate": "矿业"
+    },
+    {
+      "source_id": "bab-8-3-extra-6",
+      "bm_original": "pertanian",
+      "translate": "农业"
+    },
+    {
+      "source_id": "bab-8-3-extra-7",
+      "bm_original": "keusahawanan",
+      "translate": "商业"
+    },
+    {
+      "source_id": "bab-8-3-u13",
+      "bm_original": "11 orang Menteri Besar mewakili negeri masing-masing.",
+      "translate": "11名州务大臣代表各自的州属。"
+    },
+    {
+      "source_id": "bab-8-3-u14",
+      "bm_original": "2 orang wakil Negeri-negeri Selat: Pulau Pinang dan Melaka.",
+      "translate": "2名海峡殖民地代表：槟城与马六甲。"
+    },
+    {
+      "source_id": "bab-8-3-u15",
+      "bm_original": "Jumlah keseluruhan ahli MPP 1955 ialah 100 orang.",
+      "translate": "1955年联邦立法议会议员总数为100人。"
+    },
+    {
+      "source_id": "bab-8-3-u16",
+      "bm_original": "Penubuhan MPP membawa beberapa perubahan penting dalam pentadbiran negara.",
+      "translate": "联邦立法议会的成立为国家行政带来了多项重要变革。"
+    },
+    {
+      "source_id": "bab-8-3-u17",
+      "bm_original": "Kerajaan Persekutuan diketuai oleh Tunku Abdul Rahman sebagai Ketua Menteri.",
+      "translate": "联邦政府由首席部长东姑阿都拉曼领导。"
+    },
+    {
+      "source_id": "bab-8-3-u18",
+      "bm_original": "Kerajaan Persekutuan mula mengambil alih tugas pentadbiran Tanah Melayu daripada Pesuruhjaya Tinggi British.",
+      "translate": "联邦政府开始从英国最高专员手中接管马来亚的行政事务。"
+    },
+    {
+      "source_id": "bab-8-3-u19",
+      "bm_original": "Proses pertukaran kuasa berlaku secara berperingkat.",
+      "translate": "权力交接过程分阶段进行。"
+    },
+    {
+      "source_id": "bab-8-3-u20",
+      "bm_original": "Ia mengambil masa sebelum pentadbiran diserahkan sepenuhnya kepada rakyat tempatan.",
+      "translate": "行政权完全移交本地人民之前，仍需一段时间。"
+    },
+    {
+      "source_id": "bab-8-3-u21",
+      "bm_original": "Pesuruhjaya Tinggi British masih memegang tampuk kepimpinan peringkat atasan dan menentukan hala tuju negara dalam tempoh peralihan.",
+      "translate": "英国最高专员在过渡期间仍掌握最高领导权，并主导国家发展方向。"
+    },
+    {
+      "source_id": "bab-8-3-u22",
+      "bm_original": "Kuasa pegawai British dipindahkan secara beransur-ansur kepada rakyat tempatan, namun masih terdapat pegawai British yang berperanan sebagai penyelia atau penasihat dalam bidang keselamatan.",
+      "translate": "英籍官员的权力逐步移交给本地人民，惟安全领域仍有英籍官员担任督导或顾问角色。"
+    },
+    {
+      "source_id": "bab-8-3-u23",
+      "bm_original": "Sistem Ahli dimansuhkan selepas perubahan pentadbiran ini.",
+      "translate": "此次行政变革后，委员制度（Sistem Ahli）被废除。"
+    },
+    {
+      "source_id": "bab-8-3-u24",
+      "bm_original": "Keanggotaan MPP menunjukkan perkembangan penting dalam pentadbiran demokrasi.",
+      "translate": "联邦立法议会的议员组成展现了民主行政的重要进展。"
+    },
+    {
+      "source_id": "bab-8-3-u25",
+      "bm_original": "Kerajaan Persekutuan dipimpin oleh rakyat tempatan, dan ahli MPP dipilih oleh rakyat melalui pilihan raya.",
+      "translate": "联邦政府由本地人民领导，联邦立法议会议员也由人民通过选举选出。"
+    },
+    {
+      "source_id": "bab-8-3-quote-1",
+      "bm_original": "“Ini adalah hari yang amat penting dalam sejarah Majlis ini... Kita telah melalui suatu peristiwa yang amat penting dalam kemajuan negara kita mencapai status berkerajaan sendiri dan merdeka... Dengan adanya rasa muhibah, kesabaran, keazaman serta sokongan Ahli Yang Berhormat dan rakyat, segala halangan dapat ditempuhi dan segala masalah diatasi.”",
+      "translate": "“今天是本议会历史上极为重要的一天……我国在迈向自治与独立的进程中，经历了一个极为重要的时刻……凭着睦邻友爱之情、耐心、决心，以及各位尊敬议员与人民的支持，一切障碍都能克服，一切难题都能解决。”"
+    },
+    {
+      "source_id": "bab-8-3-quote-2",
+      "bm_original": "— Tunku Abdul Rahman, 31 Ogos 1955",
+      "translate": "——东姑阿都拉曼，1955年8月31日"
+    },
+    {
+      "source_id": "bab-8-3-u26",
+      "bm_original": "Ucapan ini menggambarkan keyakinan Tunku Abdul Rahman bahawa perpaduan, kesabaran dan sokongan rakyat menjadi kunci kejayaan menuju kemerdekaan.",
+      "translate": "这段演说反映了东姑阿都拉曼的信念：团结、耐心与人民的支持，是迈向独立成功的关键。"
+    },
+    {
+      "source_id": "bab-8-3-u27",
+      "bm_original": "Pada 31 Ogos 1955, Tunku Abdul Rahman menyifatkan persidangan pertama MPP sebagai \"hari yang amat penting dalam sejarah Majlis ini.\"",
+      "translate": "1955年8月31日，东姑阿都拉曼将联邦立法议会首次会议形容为“本议会历史上极为重要的一天”。"
+    },
+    {
+      "source_id": "bab-8-3-u28",
+      "bm_original": "Majlis Perundangan Persekutuan yang baharu bersidang buat julung kalinya di Dewan Tunku Abdul Rahman, Jalan Ampang, Kuala Lumpur.",
+      "translate": "新一届联邦立法议会在吉隆坡安邦路东姑阿都拉曼会堂首次召开会议。"
+    },
+    {
+      "source_id": "bab-8-3-u29",
+      "bm_original": "Persidangan ini menandakan langkah penting Tanah Melayu ke arah berkerajaan sendiri.",
+      "translate": "这场会议标志着马来亚迈向自治的重要一步。"
+    },
+    {
+      "source_id": "bab-8-3-u30",
+      "bm_original": "11 September 1959: Parlimen Persekutuan Malaya ditubuhkan.",
+      "translate": "1959年9月11日：马来亚联合邦国会成立。"
+    },
+    {
+      "source_id": "bab-8-3-u31",
+      "bm_original": "12 September 1959: Persidangan pertama Parlimen dirasmikan oleh Yang di-Pertuan Agong pertama, Tuanku Abdul Rahman ibni Almarhum Tuanku Muhammad.",
+      "translate": "1959年9月12日：国会首次会议由首任最高元首端姑阿都拉曼（Tuanku Abdul Rahman ibni Almarhum Tuanku Muhammad）主持开幕。"
+    },
+    {
+      "source_id": "bab-8-3-u32",
+      "bm_original": "Penubuhan Majlis Perundangan Persekutuan memberi peluang kepada rakyat tempatan memainkan peranan penting dalam pentadbiran negara.",
+      "translate": "联邦立法议会的成立，让本地人民得以在国家行政中扮演重要角色。"
+    },
+    {
+      "source_id": "bab-8-3-u33",
+      "bm_original": "Selain itu, pembentukannya menunjukkan amalan perkongsian kuasa antara kaum sebagai asas penting ke arah mencapai kemerdekaan.",
+      "translate": "此外，其组成也体现了跨族群权力分享的实践，成为迈向独立的重要基础。"
+    }
+  ]
+}
