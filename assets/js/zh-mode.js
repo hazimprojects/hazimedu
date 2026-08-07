@@ -1141,7 +1141,8 @@
       ".paper-timeline-panel > p",
       "h2[data-zh-unit-id]",
       ".conclusion-paper h2",
-      ".summary-paper h2"
+      ".summary-paper h2",
+      ".paper-kingdom[data-zh-unit-id]"
     ].join(", ");
 
     document.querySelectorAll(blockSel).forEach(function (el) {
