@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "source_file": "notes/bab-10-1.html",
+    "rollout": "bab-10-stub-manual-zh",
+    "notes": "Bab 10.1 (Pemasyhuran Kemerdekaan): subtopik masih stub 'Akan datang' — terjemahan lead sahaja disediakan supaya butang toggle 中 tidak kosong."
+  },
+  "units": [
+    {
+      "source_id": "bab-10-1-lead",
+      "bm_original": "Halaman nota penuh untuk subtopik ini sedang disusun. Kembali ke bab induk untuk sinopsis dan pautan ke subtopik lain.",
+      "translate": "此小节的完整笔记页面正在编写中。请返回主章节页面查看概要与其他小节的链接。"
+    },
+    {
+      "source_id": "bab-10-1-stub-note",
+      "bm_original": "Ringkasan nota berdasarkan buku teks akan ditambah di sini bersama mod bahasa Cina (ZH) apabila kandungan disiapkan.",
+      "translate": "根据课本编写的笔记摘要，连同中文（ZH）模式，将在内容完成后添加于此处。"
+    }
+  ]
+}
