@@ -18,6 +18,7 @@ HTML_PATTERNS = {
     "style.css?v=":     "style_css",
     "main.js?v=":       "main_js",
     "zh-mode.js?v=":    "zh_mode_js",
+    "subtopic-lab.js?v=": "subtopic_lab_js",
     "manifest.json?v=": "manifest",
 }
 
@@ -67,6 +68,7 @@ def load_versions() -> dict:
         "style_css",
         "main_js",
         "zh_mode_js",
+        "subtopic_lab_js",
         "manifest",
         "sw_cache",
         "css",
