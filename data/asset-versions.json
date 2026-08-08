@@ -1,7 +1,7 @@
 {
-  "style_css": "309",
-  "main_js": "385",
-  "zh_mode_js": "57",
+  "style_css": "310",
+  "main_js": "384",
+  "zh_mode_js": "56",
   "subtopic_lab_js": "9",
   "manifest": "18",
   "sw_cache": "525",
@@ -14,7 +14,7 @@
   "icon_maskable_512": "3",
   "favicon_32": "3",
   "css": {
-    "base": "106",
+    "base": "107",
     "layout": "29",
     "ui": "72",
     "paper": "30",
@@ -25,6 +25,6 @@
     "openmoji": "13",
     "fluent_shell": "7",
     "bab_hub": "1",
-    "shell_openmoji": "16"
+    "shell_openmoji": "17"
   }
 }

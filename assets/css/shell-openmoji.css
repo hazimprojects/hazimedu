@@ -143,42 +143,58 @@ body.page-theme-home.app-shell-page .home-hero-primary-cta:hover {
 
 body.page-theme-home.app-shell-page .home-feature-card,
 body.page-theme-about.app-shell-page .home-feature-card {
-  border-radius: 20px;
+  border: none;
+  border-radius: 22px;
   box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.75) inset,
-    0 16px 40px rgba(55, 48, 120, 0.1),
-    0 4px 12px rgba(15, 23, 42, 0.05);
+    8px 8px 16px rgba(55, 48, 120, 0.12),
+    -7px -7px 15px rgba(255, 255, 255, 0.75),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.6);
 }
 
 body.page-theme-home.app-shell-page .home-feature-card:hover,
 body.page-theme-about.app-shell-page .home-feature-card:hover {
   transform: translateY(-4px);
   box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.8) inset,
-    0 22px 50px rgba(67, 56, 202, 0.14),
-    0 8px 20px rgba(15, 23, 42, 0.08);
+    10px 10px 20px rgba(67, 56, 202, 0.16),
+    -8px -8px 17px rgba(255, 255, 255, 0.8),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.65);
 }
 
-/* Kad ciri — permukaan kaca lembut (bukan flat chip) */
+[data-theme="dark"] body.page-theme-home.app-shell-page .home-feature-card,
+[data-theme="dark"] body.page-theme-about.app-shell-page .home-feature-card {
+  box-shadow:
+    8px 8px 16px rgba(0, 0, 0, 0.4),
+    -6px -6px 14px rgba(255, 255, 255, 0.05),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.07);
+}
+
+[data-theme="dark"] body.page-theme-home.app-shell-page .home-feature-card:hover,
+[data-theme="dark"] body.page-theme-about.app-shell-page .home-feature-card:hover {
+  box-shadow:
+    10px 10px 20px rgba(0, 0, 0, 0.45),
+    -7px -7px 16px rgba(255, 255, 255, 0.06),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.08);
+}
+
+/* Kad ciri — gaya "clay": permukaan puffy lembut, tiada garis pinggir,
+   kenal pasti varian warna melalui latar gradien + bayang badge sahaja. */
 body.app-shell-page .home-feature-card.hfc-violet {
   background: linear-gradient(155deg, rgba(255, 255, 255, 0.55) 0%, rgba(237, 233, 255, 0.92) 100%);
-  border-color: rgba(124, 58, 237, 0.32);
 }
 body.app-shell-page .home-feature-card.hfc-cyan {
   background: linear-gradient(155deg, rgba(255, 255, 255, 0.55) 0%, rgba(224, 247, 252, 0.92) 100%);
-  border-color: rgba(8, 145, 178, 0.32);
 }
 body.app-shell-page .home-feature-card.hfc-emerald {
   background: linear-gradient(155deg, rgba(255, 255, 255, 0.55) 0%, rgba(220, 252, 241, 0.9) 100%);
-  border-color: rgba(5, 122, 85, 0.3);
 }
 body.app-shell-page .home-feature-card.hfc-amber {
   background: linear-gradient(155deg, rgba(255, 255, 255, 0.55) 0%, rgba(254, 243, 230, 0.92) 100%);
-  border-color: rgba(217, 119, 6, 0.32);
 }
 body.app-shell-page .home-feature-card.hfc-indigo {
   background: linear-gradient(155deg, rgba(255, 255, 255, 0.55) 0%, rgba(238, 242, 255, 0.94) 100%);
-  border-color: rgba(79, 70, 229, 0.32);
+}
+body.app-shell-page .home-feature-card.hfc-rose {
+  background: linear-gradient(155deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 231, 236, 0.92) 100%);
 }
 
 body.app-shell-page .home-feature-card.hfc-violet .home-feature-icon-badge {
@@ -211,26 +227,30 @@ body.app-shell-page .home-feature-card.hfc-indigo .home-feature-icon-badge {
     0 1px 0 rgba(255, 255, 255, 0.9) inset,
     0 10px 22px rgba(79, 70, 229, 0.18);
 }
+body.app-shell-page .home-feature-card.hfc-rose .home-feature-icon-badge {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.75), rgba(254, 210, 221, 0.95));
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.9) inset,
+    0 10px 22px rgba(225, 29, 72, 0.16);
+}
 
 [data-theme="dark"] body.app-shell-page .home-feature-card.hfc-violet {
   background: linear-gradient(155deg, rgba(40, 36, 58, 0.95) 0%, rgba(30, 27, 48, 0.92) 100%);
-  border-color: rgba(167, 139, 250, 0.35);
 }
 [data-theme="dark"] body.app-shell-page .home-feature-card.hfc-cyan {
   background: linear-gradient(155deg, rgba(32, 40, 52, 0.95) 0%, rgba(24, 32, 44, 0.92) 100%);
-  border-color: rgba(34, 211, 238, 0.28);
 }
 [data-theme="dark"] body.app-shell-page .home-feature-card.hfc-emerald {
   background: linear-gradient(155deg, rgba(32, 44, 40, 0.95) 0%, rgba(24, 36, 32, 0.92) 100%);
-  border-color: rgba(110, 231, 183, 0.26);
 }
 [data-theme="dark"] body.app-shell-page .home-feature-card.hfc-amber {
   background: linear-gradient(155deg, rgba(48, 40, 30, 0.95) 0%, rgba(36, 30, 24, 0.92) 100%);
-  border-color: rgba(252, 211, 77, 0.28);
 }
 [data-theme="dark"] body.app-shell-page .home-feature-card.hfc-indigo {
   background: linear-gradient(155deg, rgba(38, 36, 58, 0.95) 0%, rgba(28, 27, 44, 0.92) 100%);
-  border-color: rgba(165, 180, 252, 0.32);
+}
+[data-theme="dark"] body.app-shell-page .home-feature-card.hfc-rose {
+  background: linear-gradient(155deg, rgba(58, 34, 42, 0.95) 0%, rgba(46, 27, 34, 0.92) 100%);
 }
 
 [data-theme="dark"] body.app-shell-page .home-feature-card.hfc-violet .home-feature-icon-badge {
@@ -251,6 +271,10 @@ body.app-shell-page .home-feature-card.hfc-indigo .home-feature-icon-badge {
 }
 [data-theme="dark"] body.app-shell-page .home-feature-card.hfc-indigo .home-feature-icon-badge {
   background: linear-gradient(145deg, rgba(52, 50, 72, 0.95), rgba(38, 36, 56, 0.98));
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.32);
+}
+[data-theme="dark"] body.app-shell-page .home-feature-card.hfc-rose .home-feature-icon-badge {
+  background: linear-gradient(145deg, rgba(68, 42, 50, 0.95), rgba(54, 32, 40, 0.98));
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.32);
 }
 
