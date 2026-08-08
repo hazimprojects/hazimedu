@@ -69,9 +69,9 @@
       "prompt": "Apakah maksud ringkas \"keunggulan\" sesebuah kerajaan dalam konteks Sejarah Tingkatan 4 ini?",
       "options": [
         "Keupayaan kerajaan mentadbir dengan sistematik, teratur dan berkesan",
-        "Kekayaan sultan seorang diri tanpa melibatkan pembesar",
-        "Kemenangan dalam semua peperangan dunia",
-        "Jumlah penduduk terbesar di dunia"
+        "Kekayaan peribadi sultan seorang diri tanpa melibatkan pembesar dalam pentadbiran",
+        "Kemenangan berterusan dalam peperangan menentang semua kerajaan jiran serantau",
+        "Jumlah penduduk yang terbesar berbanding semua kerajaan lain di Alam Melayu"
       ],
       "answer": "Keupayaan kerajaan mentadbir dengan sistematik, teratur dan berkesan",
       "explanation": "Keunggulan di sini merujuk kepada kecemerlangan pentadbiran dan undang-undang yang menyokong kestabilan dan kemajuan kerajaan.",
@@ -84,9 +84,9 @@
       "prompt": "Mengapakah peringkat pentadbiran dibahagikan antara pentadbiran pusat dan pentadbiran jajahan?",
       "options": [
         "Untuk memudahkan kawalan dan pengurusan wilayah yang luas",
-        "Kerana Melaka tidak mempunyai sultan",
-        "Supaya jajahan bebas daripada undang-undang sultan",
-        "Untuk menghapuskan peranan pembesar"
+        "Kerana Melaka waktu itu tidak mempunyai sultan yang sah",
+        "Supaya jajahan bebas terus daripada undang-undang sultan",
+        "Untuk menghapuskan peranan pembesar dalam pentadbiran"
       ],
       "answer": "Untuk memudahkan kawalan dan pengurusan wilayah yang luas",
       "explanation": "Pembahagian pentadbiran pusat dan jajahan membantu sultan meluaskan dan mengekalkan pengaruh ke atas kawasan yang jauh dengan perwakilan pembesar.",
@@ -99,9 +99,9 @@
       "prompt": "Bagaimanakah sistem kewangan menyokong keunggulan pentadbiran Melaka?",
       "options": [
         "Sumber hasil membantu membiayai pentadbiran, pertahanan dan kesejahteraan",
-        "Sistem kewangan tidak wujud pada zaman Melaka",
-        "Hasil kerajaan hanya digunakan untuk hiburan istana",
-        "Cukai hanya dikenakan kepada sultan"
+        "Sistem kewangan dan pengumpulan cukai tidak wujud langsung pada zaman Melaka",
+        "Hasil yang dikumpul kerajaan hanya digunakan semata-mata untuk hiburan istana",
+        "Cukai pelabuhan hanya dikenakan kepada sultan sendiri, bukan pedagang luar"
       ],
       "answer": "Sumber hasil membantu membiayai pentadbiran, pertahanan dan kesejahteraan",
       "explanation": "Pengumpulan hasil dan peranan pembesar dalam mengurus kewangan menyokong kelancaran pentadbiran dan kestabilan kerajaan.",
@@ -114,9 +114,9 @@
       "prompt": "Seek kapal dagang asing ingin berlabuh dan berniaga di pelabuhan Melaka. Peraturan maritim dan cukai yang relevan biasanya dirujuk dalam:",
       "options": [
         "Undang-Undang Laut Melaka",
-        "Hukum Kanun Melaka dengan pengecualian untuk pedagang asing",
-        "Surat-surat perjanjian lisan antara pembesar dan nakhoda",
-        "Hukum adat setempat tanpa perundangan bertulis"
+        "Hukum Kanun Melaka",
+        "Adat resam pembesar",
+        "Perjanjian lisan nakhoda"
       ],
       "answer": "Undang-Undang Laut Melaka",
       "explanation": "Aktiviti maritim, cukai pelabuhan dan hal ehwal laut dikaitkan dengan Undang-Undang Laut Melaka.",
@@ -159,9 +159,9 @@
       "prompt": "Apakah kesan utama gabungan sistem pentadbiran yang berperingkat dengan undang-undang bertulis?",
       "options": [
         "Kestabilan politik dan kecekapan mengurus pelbagai lapisan masyarakat",
-        "Kerajaan menjadi tidak teratur dan lemah",
-        "Undang-undang bertulis menghapuskan peranan sultan",
-        "Pembesar tidak lagi diperlukan"
+        "Kerajaan menjadi semakin tidak teratur dan lemah akibat gabungan dua sistem ini",
+        "Undang-undang bertulis yang diperkenalkan menghapuskan terus peranan sultan",
+        "Peranan pembesar dalam pentadbiran tidak lagi diperlukan selepas ini"
       ],
       "answer": "Kestabilan politik dan kecekapan mengurus pelbagai lapisan masyarakat",
       "explanation": "Struktur pentadbiran dan undang-undang yang jelas saling melengkapi untuk mengekalkan ketenteraman dan kelancaran urusan kerajaan.",
@@ -174,9 +174,9 @@
       "prompt": "Bandingkan fungsi Hukum Kanun Melaka dengan Undang-Undang Laut Melaka. Perbezaan utama yang paling tepat ialah:",
       "options": [
         "Kanun Melaka untuk urusan darat/sosial; Undang Laut untuk urusan maritim",
-        "Keduanya hanya untuk urusan agama",
-        "Undang Laut menggantikan sepenuhnya Hukum Kanun",
-        "Hukum Kanun hanya untuk pedagang asing"
+        "Kedua-dua undang-undang ini hanya mengatur urusan agama dan ibadat semata-mata",
+        "Undang-Undang Laut menggantikan sepenuhnya Hukum Kanun di seluruh Melaka",
+        "Hukum Kanun Melaka hanya terpakai khusus kepada pedagang asing yang singgah"
       ],
       "answer": "Kanun Melaka untuk urusan darat/sosial; Undang Laut untuk urusan maritim",
       "explanation": "Pembahagian bidang kuasa antara undang-undang darat dan maritim menunjukkan sistem perundangan Melaka yang lengkap.",
@@ -189,9 +189,9 @@
       "prompt": "Antara hujah berikut, manakah PALING kukuh bahawa Melaka mencapai keunggulan pentadbiran?",
       "options": [
         "Wujudnya struktur berperingkat, peranan pembesar yang jelas, dan sistem hasil untuk menyokong kerajaan",
-        "Wujudnya undang-undang bertulis tanpa peranan pembesar dalam pelaksanaan",
-        "Wujudnya sistem hasil tanpa struktur pentadbiran yang jelas",
-        "Wujudnya pembesar yang berkuasa tanpa sebarang undang-undang bertulis"
+        "Wujudnya undang-undang bertulis semata-mata tanpa peranan pembesar dalam pelaksanaannya",
+        "Wujudnya sistem hasil dan cukai yang kukuh tanpa struktur pentadbiran berperingkat yang jelas",
+        "Wujudnya pembesar berkuasa penuh di setiap jajahan tanpa sebarang undang-undang bertulis"
       ],
       "answer": "Wujudnya struktur berperingkat, peranan pembesar yang jelas, dan sistem hasil untuk menyokong kerajaan",
       "explanation": "Hujah kukuh menyatukan struktur, manusia (pembesar) dan sumber kewangan — elemen penting keunggulan yang dibincangkan dalam bab ini.",
@@ -204,9 +204,9 @@
       "prompt": "Antara pernyataan berikut, manakah yang PALING tepat tentang kesan keunggulan ini terhadap reputasi Melaka?",
       "options": [
         "Ia menyumbang kepada kegemilangan Melaka sebagai pusat pentadbiran dan perdagangan yang diiktiraf",
-        "Ia menyebabkan Melaka diabaikan oleh pedagang",
-        "Ia membuktikan Melaka tanpa sistem undang-undang",
-        "Ia menunjukkan Melaka hanya negeri naungan tanpa identiti sendiri"
+        "Ia menyebabkan Melaka semakin lama semakin diabaikan oleh pedagang serantau dan antarabangsa",
+        "Ia sebenarnya membuktikan Melaka langsung tidak mempunyai sistem undang-undang bertulis",
+        "Ia menunjukkan Melaka hanyalah sebuah negeri naungan tanpa identiti pentadbiran sendiri"
       ],
       "answer": "Ia menyumbang kepada kegemilangan Melaka sebagai pusat pentadbiran dan perdagangan yang diiktiraf",
       "explanation": "Keunggulan pentadbiran dan undang-undang menyokong imej Melaka sebagai kerajaan teratur yang menarik perdagangan dan pengiktirafan.",

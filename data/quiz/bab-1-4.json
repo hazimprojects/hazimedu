@@ -69,9 +69,9 @@
       "prompt": "Apakah maksud waadat dalam hubungan pemerintah–rakyat?",
       "options": [
         "Ikatan tanggungjawab: pemerintah melindungi rakyat, rakyat taat dan menghormati pemerintah",
-        "Ikatan tanpa sebarang kewajipan antara pihak",
-        "Perjanjian jual beli tanah moden",
-        "Sistem perhambaan tanpa hak"
+        "Ikatan yang tidak membawa sebarang kewajipan atau tanggungjawab kepada mana-mana pihak",
+        "Sejenis perjanjian jual beli tanah antara sultan dengan pembesar dan rakyat biasa",
+        "Sistem perhambaan yang mengikat rakyat kepada sultan tanpa sebarang hak dijamin"
       ],
       "answer": "Ikatan tanggungjawab: pemerintah melindungi rakyat, rakyat taat dan menghormati pemerintah",
       "explanation": "Waadat melibatkan tanggungjawab bersama: pemerintah memerintah dengan adil dan rakyat memberi taat setia.",
@@ -84,9 +84,9 @@
       "prompt": "Mengapakah peranan pembesar penting dalam menyokong pemerintahan sultan?",
       "options": [
         "Mereka membantu melaksanakan dasar, mengumpul hasil dan mentadbir kawasan",
-        "Mereka menggantikan sultan secara kekal",
-        "Mereka tidak mempunyai fungsi dalam kerajaan",
-        "Mereka hanya urusan peribadi istana tanpa pentadbiran"
+        "Mereka menggantikan sultan secara kekal apabila sultan uzur atau berhalangan tetap",
+        "Mereka sebenarnya tidak mempunyai sebarang fungsi rasmi dalam struktur kerajaan",
+        "Mereka hanya menguruskan urusan peribadi istana tanpa terlibat dalam pentadbiran"
       ],
       "answer": "Mereka membantu melaksanakan dasar, mengumpul hasil dan mentadbir kawasan",
       "explanation": "Pembesar memainkan peranan penting dalam melaksanakan arahan sultan, pentadbiran dan hal ehwal kerajaan.",
@@ -144,9 +144,9 @@
       "prompt": "Pembesar dilantik untuk mentadbir jajahan dan melapor kepada sultan. Ini membantu sultan:",
       "options": [
         "Mengekalkan kawalan dan menyampaikan dasar ke peringkat akar umbi",
-        "Menghapuskan semua undang-undang laut",
-        "Melepaskan tanggungjawab sepenuhnya tanpa kawalan",
-        "Memutuskan hubungan dengan rakyat"
+        "Menghapuskan semua undang-undang laut yang dahulunya dikuatkuasakan di jajahan",
+        "Melepaskan tanggungjawab pentadbiran sepenuhnya tanpa sebarang kawalan pusat",
+        "Memutuskan terus hubungan antara sultan pusat dengan rakyat di jajahan"
       ],
       "answer": "Mengekalkan kawalan dan menyampaikan dasar ke peringkat akar umbi",
       "explanation": "Perwakilan pembesar membolehkan sultan meluaskan pentadbiran dan memastikan arahan dilaksanakan di pelbagai kawasan.",
@@ -159,9 +159,9 @@
       "prompt": "Bagaimanakah konsep waadat menyokong kestabilan Kesultanan Melayu Melaka?",
       "options": [
         "Ia menjelaskan hak dan tanggungjawab kedua-dua pihak sehingga mengurangkan konflik",
-        "Ia menjelaskan hak rakyat sahaja tanpa tanggungjawab pemerintah",
-        "Ia mengikat pemerintah tanpa mengikat rakyat secara timbal balik",
-        "Ia mengutamakan kestabilan ekonomi berbanding hubungan politik"
+        "Ia hanya menjelaskan hak rakyat sahaja tanpa sebarang tanggungjawab pihak pemerintah",
+        "Ia mengikat pemerintah sahaja tanpa mengikat rakyat secara timbal balik langsung",
+        "Ia lebih mengutamakan kestabilan ekonomi semata-mata berbanding hubungan politik"
       ],
       "answer": "Ia menjelaskan hak dan tanggungjawab kedua-dua pihak sehingga mengurangkan konflik",
       "explanation": "Waadat memberi asas jelas kepada hubungan pemerintah–rakyat, menyokong persefahaman dan kestabilan politik.",
@@ -174,9 +174,9 @@
       "prompt": "Bandingkan sumbangan rakyat dengan peranan pembesar. Apakah perbezaan fungsi yang paling tepat?",
       "options": [
         "Pembesar membantu melaksanakan pentadbiran; rakyat memberi taat setia, tenaga dan sokongan kepada kerajaan",
-        "Rakyat menggantikan sultan dalam semua keputusan",
-        "Pembesar tidak terlibat dalam pentadbiran",
-        "Keduanya hanya urusan perdagangan luar"
+        "Rakyat sebenarnya menggantikan peranan sultan dalam semua keputusan penting kerajaan",
+        "Pembesar sebenarnya tidak terlibat langsung dalam sebarang urusan pentadbiran kerajaan",
+        "Kedua-dua golongan ini hanya terlibat dalam urusan perdagangan luar semata-mata"
       ],
       "answer": "Pembesar membantu melaksanakan pentadbiran; rakyat memberi taat setia, tenaga dan sokongan kepada kerajaan",
       "explanation": "Pembesar berfungsi dalam struktur pemerintahan manakala rakyat menyumbang melalui ketaatan, ekonomi dan sosial.",
@@ -189,9 +189,9 @@
       "prompt": "Antara hujah berikut, manakah PALING kukuh bahawa hubungan pemerintah–rakyat Melaka relevan sebagai rujukan nilai hari ini?",
       "options": [
         "Konsep tanggungjawab bersama dan kesetiaan menyokong perpaduan dan kedaulatan negara moden",
-        "Hubungan tersebut tidak mempunyai nilai moral",
-        "Waadat hanya untuk dokumentasi muzium",
-        "Rakyat moden tidak memerlukan undang-undang"
+        "Hubungan pemerintah–rakyat zaman itu tidak mempunyai sebarang nilai moral yang relevan",
+        "Konsep waadat hanya sesuai sebagai bahan dokumentasi muzium tanpa nilai praktikal",
+        "Rakyat pada zaman moden ini tidak lagi memerlukan sebarang bentuk undang-undang"
       ],
       "answer": "Konsep tanggungjawab bersama dan kesetiaan menyokong perpaduan dan kedaulatan negara moden",
       "explanation": "Nilai waadat, taat setia dan tanggungjawab pemerintah boleh dijadikan asas nilai kewarganegaraan dan perpaduan.",
@@ -204,9 +204,9 @@
       "prompt": "Antara pernyataan berikut, manakah yang PALING tepat merumuskan bab 1 secara keseluruhan?",
       "options": [
         "Negara bangsa di Alam Melayu, terutamanya Melaka, dibina melalui ciri lengkap, pentadbiran, undang-undang dan hubungan pemerintah–rakyat yang kukuh",
-        "Negara bangsa hanya wujud selepas penjajahan British",
-        "Melaka tidak mempunyai sistem undang-undang",
-        "Tiada kesinambungan antara kerajaan klasik dan Malaysia moden"
+        "Negara bangsa di rantau Alam Melayu ini hanya mula-mula tertubuh selepas penjajahan British bertapak dan memperkenalkan sistem pentadbirannya sendiri",
+        "Melaka sebagai sebuah kesultanan besar dan gemilang pada zamannya tidak pernah sama sekali mempunyai sebarang sistem undang-undang bertulis",
+        "Tidak wujud langsung sebarang bentuk kesinambungan sejarah antara kerajaan-kerajaan klasik dahulu dengan Malaysia yang moden hari ini"
       ],
       "answer": "Negara bangsa di Alam Melayu, terutamanya Melaka, dibina melalui ciri lengkap, pentadbiran, undang-undang dan hubungan pemerintah–rakyat yang kukuh",
       "explanation": "Bab 1 menyatukan asas negara bangsa, ciri Melaka, keunggulan sistem dan hubungan waadat sebagai warisan keseluruhan.",
