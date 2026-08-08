@@ -84,9 +84,9 @@
       "prompt": "Mengapakah peringkat pentadbiran dibahagikan antara pentadbiran pusat dan pentadbiran jajahan?",
       "options": [
         "Untuk memudahkan kawalan dan pengurusan wilayah yang luas",
-        "Kerana Melaka waktu itu tidak mempunyai sultan yang sah",
-        "Supaya jajahan bebas terus daripada undang-undang sultan",
-        "Untuk menghapuskan peranan pembesar dalam pentadbiran"
+        "Untuk memberi peluang kepada pembesar jajahan bersaing merebut takhta sultan",
+        "Kerana adat menetapkan setiap jajahan mesti ada wakil dalam Majlis Mesyuarat",
+        "Supaya cukai yang dikumpul di jajahan terus disimpan oleh pembesar tempatan"
       ],
       "answer": "Untuk memudahkan kawalan dan pengurusan wilayah yang luas",
       "explanation": "Pembahagian pentadbiran pusat dan jajahan membantu sultan meluaskan dan mengekalkan pengaruh ke atas kawasan yang jauh dengan perwakilan pembesar.",
@@ -99,9 +99,9 @@
       "prompt": "Bagaimanakah sistem kewangan menyokong keunggulan pentadbiran Melaka?",
       "options": [
         "Sumber hasil membantu membiayai pentadbiran, pertahanan dan kesejahteraan",
-        "Sistem kewangan dan pengumpulan cukai tidak wujud langsung pada zaman Melaka",
-        "Hasil yang dikumpul kerajaan hanya digunakan semata-mata untuk hiburan istana",
-        "Cukai pelabuhan hanya dikenakan kepada sultan sendiri, bukan pedagang luar"
+        "Sumber hasil digunakan terutamanya untuk membiayai misi diplomatik dengan Dinasti Ming",
+        "Cukai pelabuhan dikumpul oleh Syahbandar dan disalurkan terus kepada raja-raja Majapahit",
+        "Hasil kerajaan diagihkan sama rata kepada semua rakyat tanpa mengira jawatan atau sumbangan"
       ],
       "answer": "Sumber hasil membantu membiayai pentadbiran, pertahanan dan kesejahteraan",
       "explanation": "Pengumpulan hasil dan peranan pembesar dalam mengurus kewangan menyokong kelancaran pentadbiran dan kestabilan kerajaan.",
@@ -159,9 +159,9 @@
       "prompt": "Apakah kesan utama gabungan sistem pentadbiran yang berperingkat dengan undang-undang bertulis?",
       "options": [
         "Kestabilan politik dan kecekapan mengurus pelbagai lapisan masyarakat",
-        "Kerajaan menjadi semakin tidak teratur dan lemah akibat gabungan dua sistem ini",
-        "Undang-undang bertulis yang diperkenalkan menghapuskan terus peranan sultan",
-        "Peranan pembesar dalam pentadbiran tidak lagi diperlukan selepas ini"
+        "Peningkatan ketegangan antara pembesar pusat dengan pembesar jajahan kerana persaingan kuasa",
+        "Pergantungan yang lebih besar kepada bantuan ketenteraan asing untuk menguatkuasakan undang-undang",
+        "Peningkatan kuasa Syahbandar berbanding Bendahara dalam hierarki pentadbiran Melaka"
       ],
       "answer": "Kestabilan politik dan kecekapan mengurus pelbagai lapisan masyarakat",
       "explanation": "Struktur pentadbiran dan undang-undang yang jelas saling melengkapi untuk mengekalkan ketenteraman dan kelancaran urusan kerajaan.",
@@ -174,9 +174,9 @@
       "prompt": "Bandingkan fungsi Hukum Kanun Melaka dengan Undang-Undang Laut Melaka. Perbezaan utama yang paling tepat ialah:",
       "options": [
         "Kanun Melaka untuk urusan darat/sosial; Undang Laut untuk urusan maritim",
-        "Kedua-dua undang-undang ini hanya mengatur urusan agama dan ibadat semata-mata",
-        "Undang-Undang Laut menggantikan sepenuhnya Hukum Kanun di seluruh Melaka",
-        "Hukum Kanun Melaka hanya terpakai khusus kepada pedagang asing yang singgah"
+        "Hukum Kanun digubal lebih awal; Undang-Undang Laut diperkenalkan selepas Melaka jatuh",
+        "Kanun Melaka diguna pakai pembesar sahaja; Undang Laut diguna pakai nakhoda sahaja",
+        "Kedua-dua undang-undang disusun oleh Bendahara berdasarkan Kutara Manawa Majapahit"
       ],
       "answer": "Kanun Melaka untuk urusan darat/sosial; Undang Laut untuk urusan maritim",
       "explanation": "Pembahagian bidang kuasa antara undang-undang darat dan maritim menunjukkan sistem perundangan Melaka yang lengkap.",
@@ -189,9 +189,9 @@
       "prompt": "Antara hujah berikut, manakah PALING kukuh bahawa Melaka mencapai keunggulan pentadbiran?",
       "options": [
         "Wujudnya struktur berperingkat, peranan pembesar yang jelas, dan sistem hasil untuk menyokong kerajaan",
-        "Wujudnya undang-undang bertulis semata-mata tanpa peranan pembesar dalam pelaksanaannya",
-        "Wujudnya sistem hasil dan cukai yang kukuh tanpa struktur pentadbiran berperingkat yang jelas",
-        "Wujudnya pembesar berkuasa penuh di setiap jajahan tanpa sebarang undang-undang bertulis"
+        "Wujudnya struktur berperingkat dan sistem hasil yang kukuh, tanpa disertai peranan pembesar yang jelas",
+        "Wujudnya peranan pembesar yang jelas dan sistem hasil, tanpa struktur pentadbiran berperingkat yang nyata",
+        "Wujudnya struktur berperingkat dan peranan pembesar yang jelas, tanpa sokongan sistem hasil kerajaan yang mantap"
       ],
       "answer": "Wujudnya struktur berperingkat, peranan pembesar yang jelas, dan sistem hasil untuk menyokong kerajaan",
       "explanation": "Hujah kukuh menyatukan struktur, manusia (pembesar) dan sumber kewangan — elemen penting keunggulan yang dibincangkan dalam bab ini.",
@@ -204,9 +204,9 @@
       "prompt": "Antara pernyataan berikut, manakah yang PALING tepat tentang kesan keunggulan ini terhadap reputasi Melaka?",
       "options": [
         "Ia menyumbang kepada kegemilangan Melaka sebagai pusat pentadbiran dan perdagangan yang diiktiraf",
-        "Ia menyebabkan Melaka semakin lama semakin diabaikan oleh pedagang serantau dan antarabangsa",
-        "Ia sebenarnya membuktikan Melaka langsung tidak mempunyai sistem undang-undang bertulis",
-        "Ia menunjukkan Melaka hanyalah sebuah negeri naungan tanpa identiti pentadbiran sendiri"
+        "Ia menarik lebih ramai pedagang tetapi turut meningkatkan persaingan kuasa antara pembesar Melaka",
+        "Ia lebih memberi manfaat kepada golongan pembesar istana berbanding rakyat biasa di Melaka",
+        "Ia lebih menonjolkan hubungan diplomatik Melaka dengan China berbanding kecekapan pentadbiran dalaman"
       ],
       "answer": "Ia menyumbang kepada kegemilangan Melaka sebagai pusat pentadbiran dan perdagangan yang diiktiraf",
       "explanation": "Keunggulan pentadbiran dan undang-undang menyokong imej Melaka sebagai kerajaan teratur yang menarik perdagangan dan pengiktirafan.",

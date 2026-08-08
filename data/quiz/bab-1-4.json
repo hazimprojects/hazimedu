@@ -69,9 +69,9 @@
       "prompt": "Apakah maksud waadat dalam hubungan pemerintah–rakyat?",
       "options": [
         "Ikatan tanggungjawab: pemerintah melindungi rakyat, rakyat taat dan menghormati pemerintah",
-        "Ikatan yang tidak membawa sebarang kewajipan atau tanggungjawab kepada mana-mana pihak",
-        "Sejenis perjanjian jual beli tanah antara sultan dengan pembesar dan rakyat biasa",
-        "Sistem perhambaan yang mengikat rakyat kepada sultan tanpa sebarang hak dijamin"
+        "Ikatan yang mewajibkan rakyat membayar ufti tetap sebagai balasan pengiktirafan sultan",
+        "Perjanjian rasmi antara sultan dengan Bendahara sahaja untuk menentukan waris takhta",
+        "Adat menyambut kedatangan pembesar baharu yang dilantik oleh sultan ke sesebuah jajahan"
       ],
       "answer": "Ikatan tanggungjawab: pemerintah melindungi rakyat, rakyat taat dan menghormati pemerintah",
       "explanation": "Waadat melibatkan tanggungjawab bersama: pemerintah memerintah dengan adil dan rakyat memberi taat setia.",
@@ -84,9 +84,9 @@
       "prompt": "Mengapakah peranan pembesar penting dalam menyokong pemerintahan sultan?",
       "options": [
         "Mereka membantu melaksanakan dasar, mengumpul hasil dan mentadbir kawasan",
-        "Mereka menggantikan sultan secara kekal apabila sultan uzur atau berhalangan tetap",
-        "Mereka sebenarnya tidak mempunyai sebarang fungsi rasmi dalam struktur kerajaan",
-        "Mereka hanya menguruskan urusan peribadi istana tanpa terlibat dalam pentadbiran"
+        "Mereka bertindak sebagai perantara rasmi antara sultan Melaka dengan Dinasti Ming",
+        "Mereka mengetuai upacara sumpah setia rakyat tetapi tidak terlibat dalam pengumpulan cukai",
+        "Mereka menguruskan Undang-Undang Laut Melaka sahaja bagi kawasan pelabuhan"
       ],
       "answer": "Mereka membantu melaksanakan dasar, mengumpul hasil dan mentadbir kawasan",
       "explanation": "Pembesar memainkan peranan penting dalam melaksanakan arahan sultan, pentadbiran dan hal ehwal kerajaan.",
@@ -99,9 +99,9 @@
       "prompt": "Apakah kesan umum jika waadat dilanggar oleh pemerintah atau rakyat?",
       "options": [
         "Ketidakstabilan politik dan kemerosotan hubungan pemerintah–rakyat",
-        "Ketenteraman politik tanpa sebarang kesan sosial",
-        "Pengukuhan waadat secara automatik tanpa proses damai",
-        "Peralihan kuasa kepada pembesar tanpa penglibatan rakyat"
+        "Sultan akan digantikan segera oleh Bendahara mengikut adat pewarisan takhta",
+        "Rakyat akan dikenakan cukai tambahan sebagai denda kepada pemerintah",
+        "Kuasa pentadbiran akan berpindah terus kepada golongan pedagang asing di pelabuhan"
       ],
       "answer": "Ketidakstabilan politik dan kemerosotan hubungan pemerintah–rakyat",
       "explanation": "Pelanggaran waadat boleh mencetuskan ketidakpuasan, krisis politik dan gangguan kepada kestabilan kerajaan.",
@@ -144,9 +144,9 @@
       "prompt": "Pembesar dilantik untuk mentadbir jajahan dan melapor kepada sultan. Ini membantu sultan:",
       "options": [
         "Mengekalkan kawalan dan menyampaikan dasar ke peringkat akar umbi",
-        "Menghapuskan semua undang-undang laut yang dahulunya dikuatkuasakan di jajahan",
-        "Melepaskan tanggungjawab pentadbiran sepenuhnya tanpa sebarang kawalan pusat",
-        "Memutuskan terus hubungan antara sultan pusat dengan rakyat di jajahan"
+        "Mengurangkan bilangan cukai yang perlu dikutip daripada rakyat di jajahan",
+        "Memberi kuasa penuh kepada pembesar untuk mengisytiharkan undang-undang baharu tanpa kelulusan sultan",
+        "Mengelakkan sebarang hubungan terus antara sultan dengan Bendahara di ibu kota"
       ],
       "answer": "Mengekalkan kawalan dan menyampaikan dasar ke peringkat akar umbi",
       "explanation": "Perwakilan pembesar membolehkan sultan meluaskan pentadbiran dan memastikan arahan dilaksanakan di pelbagai kawasan.",
@@ -159,9 +159,9 @@
       "prompt": "Bagaimanakah konsep waadat menyokong kestabilan Kesultanan Melayu Melaka?",
       "options": [
         "Ia menjelaskan hak dan tanggungjawab kedua-dua pihak sehingga mengurangkan konflik",
-        "Ia hanya menjelaskan hak rakyat sahaja tanpa sebarang tanggungjawab pihak pemerintah",
-        "Ia mengikat pemerintah sahaja tanpa mengikat rakyat secara timbal balik langsung",
-        "Ia lebih mengutamakan kestabilan ekonomi semata-mata berbanding hubungan politik"
+        "Ia memastikan sultan sentiasa dipilih daripada kalangan Bendahara yang paling berpengaruh",
+        "Ia mengukuhkan kedudukan Melaka melalui pengiktirafan rasmi Dinasti Ming ke atas sultan",
+        "Ia memastikan setiap jajahan ditadbir terus oleh sultan tanpa perwakilan pembesar"
       ],
       "answer": "Ia menjelaskan hak dan tanggungjawab kedua-dua pihak sehingga mengurangkan konflik",
       "explanation": "Waadat memberi asas jelas kepada hubungan pemerintah–rakyat, menyokong persefahaman dan kestabilan politik.",
@@ -174,9 +174,9 @@
       "prompt": "Bandingkan sumbangan rakyat dengan peranan pembesar. Apakah perbezaan fungsi yang paling tepat?",
       "options": [
         "Pembesar membantu melaksanakan pentadbiran; rakyat memberi taat setia, tenaga dan sokongan kepada kerajaan",
-        "Rakyat sebenarnya menggantikan peranan sultan dalam semua keputusan penting kerajaan",
-        "Pembesar sebenarnya tidak terlibat langsung dalam sebarang urusan pentadbiran kerajaan",
-        "Kedua-dua golongan ini hanya terlibat dalam urusan perdagangan luar semata-mata"
+        "Pembesar menguruskan hal ehwal maritim di pelabuhan; rakyat pula menguruskan hal ehwal pertanian di jajahan",
+        "Rakyat dan pembesar sama-sama dilantik oleh sultan melalui upacara sumpah setia yang serupa",
+        "Pembesar bertanggungjawab ke atas undang-undang bertulis; rakyat bertanggungjawab ke atas adat lisan sahaja"
       ],
       "answer": "Pembesar membantu melaksanakan pentadbiran; rakyat memberi taat setia, tenaga dan sokongan kepada kerajaan",
       "explanation": "Pembesar berfungsi dalam struktur pemerintahan manakala rakyat menyumbang melalui ketaatan, ekonomi dan sosial.",
@@ -189,9 +189,9 @@
       "prompt": "Antara hujah berikut, manakah PALING kukuh bahawa hubungan pemerintah–rakyat Melaka relevan sebagai rujukan nilai hari ini?",
       "options": [
         "Konsep tanggungjawab bersama dan kesetiaan menyokong perpaduan dan kedaulatan negara moden",
-        "Hubungan pemerintah–rakyat zaman itu tidak mempunyai sebarang nilai moral yang relevan",
-        "Konsep waadat hanya sesuai sebagai bahan dokumentasi muzium tanpa nilai praktikal",
-        "Rakyat pada zaman moden ini tidak lagi memerlukan sebarang bentuk undang-undang"
+        "Konsep waadat lebih sesuai dikaitkan dengan sistem ekonomi feudal berbanding nilai kenegaraan moden",
+        "Konsep waadat hanya relevan kepada institusi raja dan sultan, bukan kepada rakyat Malaysia amnya",
+        "Konsep waadat lebih menekankan struktur pentadbiran berbanding nilai perpaduan kaum"
       ],
       "answer": "Konsep tanggungjawab bersama dan kesetiaan menyokong perpaduan dan kedaulatan negara moden",
       "explanation": "Nilai waadat, taat setia dan tanggungjawab pemerintah boleh dijadikan asas nilai kewarganegaraan dan perpaduan.",
@@ -204,9 +204,9 @@
       "prompt": "Antara pernyataan berikut, manakah yang PALING tepat merumuskan bab 1 secara keseluruhan?",
       "options": [
         "Negara bangsa di Alam Melayu, terutamanya Melaka, dibina melalui ciri lengkap, pentadbiran, undang-undang dan hubungan pemerintah–rakyat yang kukuh",
-        "Negara bangsa di rantau Alam Melayu ini hanya mula-mula tertubuh selepas penjajahan British bertapak dan memperkenalkan sistem pentadbirannya sendiri",
-        "Melaka sebagai sebuah kesultanan besar dan gemilang pada zamannya tidak pernah sama sekali mempunyai sebarang sistem undang-undang bertulis",
-        "Tidak wujud langsung sebarang bentuk kesinambungan sejarah antara kerajaan-kerajaan klasik dahulu dengan Malaysia yang moden hari ini"
+        "Negara bangsa di Alam Melayu hanya ditakrifkan oleh kewujudan undang-undang bertulis seperti Hukum Kanun Melaka",
+        "Negara bangsa di Alam Melayu terbentuk terutamanya kerana pengiktirafan rasmi Dinasti Ming ke atas Melaka",
+        "Negara bangsa di Alam Melayu lebih menekankan kegemilangan ekonomi perdagangan berbanding struktur pemerintahan"
       ],
       "answer": "Negara bangsa di Alam Melayu, terutamanya Melaka, dibina melalui ciri lengkap, pentadbiran, undang-undang dan hubungan pemerintah–rakyat yang kukuh",
       "explanation": "Bab 1 menyatukan asas negara bangsa, ciri Melaka, keunggulan sistem dan hubungan waadat sebagai warisan keseluruhan.",
