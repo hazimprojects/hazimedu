@@ -1160,10 +1160,18 @@
       attachToggle(el, (el.textContent || "").trim());
     });
 
-    // emoji-point-list: text lives in the last <span> of each <li>
+    // emoji-point-list: text lives in the last <span> of each <li>. MESTI guna
+    // ":scope > span" (anak terus sahaja) — bukan querySelectorAll("span") yg
+    // pulangkan SEMUA span keturunan. Bila teks ayat ada span .kw bersarang
+    // (cth. "...pertengahan <span class="kw kw-masa">1940-an</span>.") di
+    // HUJUNG, "span" tanpa skop terus pilih span .kw dalaman tu sbg "span
+    // terakhir" (salah) drpd span teks sebenar (yg ada data-zh-unit-id) —
+    // cleanText jadi terpotong ("1940-an" → "an" lepas strip nombor/tanda),
+    // gagal semakan panjang minimum (attachToggle), butang 中 senyap tak
+    // pernah dilekat. Disahkan bug SEBENAR (bab-7-5-li3), bukan andaian.
     document.querySelectorAll(".emoji-point-list li").forEach(function (li) {
       if (li.querySelector(".zh-heading-toggle")) return;
-      var spans = li.querySelectorAll("span");
+      var spans = li.querySelectorAll(":scope > span");
       if (spans.length < 2) return;
       var textSpan = spans[spans.length - 1];
       if (!textSpan || textSpan.classList.contains("emoji-bullet")) return;
