@@ -6,7 +6,7 @@
    - Same-origin non-document GET: cache-first
 */
 
-const CACHE = 'zym-v533';
+const CACHE = 'zym-v534';
 
 const PRECACHE_URLS = [
   '/',
@@ -67,7 +67,7 @@ const PRECACHE_URLS = [
   '/icons/icon-512.png?v=4',
   '/icons/icon-maskable-512.png?v=4',
   '/icons/favicon-32x32.png?v=4',
-  '/manifest.json?v=19',
+  '/manifest.json?v=20',
   '/notes/bab-1-1.html',
   '/notes/bab-1-2.html',
   '/notes/bab-1-3.html',
