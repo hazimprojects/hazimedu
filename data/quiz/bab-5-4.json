@@ -1,0 +1,216 @@
+{
+  "id": "5-4",
+  "title": "Kesan Penubuhan Persekutuan Tanah Melayu 1948",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Berapakah bilangan Raja Melayu yang menganggotai Majlis Raja-Raja?",
+      "options": [
+        "Sembilan orang",
+        "Lapan orang",
+        "Sepuluh orang",
+        "Tujuh orang"
+      ],
+      "answer": "Sembilan orang",
+      "explanation": "Majlis Raja-Raja dianggotai oleh sembilan orang Raja Melayu dan dipengerusikan oleh salah seorang daripada mereka.",
+      "tip": "Majlis Raja-Raja = 9 raja."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah nama jawatankuasa yang ditubuhkan bagi mewujudkan kerjasama kaum, turut dikenali sebagai Communities Liaison Committee (CLC)?",
+      "options": [
+        "Jawatankuasa Hubungan Antara Kaum",
+        "Jawatankuasa Kerja",
+        "Majlis Raja-Raja",
+        "PUTERA-AMCJA"
+      ],
+      "answer": "Jawatankuasa Hubungan Antara Kaum",
+      "explanation": "Jawatankuasa Hubungan Antara Kaum (CLC) ditubuhkan untuk membuka jalan ke arah kerjasama kaum.",
+      "tip": "CLC = Jawatankuasa Hubungan Antara Kaum."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Perlembagaan manakah yang menjadi langkah penting merintis jalan kepada kemerdekaan negara selepas Persekutuan Tanah Melayu 1948?",
+      "options": [
+        "Perlembagaan Tanah Melayu 1957",
+        "Perlembagaan Rakyat",
+        "Malayan Union",
+        "Piagam Atlantik"
+      ],
+      "answer": "Perlembagaan Tanah Melayu 1957",
+      "explanation": "Persekutuan Tanah Melayu 1948 merintis jalan kepada pembentukan Perlembagaan Tanah Melayu 1957 yang membawa kemerdekaan.",
+      "tip": "1948 → 1957 → merdeka."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah yang perlu memastikan Raja-raja Melayu dirujuk dalam perkara yang berada dalam bidang kuasa kerajaan Persekutuan?",
+      "options": [
+        "Pesuruhjaya Tinggi",
+        "Ketua Setiausaha Malayan Union",
+        "Sultan Perak",
+        "Ketua Majlis Perundangan Negeri"
+      ],
+      "answer": "Pesuruhjaya Tinggi",
+      "explanation": "Pesuruhjaya Tinggi perlu memastikan Raja-raja Melayu dirujuk dalam perkara bidang kuasa kerajaan Persekutuan.",
+      "tip": "Pesuruhjaya Tinggi rujuk raja."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah pengiktirafan kedudukan istimewa orang Melayu bersama kepentingan sah kaum lain dianggap penting?",
+      "options": [
+        "Kerana ia dapat melindungi hak orang Melayu sebagai penduduk asal sambil mengambil kira hak kaum lain dalam negara",
+        "Kerana ia menghapuskan sepenuhnya hak kaum bukan Melayu dalam negara",
+        "Kerana ia hanya memberi manfaat kepada golongan pentadbir British sahaja",
+        "Kerana ia tidak mempunyai kaitan dengan usaha mewujudkan keseimbangan antara kaum"
+      ],
+      "answer": "Kerana ia dapat melindungi hak orang Melayu sebagai penduduk asal sambil mengambil kira hak kaum lain dalam negara",
+      "explanation": "Pengiktirafan ini penting kerana melindungi hak orang Melayu sebagai penduduk asal sambil mengambil kira hak kaum lain.",
+      "tip": "Jaga hak Melayu + kaum lain."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah pembukaan ruang kewarganegaraan kepada orang bukan Melayu dianggap langkah penting dalam Persekutuan Tanah Melayu 1948?",
+      "options": [
+        "Kerana ia menjadi asas kepada pembentukan masyarakat yang lebih tersusun dari segi taraf kerakyatan dan kedudukan politik",
+        "Kerana ia menghapuskan sepenuhnya kedudukan istimewa orang Melayu sebagai penduduk asal",
+        "Kerana ia hanya memberi kesan kepada golongan pentadbir British tanpa melibatkan rakyat tempatan",
+        "Kerana ia bertujuan menggantikan sepenuhnya kedudukan Raja-raja Melayu dengan sistem kewarganegaraan baharu"
+      ],
+      "answer": "Kerana ia menjadi asas kepada pembentukan masyarakat yang lebih tersusun dari segi taraf kerakyatan dan kedudukan politik",
+      "explanation": "Langkah ini penting kerana menjadi asas pembentukan masyarakat yang lebih tersusun dari segi kerakyatan dan politik.",
+      "tip": "Kewarganegaraan = asas masyarakat tersusun."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah penubuhan Jawatankuasa Hubungan Antara Kaum (CLC) dianggap penting kepada politik Tanah Melayu?",
+      "options": [
+        "Kerana ia berjaya memupuk persefahaman antara pemimpin pelbagai kaum dan mewujudkan asas kerjasama politik yang lebih baik",
+        "Kerana ia menghapuskan sepenuhnya perbezaan pandangan antara kaum tanpa sebarang rundingan",
+        "Kerana ia hanya melibatkan pemimpin daripada satu kaum sahaja dalam perbincangannya",
+        "Kerana ia bertujuan menggantikan Majlis Perundangan Persekutuan sepenuhnya"
+      ],
+      "answer": "Kerana ia berjaya memupuk persefahaman antara pemimpin pelbagai kaum dan mewujudkan asas kerjasama politik yang lebih baik",
+      "explanation": "CLC berjaya memupuk persefahaman antara pemimpin pelbagai kaum dan mewujudkan asas kerjasama politik.",
+      "tip": "CLC = persefahaman + kerjasama politik."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Seorang pelajar mendapati bahawa cadangan sebuah jawatankuasa perpaduan kaum telah dimasukkan ke dalam usul perundangan yang diluluskan oleh Majlis Perundangan Persekutuan. Apakah jawatankuasa yang paling mungkin dimaksudkan?",
+      "options": [
+        "Jawatankuasa Hubungan Antara Kaum (CLC)",
+        "Jawatankuasa Kerja",
+        "PUTERA-AMCJA",
+        "Majlis Raja-Raja"
+      ],
+      "answer": "Jawatankuasa Hubungan Antara Kaum (CLC)",
+      "explanation": "Kebanyakan cadangan CLC dimasukkan ke dalam usul perundangan yang diluluskan oleh Majlis Perundangan Persekutuan.",
+      "tip": "Cadangan masuk usul = CLC."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sebuah badan baharu dipengerusikan oleh seorang daripada Raja-raja Melayu dan dianggotai oleh sembilan orang Raja Melayu bagi membolehkan mereka memberi pandangan dalam pentadbiran negara. Apakah badan yang dimaksudkan?",
+      "options": [
+        "Majlis Raja-Raja",
+        "Majlis Mesyuarat Persekutuan",
+        "Majlis Perundangan Persekutuan",
+        "Dewan Perundangan Negeri"
+      ],
+      "answer": "Majlis Raja-Raja",
+      "explanation": "Majlis Raja-Raja dipengerusikan oleh seorang Raja Melayu dan dianggotai sembilan orang Raja Melayu.",
+      "tip": "9 raja + pengerusi raja = Majlis Raja-Raja."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Seorang penduduk bukan Melayu yang telah lama menetap di Persekutuan Tanah Melayu kini dibenarkan memohon menjadi warganegara, sementara orang Melayu terus diiktiraf sebagai penduduk asal dengan kedudukan istimewa. Apakah kesan Persekutuan Tanah Melayu 1948 yang digambarkan situasi ini?",
+      "options": [
+        "Membuka ruang kewarganegaraan sambil menjaga kedudukan istimewa orang Melayu",
+        "Menghapuskan sepenuhnya kedudukan istimewa orang Melayu",
+        "Menolak sepenuhnya permohonan kewarganegaraan orang bukan Melayu",
+        "Mengembalikan kedudukan Raja-raja Melayu semata-mata"
+      ],
+      "answer": "Membuka ruang kewarganegaraan sambil menjaga kedudukan istimewa orang Melayu",
+      "explanation": "Persekutuan membuka ruang kewarganegaraan kepada bukan Melayu sambil mengiktiraf orang Melayu sebagai penduduk asal berkedudukan istimewa.",
+      "tip": "Kewarganegaraan dibuka + kedudukan Melayu dikekal."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah persamaan utama antara kesan \"mengembalikan kedudukan Raja-raja Melayu\" dengan kesan \"menjaga kedudukan istimewa orang Melayu\"?",
+      "options": [
+        "Kedua-duanya menunjukkan usaha Persekutuan Tanah Melayu 1948 memulihkan dan melindungi kedudukan yang terjejas semasa Malayan Union",
+        "Kedua-duanya menunjukkan usaha menghapuskan sepenuhnya peranan orang bukan Melayu dalam politik negara",
+        "Kedua-duanya tidak mempunyai kaitan dengan pentadbiran Malayan Union sebelumnya",
+        "Kedua-duanya bertujuan mengurangkan kuasa Raja-raja Melayu berbanding zaman sebelum Malayan Union"
+      ],
+      "answer": "Kedua-duanya menunjukkan usaha Persekutuan Tanah Melayu 1948 memulihkan dan melindungi kedudukan yang terjejas semasa Malayan Union",
+      "explanation": "Kedua-dua kesan berkait rapat dengan usaha memulihkan kedudukan Raja-raja Melayu dan orang Melayu yang terjejas semasa Malayan Union.",
+      "tip": "Sama-sama pulihkan kedudukan terjejas."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perbezaan utama antara kesan \"membuka ruang kewarganegaraan\" dengan kesan \"mewujudkan kerjasama kaum\"?",
+      "options": [
+        "Membuka ruang kewarganegaraan memberi taraf kerakyatan kepada individu, manakala kerjasama kaum melalui CLC memupuk persefahaman politik antara pemimpin pelbagai kaum",
+        "Kedua-dua kesan ini merujuk perkara yang sama tanpa sebarang perbezaan dari segi fungsi",
+        "Membuka ruang kewarganegaraan hanya melibatkan Raja-raja Melayu tanpa melibatkan rakyat biasa",
+        "Kerjasama kaum hanya tertumpu kepada golongan pentadbir British tanpa melibatkan pemimpin tempatan"
+      ],
+      "answer": "Membuka ruang kewarganegaraan memberi taraf kerakyatan kepada individu, manakala kerjasama kaum melalui CLC memupuk persefahaman politik antara pemimpin pelbagai kaum",
+      "explanation": "Kewarganegaraan memberi taraf kerakyatan individu, manakala CLC memupuk kerjasama politik antara pemimpin pelbagai kaum.",
+      "tip": "Kerakyatan individu vs kerjasama pemimpin."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah PALING tepat menjelaskan mengapa Persekutuan Tanah Melayu 1948 dianggap asas penting kepada kemerdekaan negara?",
+      "options": [
+        "Ia memulihkan kedudukan Raja-raja Melayu, menjaga kedudukan istimewa orang Melayu, membuka ruang kewarganegaraan dan mewujudkan kerjasama kaum yang seterusnya merintis jalan kepada Perlembagaan Tanah Melayu 1957",
+        "Ia menghapuskan sepenuhnya peranan British dalam pentadbiran Tanah Melayu serta-merta selepas 1948",
+        "Ia hanya memberi kesan kepada Raja-raja Melayu tanpa sebarang kesan kepada rakyat biasa",
+        "Ia menggantikan sepenuhnya sistem beraja dengan sebuah republik demokratik"
+      ],
+      "answer": "Ia memulihkan kedudukan Raja-raja Melayu, menjaga kedudukan istimewa orang Melayu, membuka ruang kewarganegaraan dan mewujudkan kerjasama kaum yang seterusnya merintis jalan kepada Perlembagaan Tanah Melayu 1957",
+      "explanation": "Gabungan keempat-empat kesan menjadikan Persekutuan Tanah Melayu 1948 asas penting kepada Perlembagaan Tanah Melayu 1957 dan kemerdekaan.",
+      "tip": "4 kesan → 1957 → merdeka."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah PALING tepat merumuskan subtopik 5.4?",
+      "options": [
+        "Persekutuan Tanah Melayu 1948 membawa kesan besar dengan memulihkan kedudukan Raja-raja Melayu, menjaga kedudukan istimewa orang Melayu, membuka ruang kewarganegaraan dan mewujudkan kerjasama kaum sebagai asas kestabilan dan kemerdekaan negara",
+        "Persekutuan Tanah Melayu 1948 tidak membawa sebarang kesan kepada kedudukan Raja-raja Melayu atau orang Melayu",
+        "Persekutuan Tanah Melayu 1948 hanya memberi kesan kepada hubungan luar negeri tanpa melibatkan politik dalam negeri",
+        "Persekutuan Tanah Melayu 1948 menghapuskan sepenuhnya ruang kewarganegaraan kepada orang bukan Melayu"
+      ],
+      "answer": "Persekutuan Tanah Melayu 1948 membawa kesan besar dengan memulihkan kedudukan Raja-raja Melayu, menjaga kedudukan istimewa orang Melayu, membuka ruang kewarganegaraan dan mewujudkan kerjasama kaum sebagai asas kestabilan dan kemerdekaan negara",
+      "explanation": "Rumusan menggabungkan keempat-empat kesan utama subtopik 5.4 dan kaitannya dengan kestabilan serta kemerdekaan negara.",
+      "tip": "Rumusan = 4 kesan besar 5.4."
+    }
+  ]
+}

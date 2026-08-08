@@ -1,0 +1,216 @@
+{
+  "id": "3-2",
+  "title": "Latar Belakang Perang Dunia",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Pada tahun berapakah Perang Dunia Pertama bermula dan berakhir?",
+      "options": [
+        "1914 hingga 1918",
+        "1918 hingga 1922",
+        "1910 hingga 1914",
+        "1939 hingga 1945"
+      ],
+      "answer": "1914 hingga 1918",
+      "explanation": "Perang Dunia Pertama berlangsung dari tahun 1914 hingga 1918.",
+      "tip": "PD1 = 1914–1918."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah yang dibunuh sehingga mencetuskan kemuncak Krisis Rantau Balkan?",
+      "options": [
+        "Archduke Ferdinand dan isterinya Sophie",
+        "Kaiser Wilhelm II",
+        "Tsar Nicholas II",
+        "Sultan Mehmed VI"
+      ],
+      "answer": "Archduke Ferdinand dan isterinya Sophie",
+      "explanation": "Pembunuhan Archduke Ferdinand, Putera Mahkota Austria-Hungary, dan isterinya Sophie oleh pemuda Serbia menjadi kemuncak Krisis Rantau Balkan.",
+      "tip": "Ferdinand + Sophie dibunuh."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah nama deklarasi yang dicadangkan oleh Presiden Amerika Syarikat, Woodrow Wilson, di Persidangan Damai Paris?",
+      "options": [
+        "Deklarasi 14 Perkara",
+        "Deklarasi 4 Kebebasan",
+        "Piagam Atlantik",
+        "Deklarasi Balfour"
+      ],
+      "answer": "Deklarasi 14 Perkara",
+      "explanation": "Woodrow Wilson mencadangkan Deklarasi 14 Perkara yang menekankan keadilan dan mengelakkan balas dendam.",
+      "tip": "Wilson = 14 Perkara."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Dua pakatan utama yang terbentuk akibat permusuhan antara negara Eropah ialah:",
+      "options": [
+        "Kuasa Tengah dan Pakatan Bertiga",
+        "Kuasa Paksi dan Kuasa Bersekutu",
+        "Liga Bangsa-Bangsa dan Bangsa-Bangsa Bersatu",
+        "NATO dan Pakatan Warsaw"
+      ],
+      "answer": "Kuasa Tengah dan Pakatan Bertiga",
+      "explanation": "Permusuhan antara negara Eropah membawa kepada pembentukan Kuasa Tengah dan Pakatan Bertiga.",
+      "tip": "PD1 = Kuasa Tengah vs Pakatan Bertiga."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah Revolusi Industri menyebabkan persaingan kuasa imperialis meningkat?",
+      "options": [
+        "Negara Eropah berlumba-lumba mendapatkan tanah jajahan untuk bahan mentah dan pasaran hasil industri",
+        "Revolusi Industri menyebabkan negara Eropah kehilangan minat terhadap tanah jajahan",
+        "Revolusi Industri hanya memberi kesan kepada bidang pertanian",
+        "Revolusi Industri menghapuskan keperluan bahan mentah sepenuhnya"
+      ],
+      "answer": "Negara Eropah berlumba-lumba mendapatkan tanah jajahan untuk bahan mentah dan pasaran hasil industri",
+      "explanation": "Revolusi Industri mendorong negara Eropah bersaing mendapatkan tanah jajahan bagi bahan mentah dan pasaran.",
+      "tip": "Industri → perlu bahan mentah + pasaran."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah pencerobohan Jerman ke atas Belgium membangkitkan kemarahan Britain sehingga mengisytiharkan perang?",
+      "options": [
+        "Belgium ialah negara berkecuali yang dijamin oleh perjanjian antarabangsa, tetapi diserang dengan kekerasan oleh Jerman",
+        "Belgium merupakan sekutu tetap Jerman sebelum itu",
+        "Britain tidak mempunyai kepentingan langsung terhadap Belgium",
+        "Belgium meminta Britain menyerang Jerman terlebih dahulu"
+      ],
+      "answer": "Belgium ialah negara berkecuali yang dijamin oleh perjanjian antarabangsa, tetapi diserang dengan kekerasan oleh Jerman",
+      "explanation": "Britain marah kerana Jerman melanggar kedaulatan Belgium yang berstatus negara berkecuali dijamin perjanjian antarabangsa.",
+      "tip": "Belgium berkecuali = Britain marah."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah Jerman tidak berpuas hati dengan Perjanjian Versailles?",
+      "options": [
+        "Jerman dipersalahkan atas kemusnahan perang, dipaksa membayar pampasan besar dan tenteranya dikurangkan",
+        "Jerman diberikan lebih banyak tanah jajahan berbanding sebelum perang",
+        "Jerman dibenarkan mengekalkan tentera yang besar tanpa sekatan",
+        "Jerman tidak terlibat langsung dalam Perjanjian Versailles"
+      ],
+      "answer": "Jerman dipersalahkan atas kemusnahan perang, dipaksa membayar pampasan besar dan tenteranya dikurangkan",
+      "explanation": "Perjanjian Versailles mengenakan pampasan besar, mengurangkan tentera dan merampas tanah jajahan Jerman.",
+      "tip": "Versailles = salah + pampasan + tentera dikurangkan."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sebuah negara mula-mula menganggotai satu pakatan ketenteraan, tetapi kemudian berpaling tadah dan menyertai pakatan lawan sebelum Perang Dunia Pertama tercetus. Negara manakah ini?",
+      "options": [
+        "Itali",
+        "Serbia",
+        "Bulgaria",
+        "Portugal"
+      ],
+      "answer": "Itali",
+      "explanation": "Itali asalnya bersama Kuasa Tengah (Triple Alliance) tetapi kemudian berpaling tadah dan menyertai Pakatan Bertiga pada Mac 1915.",
+      "tip": "Berpaling tadah = Itali."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sebuah negara mengisytiharkan perang selepas kapal dagangnya diserang oleh kapal selam musuh dan ingin mempertahankan demokrasi dunia. Negara manakah ini?",
+      "options": [
+        "Amerika Syarikat",
+        "Rusia",
+        "Empayar Uthmaniyah",
+        "Bulgaria"
+      ],
+      "answer": "Amerika Syarikat",
+      "explanation": "Amerika Syarikat menyertai Pakatan Bertiga pada April 1917 selepas kapal dagangnya diserang kapal selam Jerman.",
+      "tip": "Kapal selam Jerman = Amerika masuk perang."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Selepas keruntuhan sebuah empayar Eropah pasca-perang, beberapa negara baharu seperti Czechoslovakia dan Yugoslavia terbentuk. Empayar manakah yang runtuh ini?",
+      "options": [
+        "Austria-Hungary",
+        "Empayar Uthmaniyah",
+        "Empayar Rusia",
+        "Empayar British"
+      ],
+      "answer": "Austria-Hungary",
+      "explanation": "Dinasti Habsburg (Austria-Hungary) tamat apabila wilayah-wilayahnya memberontak, melahirkan Czechoslovakia dan Yugoslavia.",
+      "tip": "Austria-Hungary runtuh → negara baharu."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perbezaan utama antara anggota asal Kuasa Tengah dengan Pakatan Bertiga?",
+      "options": [
+        "Kuasa Tengah diasaskan Jerman dan Austria-Hungary sebagai Triple Alliance, manakala Pakatan Bertiga dibentuk Perancis dan Rusia untuk mengimbangi ancaman Kuasa Tengah",
+        "Kuasa Tengah dan Pakatan Bertiga ditubuhkan pada tahun yang sama oleh negara yang sama",
+        "Pakatan Bertiga hanya terdiri daripada negara Asia",
+        "Kuasa Tengah tidak melibatkan Jerman langsung"
+      ],
+      "answer": "Kuasa Tengah diasaskan Jerman dan Austria-Hungary sebagai Triple Alliance, manakala Pakatan Bertiga dibentuk Perancis dan Rusia untuk mengimbangi ancaman Kuasa Tengah",
+      "explanation": "Kuasa Tengah bermula 1882 sebagai Triple Alliance, manakala Pakatan Bertiga bermula 1894 antara Perancis dan Rusia untuk mengimbangi ancaman itu.",
+      "tip": "Kuasa Tengah dulu, Pakatan Bertiga mengimbangi."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah persamaan antara kesan Perjanjian Versailles terhadap Jerman dengan ketidakpuasan hati Itali selepas Perang Dunia Pertama?",
+      "options": [
+        "Kedua-duanya berasa tidak puas hati dengan hasil perjanjian damai walaupun berada di pihak berbeza",
+        "Kedua-duanya mendapat tanah jajahan yang besar selepas perang",
+        "Kedua-duanya tidak terlibat dalam Perang Dunia Pertama",
+        "Kedua-duanya menyokong sepenuhnya Liga Bangsa-Bangsa"
+      ],
+      "answer": "Kedua-duanya berasa tidak puas hati dengan hasil perjanjian damai walaupun berada di pihak berbeza",
+      "explanation": "Jerman tidak puas hati kerana disalahkan dan dihukum, manakala Itali (walaupun menang) tidak puas hati kerana tidak mendapat tanah jajahan baharu.",
+      "tip": "Jerman kalah + Itali menang = sama-sama kecewa."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah yang PALING tepat menerangkan punca sebenar tercetusnya Perang Dunia Pertama?",
+      "options": [
+        "Gabungan persaingan kuasa imperialis, pembentukan pakatan ketenteraan dan krisis di Rantau Balkan bertindak bersama mencetuskan rangkaian konflik besar",
+        "Perang Dunia Pertama tercetus semata-mata kerana pembunuhan Archduke Ferdinand tanpa sebarang faktor lain",
+        "Perang Dunia Pertama tercetus kerana Tanah Melayu terlibat secara langsung dalam pertempuran",
+        "Perang Dunia Pertama tercetus kerana kegagalan Liga Bangsa-Bangsa sahaja"
+      ],
+      "answer": "Gabungan persaingan kuasa imperialis, pembentukan pakatan ketenteraan dan krisis di Rantau Balkan bertindak bersama mencetuskan rangkaian konflik besar",
+      "explanation": "Ketiga-tiga faktor ini saling berkait dan bertindak bersama mencetuskan Perang Dunia Pertama.",
+      "tip": "Tiga faktor gabung = punca sebenar."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah yang PALING tepat merumuskan subtopik 3.2?",
+      "options": [
+        "Perang Dunia Pertama berpunca daripada persaingan kuasa imperialis, pakatan ketenteraan dan krisis Balkan, membawa kesan besar termasuk keruntuhan empayar beraja dan perubahan politik-ekonomi Tanah Melayu",
+        "Perang Dunia Pertama tidak membawa sebarang kesan kepada Tanah Melayu",
+        "Perang Dunia Pertama hanya melibatkan negara Asia sahaja",
+        "Perang Dunia Pertama berakhir tanpa sebarang perjanjian damai"
+      ],
+      "answer": "Perang Dunia Pertama berpunca daripada persaingan kuasa imperialis, pakatan ketenteraan dan krisis Balkan, membawa kesan besar termasuk keruntuhan empayar beraja dan perubahan politik-ekonomi Tanah Melayu",
+      "explanation": "Rumusan ini merangkumi punca, jalannya perang dan kesan besar termasuk terhadap Tanah Melayu.",
+      "tip": "Rumusan = punca + kesan + Tanah Melayu."
+    }
+  ]
+}

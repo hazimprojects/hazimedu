@@ -1,0 +1,216 @@
+{
+  "id": "4-1",
+  "title": "British Military Administration (BMA)",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Pada bilakah British Military Administration (BMA) mula ditubuhkan di Tanah Melayu?",
+      "options": [
+        "12 September 1945",
+        "1 Disember 1945",
+        "22 Januari 1946",
+        "1 April 1946"
+      ],
+      "answer": "12 September 1945",
+      "explanation": "BMA bermula pada 12 September 1945 selepas Jepun menyerah kalah.",
+      "tip": "BMA = 12 Sept 1945."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah Pemerintah Tertinggi Tentera Bersekutu di Asia Tenggara yang mengetuai BMA?",
+      "options": [
+        "Lord Mountbatten",
+        "Brigedier Jeneral H.C. Willan",
+        "Sir Harold MacMichael",
+        "George Henry Hall"
+      ],
+      "answer": "Lord Mountbatten",
+      "explanation": "Lord Mountbatten ialah Pemerintah Tertinggi Tentera Bersekutu Asia Tenggara (1943–1946) yang mengetuai BMA.",
+      "tip": "Mountbatten = ketua tertinggi."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Pertubuhan manakah yang dibubarkan oleh BMA pada 1 Disember 1945?",
+      "options": [
+        "MPAJA",
+        "UMNO",
+        "SABERKAS",
+        "Rukun 13"
+      ],
+      "answer": "MPAJA",
+      "explanation": "BMA membubarkan MPAJA pada 1 Disember 1945 sebagai usaha memulihkan keamanan.",
+      "tip": "1 Dis 1945 = bubar MPAJA."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah nama penyakit yang banyak menyerang rakyat akibat kekurangan zat makanan pada era BMA?",
+      "options": [
+        "Beri-beri",
+        "Taun",
+        "Malaria",
+        "Kolera"
+      ],
+      "answer": "Beri-beri",
+      "explanation": "Beri-beri ialah penyakit akibat kekurangan zat makanan yang banyak menyerang rakyat ketika itu.",
+      "tip": "Kurang zat = beri-beri."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah British menubuhkan BMA sejurus selepas Jepun menyerah kalah?",
+      "options": [
+        "Untuk mengembalikan kestabilan dan keamanan serta memulihkan kepercayaan rakyat terhadap British",
+        "Untuk terus melantik Raja-raja Melayu sebagai pentadbir tunggal",
+        "Untuk menyerahkan Tanah Melayu terus kepada Jepun semula",
+        "Untuk membubarkan semua sistem pentadbiran tanpa penggantian"
+      ],
+      "answer": "Untuk mengembalikan kestabilan dan keamanan serta memulihkan kepercayaan rakyat terhadap British",
+      "explanation": "Tujuan utama BMA ialah mengembalikan kestabilan dan keamanan serta memulihkan kepercayaan rakyat.",
+      "tip": "BMA = kestabilan + kepercayaan."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah kegiatan pasar gelap di Kuala Lumpur terus tidak terkawal walaupun BMA sudah ditubuhkan?",
+      "options": [
+        "Kerana masalah seperti menyorok barang, rasuah dan peras ugut sudah berakar umbi dan gagal dibanteras BMA",
+        "Kerana BMA sengaja membenarkan pasar gelap demi keuntungan tentera British",
+        "Kerana rakyat enggan membeli barang keperluan asas langsung",
+        "Kerana Jepun masih mengawal semua bekalan makanan di bandar"
+      ],
+      "answer": "Kerana masalah seperti menyorok barang, rasuah dan peras ugut sudah berakar umbi dan gagal dibanteras BMA",
+      "explanation": "Masalah pasar gelap berakar umbi dan gagal dibanteras oleh BMA.",
+      "tip": "Berakar umbi = gagal dibanteras."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah usaha memulihkan sosioekonomi Tanah Melayu berjalan sangat perlahan di bawah BMA?",
+      "options": [
+        "Kerana BMA sendiri menghadapi kekurangan jentera, alat ganti, mesin dan teknologi",
+        "Kerana rakyat menolak sepenuhnya sebarang bantuan daripada BMA",
+        "Kerana Raja-raja Melayu menyekat semua usaha pemulihan BMA",
+        "Kerana Jepun masih menguasai semua kilang dan lombong utama"
+      ],
+      "answer": "Kerana BMA sendiri menghadapi kekurangan jentera, alat ganti, mesin dan teknologi",
+      "explanation": "Kekurangan jentera, alat ganti, mesin dan teknologi menyukarkan usaha pemulihan sosioekonomi.",
+      "tip": "Kurang jentera = pulih perlahan."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Seorang peniaga menyorok stok beras dan menjualnya secara haram pada harga tinggi semasa pentadbiran BMA. Apakah kegiatan ini digolongkan?",
+      "options": [
+        "Pasar gelap",
+        "Perdagangan bebas rasmi",
+        "Sumbangan amal",
+        "Cukai kerajaan"
+      ],
+      "answer": "Pasar gelap",
+      "explanation": "Menyorok barang dan menjual secara haram ialah ciri kegiatan pasar gelap yang berleluasa ketika itu.",
+      "tip": "Sorok + jual haram = pasar gelap."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sebuah kawasan masih diganggu kumpulan bersenjata bekas ahli MPAJA walaupun BMA telah mengarahkan pemulangan senjata. Apakah ini menggambarkan kegagalan BMA?",
+      "options": [
+        "Gagal mengumpulkan semula semua senjata yang diberikan kepada MPAJA",
+        "Berjaya sepenuhnya melucutkan senjata seluruh negara",
+        "Berjaya membanteras semua kegiatan jenayah tanpa kecuali",
+        "Berjaya memulihkan ekonomi dengan pantas"
+      ],
+      "answer": "Gagal mengumpulkan semula semua senjata yang diberikan kepada MPAJA",
+      "explanation": "BMA gagal mengumpulkan semula semua senjata yang pernah diberikan kepada MPAJA.",
+      "tip": "Senjata tak balik = gagal BMA."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sebuah keluarga masih kesukaran mendapatkan ubat-ubatan dan makanan lama selepas Jepun tewas. Keadaan ini paling berkait dengan aspek manakah dalam subtopik BMA?",
+      "options": [
+        "Kegagalan BMA memulihkan kepercayaan rakyat melalui keperluan harian",
+        "Kejayaan BMA membubarkan MPAJA",
+        "Kejayaan BMA mengawal pasar gelap",
+        "Perlantikan Gabenor British yang baharu"
+      ],
+      "answer": "Kegagalan BMA memulihkan kepercayaan rakyat melalui keperluan harian",
+      "explanation": "Masalah bekalan makanan dan ubat berkait dengan kegagalan BMA memulihkan kepercayaan rakyat.",
+      "tip": "Makanan + ubat = kepercayaan rakyat."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah persamaan antara masalah bekalan makanan semasa pendudukan Jepun dengan masalah semasa era BMA?",
+      "options": [
+        "Kedua-duanya menunjukkan rakyat terus menderita akibat kekurangan keperluan asas walaupun pemerintahan bertukar",
+        "Kedua-duanya menunjukkan bekalan makanan sentiasa mencukupi tanpa masalah",
+        "Kedua-duanya hanya melibatkan masalah di bandar besar sahaja",
+        "Kedua-duanya menunjukkan BMA berjaya menyelesaikan masalah sepenuhnya"
+      ],
+      "answer": "Kedua-duanya menunjukkan rakyat terus menderita akibat kekurangan keperluan asas walaupun pemerintahan bertukar",
+      "explanation": "Penderitaan rakyat akibat kekurangan keperluan asas berterusan walaupun pemerintahan bertukar daripada Jepun kepada BMA.",
+      "tip": "Pemerintahan tukar, penderitaan sama."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perbezaan utama antara dua tugas utama BMA, iaitu 'mengembalikan kestabilan dan keamanan' berbanding 'memulihkan kepercayaan rakyat'?",
+      "options": [
+        "Tugas pertama tertumpu kepada keselamatan dan ketenteraman manakala tugas kedua tertumpu kepada keyakinan rakyat terhadap British",
+        "Kedua-duanya sama sekali tidak berkaitan antara satu sama lain",
+        "Tugas pertama hanya melibatkan ekonomi manakala tugas kedua melibatkan ketenteraan",
+        "Kedua-dua tugas ini hanya wujud dalam teori tanpa tindakan sebenar"
+      ],
+      "answer": "Tugas pertama tertumpu kepada keselamatan dan ketenteraman manakala tugas kedua tertumpu kepada keyakinan rakyat terhadap British",
+      "explanation": "Kestabilan/keamanan menekankan keselamatan; kepercayaan rakyat menekankan keyakinan rakyat.",
+      "tip": "Keselamatan vs keyakinan."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah PALING kukuh untuk menjelaskan kenapa rakyat berasa hampa terhadap BMA?",
+      "options": [
+        "BMA gagal mengatasi jenayah, inflasi, pasar gelap dan bekalan makanan walaupun rakyat amat mengharapkan pemulihan segera",
+        "BMA terlalu berjaya sehingga tiada sebarang masalah tinggal di Tanah Melayu",
+        "BMA hanya tertumpu kepada hiburan rakyat semata-mata",
+        "BMA tidak pernah cuba menangani sebarang masalah sejak awal lagi"
+      ],
+      "answer": "BMA gagal mengatasi jenayah, inflasi, pasar gelap dan bekalan makanan walaupun rakyat amat mengharapkan pemulihan segera",
+      "explanation": "Kegagalan menyeluruh BMA menangani pelbagai masalah harian menjadi punca kekecewaan rakyat.",
+      "tip": "Gagal menyeluruh = hampa rakyat."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah PALING tepat merumuskan subtopik 4.1?",
+      "options": [
+        "BMA cuba memulihkan keamanan, kepercayaan dan sosioekonomi Tanah Melayu tetapi gagal memenuhi harapan rakyat sepenuhnya",
+        "BMA berjaya sepenuhnya memulihkan Tanah Melayu tanpa sebarang kelemahan",
+        "BMA tidak mempunyai sebarang matlamat semasa mentadbir Tanah Melayu",
+        "BMA hanya wujud selama sehari sebelum digantikan Malayan Union"
+      ],
+      "answer": "BMA cuba memulihkan keamanan, kepercayaan dan sosioekonomi Tanah Melayu tetapi gagal memenuhi harapan rakyat sepenuhnya",
+      "explanation": "Rumusan ini menggabungkan usaha BMA dan kegagalannya memenuhi harapan rakyat.",
+      "tip": "Cuba pulih, tapi gagal penuh."
+    }
+  ]
+}

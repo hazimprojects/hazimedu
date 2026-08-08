@@ -1,0 +1,216 @@
+{
+  "id": "4-3",
+  "title": "Reaksi Penduduk Tempatan terhadap Malayan Union",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Pada tarikh berapakah Malayan Union diisytiharkan yang mencetuskan penentangan hebat?",
+      "options": [
+        "1 April 1946",
+        "22 Januari 1946",
+        "20 Oktober 1945",
+        "11 Mei 1946"
+      ],
+      "answer": "1 April 1946",
+      "explanation": "Pengisytiharan Malayan Union pada 1 April 1946 mencetuskan penentangan hebat.",
+      "tip": "1 April 1946 = 'Hari Kematian'."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Di manakah Kongres Melayu Pertama diadakan pada 1–4 Mac 1946?",
+      "options": [
+        "Bangunan Kelab Sultan Sulaiman, Kampung Baru, Kuala Lumpur",
+        "Istana Iskandariah, Kuala Kangsar",
+        "Istana Johor",
+        "Padang Bandar Diraja Kuala Kangsar"
+      ],
+      "answer": "Bangunan Kelab Sultan Sulaiman, Kampung Baru, Kuala Lumpur",
+      "explanation": "Kongres Melayu Pertama diadakan di Bangunan Kelab Sultan Sulaiman, Kampung Baru, Kuala Lumpur.",
+      "tip": "Kongres 1 = Kelab Sultan Sulaiman."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Pertubuhan apakah yang ditubuhkan hasil Kongres Melayu di Johor Bahru pada 11 Mei 1946?",
+      "options": [
+        "United Malays National Organisation (UMNO)",
+        "Persatuan Melayu Selangor",
+        "SABERKAS",
+        "Sarawak Dayak Association"
+      ],
+      "answer": "United Malays National Organisation (UMNO)",
+      "explanation": "UMNO ditubuhkan secara rasmi melalui Kongres Melayu di Johor Bahru pada 11 Mei 1946.",
+      "tip": "11 Mei 1946 = UMNO rasmi."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Berapa orangkah yang berhimpun di Alor Setar, Kedah semasa tunjuk perasaan besar-besaran menentang Malayan Union?",
+      "options": [
+        "50,000 orang",
+        "10,000 orang",
+        "20,000 orang",
+        "500 orang"
+      ],
+      "answer": "50,000 orang",
+      "explanation": "Seramai 50,000 orang menyertai rapat umum di Alor Setar, Kedah.",
+      "tip": "Alor Setar = 50,000 orang."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah Raja-raja Melayu menganggap cara MacMichael mendapatkan tandatangan mereka sebagai tidak sah?",
+      "options": [
+        "Kerana menurut sistem perundangan British sendiri, persetujuan yang diperoleh melalui desakan dan tekanan dianggap tidak sah",
+        "Kerana MacMichael tidak pernah menemui Raja-raja Melayu secara langsung",
+        "Kerana tandatangan itu dibuat oleh Lord Mountbatten, bukan MacMichael",
+        "Kerana Raja-raja Melayu tidak pernah menandatangani apa-apa dokumen"
+      ],
+      "answer": "Kerana menurut sistem perundangan British sendiri, persetujuan yang diperoleh melalui desakan dan tekanan dianggap tidak sah",
+      "explanation": "Menurut sistem perundangan British, cara MacMichael mendapatkan persetujuan dianggap tidak sah.",
+      "tip": "Tekanan = tidak sah ikut undang."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah akhbar Melayu seperti Utusan Melayu dan Majlis memainkan peranan penting dalam gerakan menentang Malayan Union?",
+      "options": [
+        "Kerana akhbar mengecam Malayan Union, menyeru orang Melayu berhimpun dan melaporkan perkembangan bantahan di seluruh negara",
+        "Kerana akhbar menyokong sepenuhnya rancangan Malayan Union British",
+        "Kerana akhbar hanya melaporkan berita sukan dan hiburan semata-mata",
+        "Kerana akhbar dimiliki sepenuhnya oleh kerajaan British"
+      ],
+      "answer": "Kerana akhbar mengecam Malayan Union, menyeru orang Melayu berhimpun dan melaporkan perkembangan bantahan di seluruh negara",
+      "explanation": "Akhbar Melayu mengecam Malayan Union, menyeru perhimpunan dan melaporkan perkembangan bantahan.",
+      "tip": "Akhbar = kecam + seru + lapor."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah pemulauan upacara pelantikan Gabenor Malayan Union oleh Raja-raja Melayu dianggap tindakan penting?",
+      "options": [
+        "Kerana ia membuktikan ketegasan Raja-raja Melayu menolak Malayan Union secara terbuka",
+        "Kerana ia menunjukkan Raja-raja Melayu menyokong sepenuhnya pelantikan Sir Edward Gent",
+        "Kerana ia tidak memberi sebarang kesan kepada perjuangan menentang Malayan Union",
+        "Kerana ia dilakukan atas arahan terus daripada British"
+      ],
+      "answer": "Kerana ia membuktikan ketegasan Raja-raja Melayu menolak Malayan Union secara terbuka",
+      "explanation": "Pemulauan upacara pelantikan Gabenor membuktikan ketegasan Raja-raja Melayu menolak Malayan Union.",
+      "tip": "Boikot = tegas tolak."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Seorang pemimpin wanita di Batu Pahat menyatakan tegas bahawa kaum wanita akan turut berjuang mendapatkan semula hak mereka. Siapakah tokoh yang dimaksudkan?",
+      "options": [
+        "Cikgu Zaharah Abdullah",
+        "Raja Perempuan Kelsom",
+        "Halimahton Abd Majid",
+        "Saleha Mohd Ali"
+      ],
+      "answer": "Cikgu Zaharah Abdullah",
+      "explanation": "Cikgu Zaharah Abdullah di Batu Pahat menyatakan bahawa kaum wanita akan turut berjuang mendapatkan semula hak mereka.",
+      "tip": "Batu Pahat = Cikgu Zaharah."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Orang ramai membawa sepanduk bertulis 'Kami Berkehendak Naungan, Bukan Penaklukan' semasa rapat umum di sebuah bandar. Di manakah rapat umum ini paling mungkin berlaku?",
+      "options": [
+        "Ipoh, Perak",
+        "Pulau Pinang",
+        "Kampung Baru, Kuala Lumpur",
+        "Klang, Selangor"
+      ],
+      "answer": "Ipoh, Perak",
+      "explanation": "Sepanduk 'Kami Berkehendak Naungan, Bukan Penaklukan' dibawa semasa perhimpunan di Ipoh, Perak.",
+      "tip": "Ipoh = 'Bukan Penaklukan'."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Seorang bekas pegawai British yang pernah berkhidmat di Tanah Melayu turut mengkritik Malayan Union kerana dianggap tidak sesuai. Apakah kumpulan yang digambarkan ini?",
+      "options": [
+        "Bekas pegawai British seperti Frank Swettenham dan Richard Winstedt",
+        "Ahli Parlimen British seperti L.D. Gammans",
+        "Pemimpin Kongres Melayu seperti Dato' Onn Jaafar",
+        "Ahli Persatuan Pelajar Melayu Britain"
+      ],
+      "answer": "Bekas pegawai British seperti Frank Swettenham dan Richard Winstedt",
+      "explanation": "Beberapa bekas pegawai British seperti Frank Swettenham dan Richard Winstedt turut menentang Malayan Union.",
+      "tip": "Bekas pegawai British pun kritik."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah persamaan antara tindakan Raja-raja Melayu membawa kes ke Mahkamah Tinggi England dengan tindakan menghantar surat bantahan ke London?",
+      "options": [
+        "Kedua-duanya merupakan usaha menggunakan saluran rasmi/perundangan British untuk membatalkan Malayan Union",
+        "Kedua-duanya melibatkan penggunaan kekerasan terhadap pegawai British",
+        "Kedua-duanya dilakukan tanpa pengetahuan Raja-raja Melayu langsung",
+        "Kedua-duanya hanya bertujuan menyokong Malayan Union sepenuhnya"
+      ],
+      "answer": "Kedua-duanya merupakan usaha menggunakan saluran rasmi/perundangan British untuk membatalkan Malayan Union",
+      "explanation": "Kedua-dua tindakan menggunakan saluran rasmi British (mahkamah dan surat rasmi) untuk membantah Malayan Union.",
+      "tip": "Mahkamah & surat = saluran rasmi."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perbezaan antara peranan Raja-raja Melayu dengan peranan rakyat/persatuan Melayu dalam menentang Malayan Union?",
+      "options": [
+        "Raja-raja Melayu bertindak melalui saluran rasmi seperti mahkamah dan surat, manakala rakyat bertindak melalui akhbar, demonstrasi dan penubuhan UMNO",
+        "Raja-raja Melayu tidak menentang Malayan Union langsung, hanya rakyat sahaja yang menentang",
+        "Rakyat hanya menyokong Malayan Union manakala Raja-raja Melayu yang menentangnya",
+        "Kedua-dua pihak menggunakan kaedah yang sama sepenuhnya tanpa sebarang perbezaan"
+      ],
+      "answer": "Raja-raja Melayu bertindak melalui saluran rasmi seperti mahkamah dan surat, manakala rakyat bertindak melalui akhbar, demonstrasi dan penubuhan UMNO",
+      "explanation": "Raja-raja Melayu menggunakan saluran rasmi, manakala rakyat menggunakan akhbar, demonstrasi dan penubuhan UMNO.",
+      "tip": "Raja = rasmi; rakyat = akhbar/demo."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah PALING kukuh menunjukkan penentangan Malayan Union melibatkan seluruh lapisan masyarakat?",
+      "options": [
+        "Raja-raja Melayu, akhbar, golongan cendekiawan, wanita dan persatuan Melayu semuanya turut serta dalam gerakan menentang Malayan Union",
+        "Hanya Raja-raja Melayu sahaja yang menentang Malayan Union",
+        "Hanya golongan wanita sahaja yang aktif dalam gerakan penentangan",
+        "Tiada sesiapa yang benar-benar menentang Malayan Union secara terbuka"
+      ],
+      "answer": "Raja-raja Melayu, akhbar, golongan cendekiawan, wanita dan persatuan Melayu semuanya turut serta dalam gerakan menentang Malayan Union",
+      "explanation": "Penentangan melibatkan Raja-raja Melayu, akhbar, cendekiawan, wanita dan persatuan Melayu secara serentak.",
+      "tip": "Semua lapisan turut serta."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah PALING tepat merumuskan subtopik 4.3?",
+      "options": [
+        "Penentangan terhadap Malayan Union menyatukan Raja-raja Melayu dan rakyat, membawa kepada penubuhan UMNO dan menjadi asas nasionalisme selepas perang",
+        "Penentangan terhadap Malayan Union hanya berlaku dalam kalangan segelintir individu tanpa kesan besar",
+        "Malayan Union diterima sepenuhnya oleh orang Melayu tanpa sebarang bantahan",
+        "Penentangan Malayan Union tidak membawa kepada penubuhan mana-mana pertubuhan baharu"
+      ],
+      "answer": "Penentangan terhadap Malayan Union menyatukan Raja-raja Melayu dan rakyat, membawa kepada penubuhan UMNO dan menjadi asas nasionalisme selepas perang",
+      "explanation": "Rumusan menggabungkan perpaduan Raja-raja dan rakyat, penubuhan UMNO, dan asas nasionalisme selepas perang.",
+      "tip": "Perpaduan → UMNO → nasionalisme."
+    }
+  ]
+}

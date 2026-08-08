@@ -1,0 +1,216 @@
+{
+  "id": "3-1",
+  "title": "Nasionalisme di Negara Kita Sebelum Perang Dunia",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Undang-undang apakah yang diperkenalkan oleh British pada tahun 1904 dengan persetujuan raja-raja Melayu?",
+      "options": [
+        "Enakmen Undang-Undang Islam 1904",
+        "Enakmen Tanah Simpanan Melayu 1904",
+        "Enakmen Buruh Ladang 1904",
+        "Enakmen Pendaftaran Pertubuhan 1904"
+      ],
+      "answer": "Enakmen Undang-Undang Islam 1904",
+      "explanation": "British memperkenalkan Enakmen Undang-Undang Islam 1904 yang melarang penerbitan berunsur politik dan agama tanpa izin sultan.",
+      "tip": "1904 = Enakmen Undang-Undang Islam."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah dua badan penyiasat yang ditubuhkan British untuk memantau kegiatan politik dan gerakan Islam di Tanah Melayu?",
+      "options": [
+        "Criminal Intelligence Department (CID) dan Political Intelligence Bureau (PIB)",
+        "Special Branch dan Federal Reserve Unit",
+        "Jabatan Sekuriti Tanah Melayu dan Biro Pertahanan Awam",
+        "Jabatan Penapisan Akhbar dan Unit Risikan Ketenteraan"
+      ],
+      "answer": "Criminal Intelligence Department (CID) dan Political Intelligence Bureau (PIB)",
+      "explanation": "British menubuhkan CID dan PIB untuk memantau kegiatan politik dan menyekat pengaruh gerakan Islam.",
+      "tip": "Dua badan = CID + PIB."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Di manakah penentangan Tok Janggut berlaku?",
+      "options": [
+        "Pasir Puteh, Kelantan",
+        "Naning, Melaka",
+        "Perak Selatan",
+        "Trengganu Barat"
+      ],
+      "answer": "Pasir Puteh, Kelantan",
+      "explanation": "Penentangan Tok Janggut berlaku di Pasir Puteh, Kelantan akibat gabungan semangat agama, penjajahan dan cukai.",
+      "tip": "Tok Janggut = Pasir Puteh, Kelantan."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah nama karya simbolik terkenal (1920) yang menggunakan haiwan sebagai lambang untuk menyampaikan mesej nasionalisme secara halus?",
+      "options": [
+        "Cerita Tekukur",
+        "Hikayat Merong Mahawangsa",
+        "Sejarah Melayu",
+        "Syair Perang Mengkasar"
+      ],
+      "answer": "Cerita Tekukur",
+      "explanation": "Cerita Tekukur (1920) menggunakan burung sebagai lambang tanah air yang terkurung dalam “sangkar emas”.",
+      "tip": "1920 = Cerita Tekukur."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah British menubuhkan CID dan PIB semasa era ini?",
+      "options": [
+        "British bimbang akan pengaruh Pan-Islamisme dan kebangkitan Empayar Uthmaniyah",
+        "British ingin menggalakkan kebebasan akhbar sepenuhnya",
+        "British ingin membantu penerbitan akhbar Melayu berkembang",
+        "British mahu mengiktiraf kemerdekaan awal Tanah Melayu"
+      ],
+      "answer": "British bimbang akan pengaruh Pan-Islamisme dan kebangkitan Empayar Uthmaniyah",
+      "explanation": "British bimbang gerakan Islam antarabangsa akan mencetuskan penentangan lebih besar, lalu menubuhkan CID dan PIB untuk mengawal.",
+      "tip": "Bimbang Pan-Islamisme = tubuh CID+PIB."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah masyarakat Melayu beralih kepada penulisan dan penerbitan selepas kegagalan penentangan Tok Janggut?",
+      "options": [
+        "Penentangan terbuka ditekan keras oleh British, jadi perjuangan diteruskan secara berlapik",
+        "Masyarakat Melayu kehilangan minat terhadap politik selepas itu",
+        "British menggalakkan penulisan sebagai ganti penentangan bersenjata",
+        "Tiada lagi sebarang isu politik untuk diperjuangkan selepas 1915"
+      ],
+      "answer": "Penentangan terbuka ditekan keras oleh British, jadi perjuangan diteruskan secara berlapik",
+      "explanation": "Kegagalan penentangan terbuka menyebabkan masyarakat Melayu menyusun strategi baharu melalui penulisan dan penerbitan.",
+      "tip": "Ditekan terbuka → alih ke tulisan."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah burung tekukur digunakan sebagai lambang dalam Cerita Tekukur?",
+      "options": [
+        "Melambangkan nasib tanah air yang asalnya bebas tetapi akhirnya terkurung dalam “sangkar emas”",
+        "Melambangkan kekuatan tentera Melayu menentang British",
+        "Melambangkan kejayaan ekonomi Tanah Melayu era penjajahan",
+        "Melambangkan perpaduan antara raja-raja Melayu dan British"
+      ],
+      "answer": "Melambangkan nasib tanah air yang asalnya bebas tetapi akhirnya terkurung dalam “sangkar emas”",
+      "explanation": "Burung tekukur digunakan secara simbolik untuk menggambarkan tanah air yang kehilangan kebebasannya di bawah penjajahan.",
+      "tip": "Tekukur = tanah air terkurung."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Seorang penulis moden menyembunyikan kritikan politik dalam bentuk cerita fabel haiwan untuk mengelak tapisan kerajaan. Strategi ini paling menyerupai kaedah yang digunakan dalam:",
+      "options": [
+        "Cerita Tekukur",
+        "Fatwa jihad Empayar Uthmaniyah",
+        "Enakmen Undang-Undang Islam 1904",
+        "Penubuhan CID dan PIB"
+      ],
+      "answer": "Cerita Tekukur",
+      "explanation": "Cerita Tekukur menyampaikan mesej politik secara simbolik dan halus melalui watak haiwan, sama seperti fabel moden yang dimaksudkan.",
+      "tip": "Kritikan berselindung = Cerita Tekukur."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sebuah kerajaan penjajah memperkenalkan undang-undang yang melarang penerbitan tanpa izin bagi menyekat penyebaran idea politik rakyat tempatan. Tindakan ini paling menyerupai:",
+      "options": [
+        "Publishing and Book Enactment 1915 dan The Seditious Publication (Prohibition) Enactment 1919",
+        "Fatwa jihad Empayar Uthmaniyah 1914",
+        "Penentangan Tok Janggut di Kelantan",
+        "Penerbitan akhbar Utusan Melayu"
+      ],
+      "answer": "Publishing and Book Enactment 1915 dan The Seditious Publication (Prohibition) Enactment 1919",
+      "explanation": "Kedua-dua enakmen ini menyekat kebebasan menulis dan menerbitkan tentang perjuangan nasionalisme secara langsung.",
+      "tip": "Sekat penerbitan = Enakmen 1915 & 1919."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Seorang pemimpin tempatan mencetuskan pemberontakan bersenjata gabungan isu agama, penolakan cukai dan kemarahan terhadap sikap angkuh penjajah. Situasi ini paling sesuai menggambarkan:",
+      "options": [
+        "Penentangan Tok Janggut",
+        "Penerbitan Cerita Tekukur",
+        "Penubuhan Political Intelligence Bureau",
+        "Fatwa jihad Empayar Uthmaniyah"
+      ],
+      "answer": "Penentangan Tok Janggut",
+      "explanation": "Penentangan Tok Janggut lahir daripada gabungan semangat agama, penjajahan Barat, penolakan cukai dan bantahan terhadap sikap angkuh British.",
+      "tip": "Agama+cukai+angkuh = Tok Janggut."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perbezaan utama antara fasa “Kesedaran Awal Nasionalisme” dengan fasa “Pernyataan Nasionalisme Secara Berselindung”?",
+      "options": [
+        "Fasa awal bersifat terbuka dan konfrontasi, manakala fasa kemudian bersifat tersirat melalui penulisan kreatif",
+        "Fasa awal hanya melibatkan orang bukan Melayu, manakala fasa kemudian hanya orang Melayu",
+        "Fasa awal berlaku selepas Perang Dunia, manakala fasa kemudian berlaku sebelumnya",
+        "Kedua-dua fasa adalah sama tanpa sebarang perbezaan strategi"
+      ],
+      "answer": "Fasa awal bersifat terbuka dan konfrontasi, manakala fasa kemudian bersifat tersirat melalui penulisan kreatif",
+      "explanation": "Fasa pertama melibatkan penentangan terbuka seperti Tok Janggut, manakala fasa ketiga menyampaikan idea secara simbolik melalui akhbar dan karya kreatif.",
+      "tip": "Terbuka vs tersirat."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah persamaan antara Enakmen Undang-Undang Islam 1904 dengan Publishing and Book Enactment 1915?",
+      "options": [
+        "Kedua-duanya menyekat kebebasan orang Melayu menyuarakan idea politik dan agama",
+        "Kedua-duanya menggalakkan penerbitan akhbar Melayu secara bebas",
+        "Kedua-duanya diperkenalkan oleh Empayar Uthmaniyah",
+        "Kedua-duanya hanya melibatkan urusan cukai tanah"
+      ],
+      "answer": "Kedua-duanya menyekat kebebasan orang Melayu menyuarakan idea politik dan agama",
+      "explanation": "Kedua-dua undang-undang British ini bertujuan mengawal dan menyekat penyebaran idea politik serta agama dalam kalangan orang Melayu.",
+      "tip": "Kedua = sekat suara Melayu."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah yang PALING tepat menerangkan sebab nasionalisme awal negara kita berkembang secara berhati-hati dan tidak terang-terangan?",
+      "options": [
+        "Kegagalan penentangan terbuka seperti Tok Janggut dan sekatan undang-undang British memaksa masyarakat Melayu menyampaikan idea secara simbolik demi terus memperjuangkan tanah air",
+        "Masyarakat Melayu tidak berminat langsung terhadap isu politik ketika itu",
+        "British sengaja menggalakkan penulisan kreatif tanpa sebarang sekatan",
+        "Empayar Uthmaniyah melarang orang Melayu menyertai sebarang bentuk perjuangan"
+      ],
+      "answer": "Kegagalan penentangan terbuka seperti Tok Janggut dan sekatan undang-undang British memaksa masyarakat Melayu menyampaikan idea secara simbolik demi terus memperjuangkan tanah air",
+      "explanation": "Gabungan tekanan British dan kegagalan penentangan terbuka mendorong strategi berhati-hati melalui penulisan dan penerbitan.",
+      "tip": "Tekanan British = strategi tersirat."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah yang PALING tepat merumuskan subtopik 3.1?",
+      "options": [
+        "Nasionalisme awal negara kita berkembang berperingkat daripada penentangan terbuka kepada perjuangan tersirat melalui penulisan dan penerbitan, mencerminkan kebijaksanaan dan keberanian masyarakat Melayu",
+        "Nasionalisme awal negara kita hanya wujud selepas kedatangan Jepun pada 1941",
+        "Nasionalisme awal negara kita gagal berkembang kerana tekanan British yang berterusan",
+        "Nasionalisme awal negara kita hanya dipengaruhi oleh ekonomi tanpa unsur agama atau penulisan"
+      ],
+      "answer": "Nasionalisme awal negara kita berkembang berperingkat daripada penentangan terbuka kepada perjuangan tersirat melalui penulisan dan penerbitan, mencerminkan kebijaksanaan dan keberanian masyarakat Melayu",
+      "explanation": "Rumusan ini merangkumi tiga fasa perkembangan nasionalisme awal serta semangat kebijaksanaan masyarakat Melayu.",
+      "tip": "Rumusan = 3 fasa + kebijaksanaan."
+    }
+  ]
+}

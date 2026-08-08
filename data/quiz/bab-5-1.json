@@ -1,0 +1,216 @@
+{
+  "id": "5-1",
+  "title": "Latar Belakang Penubuhan Persekutuan Tanah Melayu 1948",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Bilakah Jawatankuasa Kerja ditubuhkan?",
+      "options": [
+        "25 Julai 1946",
+        "20 September 1947",
+        "akhir Mac 1947",
+        "Julai 1947"
+      ],
+      "answer": "25 Julai 1946",
+      "explanation": "Jawatankuasa Kerja ditubuhkan pada 25 Julai 1946 untuk membincangkan asas Perjanjian Persekutuan Tanah Melayu 1948.",
+      "tip": "25 Julai 1946 = tarikh Jawatankuasa Kerja."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah pengerusi All Malaya Council of Joint Action (AMCJA)?",
+      "options": [
+        "Tan Cheng Lock",
+        "John Eber",
+        "John Thivy",
+        "Chan Loo"
+      ],
+      "answer": "Tan Cheng Lock",
+      "explanation": "AMCJA ditubuhkan oleh golongan bukan Melayu dengan Tan Cheng Lock sebagai pengerusinya.",
+      "tip": "AMCJA = Tan Cheng Lock."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah nama perlembagaan alternatif yang dicadangkan oleh gabungan PUTERA-AMCJA?",
+      "options": [
+        "Perlembagaan Rakyat",
+        "Perjanjian Persekutuan Tanah Melayu",
+        "Malayan Union",
+        "Perjanjian Pangkor"
+      ],
+      "answer": "Perlembagaan Rakyat",
+      "explanation": "PUTERA-AMCJA mengemukakan Perlembagaan Rakyat sebagai cadangan alternatif kepada rangka Perjanjian Persekutuan 1948.",
+      "tip": "PUTERA-AMCJA = Perlembagaan Rakyat."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah tarikh yang dipilih sebagai Hari Hartal Se-Malaya?",
+      "options": [
+        "20 Oktober 1947",
+        "20 September 1947",
+        "25 Julai 1946",
+        "23 September 1973"
+      ],
+      "answer": "20 Oktober 1947",
+      "explanation": "20 Oktober 1947 dipilih sebagai Hari Hartal Se-Malaya, susulan hartal yang dianjurkan pada 20 September 1947.",
+      "tip": "20 Oktober = Hari Hartal Se-Malaya."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah golongan nasionalis Melayu radikal dan bukan Melayu tidak menerima Jawatankuasa Kerja?",
+      "options": [
+        "Kerana Jawatankuasa Kerja tidak melibatkan semua pihak, dianggap tidak demokratik dan dilihat mengukuhkan kuasa British",
+        "Kerana Jawatankuasa Kerja menolak kedudukan Raja-raja Melayu dalam pentadbiran negeri",
+        "Kerana Jawatankuasa Kerja enggan berunding dengan mana-mana pihak tentang Malayan Union",
+        "Kerana Jawatankuasa Kerja hanya ditubuhkan untuk memperkukuh kedudukan ekonomi peniaga Cina"
+      ],
+      "answer": "Kerana Jawatankuasa Kerja tidak melibatkan semua pihak, dianggap tidak demokratik dan dilihat mengukuhkan kuasa British",
+      "explanation": "Golongan radikal dan bukan Melayu membantah kerana Jawatankuasa Kerja tidak mewakili semua kaum, dianggap tidak demokratik dan mengukuhkan British.",
+      "tip": "Tolak JK = tak wakil semua + tak demokratik."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah golongan bukan Melayu menubuhkan All Malaya Council of Joint Action (AMCJA)?",
+      "options": [
+        "Kerana mereka berpendapat British terlalu tunduk kepada tuntutan UMNO dan menganggap penubuhan Jawatankuasa Kerja tidak demokratik",
+        "Kerana mereka mahu menggantikan kedudukan Raja-raja Melayu sepenuhnya dalam pentadbiran",
+        "Kerana mereka mahu menyokong sepenuhnya cadangan asal Jawatankuasa Kerja tanpa sebarang perubahan",
+        "Kerana mereka mahu mengekalkan Malayan Union 1946 tanpa sebarang perubahan struktur"
+      ],
+      "answer": "Kerana mereka berpendapat British terlalu tunduk kepada tuntutan UMNO dan menganggap penubuhan Jawatankuasa Kerja tidak demokratik",
+      "explanation": "AMCJA ditubuhkan kerana golongan bukan Melayu berpendapat British terlalu tunduk kepada UMNO dan Jawatankuasa Kerja tidak demokratik.",
+      "tip": "AMCJA = bantah JK tak demokratik."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah golongan nasionalis Melayu radikal digelar \"radikal\" oleh British?",
+      "options": [
+        "Kerana keberanian mereka menentang British secara terbuka dan membangkitkan perasaan anti-British melalui penulisan",
+        "Kerana mereka menggunakan kekerasan bersenjata untuk menentang pentadbiran British",
+        "Kerana mereka menyokong sepenuhnya dasar pentadbiran Malayan Union yang diperkenalkan British",
+        "Kerana mereka menolak sebarang bentuk kerjasama dengan Raja-raja Melayu dalam perjuangan"
+      ],
+      "answer": "Kerana keberanian mereka menentang British secara terbuka dan membangkitkan perasaan anti-British melalui penulisan",
+      "explanation": "Istilah radikal digunakan British kerana keberanian golongan ini menentang secara terbuka dan penulisan anti-British mereka.",
+      "tip": "Radikal = tentang terbuka + tulisan anti-British."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sebuah gabungan pertubuhan menutup kedai, kilang dan sekolah secara serentak di bandar-bandar utama sebagai tanda bantahan tanpa keganasan terhadap sebuah rangka perjanjian pentadbiran. Apakah tindakan ini dikenali?",
+      "options": [
+        "Hartal",
+        "Perlembagaan Rakyat",
+        "Jawatankuasa Kerja",
+        "Perjanjian Persekutuan"
+      ],
+      "answer": "Hartal",
+      "explanation": "Hartal ialah tindakan menutup kedai dan memberhentikan kegiatan ekonomi sebagai protes tanpa keganasan.",
+      "tip": "Tutup kedai/kilang/sekolah = hartal."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Seorang penulis menerbitkan sebuah akhbar untuk membuka minda rakyat ke arah idea bebas dan merdeka, sekali gus menjadi wadah perjuangan golongan nasionalis Melayu radikal. Apakah nama akhbar tersebut dan siapakah penerbitnya?",
+      "options": [
+        "Suara Rakyat, diterbitkan oleh Ahmad Boestamam",
+        "Perlembagaan Rakyat, diterbitkan oleh Tan Cheng Lock",
+        "Testament Politik API, diterbitkan oleh Dr. Burhanuddin al-Helmi",
+        "Warta Malaya, diterbitkan oleh John Eber"
+      ],
+      "answer": "Suara Rakyat, diterbitkan oleh Ahmad Boestamam",
+      "explanation": "Ahmad Boestamam menerbitkan Suara Rakyat sebagai wadah membuka minda rakyat ke arah idea bebas dan merdeka.",
+      "tip": "Suara Rakyat = Ahmad Boestamam."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sebuah jawatankuasa perundingan hanya dianggotai oleh wakil Raja-raja Melayu, wakil UMNO dan pegawai kanan British, tanpa sebarang wakil daripada kaum bukan Melayu. Apakah reaksi yang paling mungkin ditunjukkan oleh PUTERA-AMCJA terhadap susunan keahlian ini?",
+      "options": [
+        "Menolaknya kerana dianggap tidak demokratik dan tidak mewakili semua kaum",
+        "Menyokongnya sepenuhnya kerana dianggap adil kepada semua pihak",
+        "Mengabaikannya kerana dianggap tidak relevan dengan perjuangan kemerdekaan",
+        "Menyertainya secara rasmi tanpa sebarang bantahan"
+      ],
+      "answer": "Menolaknya kerana dianggap tidak demokratik dan tidak mewakili semua kaum",
+      "explanation": "PUTERA-AMCJA menolak Jawatankuasa Kerja atas sebab yang sama iaitu tidak mewakili semua kaum dan tidak demokratik.",
+      "tip": "Susunan sempit = ditolak PUTERA-AMCJA."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah persamaan utama antara cadangan Jawatankuasa Kerja dengan cadangan PUTERA-AMCJA dalam Perlembagaan Rakyat berkenaan Raja-raja Melayu?",
+      "options": [
+        "Kedua-dua cadangan mengiktiraf kedudukan Raja-raja Melayu, namun berbeza dari segi sejauh mana kuasa dan tanggungjawab mereka",
+        "Kedua-dua cadangan menolak sepenuhnya kedudukan Raja-raja Melayu dalam pentadbiran negara",
+        "Kedua-dua cadangan tidak menyentuh langsung soal kedudukan Raja-raja Melayu",
+        "Kedua-dua cadangan mahu menghapuskan institusi beraja dan menggantikannya dengan republik"
+      ],
+      "answer": "Kedua-dua cadangan mengiktiraf kedudukan Raja-raja Melayu, namun berbeza dari segi sejauh mana kuasa dan tanggungjawab mereka",
+      "explanation": "Jawatankuasa Kerja mahu memulihkan kedaulatan raja manakala Perlembagaan Rakyat mahu raja sebagai Raja Berperlembagaan yang bertanggungjawab kepada rakyat.",
+      "tip": "Sama iktiraf raja, beza sejauh mana kuasa."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perbezaan utama antara perjuangan Jawatankuasa Kerja dengan perjuangan PUTERA-AMCJA?",
+      "options": [
+        "Jawatankuasa Kerja berunding secara tertutup dengan UMNO dan British manakala PUTERA-AMCJA mewakili gabungan lebih luas termasuk kaum bukan Melayu dan menentang secara terbuka",
+        "Jawatankuasa Kerja diketuai sepenuhnya oleh golongan bukan Melayu manakala PUTERA-AMCJA hanya diketuai oleh orang Melayu",
+        "Jawatankuasa Kerja menolak sepenuhnya kedudukan Raja-raja Melayu manakala PUTERA-AMCJA mengekalkannya tanpa perubahan",
+        "Jawatankuasa Kerja ditubuhkan selepas Perlembagaan Rakyat ditolak oleh British"
+      ],
+      "answer": "Jawatankuasa Kerja berunding secara tertutup dengan UMNO dan British manakala PUTERA-AMCJA mewakili gabungan lebih luas termasuk kaum bukan Melayu dan menentang secara terbuka",
+      "explanation": "Jawatankuasa Kerja terhad kepada UMNO, Raja-raja Melayu dan British, berbeza dengan PUTERA-AMCJA yang lebih inklusif dan terbuka.",
+      "tip": "Tertutup (JK) vs terbuka+luas (PUTERA-AMCJA)."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah PALING tepat menjelaskan mengapa Perlembagaan Rakyat gagal diterima oleh British walaupun mendapat sokongan meluas rakyat?",
+      "options": [
+        "British lebih memilih untuk mengekalkan hubungan rapat dengan Raja-raja Melayu dan UMNO melalui Jawatankuasa Kerja yang telah dirunding lebih awal",
+        "British tidak mempunyai sebarang maklumat tentang kewujudan Perlembagaan Rakyat sehingga ke hari ini",
+        "Perlembagaan Rakyat tidak mengandungi sebarang cadangan berkaitan kewarganegaraan atau bahasa kebangsaan",
+        "Golongan Raja-raja Melayu sendiri yang menolak Perlembagaan Rakyat tanpa penglibatan British"
+      ],
+      "answer": "British lebih memilih untuk mengekalkan hubungan rapat dengan Raja-raja Melayu dan UMNO melalui Jawatankuasa Kerja yang telah dirunding lebih awal",
+      "explanation": "British menolak Perlembagaan Rakyat dan menerima Perjanjian Persekutuan yang digubal oleh Jawatankuasa Kerja bersama UMNO dan Raja-raja Melayu.",
+      "tip": "British pilih JK, bukan Perlembagaan Rakyat."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah PALING tepat merumuskan subtopik 5.1?",
+      "options": [
+        "Penolakan Malayan Union membawa kepada penubuhan Jawatankuasa Kerja, namun ketidakpuasan pelbagai golongan rakyat mendorong usaha alternatif seperti Perlembagaan Rakyat sebelum British akhirnya menerima Perjanjian Persekutuan",
+        "Persekutuan Tanah Melayu 1948 ditubuhkan tanpa sebarang bantahan daripada mana-mana golongan rakyat tempatan",
+        "Jawatankuasa Kerja dan PUTERA-AMCJA bekerjasama sepenuhnya dalam merangka Perjanjian Persekutuan Tanah Melayu 1948",
+        "Perlembagaan Rakyat diterima sepenuhnya oleh British sebagai asas Persekutuan Tanah Melayu 1948"
+      ],
+      "answer": "Penolakan Malayan Union membawa kepada penubuhan Jawatankuasa Kerja, namun ketidakpuasan pelbagai golongan rakyat mendorong usaha alternatif seperti Perlembagaan Rakyat sebelum British akhirnya menerima Perjanjian Persekutuan",
+      "explanation": "Rumusan menggabungkan penolakan Malayan Union, penubuhan Jawatankuasa Kerja, bantahan pelbagai golongan dan penolakan Perlembagaan Rakyat oleh British.",
+      "tip": "Malayan Union ditolak → JK → Perlembagaan Rakyat ditolak."
+    }
+  ]
+}

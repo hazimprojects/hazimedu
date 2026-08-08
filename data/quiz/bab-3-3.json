@@ -1,0 +1,216 @@
+{
+  "id": "3-3",
+  "title": "Perang Dunia Kedua",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Bilakah Perang Dunia Kedua di Eropah bermula dan apakah peristiwa pencetusnya?",
+      "options": [
+        "1 September 1939, apabila Jerman menceroboh Poland",
+        "1 September 1941, apabila Jerman menceroboh Rusia",
+        "3 Ogos 1939, apabila Jerman menceroboh Perancis",
+        "8 Disember 1941, apabila Jepun menyerang Pearl Harbor"
+      ],
+      "answer": "1 September 1939, apabila Jerman menceroboh Poland",
+      "explanation": "Perang Dunia Kedua di Eropah bermula apabila Jerman menceroboh Poland pada 1 September 1939.",
+      "tip": "1 Sept 1939 = Jerman ceroboh Poland."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah yang memimpin gerakan Fasisme di Itali dan menguasai kerajaan pada 1922?",
+      "options": [
+        "Benito Mussolini",
+        "Adolf Hitler",
+        "Joseph Stalin",
+        "Winston Churchill"
+      ],
+      "answer": "Benito Mussolini",
+      "explanation": "Benito Mussolini memimpin Parti Fasis dan berjaya menguasai kerajaan Itali pada 1922.",
+      "tip": "Fasisme Itali = Mussolini."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah nama operasi besar-besaran Jerman untuk menawan Rusia?",
+      "options": [
+        "Operasi Barbarossa",
+        "Operasi D-Day",
+        "Operasi Zipper",
+        "Operasi Semut"
+      ],
+      "answer": "Operasi Barbarossa",
+      "explanation": "Jerman melancarkan Operasi Barbarossa bagi menawan Rusia, menyasarkan Leningrad, Moscow dan Stalingrad.",
+      "tip": "Serang Rusia = Barbarossa."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Di manakah tentera Bersekutu melancarkan Operasi D-Day pada Jun 1944?",
+      "options": [
+        "Normandy, Perancis",
+        "Stalingrad, Rusia",
+        "Calais, Perancis",
+        "Roma, Itali"
+      ],
+      "answer": "Normandy, Perancis",
+      "explanation": "Operasi D-Day dilancarkan di Normandy, Perancis pada Jun 1944, walaupun Jerman diperdaya menyangka serangan akan berlaku di Calais.",
+      "tip": "D-Day = Normandy."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah strategi Blitzkrieg Jerman begitu berkesan pada peringkat awal Perang Dunia Kedua?",
+      "options": [
+        "Ia menggabungkan serangan pantas menggunakan kapal terbang, kereta kebal dan tentera bermotosikal untuk melumpuhkan musuh dalam masa singkat",
+        "Ia hanya menggunakan tentera darat tanpa sokongan udara",
+        "Ia bergantung sepenuhnya kepada rundingan diplomatik",
+        "Ia memerlukan masa bertahun-tahun untuk menawan sebuah negara"
+      ],
+      "answer": "Ia menggabungkan serangan pantas menggunakan kapal terbang, kereta kebal dan tentera bermotosikal untuk melumpuhkan musuh dalam masa singkat",
+      "explanation": "Blitzkrieg atau serangan kilat menggabungkan pelbagai unit tentera untuk serangan pantas dan berkesan.",
+      "tip": "Blitzkrieg = pantas + gabungan unit."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah Liga Bangsa-Bangsa gagal mengekang krisis seperti Krisis Manchuria dan Krisis Habsyah?",
+      "options": [
+        "Liga Bangsa-Bangsa gagal bertindak tegas terhadap negara agresif seperti Jepun dan Itali",
+        "Liga Bangsa-Bangsa berjaya menghalang kedua-dua krisis sepenuhnya",
+        "Liga Bangsa-Bangsa tidak wujud pada masa krisis tersebut berlaku",
+        "Liga Bangsa-Bangsa hanya menumpukan kepada isu ekonomi sahaja"
+      ],
+      "answer": "Liga Bangsa-Bangsa gagal bertindak tegas terhadap negara agresif seperti Jepun dan Itali",
+      "explanation": "Kegagalan bertindak tegas menyebabkan dunia terus terdedah kepada konflik sehingga meletusnya Perang Dunia Kedua.",
+      "tip": "Tak tegas = krisis berterusan."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah Operasi D-Day berjaya walaupun Jerman sudah bersedia menghadapi serangan Bersekutu?",
+      "options": [
+        "Tentera Bersekutu memperdayakan Jerman dengan menyebarkan maklumat palsu bahawa serangan akan berlaku di Calais, bukan Normandy",
+        "Jerman sengaja tidak mempertahankan Perancis Barat langsung",
+        "Tentera Bersekutu menyerang tanpa sebarang perancangan",
+        "Jerman telah menyerah kalah sebelum D-Day bermula"
+      ],
+      "answer": "Tentera Bersekutu memperdayakan Jerman dengan menyebarkan maklumat palsu bahawa serangan akan berlaku di Calais, bukan Normandy",
+      "explanation": "Muslihat ini mengelirukan pertahanan Jerman sehingga pendaratan sebenar di Normandy berjaya.",
+      "tip": "Penipuan Calais = D-Day berjaya."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sebuah negara Kuasa Paksi menyerang sebuah negara di Afrika bagi memulihkan imej selepas Perang Dunia Pertama. Peristiwa manakah ini?",
+      "options": [
+        "Krisis Habsyah",
+        "Krisis Manchuria",
+        "Operasi Barbarossa",
+        "Pengeboman Britain"
+      ],
+      "answer": "Krisis Habsyah",
+      "explanation": "Itali menyerang Habsyah (Ethiopia) di Afrika untuk memulihkan imejnya selepas kecewa dengan hasil Perang Dunia Pertama.",
+      "tip": "Itali serang Afrika = Krisis Habsyah."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sebuah operasi ketenteraan besar-besaran gagal akibat kesukaran menghadapi dua musim sejuk, kekurangan bekalan dan akhirnya seorang jeneral mengingkari arahan pemimpin lalu menyerah kalah. Situasi ini menggambarkan:",
+      "options": [
+        "Kegagalan Operasi Barbarossa di Stalingrad",
+        "Kejayaan Operasi D-Day",
+        "Kejayaan strategi Blitzkrieg di Poland",
+        "Kemenangan Itali dalam Krisis Habsyah"
+      ],
+      "answer": "Kegagalan Operasi Barbarossa di Stalingrad",
+      "explanation": "Jeneral Friedrich Von Paulus mengingkari arahan Hitler dan menyerah kalah di Stalingrad selepas dua musim sejuk yang teruk.",
+      "tip": "Musim sejuk + menyerah = Stalingrad."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sebuah negara keluar daripada sebuah pertubuhan antarabangsa dan membina semula angkatan tenteranya secara terbuka sebagai tanda mencabar sekatan selepas Perang Dunia Pertama. Negara manakah ini?",
+      "options": [
+        "Jerman",
+        "Itali",
+        "Britain",
+        "Rusia"
+      ],
+      "answer": "Jerman",
+      "explanation": "Jerman keluar daripada Liga Bangsa-Bangsa semasa Perjanjian Pelucutan Senjata (1932–1934) dan memperbesar tenteranya secara terbuka.",
+      "tip": "Keluar Liga + tentera = Jerman."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perbezaan utama antara Fasisme di Itali dengan Nazisme di Jerman?",
+      "options": [
+        "Fasisme mengutamakan kepentingan negara melebihi individu, manakala Nazisme mengagungkan bangsa Jerman dan menolak sekatan Perjanjian Versailles",
+        "Fasisme hanya berlaku di Jerman, manakala Nazisme hanya berlaku di Itali",
+        "Fasisme dan Nazisme adalah fahaman yang sama sepenuhnya tanpa perbezaan",
+        "Fasisme menyokong Liga Bangsa-Bangsa, manakala Nazisme menyokong Amerika Syarikat"
+      ],
+      "answer": "Fasisme mengutamakan kepentingan negara melebihi individu, manakala Nazisme mengagungkan bangsa Jerman dan menolak sekatan Perjanjian Versailles",
+      "explanation": "Kedua-dua fahaman berbeza tumpuan walaupun sama-sama radikal dan nasionalis melampau.",
+      "tip": "Fasisme = negara; Nazisme = bangsa."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah persamaan antara Krisis Manchuria (1931–1933) dengan Krisis Habsyah (1935–1936)?",
+      "options": [
+        "Kedua-duanya menunjukkan kegagalan Liga Bangsa-Bangsa bertindak tegas terhadap penaklukan sebuah negara Kuasa Paksi ke atas negara lain",
+        "Kedua-duanya berlaku di benua Eropah",
+        "Kedua-duanya melibatkan serangan Jerman ke atas Rusia",
+        "Kedua-duanya berjaya diselesaikan sepenuhnya oleh Liga Bangsa-Bangsa"
+      ],
+      "answer": "Kedua-duanya menunjukkan kegagalan Liga Bangsa-Bangsa bertindak tegas terhadap penaklukan sebuah negara Kuasa Paksi ke atas negara lain",
+      "explanation": "Jepun menakluk Manchuria dan Itali menyerang Habsyah, kedua-duanya tanpa tindakan tegas Liga Bangsa-Bangsa.",
+      "tip": "Manchuria & Habsyah = Liga gagal."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah yang PALING tepat menerangkan sebab Kuasa Bersekutu berjaya mengalahkan Kuasa Paksi di Eropah?",
+      "options": [
+        "Kerjasama erat kuasa besar Bersekutu ditambah kegagalan Jerman menawan Rusia dan kejayaan Operasi D-Day melemahkan Kuasa Paksi secara menyeluruh",
+        "Kuasa Paksi menyerah kalah tanpa sebarang pertempuran",
+        "Liga Bangsa-Bangsa campur tangan secara ketenteraan untuk mengalahkan Jerman",
+        "Kuasa Bersekutu hanya bergantung kepada Britain seorang diri"
+      ],
+      "answer": "Kerjasama erat kuasa besar Bersekutu ditambah kegagalan Jerman menawan Rusia dan kejayaan Operasi D-Day melemahkan Kuasa Paksi secara menyeluruh",
+      "explanation": "Gabungan faktor kerjasama, kegagalan Barbarossa dan kejayaan D-Day membawa kepada kemenangan Bersekutu.",
+      "tip": "Kerjasama + kegagalan Jerman + D-Day."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah yang PALING tepat merumuskan subtopik 3.3?",
+      "options": [
+        "Perang Dunia Kedua di Eropah tercetus akibat ideologi baharu, ketidakpuasan terhadap Perjanjian Versailles dan kegagalan Liga Bangsa-Bangsa, sebelum berakhir dengan kemenangan Kuasa Bersekutu yang membolehkan tumpuan beralih ke Asia Pasifik",
+        "Perang Dunia Kedua hanya berlaku di Asia Pasifik tanpa melibatkan Eropah",
+        "Perang Dunia Kedua tamat sejurus selepas Jerman menceroboh Poland",
+        "Perang Dunia Kedua tidak melibatkan sebarang ideologi politik"
+      ],
+      "answer": "Perang Dunia Kedua di Eropah tercetus akibat ideologi baharu, ketidakpuasan terhadap Perjanjian Versailles dan kegagalan Liga Bangsa-Bangsa, sebelum berakhir dengan kemenangan Kuasa Bersekutu yang membolehkan tumpuan beralih ke Asia Pasifik",
+      "explanation": "Rumusan ini merangkumi punca, jalan perang dan kesan peralihan tumpuan ke Asia Pasifik.",
+      "tip": "Rumusan = punca + menang + Asia Pasifik."
+    }
+  ]
+}
