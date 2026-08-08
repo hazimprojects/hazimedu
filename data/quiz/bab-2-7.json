@@ -55,7 +55,7 @@
       "options": [
         "Menyatukan suara rakyat untuk menuntut hak dan membina jati diri bangsa",
         "Memecahkan suara rakyat melalui pertubuhan yang bersaing",
-        "Menolak politik dan menumpukan ekonomi semata-mana",
+        "Menolak politik dan menumpukan ekonomi semata-mata",
         "Berfungsi sebagai badan sukarela tanpa matlamat politik"
       ],
       "answer": "Menyatukan suara rakyat untuk menuntut hak dan membina jati diri bangsa",
@@ -69,9 +69,9 @@
       "prompt": "Mengapakah intelektual dianggap pelopor dalam saluran pertama?",
       "options": [
         "Mereka memiliki pendidikan dan keupayaan menyusun idea secara sistematik",
-        "Mereka tidak membaca sumber tempatan",
-        "Mereka menolak organisasi dan persatuan",
-        "Mereka tiada pengaruh dalam masyarakat"
+        "Mereka memiliki hubungan rapat dengan pentadbir British ketika itu",
+        "Mereka memiliki kekayaan warisan daripada keluarga bangsawan tempatan",
+        "Mereka memiliki kemahiran ketenteraan daripada latihan tentera penjajah"
       ],
       "answer": "Mereka memiliki pendidikan dan keupayaan menyusun idea secara sistematik",
       "explanation": "Pendidikan membolehkan intelektual memimpin kesedaran.",
@@ -99,9 +99,9 @@
       "prompt": "Mengapakah persatuan penting dalam saluran ketiga?",
       "options": [
         "Ia menyatukan rakyat untuk tindakan kolektif dan menuntut hak",
-        "Ia menghalang perbincangan",
-        "Ia menolak nasionalisme",
-        "Ia hanya untuk elit"
+        "Ia menggalakkan persaingan dagang antara ahli persatuan tempatan",
+        "Ia mengekalkan hubungan baik dengan pentadbir British ketika itu",
+        "Ia menumpukan kegiatan sukan dan rekreasi dalam kalangan ahli"
       ],
       "answer": "Ia menyatukan rakyat untuk tindakan kolektif dan menuntut hak",
       "explanation": "Persatuan memberi platform tindakan bersama.",
@@ -129,9 +129,9 @@
       "prompt": "Sekumpulan graduan Melayu, Inggeris dan agama berdiskusi membentuk jawatankuasa perjuangan. Apakah yang digambarkan?",
       "options": [
         "Peranan intelektual berbilang aliran pendidikan sebagai pelopor",
-        "Ketiadaan pendidikan",
-        "Penolakan organisasi",
-        "Isu ekonomi sahaja"
+        "Peranan pedagang berbilang bangsa dalam menggerakkan ekonomi tempatan",
+        "Peranan pembesar tradisional dalam mengekalkan adat dan istiadat",
+        "Peranan pentadbir British dalam menyusun dasar pendidikan vernakular"
       ],
       "answer": "Peranan intelektual berbilang aliran pendidikan sebagai pelopor",
       "explanation": "Ini selari dengan golongan intelektual berpendidikan pelbagai aliran.",
@@ -144,9 +144,9 @@
       "prompt": "Apakah yang digambarkan apabila beberapa persatuan bersatu menuntut reformasi politik?",
       "options": [
         "Penyatuan suara rakyat melalui pertubuhan",
-        "Ketiadaan tindakan",
-        "Penolakan hak",
-        "Migrasi keluar negara"
+        "Pertikaian dalaman antara ahli pertubuhan",
+        "Perundingan sulit dengan pentadbir British",
+        "Pembubaran pertubuhan akibat tekanan luar"
       ],
       "answer": "Penyatuan suara rakyat melalui pertubuhan",
       "explanation": "Persatuan menyatukan suara untuk menuntut hak.",
@@ -159,9 +159,9 @@
       "prompt": "Apakah persamaan utama antara saluran penulisan dan saluran persatuan?",
       "options": [
         "Keduanya menyebarkan dan memperkukuh idea nasionalisme kepada khalayak atau ahli",
-        "Keduanya mengehadkan idea kepada golongan elit British",
-        "Keduanya menolak penggunaan bahasa Melayu",
-        "Keduanya tidak berkaitan dengan nasionalisme"
+        "Keduanya lebih menumpukan kepentingan ekonomi berbanding penyebaran idea politik",
+        "Keduanya mengehadkan penyertaan kepada golongan elit berpendidikan Inggeris sahaja",
+        "Keduanya beroperasi di bawah kelulusan rasmi pentadbir British ketika itu"
       ],
       "answer": "Keduanya menyebarkan dan memperkukuh idea nasionalisme kepada khalayak atau ahli",
       "explanation": "Penulisan dan persatuan sama-sama memperkukuh idea.",
@@ -174,9 +174,9 @@
       "prompt": "Apakah perbezaan utama antara peranan 'intelektual' dengan 'persatuan' dalam corak perkembangan?",
       "options": [
         "Intelektual memimpin penyusunan idea awal manakala persatuan menyalurkan tindakan kolektif dan penyatuan suara",
-        "Tiada perbezaan fungsi antara kedua-duanya",
-        "Intelektual menggantikan peranan persatuan sepenuhnya",
-        "Persatuan tidak pernah menuntut hak atau reformasi"
+        "Intelektual menumpukan hubungan diplomatik luar manakala persatuan menumpukan urusan ekonomi dalaman",
+        "Intelektual menggantikan sepenuhnya fungsi persatuan selepas persatuan ditubuhkan di negara kita",
+        "Persatuan memimpin penyusunan idea awal manakala intelektual pula menyalurkan tindakan kolektif rakyat"
       ],
       "answer": "Intelektual memimpin penyusunan idea awal manakala persatuan menyalurkan tindakan kolektif dan penyatuan suara",
       "explanation": "Satu fokus kepimpinan idea, satu fokus organisasi rakyat.",
@@ -189,9 +189,9 @@
       "prompt": "Antara hujah berikut, manakah yang PALING kukuh untuk menjelaskan perkembangan nasionalisme di negara kita?",
       "options": [
         "Gabungan kepimpinan intelektual, penyebaran media dan penyatuan pertubuhan memperkukuh perjuangan",
-        "Media sahaja yang membentuk perjuangan tanpa peranan manusia",
-        "Ekonomi pasaran bebas semata-mana yang memperkukuh perjuangan",
-        "Tiada peranan rakyat dalam menyokong gerakan"
+        "Media cetak sahaja yang membentuk keseluruhan perjuangan tanpa sebarang peranan kepimpinan intelektual",
+        "Kestabilan ekonomi pasaran bebas semata-mata yang memperkukuh perjuangan nasionalisme rakyat",
+        "Sokongan kewangan daripada pedagang asing sahaja yang menggerakkan perjuangan nasionalisme"
       ],
       "answer": "Gabungan kepimpinan intelektual, penyebaran media dan penyatuan pertubuhan memperkukuh perjuangan",
       "explanation": "Hujah kukuh menyatukan ketiga-tiga saluran utama.",
@@ -204,9 +204,9 @@
       "prompt": "Antara pernyataan berikut, manakah yang PALING tepat merumuskan subtopik 2.7?",
       "options": [
         "Perkembangan nasionalisme melalui tiga saluran: intelektual, penulisan/media, dan persatuan yang menyatukan suara rakyat",
-        "Perkembangan nasionalisme melalui satu saluran tunggal",
-        "Perkembangan nasionalisme tanpa kaitan dengan hak rakyat",
-        "Perkembangan nasionalisme dengan menolak peranan akhbar"
+        "Perkembangan nasionalisme hanya melalui satu saluran tunggal, iaitu penubuhan pertubuhan politik semata-mata",
+        "Perkembangan nasionalisme berlaku tanpa sebarang kaitan dengan tuntutan hak rakyat atau jati diri bangsa",
+        "Perkembangan nasionalisme berlaku dengan menolak sepenuhnya peranan akhbar dan penulisan tempatan"
       ],
       "answer": "Perkembangan nasionalisme melalui tiga saluran: intelektual, penulisan/media, dan persatuan yang menyatukan suara rakyat",
       "explanation": "Rumusan merangkumi ketiga-tiga saluran dan fungsinya.",

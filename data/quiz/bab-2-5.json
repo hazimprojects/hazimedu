@@ -54,7 +54,7 @@
       "prompt": "Apakah hasil akhir kesedaran nasionalisme yang dinyatakan?",
       "options": [
         "Menjadi asas kepada perjuangan kebangsaan dan kemerdekaan negara",
-        "Menjadi asas kepada sistem ekonomi kapitalisme semata-mana",
+        "Menjadi asas kepada sistem ekonomi kapitalisme semata-mata",
         "Menjadi asas kepada penjajahan tanpa wujudnya gerakan kemerdekaan",
         "Tiada implikasi politik; hanya kesedaran budaya"
       ],
@@ -69,9 +69,9 @@
       "prompt": "Mengapakah zaman Melaka penting dalam membincangkan kesedaran awal?",
       "options": [
         "Ia menunjukkan asal-usul kesedaran mempertahankan bangsa dan wilayah",
-        "Ia hanya relevan untuk sejarah seni istana",
-        "Ia menunjukkan Melaka sebagai model demokrasi moden",
-        "Ia menolak peranan sultan dalam mempertahankan wilayah"
+        "Ia menunjukkan Melaka sebagai contoh awal sistem perdagangan bebas serantau",
+        "Ia membuktikan Melaka mengamalkan sistem pilihan raya sebelum kedatangan Barat",
+        "Ia menggambarkan Melaka lebih menumpukan hubungan diplomatik berbanding pertahanan wilayah"
       ],
       "answer": "Ia menunjukkan asal-usul kesedaran mempertahankan bangsa dan wilayah",
       "explanation": "Melaka menandakan permulaan kesedaran mempertahankan wilayah.",
@@ -99,9 +99,9 @@
       "prompt": "Mengapakah pertubuhan disebut bersama-sama dengan Gerakan Islah?",
       "options": [
         "Keduanya menyalurkan penyatuan dan kesedaran rakyat",
-        "Keduanya tidak berkaitan",
-        "Keduanya hanya untuk hiburan",
-        "Keduanya menolak pendidikan"
+        "Keduanya lebih menumpukan isu ekonomi berbanding politik",
+        "Keduanya ditubuhkan oleh kerajaan penjajah British",
+        "Keduanya bertujuan mengekalkan status quo penjajahan"
       ],
       "answer": "Keduanya menyalurkan penyatuan dan kesedaran rakyat",
       "explanation": "Islah dan pertubuhan membantu memperkukuh kesedaran kolektif.",
@@ -114,9 +114,9 @@
       "prompt": "Sekumpulan intelektual menerbitkan artikel menentang penjajahan dalam akhbar tempatan. Apakah yang digambarkan?",
       "options": [
         "Penyaluran idea nasionalisme melalui media cetak",
-        "Ketiadaan peranan media",
-        "Penolakan terhadap bahasa Melayu",
-        "Isu yang tidak berkaitan dengan politik"
+        "Penyaluran maklumat perdagangan antara pedagang tempatan",
+        "Penyaluran arahan rasmi daripada pentadbir penjajah",
+        "Penyaluran hiburan dan cerita rakyat tradisional"
       ],
       "answer": "Penyaluran idea nasionalisme melalui media cetak",
       "explanation": "Akhbar menjadi medium penyebaran idea nasionalisme.",
@@ -129,9 +129,9 @@
       "prompt": "Apakah yang digambarkan oleh usaha sultan menentang serangan kuasa asing pada zaman awal?",
       "options": [
         "Perjuangan mempertahankan wilayah dan maruah bangsa",
-        "Penyerahan wilayah tanpa tentangan",
-        "Ketiadaan kepimpinan",
-        "Isu ekonomi sahaja"
+        "Perundingan diplomatik tanpa sebarang bentuk tentangan",
+        "Pembentukan pakatan ketenteraan dengan kuasa lain",
+        "Pertikaian dalaman antara pembesar dan rakyat"
       ],
       "answer": "Perjuangan mempertahankan wilayah dan maruah bangsa",
       "explanation": "Usaha sultan menunjukkan pertahanan awal terhadap ancaman luar.",
@@ -144,9 +144,9 @@
       "prompt": "Gerakan Islah memberi penekanan kepada pembaharuan masyarakat. Apakah kaitannya dengan nasionalisme?",
       "options": [
         "Ia merupakan saluran kesedaran nasionalisme pada abad ke-20",
-        "Ia tidak berkaitan langsung",
-        "Ia hanya tentang sukan sekolah",
-        "Ia menolak semangat bangsa"
+        "Ia merupakan gerakan ekonomi tanpa unsur kesedaran politik",
+        "Ia merupakan usaha kerajaan penjajah memodenkan pentadbiran",
+        "Ia merupakan gerakan yang tertumpu khusus kepada golongan wanita"
       ],
       "answer": "Ia merupakan saluran kesedaran nasionalisme pada abad ke-20",
       "explanation": "Islah disebut sebagai saluran kesedaran pada abad ke-20.",
@@ -159,9 +159,9 @@
       "prompt": "Apakah persamaan utama antara kesedaran zaman Melaka dengan kesedaran abad ke-20?",
       "options": [
         "Keduanya berkaitan dengan mempertahankan bangsa dan kepentingan negara walaupun bentuknya berbeza",
-        "Tiada persamaan",
-        "Keduanya menolak peranan rakyat",
-        "Keduanya hanya tentang teknologi"
+        "Keduanya lebih menumpukan hubungan diplomatik berbanding kepentingan dalaman negara",
+        "Keduanya bergantung kepada kepimpinan sultan sahaja tanpa penyertaan rakyat biasa",
+        "Keduanya berlaku hasil campur tangan langsung kuasa asing tanpa inisiatif tempatan"
       ],
       "answer": "Keduanya berkaitan dengan mempertahankan bangsa dan kepentingan negara walaupun bentuknya berbeza",
       "explanation": "Kesinambungan tema pertahanan bangsa dari zaman awal ke moden.",
@@ -174,9 +174,9 @@
       "prompt": "Apakah perbezaan utama antara 'perjuangan awal zaman kesultanan' dengan 'saluran abad ke-20'?",
       "options": [
         "Awal lebih menekankan pertahanan wilayah oleh elit manakala abad ke-20 menekankan penyebaran idea melalui institusi dan media",
-        "Tiada perbezaan",
-        "Awal hanya tentang ekonomi",
-        "Abad ke-20 menolak media"
+        "Awal lebih menekankan hubungan diplomatik dengan kuasa asing manakala abad ke-20 menekankan pertahanan ketenteraan",
+        "Awal tertumpu kepada perdagangan wilayah manakala abad ke-20 tertumpu kepada pembangunan infrastruktur",
+        "Abad ke-20 lebih menolak sebarang bentuk penyebaran idea berbanding zaman kesultanan awal"
       ],
       "answer": "Awal lebih menekankan pertahanan wilayah oleh elit manakala abad ke-20 menekankan penyebaran idea melalui institusi dan media",
       "explanation": "Perbezaan bentuk: pertahanan langsung vs penyebaran idea.",
@@ -189,9 +189,9 @@
       "prompt": "Antara hujah berikut, manakah yang PALING kukuh untuk menunjukkan kesedaran nasionalisme di negara kita adalah berproses?",
       "options": [
         "Ia bermula dari pertahanan awal dan berkembang melalui pelbagai saluran sehingga menjadi asas kemerdekaan",
-        "Ia muncul secara tiba-tiba tanpa sejarah",
-        "Ia hanya satu peristiwa tunggal",
-        "Ia tidak melibatkan masyarakat"
+        "Ia muncul secara tiba-tiba selepas Perang Dunia Kedua tanpa sebarang akar sejarah awal",
+        "Ia hanya melibatkan satu peristiwa tunggal iaitu penubuhan Gerakan Islah semata-mata",
+        "Ia hanya melibatkan golongan sultan dan bangsawan tanpa penyertaan rakyat biasa"
       ],
       "answer": "Ia bermula dari pertahanan awal dan berkembang melalui pelbagai saluran sehingga menjadi asas kemerdekaan",
       "explanation": "Hujah kukuh menunjukkan kesinambungan dan perkembangan saluran.",
@@ -204,9 +204,9 @@
       "prompt": "Antara pernyataan berikut, manakah yang PALING tepat merumuskan subtopik 2.5?",
       "options": [
         "Kesedaran nasionalisme bermula sejak Melaka dan berkembang melalui pelbagai saluran sehingga menjadi asas kemerdekaan",
-        "Kesedaran nasionalisme bermula selepas kemerdekaan dan berkembang ke belakang",
-        "Kesedaran nasionalisme hanya wujud melalui media digital moden",
-        "Kesedaran nasionalisme terhad kepada gerakan elit tanpa saluran massa"
+        "Kesedaran nasionalisme bermula selepas kemerdekaan dicapai dan tidak mempunyai sebarang akar sejarah sebelum itu",
+        "Kesedaran nasionalisme hanya wujud melalui penyebaran akhbar dan media cetak abad ke-20 semata-mata",
+        "Kesedaran nasionalisme terhad kepada golongan bangsawan dan sultan tanpa melibatkan saluran akhbar atau pertubuhan"
       ],
       "answer": "Kesedaran nasionalisme bermula sejak Melaka dan berkembang melalui pelbagai saluran sehingga menjadi asas kemerdekaan",
       "explanation": "Rumusan merangkumi asal, perkembangan dan hasil.",

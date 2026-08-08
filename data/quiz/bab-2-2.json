@@ -84,9 +84,9 @@
       "prompt": "Apakah yang dimaksudkan dengan menuntut 'kedaulatan rakyat' dalam konteks revolusi Barat?",
       "options": [
         "Rakyat ingin kuasa politik yang sah datang daripada rakyat, bukan mutlak raja sahaja",
-        "Rakyat menolak semua bentuk undang-undang",
-        "Rakyat mahu wilayah tanpa sempadan",
-        "Rakyat ingin kembali ke sistem puak"
+        "Rakyat ingin gereja diberikan kuasa penuh menggantikan raja dalam pentadbiran negara",
+        "Rakyat ingin sistem beraja mutlak dikekalkan tetapi dengan raja yang lebih adil",
+        "Rakyat ingin kuasa pemerintahan diserahkan kepada golongan bangsawan sahaja"
       ],
       "answer": "Rakyat ingin kuasa politik yang sah datang daripada rakyat, bukan mutlak raja sahaja",
       "explanation": "Kedaulatan rakyat menekankan hak rakyat dalam sistem politik.",
@@ -114,9 +114,9 @@
       "prompt": "Seorang pelajar berkata: 'Tanpa revolusi di Barat, mungkin lambat bangkitnya semangat nasionalisme di Asia.' Apakah jawapan yang paling disokong oleh hujah sejarah tersebut?",
       "options": [
         "Idea Barat menjadi inspirasi kepada kebangkitan di bahagian lain dunia",
-        "Asia tidak terpengaruh oleh Barat langsung",
-        "Revolusi Barat hanya penting untuk ekonomi",
-        "Nasionalisme Asia muncul tanpa sebarang konteks global"
+        "Nasionalisme Asia sebenarnya lebih awal wujud berbanding gerakan di Barat",
+        "Revolusi Barat lebih memberi kesan kepada bidang seni dan sastera dunia",
+        "Kebangkitan nasionalisme Asia terutamanya didorong oleh faktor ekonomi dalaman semata"
       ],
       "answer": "Idea Barat menjadi inspirasi kepada kebangkitan di bahagian lain dunia",
       "explanation": "Perbincangan ini menekankan inspirasi daripada perkembangan Barat.",
@@ -129,9 +129,9 @@
       "prompt": "Apakah yang digambarkan oleh perjuangan menuntut kedaulatan rakyat selepas penindasan mutlak?",
       "options": [
         "Peralihan daripada kuasa mutlak raja kepada pengiktirafan hak rakyat",
-        "Kepulangan kepada sistem puak",
-        "Penghapusan semua institusi negara",
-        "Penolakan terhadap apa-apa bentuk kerajaan"
+        "Peralihan kuasa daripada golongan bangsawan tempatan kepada golongan gereja Eropah",
+        "Pengukuhan kuasa raja mutlak melalui sokongan rakyat yang lebih meluas",
+        "Penyatuan semula kuasa raja dan gereja selepas tempoh perpecahan panjang"
       ],
       "answer": "Peralihan daripada kuasa mutlak raja kepada pengiktirafan hak rakyat",
       "explanation": "Ini menunjukkan perubahan idea politik terhadap hak dan kedaulatan.",
@@ -144,9 +144,9 @@
       "prompt": "Jika sebuah negara di Asia menerima idea kebebasan daripada contoh Barat, apakah proses yang digambarkan?",
       "options": [
         "Penyebaran idea nasionalisme merentasi wilayah",
-        "Penghapusan bahasa kebangsaan",
-        "Ketiadaan sebarang interaksi budaya",
-        "Penolakan mutlak terhadap modenisasi"
+        "Penjajahan politik oleh kuasa Barat",
+        "Pengasingan budaya daripada Barat",
+        "Pertukaran sistem mata wang serantau"
       ],
       "answer": "Penyebaran idea nasionalisme merentasi wilayah",
       "explanation": "Ini menggambarkan penyebaran idea daripada satu wilayah ke wilayah lain.",
@@ -159,9 +159,9 @@
       "prompt": "Apakah persamaan utama antara perkembangan nasionalisme di Barat dengan kesan kepada Asia?",
       "options": [
         "Keduanya berkaitan dengan semangat kebebasan dan penentangan terhadap penindasan atau penjajahan",
-        "Keduanya sama sekali tidak berkaitan",
-        "Keduanya hanya tentang seni bina",
-        "Keduanya menolak peranan rakyat"
+        "Keduanya lebih menekankan kepentingan ekonomi berbanding kebebasan politik rakyat",
+        "Keduanya bermula daripada gerakan keagamaan sebelum berkembang menjadi gerakan politik",
+        "Keduanya hanya melibatkan golongan bangsawan tanpa penyertaan rakyat biasa"
       ],
       "answer": "Keduanya berkaitan dengan semangat kebebasan dan penentangan terhadap penindasan atau penjajahan",
       "explanation": "Barat menentang mutlak raja; Asia menentang penjajahan — tema kebebasan.",
@@ -174,9 +174,9 @@
       "prompt": "Apakah perbezaan utama antara 'tindak balas di Barat' dengan 'inspirasi ke Asia' dalam aliran idea?",
       "options": [
         "Di Barat ia bermula sebagai tindak balas terhadap mutlak raja; di Asia ia berkembang sebagai inspirasi selepas pertembungan dengan kuasa asing",
-        "Di Barat dan di Asia ia bermula secara serentak tanpa sebarang pertembungan",
-        "Di Asia ia bermula sepenuhnya daripada tradisi tempatan tanpa sebarang idea Barat",
-        "Di Barat ia hanya membawa perubahan ekonomi tanpa sentuhan politik atau kedaulatan"
+        "Di Barat ia bermula melalui perubahan sistem pendidikan; di Asia ia bermula melalui perubahan sistem percukaian pelabuhan",
+        "Di Asia ia bermula terus daripada tradisi tempatan yang lama wujud sebelum sebarang hubungan dengan Barat",
+        "Di Barat ia terutamanya membawa perubahan ekonomi perdagangan, manakala di Asia ia membawa perubahan seni bina istana"
       ],
       "answer": "Di Barat ia bermula sebagai tindak balas terhadap mutlak raja; di Asia ia berkembang sebagai inspirasi selepas pertembungan dengan kuasa asing",
       "explanation": "Aliran bermula di Barat dengan sebab berbeza, kemudian mempengaruhi Asia.",
@@ -189,9 +189,9 @@
       "prompt": "Antara hujah berikut, manakah yang PALING kukuh untuk menjelaskan kepentingan revolusi Barat dalam sejarah nasionalisme dunia?",
       "options": [
         "Revolusi tersebut memperkukuh idea kebebasan dan kedaulatan yang kemudiannya menginspirasi gerakan di luar Barat",
-        "Revolusi tersebut hanya penting dalam sejarah seni dan sastera Eropah",
-        "Revolusi tersebut menghentikan sepenuhnya perdagangan dan hubungan diplomatik",
-        "Revolusi tersebut tidak mempengaruhi corak politik di luar Eropah"
+        "Revolusi tersebut penting terutamanya kerana ia mengubah struktur seni bina dan kesusasteraan Eropah ketika itu",
+        "Revolusi tersebut menghentikan buat sementara waktu hubungan perdagangan antara negara-negara Eropah",
+        "Revolusi tersebut hanya memberi kesan kepada golongan bangsawan Eropah tanpa mempengaruhi rantau lain"
       ],
       "answer": "Revolusi tersebut memperkukuh idea kebebasan dan kedaulatan yang kemudiannya menginspirasi gerakan di luar Barat",
       "explanation": "Hujah kukuh ialah kesan idea kebebasan yang tersebar.",
@@ -204,9 +204,9 @@
       "prompt": "Antara pernyataan berikut, manakah yang PALING tepat merumuskan subtopik 2.2?",
       "options": [
         "Idea nasionalisme di Barat berkembang melalui peristiwa penting dan menjadi inspirasi ke Asia serta Asia Tenggara",
-        "Subtopik ini hanya tentang sistem feudal Jepun",
-        "Subtopik ini menolak kesan revolusi",
-        "Subtopik ini tidak menyentuh kedaulatan rakyat"
+        "Subtopik ini menghuraikan struktur sistem feudal Jepun dan kesannya terhadap ekonomi serantau",
+        "Subtopik ini menekankan bahawa nasionalisme hanya wujud selepas berlakunya Perang Dunia Kedua",
+        "Subtopik ini membincangkan peranan gereja dalam pentadbiran negara Eropah zaman pertengahan"
       ],
       "answer": "Idea nasionalisme di Barat berkembang melalui peristiwa penting dan menjadi inspirasi ke Asia serta Asia Tenggara",
       "explanation": "Rumusan menyatukan perkembangan Barat dan kesan inspirasi ke rantau lain.",
