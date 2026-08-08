@@ -1691,7 +1691,32 @@ body[class*="page-theme-"].app-shell-page .home-scope-section {
 
 .about-trigger-card:active { transform: translateY(0) scale(0.99); }
 
+.about-trigger-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(79, 70, 229, 0.08);
+}
+
+[data-theme="dark"] .about-trigger-icon {
+  background: rgba(129, 140, 248, 0.14);
+}
+
 .about-trigger-body { flex: 1; min-width: 0; }
+
+/* Ikon kecil di hadapan label seksyen (home-info-label / home-scope-label) —
+   satu tempat kawal saiz/jajaran supaya konsisten merentas semua label. */
+.home-info-label img.fluent-3d-emoji,
+.home-scope-label img.fluent-3d-emoji {
+  width: 18px;
+  height: 18px;
+  vertical-align: -4px;
+  margin-right: 5px;
+}
 
 .about-trigger-desc {
   font-size: 0.85rem;
