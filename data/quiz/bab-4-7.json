@@ -1,0 +1,216 @@
+{
+  "id": "4-7",
+  "title": "Reaksi Penduduk Tempatan terhadap Penyerahan Sabah",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Pada bilakah penyerahan Sabah kepada British berlaku menurut subtopik ini?",
+      "options": [
+        "15 Julai 1946",
+        "1 Julai 1946",
+        "26 Jun 1946",
+        "28 September 1945"
+      ],
+      "answer": "15 Julai 1946",
+      "explanation": "Penyerahan Sabah kepada British pada 15 Julai 1946 tidak mendapat penentangan besar daripada penduduk tempatan.",
+      "tip": "15 Julai 1946 = tarikh serah Sabah."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah nama pertubuhan yang diketuai oleh Tengku Noordin dan Zakaria Gunn di Labuan?",
+      "options": [
+        "Parti Kebangsaan Melayu Labuan (PKML)",
+        "Barisan Pemuda Sabah (BARIP)",
+        "Persaudaraan Sahabat Pena Sabah (PASPAS)",
+        "Persatuan Kebangsaan Melayu di Sabah"
+      ],
+      "answer": "Parti Kebangsaan Melayu Labuan (PKML)",
+      "explanation": "Tengku Noordin dan Zakaria Gunn antara pemimpin Parti Kebangsaan Melayu Labuan (PKML).",
+      "tip": "Labuan = PKML."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Ke manakah Tengku Noordin dipindahkan oleh British pada September 1946?",
+      "options": [
+        "Jesselton",
+        "Sandakan",
+        "Kudat",
+        "Tawau"
+      ],
+      "answer": "Jesselton",
+      "explanation": "Tengku Noordin dipindahkan ke Jesselton pada September 1946.",
+      "tip": "Noordin dipindah ke Jesselton."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah nama pertubuhan yang diketuai oleh pemimpin seperti Pengiran Muhd Yusof Jamil Umar dan H.M. Salleh?",
+      "options": [
+        "Barisan Pemuda Sabah (BARIP)",
+        "Parti Kebangsaan Melayu Labuan (PKML)",
+        "Sarawak Dayak Association",
+        "Young Malay Association"
+      ],
+      "answer": "Barisan Pemuda Sabah (BARIP)",
+      "explanation": "Pengiran Muhd Yusof Jamil Umar dan H.M. Salleh merupakan pemimpin Barisan Pemuda Sabah (BARIP).",
+      "tip": "BARIP = Yusof Jamil + H.M. Salleh."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah masyarakat Sabah yang berbilang etnik menyukarkan pemimpin tempatan menyatukan penentangan terhadap penyerahan?",
+      "options": [
+        "Kerana penduduk Sabah berbeza dari segi bahasa, budaya, sistem kepercayaan, petempatan dan kegiatan ekonomi",
+        "Kerana Sabah hanya mempunyai satu kaum sahaja pada masa itu",
+        "Kerana semua penduduk Sabah tinggal di kawasan yang sama tanpa sebarang perbezaan",
+        "Kerana British melarang sepenuhnya kewujudan sebarang kaum di Sabah"
+      ],
+      "answer": "Kerana penduduk Sabah berbeza dari segi bahasa, budaya, sistem kepercayaan, petempatan dan kegiatan ekonomi",
+      "explanation": "Kepelbagaian bahasa, budaya, kepercayaan, petempatan dan ekonomi menyukarkan penyatuan pertubuhan yang kuat.",
+      "tip": "Pelbagai etnik = sukar bersatu."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah British menawarkan jawatan kerajaan dan kenaikan pangkat kepada pemimpin tempatan Sabah?",
+      "options": [
+        "Untuk melemahkan gerakan berpersatuan secara halus dengan memindahkan atau menyerap pemimpin aktif ke dalam sistem British",
+        "Untuk memberikan kemerdekaan segera kepada Sabah",
+        "Untuk menghukum pemimpin tempatan kerana menyokong British",
+        "Untuk menubuhkan sebuah kerajaan tempatan yang bebas sepenuhnya"
+      ],
+      "answer": "Untuk melemahkan gerakan berpersatuan secara halus dengan memindahkan atau menyerap pemimpin aktif ke dalam sistem British",
+      "explanation": "British bertindak secara halus menawarkan jawatan/kenaikan pangkat untuk melemahkan gerakan berpersatuan.",
+      "tip": "Tawaran jawatan = lemahkan gerakan."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah ramai penduduk tempatan Sabah tidak menentang penyerahan kepada British?",
+      "options": [
+        "Kerana mereka melihat penyerahan itu sebagai peluang membuka ruang pentadbiran, perniagaan, perdagangan dan membangunkan semula Sabah selepas perang",
+        "Kerana mereka dipaksa oleh Jepun untuk menyokong British",
+        "Kerana mereka tidak mengetahui langsung berlakunya penyerahan Sabah",
+        "Kerana British mengancam untuk menghukum sesiapa yang menentang"
+      ],
+      "answer": "Kerana mereka melihat penyerahan itu sebagai peluang membuka ruang pentadbiran, perniagaan, perdagangan dan membangunkan semula Sabah selepas perang",
+      "explanation": "Ramai penduduk melihat penyerahan sebagai peluang kemajuan pentadbiran, perniagaan dan pembangunan semula.",
+      "tip": "Lihat sebagai peluang, bukan ancaman."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Seorang pemimpin pertubuhan tempatan Sabah dihantar berkursus ke SITC oleh pihak British sejurus selepas beliau aktif menggerakkan kesedaran politik. Apakah tujuan tindakan British ini?",
+      "options": [
+        "Mengalih perhatian dan melemahkan pengaruh pemimpin tersebut secara halus",
+        "Memberi ganjaran kerana menyokong sepenuhnya penyerahan Sabah",
+        "Menghukum pemimpin tersebut secara terbuka di khalayak ramai",
+        "Melatih pemimpin tersebut untuk memimpin gerakan kemerdekaan"
+      ],
+      "answer": "Mengalih perhatian dan melemahkan pengaruh pemimpin tersebut secara halus",
+      "explanation": "Menghantar pemimpin aktif berkursus/berpindah adalah cara British melemahkan pengaruh mereka secara halus.",
+      "tip": "Hantar jauh = lemahkan pengaruh."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Seorang peniaga tempatan di Sabah memilih untuk bekerjasama dengan pentadbiran British kerana mengharapkan peluang perniagaan dan perdagangan yang lebih luas. Sikap ini paling sesuai digolongkan sebagai?",
+      "options": [
+        "Reaksi penduduk yang mengutamakan kepentingan sosioekonomi berbanding penentangan politik",
+        "Sebahagian daripada gerakan Rukun 13 di Sarawak",
+        "Tindakan menentang penyerahan Sabah secara terbuka",
+        "Sebahagian daripada penubuhan UMNO di Tanah Melayu"
+      ],
+      "answer": "Reaksi penduduk yang mengutamakan kepentingan sosioekonomi berbanding penentangan politik",
+      "explanation": "Sikap sedemikian mencerminkan penduduk yang mengutamakan kepentingan sosioekonomi berbanding penentangan.",
+      "tip": "Utama peluang ekonomi = sosioekonomi."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Seorang pemimpin BARIP dipindahkan dari Tawau ke Sandakan sejurus selepas beliau mula membangkitkan kesedaran politik penduduk tempatan. Apakah corak tindakan British yang digambarkan?",
+      "options": [
+        "Memindahkan pemimpin aktif ke tempat lain untuk melemahkan kegiatan berpersatuan",
+        "Memberikan kenaikan pangkat kekal kepada pemimpin tersebut di Tawau",
+        "Membubarkan BARIP secara rasmi dan serta-merta",
+        "Melantik pemimpin tersebut sebagai Gabenor Sabah"
+      ],
+      "answer": "Memindahkan pemimpin aktif ke tempat lain untuk melemahkan kegiatan berpersatuan",
+      "explanation": "Ini sepadan dengan corak tindakan British memindahkan pemimpin aktif ke tempat lain (cth. Apong Kerahu dari Tawau ke Sandakan).",
+      "tip": "Pindah pemimpin = corak British."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perbezaan antara reaksi penduduk tempatan Sabah dengan reaksi penduduk tempatan Sarawak terhadap penyerahan kepada British?",
+      "options": [
+        "Penyerahan Sabah tidak mendapat tentangan terbuka yang besar, manakala penyerahan Sarawak mencetuskan gerakan antipenyerahan yang kuat termasuk peristiwa Sungkit Berdarah",
+        "Kedua-dua wilayah menunjukkan reaksi yang sama sepenuhnya tanpa sebarang perbezaan",
+        "Penduduk Sabah menentang lebih hebat berbanding penduduk Sarawak",
+        "Penduduk Sarawak tidak pernah menunjukkan sebarang bentuk bantahan"
+      ],
+      "answer": "Penyerahan Sabah tidak mendapat tentangan terbuka yang besar, manakala penyerahan Sarawak mencetuskan gerakan antipenyerahan yang kuat termasuk peristiwa Sungkit Berdarah",
+      "explanation": "Sabah tidak mendapat tentangan besar, berbeza dengan Sarawak yang mengalami gerakan antipenyerahan kuat.",
+      "tip": "Sabah tenang, Sarawak bergolak."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah persamaan antara faktor 'dasar British menekan gerakan nasionalisme' dengan faktor 'kepentingan sosioekonomi penduduk tempatan' dalam menjelaskan sikap penduduk Sabah?",
+      "options": [
+        "Kedua-duanya menerangkan mengapa gerakan kebangsaan di Sabah berkembang lebih perlahan berbanding Tanah Melayu dan Sarawak",
+        "Kedua-duanya menunjukkan penduduk Sabah lebih radikal berbanding penduduk Tanah Melayu",
+        "Kedua-duanya tidak mempunyai kaitan langsung dengan sikap penduduk Sabah",
+        "Kedua-duanya membuktikan British gagal sepenuhnya mengawal Sabah"
+      ],
+      "answer": "Kedua-duanya menerangkan mengapa gerakan kebangsaan di Sabah berkembang lebih perlahan berbanding Tanah Melayu dan Sarawak",
+      "explanation": "Kedua-dua faktor sama-sama menjelaskan perkembangan nasionalisme yang lebih perlahan di Sabah.",
+      "tip": "2 faktor = nasionalisme perlahan."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah PALING kukuh menjelaskan mengapa penyerahan Sabah tidak mendapat penentangan hebat?",
+      "options": [
+        "British berjaya melemahkan gerakan berpersatuan secara halus, mengehadkan peluang penduduk dalam pentadbiran, dan ramai penduduk melihat penyerahan sebagai peluang kemajuan",
+        "Penduduk Sabah tidak pernah mempunyai sebarang pertubuhan politik",
+        "British memberikan kemerdekaan penuh kepada Sabah sejurus selepas perang",
+        "Penduduk Sabah sepenuhnya tidak mengetahui berlakunya penyerahan"
+      ],
+      "answer": "British berjaya melemahkan gerakan berpersatuan secara halus, mengehadkan peluang penduduk dalam pentadbiran, dan ramai penduduk melihat penyerahan sebagai peluang kemajuan",
+      "explanation": "Gabungan pelemahan gerakan berpersatuan dan sikap penduduk yang mengutamakan kemajuan menjelaskan ketiadaan tentangan hebat.",
+      "tip": "Lemahkan gerakan + harap kemajuan."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah PALING tepat merumuskan subtopik 4.7?",
+      "options": [
+        "Penyerahan Sabah tidak mencetuskan tentangan terbuka yang besar kerana tindakan British melemahkan gerakan berpersatuan dan sikap penduduk yang mengutamakan sosioekonomi, namun ia tetap menanam kesedaran politik",
+        "Penduduk Sabah menentang penyerahan dengan lebih hebat berbanding Sarawak dan Tanah Melayu",
+        "Penyerahan Sabah tidak memberi sebarang kesan kepada kesedaran politik penduduk tempatan",
+        "British tidak pernah campur tangan dalam pertubuhan tempatan di Sabah"
+      ],
+      "answer": "Penyerahan Sabah tidak mencetuskan tentangan terbuka yang besar kerana tindakan British melemahkan gerakan berpersatuan dan sikap penduduk yang mengutamakan sosioekonomi, namun ia tetap menanam kesedaran politik",
+      "explanation": "Rumusan menggabungkan sebab ketiadaan tentangan besar dan kesan jangka panjang kesedaran politik.",
+      "tip": "Tiada tentangan besar, tapi tanam kesedaran."
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "id": "3-5",
+  "title": "Faktor Kedatangan Jepun ke Negara Kita",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah dua faktor utama kedatangan Jepun ke negara kita?",
+      "options": [
+        "Eksploitasi sumber bahan mentah dan kepentingan strategik ketenteraan",
+        "Bantuan kemanusiaan dan kerjasama pendidikan",
+        "Perjanjian perdagangan bebas dan pelaburan asing",
+        "Permintaan Raja-raja Melayu dan sokongan British"
+      ],
+      "answer": "Eksploitasi sumber bahan mentah dan kepentingan strategik ketenteraan",
+      "explanation": "Jepun datang ke negara kita kerana dua faktor utama, iaitu eksploitasi sumber bahan mentah dan kepentingan strategik ketenteraan.",
+      "tip": "Dua faktor = bahan mentah + strategik."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Pada tarikh berapakah tentera Jepun mula menyerang Tanah Melayu?",
+      "options": [
+        "8 Disember 1941",
+        "16 Disember 1941",
+        "15 Februari 1942",
+        "1 September 1939"
+      ],
+      "answer": "8 Disember 1941",
+      "explanation": "Tentera Jepun mula menyerang Tanah Melayu pada 8 Disember 1941.",
+      "tip": "8 Dis 1941 = mula serang Tanah Melayu."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Bilakah keseluruhan Tanah Melayu jatuh ke tangan tentera Jepun apabila Singapura ditawan?",
+      "options": [
+        "15 Februari 1942",
+        "8 Disember 1941",
+        "16 Disember 1941",
+        "12 September 1945"
+      ],
+      "answer": "15 Februari 1942",
+      "explanation": "Keseluruhan Tanah Melayu jatuh ke tangan Jepun apabila Singapura berjaya ditawan pada 15 Februari 1942.",
+      "tip": "15 Feb 1942 = Singapura jatuh."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah nama dua kapal perang British yang ditenggelamkan oleh tentera Jepun di perairan Kuantan?",
+      "options": [
+        "Repulse dan Prince of Wales",
+        "HMAS Kapunda dan Bismarck",
+        "Yamato dan Musashi",
+        "Ark Royal dan Hood"
+      ],
+      "answer": "Repulse dan Prince of Wales",
+      "explanation": "Kapal perang British Repulse dan Prince of Wales ditenggelamkan oleh Jepun di perairan Kuantan.",
+      "tip": "Kuantan = Repulse + Prince of Wales."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah Jepun berminat untuk mendapatkan sumber minyak di Sarawak?",
+      "options": [
+        "Kerana Miri dan Lutong menjadi sumber minyak penting untuk keperluan perindustrian dan ketenteraan Jepun",
+        "Kerana Sarawak tidak mempunyai sebarang sumber semula jadi lain",
+        "Kerana British telah menyerahkan minyak Sarawak secara sukarela kepada Jepun",
+        "Kerana Sarawak menjadi pusat pentadbiran utama Tanah Melayu"
+      ],
+      "answer": "Kerana Miri dan Lutong menjadi sumber minyak penting untuk keperluan perindustrian dan ketenteraan Jepun",
+      "explanation": "Jepun ingin mendapatkan sumber minyak terutama di Miri dan Lutong bagi menampung keperluan perindustrian dan perang.",
+      "tip": "Miri + Lutong = minyak Jepun."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah penguasaan terhadap pangkalan Singapura penting secara strategik kepada Jepun?",
+      "options": [
+        "Kerana ia membuka laluan penguasaan Jepun terhadap telaga minyak di Sumatera",
+        "Kerana Singapura tidak mempunyai sebarang kepentingan ketenteraan",
+        "Kerana Singapura menjadi pusat pengeluaran bijih timah utama",
+        "Kerana Singapura ialah ibu negara Tanah Melayu ketika itu"
+      ],
+      "answer": "Kerana ia membuka laluan penguasaan Jepun terhadap telaga minyak di Sumatera",
+      "explanation": "Penguasaan pangkalan tentera laut British di Singapura penting untuk membuka laluan ke telaga minyak Sumatera.",
+      "tip": "Singapura = laluan ke Sumatera."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah tentera Jepun menyerang Tanah Melayu melalui tiga laluan kemaraan secara serentak?",
+      "options": [
+        "Untuk menunjukkan serangan yang sangat terancang dan dilakukan dari beberapa arah secara serentak bagi mempercepat kejatuhan Tanah Melayu",
+        "Kerana Jepun tidak mempunyai perancangan yang jelas",
+        "Kerana Jepun hanya mempunyai satu laluan sahaja yang tersedia",
+        "Kerana British meminta Jepun mendarat di banyak tempat"
+      ],
+      "answer": "Untuk menunjukkan serangan yang sangat terancang dan dilakukan dari beberapa arah secara serentak bagi mempercepat kejatuhan Tanah Melayu",
+      "explanation": "Kemaraan tiga laluan menunjukkan perancangan rapi Jepun untuk mempercepat penaklukan Tanah Melayu.",
+      "tip": "3 laluan = serangan terancang."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Mengikut garisan masa serangan, tentera Jepun mendarat di sebuah bandar di Sarawak pada 16 Disember 1941 sebelum bergerak ke Kuching dan Sibu. Bandar manakah ini?",
+      "options": [
+        "Miri",
+        "Labuan",
+        "Sandakan",
+        "Jesselton"
+      ],
+      "answer": "Miri",
+      "explanation": "Serangan tentera Jepun ke atas Sarawak bermula dengan pendaratan di Miri pada 16 Disember 1941.",
+      "tip": "16 Dis 1941 = Miri."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Mengikut laluan kemaraan utama di Tanah Melayu, sebuah bandar di Kedah ditawan tentera Jepun pada 12 Disember 1941. Bandar manakah ini?",
+      "options": [
+        "Jitra",
+        "Kota Bharu",
+        "Ipoh",
+        "Muar"
+      ],
+      "answer": "Jitra",
+      "explanation": "Jitra ditawan tentera Jepun pada 12 Disember 1941 mengikut laluan kemaraan utama.",
+      "tip": "12 Dis 1941 = Jitra."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sepasukan tentera Jepun mendarat di dua bandar di Thailand sebelum memasuki Kedah dan bergerak melalui pantai barat Tanah Melayu. Dua bandar manakah ini?",
+      "options": [
+        "Singgora dan Patani",
+        "Bangkok dan Chiang Mai",
+        "Kelantan dan Terengganu",
+        "Perlis dan Kedah"
+      ],
+      "answer": "Singgora dan Patani",
+      "explanation": "Laluan Pantai Barat bermula dengan pendaratan Jepun di Singgora dan Patani, Thailand, sebelum memasuki Kedah.",
+      "tip": "Pantai Barat = Singgora + Patani."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perbezaan antara Laluan Pantai Timur dengan Laluan Pantai Barat dalam kemaraan tentera Jepun di Tanah Melayu?",
+      "options": [
+        "Laluan Pantai Timur bermula dengan pendaratan di Kota Bharu, manakala Laluan Pantai Barat bermula dengan pendaratan di Singgora dan Patani sebelum memasuki Kedah",
+        "Kedua-dua laluan bermula di tempat yang sama",
+        "Laluan Pantai Timur hanya melibatkan tentera laut tanpa tentera darat",
+        "Laluan Pantai Barat tidak melibatkan sebarang pendaratan di luar Tanah Melayu"
+      ],
+      "answer": "Laluan Pantai Timur bermula dengan pendaratan di Kota Bharu, manakala Laluan Pantai Barat bermula dengan pendaratan di Singgora dan Patani sebelum memasuki Kedah",
+      "explanation": "Kedua-dua laluan bermula di lokasi berbeza sebelum bertemu bergerak menawan Tanah Melayu.",
+      "tip": "Timur = Kota Bharu; Barat = Singgora/Patani."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah persamaan antara faktor eksploitasi sumber bahan mentah dengan faktor kepentingan strategik ketenteraan sebagai sebab kedatangan Jepun?",
+      "options": [
+        "Kedua-duanya bertujuan mengukuhkan kedudukan ekonomi dan ketenteraan Jepun bagi menyokong usaha peluasan kuasa di Asia",
+        "Kedua-duanya tiada kaitan langsung dengan Perang Dunia Kedua",
+        "Kedua-duanya hanya melibatkan wilayah Sarawak sahaja",
+        "Kedua-duanya bertentangan dan tidak saling berkait"
+      ],
+      "answer": "Kedua-duanya bertujuan mengukuhkan kedudukan ekonomi dan ketenteraan Jepun bagi menyokong usaha peluasan kuasa di Asia",
+      "explanation": "Kedua-dua faktor ini saling berkait dalam usaha Jepun meluaskan kuasa dan mengukuhkan ekonominya.",
+      "tip": "Bahan mentah + strategik = peluasan kuasa."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah yang PALING tepat menerangkan sebab negara kita menjadi sasaran utama kedatangan Jepun?",
+      "options": [
+        "Kekayaan bahan mentah negara kita digabungkan dengan kedudukan strategik pangkalan Singapura dan laluan ke Sumatera serta Jawa menjadikannya sasaran ekonomi dan ketenteraan penting Jepun",
+        "Negara kita tidak mempunyai sebarang kepentingan kepada Jepun",
+        "Jepun menyerang negara kita secara rawak tanpa sebarang perancangan",
+        "Negara kita menjemput Jepun untuk mentadbirnya"
+      ],
+      "answer": "Kekayaan bahan mentah negara kita digabungkan dengan kedudukan strategik pangkalan Singapura dan laluan ke Sumatera serta Jawa menjadikannya sasaran ekonomi dan ketenteraan penting Jepun",
+      "explanation": "Gabungan kekayaan sumber dan kedudukan strategik menjadikan negara kita sasaran utama Jepun.",
+      "tip": "Bahan mentah + kedudukan strategik."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah yang PALING tepat merumuskan subtopik 3.5?",
+      "options": [
+        "Jepun datang ke negara kita kerana kekayaan bahan mentah dan kepentingan strategik ketenteraan, lalu melancarkan serangan pantas dan terancang di Tanah Melayu, Sarawak dan Sabah sehingga seluruh negara jatuh ke tangan Jepun",
+        "Jepun datang ke negara kita hanya kerana diminta oleh raja-raja Melayu",
+        "Jepun datang ke negara kita tanpa sebarang perancangan ketenteraan",
+        "Jepun datang ke negara kita selepas Perang Dunia Kedua tamat"
+      ],
+      "answer": "Jepun datang ke negara kita kerana kekayaan bahan mentah dan kepentingan strategik ketenteraan, lalu melancarkan serangan pantas dan terancang di Tanah Melayu, Sarawak dan Sabah sehingga seluruh negara jatuh ke tangan Jepun",
+      "explanation": "Rumusan ini merangkumi punca kedatangan Jepun serta jalannya serangan sehingga negara kita jatuh.",
+      "tip": "Rumusan = punca + serangan + jatuh."
+    }
+  ]
+}

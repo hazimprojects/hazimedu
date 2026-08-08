@@ -1,0 +1,216 @@
+{
+  "id": "3-4",
+  "title": "Perang Dunia Kedua di Asia Pasifik",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Perang Dunia Kedua di Asia Pasifik berlaku antara tahun berapa dan juga dikenali sebagai apa?",
+      "options": [
+        "1941 hingga 1945, juga dikenali sebagai Perang Pasifik",
+        "1939 hingga 1942, juga dikenali sebagai Perang Manchuria",
+        "1937 hingga 1941, juga dikenali sebagai Perang China-Jepun",
+        "1945 hingga 1949, juga dikenali sebagai Perang Korea"
+      ],
+      "answer": "1941 hingga 1945, juga dikenali sebagai Perang Pasifik",
+      "explanation": "Perang Dunia Kedua di Asia Pasifik berlaku antara 1941 hingga 1945 dan juga dikenali sebagai Perang Pasifik.",
+      "tip": "Asia Pasifik = 1941–1945 = Perang Pasifik."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah yang menjadi Perdana Menteri Jepun pada Oktober 1941 dan membawa Jepun ke kancah peperangan?",
+      "options": [
+        "Jeneral Hideki Tojo",
+        "Maharaja Hirohito",
+        "Jeneral Douglas MacArthur",
+        "Laksamana Isoroku Yamamoto"
+      ],
+      "answer": "Jeneral Hideki Tojo",
+      "explanation": "Jeneral Hideki Tojo menjadi Perdana Menteri Jepun pada Oktober 1941 dan membawa Jepun ke kancah peperangan.",
+      "tip": "Okt 1941 = Tojo PM."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Pada tarikh berapakah Jepun menyerang Tanah Melayu dan Pearl Harbor secara serentak?",
+      "options": [
+        "8 Disember 1941",
+        "1 September 1939",
+        "15 Februari 1942",
+        "6 Ogos 1945"
+      ],
+      "answer": "8 Disember 1941",
+      "explanation": "Jepun melancarkan serangan serentak ke atas Tanah Melayu dan Pearl Harbor pada 8 Disember 1941.",
+      "tip": "8 Dis 1941 = Tanah Melayu + Pearl Harbor."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah tarikh Jepun berjaya membentuk empayar yang luas di Asia Pasifik?",
+      "options": [
+        "April 1942",
+        "Disember 1941",
+        "Ogos 1945",
+        "September 1939"
+      ],
+      "answer": "April 1942",
+      "explanation": "Jepun berjaya membentuk empayar yang luas di Asia Pasifik menjelang April 1942.",
+      "tip": "April 1942 = empayar Jepun luas."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah Amerika Syarikat, British dan Belanda mengenakan sekatan ekonomi terhadap Jepun?",
+      "options": [
+        "Untuk menghalang Jepun memperoleh bahan mentah, melemahkan industri dan mengganggu operasi perangnya",
+        "Untuk membantu Jepun meningkatkan ekonominya",
+        "Kerana Jepun meminta bantuan ketenteraan daripada mereka",
+        "Untuk menggalakkan Jepun menyertai Liga Bangsa-Bangsa"
+      ],
+      "answer": "Untuk menghalang Jepun memperoleh bahan mentah, melemahkan industri dan mengganggu operasi perangnya",
+      "explanation": "Sekatan ekonomi bertujuan menghalang Jepun mendapat bahan mentah dan melemahkan kekuatan tentera serta industrinya.",
+      "tip": "Sekatan = lemahkan Jepun."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah Jepun menyerang Pearl Harbor pada 8 Disember 1941?",
+      "options": [
+        "Untuk melumpuhkan armada laut Amerika Syarikat di Pasifik supaya tidak dapat menyekat peluasan kuasa Jepun",
+        "Untuk membebaskan Filipina daripada penjajahan Amerika Syarikat",
+        "Kerana Amerika Syarikat menyerang Jepun terlebih dahulu",
+        "Untuk membantu Amerika Syarikat menentang Jerman"
+      ],
+      "answer": "Untuk melumpuhkan armada laut Amerika Syarikat di Pasifik supaya tidak dapat menyekat peluasan kuasa Jepun",
+      "explanation": "Serangan Pearl Harbor bertujuan melumpuhkan kekuatan tentera laut Amerika Syarikat di Pasifik.",
+      "tip": "Pearl Harbor = lumpuhkan armada AS."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah Asia Tenggara menjadi sasaran utama rancangan penaklukan wilayah selatan Jepun?",
+      "options": [
+        "Kerana kaya dengan bahan mentah seperti bijih timah, getah, bauksit dan petroleum",
+        "Kerana Asia Tenggara tidak mempunyai sebarang sumber semula jadi",
+        "Kerana Asia Tenggara sudah menjadi milik Jepun sebelum perang",
+        "Kerana penduduk Asia Tenggara meminta Jepun menakluki wilayah mereka"
+      ],
+      "answer": "Kerana kaya dengan bahan mentah seperti bijih timah, getah, bauksit dan petroleum",
+      "explanation": "Kekayaan bahan mentah menjadikan Asia Tenggara sasaran penting bagi rancangan penaklukan Jepun.",
+      "tip": "Bahan mentah = sasaran Asia Tenggara."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Pada tahun 1937, Jepun menduduki sebuah negara besar di Asia sebagai sebahagian daripada peluasan kuasanya. Negara manakah ini?",
+      "options": [
+        "China",
+        "Korea",
+        "Manchuria",
+        "Indochina"
+      ],
+      "answer": "China",
+      "explanation": "Jepun menduduki China pada tahun 1937 sebagai sebahagian daripada peluasan kuasa hingga Perang Dunia Kedua.",
+      "tip": "1937 = China."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Pada 1940, Jepun menandatangani perjanjian pakatan dengan dua negara Eropah untuk mengukuhkan hubungan dalam Kuasa Paksi. Dua negara manakah ini?",
+      "options": [
+        "Jerman dan Itali",
+        "Britain dan Perancis",
+        "Rusia dan Poland",
+        "Amerika Syarikat dan Belanda"
+      ],
+      "answer": "Jerman dan Itali",
+      "explanation": "Jepun menandatangani Perjanjian Pakatan Tiga Negara dengan Jerman dan Itali pada 1940.",
+      "tip": "1940 = Jerman + Itali."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Mengikut garisan masa serangan Jepun, sebuah pulau di Pasifik diserang dan ditawan Jepun pada 10 Disember 1941, dua hari selepas serangan Pearl Harbor. Pulau manakah ini?",
+      "options": [
+        "Pulau Guam",
+        "Pulau Wake",
+        "Hong Kong",
+        "Singapura"
+      ],
+      "answer": "Pulau Guam",
+      "explanation": "Jepun mendarat di Pulau Guam pada 10 Disember 1941, mengikut garisan masa serangan Asia Pasifik.",
+      "tip": "10 Dis 1941 = Guam."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perbezaan antara faktor \"keperluan perindustrian\" dengan faktor \"pengaruh golongan tentera\" dalam peluasan kuasa Jepun?",
+      "options": [
+        "Keperluan perindustrian berkaitan bahan mentah dan pasaran, manakala pengaruh golongan tentera berkaitan penguasaan politik dalam negara Jepun sendiri untuk menyelesaikan masalah ekonomi melalui penaklukan",
+        "Kedua-dua faktor ini adalah sama tanpa sebarang perbezaan",
+        "Keperluan perindustrian tiada kaitan dengan peluasan kuasa Jepun",
+        "Pengaruh golongan tentera hanya berlaku selepas Perang Dunia Kedua tamat"
+      ],
+      "answer": "Keperluan perindustrian berkaitan bahan mentah dan pasaran, manakala pengaruh golongan tentera berkaitan penguasaan politik dalam negara Jepun sendiri untuk menyelesaikan masalah ekonomi melalui penaklukan",
+      "explanation": "Kedua-dua faktor saling berkait tetapi menekankan aspek berbeza dalam mendorong peluasan kuasa Jepun.",
+      "tip": "Industri = bahan mentah; Tentera = politik dalam negeri."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah persamaan antara serangan ke atas Tanah Melayu dengan serangan ke atas Pearl Harbor?",
+      "options": [
+        "Kedua-duanya dilancarkan serentak pada 8 Disember 1941 sebagai sebahagian daripada strategi Jepun menguasai Asia Pasifik",
+        "Kedua-duanya dilancarkan oleh Kuasa Bersekutu terhadap Jepun",
+        "Kedua-duanya berlaku pada tahun yang berbeza jauh",
+        "Kedua-duanya tidak melibatkan sebarang kepentingan strategik"
+      ],
+      "answer": "Kedua-duanya dilancarkan serentak pada 8 Disember 1941 sebagai sebahagian daripada strategi Jepun menguasai Asia Pasifik",
+      "explanation": "Serangan serentak ini menandakan bermulanya Perang Dunia Kedua di Asia Pasifik.",
+      "tip": "Serentak 8 Dis 1941."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah yang PALING tepat menerangkan sebab Perang Dunia Kedua tercetus di Asia Pasifik?",
+      "options": [
+        "Gabungan kebangkitan Jepun sebagai kuasa tentera, keperluan bahan mentah, pengaruh golongan tentera dan sekatan ekonomi Kuasa Bersekutu mendesak Jepun melancarkan serangan serentak",
+        "Perang tercetus semata-mata kerana Jepun ingin membantu negara Asia Tenggara membangun",
+        "Perang tercetus kerana Tanah Melayu menyerang Jepun terlebih dahulu",
+        "Perang tercetus tanpa sebarang sebab ekonomi atau ketenteraan"
+      ],
+      "answer": "Gabungan kebangkitan Jepun sebagai kuasa tentera, keperluan bahan mentah, pengaruh golongan tentera dan sekatan ekonomi Kuasa Bersekutu mendesak Jepun melancarkan serangan serentak",
+      "explanation": "Gabungan pelbagai faktor mendesak Jepun bertindak agresif menyerang Asia Pasifik.",
+      "tip": "Gabungan faktor = punca sebenar."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah yang PALING tepat merumuskan subtopik 3.4?",
+      "options": [
+        "Perang Dunia Kedua di Asia Pasifik berpunca daripada peluasan kuasa Jepun dan sekatan ekonomi Kuasa Bersekutu, membawa kepada serangan serentak yang akhirnya mengorbankan jutaan nyawa dan memberi iktibar tentang kepentingan keamanan",
+        "Perang Dunia Kedua di Asia Pasifik tidak melibatkan Tanah Melayu langsung",
+        "Perang Dunia Kedua di Asia Pasifik berakhir sebelum ia bermula di Eropah",
+        "Perang Dunia Kedua di Asia Pasifik hanya melibatkan negara Eropah"
+      ],
+      "answer": "Perang Dunia Kedua di Asia Pasifik berpunca daripada peluasan kuasa Jepun dan sekatan ekonomi Kuasa Bersekutu, membawa kepada serangan serentak yang akhirnya mengorbankan jutaan nyawa dan memberi iktibar tentang kepentingan keamanan",
+      "explanation": "Rumusan ini merangkumi punca, jalannya perang serta iktibar besar daripada Perang Dunia Kedua.",
+      "tip": "Rumusan = punca + kesan + iktibar."
+    }
+  ]
+}

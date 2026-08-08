@@ -152,6 +152,8 @@ def sync_service_worker(versions: dict) -> bool:
                        rf"\g<1>{versions['main_js']}", new_block)
     new_block = re.sub(r"(/assets/js/zh-mode\.js\?v=)[^\"']+",
                        rf"\g<1>{versions['zh_mode_js']}", new_block)
+    new_block = re.sub(r"(/assets/js/subtopic-lab\.js\?v=)[^\"']+",
+                       rf"\g<1>{versions['subtopic_lab_js']}", new_block)
     new_block = re.sub(r"(/manifest\.json\?v=)[^\"']+",
                        rf"\g<1>{versions['manifest']}", new_block)
     for path_prefix, key in ICON_URL_PATTERNS.items():

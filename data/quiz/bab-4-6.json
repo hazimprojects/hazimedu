@@ -1,0 +1,216 @@
+{
+  "id": "4-6",
+  "title": "Penyerahan Sabah kepada Kerajaan British",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Pada bilakah Syarikat Borneo Utara British (SBUB) menandatangani perjanjian penyerahan Sabah dengan kerajaan British?",
+      "options": [
+        "26 Jun 1946",
+        "28 September 1945",
+        "19 Oktober 1945",
+        "1 Julai 1946"
+      ],
+      "answer": "26 Jun 1946",
+      "explanation": "SBUB menandatangani perjanjian dengan kerajaan British pada 26 Jun 1946.",
+      "tip": "26 Jun 1946 = SBUB tandatangan."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah Gabenor British pertama di Sabah selepas dijadikan tanah jajahan?",
+      "options": [
+        "Sir Edward Twining",
+        "C.F.C. Macaskie",
+        "Clement Attlee",
+        "Sir Edward Gent"
+      ],
+      "answer": "Sir Edward Twining",
+      "explanation": "Gabenor British pertama di Sabah ialah Sir Edward Twining.",
+      "tip": "Twining = Gabenor pertama Sabah."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah yang mengetuai BMA di Sabah?",
+      "options": [
+        "C.F.C. Macaskie",
+        "Sir Edward Twining",
+        "Clement Attlee",
+        "Lord Mountbatten"
+      ],
+      "answer": "C.F.C. Macaskie",
+      "explanation": "BMA di Sabah diketuai oleh C.F.C. Macaskie.",
+      "tip": "Macaskie = ketua BMA Sabah."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Bandar manakah yang dibebaskan daripada Jepun pada 28 September 1945?",
+      "options": [
+        "Kota Kinabalu",
+        "Sandakan",
+        "Kuching",
+        "Kudat"
+      ],
+      "answer": "Kota Kinabalu",
+      "explanation": "Kota Kinabalu dibebaskan daripada Jepun pada 28 September 1945.",
+      "tip": "28 Sept 1945 = Kota Kinabalu bebas."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah British melihat Sabah sebagai wilayah penting untuk kepentingan mereka selepas perang?",
+      "options": [
+        "Kerana Sabah kaya dengan sumber bahan mentah dan sesuai dijadikan kawasan pasaran bagi barangan British, terutama ketika British sedang menyelesaikan isu kemerdekaan India, Sri Lanka dan Burma",
+        "Kerana Sabah tidak mempunyai sebarang nilai ekonomi kepada British",
+        "Kerana Sabah telah menjadi tanah jajahan British sejak zaman purba",
+        "Kerana Sabah ingin diserahkan kepada Jepun semula"
+      ],
+      "answer": "Kerana Sabah kaya dengan sumber bahan mentah dan sesuai dijadikan kawasan pasaran bagi barangan British, terutama ketika British sedang menyelesaikan isu kemerdekaan India, Sri Lanka dan Burma",
+      "explanation": "Sabah dilihat penting kerana kaya bahan mentah dan pasaran, ketika British kehilangan pengaruh di India, Sri Lanka dan Burma.",
+      "tip": "Kaya sumber + ganti kepentingan lain."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah SBUB lebih mudah membuat keputusan menyerahkan Sabah kepada kerajaan British?",
+      "options": [
+        "Kerana hubungan luar dan pertahanan Sabah sudah pun berada di bawah naungan British sejak zaman pemerintahan SBUB",
+        "Kerana SBUB tidak pernah mempunyai sebarang hubungan dengan British",
+        "Kerana Sabah sudah menjadi tanah jajahan Jepun secara kekal",
+        "Kerana rakyat Sabah menuntut penyerahan segera kepada British"
+      ],
+      "answer": "Kerana hubungan luar dan pertahanan Sabah sudah pun berada di bawah naungan British sejak zaman pemerintahan SBUB",
+      "explanation": "Hubungan luar dan pertahanan Sabah sudah dikuasai British semasa pemerintahan SBUB, memudahkan penyerahan.",
+      "tip": "Naungan sedia ada = mudah serah."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah SBUB menghadapi masalah kewangan yang serius selepas Perang Dunia Kedua?",
+      "options": [
+        "Kerana tentera Jepun memusnahkan bandar penting seperti Jesselton, Kudat dan Sandakan sehingga kos pemulihan menjadi sangat besar",
+        "Kerana SBUB tidak pernah memiliki sebarang aset di Sabah",
+        "Kerana British enggan memberikan sebarang dana kepada SBUB sejak awal penubuhannya",
+        "Kerana rakyat Sabah enggan membayar cukai kepada SBUB"
+      ],
+      "answer": "Kerana tentera Jepun memusnahkan bandar penting seperti Jesselton, Kudat dan Sandakan sehingga kos pemulihan menjadi sangat besar",
+      "explanation": "Kemusnahan bandar penting oleh Jepun menyebabkan kos pemulihan yang besar dan masalah kewangan SBUB.",
+      "tip": "Bandar musnah = kos besar."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Perdana Menteri Britain, Clement Attlee, sedang menyelesaikan isu pemberian kemerdekaan kepada Sri Lanka, India dan Burma pada masa yang sama Sabah diserahkan. Apakah kaitan situasi ini dengan penyerahan Sabah?",
+      "options": [
+        "Sabah dilihat sebagai wilayah yang berpotensi menggantikan kepentingan British yang semakin hilang di kawasan lain",
+        "British terus kehilangan semua kepentingan ekonomi di Asia tanpa sebarang pengganti",
+        "Sabah diberikan kemerdekaan serentak dengan India dan Burma",
+        "British menghentikan sepenuhnya dasar penjajahan selepas perang"
+      ],
+      "answer": "Sabah dilihat sebagai wilayah yang berpotensi menggantikan kepentingan British yang semakin hilang di kawasan lain",
+      "explanation": "Dalam keadaan kehilangan pengaruh di India/Sri Lanka/Burma, Sabah dilihat berpotensi menggantikan kepentingan British.",
+      "tip": "Hilang di sana, gantikan di Sabah."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Kerajaan memerlukan kos besar membaiki prasarana, bangunan, kemudahan pelabuhan dan kemudahan awam di Sabah selepas perang. Faktor manakah yang paling berkait dengan situasi ini?",
+      "options": [
+        "Masalah kewangan SBUB",
+        "Memenuhi kepentingan British",
+        "Meneruskan dasar British dalam hubungan luar",
+        "Perlantikan Gabenor Sir Edward Twining"
+      ],
+      "answer": "Masalah kewangan SBUB",
+      "explanation": "Kos besar membaiki prasarana berkait terus dengan masalah kewangan yang dihadapi SBUB.",
+      "tip": "Baiki prasarana = kos = kewangan."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Selepas 26 Jun 1946, Sabah ditadbir oleh seorang Gabenor British yang bertindak sebagai Ketua Kerajaan. Apakah status Sabah pada peringkat ini?",
+      "options": [
+        "Tanah jajahan British",
+        "Negeri naungan British Military Administration",
+        "Wilayah bebas tanpa pentadbiran luar",
+        "Sebahagian daripada Malayan Union"
+      ],
+      "answer": "Tanah jajahan British",
+      "explanation": "Selepas perjanjian 26 Jun 1946, Sabah dijadikan tanah jajahan British dengan Gabenor sebagai Ketua Kerajaan.",
+      "tip": "Gabenor + ketua kerajaan = tanah jajahan."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perbezaan antara faktor 'memenuhi kepentingan British' dengan faktor 'masalah kewangan SBUB' dalam penyerahan Sabah?",
+      "options": [
+        "Faktor pertama berpunca daripada keperluan strategik/ekonomi British sendiri, manakala faktor kedua berpunca daripada kelemahan kewangan dalaman SBUB akibat kemusnahan perang",
+        "Kedua-dua faktor ini sebenarnya sama sepenuhnya tanpa sebarang perbezaan",
+        "Faktor pertama berpunca daripada SBUB manakala faktor kedua berpunca daripada British",
+        "Kedua-dua faktor ini tidak mempunyai kaitan langsung dengan penyerahan Sabah"
+      ],
+      "answer": "Faktor pertama berpunca daripada keperluan strategik/ekonomi British sendiri, manakala faktor kedua berpunca daripada kelemahan kewangan dalaman SBUB akibat kemusnahan perang",
+      "explanation": "Kepentingan British berpunca dari luar (keperluan British), masalah kewangan berpunca dari dalam (kelemahan SBUB).",
+      "tip": "Luar (British) vs dalam (SBUB)."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah persamaan antara faktor penyerahan Sabah dengan faktor penyerahan Sarawak kepada British?",
+      "options": [
+        "Kedua-duanya melibatkan kerosakan/masalah kewangan selepas perang serta kepentingan strategik British sebagai pendorong penyerahan",
+        "Kedua-duanya tidak melibatkan sebarang unsur ekonomi langsung",
+        "Kedua-duanya diserahkan oleh individu yang sama iaitu Vyner Brooke",
+        "Kedua-duanya diserahkan pada tarikh yang sama tepat"
+      ],
+      "answer": "Kedua-duanya melibatkan kerosakan/masalah kewangan selepas perang serta kepentingan strategik British sebagai pendorong penyerahan",
+      "explanation": "Kedua-dua penyerahan Sabah dan Sarawak melibatkan masalah kewangan selepas perang dan kepentingan strategik British.",
+      "tip": "Sabah & Sarawak: wang + kepentingan British."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah PALING kukuh menunjukkan penyerahan Sabah didorong oleh kepentingan British, bukan semata-mata kebajikan rakyat Sabah?",
+      "options": [
+        "British menjadikan Sabah wilayah menggantikan kepentingan yang hilang di India, Sri Lanka dan Burma, sekali gus menguasai sumber bahan mentah dan pasaran barangannya",
+        "British tidak pernah mengambil sebarang faedah ekonomi daripada Sabah",
+        "SBUB menyerahkan Sabah semata-mata atas permintaan rakyat tempatan",
+        "British menolak sepenuhnya tawaran menguasai Sabah selepas perang"
+      ],
+      "answer": "British menjadikan Sabah wilayah menggantikan kepentingan yang hilang di India, Sri Lanka dan Burma, sekali gus menguasai sumber bahan mentah dan pasaran barangannya",
+      "explanation": "Motif British menggantikan kepentingan yang hilang serta menguasai sumber ekonomi menunjukkan penyerahan didorong kepentingan British.",
+      "tip": "Ganti kepentingan + kuasai sumber."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah PALING tepat merumuskan subtopik 4.6?",
+      "options": [
+        "Penyerahan Sabah kepada British berlaku akibat kepentingan British, penguasaan hubungan luar sedia ada dan masalah kewangan SBUB selepas perang",
+        "Penyerahan Sabah berlaku semata-mata atas permintaan rakyat Sabah sendiri",
+        "Penyerahan Sabah tidak melibatkan sebarang faktor ekonomi atau strategik",
+        "Sabah kekal di bawah pemerintahan SBUB selepas Perang Dunia Kedua"
+      ],
+      "answer": "Penyerahan Sabah kepada British berlaku akibat kepentingan British, penguasaan hubungan luar sedia ada dan masalah kewangan SBUB selepas perang",
+      "explanation": "Rumusan menggabungkan tiga faktor utama penyerahan Sabah kepada British.",
+      "tip": "3 faktor = rumusan 4.6."
+    }
+  ]
+}

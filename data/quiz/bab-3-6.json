@@ -1,0 +1,216 @@
+{
+  "id": "3-6",
+  "title": "Dasar Pendudukan Jepun di Negara Kita",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah nama Singapura semasa pendudukan Jepun?",
+      "options": [
+        "Syonan-to",
+        "Malai Baru",
+        "Kita Boruneo",
+        "Nippon Go"
+      ],
+      "answer": "Syonan-to",
+      "explanation": "Singapura dikenali sebagai Syonan-to (Pulau Cahaya Selatan) dan diasingkan pentadbirannya daripada Tanah Melayu.",
+      "tip": "Singapura = Syonan-to."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah nama mata wang Jepun yang dikenali oleh rakyat sebagai bentuk sindiran?",
+      "options": [
+        "Wang pokok pisang",
+        "Wang emas Nippon",
+        "Wang Kimigayo",
+        "Wang Syonan"
+      ],
+      "answer": "Wang pokok pisang",
+      "explanation": "Mata wang Jepun dikenali rakyat sebagai wang pokok pisang, dicetak tanpa kawalan sehingga menyebabkan inflasi.",
+      "tip": "Mata wang Jepun = wang pokok pisang."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Berapakah panjang Landasan Kereta Api Maut yang dibina Jepun dari Thailand ke Burma?",
+      "options": [
+        "415 kilometer",
+        "215 kilometer",
+        "615 kilometer",
+        "115 kilometer"
+      ],
+      "answer": "415 kilometer",
+      "explanation": "Landasan Kereta Api Maut yang dibina dari Thailand ke Burma berukuran 415 kilometer.",
+      "tip": "Landasan Maut = 415 km."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah yang mengetuai penubuhan Tentera Kebangsaan India dengan bantuan Jepun?",
+      "options": [
+        "Subhas Chandra Bose",
+        "Mahatma Gandhi",
+        "Jawaharlal Nehru",
+        "Chin Peng"
+      ],
+      "answer": "Subhas Chandra Bose",
+      "explanation": "Jepun membantu orang India menubuhkan Tentera Kebangsaan India di bawah pimpinan Subhas Chandra Bose.",
+      "tip": "Tentera Kebangsaan India = Subhas Chandra Bose."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah berlaku inflasi teruk akibat pencetakan wang pokok pisang?",
+      "options": [
+        "Jepun mencetak wang tanpa kawalan sehingga terlalu banyak wang beredar tetapi bekalan barangan tidak mencukupi",
+        "Rakyat enggan menggunakan wang pokok pisang langsung",
+        "Jepun tidak pernah mencetak wang tambahan semasa pendudukan",
+        "British menggantikan wang Jepun dengan mata wang baharu semasa pendudukan"
+      ],
+      "answer": "Jepun mencetak wang tanpa kawalan sehingga terlalu banyak wang beredar tetapi bekalan barangan tidak mencukupi",
+      "explanation": "Percetakan tanpa kawalan menyebabkan wang berlebihan beredar sedangkan barangan semakin berkurangan di pasaran.",
+      "tip": "Cetak tanpa kawal = inflasi."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah tentera Jepun menunjukkan sikap lebih berhati-hati dan hormat terhadap agama Islam dan adat Melayu?",
+      "options": [
+        "Untuk membendung kegiatan penentangan penduduk tempatan terhadap pendudukan Jepun",
+        "Kerana Jepun menganut agama Islam",
+        "Kerana Raja-raja Melayu mengugut Jepun dengan kekerasan",
+        "Kerana British mendesak Jepun berbuat demikian"
+      ],
+      "answer": "Untuk membendung kegiatan penentangan penduduk tempatan terhadap pendudukan Jepun",
+      "explanation": "Sikap hormat ini bertujuan mengurangkan risiko penentangan penduduk Melayu terhadap Jepun.",
+      "tip": "Hormat Islam = elak penentangan."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah Tanah Melayu dan Sumatera ditadbir secara berasingan mulai April 1944?",
+      "options": [
+        "Kerana terdapat perbezaan sistem politik dan ekonomi yang ketara di bawah pentadbiran British dan Belanda sebelum perang",
+        "Kerana penduduk Tanah Melayu dan Sumatera saling bermusuhan",
+        "Kerana Jepun kehilangan kawalan sepenuhnya ke atas kedua-dua wilayah",
+        "Kerana Sumatera diserahkan kepada British semula pada 1944"
+      ],
+      "answer": "Kerana terdapat perbezaan sistem politik dan ekonomi yang ketara di bawah pentadbiran British dan Belanda sebelum perang",
+      "explanation": "Perbezaan sistem sebelum perang menyebabkan pentadbiran kedua-dua wilayah dipisahkan pada April 1944.",
+      "tip": "Beza sistem British/Belanda = pisah tadbir."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Empat buah negeri di utara Tanah Melayu dipindahkan pentadbirannya kepada kerajaan Thailand semasa pendudukan Jepun. Empat negeri manakah ini?",
+      "options": [
+        "Perlis, Kedah, Kelantan dan Terengganu",
+        "Perak, Selangor, Melaka dan Johor",
+        "Sarawak, Sabah, Brunei dan Labuan",
+        "Pahang, Negeri Sembilan, Perlis dan Kedah"
+      ],
+      "answer": "Perlis, Kedah, Kelantan dan Terengganu",
+      "explanation": "Perlis, Kedah, Kelantan dan Terengganu dipindahkan di bawah pentadbiran kerajaan Thailand semasa pendudukan Jepun.",
+      "tip": "4 negeri utara = bawah Thailand."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sebuah badan polis tentera Jepun bertindak kejam dan ganas, menyeksa serta membunuh orang awam yang disyaki menentang Jepun. Badan manakah ini?",
+      "options": [
+        "Kempeitai",
+        "Koa Kunrenjo",
+        "Kakeo Kokokai",
+        "Giyu Gun"
+      ],
+      "answer": "Kempeitai",
+      "explanation": "Kempeitai ialah polis tentera Jepun yang bertindak kejam untuk menjaga kepentingan pentadbiran tentera Jepun.",
+      "tip": "Polis kejam Jepun = Kempeitai."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Jepun menubuhkan sebuah institut untuk melatih pemimpin tempatan muda supaya menyokong cita-cita politik Jepun. Apakah nama institut ini?",
+      "options": [
+        "Koa Kunrenjo",
+        "Kempeitai",
+        "Kita Boruneo",
+        "Nippon Seishin"
+      ],
+      "answer": "Koa Kunrenjo",
+      "explanation": "Koa Kunrenjo atau Institut Latihan Pemimpin-pemimpin Muda ditubuhkan untuk melatih pemimpin tempatan menyokong Jepun.",
+      "tip": "Latih pemimpin muda = Koa Kunrenjo."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perbezaan utama antara layanan Jepun terhadap orang Melayu dengan layanan terhadap orang Cina semasa pendudukan?",
+      "options": [
+        "Orang Melayu diberi layanan lebih baik jika bekerjasama, manakala orang Cina menerima layanan paling kejam akibat permusuhan dalam Perang China-Jepun",
+        "Kedua-dua kaum menerima layanan yang sama tanpa perbezaan",
+        "Orang Cina diberi layanan terbaik berbanding semua kaum lain",
+        "Orang Melayu menerima layanan paling kejam berbanding kaum lain"
+      ],
+      "answer": "Orang Melayu diberi layanan lebih baik jika bekerjasama, manakala orang Cina menerima layanan paling kejam akibat permusuhan dalam Perang China-Jepun",
+      "explanation": "Layanan Jepun berbeza mengikut kaum, dengan orang Cina menerima kekejaman paling teruk.",
+      "tip": "Melayu kerjasama = baik; Cina = paling kejam."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah persamaan antara Dasar Ekonomi dan Dasar Sosial Jepun terhadap negara kita?",
+      "options": [
+        "Kedua-dua dasar ini pada asasnya bertujuan mengawal sumber dan kehidupan rakyat bagi menyokong keperluan tentera Jepun semasa perang",
+        "Kedua-dua dasar ini tidak memberi sebarang kesan kepada rakyat",
+        "Kedua-dua dasar ini hanya melibatkan pendidikan sahaja",
+        "Kedua-dua dasar ini diperkenalkan selepas Jepun menyerah kalah"
+      ],
+      "answer": "Kedua-dua dasar ini pada asasnya bertujuan mengawal sumber dan kehidupan rakyat bagi menyokong keperluan tentera Jepun semasa perang",
+      "explanation": "Ekonomi kawalan dan catuan makanan sama-sama bertujuan menyalurkan sumber untuk keperluan perang Jepun.",
+      "tip": "Ekonomi + sosial = kawal untuk perang."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah yang PALING tepat menerangkan kesan keseluruhan dasar pendudukan Jepun terhadap rakyat negara kita?",
+      "options": [
+        "Dasar pentadbiran, ekonomi dan sosial Jepun secara kolektif membawa kesengsaraan hidup, tetapi turut membangkitkan semangat juang dan mempercepatkan nasionalisme",
+        "Dasar pendudukan Jepun hanya memberi kesan positif tanpa sebarang kesukaran",
+        "Dasar pendudukan Jepun tidak memberi sebarang kesan jangka panjang",
+        "Dasar pendudukan Jepun hanya melibatkan aspek ketenteraan semata-mata"
+      ],
+      "answer": "Dasar pentadbiran, ekonomi dan sosial Jepun secara kolektif membawa kesengsaraan hidup, tetapi turut membangkitkan semangat juang dan mempercepatkan nasionalisme",
+      "explanation": "Kesengsaraan akibat dasar pendudukan Jepun akhirnya membangkitkan kesedaran nasionalisme rakyat.",
+      "tip": "Sengsara → semangat + nasionalisme."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah yang PALING tepat merumuskan subtopik 3.6?",
+      "options": [
+        "Jepun mentadbir negara kita melalui dasar pentadbiran, ekonomi dan sosial yang ketat demi mengukuhkan kekuasaan dan menyokong perang, sekali gus membuktikan kekejaman penjajah membangkitkan kesedaran mempertahankan kedaulatan",
+        "Jepun mentadbir negara kita tanpa sebarang dasar tersusun",
+        "Jepun mentadbir negara kita hanya melalui dasar ekonomi semata-mata",
+        "Jepun mentadbir negara kita dengan bekerjasama sepenuhnya bersama British"
+      ],
+      "answer": "Jepun mentadbir negara kita melalui dasar pentadbiran, ekonomi dan sosial yang ketat demi mengukuhkan kekuasaan dan menyokong perang, sekali gus membuktikan kekejaman penjajah membangkitkan kesedaran mempertahankan kedaulatan",
+      "explanation": "Rumusan ini merangkumi tiga dasar utama dan iktibar besar daripada pendudukan Jepun.",
+      "tip": "Rumusan = 3 dasar + kesedaran kedaulatan."
+    }
+  ]
+}

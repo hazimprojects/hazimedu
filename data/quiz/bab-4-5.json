@@ -1,0 +1,216 @@
+{
+  "id": "4-5",
+  "title": "Reaksi Penduduk Tempatan terhadap Penyerahan Sarawak",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah tokoh yang memimpin golongan yang menentang penyerahan Sarawak kepada British?",
+      "options": [
+        "Datu Patinggi Abang Haji Abdillah",
+        "Datu Bandar Abang Haji Mustapha",
+        "Datu Amar Abang Haji Suleiman",
+        "Rosli Dhoby"
+      ],
+      "answer": "Datu Patinggi Abang Haji Abdillah",
+      "explanation": "Golongan yang menentang penyerahan Sarawak dipimpin oleh Datu Patinggi Abang Haji Abdillah.",
+      "tip": "Abang Haji Abdillah = pemimpin bantahan."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah nama peristiwa pembunuhan Duncan Stewart oleh Rosli Dhoby pada 3 Disember 1949?",
+      "options": [
+        "Sungkit Berdarah",
+        "Hari Kematian",
+        "Rukun 13",
+        "No Cession"
+      ],
+      "answer": "Sungkit Berdarah",
+      "explanation": "Pembunuhan Duncan Stewart oleh Rosli Dhoby dikenali sebagai peristiwa Sungkit Berdarah.",
+      "tip": "Stewart ditikam = Sungkit Berdarah."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Berapa orangkah kakitangan kerajaan yang meletakkan jawatan sebagai bantahan pada 2 April 1947?",
+      "options": [
+        "409 orang",
+        "500 orang",
+        "56 orang",
+        "16 orang"
+      ],
+      "answer": "409 orang",
+      "explanation": "Seramai 409 orang kakitangan kerajaan meletakkan jawatan pada 2 April 1947 sebagai bantahan.",
+      "tip": "409 kakitangan letak jawatan."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah nama kumpulan sulit yang ditubuhkan pada 20 Ogos 1948 oleh golongan muda gerakan antipenyerahan?",
+      "options": [
+        "Rukun 13",
+        "Sarawak Dayak Association",
+        "Young Malay Association",
+        "Barisan Pemuda Sarawak"
+      ],
+      "answer": "Rukun 13",
+      "explanation": "Rukun 13 ditubuhkan secara sulit pada 20 Ogos 1948 oleh golongan muda dalam gerakan antipenyerahan.",
+      "tip": "20 Ogos 1948 = Rukun 13."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah golongan antipenyerahan menganggap tindakan Vyner Brooke melanggar Perlembagaan 1941?",
+      "options": [
+        "Kerana Prinsip Kelapan Perlembagaan 1941 menjanjikan pemerintahan sendiri kepada Sarawak, tetapi penyerahan menafikan hak tersebut",
+        "Kerana Perlembagaan 1941 tidak pernah menyebut apa-apa tentang pemerintahan Sarawak",
+        "Kerana Vyner Brooke tidak pernah menandatangani sebarang perjanjian penyerahan",
+        "Kerana Perlembagaan 1941 memberi kebenaran penuh kepada British menguasai Sarawak"
+      ],
+      "answer": "Kerana Prinsip Kelapan Perlembagaan 1941 menjanjikan pemerintahan sendiri kepada Sarawak, tetapi penyerahan menafikan hak tersebut",
+      "explanation": "Prinsip Kelapan menjanjikan pemerintahan sendiri; penyerahan Sarawak dianggap menafikan hak tersebut.",
+      "tip": "Prinsip 8 = janji berkerajaan sendiri."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah golongan propenyerahan percaya penyerahan Sarawak kepada British adalah baik?",
+      "options": [
+        "Kerana mereka percaya British dapat memajukan negeri, meningkatkan taraf hidup rakyat dan membuka peluang pekerjaan",
+        "Kerana mereka mahu Sarawak terus musnah tanpa sebarang pembangunan",
+        "Kerana mereka mahu menghapuskan semua bentuk pentadbiran tempatan",
+        "Kerana mereka dipaksa oleh Rukun 13 untuk menyokong British"
+      ],
+      "answer": "Kerana mereka percaya British dapat memajukan negeri, meningkatkan taraf hidup rakyat dan membuka peluang pekerjaan",
+      "explanation": "Golongan propenyerahan percaya British dapat memajukan negeri, taraf hidup dan peluang pekerjaan.",
+      "tip": "Sokong = harap kemajuan."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah British mengeluarkan Pekeliling No. 9/1946 (Circular No. 9)?",
+      "options": [
+        "Untuk melarang pegawai awam menyertai gerakan antipenyerahan bagi melemahkan penentangan yang dipimpin guru dan pegawai kerajaan",
+        "Untuk memberikan kenaikan gaji kepada semua kakitangan kerajaan Sarawak",
+        "Untuk mengiktiraf Rukun 13 sebagai pertubuhan rasmi",
+        "Untuk memberikan taraf kemerdekaan segera kepada Sarawak"
+      ],
+      "answer": "Untuk melarang pegawai awam menyertai gerakan antipenyerahan bagi melemahkan penentangan yang dipimpin guru dan pegawai kerajaan",
+      "explanation": "British mengeluarkan pekeliling itu kerana sedar gerakan antipenyerahan dipimpin oleh guru dan pegawai awam.",
+      "tip": "Pekeliling 9 = larang pegawai bantah."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sekumpulan wanita mengadakan kempen kesedaran di rumah panjang untuk menggerakkan penentangan terhadap penyerahan Sarawak. Siapakah tokoh yang mengetuai usaha ini?",
+      "options": [
+        "Cikgu Lily Eberwein",
+        "Datin Puteh Mariah Ibrahim Rashid",
+        "Hajah Sipah Tuanku Othman",
+        "Dayang Fauziah"
+      ],
+      "answer": "Cikgu Lily Eberwein",
+      "explanation": "Cikgu Lily Eberwein mengetuai kaum ibu mengadakan kempen kesedaran di rumah panjang.",
+      "tip": "Rumah panjang = Cikgu Lily."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Anthony Brooke membawa kes membantah penyerahan Sarawak ke Mahkamah Tinggi Brunei pada 16 Julai 1948, namun rayuannya ditolak. Apakah ini menggambarkan?",
+      "options": [
+        "Usaha golongan antipenyerahan melalui saluran perundangan yang akhirnya gagal",
+        "Kejayaan penuh golongan antipenyerahan membatalkan penyerahan Sarawak",
+        "Sokongan penuh Mahkamah Tinggi Brunei terhadap gerakan antipenyerahan",
+        "Penarikan diri Anthony Brooke daripada perjuangan menentang penyerahan"
+      ],
+      "answer": "Usaha golongan antipenyerahan melalui saluran perundangan yang akhirnya gagal",
+      "explanation": "Rayuan Anthony Brooke di Mahkamah Tinggi Brunei ditolak, menunjukkan usaha perundangan yang gagal.",
+      "tip": "Rayuan ditolak = usaha gagal."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Selepas peristiwa Sungkit Berdarah, British menutup pejabat PPM, PKMS, BPS dan ASAS dalam tempoh 6–7 Disember 1949. Apakah tujuan tindakan ini?",
+      "options": [
+        "Menindas dan melumpuhkan gerakan antipenyerahan yang tinggal selepas pembunuhan Duncan Stewart",
+        "Memberi lebih banyak kebebasan kepada pertubuhan antipenyerahan",
+        "Menyerahkan semula Sarawak kepada keturunan Brooke",
+        "Meraikan kejayaan gerakan antipenyerahan Sarawak"
+      ],
+      "answer": "Menindas dan melumpuhkan gerakan antipenyerahan yang tinggal selepas pembunuhan Duncan Stewart",
+      "explanation": "Peristiwa Sungkit Berdarah memberi peluang kepada British menindas gerakan antipenyerahan.",
+      "tip": "Sungkit Berdarah = peluang tindas."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perbezaan utama antara pandangan golongan yang menentang dengan golongan yang menyokong penyerahan Sarawak?",
+      "options": [
+        "Golongan menentang melihatnya sebagai penjajahan baharu dan pelanggaran Perlembagaan 1941, manakala golongan menyokong melihatnya sebagai peluang kemajuan dan pekerjaan",
+        "Kedua-dua golongan mempunyai pandangan yang sama sepenuhnya terhadap penyerahan",
+        "Golongan menentang menyokong penuh British manakala golongan menyokong menentang British",
+        "Kedua-dua golongan tidak mempunyai sebarang alasan untuk pendirian masing-masing"
+      ],
+      "answer": "Golongan menentang melihatnya sebagai penjajahan baharu dan pelanggaran Perlembagaan 1941, manakala golongan menyokong melihatnya sebagai peluang kemajuan dan pekerjaan",
+      "explanation": "Golongan menentang fokus kepada penjajahan/perlembagaan; golongan menyokong fokus kepada kemajuan/pekerjaan.",
+      "tip": "Tentang = jajah; sokong = maju."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah persamaan antara tindakan 'meletakkan jawatan beramai-ramai' dengan tindakan 'menggunakan akhbar Utusan Sarawak' dalam gerakan antipenyerahan?",
+      "options": [
+        "Kedua-duanya merupakan bentuk bantahan aman yang cuba menekan kerajaan British tanpa menggunakan kekerasan",
+        "Kedua-duanya melibatkan pembunuhan pegawai British",
+        "Kedua-duanya bertujuan menyokong penyerahan Sarawak kepada British",
+        "Kedua-duanya diarahkan terus oleh kerajaan British sendiri"
+      ],
+      "answer": "Kedua-duanya merupakan bentuk bantahan aman yang cuba menekan kerajaan British tanpa menggunakan kekerasan",
+      "explanation": "Peletakan jawatan dan penggunaan akhbar kedua-duanya bentuk bantahan aman gerakan antipenyerahan.",
+      "tip": "Letak jawatan & akhbar = bantahan aman."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah PALING kukuh menunjukkan gerakan antipenyerahan Sarawak amat bersungguh-sungguh walaupun akhirnya gagal?",
+      "options": [
+        "Gerakan itu melibatkan persidangan, demonstrasi, peletakan jawatan beramai-ramai, akhbar, surat bantahan, rayuan mahkamah dan penubuhan Rukun 13",
+        "Gerakan itu hanya melibatkan satu surat bantahan tunggal tanpa sebarang tindakan lain",
+        "Gerakan itu tidak pernah mendapat sokongan sesiapa pun di Sarawak",
+        "Gerakan itu berjaya membatalkan penyerahan Sarawak sepenuhnya"
+      ],
+      "answer": "Gerakan itu melibatkan persidangan, demonstrasi, peletakan jawatan beramai-ramai, akhbar, surat bantahan, rayuan mahkamah dan penubuhan Rukun 13",
+      "explanation": "Pelbagai bentuk bantahan menunjukkan kesungguhan gerakan antipenyerahan walaupun akhirnya gagal.",
+      "tip": "Banyak cara = bersungguh-sungguh."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah PALING tepat merumuskan subtopik 4.5?",
+      "options": [
+        "Penyerahan Sarawak mencetuskan dua reaksi berbeza, dan walaupun gerakan antipenyerahan akhirnya gagal, ia membangkitkan kesedaran politik penduduk tempatan",
+        "Semua penduduk Sarawak sebulat suara menentang penyerahan tanpa sebarang golongan yang menyokong",
+        "Gerakan antipenyerahan berjaya sepenuhnya membatalkan penyerahan Sarawak kepada British",
+        "Reaksi penduduk tempatan terhadap penyerahan Sarawak tidak memberi sebarang kesan jangka panjang"
+      ],
+      "answer": "Penyerahan Sarawak mencetuskan dua reaksi berbeza, dan walaupun gerakan antipenyerahan akhirnya gagal, ia membangkitkan kesedaran politik penduduk tempatan",
+      "explanation": "Rumusan menggabungkan dua reaksi berbeza dan kesan kesedaran politik walaupun gerakan gagal.",
+      "tip": "2 reaksi + kesedaran politik."
+    }
+  ]
+}

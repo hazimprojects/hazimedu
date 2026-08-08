@@ -1,0 +1,216 @@
+{
+  "id": "4-2",
+  "title": "Gagasan Malayan Union",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah yang mengetuai Unit Perancang Tanah Melayu yang merangka Malayan Union?",
+      "options": [
+        "Mejar Jeneral Ralph Hone",
+        "Lord Mountbatten",
+        "Sir Harold MacMichael",
+        "George Henry Hall"
+      ],
+      "answer": "Mejar Jeneral Ralph Hone",
+      "explanation": "Unit Perancang Tanah Melayu diketuai oleh Mejar Jeneral Ralph Hone.",
+      "tip": "Ralph Hone = ketua unit perancang."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Pada bilakah Malayan Union mula dilaksanakan di Tanah Melayu?",
+      "options": [
+        "1 April 1946",
+        "22 Januari 1946",
+        "10 Oktober 1945",
+        "12 September 1945"
+      ],
+      "answer": "1 April 1946",
+      "explanation": "Malayan Union dilaksanakan di Tanah Melayu pada 1 April 1946.",
+      "tip": "1 April 1946 = laksana MU."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah nama dokumen rasmi yang mengisytiharkan rancangan Malayan Union?",
+      "options": [
+        "Kertas Putih 6724",
+        "Perlembagaan 1941",
+        "Deklarasi 14 Perkara",
+        "Rang Undang-Undang Cession Bill"
+      ],
+      "answer": "Kertas Putih 6724",
+      "explanation": "Rancangan Malayan Union diisytiharkan dalam Warta Kerajaan sebagai Kertas Putih 6724.",
+      "tip": "Warta = Kertas Putih 6724."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah dua tokoh utama yang dihantar British untuk mendapatkan tandatangan Raja-raja Melayu bagi Malayan Union?",
+      "options": [
+        "H.C. Willan dan Sir Harold MacMichael",
+        "Lord Mountbatten dan Ralph Hone",
+        "George Henry Hall dan A.T. Newboult",
+        "Dato' Onn Jaafar dan Tunku Abdul Rahman"
+      ],
+      "answer": "H.C. Willan dan Sir Harold MacMichael",
+      "explanation": "British menggunakan H.C. Willan dan Sir Harold MacMichael untuk mendapatkan persetujuan Raja-raja Melayu.",
+      "tip": "Willan merintis, MacMichael tandatangan."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah British memperkenalkan Malayan Union bagi menggantikan BMA?",
+      "options": [
+        "British berharap ia dapat melicinkan pentadbiran, meningkatkan pelaburan ekonomi dan mengukuhkan pertahanan",
+        "British mahu memberikan kemerdekaan segera kepada Tanah Melayu",
+        "British mahu mengembalikan sepenuhnya kuasa kepada Raja-raja Melayu",
+        "British mahu menyerahkan Tanah Melayu kepada Jepun semula"
+      ],
+      "answer": "British berharap ia dapat melicinkan pentadbiran, meningkatkan pelaburan ekonomi dan mengukuhkan pertahanan",
+      "explanation": "British berharap Malayan Union dapat melicinkan pentadbiran, meningkatkan pelaburan ekonomi dan mengukuhkan pertahanan.",
+      "tip": "MU = licin + labur + pertahanan."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah syarat kewarganegaraan berasaskan jus soli dalam Malayan Union dianggap longgar?",
+      "options": [
+        "Kerana sesiapa yang lahir di Tanah Melayu dan Singapura terus diiktiraf sebagai warganegara tanpa syarat ketat",
+        "Kerana hanya keturunan Raja-raja Melayu sahaja layak menjadi warganegara",
+        "Kerana kewarganegaraan hanya diberikan kepada pegawai British",
+        "Kerana syarat itu memerlukan tempoh 50 tahun bermastautin"
+      ],
+      "answer": "Kerana sesiapa yang lahir di Tanah Melayu dan Singapura terus diiktiraf sebagai warganegara tanpa syarat ketat",
+      "explanation": "Prinsip jus soli mengiktiraf sesiapa yang lahir di Tanah Melayu dan Singapura sebagai warganegara, dianggap longgar.",
+      "tip": "Jus soli = lahir sini, terus warganegara."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah kedudukan Raja-raja Melayu dianggap terjejas dalam sistem pentadbiran Malayan Union?",
+      "options": [
+        "Kerana peranan mereka dihadkan kepada hal agama Islam dan adat istiadat sahaja, manakala kuasa pentadbiran berada di tangan Gabenor British",
+        "Kerana mereka dilantik sebagai Gabenor tunggal Malayan Union",
+        "Kerana mereka diberikan kuasa penuh mentadbir Majlis Perundangan",
+        "Kerana Malayan Union tidak melibatkan Raja-raja Melayu langsung"
+      ],
+      "answer": "Kerana peranan mereka dihadkan kepada hal agama Islam dan adat istiadat sahaja, manakala kuasa pentadbiran berada di tangan Gabenor British",
+      "explanation": "Peranan Raja-raja Melayu dihadkan kepada agama Islam dan adat istiadat Melayu, kuasa politik dikurangkan dengan ketara.",
+      "tip": "Raja = agama & adat sahaja."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Seorang Sultan cuba melengah-lengahkan masa sebelum akhirnya terpaksa menurunkan tandatangan Malayan Union. Apakah ini menggambarkan?",
+      "options": [
+        "Tekanan dan desakan MacMichael dalam usaha mendapatkan persetujuan Raja-raja Melayu",
+        "Persetujuan sukarela penuh Raja-raja Melayu terhadap Malayan Union",
+        "Kejayaan Raja-raja Melayu menolak sepenuhnya rancangan Malayan Union",
+        "Kebebasan mutlak Raja-raja Melayu membuat keputusan tanpa gangguan"
+      ],
+      "answer": "Tekanan dan desakan MacMichael dalam usaha mendapatkan persetujuan Raja-raja Melayu",
+      "explanation": "MacMichael menggunakan desakan, tekanan dan paksaan politik terhadap Raja-raja Melayu.",
+      "tip": "Lengah-lengah = akhirnya ditekan."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Seorang pelajar Melayu di Britain menghantar memorandum membantah pemberian kewarganegaraan berasaskan tempat lahir. Isu manakah yang sedang dibangkitkan?",
+      "options": [
+        "Prinsip jus soli dalam kewarganegaraan Malayan Union",
+        "Pembubaran MPAJA oleh BMA",
+        "Pelantikan Gabenor British pertama di Sabah",
+        "Penubuhan Kongres Melayu Pertama"
+      ],
+      "answer": "Prinsip jus soli dalam kewarganegaraan Malayan Union",
+      "explanation": "Persatuan Pelajar Melayu Britain membantah pemberian kewarganegaraan berdasarkan prinsip jus soli.",
+      "tip": "Tempat lahir = jus soli."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sembilan buah negeri Melayu digabungkan menjadi satu unit pentadbiran berpusat di bawah seorang Gabenor. Struktur manakah yang digambarkan ini?",
+      "options": [
+        "Konsep kesatuan dalam sistem pentadbiran Malayan Union",
+        "Sistem Negeri-negeri Selat sebelum Perang Dunia Kedua",
+        "Pentadbiran BMA semasa era peralihan",
+        "Struktur Persekutuan Tanah Melayu 1948"
+      ],
+      "answer": "Konsep kesatuan dalam sistem pentadbiran Malayan Union",
+      "explanation": "Malayan Union menyatukan negeri-negeri Melayu Bersekutu, Tidak Bersekutu dan Negeri-negeri Selat (kecuali Singapura) di bawah satu Gabenor.",
+      "tip": "Semua negeri → satu Gabenor."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perbezaan utama antara peranan H.C. Willan dengan peranan Sir Harold MacMichael dalam usaha mendapatkan tandatangan Sultan?",
+      "options": [
+        "Willan merintis jalan dengan meninjau sokongan Raja-raja Melayu manakala MacMichael yang sebenarnya mendapatkan tandatangan rasmi melalui tekanan",
+        "Willan yang mendapatkan semua tandatangan manakala MacMichael hanya menonton",
+        "Kedua-duanya melakukan tugas yang sama sepenuhnya tanpa sebarang perbezaan",
+        "MacMichael hanya bertugas di London manakala Willan tidak pernah ke Tanah Melayu"
+      ],
+      "answer": "Willan merintis jalan dengan meninjau sokongan Raja-raja Melayu manakala MacMichael yang sebenarnya mendapatkan tandatangan rasmi melalui tekanan",
+      "explanation": "Willan merintis jalan (Sept–Okt 1945); MacMichael kemudian mendapatkan tandatangan rasmi melalui tekanan dan desakan.",
+      "tip": "Willan rintis, MacMichael tandatangan."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah persamaan antara cara Sultan Pahang dan Sultan Kedah menurunkan tandatangan Malayan Union?",
+      "options": [
+        "Kedua-duanya terpaksa/enggan pada mulanya tetapi akhirnya menandatangani selepas didesak oleh MacMichael",
+        "Kedua-duanya menandatangani dengan penuh rela tanpa sebarang tekanan",
+        "Kedua-duanya menolak sepenuhnya dan tidak pernah menandatangani",
+        "Kedua-duanya menandatangani pada hari yang sama tanpa sebarang lawatan MacMichael"
+      ],
+      "answer": "Kedua-duanya terpaksa/enggan pada mulanya tetapi akhirnya menandatangani selepas didesak oleh MacMichael",
+      "explanation": "Sultan Pahang terpaksa menandatangani dan Sultan Kedah bertegas enggan sebelum akhirnya didesak berjaya oleh MacMichael.",
+      "tip": "Enggan dulu, tandatangan akhirnya."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah PALING kukuh menjelaskan mengapa Malayan Union dianggap mengancam kedudukan Raja-raja Melayu?",
+      "options": [
+        "Kuasa politik Raja-raja Melayu dikurangkan dengan ketara dan diperoleh melalui tekanan, desakan serta paksaan politik yang dianggap tidak sah",
+        "Raja-raja Melayu tidak pernah wujud dalam sistem Malayan Union",
+        "Malayan Union memberikan lebih banyak kuasa kepada Raja-raja Melayu berbanding sebelumnya",
+        "Malayan Union hanya melibatkan hal ehwal luar negara sahaja"
+      ],
+      "answer": "Kuasa politik Raja-raja Melayu dikurangkan dengan ketara dan diperoleh melalui tekanan, desakan serta paksaan politik yang dianggap tidak sah",
+      "explanation": "Kuasa politik Raja-raja dikurangkan, cara persetujuan diperoleh dianggap tidak sah menurut sistem perundangan British sendiri.",
+      "tip": "Kuasa kurang + cara tak sah."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah PALING tepat merumuskan subtopik 4.2?",
+      "options": [
+        "Malayan Union ialah rancangan British untuk menguasai Tanah Melayu secara berpusat, dicapai melalui tandatangan Sultan yang diperoleh secara tertekan",
+        "Malayan Union ialah gagasan yang diterima seratus peratus oleh semua pihak tanpa sebarang bantahan",
+        "Malayan Union hanya melibatkan perubahan nama negara tanpa kesan pentadbiran",
+        "Malayan Union memberi kuasa penuh kepada Raja-raja Melayu mentadbir negeri masing-masing"
+      ],
+      "answer": "Malayan Union ialah rancangan British untuk menguasai Tanah Melayu secara berpusat, dicapai melalui tandatangan Sultan yang diperoleh secara tertekan",
+      "explanation": "Malayan Union merupakan rancangan penguasaan berpusat British yang tandatangannya diperoleh melalui tekanan.",
+      "tip": "Kuasa berpusat + tandatangan tertekan."
+    }
+  ]
+}

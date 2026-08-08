@@ -1,0 +1,216 @@
+{
+  "id": "5-3",
+  "title": "Ciri-ciri Persekutuan Tanah Melayu 1948",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Berapakah bilangan negeri Melayu yang digabungkan dalam Persekutuan Tanah Melayu 1948?",
+      "options": [
+        "Sembilan buah negeri Melayu",
+        "Lapan buah negeri Melayu",
+        "Sepuluh buah negeri Melayu",
+        "Tujuh buah negeri Melayu"
+      ],
+      "answer": "Sembilan buah negeri Melayu",
+      "explanation": "Persekutuan dibentuk melalui gabungan sembilan buah negeri Melayu dan dua buah Negeri-negeri Selat.",
+      "tip": "9 negeri Melayu + 2 Negeri Selat."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah yang mengetuai kerajaan Persekutuan Tanah Melayu 1948?",
+      "options": [
+        "Pesuruhjaya Tinggi British",
+        "Gabenor Jeneral",
+        "Sultan Perak",
+        "Ketua Setiausaha Malayan Union"
+      ],
+      "answer": "Pesuruhjaya Tinggi British",
+      "explanation": "Kerajaan Persekutuan diketuai oleh Pesuruhjaya Tinggi British yang mempunyai kuasa eksekutif.",
+      "tip": "Ketua Persekutuan = Pesuruhjaya Tinggi."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah nama badan yang dibentuk untuk membolehkan Raja-raja Melayu memberikan pandangan dalam perkara tertentu di peringkat persekutuan?",
+      "options": [
+        "Majlis Raja-Raja",
+        "Majlis Mesyuarat Persekutuan",
+        "Majlis Perundangan Persekutuan",
+        "Dewan Perundangan Negeri"
+      ],
+      "answer": "Majlis Raja-Raja",
+      "explanation": "Majlis Raja-Raja dibentuk untuk membolehkan Raja-raja Melayu memberikan pandangan dalam perkara tertentu.",
+      "tip": "Pandangan raja = Majlis Raja-Raja."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Berapa lamakah tempoh bermastautin minimum yang diperlukan (daripada tempoh 20 tahun) untuk memohon kewarganegaraan secara pendaftaran?",
+      "options": [
+        "15 tahun",
+        "10 tahun",
+        "20 tahun",
+        "5 tahun"
+      ],
+      "answer": "15 tahun",
+      "explanation": "Pemohon perlu bermastautin selama 15 tahun daripada tempoh 20 tahun dari hari permohonan.",
+      "tip": "15 drpd 20 tahun = pendaftaran."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah keperluan perkenan Raja-raja Melayu melalui Majlis Raja-Raja bagi setiap rang undang-undang dianggap penting?",
+      "options": [
+        "Kerana ia menunjukkan sistem perundangan Persekutuan melibatkan peranan British dan Raja-raja Melayu secara bersama",
+        "Kerana ia menunjukkan Raja-raja Melayu mempunyai kuasa mutlak tanpa sebarang campur tangan British",
+        "Kerana ia menunjukkan Pesuruhjaya Tinggi tidak mempunyai sebarang peranan dalam perundangan",
+        "Kerana ia menunjukkan Majlis Perundangan Persekutuan tidak berfungsi secara rasmi"
+      ],
+      "answer": "Kerana ia menunjukkan sistem perundangan Persekutuan melibatkan peranan British dan Raja-raja Melayu secara bersama",
+      "explanation": "Keperluan perkenan raja menunjukkan sistem perundangan melibatkan peranan British dan Raja-raja Melayu bersama.",
+      "tip": "Perkenan raja = perundangan kongsi kuasa."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah struktur pentadbiran Persekutuan Tanah Melayu 1948 (dengan Majlis Mesyuarat Persekutuan dan Majlis Perundangan Persekutuan) dianggap lebih baik berbanding Malayan Union?",
+      "options": [
+        "Kerana ia menunjukkan pentadbiran Persekutuan mempunyai struktur yang lebih tersusun berbanding Malayan Union",
+        "Kerana ia menunjukkan Persekutuan Tanah Melayu tidak mempunyai sebarang bentuk pentadbiran berpusat",
+        "Kerana ia menunjukkan Raja-raja Melayu tidak lagi mempunyai sebarang peranan dalam pentadbiran",
+        "Kerana ia menunjukkan Malayan Union mempunyai struktur pentadbiran yang lebih tersusun"
+      ],
+      "answer": "Kerana ia menunjukkan pentadbiran Persekutuan mempunyai struktur yang lebih tersusun berbanding Malayan Union",
+      "explanation": "Kewujudan dua badan utama menunjukkan pentadbiran Persekutuan lebih tersusun berbanding Malayan Union.",
+      "tip": "2 majlis = struktur lebih tersusun."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah syarat kewarganegaraan dalam Persekutuan Tanah Melayu 1948 dianggap lebih ketat berbanding Malayan Union?",
+      "options": [
+        "Kerana pemohon perlu memenuhi syarat bermastautin, tingkah laku baik, penguasaan bahasa dan taat setia sebelum layak didaftarkan",
+        "Kerana semua penduduk secara automatik menjadi warganegara tanpa sebarang syarat",
+        "Kerana hanya Raja-raja Melayu sahaja yang layak menjadi warganegara",
+        "Kerana kewarganegaraan hanya terbuka kepada pegawai British sahaja"
+      ],
+      "answer": "Kerana pemohon perlu memenuhi syarat bermastautin, tingkah laku baik, penguasaan bahasa dan taat setia sebelum layak didaftarkan",
+      "explanation": "Syarat bermastautin, kelakuan baik, penguasaan bahasa dan taat setia menjadikan kewarganegaraan lebih ketat berbanding Malayan Union.",
+      "tip": "Banyak syarat = lebih ketat."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Seorang kanak-kanak dilahirkan di sebuah negeri Melayu yang mempunyai sultan, dan ibu bapanya juga dilahirkan serta tinggal di negeri berkenaan. Apakah taraf kewarganegaraan yang paling mungkin dimiliki kanak-kanak ini menurut definisi dalam Persekutuan Tanah Melayu 1948?",
+      "options": [
+        "Rakyat Raja",
+        "Rakyat British",
+        "Naturalised",
+        "Warganegara berdaftar"
+      ],
+      "answer": "Rakyat Raja",
+      "explanation": "Rakyat Raja ialah orang Melayu dan Orang Asli yang lahir dan tinggal di negeri Melayu yang mempunyai sultan.",
+      "tip": "Lahir di negeri bersultan = Rakyat Raja."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Seorang lelaki bermastautin di Persekutuan Tanah Melayu selama 15 tahun daripada tempoh 20 tahun, mempunyai tingkah laku yang baik, tiada rekod jenayah, menguasai bahasa Melayu dan bahasa Inggeris, serta bersetuju taat setia kepada Persekutuan. Melalui cara manakah beliau paling mungkin memperoleh kewarganegaraan?",
+      "options": [
+        "Kewarganegaraan secara pendaftaran",
+        "Kewarganegaraan secara kuat kuasa undang-undang",
+        "Status rakyat Raja secara automatik",
+        "Status rakyat British secara automatik"
+      ],
+      "answer": "Kewarganegaraan secara pendaftaran",
+      "explanation": "Ciri-ciri seperti tempoh bermastautin, kelakuan baik dan penguasaan bahasa sepadan dengan syarat kewarganegaraan secara pendaftaran.",
+      "tip": "15/20 tahun + syarat = pendaftaran."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sebuah rang undang-undang berkaitan percukaian telah diluluskan oleh Majlis Perundangan Persekutuan. Sebelum ia berkuat kuasa, apakah lagi yang perlu diperoleh terlebih dahulu?",
+      "options": [
+        "Perkenan Raja-raja Melayu melalui Majlis Raja-Raja",
+        "Persetujuan Pesuruhjaya Tinggi sahaja",
+        "Kelulusan Dewan Perundangan Negeri sahaja",
+        "Pengesahan Parlimen British di London"
+      ],
+      "answer": "Perkenan Raja-raja Melayu melalui Majlis Raja-Raja",
+      "explanation": "Setiap rang undang-undang perlu mendapat perkenan Raja-raja Melayu melalui Majlis Raja-Raja.",
+      "tip": "Rang UU perlu perkenan raja."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perbezaan utama antara kuasa Raja-raja Melayu di peringkat persekutuan dengan kuasa sultan di peringkat negeri?",
+      "options": [
+        "Di peringkat persekutuan, Raja-raja Melayu memberi pandangan melalui Majlis Raja-Raja, manakala di peringkat negeri, sultan mengesahkan rang undang-undang dalam Dewan Perundangan Negeri",
+        "Di peringkat persekutuan, Raja-raja Melayu mempunyai kuasa mutlak tanpa had, manakala di peringkat negeri mereka tiada kuasa langsung",
+        "Di peringkat persekutuan dan peringkat negeri, Raja-raja Melayu mempunyai kuasa yang sama sepenuhnya tanpa sebarang perbezaan",
+        "Di peringkat persekutuan, sultan mengetuai Majlis Perundangan Persekutuan, manakala di peringkat negeri mereka tiada peranan"
+      ],
+      "answer": "Di peringkat persekutuan, Raja-raja Melayu memberi pandangan melalui Majlis Raja-Raja, manakala di peringkat negeri, sultan mengesahkan rang undang-undang dalam Dewan Perundangan Negeri",
+      "explanation": "Peranan Raja-raja Melayu berbeza mengikut peringkat: Majlis Raja-Raja di persekutuan, pengesahan rang undang-undang di negeri.",
+      "tip": "Persekutuan: Majlis Raja-Raja; Negeri: sahkan rang UU."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah persamaan utama antara dua cara memperoleh kewarganegaraan dalam Persekutuan Tanah Melayu 1948?",
+      "options": [
+        "Kedua-dua cara menetapkan syarat tertentu, sama ada asal usul keluarga atau tempoh bermastautin dan kelakuan, sebelum seseorang layak diiktiraf sebagai warganegara",
+        "Kedua-dua cara membuka kewarganegaraan secara automatik kepada semua penduduk tanpa sebarang syarat",
+        "Kedua-dua cara hanya terbuka kepada golongan bukan Melayu semata-mata",
+        "Kedua-dua cara tidak mempunyai sebarang kaitan dengan tempoh bermastautin"
+      ],
+      "answer": "Kedua-dua cara menetapkan syarat tertentu, sama ada asal usul keluarga atau tempoh bermastautin dan kelakuan, sebelum seseorang layak diiktiraf sebagai warganegara",
+      "explanation": "Kedua-dua kuat kuasa undang-undang dan pendaftaran menetapkan syarat tertentu sebelum kewarganegaraan diberikan.",
+      "tip": "Sama-sama ada syarat kelayakan."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah PALING tepat menjelaskan mengapa ciri-ciri Persekutuan Tanah Melayu 1948 dianggap lebih menjaga kedudukan Raja-raja Melayu dan orang Melayu berbanding Malayan Union?",
+      "options": [
+        "Kedudukan Raja-raja Melayu dipulihkan melalui Majlis Raja-Raja dan sultan, manakala syarat kewarganegaraan turut diperketat berbanding Malayan Union",
+        "Persekutuan Tanah Melayu 1948 menghapuskan sepenuhnya peranan British dalam pentadbiran negara",
+        "Persekutuan Tanah Melayu 1948 memberikan kuasa mutlak kepada Pesuruhjaya Tinggi tanpa sebarang had",
+        "Persekutuan Tanah Melayu 1948 tidak mempunyai sebarang perbezaan dengan Malayan Union"
+      ],
+      "answer": "Kedudukan Raja-raja Melayu dipulihkan melalui Majlis Raja-Raja dan sultan, manakala syarat kewarganegaraan turut diperketat berbanding Malayan Union",
+      "explanation": "Pemulihan kuasa raja dan pengetatan syarat kewarganegaraan menjadi bukti utama Persekutuan lebih menjaga kepentingan tempatan.",
+      "tip": "Kuasa raja pulih + kewarganegaraan ketat."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah PALING tepat merumuskan subtopik 5.3?",
+      "options": [
+        "Persekutuan Tanah Melayu 1948 memperkenalkan pentadbiran yang lebih tersusun, memulihkan kuasa Raja-raja Melayu, mewujudkan sistem perundangan yang melibatkan British dan Raja-raja Melayu, serta memperketat syarat kewarganegaraan berbanding Malayan Union",
+        "Persekutuan Tanah Melayu 1948 mengekalkan sepenuhnya struktur pentadbiran Malayan Union tanpa sebarang perubahan",
+        "Persekutuan Tanah Melayu 1948 menghapuskan sepenuhnya kedudukan Raja-raja Melayu dalam sistem pemerintahan",
+        "Persekutuan Tanah Melayu 1948 membuka kewarganegaraan secara automatik kepada semua penduduk tanpa sebarang syarat"
+      ],
+      "answer": "Persekutuan Tanah Melayu 1948 memperkenalkan pentadbiran yang lebih tersusun, memulihkan kuasa Raja-raja Melayu, mewujudkan sistem perundangan yang melibatkan British dan Raja-raja Melayu, serta memperketat syarat kewarganegaraan berbanding Malayan Union",
+      "explanation": "Rumusan menggabungkan keempat-empat ciri utama: pentadbiran, kuasa raja, perundangan dan kewarganegaraan.",
+      "tip": "Rumusan = 4 ciri utama 5.3."
+    }
+  ]
+}

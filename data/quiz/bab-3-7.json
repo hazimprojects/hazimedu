@@ -1,0 +1,216 @@
+{
+  "id": "3-7",
+  "title": "Perjuangan Rakyat Menentang Pendudukan Jepun",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah yang berjuang habis-habisan di Bukit Candu, Singapura, dan menjadi lambang keberanian Askar Melayu?",
+      "options": [
+        "Leftenan Adnan Saidi",
+        "Leftenan Ibrahim Alla Ditta",
+        "Koperal Yaakob Bidin",
+        "Tengku Mahmood Mahyiddeen"
+      ],
+      "answer": "Leftenan Adnan Saidi",
+      "explanation": "Leftenan Adnan Saidi berjuang habis-habisan di Bukit Candu, Singapura dan menjadi lambang keperwiraan Askar Melayu.",
+      "tip": "Bukit Candu = Adnan Saidi."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Parti manakah yang menubuhkan Malayan People's Anti-Japanese Army (MPAJA)?",
+      "options": [
+        "Parti Komunis Malaya (PKM)",
+        "Kuomintang (KMT)",
+        "Kesatuan Melayu Muda (KMM)",
+        "Parti Kebangsaan Melayu Malaya (PKMM)"
+      ],
+      "answer": "Parti Komunis Malaya (PKM)",
+      "explanation": "PKM menubuhkan MPAJA sebagai gerakan gerila anti-Jepun yang penting di Tanah Melayu.",
+      "tip": "MPAJA = tubuhan PKM."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah nama siaran radio yang dikendalikan oleh Tengku Mahmood Mahyiddeen dari India?",
+      "options": [
+        "Suara Harimau Malaya",
+        "Suara Merdeka",
+        "Radio Force 136",
+        "Suara Kebangsaan"
+      ],
+      "answer": "Suara Harimau Malaya",
+      "explanation": "Tengku Mahmood Mahyiddeen menerima jolokan “Harimau Malaya” kerana mengelolakan siaran radio Suara Harimau Malaya dari India.",
+      "tip": "Radio = Suara Harimau Malaya."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah yang mengetuai Pemberontakan Jesselton (Double Tenth) di Sabah?",
+      "options": [
+        "Albert Kwok",
+        "Datu Mustapha Datu Harun",
+        "Gurchan Singh",
+        "Chin Peng"
+      ],
+      "answer": "Albert Kwok",
+      "explanation": "Pemberontakan Jesselton atau Double Tenth diketuai oleh Albert Kwok melalui gerila Kinabalu.",
+      "tip": "Jesselton = Albert Kwok."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah ramai orang Cina berlindung di bawah Parti Komunis Malaya (PKM) semasa pendudukan Jepun?",
+      "options": [
+        "Kerana kekejaman Jepun menyebabkan ramai orang Cina menjadi mangsa penindasan",
+        "Kerana orang Cina mendapat layanan terbaik daripada Jepun",
+        "Kerana PKM ditubuhkan oleh Jepun sendiri",
+        "Kerana orang Cina tidak terjejas langsung oleh pendudukan Jepun"
+      ],
+      "answer": "Kerana kekejaman Jepun menyebabkan ramai orang Cina menjadi mangsa penindasan",
+      "explanation": "Penindasan Jepun terhadap orang Cina mendorong ramai daripada mereka berlindung di bawah PKM.",
+      "tip": "Ditindas Jepun = lindung bawah PKM."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah kerjasama antara KMT dengan MPAJA menyebabkan ketegangan antara orang Melayu dan Cina meningkat?",
+      "options": [
+        "Kerana Jepun bertindak menggunakan pasukan Melayu untuk menentang MPAJA yang semakin kuat selepas kerjasama itu",
+        "Kerana KMT dan MPAJA saling bermusuhan sejak awal",
+        "Kerana orang Melayu menyertai MPAJA secara beramai-ramai",
+        "Kerana British melarang kerjasama antara kedua-dua pertubuhan"
+      ],
+      "answer": "Kerana Jepun bertindak menggunakan pasukan Melayu untuk menentang MPAJA yang semakin kuat selepas kerjasama itu",
+      "explanation": "Tindakan Jepun menggunakan pasukan Melayu menentang MPAJA meningkatkan ketegangan kaum.",
+      "tip": "Jepun guna Melayu lawan MPAJA = tegang."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah Sybil Kathigasu dianugerahi Pingat King George VI selepas perang?",
+      "options": [
+        "Kerana keberaniannya membantu gerila anti-Jepun dengan rawatan perubatan dan maklumat radio walaupun menghadapi seksaan",
+        "Kerana beliau memimpin serangan bersenjata terhadap Jepun",
+        "Kerana beliau ialah anggota Force 136 rasmi",
+        "Kerana beliau menyerah kalah kepada Jepun demi keselamatan keluarga"
+      ],
+      "answer": "Kerana keberaniannya membantu gerila anti-Jepun dengan rawatan perubatan dan maklumat radio walaupun menghadapi seksaan",
+      "explanation": "Sybil Kathigasu dianugerahi kerana keberanian dan pengorbanannya membantu gerila walaupun ditangkap dan diseksa.",
+      "tip": "Berani + seksaan = Pingat King George VI."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Seorang jururawat di Ipoh menyembunyikan radio dan berkongsi maklumat siaran British dengan gerila, lalu ditangkap dan diseksa bersama suaminya. Tokoh manakah ini?",
+      "options": [
+        "Sybil Kathigasu",
+        "Gurchan Singh",
+        "Tengku Mahmood Mahyiddeen",
+        "Datu Mustapha Datu Harun"
+      ],
+      "answer": "Sybil Kathigasu",
+      "explanation": "Sybil Kathigasu dan suaminya Dr. Abdon Clement Kathigasu menyembunyikan radio dan membantu gerila anti-Jepun di Ipoh.",
+      "tip": "Jururawat Ipoh = Sybil Kathigasu."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sebuah unit khas tentera Australia melatih penduduk peribumi seperti kaum Kayan, Kenyah dan Kelabit untuk menjalankan perang gerila di Sarawak. Operasi manakah ini?",
+      "options": [
+        "Operasi Semut",
+        "Operasi D-Day",
+        "Operasi Barbarossa",
+        "Operasi Zipper"
+      ],
+      "answer": "Operasi Semut",
+      "explanation": "Operasi Semut dilaksanakan oleh Unit Khas Z Australia (SRD) yang melatih peribumi Sarawak menentang Jepun.",
+      "tip": "Latih peribumi Sarawak = Operasi Semut."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Seorang individu menyebarkan risalah anti-Jepun menggunakan nama samaran haiwan dan turut mendalangi sabotaj landasan kereta api sebelum melarikan diri ke Burma. Tokoh manakah ini?",
+      "options": [
+        "Gurchan Singh",
+        "Sybil Kathigasu",
+        "Albert Kwok",
+        "Ibrahim Haji Yaakob"
+      ],
+      "answer": "Gurchan Singh",
+      "explanation": "Gurchan Singh menggunakan nama samaran “Lion of Malaya” untuk menyebarkan risalah dan melakukan sabotaj sebelum melarikan diri ke Burma.",
+      "tip": "Nama samaran singa = Gurchan Singh."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perbezaan utama antara MPAJA dengan Force 136?",
+      "options": [
+        "MPAJA ditubuhkan oleh Parti Komunis Malaya, manakala Force 136 ialah unit khas British yang ditubuhkan oleh South East Asia Command (SEAC)",
+        "MPAJA dan Force 136 ditubuhkan oleh Jepun sendiri",
+        "MPAJA hanya beroperasi di Sarawak, manakala Force 136 hanya di Sabah",
+        "MPAJA dan Force 136 ialah nama lain bagi organisasi yang sama"
+      ],
+      "answer": "MPAJA ditubuhkan oleh Parti Komunis Malaya, manakala Force 136 ialah unit khas British yang ditubuhkan oleh South East Asia Command (SEAC)",
+      "explanation": "Kedua-dua organisasi ini berasal daripada latar belakang berbeza sebelum kemudian bekerjasama menentang Jepun.",
+      "tip": "MPAJA = PKM; Force 136 = British/SEAC."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah persamaan antara Askar Melayu Setia, Gerila Wataniah Pahang dan Gerila Melayu Kedah?",
+      "options": [
+        "Ketiga-tiganya dibentuk oleh Force 136 dengan bantuan pegawai daerah atau pemimpin tempatan di negeri masing-masing",
+        "Ketiga-tiganya ditubuhkan oleh Jepun untuk mengawal penduduk tempatan",
+        "Ketiga-tiganya hanya beroperasi di Sabah",
+        "Ketiga-tiganya ditubuhkan sebelum Perang Dunia Kedua bermula"
+      ],
+      "answer": "Ketiga-tiganya dibentuk oleh Force 136 dengan bantuan pegawai daerah atau pemimpin tempatan di negeri masing-masing",
+      "explanation": "Force 136 membentuk pasukan gerila Melayu ini dengan kerjasama pegawai daerah tempatan seperti di Hulu Perak, Raub dan Kedah.",
+      "tip": "Semua tubuhan Force 136 + pegawai tempatan."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah yang PALING tepat menerangkan kekuatan sebenar perjuangan rakyat menentang Jepun?",
+      "options": [
+        "Kepelbagaian bentuk perjuangan daripada tentera rasmi, gerila, kerjasama luar dan individu berani menunjukkan penglibatan merentas kaum dan latar belakang demi mempertahankan tanah air",
+        "Perjuangan hanya dilakukan oleh Rejimen Askar Melayu tanpa penglibatan pihak lain",
+        "Perjuangan rakyat gagal sepenuhnya kerana kekejaman Jepun",
+        "Perjuangan rakyat hanya berlaku selepas Jepun menyerah kalah"
+      ],
+      "answer": "Kepelbagaian bentuk perjuangan daripada tentera rasmi, gerila, kerjasama luar dan individu berani menunjukkan penglibatan merentas kaum dan latar belakang demi mempertahankan tanah air",
+      "explanation": "Kepelbagaian bentuk penentangan ini membuktikan kekuatan semangat perjuangan rakyat merentas kaum.",
+      "tip": "Pelbagai bentuk = kekuatan sebenar."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah yang PALING tepat merumuskan subtopik 3.7?",
+      "options": [
+        "Rakyat pelbagai kaum menentang Jepun melalui perjuangan bersenjata, gerila, kerjasama dengan pihak luar dan penentangan individu, yang bukan sahaja melemahkan Jepun tetapi turut menyemai semangat kebangsaan ke arah kemerdekaan",
+        "Rakyat negara kita tidak menunjukkan sebarang penentangan terhadap Jepun",
+        "Penentangan rakyat hanya dilakukan oleh satu kaum sahaja",
+        "Penentangan rakyat berlaku selepas Perjanjian Versailles ditandatangani"
+      ],
+      "answer": "Rakyat pelbagai kaum menentang Jepun melalui perjuangan bersenjata, gerila, kerjasama dengan pihak luar dan penentangan individu, yang bukan sahaja melemahkan Jepun tetapi turut menyemai semangat kebangsaan ke arah kemerdekaan",
+      "explanation": "Rumusan ini merangkumi kepelbagaian bentuk perjuangan dan kesan besarnya terhadap semangat kebangsaan.",
+      "tip": "Rumusan = pelbagai bentuk + semangat kebangsaan."
+    }
+  ]
+}

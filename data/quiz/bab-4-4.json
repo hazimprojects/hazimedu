@@ -1,0 +1,216 @@
+{
+  "id": "4-4",
+  "title": "Penyerahan Sarawak kepada Kerajaan British",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Pada bilakah Vyner Brooke menyerahkan Sarawak secara rasmi kepada kerajaan British?",
+      "options": [
+        "1 Julai 1946",
+        "24 Oktober 1945",
+        "28 Februari 1945",
+        "11 September 1945"
+      ],
+      "answer": "1 Julai 1946",
+      "explanation": "Vyner Brooke menyerahkan Sarawak kepada kerajaan British secara rasmi pada 1 Julai 1946.",
+      "tip": "1 Julai 1946 = Hari Penyerahan Sarawak."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah setiausaha peribadi Vyner Brooke yang dihantar mendapatkan persetujuan ketua tempatan Sarawak?",
+      "options": [
+        "Gerard T. MacBryan",
+        "Anthony Brooke",
+        "Bertram Brooke",
+        "Oliver Stanley"
+      ],
+      "answer": "Gerard T. MacBryan",
+      "explanation": "Gerard T. MacBryan dihantar oleh Vyner Brooke untuk mendapatkan persetujuan ketua tempatan.",
+      "tip": "MacBryan = utusan persetujuan."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah keputusan undian Cession Bill di Majlis Negeri Sarawak?",
+      "options": [
+        "19 menyokong, 16 menentang",
+        "20 menyokong, 15 menentang",
+        "16 menyokong, 19 menentang",
+        "25 menyokong, 10 menentang"
+      ],
+      "answer": "19 menyokong, 16 menentang",
+      "explanation": "Undian Cession Bill di Majlis Negeri menghasilkan 19 menyokong berbanding 16 menentang.",
+      "tip": "19 vs 16 = majoriti kecil."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah anak kepada Bertram Brooke yang enggan dilantik oleh Vyner Brooke sebagai pewaris?",
+      "options": [
+        "Anthony Brooke",
+        "Gerard T. MacBryan",
+        "Charles Brooke",
+        "Oliver Stanley"
+      ],
+      "answer": "Anthony Brooke",
+      "explanation": "Anthony Brooke, anak kepada Bertram Brooke, enggan dilantik oleh Vyner Brooke sebagai pewaris.",
+      "tip": "Anthony Brooke = pewaris ditolak."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah masalah pewarisan takhta menjadi salah satu faktor penyerahan Sarawak kepada British?",
+      "options": [
+        "Kerana Vyner Brooke tidak mempunyai anak lelaki dan enggan melantik Anthony Brooke, menyebabkan masa depan pemerintahan Brooke tidak menentu",
+        "Kerana Vyner Brooke mahu segera bersara tanpa sebarang sebab lain",
+        "Kerana British memaksa Vyner Brooke melantik pewaris British sendiri",
+        "Kerana rakyat Sarawak menuntut Vyner Brooke turun takhta"
+      ],
+      "answer": "Kerana Vyner Brooke tidak mempunyai anak lelaki dan enggan melantik Anthony Brooke, menyebabkan masa depan pemerintahan Brooke tidak menentu",
+      "explanation": "Ketiadaan anak lelaki dan keengganan melantik Anthony Brooke menyebabkan pemerintahan Brooke tidak menentu.",
+      "tip": "Tiada waris jelas = tak menentu."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah British berminat menjadikan Sarawak sebagai tanah jajahan selepas Perang Dunia Kedua?",
+      "options": [
+        "Kerana Sarawak kaya dengan sumber ekonomi, penting untuk melindungi pelaburan British dan memperluas penguasaan British di Borneo",
+        "Kerana Sarawak tidak mempunyai sebarang nilai ekonomi kepada British",
+        "Kerana British mahu menyerahkan semula Sarawak kepada Brunei",
+        "Kerana British hanya berminat kepada Sabah, bukan Sarawak"
+      ],
+      "answer": "Kerana Sarawak kaya dengan sumber ekonomi, penting untuk melindungi pelaburan British dan memperluas penguasaan British di Borneo",
+      "explanation": "British mahu Sarawak dijadikan tanah jajahan kerana kaya sumber ekonomi dan penting untuk pelaburan serta penguasaan di Borneo.",
+      "tip": "Kaya sumber = British berminat."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah masalah kewangan menjadi faktor pendorong Vyner Brooke menyerahkan Sarawak?",
+      "options": [
+        "Kerana Sarawak mengalami kerosakan besar akibat perang dan Vyner Brooke tidak mempunyai kewangan mencukupi untuk membangunkan semula negeri itu",
+        "Kerana Sarawak tidak pernah mengalami sebarang kerosakan akibat perang",
+        "Kerana British enggan memberikan sebarang bantuan kewangan kepada Sarawak",
+        "Kerana Vyner Brooke mahu menyimpan kekayaannya sendiri tanpa membangunkan Sarawak"
+      ],
+      "answer": "Kerana Sarawak mengalami kerosakan besar akibat perang dan Vyner Brooke tidak mempunyai kewangan mencukupi untuk membangunkan semula negeri itu",
+      "explanation": "Kerosakan besar akibat perang dan kekurangan kewangan mendorong Vyner Brooke menyerahkan Sarawak.",
+      "tip": "Kerosakan + tiada wang = serah."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sebuah lombong minyak dan ladang getah di Sarawak terbiar rosak teruk selepas perang tamat. Faktor manakah yang paling berkaitan dengan situasi ini?",
+      "options": [
+        "Masalah kewangan Sarawak selepas Perang Dunia Kedua",
+        "Masalah pewarisan takhta Vyner Brooke",
+        "Desakan kerajaan British melalui Pejabat Tanah Jajahan",
+        "Undian Cession Bill di Majlis Negeri"
+      ],
+      "answer": "Masalah kewangan Sarawak selepas Perang Dunia Kedua",
+      "explanation": "Kemusnahan lombong minyak dan ladang getah berkait dengan masalah kewangan Sarawak selepas perang.",
+      "tip": "Kemusnahan harta = masalah kewangan."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Dua orang ahli Parlimen British, L.D. Gammans dan David Rees Williams, tiba di Kuching untuk membuat tinjauan pandangan rakyat. Apakah tujuan lawatan mereka?",
+      "options": [
+        "Mendapatkan kelulusan Majlis Negeri dan mengambil kira persetujuan rakyat Sarawak sebelum penyerahan disahkan",
+        "Melantik Gabenor pertama Sarawak secara terus",
+        "Membubarkan Majlis Negeri Sarawak sepenuhnya",
+        "Memberikan taraf kemerdekaan kepada Sarawak"
+      ],
+      "answer": "Mendapatkan kelulusan Majlis Negeri dan mengambil kira persetujuan rakyat Sarawak sebelum penyerahan disahkan",
+      "explanation": "British mengarahkan supaya kelulusan Majlis Negeri diperoleh dan persetujuan rakyat diambil kira sebelum penyerahan.",
+      "tip": "Tinjauan = sebelum penyerahan sah."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Hasil tinjauan mendapati kebanyakan orang Cina menyokong penyerahan Sarawak manakala sebahagian besar penduduk peribumi menentangnya. Apakah maksud hasil ini?",
+      "options": [
+        "Terdapat perbezaan pandangan antara kaum terhadap penyerahan Sarawak kepada British",
+        "Semua kaum di Sarawak sebulat suara menyokong penyerahan",
+        "Semua kaum di Sarawak sebulat suara menentang penyerahan",
+        "Tiada seorang pun penduduk Sarawak yang memahami isu penyerahan"
+      ],
+      "answer": "Terdapat perbezaan pandangan antara kaum terhadap penyerahan Sarawak kepada British",
+      "explanation": "Hasil tinjauan menunjukkan perbezaan pandangan antara kaum terhadap isu penyerahan.",
+      "tip": "Cina sokong, peribumi tentang = beza."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah persamaan antara faktor 'masalah pewarisan takhta' dengan faktor 'masalah kewangan' dalam penyerahan Sarawak?",
+      "options": [
+        "Kedua-duanya menunjukkan Vyner Brooke berada dalam keadaan sukar mentadbir Sarawak sehingga penyerahan dilihat sebagai jalan keluar",
+        "Kedua-duanya tidak mempunyai sebarang kaitan dengan keputusan penyerahan",
+        "Kedua-duanya menunjukkan Sarawak dalam keadaan makmur dan stabil",
+        "Kedua-duanya berpunca daripada tindakan rakyat Sarawak, bukan Vyner Brooke"
+      ],
+      "answer": "Kedua-duanya menunjukkan Vyner Brooke berada dalam keadaan sukar mentadbir Sarawak sehingga penyerahan dilihat sebagai jalan keluar",
+      "explanation": "Kedua-dua faktor menunjukkan kesukaran Vyner Brooke mentadbir sehingga penyerahan menjadi jalan keluar.",
+      "tip": "Dua masalah = satu jalan keluar."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perbezaan antara usaha Gerard T. MacBryan mendapatkan persetujuan ketua tempatan dengan proses undian Cession Bill di Majlis Negeri?",
+      "options": [
+        "Usaha MacBryan dijalankan secara tertutup tanpa pengetahuan rakyat menyeluruh, manakala undian Majlis Negeri merupakan proses rasmi yang direkodkan secara terbuka",
+        "Kedua-dua proses ini dijalankan pada masa dan tempat yang sama tanpa sebarang perbezaan",
+        "Undian Majlis Negeri dijalankan secara rahsia manakala usaha MacBryan direkodkan secara terbuka",
+        "Kedua-dua proses ini tidak berkaitan langsung dengan penyerahan Sarawak"
+      ],
+      "answer": "Usaha MacBryan dijalankan secara tertutup tanpa pengetahuan rakyat menyeluruh, manakala undian Majlis Negeri merupakan proses rasmi yang direkodkan secara terbuka",
+      "explanation": "Usaha MacBryan dibuat tanpa pengetahuan rakyat menyeluruh; undian Majlis Negeri pula proses rasmi dengan rekod keputusan jelas.",
+      "tip": "MacBryan tertutup, undian terbuka."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah PALING kukuh menunjukkan penyerahan Sarawak diluluskan dengan sokongan yang tidak kukuh?",
+      "options": [
+        "Undian Cession Bill hanya menghasilkan majoriti kecil (19 berbanding 16) di Majlis Negeri, menunjukkan bantahan yang ketara",
+        "Semua 35 ahli Majlis Negeri menyokong penyerahan tanpa sebarang bantahan",
+        "Undian tersebut tidak pernah dijalankan secara rasmi di Majlis Negeri",
+        "Penyerahan Sarawak diluluskan secara sebulat suara tanpa sebarang perdebatan"
+      ],
+      "answer": "Undian Cession Bill hanya menghasilkan majoriti kecil (19 berbanding 16) di Majlis Negeri, menunjukkan bantahan yang ketara",
+      "explanation": "Majoriti kecil (19–16) menunjukkan penyerahan tidak diterima secara meluas.",
+      "tip": "Majoriti kecil = bantahan ketara."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah PALING tepat merumuskan subtopik 4.4?",
+      "options": [
+        "Penyerahan Sarawak berlaku akibat gabungan masalah pewarisan takhta, desakan British dan masalah kewangan, tetapi tidak diterima sepenuhnya oleh rakyat",
+        "Penyerahan Sarawak berlaku secara semula jadi tanpa sebarang faktor pendorong",
+        "Penyerahan Sarawak diterima sebulat suara oleh seluruh rakyat Sarawak",
+        "Penyerahan Sarawak tidak melibatkan sebarang proses rasmi atau perundangan"
+      ],
+      "answer": "Penyerahan Sarawak berlaku akibat gabungan masalah pewarisan takhta, desakan British dan masalah kewangan, tetapi tidak diterima sepenuhnya oleh rakyat",
+      "explanation": "Rumusan menggabungkan tiga faktor penyerahan dan penentangan rakyat yang berterusan.",
+      "tip": "3 faktor + tak diterima penuh."
+    }
+  ]
+}

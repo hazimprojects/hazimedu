@@ -1,0 +1,216 @@
+{
+  "id": "5-2",
+  "title": "Faktor Penubuhan Persekutuan Tanah Melayu 1948",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Bilakah Persekutuan Tanah Melayu 1948 ditubuhkan secara rasmi?",
+      "options": [
+        "1 Februari 1948",
+        "25 Julai 1946",
+        "27 Mei 1946",
+        "18 Julai 1946"
+      ],
+      "answer": "1 Februari 1948",
+      "explanation": "Persekutuan Tanah Melayu 1948 ditubuhkan secara rasmi pada 1 Februari 1948 selepas Raja-raja Melayu menandatangani Perjanjian Persekutuan Tanah Melayu 1948.",
+      "tip": "1 Februari 1948 = penubuhan rasmi."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah dua Ahli Parlimen British yang menyaksikan sendiri bantahan orang Melayu terhadap Malayan Union?",
+      "options": [
+        "L.D. Gammans dan David Rees Williams",
+        "Malcolm MacDonald dan Sir Edward Gent",
+        "Sir Ralph Hone dan A.T. Newboult",
+        "Dato' Onn Jaafar dan Tan Cheng Lock"
+      ],
+      "answer": "L.D. Gammans dan David Rees Williams",
+      "explanation": "Gammans dan Rees Williams menyaksikan bantahan orang Melayu lalu melaporkannya kepada Dewan Parlimen British.",
+      "tip": "Gammans + Rees Williams = saksi bantahan."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah yang bertindak sebagai jurucakap Raja-raja Melayu semasa rundingan dengan British?",
+      "options": [
+        "Sultan Perak",
+        "Sir Edward Gent",
+        "Malcolm MacDonald",
+        "Dato' Onn Jaafar"
+      ],
+      "answer": "Sultan Perak",
+      "explanation": "Sultan Perak bertindak sebagai jurucakap Raja-raja Melayu dan menjelaskan pendirian mereka kepada Sir Edward Gent.",
+      "tip": "Sultan Perak = jurucakap raja-raja."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah nama piagam yang menjadi asas dasar dekolonisasi yang disarankan Pertubuhan Bangsa-Bangsa Bersatu (PBB) kepada British?",
+      "options": [
+        "Piagam Atlantik",
+        "Perlembagaan Rakyat",
+        "Perjanjian Persekutuan Tanah Melayu",
+        "Perjanjian Pangkor"
+      ],
+      "answer": "Piagam Atlantik",
+      "explanation": "Dasar dekolonisasi disarankan oleh PBB melalui Piagam Atlantik yang diisytiharkan pada Ogos 1941.",
+      "tip": "Piagam Atlantik = dasar dekolonisasi."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah pentadbir British turut menyokong pembentukan Persekutuan Tanah Melayu?",
+      "options": [
+        "Kerana mereka percaya bentuk persekutuan dapat mewujudkan keamanan, kestabilan dan kemajuan ekonomi",
+        "Kerana mereka mahu menghapuskan sepenuhnya kedudukan Raja-raja Melayu dalam pentadbiran",
+        "Kerana mereka mahu meneruskan Malayan Union tanpa sebarang perubahan struktur",
+        "Kerana mereka dipaksa oleh Pertubuhan Bangsa-Bangsa Bersatu untuk menamatkan penjajahan serta-merta"
+      ],
+      "answer": "Kerana mereka percaya bentuk persekutuan dapat mewujudkan keamanan, kestabilan dan kemajuan ekonomi",
+      "explanation": "Pentadbir British menyokong konsep persekutuan kerana ia dianggap dapat mewujudkan keamanan, kestabilan dan kemajuan ekonomi.",
+      "tip": "British sokong = aman + stabil + ekonomi."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah surat Sultan Perak penting sebagai bukti sejarah berkaitan Malayan Union?",
+      "options": [
+        "Kerana surat itu menunjukkan persetujuan terhadap Malayan Union diperoleh secara paksaan dan bukan dengan kerelaan Raja-raja Melayu",
+        "Kerana surat itu mengesahkan Raja-raja Melayu menyokong sepenuhnya pelaksanaan Malayan Union",
+        "Kerana surat itu menjadi asas rasmi kepada penggubalan Perlembagaan Rakyat",
+        "Kerana surat itu ditulis selepas Persekutuan Tanah Melayu 1948 ditubuhkan"
+      ],
+      "answer": "Kerana surat itu menunjukkan persetujuan terhadap Malayan Union diperoleh secara paksaan dan bukan dengan kerelaan Raja-raja Melayu",
+      "explanation": "Petikan surat Sultan Perak menegaskan baginda dipaksa dan terburu-buru menurunkan tandatangan bagi Malayan Union.",
+      "tip": "Surat Sultan Perak = tandatangan dipaksa."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah British menganggap kestabilan politik penting untuk memulihkan ekonomi Tanah Melayu selepas perang?",
+      "options": [
+        "Kerana kestabilan politik dapat meningkatkan keyakinan pelabur luar untuk melabur di Tanah Melayu",
+        "Kerana kestabilan politik membolehkan British mengekalkan Malayan Union tanpa bantahan",
+        "Kerana kestabilan politik tidak mempunyai kaitan langsung dengan aspek ekonomi",
+        "Kerana kestabilan politik hanya penting untuk kepentingan Raja-raja Melayu semata-mata"
+      ],
+      "answer": "Kerana kestabilan politik dapat meningkatkan keyakinan pelabur luar untuk melabur di Tanah Melayu",
+      "explanation": "British menyedari politik yang stabil dapat mewujudkan keyakinan pelabur luar untuk melabur di Tanah Melayu.",
+      "tip": "Stabil politik = yakin pelabur."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Dua Ahli Parlimen British pulang ke England lalu melaporkan bantahan hebat rakyat tempatan kepada Dewan Parlimen, sehingga memberi amaran bahawa huru-hara akan berlaku jika dasar sedia ada diteruskan. Apakah dasar pentadbiran yang dimaksudkan?",
+      "options": [
+        "Malayan Union",
+        "Persekutuan Tanah Melayu",
+        "Perlembagaan Rakyat",
+        "Piagam Atlantik"
+      ],
+      "answer": "Malayan Union",
+      "explanation": "Gammans memberi amaran bahawa huru-hara akan berlaku jika British meneruskan rancangan Malayan Union.",
+      "tip": "Amaran huru-hara = Malayan Union."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Seorang pegawai kanan British mencadangkan supaya sultan diberikan kuasa tertentu dalam Majlis Negeri dan peranan dalam Majlis Perundangan bagi meyakinkan British bahawa persekutuan lebih sesuai berbanding pentadbiran sedia ada. Siapakah pegawai ini?",
+      "options": [
+        "Sir Ralph Hone",
+        "Sir Edward Gent",
+        "Malcolm MacDonald",
+        "L.D. Gammans"
+      ],
+      "answer": "Sir Ralph Hone",
+      "explanation": "Sir Ralph Hone mencadangkan supaya sultan diberi kuasa dalam Majlis Negeri dan peranan dalam Majlis Perundangan.",
+      "tip": "Kuasa sultan dlm Majlis = Ralph Hone."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Dua pemimpin British bertemu dengan Raja-raja Melayu di sebuah bandar di Perak bagi membincangkan penyelesaian kepada konflik antara masyarakat Melayu dengan kerajaan British. Di manakah pertemuan ini berlangsung?",
+      "options": [
+        "Kuala Kangsar",
+        "Pulau Pinang",
+        "King's House, Kuala Lumpur",
+        "Pekan, Pahang"
+      ],
+      "answer": "Kuala Kangsar",
+      "explanation": "Pertemuan Malcolm MacDonald dan Sir Edward Gent dengan Raja-raja Melayu berlangsung di Kuala Kangsar pada 27 Mei 1946.",
+      "tip": "Kuala Kangsar = pertemuan raja-British."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah persamaan utama antara cadangan Raja-raja Melayu dengan sokongan pentadbir British terhadap penubuhan persekutuan?",
+      "options": [
+        "Kedua-duanya mahu menggantikan Malayan Union dengan satu bentuk pentadbiran baharu yang lebih stabil",
+        "Kedua-duanya mahu mengekalkan Malayan Union tanpa sebarang perubahan",
+        "Kedua-duanya menolak sepenuhnya penglibatan Raja-raja Melayu dalam pentadbiran baharu",
+        "Kedua-duanya bertujuan menghapuskan sepenuhnya kehadiran British di Tanah Melayu"
+      ],
+      "answer": "Kedua-duanya mahu menggantikan Malayan Union dengan satu bentuk pentadbiran baharu yang lebih stabil",
+      "explanation": "Raja-raja Melayu mencadangkan perjanjian baharu manakala British turut melihat persekutuan sebagai punca kestabilan.",
+      "tip": "Sama-sama mahu ganti Malayan Union."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perbezaan utama antara motif penentangan orang Melayu terhadap Malayan Union dengan motif sokongan pentadbir British terhadap persekutuan?",
+      "options": [
+        "Orang Melayu menentang kerana kedudukan Raja-raja Melayu dan orang Melayu terjejas, manakala British menyokong persekutuan demi keamanan, kestabilan dan kemajuan ekonomi mereka sendiri",
+        "Orang Melayu dan British sama-sama menentang Malayan Union atas sebab yang serupa",
+        "Orang Melayu menyokong Malayan Union manakala British menentangnya",
+        "Kedua-dua pihak tidak mempunyai sebarang kepentingan dalam isu ini"
+      ],
+      "answer": "Orang Melayu menentang kerana kedudukan Raja-raja Melayu dan orang Melayu terjejas, manakala British menyokong persekutuan demi keamanan, kestabilan dan kemajuan ekonomi mereka sendiri",
+      "explanation": "Motif orang Melayu berpunca daripada kesan buruk kepada Raja-raja Melayu dan orang Melayu, manakala British lebih mementingkan kestabilan dan ekonomi.",
+      "tip": "Melayu = kedudukan terjejas; British = kepentingan sendiri."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah PALING tepat menunjukkan bahawa penubuhan Persekutuan Tanah Melayu 1948 hasil gabungan pelbagai kepentingan, bukan sekadar tindakan sehala British?",
+      "options": [
+        "Penubuhannya digerakkan oleh penentangan rakyat, cadangan Raja-raja Melayu dan UMNO, serta persetujuan pentadbir British yang melihat kepentingan politik dan ekonomi mereka sendiri",
+        "Penubuhannya semata-mata hasil arahan terus daripada Pertubuhan Bangsa-Bangsa Bersatu tanpa penglibatan tempatan",
+        "Penubuhannya hanya melibatkan keputusan sepihak Raja-raja Melayu tanpa sebarang campur tangan British",
+        "Penubuhannya berlaku secara kebetulan tanpa sebarang rundingan atau bantahan sebelumnya"
+      ],
+      "answer": "Penubuhannya digerakkan oleh penentangan rakyat, cadangan Raja-raja Melayu dan UMNO, serta persetujuan pentadbir British yang melihat kepentingan politik dan ekonomi mereka sendiri",
+      "explanation": "Ketiga-tiga faktor — penentangan rakyat, cadangan Raja-raja Melayu/UMNO dan sokongan British — sama-sama menyumbang kepada penubuhan persekutuan.",
+      "tip": "Gabungan 3 faktor, bukan sehala."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah PALING tepat merumuskan subtopik 5.2?",
+      "options": [
+        "Penubuhan Persekutuan Tanah Melayu 1948 didorong oleh gabungan penentangan orang Melayu terhadap Malayan Union, cadangan Raja-raja Melayu dan UMNO, serta sokongan pentadbir British demi kestabilan politik dan ekonomi",
+        "Penubuhan Persekutuan Tanah Melayu 1948 hanya didorong oleh keputusan sepihak pentadbir British tanpa sebarang tekanan tempatan",
+        "Penubuhan Persekutuan Tanah Melayu 1948 berlaku tanpa sebarang kaitan dengan Malayan Union yang diperkenalkan sebelumnya",
+        "Penubuhan Persekutuan Tanah Melayu 1948 hanya didorong oleh dasar dekolonisasi Pertubuhan Bangsa-Bangsa Bersatu semata-mata"
+      ],
+      "answer": "Penubuhan Persekutuan Tanah Melayu 1948 didorong oleh gabungan penentangan orang Melayu terhadap Malayan Union, cadangan Raja-raja Melayu dan UMNO, serta sokongan pentadbir British demi kestabilan politik dan ekonomi",
+      "explanation": "Rumusan menggabungkan ketiga-tiga faktor utama yang didedahkan dalam subtopik ini.",
+      "tip": "Rumusan = 3 faktor utama."
+    }
+  ]
+}

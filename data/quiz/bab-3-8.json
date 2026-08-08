@@ -1,0 +1,216 @@
+{
+  "id": "3-8",
+  "title": "Perkembangan Gerakan Nasionalisme Tempatan dan Pendudukan Jepun",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Bilakah tentera Jepun membubarkan Kesatuan Melayu Muda (KMM)?",
+      "options": [
+        "Jun 1942",
+        "Jun 1945",
+        "Ogos 1945",
+        "April 1944"
+      ],
+      "answer": "Jun 1942",
+      "explanation": "Tentera Jepun membubarkan KMM pada Jun 1942 kerana pemimpinnya menuntut kemerdekaan daripada Jepun.",
+      "tip": "Jun 1942 = KMM dibubarkan."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah yang mengetuai Giyu Gun (Pembela Tanah Air) sebagai Leftenan Kolonel?",
+      "options": [
+        "Ibrahim Haji Yaakob",
+        "Onan Haji Siraj",
+        "Dr. Burhanuddin al-Helmi",
+        "Dato' Onn Jaafar"
+      ],
+      "answer": "Ibrahim Haji Yaakob",
+      "explanation": "Ibrahim Haji Yaakob mengetuai Giyu Gun sebagai Leftenan Kolonel.",
+      "tip": "Giyu Gun = Ibrahim Haji Yaakob."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Bilakah Kesatuan Rakyat Indonesia Semenanjung (KRIS) ditubuhkan?",
+      "options": [
+        "Jun 1945",
+        "Jun 1942",
+        "Ogos 1945",
+        "September 1945"
+      ],
+      "answer": "Jun 1945",
+      "explanation": "KRIS ditubuhkan menjelang Jun 1945 apabila tentera Jepun berusaha memenangi hati golongan nasionalis Melayu.",
+      "tip": "Jun 1945 = KRIS."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah nama parti politik pertama yang ditubuhkan selepas zaman pendudukan Jepun?",
+      "options": [
+        "Parti Kebangsaan Melayu Malaya (PKMM)",
+        "Kesatuan Melayu Muda (KMM)",
+        "United Malays National Organisation (UMNO)",
+        "Parti Kebangsaan Melayu Labuan (PKML)"
+      ],
+      "answer": "Parti Kebangsaan Melayu Malaya (PKMM)",
+      "explanation": "PKMM ialah parti politik pertama yang ditubuhkan selepas zaman pendudukan Jepun.",
+      "tip": "Parti politik pertama = PKMM."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah tentera Jepun membubarkan KMM pada Jun 1942?",
+      "options": [
+        "Kerana pemimpin KMM menuntut kemerdekaan daripada Jepun walaupun KMM telah membantu Jepun menentang British",
+        "Kerana KMM enggan bekerjasama dengan Jepun sama sekali",
+        "Kerana ahli KMM semuanya ditangkap oleh British",
+        "Kerana KMM menyokong penuh dasar penjajahan British"
+      ],
+      "answer": "Kerana pemimpin KMM menuntut kemerdekaan daripada Jepun walaupun KMM telah membantu Jepun menentang British",
+      "explanation": "Tuntutan kemerdekaan oleh pemimpin KMM menyebabkan Jepun membubarkan pertubuhan itu.",
+      "tip": "Tuntut merdeka = KMM dibubar."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah kejayaan tentera Jepun mengalahkan British menyemarakkan semangat antipenjajah rakyat tempatan?",
+      "options": [
+        "Kerana ia menyedarkan orang tempatan bahawa orang Asia juga mampu mengalahkan kuasa besar Eropah",
+        "Kerana British memberi kebebasan penuh selepas kalah",
+        "Kerana Jepun mengumumkan kemerdekaan serta-merta selepas menang",
+        "Kerana rakyat tempatan tidak mempercayai kemenangan Jepun"
+      ],
+      "answer": "Kerana ia menyedarkan orang tempatan bahawa orang Asia juga mampu mengalahkan kuasa besar Eropah",
+      "explanation": "Kekalahan British menambahkan keyakinan rakyat tempatan bahawa kuasa Eropah boleh ditewaskan.",
+      "tip": "British kalah = keyakinan Asia meningkat."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah orang Melayu dan Iban di Sarawak diberikan jawatan Pegawai Daerah yang lebih tinggi semasa pendudukan Jepun?",
+      "options": [
+        "Kerana Jepun mengalami kekurangan pegawai untuk mentadbir wilayah tersebut",
+        "Kerana British meminta Jepun melantik pegawai tempatan",
+        "Kerana orang Melayu dan Iban membayar untuk jawatan tersebut",
+        "Kerana jawatan itu tidak penting kepada pentadbiran Jepun"
+      ],
+      "answer": "Kerana Jepun mengalami kekurangan pegawai untuk mentadbir wilayah tersebut",
+      "explanation": "Kekurangan pegawai Jepun menyebabkan orang Melayu dan Iban diberi peluang menjawat jawatan lebih tinggi.",
+      "tip": "Kurang pegawai Jepun = peluang tempatan."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sebuah parti politik di Sabah ditubuhkan berdasarkan idea seorang nasionalis Tanah Melayu bernama Harun Aminurrashid. Parti manakah ini?",
+      "options": [
+        "Parti Kebangsaan Melayu Labuan (PKML)",
+        "Parti Kebangsaan Melayu Malaya (PKMM)",
+        "Kesatuan Rakyat Indonesia Semenanjung (KRIS)",
+        "Kesatuan Melayu Muda (KMM)"
+      ],
+      "answer": "Parti Kebangsaan Melayu Labuan (PKML)",
+      "explanation": "PKML ditubuhkan oleh Tengku Noordin, Abu Bakar dan Zakaria Gunn berdasarkan idea Harun Aminurrashid.",
+      "tip": "Idea Harun Aminurrashid = PKML."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Persatuan Cina Seberang Laut di Sarawak digabungkan menjadi satu pertubuhan anjuran Jepun yang meliputi dialek dan nama keluarga berbeza. Apakah nama pertubuhan ini?",
+      "options": [
+        "Kakeo Kokokai",
+        "Koa Kunrenjo",
+        "PKML",
+        "MPAJA"
+      ],
+      "answer": "Kakeo Kokokai",
+      "explanation": "Kakeo Kokokai ialah persatuan Cina anjuran Jepun yang menggabungkan pelbagai persatuan Cina di Sarawak.",
+      "tip": "Persatuan Cina Sarawak = Kakeo Kokokai."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sebuah parti Melayu di pantai timur Sabah dipengerusikan oleh Orang Kaya-Kaya Abu Bakar. Parti manakah ini?",
+      "options": [
+        "Parti Kebangsaan Melayu Tawau",
+        "Parti Kebangsaan Melayu Labuan",
+        "Parti Kebangsaan Melayu Malaya",
+        "Kesatuan Rakyat Indonesia Semenanjung"
+      ],
+      "answer": "Parti Kebangsaan Melayu Tawau",
+      "explanation": "Parti Kebangsaan Melayu Tawau ditubuhkan di pantai timur Sabah dan dipengerusikan oleh Orang Kaya-Kaya Abu Bakar.",
+      "tip": "Tawau = Orang Kaya-Kaya Abu Bakar."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perbezaan antara Giyu Gun dengan Giyu Tai?",
+      "options": [
+        "Giyu Gun ialah pasukan tentera sukarela mempertahankan Tanah Melayu di bawah Ibrahim Haji Yaakob, manakala Giyu Tai membantu pertahanan pesisiran pantai dan ketenteraman awam di bawah Onan Haji Siraj",
+        "Giyu Gun dan Giyu Tai ialah nama lain bagi organisasi yang sama",
+        "Giyu Gun ditubuhkan oleh British, manakala Giyu Tai ditubuhkan oleh Jepun",
+        "Giyu Gun hanya beroperasi di Sarawak, manakala Giyu Tai hanya di Sabah"
+      ],
+      "answer": "Giyu Gun ialah pasukan tentera sukarela mempertahankan Tanah Melayu di bawah Ibrahim Haji Yaakob, manakala Giyu Tai membantu pertahanan pesisiran pantai dan ketenteraman awam di bawah Onan Haji Siraj",
+      "explanation": "Kedua-dua organisasi ketenteraan ini mempunyai fungsi dan kepimpinan yang berbeza.",
+      "tip": "Giyu Gun = Ibrahim; Giyu Tai = Onan."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah persamaan antara KMM dengan KRIS dalam perjuangan menuntut kemerdekaan?",
+      "options": [
+        "Kedua-duanya bekerjasama dengan Jepun dengan harapan mendapat kemerdekaan Tanah Melayu, tetapi akhirnya kecewa apabila Jepun tidak dapat memenuhi janji tersebut",
+        "Kedua-duanya menentang Jepun secara terbuka sejak awal",
+        "Kedua-duanya ditubuhkan oleh British selepas perang",
+        "Kedua-duanya hanya bertujuan menguasai Sarawak dan Sabah"
+      ],
+      "answer": "Kedua-duanya bekerjasama dengan Jepun dengan harapan mendapat kemerdekaan Tanah Melayu, tetapi akhirnya kecewa apabila Jepun tidak dapat memenuhi janji tersebut",
+      "explanation": "KMM dan KRIS sama-sama berharap kemerdekaan melalui kerjasama dengan Jepun, tetapi harapan itu tidak kesampaian.",
+      "tip": "KMM & KRIS = harap merdeka via Jepun."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah yang PALING tepat menerangkan bagaimana pendudukan Jepun mempercepat perkembangan nasionalisme tempatan?",
+      "options": [
+        "Kekalahan British, peluang politik semasa pendudukan dan pengalaman kesengsaraan secara kolektif menguatkan keyakinan dan keinginan rakyat untuk bebas daripada penjajahan",
+        "Nasionalisme tempatan berkembang semata-mata kerana Jepun memberi kemerdekaan penuh",
+        "Nasionalisme tempatan tidak dipengaruhi langsung oleh pendudukan Jepun",
+        "Nasionalisme tempatan hanya berkembang di Sarawak dan Sabah sahaja"
+      ],
+      "answer": "Kekalahan British, peluang politik semasa pendudukan dan pengalaman kesengsaraan secara kolektif menguatkan keyakinan dan keinginan rakyat untuk bebas daripada penjajahan",
+      "explanation": "Gabungan pengalaman ini mempercepatkan perkembangan nasionalisme tempatan yang lebih tersusun.",
+      "tip": "Kekalahan British + peluang + kesengsaraan."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah yang PALING tepat merumuskan subtopik 3.8?",
+      "options": [
+        "Pendudukan Jepun mempercepat nasionalisme tempatan di Tanah Melayu, Sarawak dan Sabah melalui semangat antipenjajah, perjuangan KMM hingga KRIS, serta peluang politik baharu, walaupun kemerdekaan tidak tercapai semasa pendudukan itu sendiri",
+        "Pendudukan Jepun langsung tidak memberi sebarang kesan kepada nasionalisme tempatan",
+        "Nasionalisme tempatan hanya berkembang di Tanah Melayu tanpa melibatkan Sarawak atau Sabah",
+        "Pendudukan Jepun menghapuskan sepenuhnya semangat nasionalisme rakyat"
+      ],
+      "answer": "Pendudukan Jepun mempercepat nasionalisme tempatan di Tanah Melayu, Sarawak dan Sabah melalui semangat antipenjajah, perjuangan KMM hingga KRIS, serta peluang politik baharu, walaupun kemerdekaan tidak tercapai semasa pendudukan itu sendiri",
+      "explanation": "Rumusan ini merangkumi kesan pendudukan Jepun terhadap nasionalisme di ketiga-tiga wilayah.",
+      "tip": "Rumusan = 3 wilayah + nasionalisme dipercepat."
+    }
+  ]
+}
