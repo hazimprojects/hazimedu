@@ -158,28 +158,17 @@
       <p class="home-info-text" style="margin-top:0.5rem;"><strong>Buku teks tetap menjadi asas.</strong></p>
       <p class="home-info-text">ZymNotes tidak dibina untuk menggantikan buku teks rasmi. Bagi subjek yang mempunyai buku teks rasmi, kandungan tersebut menjadi salah satu rujukan utama dalam membangunkan nota dan bahan pembelajaran ZymNotes.</p>
       <p class="home-info-text">Ini penting supaya proses meringkaskan, menyusun dan memvisualkan kandungan tidak menyebabkan perkara penting terlepas atau maksud asal berubah.</p>
-      <div class="about-approach-list">
-        <div class="about-approach-card" style="background:rgba(62,95,138,0.09)">
-          <span class="about-approach-icon"><img class="fluent-3d-emoji" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Open%20book/3D/open_book_3d.png" width="24" height="24" alt="" decoding="async" loading="lazy" /></span>
-          <span class="about-approach-text"><strong>Rujuk</strong> — kandungan berpandukan sumber yang sepatutnya dipelajari.</span>
-        </div>
-        <div class="about-approach-card" style="background:rgba(47,122,103,0.09)">
-          <span class="about-approach-icon"><img class="fluent-3d-emoji" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Magnifying%20glass%20tilted%20left/3D/magnifying_glass_tilted_left_3d.png" width="24" height="24" alt="" decoding="async" loading="lazy" /></span>
-          <span class="about-approach-text"><strong>Semak</strong> — fakta dan istilah penting diperiksa sebelum diterbitkan.</span>
-        </div>
-        <div class="about-approach-card" style="background:rgba(245,158,11,0.09)">
-          <span class="about-approach-icon"><img class="fluent-3d-emoji" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Puzzle%20piece/3D/puzzle_piece_3d.png" width="24" height="24" alt="" decoding="async" loading="lazy" /></span>
-          <span class="about-approach-text"><strong>Susun</strong> — kandungan kompleks dipecahkan kepada struktur yang lebih mudah difahami.</span>
-        </div>
-        <div class="about-approach-card" style="background:rgba(79,70,229,0.08)">
-          <span class="about-approach-icon"><img class="fluent-3d-emoji" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Brain/3D/brain_3d.png" width="24" height="24" alt="" decoding="async" loading="lazy" /></span>
-          <span class="about-approach-text"><strong>Faham</strong> — pelajar dibantu memahami hubungan antara maklumat, bukan sekadar menghafalnya.</span>
-        </div>
-      </div>
       <p class="home-info-text" style="margin-top:0.7rem; font-style:italic;">ZymNotes ialah bahan sokongan pembelajaran, bukan pengganti buku teks rasmi.</p>
     </div>
 
-    <div class="home-info-card" id="about-proses">
+    <button type="button" class="about-trigger-card" data-modal-target="modal-proses" id="about-proses">
+      <div class="about-trigger-body">
+        <div class="home-info-label" style="margin-bottom:4px;">Bagaimana ZymNotes Membina Kandungan?</div>
+        <p class="about-trigger-desc">5 langkah: Sumber → Pemetaan → Transformasi → Semakan → Pembelajaran. Ketuk untuk lihat penuh.</p>
+      </div>
+      <span class="about-trigger-arrow" aria-hidden="true">→</span>
+    </button>
+    <div class="about-modal-source" id="modal-proses">
       <div class="home-info-label">Bagaimana ZymNotes Membina Kandungan?</div>
       <p class="home-info-text" style="margin-bottom:0.75rem;"><strong>Setiap nota melalui proses.</strong></p>
       <div class="about-process-list">
@@ -253,6 +242,68 @@
       <p class="home-info-text" style="margin-top:0.4rem; font-style:italic;">Format boleh berubah. Falsafah kekal.</p>
     </div>
 
+    <button type="button" class="about-trigger-card" data-modal-target="modal-prinsip">
+      <div class="about-trigger-body">
+        <div class="home-info-label" style="margin-bottom:4px;">Prinsip Kami</div>
+        <p class="about-trigger-desc">7 prinsip yang menjadi panduan — daripada sumber sehingga pembinaan berterusan. Ketuk untuk lihat penuh.</p>
+      </div>
+      <span class="about-trigger-arrow" aria-hidden="true">→</span>
+    </button>
+    <div class="about-modal-source" id="modal-prinsip">
+      <div class="home-info-label">Prinsip Kami</div>
+      <p class="home-info-text" style="margin-bottom:0.75rem;"><strong>Apa yang kami pegang.</strong></p>
+      <div class="about-approach-list">
+        <div class="about-approach-card" style="background:rgba(62,95,138,0.09)">
+          <span class="about-approach-icon"><img class="fluent-3d-emoji" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Open%20book/3D/open_book_3d.png" width="24" height="24" alt="" decoding="async" loading="lazy" /></span>
+          <span class="about-approach-text"><strong>Berpandukan sumber</strong> — kandungan penting tidak dibina berdasarkan tekaan atau populariti semata-mata.</span>
+        </div>
+        <div class="about-approach-card" style="background:rgba(47,122,103,0.09)">
+          <span class="about-approach-icon"><img class="fluent-3d-emoji" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Magnifying%20glass%20tilted%20left/3D/magnifying_glass_tilted_left_3d.png" width="24" height="24" alt="" decoding="async" loading="lazy" /></span>
+          <span class="about-approach-text"><strong>Tepat sebelum ringkas</strong> — keringkasan tidak boleh mengorbankan ketepatan.</span>
+        </div>
+        <div class="about-approach-card" style="background:rgba(245,158,11,0.09)">
+          <span class="about-approach-icon"><img class="fluent-3d-emoji" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Puzzle%20piece/3D/puzzle_piece_3d.png" width="24" height="24" alt="" decoding="async" loading="lazy" /></span>
+          <span class="about-approach-text"><strong>Susun sebelum sampai</strong> — kandungan kompleks dipecahkan kepada struktur yang lebih mudah difahami.</span>
+        </div>
+        <div class="about-approach-card" style="background:rgba(79,70,229,0.08)">
+          <span class="about-approach-icon"><img class="fluent-3d-emoji" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Brain/3D/brain_3d.png" width="24" height="24" alt="" decoding="async" loading="lazy" /></span>
+          <span class="about-approach-text"><strong>Faham sebelum hafal</strong> — nota perlu membantu pelajar melihat hubungan antara maklumat.</span>
+        </div>
+        <div class="about-approach-card" style="background:rgba(14,165,233,0.09)">
+          <span class="about-approach-icon"><img class="fluent-3d-emoji" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Books/3D/books_3d.png" width="24" height="24" alt="" decoding="async" loading="lazy" /></span>
+          <span class="about-approach-text"><strong>Subjek menentukan pendekatan</strong> — tidak semua perkara perlu diajar melalui bentuk yang sama.</span>
+        </div>
+        <div class="about-approach-card" style="background:rgba(99,102,241,0.09)">
+          <span class="about-approach-icon"><img class="fluent-3d-emoji" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Mobile%20phone/3D/mobile_phone_3d.png" width="24" height="24" alt="" decoding="async" loading="lazy" /></span>
+          <span class="about-approach-text"><strong>Mobile-first</strong> — pembelajaran perlu mudah dicapai apabila pelajar memerlukannya.</span>
+        </div>
+        <div class="about-approach-card" style="background:rgba(138,113,88,0.09)">
+          <span class="about-approach-icon"><img class="fluent-3d-emoji" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Hourglass%20not%20done/3D/hourglass_not_done_3d.png" width="24" height="24" alt="" decoding="async" loading="lazy" /></span>
+          <span class="about-approach-text"><strong>Dibina secara berterusan</strong> — kandungan dan pengalaman pembelajaran akan diperbaiki dari semasa ke semasa.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="home-info-card">
+      <div class="home-info-label">ZymNotes dan SPM</div>
+      <p class="home-info-text"><strong>Fokus kepada SPM. Bukan sekadar mengejar peperiksaan.</strong></p>
+      <p class="home-info-text">SPM ialah fokus utama ZymNotes. Namun, persediaan peperiksaan yang baik bermula dengan penguasaan kandungan, bukan sekadar mengejar ramalan soalan.</p>
+      <div class="about-flow" role="img" aria-label="Aliran: Kurikulum kepada Kandungan, Kefahaman, Penguasaan, Latihan dan akhirnya Pentaksiran">
+        <span class="about-flow-step">KURIKULUM</span>
+        <span class="about-flow-arrow">→</span>
+        <span class="about-flow-step">KANDUNGAN</span>
+        <span class="about-flow-arrow">→</span>
+        <span class="about-flow-step">KEFAHAMAN</span>
+        <span class="about-flow-arrow">→</span>
+        <span class="about-flow-step">PENGUASAAN</span>
+        <span class="about-flow-arrow">→</span>
+        <span class="about-flow-step">LATIHAN</span>
+        <span class="about-flow-arrow">→</span>
+        <span class="about-flow-step is-accent">PENTAKSIRAN</span>
+      </div>
+      <p class="home-info-text" style="margin-top:0.7rem;">Kami mahu pelajar bersedia kerana mereka memahami apa yang dipelajari — bukan kerana mereka hanya menghafal apa yang dijangka keluar.</p>
+    </div>
+
     <div class="home-info-card">
       <div class="home-info-label">Latar Belakang</div>
       <p class="home-info-text">ZymNotes dibina oleh <strong>Hazim</strong>, graduan <strong>DPLI dari UKM</strong> yang pernah berada di bilik darjah sebagai guru pelatih.</p>
@@ -261,8 +312,15 @@
       <p class="home-info-text">Jadi ZymNotes cuba mengambil <strong>kekuatan buku teks</strong> (isi yang selari silibus) tetapi dengan <strong>pendekatan lain</strong>: susun atur yang lebih ringkas di skrin, penekanan visual, dan di mana ia tersedia — lapisan tambahan seperti audio atau kuiz — supaya ulang kaji terasa lebih mudah didekati. Ia kekal <strong>bahan sokongan</strong>; buku teks dan guru kekal rujukan utama di sekolah.</p>
     </div>
 
-    <div class="home-scope-section">
-      <div class="home-scope-label">Ciri &amp; Ketelusan Semasa</div>
+    <button type="button" class="about-trigger-card" data-modal-target="modal-ciri">
+      <div class="about-trigger-body">
+        <div class="home-info-label" style="margin-bottom:4px;">Ciri &amp; Ketelusan Semasa</div>
+        <p class="about-trigger-desc">10 ciri sedia ada — apa yang siap, apa yang masih separa. Ketuk untuk lihat penuh.</p>
+      </div>
+      <span class="about-trigger-arrow" aria-hidden="true">→</span>
+    </button>
+    <div class="about-modal-source" id="modal-ciri">
+      <div class="home-info-label">Ciri &amp; Ketelusan Semasa</div>
       <div class="about-approach-list">
         <div class="about-approach-card" style="background:rgba(62,95,138,0.09)">
           <span class="about-approach-icon"><img class="fluent-3d-emoji" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Open%20book/3D/open_book_3d.png" width="24" height="24" alt="" decoding="async" loading="lazy" /></span>
@@ -386,6 +444,18 @@
       <span class="about-pwa-recover-hint">Jika anda telah nyahpasang aplikasi tetapi arahan tidak muncul, ketik di sini.</span>
     </p>
 
+    <div class="home-info-card" style="text-align:center;">
+      <p class="home-info-text" style="font-size:1.05rem; font-weight:800; color:var(--ink);">Belajar bukan sekadar mengumpul maklumat.</p>
+      <p class="home-info-text">Maklumat hanya menjadi berguna apabila kita dapat memahaminya. ZymNotes dibina untuk membantu proses itu — satu topik, satu konsep dan satu subjek pada satu masa.</p>
+      <div style="margin:0.9rem 0 0.3rem;">
+        <div class="home-brand-tagline" style="margin-bottom:2px;">ZymNotes</div>
+        <div class="about-trigger-desc" style="font-style:italic;">Nota Ulang Kaji Generasi Baharu · Daripada Maklumat kepada Kefahaman.</div>
+      </div>
+      <div class="home-cta-row" style="justify-content:center; margin-top:0.6rem;">
+        <a class="home-cta-btn home-cta-primary" href="notes/index.html">Mula Ulang Kaji</a>
+      </div>
+    </div>
+
     <footer class="page-footer">
     <div class="page-footer-inner">
       <span>© 2026 ZymNotes · Semua hak cipta terpelihara</span>
@@ -396,6 +466,62 @@
 
   </main>
 
-  <script src="assets/js/main.js?v=386"></script>
+  <script src="assets/js/main.js?v=385"></script>
+  <script>
+    // Kad pencetus About → modal terapung (kandungan penuh kekal dlm DOM,
+    // display:none, disalin ke dlm modal — bukan dibuang/fetch berasingan).
+    (function () {
+      var triggers = document.querySelectorAll('[data-modal-target]');
+      if (!triggers.length) return;
+
+      var overlay, panel, body, closeBtn, lastFocused;
+
+      function buildModal() {
+        overlay = document.createElement('div');
+        overlay.className = 'about-modal-overlay';
+        overlay.innerHTML =
+          '<div class="about-modal-panel" role="dialog" aria-modal="true">' +
+            '<button type="button" class="about-modal-close" aria-label="Tutup">✕</button>' +
+            '<div class="about-modal-body"></div>' +
+          '</div>';
+        document.body.appendChild(overlay);
+        panel = overlay.querySelector('.about-modal-panel');
+        body = overlay.querySelector('.about-modal-body');
+        closeBtn = overlay.querySelector('.about-modal-close');
+        closeBtn.addEventListener('click', closeModal);
+        overlay.addEventListener('click', function (e) {
+          if (e.target === overlay) closeModal();
+        });
+      }
+
+      function openModal(sourceId) {
+        var source = document.getElementById(sourceId);
+        if (!source) return;
+        if (!overlay) buildModal();
+        body.innerHTML = source.innerHTML;
+        lastFocused = document.activeElement;
+        overlay.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+        closeBtn.focus();
+      }
+
+      function closeModal() {
+        if (!overlay || !overlay.classList.contains('is-open')) return;
+        overlay.classList.remove('is-open');
+        document.body.style.overflow = '';
+        if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
+      }
+
+      triggers.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          openModal(btn.getAttribute('data-modal-target'));
+        });
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeModal();
+      });
+    })();
+  </script>
 </body>
 </html>
