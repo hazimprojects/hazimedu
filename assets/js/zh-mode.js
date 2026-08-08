@@ -14,6 +14,7 @@
 
 (function () {
   var LANG_KEY = "hzedu-lang-mode";
+  var REVEAL_ALL_KEY = "hzedu-reveal-all";
   var DISCLAIMER_KEY = "hzedu-zh-disclaimer-shown";
   var glossary = null;
   var comprehensionMap = null;
@@ -52,6 +53,14 @@
 
   function isZhMode() {
     return localStorage.getItem(LANG_KEY) === "zh";
+  }
+
+  function isRevealAllPersisted() {
+    try {
+      return localStorage.getItem(REVEAL_ALL_KEY) === "1";
+    } catch (e) {
+      return false;
+    }
   }
 
   function normalize(str) {
@@ -1243,6 +1252,9 @@
   function toggleRevealAll() {
     if (!isZhMode()) return;
     revealAllActive = !revealAllActive;
+    try {
+      localStorage.setItem(REVEAL_ALL_KEY, revealAllActive ? "1" : "0");
+    } catch (e) {}
     setAllChipFlips(revealAllActive);
     setAllHeadingAnns(revealAllActive);
     updateRevealAllButtons();
@@ -1263,6 +1275,12 @@
         var comprehension = getComprehensionMap();
         setupChipFlips(merged, comprehension);
         annotateOrphanText(merged, comprehension);
+        if (isRevealAllPersisted()) {
+          revealAllActive = true;
+          setAllChipFlips(true);
+          setAllHeadingAnns(true);
+          updateRevealAllButtons();
+        }
         if (!opts.silentDisclaimer) {
           showDisclaimer();
         }
@@ -1385,6 +1403,12 @@
         var comprehension = getComprehensionMap();
         setupChipFlips(merged, comprehension);
         annotateOrphanText(merged, comprehension);
+        if (isRevealAllPersisted()) {
+          revealAllActive = true;
+          setAllChipFlips(true);
+          setAllHeadingAnns(true);
+          updateRevealAllButtons();
+        }
       });
     }
   });
