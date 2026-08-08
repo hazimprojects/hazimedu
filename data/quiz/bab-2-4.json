@@ -69,9 +69,9 @@
       "prompt": "Mengapakah penjajahan Barat penting dalam memahami nasionalisme Asia Tenggara?",
       "options": [
         "Ia menjadi faktor langsung yang mencetuskan semangat pembebasan",
-        "Ia tidak relevan",
-        "Ia hanya mempengaruhi seni",
-        "Ia menghapuskan semua bahasa"
+        "Ia hanya memberi kesan kepada golongan bangsawan tempatan sahaja",
+        "Ia lebih mempengaruhi corak seni bina dan kesusasteraan tempatan",
+        "Ia menggalakkan penyatuan ekonomi serantau tanpa tuntutan politik"
       ],
       "answer": "Ia menjadi faktor langsung yang mencetuskan semangat pembebasan",
       "explanation": "Penjajahan mencetuskan gerakan nasionalisme untuk pembebasan.",
@@ -100,8 +100,8 @@
       "options": [
         "Untuk menunjukkan corak nasionalisme di pelbagai negara Asia Tenggara",
         "Kerana kesemuaannya berkongsi sistem politik yang sama pada masa yang sama",
-        "Kerana kesemuanya terletak di luar Asia Tenggara",
-        "Kerana tiada negara tersebut mengalami penjajahan"
+        "Kerana keempat-empat negara ini tidak pernah mengalami sebarang bentuk penjajahan Barat",
+        "Kerana keempat-empat negara ini terletak berhampiran benua Afrika dan Timur Tengah"
       ],
       "answer": "Untuk menunjukkan corak nasionalisme di pelbagai negara Asia Tenggara",
       "explanation": "Contoh-contoh menunjukkan perkembangan serantau.",
@@ -114,9 +114,9 @@
       "prompt": "Sebuah negara di Asia Tenggara menubuhkan gerakan politik dan menuntut kemerdekaan daripada kuasa penjajah. Apakah yang digambarkan?",
       "options": [
         "Nasionalisme sebagai tindak balas terhadap penjajahan Barat",
-        "Ketiadaan kesedaran politik",
-        "Penolakan terhadap semua organisasi",
-        "Kemunduran ekonomi semata-mata"
+        "Perluasan pengaruh ekonomi kuasa penjajah ke wilayah baharu",
+        "Pembentukan gabungan ketenteraan serantau menentang kuasa asing",
+        "Pertikaian sempadan wilayah antara dua kuasa penjajah Eropah"
       ],
       "answer": "Nasionalisme sebagai tindak balas terhadap penjajahan Barat",
       "explanation": "Ini selari dengan tema penjajahan sebagai punca semangat nasionalisme.",
@@ -129,9 +129,9 @@
       "prompt": "Thailand memilih pembaharuan untuk kekal merdeka. Apakah strategi yang digambarkan?",
       "options": [
         "Pembaharuan dalaman sebagai pertahanan terhadap penjajahan",
-        "Penyerahan mutlak",
-        "Penolakan total terhadap modenisasi",
-        "Migrasi besar-besaran"
+        "Pembentukan pakatan ketenteraan dengan kuasa Eropah bersaing",
+        "Penyerahan sebahagian wilayah demi mengekalkan hubungan baik",
+        "Penutupan sempadan negara daripada sebarang pengaruh luar"
       ],
       "answer": "Pembaharuan dalaman sebagai pertahanan terhadap penjajahan",
       "explanation": "Thailand menggunakan pembaharuan untuk mengekalkan kemerdekaan.",
@@ -144,9 +144,9 @@
       "prompt": "Apakah yang digambarkan oleh matlamat 'membina jati diri bangsa'?",
       "options": [
         "Menguatkan identiti dan maruah bangsa dalam perjuangan",
-        "Menghapuskan bahasa kebangsaan",
-        "Menggalakkan dominasi asing",
-        "Menolak pendidikan rakyat"
+        "Menyeragamkan semua budaya tempatan mengikut acuan Barat",
+        "Mengukuhkan kuasa golongan bangsawan dalam pentadbiran",
+        "Menggantikan pemimpin tempatan dengan pentadbir penjajah"
       ],
       "answer": "Menguatkan identiti dan maruah bangsa dalam perjuangan",
       "explanation": "Jati diri bangsa penting dalam perjuangan nasionalisme.",
@@ -159,9 +159,9 @@
       "prompt": "Apakah persamaan utama antara nasionalisme di Filipina dengan nasionalisme di Indonesia?",
       "options": [
         "Keduanya berkembang dalam konteks penjajahan Barat di Asia Tenggara",
-        "Keduanya tidak berkaitan dengan politik",
-        "Keduanya hanya tentang ekonomi tradisional",
-        "Keduanya terletak di Eropah"
+        "Keduanya lebih menekankan pembaharuan ekonomi berbanding tuntutan politik",
+        "Keduanya diterajui oleh golongan bangsawan istana tanpa penyertaan rakyat biasa",
+        "Keduanya berkembang di rantau Asia Selatan, bukan Asia Tenggara"
       ],
       "answer": "Keduanya berkembang dalam konteks penjajahan Barat di Asia Tenggara",
       "explanation": "Kedua-dua contoh menunjukkan tema penjajahan serantau.",
@@ -174,8 +174,8 @@
       "prompt": "Apakah perbezaan utama antara contoh Thailand dengan contoh Filipina atau Burma?",
       "options": [
         "Thailand menekankan pembaharuan untuk kekal merdeka manakala banyak contoh lain menekankan pembebasan daripada penjajahan",
-        "Thailand dan negara lain menggunakan strategi ketenteraan yang sama",
-        "Thailand mengutamakan penjajahan langsung seperti negara jiran",
+        "Thailand dan Burma sama-sama menggunakan strategi ketenteraan menentang penjajah secara terbuka",
+        "Thailand turut dijajah secara langsung oleh British seperti Burma dan Filipina",
         "Filipina memilih pembaharuan dalaman manakala Thailand menumpukan pembebasan daripada penjajahan"
       ],
       "answer": "Thailand menekankan pembaharuan untuk kekal merdeka manakala banyak contoh lain menekankan pembebasan daripada penjajahan",
@@ -189,9 +189,9 @@
       "prompt": "Antara hujah berikut, manakah yang PALING kukuh untuk menjelaskan tema besar nasionalisme Asia Tenggara?",
       "options": [
         "Penjajahan Barat mencetuskan gerakan untuk merdeka, kedaulatan dan jati diri di pelbagai negara",
-        "Tema besar ialah penolakan total terhadap perdagangan",
-        "Tema besar ialah pengabaian politik",
-        "Tema besar tiada kaitan dengan rakyat"
+        "Tema besar ialah kerjasama ekonomi serantau tanpa sebarang tuntutan politik terhadap penjajah",
+        "Tema besar ialah pembaharuan pendidikan semata-mata tanpa tuntutan kemerdekaan politik",
+        "Tema besar ialah persaingan antara pemimpin tempatan tanpa kaitan dengan kuasa penjajah"
       ],
       "answer": "Penjajahan Barat mencetuskan gerakan untuk merdeka, kedaulatan dan jati diri di pelbagai negara",
       "explanation": "Hujah kukuh menyatukan punca, matlamat dan skop serantau.",
@@ -204,9 +204,9 @@
       "prompt": "Antara pernyataan berikut, manakah yang PALING tepat merumuskan subtopik 2.4?",
       "options": [
         "Nasionalisme di Asia Tenggara berkembang akibat penjajahan dengan contoh negara dan strategi Thailand yang tersendiri",
-        "Subtopik ini menolak kesan penjajahan",
-        "Subtopik ini hanya tentang Thailand",
-        "Subtopik ini tidak menyentuh kedaulatan"
+        "Subtopik ini menekankan bahawa semua negara Asia Tenggara memilih strategi pembaharuan seperti Thailand",
+        "Subtopik ini hanya membincangkan sejarah ekonomi Thailand tanpa menyentuh negara lain di rantau ini",
+        "Subtopik ini menumpukan sepenuhnya kepada hubungan diplomatik antara negara Asia Tenggara dengan China"
       ],
       "answer": "Nasionalisme di Asia Tenggara berkembang akibat penjajahan dengan contoh negara dan strategi Thailand yang tersendiri",
       "explanation": "Rumusan merangkumi punca, contoh dan nuansa Thailand.",

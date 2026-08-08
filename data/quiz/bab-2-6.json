@@ -69,9 +69,9 @@
       "prompt": "Mengapakah faktor luaran penting dalam kemunculan gerakan nasionalisme?",
       "options": [
         "Ia turut memperkukuh kesedaran rakyat terhadap tekanan dan perbandingan antarabangsa",
-        "Ia lemah dan jarang mempengaruhi pandangan rakyat",
-        "Ia menggantikan sepenuhnya peranan agama dan pendidikan",
-        "Ia hanya relevan untuk elit bandar tanpa kesan ke luar bandar"
+        "Ia terhad kepada pengaruh kesusasteraan Barat tanpa kesan kepada politik tempatan",
+        "Ia hanya menggantikan peranan gerakan keagamaan yang wujud sebelum ini",
+        "Ia hanya relevan kepada golongan pedagang di bandar besar, tidak di luar bandar"
       ],
       "answer": "Ia turut memperkukuh kesedaran rakyat terhadap tekanan dan perbandingan antarabangsa",
       "explanation": "Pengaruh antarabangsa menjadi faktor luaran yang membangkitkan kesedaran.",
@@ -99,9 +99,9 @@
       "prompt": "Mengapakah pendidikan dikaitkan dengan kemunculan gerakan?",
       "options": [
         "Ia melahirkan golongan yang lebih celik politik dan mampu menyusun gerakan",
-        "Ia menghalang perbincangan",
-        "Ia menolak idea bangsa",
-        "Ia tidak ada kesan"
+        "Ia melahirkan golongan yang lebih tertumpu kepada kerjaya perdagangan dan pentadbiran",
+        "Ia menghalang golongan muda daripada menyertai sebarang bentuk perbincangan awam",
+        "Ia hanya memberi kesan kepada anak pembesar tanpa melibatkan rakyat biasa"
       ],
       "answer": "Ia melahirkan golongan yang lebih celik politik dan mampu menyusun gerakan",
       "explanation": "Pendidikan membantu melahirkan golongan intelektual dan penganjur.",
@@ -144,9 +144,9 @@
       "prompt": "Pelajar tempatan membandingkan nasib tanah air dengan negara lain yang merdeka. Apakah faktor yang relevan?",
       "options": [
         "Pengaruh antarabangsa memperkukuh kesedaran",
-        "Ketiadaan faktor luaran",
-        "Penolakan terhadap perbandingan",
-        "Isu alam sekitar sahaja"
+        "Persaingan sukan antarabangsa mengukuhkan semangat",
+        "Ketiadaan sebarang kesan daripada faktor luaran",
+        "Pertukaran mata wang serantau semasa era itu"
       ],
       "answer": "Pengaruh antarabangsa memperkukuh kesedaran",
       "explanation": "Perbandingan antarabangsa mempengaruhi kesedaran rakyat.",
@@ -159,9 +159,9 @@
       "prompt": "Apakah persamaan utama antara faktor agama dan faktor pendidikan dalam konteks sejarah?",
       "options": [
         "Keduanya merupakan saluran dalaman yang membentuk nilai dan celik politik rakyat",
-        "Keduanya hanya mempengaruhi golongan pedagang asing",
-        "Keduanya terhad kepada kempen pilihan raya moden",
-        "Keduanya menolak penyertaan rakyat dalam gerakan"
+        "Keduanya lebih tertumpu kepada urusan perdagangan berbanding pembentukan nilai rakyat",
+        "Keduanya hanya diperkenalkan oleh pentadbir British bagi memudahkan kawalan sosial",
+        "Keduanya menekankan kerjasama dengan kuasa asing berbanding pembinaan identiti tempatan"
       ],
       "answer": "Keduanya merupakan saluran dalaman yang membentuk nilai dan celik politik rakyat",
       "explanation": "Agama dan pendidikan membentuk kesedaran dan nilai rakyat.",
@@ -174,9 +174,9 @@
       "prompt": "Apakah perbezaan utama antara 'penulisan/media' dengan 'pengaruh antarabangsa'?",
       "options": [
         "Yang pertama merujuk kepada saluran penyebaran tempatan manakala yang kedua merujuk kepada konteks perbandingan dan tekanan luar",
-        "Keduanya merujuk kepada saluran yang sama tanpa perbezaan",
-        "Keduanya merujuk kepada faktor ekonomi semata-mana",
-        "Keduanya merujuk kepada undang-undang penjajah secara langsung"
+        "Kedua-duanya merujuk kepada saluran penyebaran yang sama, cuma berbeza dari segi bahasa yang digunakan",
+        "Yang pertama merujuk kepada faktor ekonomi manakala yang kedua merujuk kepada faktor keagamaan",
+        "Kedua-duanya merujuk secara langsung kepada dasar dan undang-undang yang digubal penjajah"
       ],
       "answer": "Yang pertama merujuk kepada saluran penyebaran tempatan manakala yang kedua merujuk kepada konteks perbandingan dan tekanan luar",
       "explanation": "Media tempatan vs konteks global.",
@@ -189,9 +189,9 @@
       "prompt": "Antara hujah berikut, manakah yang PALING kukuh untuk menjelaskan kemunculan gerakan nasionalisme di negara kita?",
       "options": [
         "Gabungan faktor dalaman dan luaran memperkukuh kesedaran dan melahirkan tokoh serta gerakan asas kemerdekaan",
-        "Hanya faktor dalaman yang penting; faktor luar tidak memberi kesan",
-        "Hanya media British yang membentuk kesedaran tanpa faktor lain",
-        "Tiada kaitan antara kesedaran dengan penubuhan gerakan politik"
+        "Hanya faktor dalaman seperti agama dan pendidikan yang penting; faktor luaran langsung tidak memberi kesan",
+        "Media terbitan British sahaja yang membentuk kesedaran rakyat tanpa sebarang faktor tempatan lain",
+        "Kesedaran rakyat dan penubuhan gerakan politik berlaku secara berasingan tanpa kaitan sama sekali"
       ],
       "answer": "Gabungan faktor dalaman dan luaran memperkukuh kesedaran dan melahirkan tokoh serta gerakan asas kemerdekaan",
       "explanation": "Hujah kukuh menekankan gabungan faktor dan hasil gerakan.",
@@ -204,9 +204,9 @@
       "prompt": "Antara pernyataan berikut, manakah yang PALING tepat merumuskan subtopik 2.6?",
       "options": [
         "Pelbagai faktor dalaman dan luaran membangkitkan kesedaran yang disebarkan melalui pelbagai saluran sehingga melahirkan tokoh dan gerakan kemerdekaan",
-        "Subtopik ini menolak peranan pendidikan dalam membentuk kesedaran",
-        "Subtopik ini menekankan media British sebagai satu-satunya sumber",
-        "Subtopik ini memisahkan kesedaran daripada matlamat kemerdekaan"
+        "Subtopik ini menekankan bahawa hanya faktor pendidikan sahaja yang membentuk kesedaran, tanpa peranan agama atau media",
+        "Subtopik ini menekankan media terbitan British sebagai satu-satunya sumber kesedaran, mengetepikan saluran tempatan lain",
+        "Subtopik ini memisahkan sepenuhnya kesedaran rakyat daripada matlamat perjuangan kemerdekaan Tanah Melayu"
       ],
       "answer": "Pelbagai faktor dalaman dan luaran membangkitkan kesedaran yang disebarkan melalui pelbagai saluran sehingga melahirkan tokoh dan gerakan kemerdekaan",
       "explanation": "Rumusan merangkumi faktor, saluran dan hasil.",
