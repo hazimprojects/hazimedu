@@ -1658,6 +1658,136 @@ body[class*="page-theme-"].app-shell-page .home-scope-section {
 
 .about-not-list li { margin-bottom: 0.3rem; }
 
+/* =============================================================
+   ABOUT PAGE — trigger card + floating modal
+   (kandungan penuh tersimpan display:none dlm DOM, disalin ke
+   dlm modal bila kad pencetus diklik — kekal boleh diindeks/dibaca)
+============================================================= */
+
+.about-trigger-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  background: var(--page-surface-bg, var(--paper));
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 15px 15px 14px;
+  margin-bottom: 12px;
+  box-shadow: var(--shadow-soft);
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.about-trigger-card:hover,
+.about-trigger-card:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-medium, var(--shadow-soft));
+}
+
+.about-trigger-card:active { transform: translateY(0) scale(0.99); }
+
+.about-trigger-body { flex: 1; min-width: 0; }
+
+.about-trigger-desc {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.about-trigger-arrow {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.about-modal-source { display: none; }
+
+.about-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.1rem;
+  background: rgba(15, 12, 35, 0.5);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.24s ease;
+}
+
+.about-modal-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.about-modal-panel {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  max-height: 82dvh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  box-shadow: 0 24px 60px rgba(36, 49, 63, 0.22), 0 1px 0 rgba(255, 255, 255, 0.4) inset;
+  padding: 1.1rem 1.1rem 1.2rem;
+  transform: scale(0.94);
+  transition: transform 0.24s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.about-modal-overlay.is-open .about-modal-panel {
+  transform: scale(1);
+}
+
+.about-modal-close {
+  position: sticky;
+  float: right;
+  top: 0;
+  margin-left: 0.6rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(107, 114, 128, 0.12);
+  color: var(--ink);
+  font-size: 0.95rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.about-modal-close:hover { background: rgba(107, 114, 128, 0.2); }
+
+.about-modal-body .home-info-label:first-child { margin-top: 2px; }
+
+[data-theme="dark"] .about-modal-close {
+  background: rgba(148, 163, 184, 0.14);
+}
+[data-theme="dark"] .about-modal-close:hover {
+  background: rgba(148, 163, 184, 0.22);
+}
+
 /* Contact section */
 .home-contact-section {
   text-align: center;
