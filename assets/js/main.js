@@ -2159,6 +2159,70 @@ var ZYMNOTES_NAV = { chapters: [
   }
 })();
 
+// ── CTA subtopik terakhir bab sebelumnya (subtopik PERTAMA sahaja) ──────────────
+// Cermin drpd IIFE "CTA indeks bab induk seterusnya" di atas. Pada halaman
+// subtopik pertama dalam bab (N > 1): ganti butang sekunder "Kembali ke Bab N"
+// (ke indeks bab semasa) dengan "Kembali: (N-1).M" ke subtopik TERAKHIR bab
+// sebelumnya — supaya swipe-nav (btn-secondary = prevHref) & butang Kembali
+// konsisten dgn arah "Seterusnya" yg dah betul merentas sempadan bab.
+(function () {
+  var pathname = window.location.pathname;
+  var fileMatch = pathname.match(/(bab-(\d+)-\d+\.html)$/i);
+  if (!fileMatch) return;
+  var currentFile = fileMatch[1].toLowerCase();
+  var chNum = parseInt(fileMatch[2], 10);
+  if (!(chNum >= 1 && chNum <= 10)) return;
+  if (chNum <= 1) return; // tiada bab sebelum Bab 1
+  if (!window.ZYMNOTES_NAV || !ZYMNOTES_NAV.chapters || !ZYMNOTES_NAV.chapters.length) return;
+  var idx = chNum - 1;
+  var chapter = ZYMNOTES_NAV.chapters[idx];
+  if (!chapter || !chapter.subtopics || !chapter.subtopics.length) return;
+  var firstSubUrl = String(chapter.subtopics[0].url || '').toLowerCase();
+  if (firstSubUrl !== currentFile) return;
+  var prevCh = ZYMNOTES_NAV.chapters[idx - 1];
+  if (!prevCh || !prevCh.subtopics || !prevCh.subtopics.length) return;
+  var lastSub = prevCh.subtopics[prevCh.subtopics.length - 1];
+
+  function hrefBasename(h) {
+    if (!h) return '';
+    var x = String(h).split('#')[0].split('?')[0];
+    var parts = x.split('/');
+    return (parts[parts.length - 1] || '').toLowerCase();
+  }
+  var hubFile = hrefBasename(chapter.url);
+
+  var bars = document.querySelectorAll('main.note-reading-main .note-subsection .hero-actions');
+  if (!bars.length) bars = document.querySelectorAll('main .note-subsection .hero-actions');
+  if (!bars.length) return;
+
+  for (var b = 0; b < bars.length; b++) {
+    var bar = bars[b];
+    var target = null;
+    var secondaries = bar.querySelectorAll('a.btn.btn-secondary');
+    for (var si = 0; si < secondaries.length; si++) {
+      if (hrefBasename(secondaries[si].getAttribute('href')) === hubFile) {
+        target = secondaries[si];
+        break;
+      }
+    }
+    if (!target) {
+      var anchors = bar.querySelectorAll('a.btn');
+      for (var i = 0; i < anchors.length; i++) {
+        if (hrefBasename(anchors[i].getAttribute('href')) === hubFile) {
+          target = anchors[i];
+          break;
+        }
+      }
+    }
+    if (!target) continue;
+
+    target.setAttribute('data-zym-prev-bab', '1');
+    target.href = lastSub.url;
+    target.textContent = 'Kembali: ' + lastSub.num;
+    target.setAttribute('aria-label', 'Kembali ke ' + lastSub.num + ' — ' + lastSub.title);
+  }
+})();
+
 
 // =========================
 // AUDIO PLAYER
