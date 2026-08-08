@@ -5,7 +5,7 @@
 (function () {
   var p = (window.location.pathname || "").split("?")[0];
   var onNoteZhPage =
-    /\/notes\/bab-[1-8](?:\.html)?(?:\/)?$/i.test(p) ||
+    /\/notes\/bab-(?:[1-9]|10)(?:\.html)?(?:\/)?$/i.test(p) ||
     /\/notes\/bab-\d+-\d+(?:\.html)?(?:\/)?$/i.test(p);
   if (onNoteZhPage && localStorage.getItem("hzedu-lang-mode") === "zh") {
     document.documentElement.setAttribute("data-lang-mode", "zh");
@@ -1285,7 +1285,7 @@
   function isZhHeaderNotePathname(p) {
     if (!p || typeof p !== "string") return false;
     return (
-      /\/notes\/bab-[1-8](?:\.html)?(?:\/)?$/i.test(p) ||
+      /\/notes\/bab-(?:[1-9]|10)(?:\.html)?(?:\/)?$/i.test(p) ||
       /\/notes\/bab-\d+-\d+(?:\.html)?(?:\/)?$/i.test(p)
     );
   }

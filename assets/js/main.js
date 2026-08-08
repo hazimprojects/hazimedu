@@ -6,7 +6,7 @@ document.documentElement.classList.add("js-enhanced");
   function hzZymnotesIsZhContentNotePathname(p) {
     if (!p || typeof p !== "string") return false;
     return (
-      /\/notes\/bab-[1-8](?:\.html)?(?:\/)?$/i.test(p) ||
+      /\/notes\/bab-(?:[1-9]|10)(?:\.html)?(?:\/)?$/i.test(p) ||
       /\/notes\/bab-\d+-\d+(?:\.html)?(?:\/)?$/i.test(p)
     );
   }
