@@ -8,16 +8,15 @@
   <rect width="100" height="100" rx="22" fill="url(#bg)"/>
   <!-- ZN — skala ke bawah supaya lebih banyak “safe area” (pasang PWA / adaptive icon) -->
   <g transform="translate(50 50) scale(0.72) translate(-50 -50)">
-    <!-- Z -->
-    <path d="M18 28L46 28L18 68L46 68"
-          fill="none" stroke="white" stroke-width="8.5"
-          stroke-linecap="round" stroke-linejoin="round"/>
-    <!-- N -->
-    <path d="M54 68L54 28L82 68L82 28"
-          fill="none" stroke="white" stroke-width="8.5"
-          stroke-linecap="round" stroke-linejoin="round"/>
-    <!-- Signature dots: jingga di elbow Z, mint di pangkal N -->
-    <circle cx="46" cy="28" r="6.5" fill="#FF9B6A"/>
-    <circle cx="54" cy="68" r="5"   fill="#6ADBB8"/>
+    <!-- Ligatur Z→N: garis bawah Z bersambung terus jadi pangkal N (bawah bersambung, atas berjurang) -->
+    <path d="M18 28L46 28" fill="none" stroke="white" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M46 28L18 68" fill="none" stroke="white" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M18 68L54 68" fill="none" stroke="white" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M54 68L54 28" fill="none" stroke="white" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M54 28L82 68" fill="none" stroke="white" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M82 68L82 28" fill="none" stroke="white" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Aksen warna jenama pada palang serong sahaja — pinggir kekal putih, kontras terjamin -->
+    <path d="M46 28L18 68" fill="none" stroke="#FF9B6A" stroke-width="3.2" stroke-linecap="round"/>
+    <path d="M54 28L82 68" fill="none" stroke="#6ADBB8" stroke-width="3.2" stroke-linecap="round"/>
   </g>
 </svg>
