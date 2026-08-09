@@ -319,6 +319,34 @@ reading-app.page-theme-notes .paper-board`) tapi KEKALKAN dlm markup
 setiap kad Kesimpulan/Rumusan Besar utk konsisten dgn corak sedia ada
 merentas korpus — jangan alih keluar ikut sangkaan ia "tak berguna".
 
+**`<h2>` "tesis" (ayat besar/tebal, child PERTAMA `.cv-unit-body`) —
+WAJIB pada SEMUA kad Kesimpulan, bukan pilihan.** Selain 3 bahagian
+di atas, kad Kesimpulan asal (rujuk `bab-2-2.html`, tangkapan skrin
+pengguna) turut ada SATU ayat tesis besar (`<h2>`, font tebal ~21px,
+warna gelap) SEBELUM ayat pembuka `point-line`/`point-heading` —
+merumus keseluruhan topik dlm SATU ayat pendek. Audit dedah corak ni
+TIDAK konsisten merentas bab: Bab 1 (3/4), Bab 2 (8/8) & Bab 4 (7/7)
+ADA h2 tesis, tapi Bab 3, 5, 6, 7, 8, 9 (31 subtopik) LANGSUNG TIADA
+— nampak spt drift bertahap (ciri asal Bab 1–2, terlepas Bab 3, muncul
+semula Bab 4, hilang kekal drpd Bab 5 seterusnya) berbanding keputusan
+reka bentuk sengaja. Dibetulkan (rujuk PR "Tambah h2 tesis yg hilang
+pd 31 kad Kesimpulan Bab 3 & Bab 5–9") — h2 baharu dikarang berdasarkan
+kandungan chip-list/point-line SEDIA ADA pd kad sama (bukan fakta
+baharu), gaya sepadan contoh sedia ada (1 ayat pendek, declaratif,
+~10–20 patah perkataan, diakhiri noktah).
+
+**JANGAN tambah `data-zh-mode`/`data-zh-unit-id` pd h2 baharu** —
+h2 tesis SEDIA ADA (Bab 1/2/4) guna corak BERCAMPUR (sesetengah ada
+`data-zh-unit-id="bab-X-Y-orph-h2[-N]"` dgn entri JSON sepadan dlm
+`data/zh-units/`, sesetengah tiada langsung, cth. `bab-1-1.html`).
+H2 baharu (31 kad) SENGAJA TIADA atribut zh langsung — skrip audit
+(`scripts/check-zh-coverage.py`) hanya semak elemen yg ADA
+`data-zh-unit-id`, jadi elemen tanpa atribut tu automatik tak
+terjejas/tak perlu liputan (disahkan 100% coverage kekal lepas
+tambah 31 h2). Kalau nak tambah terjemahan ZH utk h2 baharu ni kelak,
+rujuk `docs/zh-mode-editorial-guideline.md` dulu (tugas berasingan,
+BUKAN sebahagian pembetulan struktur visual ni).
+
 ## Kad "Fokus X.Y" — MESTI padan bilangan & tajuk Bahagian sebenar
 
 **Kad "Fokus X.Y" (`data-cv-title="Fokus X.Y"`, grid `compact-kingdom-
