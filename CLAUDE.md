@@ -1416,6 +1416,75 @@ kiraan "OTHER" (bukan Fokus, bukan accordion-no) SAMA PERSIS/lebih
 drpd kiraan cetak sebenar pd setiap halaman & setiap kod negara —
 SIFAR kehilangan bendera sebenar yg tak dijangka selepas fix.
 
+## Pratonton PDF — Header/Footer WAJIB kongsi teks SAMA dgn PDF sebenar
+
+Pengguna lapor (tangkapan skrin) header/footer dlm pratonton "tak
+sepadan dgn pdf sebenar... menutup bahagian yg penting di sempadan
+kertas" — diagnosis dedah dua bug SEBENAR pd `_pdfPopulateSlides()`
+(pratonton HTML) berbanding `_savePdf()` (PDF jsPDF sebenar), yg
+sebelum ni ditulis BERASINGAN & senyap lari (drift) drpd satu sama
+lain:
+
+1. **Tajuk header dipotong "…" dlm pratonton walau PDF sebenar TAK
+   PERNAH memotongnya.** CSS lama (`white-space:nowrap;text-overflow:
+   ellipsis`) paksa tajuk jadi SATU baris terpotong. `_savePdf()`
+   pula guna `pdf.text(title,...,{maxWidth})` — jsPDF TAK memotong,
+   ia LIPAT (wrap) ke baris baharu bila perlu. Disahkan (jsPDF
+   `splitTextToSize` pd tajuk terpanjang seluruh korpus, ~70 aksara)
+   tajuk SENTIASA muat SATU baris pd 7pt dlm `maxWidth` sebenar —
+   bermakna PDF muat turun SENTIASA papar tajuk PENUH, tapi pelajar
+   nampak versi TERPOTONG dlm pratonton. "Menutup bahagian penting"
+   = maklumat (tajuk penuh) TERSEMBUNYI drpd pratonton walau ia AKAN
+   tercetak penuh — bukan pertindihan visual literal (disahkan DOM:
+   header/footer SENTIASA blok bertindan tegak dgn imej kandungan,
+   TAK PERNAH `position:absolute` bertindih).
+2. **Footer pratonton hilang "© 2026 ZymNotes" & kedudukan nombor
+   muka surat berbeza.** `_savePdf()` footer PUNYA 3 bahagian (kiri
+   `zymnotes.com`, TENGAH `i / total`, kanan `© 2026 ZymNotes`) —
+   pratonton lama cuma 2 (`zymnotes.com` kiri, `i/total` KANAN, tiada
+   hakcipta). Pelajar nampak footer BERBEZA drpd apa yg sebenarnya
+   dimuat turun.
+
+**Fix**: fungsi kongsi `_pdfHeaderFooterParts(title, pageIdx,
+totalPages)` (lepas `_pdfPopulateSlides`) jana SEMUA teks header/
+footer (hdrL/hdrR/ftrL/ftrC/ftrR) — dipanggil OLEH KEDUA-DUA
+`_pdfPopulateSlides()` (bina HTML) DAN `_savePdf()` (lukis jsPDF),
+elak dua laluan tulis teks berasingan lagi. Footer pratonton kini 3
+lajur (`.zym-pdf-page-ftr-l/-c/-r`) padan struktur PDF sebenar tepat.
+
+**Titik lipat baris tajuk pratonton dikira via `_pdfTitleLines()`**
+(lepas `_pdfHeaderFooterParts`) — panggil `jsPDF.splitTextToSize()`
+SAMA font/saiz/`maxWidth` (`helvetica` 7pt, `dims.cW*0.6`) drpd
+`_savePdf()`, hasil disisip sbg `<br>` eksplisit dlm HTML (bukan
+serah bulat-bulat kpd CSS auto-wrap) — jamin TITIK lipat pratonton
+sepadan PDF sebenar bila PDF sebenar SEBENARNYA perlu lipat (kes
+masa depan, tajuk lebih panjang drpd korpus semasa). CSS
+`.zym-pdf-page-hdr-r` (max-width:60%, padan nisbah `dims.cW*0.6`
+sebenar drpd 55% asal) kekal sbg jaring keselamatan visual — fon web
+(Fredoka) kadangkala perlukan lebih ruang drpd metrik Helvetica dlm
+PDF (AFM dalaman jsPDF, bukan bergantung fon OS/pelayar dipasang),
+jadi bilangan baris VISUAL dlm pratonton kadang lebih byk drpd PDF
+sebenar (cth. tajuk 70 aksara terpanjang korpus: 1 baris dlm PDF
+sebenar, ~3 baris dlm pratonton HTML kerana fon lebih lebar) — TAPI
+`overflow-wrap:break-word` (bukan `nowrap`/`hidden`) jamin TIADA
+maklumat PERNAH hilang lagi, cuma paparan lebih tinggi drpd 1 baris.
+**Percubaan padankan `font-family` chrome header/footer kpd
+Helvetica/Arial (cuba kurangkan lipatan berlebihan) DIBUANG balik**
+— tak beri kesan ketara dlm ujian (Helvetica lazimnya tiada dipasang
+pd OS bukan-Apple, fallback pelbagai merentas peranti pengguna sebenar
+tak boleh diramal), jadi dikekalkan Fredoka (konsisten dgn UI lain,
+kebolehbacaan skrin lebih dipercayai drpd cuba padan metrik PDF cetak
+kecil 7pt yg memang direka utk kertas, bukan skrin).
+
+Disahkan via Playwright (suntik html2canvas-pro/jspdf tempatan,
+klik "Muat turun", pintas `jsPDF.API.text`/`.save` utk baca teks
+sebenar TANPA muat turun fail): tajuk PENDEK (`bab-2-3.html`,
+34 aksara) kini papar PENUH SATU baris pratonton (sblm ni terpotong
+"…"), footer 3-bahagian sepadan PERSIS teks `_savePdf()`; tajuk
+TERPANJANG korpus (`bab-9-3.html`, 70 aksara) papar PENUH (tiada
+potongan) walau lebih byk baris drpd PDF sebenar (had fon, dijangka
+& diterima — bukan bug hilang maklumat).
+
 ## Aliran Kerja Versioning Aset (WAJIB lepas ubah CSS/JS/sw.js)
 
 Sumber kebenaran versi: `data/asset-versions.json`. Lepas ubah
