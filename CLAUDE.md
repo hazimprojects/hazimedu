@@ -935,6 +935,55 @@ mana-mana `blockRanges`) merentas 12 halaman skop 2-lajur (Bab 1–2)
 & 8 halaman sampel mod 1-lajur (Bab 3–9), semua dgn pelbagai jumlah
 blok (9–29) & pisahan (4–8) — sifar ralat JS, sifar kad terpotong.
 
+**Susulan bug "kotak terpotong" di atas — fix tu SENDIRI cetus bug
+LEBIH TERUK: kandungan HILANG TERUS (bukan sekadar ruang kosong
+terbuang).** Dilaporkan pengguna (tangkapan skrin `bab-2-3.html` mod
+2 lajur): lajur kiri muka surat 1 kosong besar (cuma hero, tiada
+"Ringkasan 2.3" pun terlihat walhal patut muat), & item accordion
+"Dr. Sun Yat Sen dan Tiga Prinsip Rakyat" **hilang terus drpd PDF**
+— tiada langsung pd mana-mana muka surat, bukan cuma tersembunyi.
+
+Punca akar: gelung bina `splitPts` asalnya kira sasaran `ideal` setiap
+pisahan sbg **grid MUTLAK tetap** (`ideal = s * pxPerPage`, `s` ialah
+nombor pisahan) — bukan RELATIF drpd `splitPts[s-1]` SEBENAR. Bila
+peringkat "tolak seluruh blok" (fix di atas) memendekkan slice SEMASA
+(sbb blok ditolak ke slice seterusnya), `ideal` utk slice SETERUSNYA
+KEKAL pd kedudukan grid tetap yg SAMA — jurang (`ideal - prevY`) jadi
+LEBIH BESAR drpd `pxPerPage`, bermakna slice seterusnya "berhutang"
+ketinggian utk kejar balik grid asal. Tapi kanvas keluaran SETIAP
+slice DITETAPKAN pd `pxPerPage` (`Math.min(srcH, pxPerPage)` dlm
+gelung `slices`) — lebihan tinggi tu (bahagian "hutang") SENYAP tak
+dilukis pd kanvas MANA-MANA slice (bukan slice semasa, bukan slice
+seterusnya — genuinely LENYAP), sbb slice seterusnya mula SEMULA drpd
+`splitPts[s]` (kedudukan asal tanpa kira lebihan yg tak sempat
+dilukis). Ni bukan cuma isu ruang — KANDUNGAN PELAJAR (fakta sejarah)
+hilang senyap drpd PDF muat turun, tiada amaran/ralat console langsung.
+
+Fix: tukar `ideal` kpd **relatif** — `ideal = prevY + pxPerPage`
+(`prevY` = `splitPts[splitPts.length-1]` SEBENAR, bukan `s * pxPerPage`
+grid tetap). Gelung `for (s=1; s<numPages; s++)` (kiraan TETAP,
+`numPages` dianggar awal drpd `Math.ceil(canvas.height/pxPerPage)`)
+ditukar ke `while (splitPts[...] < canvas.height - 1)` (bilangan
+DINAMIK — anggaran awal `numPages` cuma titik mula, kandungan yg byk
+blok besar ditolak PERLUKAN lebih byk slice drpd anggaran, jadi
+kiraan tetap tak cukup). `numPages` DIKIRA SEMULA (`splitPts.length -
+1`) SELEPAS gelung siap, sbb gelung `slices` bawahnya turut bergantung
+pd `numPages` yg tepat. Dgn sasaran relatif, SETIAP slice individu
+(tak kira berapa byk "hutang" terkumpul drpd slice sebelumnya) jamin
+tak pernah lebih tinggi drpd `pxPerPage` — jadi `Math.min(srcH,
+pxPerPage)` di gelung `slices` TAK PERNAH klip apa² lagi (`srcH`
+sentiasa `<= pxPerPage`).
+
+Disahkan via Playwright (sambung teknik debug atas — kali ni turut
+semak `splitPts[i+1] - splitPts[i] <= pxPerPage` utk SETIAP slice,
+bukan cuma semak bisections): **SIFAR slice melebihi bajet ketinggian**
+& **SIFAR pembelahan** merentas 27 halaman (12 skop 2-lajur Bab 1–2 +
+15 sampel mod 1-lajur Bab 3–9) — termasuk kes asal `bab-2-3.html`
+(kini 3 muka surat, dulu 2 — bilangan muka surat BERTAMBAH krn
+kandungan yg dulu hilang senyap kini disusun atur betul, bukan
+regresi). Semakan visual sahkan "Dr. Sun Yat Sen dan Tiga Prinsip
+Rakyat" muncul penuh (tajuk + 2 ayat + 3 chip) pd muka surat 2.
+
 ## Eksport PDF — Mod "Jimat Dakwat": ikon kekal, latar kata kunci gugur
 
 Mod eco (`isEco`/`zp-mode-eco` dlm `_getPrintCss()`) DUA keputusan
