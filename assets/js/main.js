@@ -3554,7 +3554,15 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
 
   function _ensureLibs(cb) {
     var toLoad = [];
-    if (!window.html2canvas) toLoad.push('https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js');
+    // html2canvas-pro (fork diselenggara aktif) — BUKAN html2canvas 1.4.1 asal.
+    // 1.4.1 (keluaran terakhir 2021, tidak lagi diselenggara) melukis TEKS ~0.62em
+    // TERLALU RENDAH berbanding kotak/latar elemen pd Chromium moden — disahkan
+    // empirik: latar tepat (ralat -0.5px) tapi teks tersasar +15px (skala 2),
+    // KONSISTEN merentas Fredoka/Arial/Patrick Hand. Ini punca SEBENAR aduan
+    // "highlight kata kunci offset drpd tulisan" (latar betul, teksnya yg jatuh).
+    // html2canvas-pro membetulkannya sepenuhnya (ralat teks -1px). API serupa
+    // (turut dedah window.html2canvas), jadi tiada perubahan lain diperlukan.
+    if (!window.html2canvas) toLoad.push('https://cdn.jsdelivr.net/npm/html2canvas-pro@2.3.3/dist/html2canvas-pro.min.js');
     if (!window.jspdf && !window.jsPDF) toLoad.push('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js');
     if (!toLoad.length) { cb(null); return; }
     var done = 0;
@@ -4257,7 +4265,35 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
             }).then(function (blob) {
               var reader = new FileReader();
               reader.onload = function () {
-                img.setAttribute('src', reader.result);
+                var uri = reader.result;
+                // SVG (ikon OpenMoji) TAK boleh dibiar sbg SVG — html2canvas gagal
+                // melukisnya langsung (disahkan empirik: 66 ikon jadi data: URI,
+                // `complete`+naturalWidth 150, TAPI SIFAR piksel terhasil dlm
+                // kanvas). Puncanya SVG OpenMoji hanya ada `viewBox`, TIADA
+                // atribut width/height pd <svg> — pelayar biasa fallback 150px &
+                // papar normal, html2canvas tidak. Ikon Fluent (PNG) tak terjejas
+                // — sepadan aduan asal pengguna "fluent nampak, openmoji tiada".
+                // Fix: raster SVG → PNG dulu (saiz tetap 96px, ~7x saiz papar 1em
+                // supaya tajam pd skala 2 html2canvas + zum PDF).
+                if (uri.indexOf('data:image/svg') === 0) {
+                  var tmp = new Image();
+                  tmp.onload = function () {
+                    try {
+                      var cv = document.createElement('canvas');
+                      cv.width = 96;
+                      cv.height = 96;
+                      cv.getContext('2d').drawImage(tmp, 0, 0, 96, 96);
+                      img.setAttribute('src', cv.toDataURL('image/png'));
+                    } catch (e) {
+                      img.setAttribute('src', uri);
+                    }
+                    _onOne();
+                  };
+                  tmp.onerror = function () { img.setAttribute('src', uri); _onOne(); };
+                  tmp.src = uri;
+                  return;
+                }
+                img.setAttribute('src', uri);
                 _onOne();
               };
               reader.onerror = _onOne;
@@ -6256,7 +6292,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=540').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=541').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
