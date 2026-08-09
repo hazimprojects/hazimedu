@@ -908,13 +908,24 @@ document.addEventListener("DOMContentLoaded", function () {
     //     langsung. Lapisan paling penting/robust drpd tiga-tiga ni.
     document.documentElement.style.touchAction = "pan-x pan-y";
     document.body.style.touchAction = "pan-x pan-y";
+    // Pratonton PDF (modal #zym-pdf-overlay) turut mewarisi nyahaktif zoom sejagat
+    // ni sebab tiada skop per-halaman (tiga lapisan di atas pasang pd document/body
+    // terus). Ni tak sengaja — dlm modal tu pengguna sepatutnya BOLEH pinch-zoom
+    // baca teks kecil pratonton. Semak status modal & langkau preventDefault bila
+    // ia terbuka (touch-action sendiri turut dilonggarkan terus dlm openPdfPreview()/
+    // _closePdfPreviewUi() — rujuk kod PDF di bawah).
+    function hzPdfPreviewIsOpen() {
+      var ov = document.getElementById("zym-pdf-overlay");
+      return !!(ov && ov.classList.contains("is-open"));
+    }
     ["gesturestart", "gesturechange", "gestureend"].forEach(function (evtName) {
       document.addEventListener(evtName, function (ev) {
+        if (hzPdfPreviewIsOpen()) return;
         ev.preventDefault();
       });
     });
     document.addEventListener("touchmove", function (ev) {
-      if (ev.touches.length > 1) ev.preventDefault();
+      if (ev.touches.length > 1 && !hzPdfPreviewIsOpen()) ev.preventDefault();
     }, { passive: false });
 
     const AXIS_LOCK_DISTANCE = 8;
@@ -3241,10 +3252,12 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     '#zym-pdf-mode-full:hover,#zym-pdf-mode-eco:hover{color:#e2e8f0}',
     '#zym-pdf-mode-full.is-active,#zym-pdf-mode-eco.is-active{background:rgba(79,70,229,0.45);color:#fff}',
     '#zym-pdf-topbar-actions{display:flex;align-items:center;gap:6px;flex-shrink:0}',
-    '#zym-pdf-print-btn,#zym-pdf-download-btn{width:40px;height:40px;border-radius:50%;border:none;background:rgba(255,255,255,0.09);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;transition:background 0.14s}',
-    '#zym-pdf-print-btn:hover,#zym-pdf-download-btn:hover{background:rgba(255,255,255,0.18)}',
-    '#zym-pdf-print-btn:disabled,#zym-pdf-download-btn:disabled{opacity:0.35;cursor:default;pointer-events:none}',
+    '#zym-pdf-refresh-btn,#zym-pdf-print-btn,#zym-pdf-download-btn{width:40px;height:40px;border-radius:50%;border:none;background:rgba(255,255,255,0.09);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;transition:background 0.14s}',
+    '#zym-pdf-refresh-btn:hover,#zym-pdf-print-btn:hover,#zym-pdf-download-btn:hover{background:rgba(255,255,255,0.18)}',
+    '#zym-pdf-refresh-btn:disabled,#zym-pdf-print-btn:disabled,#zym-pdf-download-btn:disabled{opacity:0.35;cursor:default;pointer-events:none}',
     '#zym-pdf-print-btn img,#zym-pdf-download-btn img{width:20px;height:20px;display:block;pointer-events:none}',
+    '#zym-pdf-refresh-btn{color:#cbd5e1;font-size:1.15rem;line-height:1;transition:background 0.14s,transform 0.5s ease}',
+    '#zym-pdf-refresh-btn.is-spinning{animation:zym-spin 0.7s linear infinite}',
     '#zym-pdf-close-btn{width:34px;height:34px;border-radius:50%;border:none;background:rgba(255,255,255,0.07);color:#94a3b8;font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background 0.14s,color 0.14s}',
     '#zym-pdf-close-btn:hover{background:rgba(255,255,255,0.15);color:#e2e8f0}',
     '#zym-pdf-pages-viewport{flex:1;position:relative;min-height:0;display:flex;flex-direction:column;background:#1e293b}',
@@ -3428,6 +3441,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
         '</div>',
       '</div>',
       '<div id="zym-pdf-topbar-actions">',
+        '<button type="button" id="zym-pdf-refresh-btn" disabled aria-label="Jana semula pratonton">↻</button>',
         '<button type="button" id="zym-pdf-print-btn" class="zym-pdf-icon-btn" disabled aria-label="Cetak nota">',
           '<img src="' + PDF_ICONS8_PRINT + '" alt="" width="20" height="20" loading="lazy">',
         '</button>',
@@ -3501,6 +3515,26 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   var _pdfModalHistoryActive = false;
   var _pdfActiveMode = 'full';
   var _pdfCache = { full: { pages: null, dims: null }, eco: { pages: null, dims: null } };
+  var _pdfSavedTouchAction = null;
+
+  // Longgarkan sekatan touch-action sejagat (swipe-nav, rujuk blok "SWIPE NAV")
+  // sementara modal pratonton PDF terbuka — supaya pengguna boleh pinch-zoom baca
+  // teks kecil dlm pratonton. Simpan nilai asal dulu (mungkin '' pd halaman tanpa
+  // swipe-nav aktif) supaya pulih tepat bila modal ditutup, bukan andaikan nilai.
+  function _pdfRelaxZoomLock() {
+    if (_pdfSavedTouchAction === null) {
+      _pdfSavedTouchAction = document.documentElement.style.touchAction || '';
+    }
+    document.documentElement.style.touchAction = 'auto';
+    document.body.style.touchAction = 'auto';
+  }
+
+  function _pdfRestoreZoomLock() {
+    if (_pdfSavedTouchAction === null) return;
+    document.documentElement.style.touchAction = _pdfSavedTouchAction;
+    document.body.style.touchAction = _pdfSavedTouchAction;
+    _pdfSavedTouchAction = null;
+  }
 
   function _escPdfHtml(s) {
     return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
@@ -4481,8 +4515,10 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       'background:rgba(15,23,42,0.82);color:#94a3b8;' +
       'backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)';
     document.body.appendChild(genLoad);
+    var rfBtn = document.getElementById('zym-pdf-refresh-btn');
     var dlBtn = document.getElementById('zym-pdf-download-btn');
     var prBtn = document.getElementById('zym-pdf-print-btn');
+    if (rfBtn) rfBtn.disabled = true;
     if (dlBtn) dlBtn.disabled = true;
     if (prBtn) prBtn.disabled = true;
     var mfSw = document.getElementById('zym-pdf-mode-full');
@@ -4495,6 +4531,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       genLoad.remove();
       if (err) {
         _pdfSetModeSegmentUI(prev);
+        if (rfBtn) rfBtn.disabled = false;
         if (dlBtn) dlBtn.disabled = false;
         if (prBtn) prBtn.disabled = false;
         if (mfSw) mfSw.disabled = false;
@@ -4518,10 +4555,61 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       _pdfPageCanvases = pages;
       _pdfDims = dims;
       _pdfPopulateSlides(pages, dims);
+      if (rfBtn) rfBtn.disabled = false;
       if (dlBtn) dlBtn.disabled = false;
       if (prBtn) prBtn.disabled = false;
       if (mfSw) mfSw.disabled = false;
       if (meSw) meSw.disabled = false;
+    });
+  }
+
+  // Butang "jana semula" pratonton — modal terkunci (overflow:hidden pd body)
+  // semasa terbuka jadi pull-to-refresh browser tak boleh dicetus, & pengguna
+  // perlu cara sahkan pembetulan terkini (font/ikon/dll.) tanpa tutup modal +
+  // tutup app sepenuhnya. Batalkan cache mod semasa & panggil _generatePages()
+  // segar — TAK guna _pdfSwitchMode() sbb ia bail awal bila target===mod semasa.
+  function _pdfRegenerate() {
+    if (_pdfBusy) return;
+    var target = _pdfActiveMode;
+    _pdfCache[target] = { pages: null, dims: null };
+    _pdfBusy = true;
+    var rfBtn = document.getElementById('zym-pdf-refresh-btn');
+    var dlBtn = document.getElementById('zym-pdf-download-btn');
+    var prBtn = document.getElementById('zym-pdf-print-btn');
+    var mfSw = document.getElementById('zym-pdf-mode-full');
+    var meSw = document.getElementById('zym-pdf-mode-eco');
+    if (rfBtn) { rfBtn.disabled = true; rfBtn.classList.add('is-spinning'); }
+    if (dlBtn) dlBtn.disabled = true;
+    if (prBtn) prBtn.disabled = true;
+    if (mfSw) mfSw.disabled = true;
+    if (meSw) meSw.disabled = true;
+
+    _generatePages(target, function(err, pages, dims) {
+      _pdfBusy = false;
+      if (rfBtn) { rfBtn.disabled = false; rfBtn.classList.remove('is-spinning'); }
+      if (dlBtn) dlBtn.disabled = false;
+      if (prBtn) prBtn.disabled = false;
+      if (mfSw) mfSw.disabled = false;
+      if (meSw) meSw.disabled = false;
+      if (err) {
+        var toast = document.createElement('div');
+        toast.style.cssText =
+          'position:fixed;bottom:80px;left:50%;transform:translateX(-50%);' +
+          'background:#ef4444;color:#fff;padding:10px 22px;border-radius:8px;' +
+          'font-size:0.85rem;z-index:10002;font-family:Fredoka,sans-serif;white-space:nowrap';
+        toast.textContent = 'Ralat semasa menjana semula pratonton. Cuba lagi.';
+        document.body.appendChild(toast);
+        setTimeout(function() { toast.remove(); }, 4000);
+        return;
+      }
+      if (target === 'full') {
+        _pdfCache.full = { pages: pages, dims: dims };
+      } else {
+        _pdfCache.eco = { pages: pages, dims: dims };
+      }
+      _pdfPageCanvases = pages;
+      _pdfDims = dims;
+      _pdfPopulateSlides(pages, dims);
     });
   }
 
@@ -4598,10 +4686,12 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     var h1El = document.querySelector('.note-hero h1, .papercraft-hero h1');
     _pdfNoteTitle = (h1El ? h1El.textContent : document.title.replace(/\s*·.*$/,'')).trim();
 
+    var rfBtn0 = document.getElementById('zym-pdf-refresh-btn');
     var dlBtn0 = document.getElementById('zym-pdf-download-btn');
     var prBtn0 = document.getElementById('zym-pdf-print-btn');
     var mf0 = document.getElementById('zym-pdf-mode-full');
     var me0 = document.getElementById('zym-pdf-mode-eco');
+    if (rfBtn0) rfBtn0.disabled = true;
     if (dlBtn0) dlBtn0.disabled = true;
     if (prBtn0) prBtn0.disabled = true;
     if (mf0) mf0.disabled = true;
@@ -4626,6 +4716,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       genLoad.remove();
 
       if (err) {
+        if (rfBtn0) rfBtn0.disabled = false;
         if (dlBtn0) dlBtn0.disabled = false;
         if (prBtn0) prBtn0.disabled = false;
         if (mf0) mf0.disabled = false;
@@ -4645,10 +4736,12 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       _pdfPageCanvases = pages;
       _pdfDims = dims;
 
+      var rfBtn = document.getElementById('zym-pdf-refresh-btn');
       var dlBtn = document.getElementById('zym-pdf-download-btn');
       var prBtn = document.getElementById('zym-pdf-print-btn');
       _pdfPopulateSlides(pages, dims);
 
+      if (rfBtn) rfBtn.disabled = false;
       if (dlBtn) dlBtn.disabled = false;
       if (prBtn) prBtn.disabled = false;
       var mf1 = document.getElementById('zym-pdf-mode-full');
@@ -4659,6 +4752,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       pdfOverlay.classList.add('is-open');
       pdfOverlay.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
+      _pdfRelaxZoomLock();
       history.pushState({ zymPdfPreview: 1 }, '', window.location.href);
       _pdfModalHistoryActive = true;
       if (pages.length && dlBtn) dlBtn.focus();
@@ -4669,10 +4763,13 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     pdfOverlay.classList.remove('is-open');
     pdfOverlay.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
+    _pdfRestoreZoomLock();
     var ttl = document.getElementById('zym-pdf-topbar-title');
     if (ttl) ttl.textContent = 'Pratonton PDF';
+    var rfBtn = document.getElementById('zym-pdf-refresh-btn');
     var dlBtn = document.getElementById('zym-pdf-download-btn');
     var prBtn = document.getElementById('zym-pdf-print-btn');
+    if (rfBtn) rfBtn.disabled = true;
     if (dlBtn) dlBtn.disabled = true;
     if (prBtn) prBtn.disabled = true;
   }
@@ -4716,6 +4813,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   });
 
   document.getElementById('zym-pdf-close-btn').addEventListener('click', closePdfPreview);
+  document.getElementById('zym-pdf-refresh-btn').addEventListener('click', _pdfRegenerate);
   pdfOverlay.addEventListener('click', function(e) {
     var t = e.target;
     if (t && t.id === 'zym-pdf-mode-full') {
@@ -6129,7 +6227,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=538').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=539').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
