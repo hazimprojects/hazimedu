@@ -69,9 +69,9 @@
       "prompt": "Mengapakah Raja-raja Melayu menganggap cara MacMichael mendapatkan tandatangan mereka sebagai tidak sah?",
       "options": [
         "Kerana menurut sistem perundangan British sendiri, persetujuan yang diperoleh melalui desakan dan tekanan dianggap tidak sah",
-        "Kerana MacMichael tidak pernah menemui Raja-raja Melayu secara langsung",
+        "Kerana Raja-raja Melayu tidak diberi salinan bertulis dokumen Malayan Union",
         "Kerana tandatangan itu dibuat oleh Lord Mountbatten, bukan MacMichael",
-        "Kerana Raja-raja Melayu tidak pernah menandatangani apa-apa dokumen"
+        "Kerana tandatangan itu tidak disertakan meterai rasmi Raja-raja Melayu"
       ],
       "answer": "Kerana menurut sistem perundangan British sendiri, persetujuan yang diperoleh melalui desakan dan tekanan dianggap tidak sah",
       "explanation": "Menurut sistem perundangan British, cara MacMichael mendapatkan persetujuan dianggap tidak sah.",
@@ -84,9 +84,9 @@
       "prompt": "Mengapakah akhbar Melayu seperti Utusan Melayu dan Majlis memainkan peranan penting dalam gerakan menentang Malayan Union?",
       "options": [
         "Kerana akhbar mengecam Malayan Union, menyeru orang Melayu berhimpun dan melaporkan perkembangan bantahan di seluruh negara",
-        "Kerana akhbar menyokong sepenuhnya rancangan Malayan Union British",
-        "Kerana akhbar hanya melaporkan berita sukan dan hiburan semata-mata",
-        "Kerana akhbar dimiliki sepenuhnya oleh kerajaan British"
+        "Kerana akhbar menerima arahan daripada Raja-raja Melayu supaya berdiam diri",
+        "Kerana akhbar hanya menerbitkan pengumuman rasmi kerajaan British",
+        "Kerana akhbar diharamkan oleh BMA sebelum Malayan Union diisytiharkan"
       ],
       "answer": "Kerana akhbar mengecam Malayan Union, menyeru orang Melayu berhimpun dan melaporkan perkembangan bantahan di seluruh negara",
       "explanation": "Akhbar Melayu mengecam Malayan Union, menyeru perhimpunan dan melaporkan perkembangan bantahan.",
@@ -99,7 +99,7 @@
       "prompt": "Mengapakah pemulauan upacara pelantikan Gabenor Malayan Union oleh Raja-raja Melayu dianggap tindakan penting?",
       "options": [
         "Kerana ia membuktikan ketegasan Raja-raja Melayu menolak Malayan Union secara terbuka",
-        "Kerana ia menunjukkan Raja-raja Melayu menyokong sepenuhnya pelantikan Sir Edward Gent",
+        "Kerana ia membuktikan Raja-raja Melayu bersetuju menyerahkan kuasa kepada Sir Edward Gent",
         "Kerana ia tidak memberi sebarang kesan kepada perjuangan menentang Malayan Union",
         "Kerana ia dilakukan atas arahan terus daripada British"
       ],
@@ -161,7 +161,7 @@
         "Kedua-duanya merupakan usaha menggunakan saluran rasmi/perundangan British untuk membatalkan Malayan Union",
         "Kedua-duanya melibatkan penggunaan kekerasan terhadap pegawai British",
         "Kedua-duanya dilakukan tanpa pengetahuan Raja-raja Melayu langsung",
-        "Kedua-duanya hanya bertujuan menyokong Malayan Union sepenuhnya"
+        "Kedua-duanya bertujuan mendapatkan pampasan kewangan daripada British"
       ],
       "answer": "Kedua-duanya merupakan usaha menggunakan saluran rasmi/perundangan British untuk membatalkan Malayan Union",
       "explanation": "Kedua-dua tindakan menggunakan saluran rasmi British (mahkamah dan surat rasmi) untuk membantah Malayan Union.",
@@ -176,7 +176,7 @@
         "Raja-raja Melayu bertindak melalui saluran rasmi seperti mahkamah dan surat, manakala rakyat bertindak melalui akhbar, demonstrasi dan penubuhan UMNO",
         "Raja-raja Melayu tidak menentang Malayan Union langsung, hanya rakyat sahaja yang menentang",
         "Rakyat hanya menyokong Malayan Union manakala Raja-raja Melayu yang menentangnya",
-        "Kedua-dua pihak menggunakan kaedah yang sama sepenuhnya tanpa sebarang perbezaan"
+        "Raja-raja Melayu bertindak melalui akhbar dan demonstrasi, manakala rakyat bertindak melalui mahkamah dan surat rasmi"
       ],
       "answer": "Raja-raja Melayu bertindak melalui saluran rasmi seperti mahkamah dan surat, manakala rakyat bertindak melalui akhbar, demonstrasi dan penubuhan UMNO",
       "explanation": "Raja-raja Melayu menggunakan saluran rasmi, manakala rakyat menggunakan akhbar, demonstrasi dan penubuhan UMNO.",
@@ -205,7 +205,7 @@
       "options": [
         "Penentangan terhadap Malayan Union menyatukan Raja-raja Melayu dan rakyat, membawa kepada penubuhan UMNO dan menjadi asas nasionalisme selepas perang",
         "Penentangan terhadap Malayan Union hanya berlaku dalam kalangan segelintir individu tanpa kesan besar",
-        "Malayan Union diterima sepenuhnya oleh orang Melayu tanpa sebarang bantahan",
+        "Malayan Union diterima baik oleh Raja-raja Melayu sejak awal pengisytiharan",
         "Penentangan Malayan Union tidak membawa kepada penubuhan mana-mana pertubuhan baharu"
       ],
       "answer": "Penentangan terhadap Malayan Union menyatukan Raja-raja Melayu dan rakyat, membawa kepada penubuhan UMNO dan menjadi asas nasionalisme selepas perang",

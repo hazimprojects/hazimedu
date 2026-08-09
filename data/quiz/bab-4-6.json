@@ -84,7 +84,7 @@
       "prompt": "Mengapakah SBUB lebih mudah membuat keputusan menyerahkan Sabah kepada kerajaan British?",
       "options": [
         "Kerana hubungan luar dan pertahanan Sabah sudah pun berada di bawah naungan British sejak zaman pemerintahan SBUB",
-        "Kerana SBUB tidak pernah mempunyai sebarang hubungan dengan British",
+        "Kerana Jepun mengarahkan SBUB menyerahkan Sabah kepada British",
         "Kerana Sabah sudah menjadi tanah jajahan Jepun secara kekal",
         "Kerana rakyat Sabah menuntut penyerahan segera kepada British"
       ],
@@ -99,7 +99,7 @@
       "prompt": "Mengapakah SBUB menghadapi masalah kewangan yang serius selepas Perang Dunia Kedua?",
       "options": [
         "Kerana tentera Jepun memusnahkan bandar penting seperti Jesselton, Kudat dan Sandakan sehingga kos pemulihan menjadi sangat besar",
-        "Kerana SBUB tidak pernah memiliki sebarang aset di Sabah",
+        "Kerana rakyat Sabah menuntut pampasan besar daripada SBUB selepas perang",
         "Kerana British enggan memberikan sebarang dana kepada SBUB sejak awal penubuhannya",
         "Kerana rakyat Sabah enggan membayar cukai kepada SBUB"
       ],
@@ -114,9 +114,9 @@
       "prompt": "Perdana Menteri Britain, Clement Attlee, sedang menyelesaikan isu pemberian kemerdekaan kepada Sri Lanka, India dan Burma pada masa yang sama Sabah diserahkan. Apakah kaitan situasi ini dengan penyerahan Sabah?",
       "options": [
         "Sabah dilihat sebagai wilayah yang berpotensi menggantikan kepentingan British yang semakin hilang di kawasan lain",
-        "British terus kehilangan semua kepentingan ekonomi di Asia tanpa sebarang pengganti",
+        "British memindahkan semua kepentingan ekonominya di Asia terus ke Sarawak",
         "Sabah diberikan kemerdekaan serentak dengan India dan Burma",
-        "British menghentikan sepenuhnya dasar penjajahan selepas perang"
+        "British mempercepat pemberian kemerdekaan kepada Sabah serentak dengan India"
       ],
       "answer": "Sabah dilihat sebagai wilayah yang berpotensi menggantikan kepentingan British yang semakin hilang di kawasan lain",
       "explanation": "Dalam keadaan kehilangan pengaruh di India/Sri Lanka/Burma, Sabah dilihat berpotensi menggantikan kepentingan British.",
@@ -159,7 +159,7 @@
       "prompt": "Apakah perbezaan antara faktor 'memenuhi kepentingan British' dengan faktor 'masalah kewangan SBUB' dalam penyerahan Sabah?",
       "options": [
         "Faktor pertama berpunca daripada keperluan strategik/ekonomi British sendiri, manakala faktor kedua berpunca daripada kelemahan kewangan dalaman SBUB akibat kemusnahan perang",
-        "Kedua-dua faktor ini sebenarnya sama sepenuhnya tanpa sebarang perbezaan",
+        "Faktor pertama berpunca daripada kelemahan kewangan dalaman SBUB, manakala faktor kedua berpunca daripada keperluan strategik British",
         "Faktor pertama berpunca daripada SBUB manakala faktor kedua berpunca daripada British",
         "Kedua-dua faktor ini tidak mempunyai kaitan langsung dengan penyerahan Sabah"
       ],
@@ -189,9 +189,9 @@
       "prompt": "Antara hujah berikut, manakah PALING kukuh menunjukkan penyerahan Sabah didorong oleh kepentingan British, bukan semata-mata kebajikan rakyat Sabah?",
       "options": [
         "British menjadikan Sabah wilayah menggantikan kepentingan yang hilang di India, Sri Lanka dan Burma, sekali gus menguasai sumber bahan mentah dan pasaran barangannya",
-        "British tidak pernah mengambil sebarang faedah ekonomi daripada Sabah",
-        "SBUB menyerahkan Sabah semata-mata atas permintaan rakyat tempatan",
-        "British menolak sepenuhnya tawaran menguasai Sabah selepas perang"
+        "British menyerahkan semua keuntungan ekonomi Sabah kepada SBUB selepas penyerahan",
+        "SBUB menyerahkan Sabah kerana desakan terus daripada Kongres Melayu Pertama",
+        "British menyerahkan semula pentadbiran Sabah kepada SBUB selepas beberapa tahun"
       ],
       "answer": "British menjadikan Sabah wilayah menggantikan kepentingan yang hilang di India, Sri Lanka dan Burma, sekali gus menguasai sumber bahan mentah dan pasaran barangannya",
       "explanation": "Motif British menggantikan kepentingan yang hilang serta menguasai sumber ekonomi menunjukkan penyerahan didorong kepentingan British.",
@@ -204,7 +204,7 @@
       "prompt": "Antara pernyataan berikut, manakah PALING tepat merumuskan subtopik 4.6?",
       "options": [
         "Penyerahan Sabah kepada British berlaku akibat kepentingan British, penguasaan hubungan luar sedia ada dan masalah kewangan SBUB selepas perang",
-        "Penyerahan Sabah berlaku semata-mata atas permintaan rakyat Sabah sendiri",
+        "Penyerahan Sabah berlaku disebabkan tekanan terus daripada Kesatuan Rakyat Indonesia Semenanjung",
         "Penyerahan Sabah tidak melibatkan sebarang faktor ekonomi atau strategik",
         "Sabah kekal di bawah pemerintahan SBUB selepas Perang Dunia Kedua"
       ],
