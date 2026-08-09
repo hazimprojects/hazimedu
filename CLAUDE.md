@@ -792,6 +792,48 @@ popover) TAK boleh disahkan visual dlm sandbox, cuma geometri/DOM
 Produksi (CDN sebenar boleh dicapai) patut render normal — SAMA CDN
 yg dah berfungsi utk beribu ikon lain di seluruh laman.
 
+## Eksport PDF — enjin `html2canvas-pro`, & SVG WAJIB diraster dulu
+
+Eksport PDF (`_generatePages()` dlm `main.js`) render sisi-klien via
+html2canvas + jsPDF (dimuat drpd CDN atas permintaan). DUA perkara
+di sini pernah makan beberapa pusingan pembetulan buta — jangan ulang:
+
+**1. Guna `html2canvas-pro`, JANGAN balik ke `html2canvas` 1.4.1.**
+Keluaran terakhir 1.4.1 ialah 2021 (tidak lagi diselenggara) & pd
+Chromium moden ia melukis **TEKS ~0.62em TERLALU RENDAH** berbanding
+kotak/latar elemen. Disahkan empirik (Playwright + html2canvas
+tempatan, bandingkan piksel vs `getBoundingClientRect()`): latar
+elemen TEPAT (ralat −0.5px) tetapi teks tersasar **+15px** (skala 2),
+KONSISTEN merentas Fredoka/Arial/Patrick Hand & tak berubah walau
+tukar `line-height`/`position` bekas. Ini punca SEBENAR aduan berulang
+"highlight kata kunci offset drpd tulisan" — **latar betul, teks yg
+jatuh**, jadi mengubah CSS `.zpkw` (padding/`vertical-align`/
+`transform`/`display`) TAKKAN membetulkannya (semua 7 varian diuji,
+semua tersasar sama). `html2canvas-pro` 2.3.3 betulkan sepenuhnya
+(ralat teks −1px), API serupa (turut dedah `window.html2canvas`).
+
+**2. Ikon SVG MESTI diraster ke PNG sebelum capture.** html2canvas
+(kedua-dua 1.4.1 & pro) GAGAL SENYAP melukis SVG OpenMoji: ikon jadi
+`data:` URI sah, `img.complete === true`, `naturalWidth === 150`,
+TAPI **SIFAR piksel** terhasil dlm kanvas — tiada ralat console.
+Puncanya SVG OpenMoji hanya ada `viewBox`, **TIADA atribut
+`width`/`height`** pd `<svg>` root (pelayar biasa fallback 150px &
+papar normal; html2canvas tidak). Ikon Fluent (PNG) TAK terjejas —
+sebab tu simptomnya "fluent nampak, openmoji tiada". `_pdfInlineImages()`
+kini raster SVG → PNG (canvas 96px) selepas fetch, sebelum capture.
+
+**Nota**: `_pdfInlineImages()` juga fetch SETIAP ikon & tukar ke
+`data:` URI (bukan sekadar tunggu `load`) — elak "CORS-taint" imej
+silang-asal yg turut boleh sebabkan ikon kosong senyap.
+
+**Menguji eksport PDF dlm sandbox agen**: CDN html2canvas/jsPDF
+disekat, TAPI boleh `npm install html2canvas-pro jspdf --no-save`
+(`node_modules/` sudah di-gitignore) & suntik via Playwright
+`addScriptTag({path})` — `_ensureLibs()` langkau muat turun CDN bila
+`window.html2canvas` sudah wujud, jadi **aliran PDF SEBENAR boleh
+dijalankan & diperiksa piksel demi piksel**. Guna cara ni utk sahkan
+perubahan rupa PDF; JANGAN teka drpd CSS semata.
+
 ## Aliran Kerja Versioning Aset (WAJIB lepas ubah CSS/JS/sw.js)
 
 Sumber kebenaran versi: `data/asset-versions.json`. Lepas ubah
