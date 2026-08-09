@@ -5474,6 +5474,145 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
 })();
 
 // =========================
+// TOAST PEMASANGAN PWA — cadangan kecil berkala (halaman utama + nota sahaja,
+// bukan about.html [dah ada kad khusus] / kuiz [elak ganggu kuiz aktif])
+// =========================
+(function () {
+  var COOLDOWN_MS = 14 * 24 * 60 * 60 * 1000; // 14 hari antara paparan
+  var SHOW_DELAY_MS = 9000; // tunggu sedikit lepas prompt sedia — elak rasa spt iklan popup
+
+  var path = window.location.pathname || "/";
+  if (!hzZymnotesIsHomePathname(path) && !hzZymnotesIsNotesPathname(path)) return;
+
+  function isStandaloneDisplay() {
+    try {
+      if (window.matchMedia("(display-mode: standalone)").matches) return true;
+      if (window.matchMedia("(display-mode: minimal-ui)").matches) return true;
+      if (window.matchMedia("(display-mode: window-controls-overlay)").matches) return true;
+    } catch (e) {}
+    return typeof navigator.standalone === "boolean" && navigator.standalone;
+  }
+
+  if (isStandaloneDisplay() || ZymStore.getApp("pwaInstalled")) return;
+
+  function cooldownOk() {
+    var last = ZymStore.getApp("installToastLastShown");
+    return !last || (Date.now() - last) > COOLDOWN_MS;
+  }
+
+  function markShown() {
+    ZymStore.setApp("installToastLastShown", Date.now());
+  }
+
+  var deferredPrompt = null;
+  var timer = null;
+  var sheet = null;
+
+  function removeSheet() {
+    if (!sheet) return;
+    var el = sheet;
+    sheet = null;
+    el.classList.remove("zh-toast-show");
+    el.classList.add("zh-toast-hide");
+    setTimeout(function () { el.remove(); }, 300);
+  }
+
+  function buildToast() {
+    var el = document.createElement("div");
+    el.className = "audio-notice-sheet install-toast-sheet";
+    el.setAttribute("role", "status");
+    el.setAttribute("aria-live", "polite");
+
+    var icon = document.createElement("img");
+    icon.className = "install-toast-icon";
+    icon.src = "/icons/icon-192.png";
+    icon.width = 34;
+    icon.height = 34;
+    icon.alt = "";
+    icon.setAttribute("aria-hidden", "true");
+
+    var content = document.createElement("div");
+    content.className = "audio-notice-content";
+    var title = document.createElement("span");
+    title.className = "audio-notice-title";
+    title.textContent = "Pasang ZymNotes?";
+    var text = document.createElement("span");
+    text.className = "audio-notice-text";
+    text.textContent = "Macam aplikasi biasa — lebih laju & boleh diguna luar talian.";
+    content.appendChild(title);
+    content.appendChild(text);
+
+    var actions = document.createElement("div");
+    actions.className = "install-toast-actions";
+
+    var installBtn = document.createElement("button");
+    installBtn.type = "button";
+    installBtn.className = "install-toast-install-btn";
+    installBtn.textContent = "Pasang";
+
+    var closeBtn = document.createElement("button");
+    closeBtn.type = "button";
+    closeBtn.className = "audio-notice-close";
+    closeBtn.setAttribute("aria-label", "Tutup");
+    closeBtn.textContent = "✕";
+
+    actions.appendChild(installBtn);
+    actions.appendChild(closeBtn);
+
+    el.appendChild(icon);
+    el.appendChild(content);
+    el.appendChild(actions);
+
+    installBtn.addEventListener("click", function () {
+      markShown();
+      if (!deferredPrompt) { removeSheet(); return; }
+      var p = deferredPrompt;
+      deferredPrompt = null;
+      p.prompt();
+      p.userChoice.then(function (choice) {
+        if (choice && choice.outcome === "accepted") {
+          ZymStore.setApp("pwaInstalled", true);
+        }
+      });
+      removeSheet();
+    });
+
+    closeBtn.addEventListener("click", function () {
+      markShown();
+      removeSheet();
+    });
+
+    document.body.appendChild(el);
+    sheet = el;
+
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () { el.classList.add("zh-toast-show"); });
+    });
+  }
+
+  function maybeShow() {
+    if (sheet || !deferredPrompt) return;
+    if (isStandaloneDisplay() || ZymStore.getApp("pwaInstalled")) return;
+    if (!cooldownOk()) return;
+    if (document.querySelector(".audio-notice-sheet.zh-toast-show")) return;
+    buildToast();
+  }
+
+  window.addEventListener("beforeinstallprompt", function (e) {
+    if (isStandaloneDisplay() || ZymStore.getApp("pwaInstalled")) return;
+    e.preventDefault();
+    deferredPrompt = e;
+    if (!timer) timer = setTimeout(maybeShow, SHOW_DELAY_MS);
+  });
+
+  window.addEventListener("appinstalled", function () {
+    ZymStore.setApp("pwaInstalled", true);
+    deferredPrompt = null;
+    removeSheet();
+  });
+})();
+
+// =========================
 // PANEL TETAPAN (ZymSettings)
 // =========================
 (function () {

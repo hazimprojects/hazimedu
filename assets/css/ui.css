@@ -1584,6 +1584,39 @@ body.sparkle-panel-open .audio-notice-sheet {
   bottom: var(--floating-bottom-offset-avoid-sparkle);
 }
 
+/* ── Install Toast (reuses .audio-notice-sheet chrome/position/animation) ── */
+.install-toast-icon {
+  flex-shrink: 0;
+  border-radius: 8px;
+  display: block;
+}
+
+.install-toast-actions {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-left: 0.15rem;
+}
+
+.install-toast-install-btn {
+  flex-shrink: 0;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: filter 0.15s;
+}
+
+.install-toast-install-btn:hover {
+  filter: brightness(1.08);
+}
+
 /* =========================
    GLOBAL SEARCH OVERLAY
 ========================= */
