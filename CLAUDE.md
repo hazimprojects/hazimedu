@@ -792,14 +792,21 @@ popover) TAK boleh disahkan visual dlm sandbox, cuma geometri/DOM
 Produksi (CDN sebenar boleh dicapai) patut render normal — SAMA CDN
 yg dah berfungsi utk beribu ikon lain di seluruh laman.
 
-## Eksport PDF — Susun Atur 2 Lajur (skop Bab 1 sahaja)
+## Eksport PDF — Susun Atur 2 Lajur (skop Bab 1 & Bab 2)
 
 Pengguna minta gaya "2 lajur" (spt nota Scribd rujukan pelajar — mudah
-lipat 2, guna ruang kosong dgn bijak). Skop DIHADKAN kpd Bab 1 sahaja
-(`_pdfIsTwoColumnScope()`, regex `/\/notes\/bab-1(-\d+)?\.html$/i` pd
-`window.location.pathname`) — bab lain kekal 1 lajur asal, TIADA
-perubahan langsung drpd semakan skop ni (kod lama berjalan byte-demi-
-byte sama bila `twoCol=false`).
+lipat 2, guna ruang kosong dgn bijak). Skop asal DIHADKAN kpd Bab 1
+sahaja, kemudian DILUASKAN ke Bab 2 (`_pdfIsTwoColumnScope()`, regex
+`/\/notes\/bab-[12](-\d+)?\.html$/i` pd `window.location.pathname`)
+— bab lain kekal 1 lajur asal, TIADA perubahan langsung drpd semakan
+skop ni (kod lama berjalan byte-demi-byte sama bila `twoCol=false`).
+**Bila luaskan ke bab baharu, WAJIB turut lengkapkan liputan
+`HZ_PDF_OPENMOJI_MAP` 100% konsep bab tu dulu** (rujuk §"enjin
+`html2canvas-pro`" di bawah, seksyen "Peta ikon PDF") — 2 keputusan
+skop ni (2-lajur & peta ikon) dikemas kini SERENTAK setiap kali bab
+baharu dimasukkan, sbb 2-lajur (lebar lajur sempit) & liputan ikon
+penuh (elak campuran gaya OpenMoji/Fluent) sama-sama makin genting
+bila lebar kandungan menyempit.
 
 **Teknik: komposisi CANVAS 2D SELEPAS capture, BUKAN CSS `column-
 count`.** CSS multi-column + html2canvas ialah kombinasi terkenal
@@ -839,6 +846,14 @@ bercahaya") diukur ~257px pd 13px bold Fredoka — muat selesa dlm
 lebar lajur ~300-330px; kalau tambah kandungan baharu dgn frasa kata
 kunci JAUH lebih panjang, sahkan lebarnya sebelum push (guna teknik
 serupa: `span.getBoundingClientRect().width` pd font/saiz sebenar).
+Bab 2 (frasa lagi panjang — nama pertubuhan/tokoh, cth. "Majlis
+Perundangan Negeri-negeri Selat (Straits Settlements Legislative
+Council)" ~296px) disahkan via Playwright pd enjin PDF SEBENAR
+(§teknik ujian atas): SIFAR `.zpkw` melangkaui sempadan kad induknya
+merentas kesemua 8 subtopik, sbb `white-space:nowrap` (bukan lebar
+mutlak) yg jamin keselamatan — frasa panjang cuma berpindah SEKALI
+GUS ke baris baharu, tak pernah pisah pertengahan tak kira berapa
+panjang.
 
 `pages`/`dims` yg dipulangkan drpd `_generatePages()` KEKAL bentuk
 sama (array kanvas muka surat penuh + metadata mm) tak kira mod —
@@ -943,13 +958,31 @@ ni langsung). Penjaga `cached.type === 'opaque'` dlm handler emoji-CDN
 `sw.js` MESTI dikekalkan.
 
 **Peta ikon PDF**: `HZ_PDF_OPENMOJI_MAP` kini liputi **100% ikon Bab 1**
-(78 konsep / 507 kemunculan) — sengaja penuh, bukan separa, sebab
+(78 konsep / 507 kemunculan) **& 100% konsep unik Bab 2** (+88 konsep
+baharu, 166 kesemuanya) — sengaja penuh, bukan separa, sebab
 liputan separa (dulu 25 konsep = 82%) tinggalkan **campuran gaya
 OpenMoji + Fluent dlm senarai yg sama** (cth. keycap 1–4 OpenMoji tapi
 5–6 Fluent) yg ketara janggal. Bila luaskan ke bab lain, liputi
 SEMUA konsep bab itu sekali gus. `_pdfEmojiSrc()` turut terima segmen
 varian pilihan sebelum `/3D/` (cth. `/assets/Writing hand/Default/3D/`)
 — tanpa itu ikon sebegini senyap terlepas drpd peta.
+
+**Sumber SVG utk ikon baharu**: klon cetek `git clone --depth 1
+--filter=blob:none --sparse` repo `github.com/hfg-gmuend/openmoji`,
+`git sparse-checkout set data color` (jimat — repo penuh besar,
+sparse hanya tarik `data/openmoji.json` + `color/svg/*.svg`). Padan
+nama konsep Fluent (title-case, cth. `"Anger symbol"`) ke medan
+`annotation` OpenMoji (lowercase) dlm `data/openmoji.json`, salin
+`color/svg/<hexcode>.svg` → `assets/openmoji/<slug>.svg`. **Bukan
+semua nama konsep Fluent padan TERUS dgn `annotation` OpenMoji** —
+2 kes ditemui semasa luaskan ke Bab 2: `"Keycap 7"` → annotation
+`"keycap: 7"` (format keycap OpenMoji guna `:`, bukan ruang), `"Pouting
+face"` → annotation `"enraged face"` (emoji SAMA, U+1F621 — Unicode
+namakan rasmi "POUTING FACE" tapi OpenMoji anotasi sendiri guna
+"enraged face"; vendor lain cth. Fluent ikut nama Unicode rasmi).
+Klon dipadam lepas siap salin (spt corak `circle-flags` utk bendera
+— `assets/openmoji/LICENSE.md` sedia ada dah cukup, CC BY-SA 4.0
+sama drpd Bab 1).
 
 **Menguji eksport PDF dlm sandbox agen**: CDN html2canvas/jsPDF
 disekat, TAPI boleh `npm install html2canvas-pro jspdf --no-save`
