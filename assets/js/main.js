@@ -3578,6 +3578,45 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     return i < n ? i : -1;
   }
 
+  // Lapisan ikon PDF gaya lakaran (OpenMoji self-host) — 25 konsep paling
+  // kerap (Bab 1, ~82% kemunculan). Konsep TIADA dlm peta ni kekal Fluent
+  // 3D asal (fallback selamat, bukan pecah) — rujuk kod hex sumber di
+  // assets/openmoji/LICENSE.md (CC BY-SA 4.0, OpenMoji Contributors).
+  var HZ_PDF_OPENMOJI_MAP = {
+    'Pushpin': '/assets/openmoji/pushpin.svg',
+    'Light bulb': '/assets/openmoji/light-bulb.svg',
+    'Crown': '/assets/openmoji/crown.svg',
+    'Handshake': '/assets/openmoji/handshake.svg',
+    'Classical building': '/assets/openmoji/classical-building.svg',
+    'Scroll': '/assets/openmoji/scroll.svg',
+    'Shield': '/assets/openmoji/shield.svg',
+    'Busts in silhouette': '/assets/openmoji/busts-in-silhouette.svg',
+    'Open book': '/assets/openmoji/open-book.svg',
+    'Water wave': '/assets/openmoji/water-wave.svg',
+    'Keycap 1': '/assets/openmoji/keycap-1.svg',
+    'Keycap 2': '/assets/openmoji/keycap-2.svg',
+    'Keycap 3': '/assets/openmoji/keycap-3.svg',
+    'Keycap 4': '/assets/openmoji/keycap-4.svg',
+    'Check mark': '/assets/openmoji/check-mark.svg',
+    'Balance scale': '/assets/openmoji/balance-scale.svg',
+    'Crossed swords': '/assets/openmoji/crossed-swords.svg',
+    'World map': '/assets/openmoji/world-map.svg',
+    'Prohibited': '/assets/openmoji/prohibited.svg',
+    'Chart increasing': '/assets/openmoji/chart-increasing.svg',
+    'Money bag': '/assets/openmoji/money-bag.svg',
+    'Globe showing asia-australia': '/assets/openmoji/globe-asia-australia.svg',
+    'Magnifying glass tilted left': '/assets/openmoji/magnifying-glass-left.svg',
+    'Bullseye': '/assets/openmoji/bullseye.svg',
+    'Brain': '/assets/openmoji/brain.svg'
+  };
+
+  function _pdfEmojiSrc(originalSrc) {
+    var m = /\/assets\/([^/]+)\/3D\//.exec(originalSrc);
+    if (!m) return originalSrc;
+    var concept = decodeURIComponent(m[1]).replace(/\+/g, ' ');
+    return HZ_PDF_OPENMOJI_MAP[concept] || originalSrc;
+  }
+
   function _kwHtmlOne(node, o) {
     o = o || {};
     if (node.nodeType === 3) return _escPdfHtml(node.textContent);
@@ -3585,6 +3624,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     if (node.tagName === 'IMG') {
       var src = node.getAttribute('src');
       if (!src) return '';
+      src = _pdfEmojiSrc(src);
       var w = node.getAttribute('width') || (node.width ? String(node.width) : '20');
       var h = node.getAttribute('height') || (node.height ? String(node.height) : '20');
       return '<img class="zp-emoji" src="' + _escPdfAttr(src) + '" alt="" width="' + _escPdfAttr(String(w)) + '" height="' + _escPdfAttr(String(h)) + '" decoding="async" />';
@@ -3910,37 +3950,41 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   function _getPrintCss(mode) {
     var isEco = mode === 'eco';
     var rules = [
+      // Fon lakaran tangan (Patrick Hand, self-host — SIL OFL 1.1, rujuk
+      // assets/fonts/LICENSE.md) untuk tajuk/label sahaja; badan teks kekal
+      // Fredoka (kekal senang baca pd saiz kecil PDF).
+      '@font-face{font-family:"Patrick Hand";font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/patrick-hand.woff2) format("woff2")}',
       '#zym-pr,#zym-pr *{box-sizing:border-box;font-family:Fredoka,sans-serif}',
       '#zym-pr{position:fixed;left:-9999px;top:0;width:794px;background:#fff;font-size:13.5px;color:#1a1a3a;line-height:1.48;z-index:-9999;pointer-events:none}',
       '#zym-pr .zp-page{padding:0 34px 26px}',
       // Hero
       '#zym-pr .zp-hero{padding:16px 0 12px;border-bottom:2px solid #4f46e5;margin-bottom:12px;break-inside:avoid;page-break-inside:avoid}',
-      '#zym-pr .zp-chapter-lbl{display:inline-flex;align-items:center;justify-content:center;font-size:8.5px;font-weight:700;color:#fff;background:#4f46e5;padding:5px 11px;border-radius:4px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;line-height:1;min-height:22px}',
+      '#zym-pr .zp-chapter-lbl{font-family:"Patrick Hand",Fredoka,sans-serif;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:400;color:#fff;background:#4f46e5;padding:5px 12px;border-radius:40% 45% 42% 48%/55% 40% 55% 45%;letter-spacing:.03em;text-transform:uppercase;margin-bottom:6px;line-height:1;min-height:22px}',
       '#zym-pr .zp-subtopik{display:flex;align-items:center;font-size:9.5px;color:#6b7280;letter-spacing:.1em;text-transform:uppercase;margin:4px 0 5px;line-height:1.2;min-height:18px}',
-      '#zym-pr h1.zp-title{display:flex;flex-wrap:wrap;align-items:center;column-gap:.35em;row-gap:.12em;font-size:22px;font-weight:700;color:#1e1e3a;line-height:1.2;margin:0 0 6px}',
+      '#zym-pr h1.zp-title{font-family:"Patrick Hand",Fredoka,sans-serif;display:flex;flex-wrap:wrap;align-items:center;column-gap:.35em;row-gap:.12em;font-size:25px;font-weight:400;color:#1e1e3a;line-height:1.25;margin:0 0 6px}',
       '#zym-pr .zp-desc{font-size:12px;color:#4a4a6a;margin:0;line-height:1.5}',
       // Boards — padding & margin lebih selesa (elak teks “tersepit” dengan sempadan)
-      '#zym-pr .zp-board{border:1.5px solid;border-left-width:4px;border-radius:0 8px 8px 0;padding:9px 13px;margin-bottom:7px;background:#fafaff;break-inside:avoid;page-break-inside:avoid}',
-      '#zym-pr .zp-board-lbl{display:flex;align-items:center;min-height:20px;font-size:8.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;margin-bottom:7px;line-height:1.08}',
+      '#zym-pr .zp-board{border:1.5px solid;border-left-width:4px;border-radius:2px 12px 9px 3px/9px 8px 12px 6px;padding:9px 13px;margin-bottom:7px;background:#fafaff;break-inside:avoid;page-break-inside:avoid}',
+      '#zym-pr .zp-board-lbl{font-family:"Patrick Hand",Fredoka,sans-serif;display:flex;align-items:center;min-height:20px;font-size:10.5px;font-weight:400;letter-spacing:.03em;text-transform:uppercase;margin-bottom:7px;line-height:1.08}',
       // Flap card (Soalan Utama)
-      '#zym-pr .zp-flap{border:1.5px solid #d97706;border-radius:8px;overflow:hidden;margin-bottom:8px;break-inside:avoid;page-break-inside:avoid}',
-      '#zym-pr .zp-flap-top{display:flex;align-items:center;min-height:30px;line-height:1.1;background:#fef3c7;padding:7px 13px;font-size:11.5px;font-weight:700;color:#92400e;border-bottom:1px solid #fde68a}',
-      '#zym-pr .zp-flap-q{display:flex;flex-wrap:wrap;align-items:center;gap:.35em;padding:10px 14px 6px;font-size:12.5px;font-weight:700;color:#1a1a3a;line-height:1.28}',
+      '#zym-pr .zp-flap{border:1.5px solid #d97706;border-radius:3px 14px 4px 12px/10px 5px 13px 6px;overflow:hidden;margin-bottom:8px;break-inside:avoid;page-break-inside:avoid}',
+      '#zym-pr .zp-flap-top{font-family:"Patrick Hand",Fredoka,sans-serif;display:flex;align-items:center;min-height:30px;line-height:1.1;background:#fef3c7;padding:7px 13px;font-size:13px;font-weight:400;color:#92400e;border-bottom:1px solid #fde68a}',
+      '#zym-pr .zp-flap-q{font-family:"Patrick Hand",Fredoka,sans-serif;display:flex;flex-wrap:wrap;align-items:center;gap:.35em;padding:10px 14px 6px;font-size:14.5px;font-weight:400;color:#1a1a3a;line-height:1.3}',
       '#zym-pr .zp-flap-a{display:flex;flex-wrap:wrap;align-items:center;gap:.35em;padding:5px 14px 10px;font-size:12.5px;color:#3a3a5a;background:#fffbf0;line-height:1.45}',
       // Section (eyebrow → tajuk)
       '#zym-pr .zp-section{margin:14px 0 6px;break-inside:avoid;page-break-inside:avoid}',
-      '#zym-pr .zp-section-badge{display:inline-flex;align-items:center;justify-content:center;font-size:8.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:#4f46e5;padding:5px 12px;border-radius:999px;margin-bottom:7px;line-height:1;min-height:22px}',
-      '#zym-pr h2.zp-section-title{display:flex;flex-wrap:wrap;align-items:center;column-gap:.35em;row-gap:.15em;font-size:16px;font-weight:700;color:#1e1e3a;margin:0 0 8px;line-height:1.25}',
+      '#zym-pr .zp-section-badge{font-family:"Patrick Hand",Fredoka,sans-serif;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:400;letter-spacing:.03em;text-transform:uppercase;color:#fff;background:#4f46e5;padding:5px 13px;border-radius:999px;margin-bottom:7px;line-height:1;min-height:22px}',
+      '#zym-pr h2.zp-section-title{font-family:"Patrick Hand",Fredoka,sans-serif;display:flex;flex-wrap:wrap;align-items:center;column-gap:.35em;row-gap:.15em;font-size:19px;font-weight:400;color:#1e1e3a;margin:0 0 8px;line-height:1.3}',
       // Pembungkus bahagian (logik DOM sahaja; elak pisah halaman diurus melalui julat blok PDF)
       '#zym-pr .zp-section-wrap{margin:10px 0 12px}',
       '#zym-pr .zp-section-wrap .zp-section{margin:0 0 3px}',
       '#zym-pr .zp-section-wrap .zp-section-badge{margin-bottom:5px}',
       '#zym-pr .zp-section-wrap h2.zp-section-title{margin:0 0 5px}',
       // Accordion — sedikit lebih jimat ruang (contoh: “Berlaku secara” bab 1.1)
-      '#zym-pr .zp-acc{border:1px solid #e0e0ef;border-radius:8px;margin-bottom:4px;overflow:hidden;break-inside:avoid}',
+      '#zym-pr .zp-acc{border:1px solid #e0e0ef;border-radius:3px 12px 4px 11px/9px 4px 12px 5px;margin-bottom:4px;overflow:hidden;break-inside:avoid}',
       '#zym-pr .zp-acc-hd{display:flex;align-items:center;gap:7px;padding:5px 9px;background:#f4f4ff;border-bottom:1px solid #e0e0ef}',
-      '#zym-pr .zp-acc-num{font-size:10px;font-weight:700;color:#4f46e5;min-width:20px;height:20px;line-height:1;background:#ede9fe;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}',
-      '#zym-pr .zp-acc-ttl{font-size:12.5px;font-weight:700;color:#1e1e3a;line-height:1.08;display:flex;align-items:center;flex-wrap:wrap;column-gap:.28em;row-gap:.1em}',
+      '#zym-pr .zp-acc-num{font-family:"Patrick Hand",Fredoka,sans-serif;font-size:11.5px;font-weight:400;color:#4f46e5;min-width:20px;height:20px;line-height:1;background:#ede9fe;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}',
+      '#zym-pr .zp-acc-ttl{font-family:"Patrick Hand",Fredoka,sans-serif;font-size:14.5px;font-weight:400;color:#1e1e3a;line-height:1.14;display:flex;align-items:center;flex-wrap:wrap;column-gap:.28em;row-gap:.1em}',
       '#zym-pr .zp-acc-ttl-txt{position:relative;top:-0.26em;display:inline-block;line-height:1.06}',
       // Teks selepas emoji (dibungkus semasa _kwHtml) — naikkan optik selari imej (html2canvas tidak sentiasa hormati :has())
       '#zym-pr .zp-txt-up{position:relative;top:-0.32em;display:inline}',
@@ -3949,8 +3993,8 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       '#zym-pr .zp-acc-body > p.zp-ph{margin:3px 0 3px}',
       // Garis masa PDF — kad selari blok akordion (kepala + isi)
       '#zym-pr .zp-tl{margin:4px 0 10px}',
-      '#zym-pr .zp-tl-card{border:1px solid #e0e0ef;border-radius:8px;margin-bottom:5px;overflow:hidden;break-inside:avoid;background:#fafbff}',
-      '#zym-pr .zp-tl-hd{margin:0;padding:7px 11px;font-size:12.5px;font-weight:700;color:#1e1e3a;line-height:1.28;background:#f4f4ff;border-bottom:1px solid #e0e0ef}',
+      '#zym-pr .zp-tl-card{border:1px solid #e0e0ef;border-radius:3px 13px 4px 12px/9px 4px 13px 5px;margin-bottom:5px;overflow:hidden;break-inside:avoid;background:#fafbff}',
+      '#zym-pr .zp-tl-hd{font-family:"Patrick Hand",Fredoka,sans-serif;margin:0;padding:7px 11px;font-size:14.5px;font-weight:400;color:#1e1e3a;line-height:1.32;background:#f4f4ff;border-bottom:1px solid #e0e0ef}',
       '#zym-pr .zp-tl-bd{padding:6px 11px 9px;background:#fff;font-size:12.5px;color:#3a3a5a}',
       '#zym-pr .zp-tl-bd p.zp-p{margin:3px 0 6px;line-height:1.46}',
       '#zym-pr .zp-tl-bd p.zp-ph{margin:4px 0;font-size:12.5px;line-height:1.3}',
@@ -3970,7 +4014,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       '#zym-pr p.zp-ph{font-size:13px;font-weight:700;color:#1a1a3a;margin:6px 0 5px;line-height:1.32}',
       '#zym-pr p.zp-sentence{font-size:12.5px;color:#3a3a5a;margin:5px 0;padding:6px 11px;border-left:3px solid #c7d2fe;line-height:1.55}',
       // Kata kunci — penyerlah: inline-block + translateY supaya latar selari Fredoka/html2canvas
-      '#zym-pr .zpkw{display:inline-block;vertical-align:text-bottom;line-height:1.1;padding:0.05em 0.26em 0.09em;margin:0;border-radius:0.35em;font-size:inherit;font-weight:700;transform:translateY(0.11em);-webkit-box-decoration-break:clone;box-decoration-break:clone;-webkit-print-color-adjust:exact;print-color-adjust:exact}',
+      '#zym-pr .zpkw{display:inline-block;vertical-align:text-bottom;line-height:1.1;padding:0.05em 0.3em 0.09em;margin:0;border-radius:40% 45% 42% 48%/55% 40% 55% 45%;font-size:inherit;font-weight:700;transform:translateY(0.11em);-webkit-box-decoration-break:clone;box-decoration-break:clone;-webkit-print-color-adjust:exact;print-color-adjust:exact}',
       '#zym-pr .zpkw-tokoh{color:#731b25;background:#f9bcc4}',
       '#zym-pr .zpkw-masa{color:#1b3573;background:#bccff9}',
       '#zym-pr .zpkw-tempat{color:#1b7338;background:#bcf9d1}',
@@ -3987,7 +4031,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     ];
     if (isEco) {
       rules.push(
-        '#zym-pr.zp-mode-eco .zpkw,#zym-pr.zp-mode-eco [class*="zpkw-"]{color:#1e293b!important;font-weight:700!important;display:inline-block!important;vertical-align:text-bottom!important;line-height:1.1!important;padding:0.05em 0.26em 0.09em!important;border-radius:0.35em!important;background:rgba(241,245,249,0.95)!important;transform:translateY(0.11em)!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}',
+        '#zym-pr.zp-mode-eco .zpkw,#zym-pr.zp-mode-eco [class*="zpkw-"]{color:#1e293b!important;font-weight:700!important;display:inline-block!important;vertical-align:text-bottom!important;line-height:1.1!important;padding:0.05em 0.3em 0.09em!important;border-radius:40% 45% 42% 48%/55% 40% 55% 45%!important;background:rgba(241,245,249,0.95)!important;transform:translateY(0.11em)!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}',
         '#zym-pr.zp-mode-eco .zp-chapter-lbl,#zym-pr.zp-mode-eco .zp-section-badge{background:#4b5563!important;color:#fff!important}',
         '#zym-pr.zp-mode-eco .zp-hero{border-bottom-color:#9ca3af!important}',
         '#zym-pr.zp-mode-eco .zp-subtopik{color:#52525b!important}',
@@ -6031,7 +6075,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=535').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=536').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
