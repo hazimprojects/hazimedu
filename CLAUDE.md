@@ -792,6 +792,60 @@ popover) TAK boleh disahkan visual dlm sandbox, cuma geometri/DOM
 Produksi (CDN sebenar boleh dicapai) patut render normal — SAMA CDN
 yg dah berfungsi utk beribu ikon lain di seluruh laman.
 
+## Eksport PDF — Susun Atur 2 Lajur (skop Bab 1 sahaja)
+
+Pengguna minta gaya "2 lajur" (spt nota Scribd rujukan pelajar — mudah
+lipat 2, guna ruang kosong dgn bijak). Skop DIHADKAN kpd Bab 1 sahaja
+(`_pdfIsTwoColumnScope()`, regex `/\/notes\/bab-1(-\d+)?\.html$/i` pd
+`window.location.pathname`) — bab lain kekal 1 lajur asal, TIADA
+perubahan langsung drpd semakan skop ni (kod lama berjalan byte-demi-
+byte sama bila `twoCol=false`).
+
+**Teknik: komposisi CANVAS 2D SELEPAS capture, BUKAN CSS `column-
+count`.** CSS multi-column + html2canvas ialah kombinasi terkenal
+tak boleh dipercayai (rujuk sejarah pepijat html2canvas dlm fail ni —
+baseline teks, SVG). Pendekatan sebenar: tangkap kontena pd LEBAR
+SATU LAJUR sahaja (`PDF_2COL_COL_WIDTH_PX`, ~384px, drpd
+`PDF_2COL_COL_WIDTH_MM`=90mm × ketumpatan asal 794px/186mm), biar
+kandungan alir jadi lebih TINGGI & SEMPIT secara semula jadi (spt
+akhbar), guna SEMULA algoritma smart-split sedia ada (`_pickPdfSplitY`
+dll., TAK diubah langsung — cuma `pxPerMm`/`pxPerPage` kini berdasar
+lebar lajur, bukan lebar kandungan penuh) utk hasilkan "slices"
+(lajur), kemudian GANDINGKAN 2 slice bersebelahan (kiri+kanan) via
+`canvas.drawImage()` biasa ke SATU kanvas muka surat penuh —
+lukisan 2D biasa PASCA-capture, jadi TIADA risiko keserasian
+html2canvas langsung. Garis panduan lipat (putus-putus halus)
+dilukis di tengah jurang guna `ctx.setLineDash()`.
+
+Lebar hasil (2×lajur + jurang) sepadan TEPAT `cW×pxPerMm` (186mm)
+sbb `PDF_2COL_COL_WIDTH_MM×2 + PDF_2COL_GUTTER_MM === 186` — pilih
+angka2 ni bila ubah margin muka surat, jgn asal round.
+
+**AWAS — `white-space:nowrap` pd `.zpkw` WAJIB dlm mod 2 lajur (&
+kekal selamat dlm mod 1 lajur).** Bila frasa kata kunci BERBILANG
+PERKATAAN (cth. "Alam Melayu") terpaksa pisah PERTENGAHAN frasa
+merentas baris pd lebar lajur sempit (~300px), `box-decoration-
+break:clone` (utk sokong penyerlah wrap berbilang baris) buat
+html2canvas-pro GAGAL — hasilkan blob latar meleret merentasi
+SELURUH baki lebar baris & TELAN teks biasa di sekelilingnya (bukan
+sekadar offset — teks BENAR-BENAR hilang drpd output). Disahkan
+piksel demi piksel: frasa PENDEK/tak wrap tak terjejas, cuma frasa
+yg genuinely terbelah pertengahan yg rosak. `white-space:nowrap`
+paksa seluruh frasa berpindah SEKALI GUS ke baris seterusnya, elak
+senario box-decoration-break yg rapuh ni terus (juga makna
+`box-decoration-break` sendiri jadi tak relevan, dibuang). Frasa
+terpanjang di korpus Bab 1 (~36 aksara, "kemenangan yang gemilang /
+bercahaya") diukur ~257px pd 13px bold Fredoka — muat selesa dlm
+lebar lajur ~300-330px; kalau tambah kandungan baharu dgn frasa kata
+kunci JAUH lebih panjang, sahkan lebarnya sebelum push (guna teknik
+serupa: `span.getBoundingClientRect().width` pd font/saiz sebenar).
+
+`pages`/`dims` yg dipulangkan drpd `_generatePages()` KEKAL bentuk
+sama (array kanvas muka surat penuh + metadata mm) tak kira mod —
+`_pdfPopulateSlides()`/`_savePdf()` (pratonton & muat turun) TIADA
+apa-apa diubah, sbb komposisi 2-lajur berlaku SEPENUHNYA di dlm
+`_generatePages()` sebelum `cb()` dipanggil.
+
 ## Eksport PDF — skop kandungan SENGAJA beza drpd nota digital
 
 PDF bukan gantian nota digital utk bacaan santai — ia utk bacaan
