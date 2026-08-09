@@ -959,6 +959,95 @@ disekat, TAPI boleh `npm install html2canvas-pro jspdf --no-save`
 dijalankan & diperiksa piksel demi piksel**. Guna cara ni utk sahkan
 perubahan rupa PDF; JANGAN teka drpd CSS semata.
 
+## Eksport PDF — Tajuk `h1`/`h2`/`.zp-acc-ttl`/kad Soalan Utama JANGAN `display:flex`
+
+`_getPrintCss()` (`main.js`) asalnya set `display:flex;flex-wrap:wrap`
+pd `h1.zp-title`, `h2.zp-section-title`, `.zp-acc-ttl`, `.zp-flap-q`,
+`.zp-flap-a` supaya ikon (`img.zp-emoji`, child pertama) & teks tajuk
+(`.zp-txt-up`, child kedua) jajar menegak kemas. Ni PECAH bila tajuk
+panjang perlu >1 baris: `flex-wrap` bungkus keseluruhan ITEM flex
+sbg unit atom (bukan per-perkataan spt aliran teks normal), jadi bila
+item ke-2 (`.zp-txt-up`) tak muat sebelah item ke-1 (ikon) pd baris
+semasa, SELURUH `.zp-txt-up` berpindah ke baris baharu — tinggalkan
+ikon BERSENDIRIAN di baris pertama, terpisah drpd teks tajuknya.
+Disahkan pengguna (tangkapan skrin: ikon tikus/jam pasir keseorangan
+di atas "Negara bangsa Alam Melayu terbina melalui empat unsur
+utama") & diagnosis piksel demi piksel via `Range.getClientRects()`
+(bandingkan `top` baris teks pertama vs `img.getBoundingClientRect().top`)
+pd enjin PDF SEBENAR (rujuk teknik ujian §atas).
+
+Fix: BUANG kesemua `display:flex`/`flex-wrap`/`align-items`/`gap` drpd
+5 rule di atas — kekalkan aliran INLINE biasa. `.zp-emoji` (kelas
+ikon, `#zym-pr .zp-emoji`) SUDAH ada `vertical-align:middle` +
+`margin:0 .24em 0 0` drpd awal, cukup utk jajar ikon+teks tanpa
+flexbox — aliran teks normal bungkus PER-PERKATAAN spt sepatutnya,
+ikon kekal melekat pd perkataan pertama tajuk tak kira berapa baris
+teks tu bungkus. **JANGAN kembalikan `display:flex` pd rule tajuk PDF
+ni** melainkan turut selesaikan masalah atomic-wrap-item di atas dgn
+cara lain (cth. letak ikon sbg `background-image`/`::before` bukan
+`<img>` berasingan, ATAU flex HANYA pd baris pertama via teknik lain)
+— sekadar tambah `flex-wrap:wrap` semula akan hidupkan semula bug ni.
+
+## Pratonton PDF — Zum skop kandungan sahaja (bukan seluruh modal)
+
+Pratonton PDF (`#zym-pdf-overlay`) asalnya (PR sejarah "aktifkan
+pinch-zoom native dlm pratonton PDF") longgarkan `touch-action`
+sejagat (`document.documentElement`/`document.body`) kpd `'auto'`
+semasa modal terbuka, supaya pengguna boleh pinch-zoom native. Ni
+SILAP — zum yg terhasil ialah zum SELURUH VIEWPORT/modal (termasuk
+topbar butang mod/muat turun/tutup), bukan skop kandungan PDF sahaja
+— disahkan pengguna (tangkapan skrin: topbar pecah/terpotong lepas
+pinch, tajuk jadi besar tak seimbang). Fix GANTIKAN sepenuhnya dgn
+kawalan zum MANUAL berskop-terhad:
+
+- Sekatan zum sejagat (§"Swipe Nav" di atas — `touch-action:pan-x
+  pan-y` + `gesturestart/change/end` `preventDefault()` + `touchmove`
+  berbilang-jari `preventDefault()`) KEKAL AKTIF TANPA PENGECUALIAN,
+  termasuk semasa modal PDF terbuka (fungsi `hzPdfPreviewIsOpen()` &
+  kedua-dua tapak panggilannya DIBUANG). Pinch native tak lagi
+  berfungsi dlm modal — digantikan kawalan +/- di bawah.
+- `_pdfApplyZoom()`/`_pdfZoomBy()`/`_pdfResetZoom()` (`main.js`, lepas
+  `var _pdfCache = {...}`) urus tahap zum (`_pdfZoomLevel`, langkah
+  0.25, julat 50%–300%) via kelas `#zym-pdf-pages.zp-zoomed` + `width`
+  piksel eksplisit pd SETIAP `<img>` slaid (bukan CSS `transform:scale`
+  atau lebar-peratus — dua-dua berisiko "lompatan saiz" pd sempadan
+  100%→101% sbb saiz semula jadi zum=1 imej dikawal `max-height`
+  [portrait A4], bukan `max-width`). Lebar SEBENAR imej (`getBoundingClientRect().width`)
+  diukur & dicache SEKALI (`img.dataset.pdfNaturalW`) sbg asas
+  penskalaan piksel eksplisit semua tahap zum seterusnya — jamin
+  saiz berterusan tanpa lompatan.
+- **AWAS — lebar-semula-jadi MESTI diukur SEBELUM togol kelas
+  `zp-zoomed`, bukan selepas.** Kelas `zp-zoomed` buang had
+  `max-width`/`max-height` drpd `<img>` (perlu, supaya imej boleh
+  tumbuh lepas lebar wrap semasa zum). Kalau diukur SELEPAS togol
+  (susunan asal versi awal ciri ni), `getBoundingClientRect()`
+  pulangkan saiz INTRINSIK PENUH imej (piksel kanvas raster sebenar,
+  cth. 1587px) bukan saiz muat-CSS sepatutnya (cth. 302px) — punca
+  lompatan zum DRASTIK (>500%) pd klik zum PERTAMA sahaja (klik
+  seterusnya guna cache yg sudah rosak, kekal salah). Disahkan via
+  ujian Playwright enjin PDF SEBENAR (§teknik ujian atas) — bandingkan
+  `getBoundingClientRect().width` SEBELUM/SELEPAS setiap klik zum.
+  `_pdfApplyZoom()` kini ukur/cache lebar utk imej yg belum ada
+  `dataset.pdfNaturalW` DALAM gelung berasingan SEBELUM
+  `pagesEl.classList.toggle('zp-zoomed', ...)` dipanggil.
+- `.zym-pdf-page-canvas-wrap` (bekas imej) jadi viewport BERSAIZ TETAP
+  (`max-height` SAMA nilai drpd had lama `<img>`, `overflow:auto`) —
+  bekas TAK membesar bila zum, imej yg lebih besar diseret/ditatal DI
+  DALAMnya. `#zym-pdf-pages.zp-zoomed .zym-pdf-page-canvas-wrap` tukar
+  `align-items`/`justify-content` drpd `center` kpd `flex-start` —
+  kandungan overflow YG DIPUSATKAN sebahagian TAK BOLEH dicapai via
+  tatal (bug CSS terkenal), `flex-start` elak isu ni.
+  `#zym-pdf-zoom-ctrl` (pil terapung `position:absolute`, bawah
+  tengah viewport, SAMA corak dgn butang carousel prev/next sedia
+  ada) papar label peratus + butang `−`/`+` (`disabled` pd julat
+  had). Markup pil zum diletak sbg SAUDARA `#zym-pdf-pages` (BUKAN
+  anak di dlmnya) dlm templat `#zym-pdf-pages-viewport` — kekal
+  hidup merentas `pagesDiv.innerHTML=''` (reset slaid semasa jana
+  semula/tukar mod). `_pdfApplyZoom()` dipanggil di hujung
+  `_pdfPopulateSlides()` (semua 4 tapak panggilan) supaya tahap zum
+  semasa terpakai semula pd slaid baharu (jana semula/tukar mod TAK
+  reset zum pengguna).
+
 ## Aliran Kerja Versioning Aset (WAJIB lepas ubah CSS/JS/sw.js)
 
 Sumber kebenaran versi: `data/asset-versions.json`. Lepas ubah

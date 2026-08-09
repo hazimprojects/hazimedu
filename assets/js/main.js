@@ -908,24 +908,19 @@ document.addEventListener("DOMContentLoaded", function () {
     //     langsung. Lapisan paling penting/robust drpd tiga-tiga ni.
     document.documentElement.style.touchAction = "pan-x pan-y";
     document.body.style.touchAction = "pan-x pan-y";
-    // Pratonton PDF (modal #zym-pdf-overlay) turut mewarisi nyahaktif zoom sejagat
-    // ni sebab tiada skop per-halaman (tiga lapisan di atas pasang pd document/body
-    // terus). Ni tak sengaja — dlm modal tu pengguna sepatutnya BOLEH pinch-zoom
-    // baca teks kecil pratonton. Semak status modal & langkau preventDefault bila
-    // ia terbuka (touch-action sendiri turut dilonggarkan terus dlm openPdfPreview()/
-    // _closePdfPreviewUi() — rujuk kod PDF di bawah).
-    function hzPdfPreviewIsOpen() {
-      var ov = document.getElementById("zym-pdf-overlay");
-      return !!(ov && ov.classList.contains("is-open"));
-    }
+    // Pratonton PDF (modal #zym-pdf-overlay) DULU sengaja longgarkan sekatan ni
+    // (rujuk sejarah PR) supaya pinch-zoom native boleh guna — tapi itu zoom
+    // SELURUH halaman/modal (termasuk topbar), bukan skop kandungan PDF sahaja,
+    // jadi rosakkan susun atur. Diganti dgn kawalan zoom skop-terhad khusus
+    // (_pdfApplyZoom() + butang +/-/peratus dlm #zym-pdf-pages-viewport) — sekatan
+    // sejagat ni KEKAL AKTIF tanpa pengecualian, termasuk semasa modal PDF terbuka.
     ["gesturestart", "gesturechange", "gestureend"].forEach(function (evtName) {
       document.addEventListener(evtName, function (ev) {
-        if (hzPdfPreviewIsOpen()) return;
         ev.preventDefault();
       });
     });
     document.addEventListener("touchmove", function (ev) {
-      if (ev.touches.length > 1 && !hzPdfPreviewIsOpen()) ev.preventDefault();
+      if (ev.touches.length > 1) ev.preventDefault();
     }, { passive: false });
 
     const AXIS_LOCK_DISTANCE = 8;
@@ -3277,8 +3272,15 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     '.zym-pdf-page-hdr{display:flex;align-items:center;justify-content:space-between;padding:5px 9px;border-bottom:0.5px solid #d4d4e8;font-family:Fredoka,sans-serif}',
     '.zym-pdf-page-hdr-l{font-size:0.65rem;font-weight:700;color:#6060a0}',
     '.zym-pdf-page-hdr-r{font-size:0.57rem;color:#b0b0cc;max-width:55%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;text-align:right}',
-    '.zym-pdf-page-canvas-wrap{display:flex;align-items:center;justify-content:center;background:#fff;min-height:0}',
+    '.zym-pdf-page-canvas-wrap{display:flex;align-items:center;justify-content:center;background:#fff;min-height:0;max-height:min(72vh,calc(100dvh - 210px));overflow:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}',
     '.zym-pdf-page-canvas-wrap img{display:block;max-width:100%;max-height:min(72vh,calc(100dvh - 210px));width:auto;height:auto;object-fit:contain;border:0}',
+    '#zym-pdf-pages.zp-zoomed .zym-pdf-page-canvas-wrap{align-items:flex-start;justify-content:flex-start}',
+    '#zym-pdf-pages.zp-zoomed .zym-pdf-page-canvas-wrap img{max-width:none;max-height:none}',
+    '#zym-pdf-zoom-ctrl{position:absolute;left:50%;bottom:10px;transform:translateX(-50%);z-index:4;display:flex;align-items:center;gap:2px;background:rgba(15,23,42,0.72);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);border-radius:999px;padding:4px;box-shadow:0 2px 12px rgba(0,0,0,0.35)}',
+    '#zym-pdf-zoom-out,#zym-pdf-zoom-in{width:30px;height:30px;border-radius:50%;border:none;background:transparent;color:#e2e8f0;font-size:1.1rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.15s}',
+    '#zym-pdf-zoom-out:hover,#zym-pdf-zoom-in:hover{background:rgba(79,70,229,0.45)}',
+    '#zym-pdf-zoom-out:disabled,#zym-pdf-zoom-in:disabled{opacity:0.3;cursor:default;pointer-events:none}',
+    '#zym-pdf-zoom-label{min-width:42px;text-align:center;font-family:Fredoka,sans-serif;font-size:0.72rem;font-weight:600;color:#cbd5e1;user-select:none}',
     '.zym-pdf-page-ftr{display:flex;align-items:center;justify-content:space-between;padding:4px 9px;border-top:0.5px solid #d4d4e8;font-size:0.55rem;color:#b8b8d0;font-family:Fredoka,sans-serif}',
     '.zym-pdf-page-num{color:#6b7280;font-size:0.7rem;text-align:center;font-family:Fredoka,sans-serif;padding:2px}',
     '@media print{#zym-pdf-overlay{display:none!important}}',
@@ -3460,6 +3462,11 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       '</div>',
       '<button type="button" id="zym-pdf-carousel-prev" aria-label="Halaman sebelumnya">‹</button>',
       '<button type="button" id="zym-pdf-carousel-next" aria-label="Halaman seterusnya">›</button>',
+      '<div id="zym-pdf-zoom-ctrl" role="group" aria-label="Zum pratonton">',
+        '<button type="button" id="zym-pdf-zoom-out" aria-label="Kecilkan zum">−</button>',
+        '<span id="zym-pdf-zoom-label">100%</span>',
+        '<button type="button" id="zym-pdf-zoom-in" aria-label="Besarkan zum">+</button>',
+      '</div>',
     '</div>'
   ].join('');
   document.body.appendChild(pdfOverlay);
@@ -3515,25 +3522,78 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   var _pdfModalHistoryActive = false;
   var _pdfActiveMode = 'full';
   var _pdfCache = { full: { pages: null, dims: null }, eco: { pages: null, dims: null } };
-  var _pdfSavedTouchAction = null;
 
-  // Longgarkan sekatan touch-action sejagat (swipe-nav, rujuk blok "SWIPE NAV")
-  // sementara modal pratonton PDF terbuka — supaya pengguna boleh pinch-zoom baca
-  // teks kecil dlm pratonton. Simpan nilai asal dulu (mungkin '' pd halaman tanpa
-  // swipe-nav aktif) supaya pulih tepat bila modal ditutup, bukan andaikan nilai.
-  function _pdfRelaxZoomLock() {
-    if (_pdfSavedTouchAction === null) {
-      _pdfSavedTouchAction = document.documentElement.style.touchAction || '';
+  // Zoom SKOP-TERHAD kpd kandungan pratonton sahaja (#zym-pdf-pages), BUKAN
+  // seluruh modal/halaman — punca aduan pengguna thd pinch-zoom native
+  // sebelum ini (relaxed touch-action, rujuk sejarah PR): ia zoom SELURUH
+  // modal termasuk topbar, rosakkan susun atur. Kawalan manual +/- & label
+  // peratus (bukan gerak isyarat pinch) sengaja dipilih — lebih boleh
+  // diramal & tak berlanggar dgn sekatan zoom sejagat swipe-nav yg KEKAL
+  // aktif tanpa pengecualian.
+  var _pdfZoomLevel = 1;
+  var PDF_ZOOM_MIN = 0.5;
+  var PDF_ZOOM_MAX = 3;
+  var PDF_ZOOM_STEP = 0.25;
+
+  // Skala drpd SAIZ PADAN SEMULA JADI setiap imej (bukan % kontena/CSS var
+  // mudah) — elak "lonjak" saiz sejurus lepas 100%. Pd zoom=1 imej dibatas
+  // max-width/max-height (rujuk CSS asal .zym-pdf-page-canvas-wrap img) &
+  // width sebenar TERHASIL selalunya < 100% lebar kontena (muka surat A4
+  // potret, max-height selalu jadi sekatan pertama). Kalau zum guna asas
+  // "100% lebar kontena", peralihan drpd 100%→101% zum akan tiba-tiba
+  // buang sekatan max-height & lonjak lebih besar drpd zum=1 sepatutnya.
+  // Fix: ukur lebar SEBENAR imej pd zoom=1 (getBoundingClientRect lepas
+  // clear gaya inline dulu) SEKALI sahaja, cache dlm dataset, skala px
+  // terus drpd situ utk semua tahap zum seterusnya — peralihan licin.
+  function _pdfApplyZoom() {
+    var pagesEl = document.getElementById('zym-pdf-pages');
+    var label = document.getElementById('zym-pdf-zoom-label');
+    var atDefault = Math.abs(_pdfZoomLevel - 1) < 1e-6;
+    var imgs = document.querySelectorAll('.zym-pdf-page-canvas-wrap img');
+    // Sahkan/cache lebar-semula-jadi (dibataskan max-width/max-height mod
+    // tak-zum) SEBELUM togol kelas zp-zoomed — kelas tu buang had max-width/
+    // max-height (utk benar imej tumbuh lepas lebar wrap semasa zum), jadi
+    // kalau diukur SELEPAS togol, getBoundingClientRect() pulangkan saiz
+    // INTRINSIK penuh imej (piksel raster kanvas sebenar, cth. 1587px)
+    // bukan saiz muat-CSS (cth. 302px) — punca lompatan zum drastik (>500%)
+    // pd klik zum PERTAMA sahaja (klik seterusnya guna cache, jadi betul).
+    if (!atDefault) {
+      for (var j = 0; j < imgs.length; j++) {
+        if (!imgs[j].dataset.pdfNaturalW) {
+          imgs[j].style.width = '';
+          imgs[j].style.height = '';
+          var rr = imgs[j].getBoundingClientRect();
+          imgs[j].dataset.pdfNaturalW = String(rr.width);
+        }
+      }
     }
-    document.documentElement.style.touchAction = 'auto';
-    document.body.style.touchAction = 'auto';
+    if (pagesEl) pagesEl.classList.toggle('zp-zoomed', !atDefault);
+    for (var i = 0; i < imgs.length; i++) {
+      var img = imgs[i];
+      if (atDefault) {
+        img.style.width = '';
+        img.style.height = '';
+        delete img.dataset.pdfNaturalW;
+        continue;
+      }
+      img.style.width = (parseFloat(img.dataset.pdfNaturalW) * _pdfZoomLevel) + 'px';
+      img.style.height = 'auto';
+    }
+    if (label) label.textContent = Math.round(_pdfZoomLevel * 100) + '%';
+    var outBtn = document.getElementById('zym-pdf-zoom-out');
+    var inBtn = document.getElementById('zym-pdf-zoom-in');
+    if (outBtn) outBtn.disabled = _pdfZoomLevel <= PDF_ZOOM_MIN + 1e-6;
+    if (inBtn) inBtn.disabled = _pdfZoomLevel >= PDF_ZOOM_MAX - 1e-6;
   }
 
-  function _pdfRestoreZoomLock() {
-    if (_pdfSavedTouchAction === null) return;
-    document.documentElement.style.touchAction = _pdfSavedTouchAction;
-    document.body.style.touchAction = _pdfSavedTouchAction;
-    _pdfSavedTouchAction = null;
+  function _pdfZoomBy(delta) {
+    _pdfZoomLevel = Math.min(PDF_ZOOM_MAX, Math.max(PDF_ZOOM_MIN, Math.round((_pdfZoomLevel + delta) * 100) / 100));
+    _pdfApplyZoom();
+  }
+
+  function _pdfResetZoom() {
+    _pdfZoomLevel = 1;
+    _pdfApplyZoom();
   }
 
   function _escPdfHtml(s) {
@@ -4087,7 +4147,10 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       '#zym-pr .zp-hero{padding:16px 0 12px;border-bottom:2px solid #4f46e5;margin-bottom:12px;break-inside:avoid;page-break-inside:avoid}',
       '#zym-pr .zp-chapter-lbl{font-family:"Patrick Hand",Fredoka,sans-serif;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:400;color:#fff;background:#4f46e5;padding:5px 12px;border-radius:40% 45% 42% 48%/55% 40% 55% 45%;letter-spacing:.03em;text-transform:uppercase;margin-bottom:6px;line-height:1;min-height:22px}',
       '#zym-pr .zp-subtopik{display:flex;align-items:center;font-size:9.5px;color:#6b7280;letter-spacing:.1em;text-transform:uppercase;margin:4px 0 5px;line-height:1.2;min-height:18px}',
-      '#zym-pr h1.zp-title{font-family:"Patrick Hand",Fredoka,sans-serif;display:flex;flex-wrap:wrap;align-items:center;column-gap:.35em;row-gap:.12em;font-size:25px;font-weight:400;color:#1e1e3a;line-height:1.25;margin:0 0 6px}',
+      // display:flex+flex-wrap DIELAKKAN utk tajuk ikon+teks (rujuk h2.zp-section-title
+      // di bawah utk penjelasan penuh punca bug "ikon terpisah drpd teks") — aliran
+      // inline biasa sahaja (.zp-emoji dah vertical-align:middle + margin kanan).
+      '#zym-pr h1.zp-title{font-family:"Patrick Hand",Fredoka,sans-serif;font-size:25px;font-weight:400;color:#1e1e3a;line-height:1.25;margin:0 0 6px}',
       '#zym-pr .zp-desc{font-size:12px;color:#4a4a6a;margin:0;line-height:1.5}',
       // Kesan "lakar dua kali" — lapisan sempadan kedua sedikit berputar/beranjak drpd
       // sempadan sebenar (border-color:inherit ikut warna kontekstual box), simulasi
@@ -4103,12 +4166,26 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       // Flap card (Soalan Utama)
       '#zym-pr .zp-flap{border:1.5px solid #d97706;border-radius:3px 14px 4px 12px/10px 5px 13px 6px;overflow:hidden;margin-bottom:8px;break-inside:avoid;page-break-inside:avoid}',
       '#zym-pr .zp-flap-top{font-family:"Patrick Hand",Fredoka,sans-serif;display:flex;align-items:center;min-height:30px;line-height:1.1;background:#fef3c7;padding:7px 13px;font-size:13px;font-weight:400;color:#92400e;border-bottom:1px solid #fde68a}',
-      '#zym-pr .zp-flap-q{font-family:"Patrick Hand",Fredoka,sans-serif;display:flex;flex-wrap:wrap;align-items:center;gap:.35em;padding:10px 14px 6px;font-size:14.5px;font-weight:400;color:#1a1a3a;line-height:1.3}',
-      '#zym-pr .zp-flap-a{display:flex;flex-wrap:wrap;align-items:center;gap:.35em;padding:5px 14px 10px;font-size:12.5px;color:#3a3a5a;background:#fffbf0;line-height:1.45}',
+      '#zym-pr .zp-flap-q{font-family:"Patrick Hand",Fredoka,sans-serif;padding:10px 14px 6px;font-size:14.5px;font-weight:400;color:#1a1a3a;line-height:1.3}',
+      '#zym-pr .zp-flap-a{padding:5px 14px 10px;font-size:12.5px;color:#3a3a5a;background:#fffbf0;line-height:1.45}',
       // Section (eyebrow → tajuk)
       '#zym-pr .zp-section{margin:14px 0 6px;break-inside:avoid;page-break-inside:avoid}',
       '#zym-pr .zp-section-badge{font-family:"Patrick Hand",Fredoka,sans-serif;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:400;letter-spacing:.03em;text-transform:uppercase;color:#fff;background:#4f46e5;padding:5px 13px;border-radius:999px;margin-bottom:7px;line-height:1;min-height:22px}',
-      '#zym-pr h2.zp-section-title{font-family:"Patrick Hand",Fredoka,sans-serif;display:flex;flex-wrap:wrap;align-items:center;column-gap:.35em;row-gap:.15em;font-size:19px;font-weight:400;color:#1e1e3a;margin:0 0 8px;line-height:1.3}',
+      // AWAS — JANGAN guna display:flex;flex-wrap:wrap utk tajuk ikon+teks. Ikon
+      // (.zp-emoji, first child) & teks (.zp-txt-up, second child) ialah 2 ITEM
+      // FLEX; bila flex-wrap aktif, flexbox pisah/gulung ikut ITEM SELURUHNYA
+      // (atomik) bukan ikut PERKATAAN spt aliran inline biasa. Jadi bila teks
+      // (satu span PANJANG) tak muat sebaris dgn ikon pd lebar lajur sempit,
+      // SELURUH span teks tergulung ke baris baharu — ikon tertinggal
+      // BERSENDIRIAN pd baris pertama, terpisah drpd teks (bukan "ikon + kata
+      // pertama, then wrap" spt dijangka). Disahkan via DOM inspection pd PDF
+      // sebenar (mod 2 lajur, lebar lajur sempit paling mudah cetuskan bug ni).
+      // Fix: buang display:flex/flex-wrap/align-items/gap sepenuhnya, guna
+      // aliran INLINE biasa — .zp-emoji dah `vertical-align:middle` (jajar
+      // menegak drpd baseline teks) + `margin:0 .24em 0 0` (jarak drpd teks)
+      // sedia cukup, TANPA flex. Teks kemudian wrap secara normal
+      // perkataan-demi-perkataan spt paragraf biasa.
+      '#zym-pr h2.zp-section-title{font-family:"Patrick Hand",Fredoka,sans-serif;font-size:19px;font-weight:400;color:#1e1e3a;margin:0 0 8px;line-height:1.3}',
       // Pembungkus bahagian (logik DOM sahaja; elak pisah halaman diurus melalui julat blok PDF)
       '#zym-pr .zp-section-wrap{margin:10px 0 12px}',
       '#zym-pr .zp-section-wrap .zp-section{margin:0 0 3px}',
@@ -4118,7 +4195,9 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       '#zym-pr .zp-acc{border:1px solid #e0e0ef;border-radius:3px 12px 4px 11px/9px 4px 12px 5px;margin-bottom:4px;overflow:hidden;break-inside:avoid}',
       '#zym-pr .zp-acc-hd{display:flex;align-items:center;gap:7px;padding:5px 9px;background:#f4f4ff;border-bottom:1px solid #e0e0ef}',
       '#zym-pr .zp-acc-num{font-family:"Patrick Hand",Fredoka,sans-serif;font-size:11.5px;font-weight:400;color:#4f46e5;min-width:20px;height:20px;line-height:1;background:#ede9fe;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}',
-      '#zym-pr .zp-acc-ttl{font-family:"Patrick Hand",Fredoka,sans-serif;font-size:14.5px;font-weight:400;color:#1e1e3a;line-height:1.14;display:flex;align-items:center;flex-wrap:wrap;column-gap:.28em;row-gap:.1em}',
+      // Sama spt h2.zp-section-title di atas — TIADA display:flex, elak bug
+      // "nombor/ikon terpisah drpd tajuk" bila tajuk akordion panjang pd lajur sempit.
+      '#zym-pr .zp-acc-ttl{font-family:"Patrick Hand",Fredoka,sans-serif;font-size:14.5px;font-weight:400;color:#1e1e3a;line-height:1.14}',
       // Sama spt .zp-txt-up — anjakan -0.26em ialah pampasan enjin lama, dibuang.
       '#zym-pr .zp-acc-ttl-txt{display:inline-block;line-height:1.06}',
       // Teks selepas emoji (dibungkus semasa _kwHtml). Dulu dinaikkan -0.32em utk
@@ -4703,6 +4782,10 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     });
     pagesDiv.scrollLeft = 0;
     requestAnimationFrame(_pdfUpdateCarouselUi);
+    // Slaid BAHARU (innerHTML dikosongkan & dibina semula di atas) tiada
+    // gaya zum terpakai lagi — guna semula tahap zum semasa (jana semula/
+    // tukar mod TAK reset zum, kekalkan keutamaan pengguna dlm sesi modal ni).
+    _pdfApplyZoom();
   }
 
   function _pdfSetModeSegmentUI(mode) {
@@ -4983,7 +5066,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       pdfOverlay.classList.add('is-open');
       pdfOverlay.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
-      _pdfRelaxZoomLock();
+      _pdfResetZoom();
       history.pushState({ zymPdfPreview: 1 }, '', window.location.href);
       _pdfModalHistoryActive = true;
       if (pages.length && dlBtn) dlBtn.focus();
@@ -4994,7 +5077,6 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     pdfOverlay.classList.remove('is-open');
     pdfOverlay.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
-    _pdfRestoreZoomLock();
     var ttl = document.getElementById('zym-pdf-topbar-title');
     if (ttl) ttl.textContent = 'Pratonton PDF';
     var rfBtn = document.getElementById('zym-pdf-refresh-btn');
@@ -5045,6 +5127,8 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
 
   document.getElementById('zym-pdf-close-btn').addEventListener('click', closePdfPreview);
   document.getElementById('zym-pdf-refresh-btn').addEventListener('click', _pdfRegenerate);
+  document.getElementById('zym-pdf-zoom-out').addEventListener('click', function() { _pdfZoomBy(-PDF_ZOOM_STEP); });
+  document.getElementById('zym-pdf-zoom-in').addEventListener('click', function() { _pdfZoomBy(PDF_ZOOM_STEP); });
   pdfOverlay.addEventListener('click', function(e) {
     var t = e.target;
     if (t && t.id === 'zym-pdf-mode-full') {
