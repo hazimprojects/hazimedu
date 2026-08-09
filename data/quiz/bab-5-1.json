@@ -84,9 +84,9 @@
       "prompt": "Mengapakah golongan bukan Melayu menubuhkan All Malaya Council of Joint Action (AMCJA)?",
       "options": [
         "Kerana mereka berpendapat British terlalu tunduk kepada tuntutan UMNO dan menganggap penubuhan Jawatankuasa Kerja tidak demokratik",
-        "Kerana mereka mahu menggantikan kedudukan Raja-raja Melayu sepenuhnya dalam pentadbiran",
-        "Kerana mereka mahu menyokong sepenuhnya cadangan asal Jawatankuasa Kerja tanpa sebarang perubahan",
-        "Kerana mereka mahu mengekalkan Malayan Union 1946 tanpa sebarang perubahan struktur"
+        "Kerana mereka mahu memperkukuh kedudukan Raja-raja Melayu dalam sistem pentadbiran baharu",
+        "Kerana mereka mahu menyertai Jawatankuasa Kerja tetapi ditolak oleh UMNO",
+        "Kerana mereka mahu menggantikan Malayan Union dengan sistem pentadbiran BMA"
       ],
       "answer": "Kerana mereka berpendapat British terlalu tunduk kepada tuntutan UMNO dan menganggap penubuhan Jawatankuasa Kerja tidak demokratik",
       "explanation": "AMCJA ditubuhkan kerana golongan bukan Melayu berpendapat British terlalu tunduk kepada UMNO dan Jawatankuasa Kerja tidak demokratik.",
@@ -100,7 +100,7 @@
       "options": [
         "Kerana keberanian mereka menentang British secara terbuka dan membangkitkan perasaan anti-British melalui penulisan",
         "Kerana mereka menggunakan kekerasan bersenjata untuk menentang pentadbiran British",
-        "Kerana mereka menyokong sepenuhnya dasar pentadbiran Malayan Union yang diperkenalkan British",
+        "Kerana mereka bekerjasama rapat dengan Jawatankuasa Kerja dalam merangka dasar British",
         "Kerana mereka menolak sebarang bentuk kerjasama dengan Raja-raja Melayu dalam perjuangan"
       ],
       "answer": "Kerana keberanian mereka menentang British secara terbuka dan membangkitkan perasaan anti-British melalui penulisan",
@@ -144,9 +144,9 @@
       "prompt": "Sebuah jawatankuasa perundingan hanya dianggotai oleh wakil Raja-raja Melayu, wakil UMNO dan pegawai kanan British, tanpa sebarang wakil daripada kaum bukan Melayu. Apakah reaksi yang paling mungkin ditunjukkan oleh PUTERA-AMCJA terhadap susunan keahlian ini?",
       "options": [
         "Menolaknya kerana dianggap tidak demokratik dan tidak mewakili semua kaum",
-        "Menyokongnya sepenuhnya kerana dianggap adil kepada semua pihak",
+        "Menyokongnya kerana dianggap mewakili kepentingan golongan bukan Melayu",
         "Mengabaikannya kerana dianggap tidak relevan dengan perjuangan kemerdekaan",
-        "Menyertainya secara rasmi tanpa sebarang bantahan"
+        "Menyertainya secara rasmi selepas Raja-raja Melayu menjemput wakil bukan Melayu"
       ],
       "answer": "Menolaknya kerana dianggap tidak demokratik dan tidak mewakili semua kaum",
       "explanation": "PUTERA-AMCJA menolak Jawatankuasa Kerja atas sebab yang sama iaitu tidak mewakili semua kaum dan tidak demokratik.",
@@ -159,7 +159,7 @@
       "prompt": "Apakah persamaan utama antara cadangan Jawatankuasa Kerja dengan cadangan PUTERA-AMCJA dalam Perlembagaan Rakyat berkenaan Raja-raja Melayu?",
       "options": [
         "Kedua-dua cadangan mengiktiraf kedudukan Raja-raja Melayu, namun berbeza dari segi sejauh mana kuasa dan tanggungjawab mereka",
-        "Kedua-dua cadangan menolak sepenuhnya kedudukan Raja-raja Melayu dalam pentadbiran negara",
+        "Kedua-dua cadangan mahu menggantikan Raja-raja Melayu dengan Pesuruhjaya Tinggi British",
         "Kedua-dua cadangan tidak menyentuh langsung soal kedudukan Raja-raja Melayu",
         "Kedua-dua cadangan mahu menghapuskan institusi beraja dan menggantikannya dengan republik"
       ],
@@ -174,8 +174,8 @@
       "prompt": "Apakah perbezaan utama antara perjuangan Jawatankuasa Kerja dengan perjuangan PUTERA-AMCJA?",
       "options": [
         "Jawatankuasa Kerja berunding secara tertutup dengan UMNO dan British manakala PUTERA-AMCJA mewakili gabungan lebih luas termasuk kaum bukan Melayu dan menentang secara terbuka",
-        "Jawatankuasa Kerja diketuai sepenuhnya oleh golongan bukan Melayu manakala PUTERA-AMCJA hanya diketuai oleh orang Melayu",
-        "Jawatankuasa Kerja menolak sepenuhnya kedudukan Raja-raja Melayu manakala PUTERA-AMCJA mengekalkannya tanpa perubahan",
+        "Jawatankuasa Kerja mewakili gabungan lebih luas termasuk kaum bukan Melayu manakala PUTERA-AMCJA berunding secara tertutup dengan UMNO",
+        "Jawatankuasa Kerja mahu raja sebagai Raja Berperlembagaan manakala PUTERA-AMCJA mahu memulihkan kedaulatan penuh Raja-raja Melayu",
         "Jawatankuasa Kerja ditubuhkan selepas Perlembagaan Rakyat ditolak oleh British"
       ],
       "answer": "Jawatankuasa Kerja berunding secara tertutup dengan UMNO dan British manakala PUTERA-AMCJA mewakili gabungan lebih luas termasuk kaum bukan Melayu dan menentang secara terbuka",
@@ -204,9 +204,9 @@
       "prompt": "Antara pernyataan berikut, manakah PALING tepat merumuskan subtopik 5.1?",
       "options": [
         "Penolakan Malayan Union membawa kepada penubuhan Jawatankuasa Kerja, namun ketidakpuasan pelbagai golongan rakyat mendorong usaha alternatif seperti Perlembagaan Rakyat sebelum British akhirnya menerima Perjanjian Persekutuan",
-        "Persekutuan Tanah Melayu 1948 ditubuhkan tanpa sebarang bantahan daripada mana-mana golongan rakyat tempatan",
-        "Jawatankuasa Kerja dan PUTERA-AMCJA bekerjasama sepenuhnya dalam merangka Perjanjian Persekutuan Tanah Melayu 1948",
-        "Perlembagaan Rakyat diterima sepenuhnya oleh British sebagai asas Persekutuan Tanah Melayu 1948"
+        "Persekutuan Tanah Melayu 1948 ditubuhkan hasil kerjasama penuh semua kaum sejak awal rundingan",
+        "Jawatankuasa Kerja dan PUTERA-AMCJA menggabungkan Perlembagaan Rakyat terus ke dalam Perjanjian Persekutuan rasmi",
+        "Perlembagaan Rakyat digunapakai British sebagai rangka rasmi Persekutuan Tanah Melayu 1948"
       ],
       "answer": "Penolakan Malayan Union membawa kepada penubuhan Jawatankuasa Kerja, namun ketidakpuasan pelbagai golongan rakyat mendorong usaha alternatif seperti Perlembagaan Rakyat sebelum British akhirnya menerima Perjanjian Persekutuan",
       "explanation": "Rumusan menggabungkan penolakan Malayan Union, penubuhan Jawatankuasa Kerja, bantahan pelbagai golongan dan penolakan Perlembagaan Rakyat oleh British.",

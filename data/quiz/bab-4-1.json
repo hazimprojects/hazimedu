@@ -99,7 +99,7 @@
       "prompt": "Mengapakah usaha memulihkan sosioekonomi Tanah Melayu berjalan sangat perlahan di bawah BMA?",
       "options": [
         "Kerana BMA sendiri menghadapi kekurangan jentera, alat ganti, mesin dan teknologi",
-        "Kerana rakyat menolak sepenuhnya sebarang bantuan daripada BMA",
+        "Kerana Raja-raja Melayu enggan bekerjasama dengan BMA dalam program pemulihan",
         "Kerana Raja-raja Melayu menyekat semua usaha pemulihan BMA",
         "Kerana Jepun masih menguasai semua kilang dan lombong utama"
       ],
@@ -129,7 +129,7 @@
       "prompt": "Sebuah kawasan masih diganggu kumpulan bersenjata bekas ahli MPAJA walaupun BMA telah mengarahkan pemulangan senjata. Apakah ini menggambarkan kegagalan BMA?",
       "options": [
         "Gagal mengumpulkan semula semua senjata yang diberikan kepada MPAJA",
-        "Berjaya sepenuhnya melucutkan senjata seluruh negara",
+        "Berjaya melucutkan senjata kumpulan gerila di Sarawak sahaja",
         "Berjaya membanteras semua kegiatan jenayah tanpa kecuali",
         "Berjaya memulihkan ekonomi dengan pantas"
       ],
@@ -161,7 +161,7 @@
         "Kedua-duanya menunjukkan rakyat terus menderita akibat kekurangan keperluan asas walaupun pemerintahan bertukar",
         "Kedua-duanya menunjukkan bekalan makanan sentiasa mencukupi tanpa masalah",
         "Kedua-duanya hanya melibatkan masalah di bandar besar sahaja",
-        "Kedua-duanya menunjukkan BMA berjaya menyelesaikan masalah sepenuhnya"
+        "Kedua-duanya menunjukkan masalah bekalan makanan hanya berlaku di kawasan luar bandar"
       ],
       "answer": "Kedua-duanya menunjukkan rakyat terus menderita akibat kekurangan keperluan asas walaupun pemerintahan bertukar",
       "explanation": "Penderitaan rakyat akibat kekurangan keperluan asas berterusan walaupun pemerintahan bertukar daripada Jepun kepada BMA.",
@@ -174,7 +174,7 @@
       "prompt": "Apakah perbezaan utama antara dua tugas utama BMA, iaitu 'mengembalikan kestabilan dan keamanan' berbanding 'memulihkan kepercayaan rakyat'?",
       "options": [
         "Tugas pertama tertumpu kepada keselamatan dan ketenteraman manakala tugas kedua tertumpu kepada keyakinan rakyat terhadap British",
-        "Kedua-duanya sama sekali tidak berkaitan antara satu sama lain",
+        "Tugas pertama tertumpu kepada keyakinan rakyat manakala tugas kedua tertumpu kepada keselamatan dan ketenteraman",
         "Tugas pertama hanya melibatkan ekonomi manakala tugas kedua melibatkan ketenteraan",
         "Kedua-dua tugas ini hanya wujud dalam teori tanpa tindakan sebenar"
       ],
@@ -190,8 +190,8 @@
       "options": [
         "BMA gagal mengatasi jenayah, inflasi, pasar gelap dan bekalan makanan walaupun rakyat amat mengharapkan pemulihan segera",
         "BMA terlalu berjaya sehingga tiada sebarang masalah tinggal di Tanah Melayu",
-        "BMA hanya tertumpu kepada hiburan rakyat semata-mata",
-        "BMA tidak pernah cuba menangani sebarang masalah sejak awal lagi"
+        "BMA hanya tertumpu kepada pembinaan semula bangunan kerajaan",
+        "BMA menangani semua masalah ini dengan kerjasama penuh Raja-raja Melayu"
       ],
       "answer": "BMA gagal mengatasi jenayah, inflasi, pasar gelap dan bekalan makanan walaupun rakyat amat mengharapkan pemulihan segera",
       "explanation": "Kegagalan menyeluruh BMA menangani pelbagai masalah harian menjadi punca kekecewaan rakyat.",
@@ -204,7 +204,7 @@
       "prompt": "Antara pernyataan berikut, manakah PALING tepat merumuskan subtopik 4.1?",
       "options": [
         "BMA cuba memulihkan keamanan, kepercayaan dan sosioekonomi Tanah Melayu tetapi gagal memenuhi harapan rakyat sepenuhnya",
-        "BMA berjaya sepenuhnya memulihkan Tanah Melayu tanpa sebarang kelemahan",
+        "BMA berjaya memulihkan ekonomi Tanah Melayu dengan pantas dalam masa tiga bulan",
         "BMA tidak mempunyai sebarang matlamat semasa mentadbir Tanah Melayu",
         "BMA hanya wujud selama sehari sebelum digantikan Malayan Union"
       ],

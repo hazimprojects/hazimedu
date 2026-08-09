@@ -70,8 +70,8 @@
       "options": [
         "Kerana penduduk Sabah berbeza dari segi bahasa, budaya, sistem kepercayaan, petempatan dan kegiatan ekonomi",
         "Kerana Sabah hanya mempunyai satu kaum sahaja pada masa itu",
-        "Kerana semua penduduk Sabah tinggal di kawasan yang sama tanpa sebarang perbezaan",
-        "Kerana British melarang sepenuhnya kewujudan sebarang kaum di Sabah"
+        "Kerana kebanyakan penduduk Sabah menyertai pertubuhan yang sama seperti BARIP",
+        "Kerana British menggalakkan penubuhan hanya satu pertubuhan politik rasmi di Sabah"
       ],
       "answer": "Kerana penduduk Sabah berbeza dari segi bahasa, budaya, sistem kepercayaan, petempatan dan kegiatan ekonomi",
       "explanation": "Kepelbagaian bahasa, budaya, kepercayaan, petempatan dan ekonomi menyukarkan penyatuan pertubuhan yang kuat.",
@@ -86,7 +86,7 @@
         "Untuk melemahkan gerakan berpersatuan secara halus dengan memindahkan atau menyerap pemimpin aktif ke dalam sistem British",
         "Untuk memberikan kemerdekaan segera kepada Sabah",
         "Untuk menghukum pemimpin tempatan kerana menyokong British",
-        "Untuk menubuhkan sebuah kerajaan tempatan yang bebas sepenuhnya"
+        "Untuk menggalakkan penubuhan lebih banyak pertubuhan politik radikal"
       ],
       "answer": "Untuk melemahkan gerakan berpersatuan secara halus dengan memindahkan atau menyerap pemimpin aktif ke dalam sistem British",
       "explanation": "British bertindak secara halus menawarkan jawatan/kenaikan pangkat untuk melemahkan gerakan berpersatuan.",
@@ -114,7 +114,7 @@
       "prompt": "Seorang pemimpin pertubuhan tempatan Sabah dihantar berkursus ke SITC oleh pihak British sejurus selepas beliau aktif menggerakkan kesedaran politik. Apakah tujuan tindakan British ini?",
       "options": [
         "Mengalih perhatian dan melemahkan pengaruh pemimpin tersebut secara halus",
-        "Memberi ganjaran kerana menyokong sepenuhnya penyerahan Sabah",
+        "Memberi ganjaran kerana berjaya menyatukan semua etnik Sabah dalam satu pertubuhan",
         "Menghukum pemimpin tersebut secara terbuka di khalayak ramai",
         "Melatih pemimpin tersebut untuk memimpin gerakan kemerdekaan"
       ],
@@ -159,9 +159,9 @@
       "prompt": "Apakah perbezaan antara reaksi penduduk tempatan Sabah dengan reaksi penduduk tempatan Sarawak terhadap penyerahan kepada British?",
       "options": [
         "Penyerahan Sabah tidak mendapat tentangan terbuka yang besar, manakala penyerahan Sarawak mencetuskan gerakan antipenyerahan yang kuat termasuk peristiwa Sungkit Berdarah",
-        "Kedua-dua wilayah menunjukkan reaksi yang sama sepenuhnya tanpa sebarang perbezaan",
+        "Penyerahan Sarawak tidak mendapat tentangan terbuka, manakala penyerahan Sabah mencetuskan peristiwa Sungkit Berdarah",
         "Penduduk Sabah menentang lebih hebat berbanding penduduk Sarawak",
-        "Penduduk Sarawak tidak pernah menunjukkan sebarang bentuk bantahan"
+        "Penduduk Sarawak menyambut baik penyerahan tanpa membentuk sebarang gerakan"
       ],
       "answer": "Penyerahan Sabah tidak mendapat tentangan terbuka yang besar, manakala penyerahan Sarawak mencetuskan gerakan antipenyerahan yang kuat termasuk peristiwa Sungkit Berdarah",
       "explanation": "Sabah tidak mendapat tentangan besar, berbeza dengan Sarawak yang mengalami gerakan antipenyerahan kuat.",
@@ -176,7 +176,7 @@
         "Kedua-duanya menerangkan mengapa gerakan kebangsaan di Sabah berkembang lebih perlahan berbanding Tanah Melayu dan Sarawak",
         "Kedua-duanya menunjukkan penduduk Sabah lebih radikal berbanding penduduk Tanah Melayu",
         "Kedua-duanya tidak mempunyai kaitan langsung dengan sikap penduduk Sabah",
-        "Kedua-duanya membuktikan British gagal sepenuhnya mengawal Sabah"
+        "Kedua-duanya membuktikan penduduk Sabah lebih bersatu berbanding penduduk Sarawak"
       ],
       "answer": "Kedua-duanya menerangkan mengapa gerakan kebangsaan di Sabah berkembang lebih perlahan berbanding Tanah Melayu dan Sarawak",
       "explanation": "Kedua-dua faktor sama-sama menjelaskan perkembangan nasionalisme yang lebih perlahan di Sabah.",
@@ -189,9 +189,9 @@
       "prompt": "Antara hujah berikut, manakah PALING kukuh menjelaskan mengapa penyerahan Sabah tidak mendapat penentangan hebat?",
       "options": [
         "British berjaya melemahkan gerakan berpersatuan secara halus, mengehadkan peluang penduduk dalam pentadbiran, dan ramai penduduk melihat penyerahan sebagai peluang kemajuan",
-        "Penduduk Sabah tidak pernah mempunyai sebarang pertubuhan politik",
+        "Penduduk Sabah hanya memiliki satu pertubuhan politik iaitu BARIP",
         "British memberikan kemerdekaan penuh kepada Sabah sejurus selepas perang",
-        "Penduduk Sabah sepenuhnya tidak mengetahui berlakunya penyerahan"
+        "British mengumumkan penyerahan Sabah secara terbuka jauh sebelum ia berlaku"
       ],
       "answer": "British berjaya melemahkan gerakan berpersatuan secara halus, mengehadkan peluang penduduk dalam pentadbiran, dan ramai penduduk melihat penyerahan sebagai peluang kemajuan",
       "explanation": "Gabungan pelemahan gerakan berpersatuan dan sikap penduduk yang mengutamakan kemajuan menjelaskan ketiadaan tentangan hebat.",
@@ -206,7 +206,7 @@
         "Penyerahan Sabah tidak mencetuskan tentangan terbuka yang besar kerana tindakan British melemahkan gerakan berpersatuan dan sikap penduduk yang mengutamakan sosioekonomi, namun ia tetap menanam kesedaran politik",
         "Penduduk Sabah menentang penyerahan dengan lebih hebat berbanding Sarawak dan Tanah Melayu",
         "Penyerahan Sabah tidak memberi sebarang kesan kepada kesedaran politik penduduk tempatan",
-        "British tidak pernah campur tangan dalam pertubuhan tempatan di Sabah"
+        "British menggalakkan gerakan berpersatuan berkembang bebas di Sabah"
       ],
       "answer": "Penyerahan Sabah tidak mencetuskan tentangan terbuka yang besar kerana tindakan British melemahkan gerakan berpersatuan dan sikap penduduk yang mengutamakan sosioekonomi, namun ia tetap menanam kesedaran politik",
       "explanation": "Rumusan menggabungkan sebab ketiadaan tentangan besar dan kesan jangka panjang kesedaran politik.",

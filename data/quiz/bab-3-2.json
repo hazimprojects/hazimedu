@@ -71,7 +71,7 @@
         "Negara Eropah berlumba-lumba mendapatkan tanah jajahan untuk bahan mentah dan pasaran hasil industri",
         "Revolusi Industri menyebabkan negara Eropah kehilangan minat terhadap tanah jajahan",
         "Revolusi Industri hanya memberi kesan kepada bidang pertanian",
-        "Revolusi Industri menghapuskan keperluan bahan mentah sepenuhnya"
+        "Revolusi Industri mendorong negara Eropah menumpukan pelaburan kepada pembangunan bandar dalam negeri berbanding tanah jajahan"
       ],
       "answer": "Negara Eropah berlumba-lumba mendapatkan tanah jajahan untuk bahan mentah dan pasaran hasil industri",
       "explanation": "Revolusi Industri mendorong negara Eropah bersaing mendapatkan tanah jajahan bagi bahan mentah dan pasaran.",
@@ -176,7 +176,7 @@
         "Kedua-duanya berasa tidak puas hati dengan hasil perjanjian damai walaupun berada di pihak berbeza",
         "Kedua-duanya mendapat tanah jajahan yang besar selepas perang",
         "Kedua-duanya tidak terlibat dalam Perang Dunia Pertama",
-        "Kedua-duanya menyokong sepenuhnya Liga Bangsa-Bangsa"
+        "Kedua-duanya terpaksa membayar pampasan besar kepada negara pemenang perang"
       ],
       "answer": "Kedua-duanya berasa tidak puas hati dengan hasil perjanjian damai walaupun berada di pihak berbeza",
       "explanation": "Jerman tidak puas hati kerana disalahkan dan dihukum, manakala Itali (walaupun menang) tidak puas hati kerana tidak mendapat tanah jajahan baharu.",
@@ -189,7 +189,7 @@
       "prompt": "Antara hujah berikut, manakah yang PALING tepat menerangkan punca sebenar tercetusnya Perang Dunia Pertama?",
       "options": [
         "Gabungan persaingan kuasa imperialis, pembentukan pakatan ketenteraan dan krisis di Rantau Balkan bertindak bersama mencetuskan rangkaian konflik besar",
-        "Perang Dunia Pertama tercetus semata-mata kerana pembunuhan Archduke Ferdinand tanpa sebarang faktor lain",
+        "Perang Dunia Pertama tercetus disebabkan pembunuhan Archduke Ferdinand sahaja",
         "Perang Dunia Pertama tercetus kerana Tanah Melayu terlibat secara langsung dalam pertempuran",
         "Perang Dunia Pertama tercetus kerana kegagalan Liga Bangsa-Bangsa sahaja"
       ],
@@ -206,7 +206,7 @@
         "Perang Dunia Pertama berpunca daripada persaingan kuasa imperialis, pakatan ketenteraan dan krisis Balkan, membawa kesan besar termasuk keruntuhan empayar beraja dan perubahan politik-ekonomi Tanah Melayu",
         "Perang Dunia Pertama tidak membawa sebarang kesan kepada Tanah Melayu",
         "Perang Dunia Pertama hanya melibatkan negara Asia sahaja",
-        "Perang Dunia Pertama berakhir tanpa sebarang perjanjian damai"
+        "Perang Dunia Pertama berakhir dengan Jerman mengekalkan semua tanah jajahannya"
       ],
       "answer": "Perang Dunia Pertama berpunca daripada persaingan kuasa imperialis, pakatan ketenteraan dan krisis Balkan, membawa kesan besar termasuk keruntuhan empayar beraja dan perubahan politik-ekonomi Tanah Melayu",
       "explanation": "Rumusan ini merangkumi punca, jalannya perang dan kesan besar termasuk terhadap Tanah Melayu.",

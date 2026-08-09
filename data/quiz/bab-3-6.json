@@ -70,7 +70,7 @@
       "options": [
         "Jepun mencetak wang tanpa kawalan sehingga terlalu banyak wang beredar tetapi bekalan barangan tidak mencukupi",
         "Rakyat enggan menggunakan wang pokok pisang langsung",
-        "Jepun tidak pernah mencetak wang tambahan semasa pendudukan",
+        "Jepun menggantikan wang pokok pisang dengan wang emas sebelum tamat pendudukan",
         "British menggantikan wang Jepun dengan mata wang baharu semasa pendudukan"
       ],
       "answer": "Jepun mencetak wang tanpa kawalan sehingga terlalu banyak wang beredar tetapi bekalan barangan tidak mencukupi",
@@ -100,7 +100,7 @@
       "options": [
         "Kerana terdapat perbezaan sistem politik dan ekonomi yang ketara di bawah pentadbiran British dan Belanda sebelum perang",
         "Kerana penduduk Tanah Melayu dan Sumatera saling bermusuhan",
-        "Kerana Jepun kehilangan kawalan sepenuhnya ke atas kedua-dua wilayah",
+        "Kerana penduduk Sumatera memberontak menuntut pemisahan pentadbiran daripada Tanah Melayu",
         "Kerana Sumatera diserahkan kepada British semula pada 1944"
       ],
       "answer": "Kerana terdapat perbezaan sistem politik dan ekonomi yang ketara di bawah pentadbiran British dan Belanda sebelum perang",
@@ -189,9 +189,9 @@
       "prompt": "Antara hujah berikut, manakah yang PALING tepat menerangkan kesan keseluruhan dasar pendudukan Jepun terhadap rakyat negara kita?",
       "options": [
         "Dasar pentadbiran, ekonomi dan sosial Jepun secara kolektif membawa kesengsaraan hidup, tetapi turut membangkitkan semangat juang dan mempercepatkan nasionalisme",
-        "Dasar pendudukan Jepun hanya memberi kesan positif tanpa sebarang kesukaran",
+        "Dasar pendudukan Jepun memberi kesan positif sama rata kepada semua kaum",
         "Dasar pendudukan Jepun tidak memberi sebarang kesan jangka panjang",
-        "Dasar pendudukan Jepun hanya melibatkan aspek ketenteraan semata-mata"
+        "Dasar pendudukan Jepun menumpukan usaha kepada pembangunan infrastruktur awam untuk faedah rakyat"
       ],
       "answer": "Dasar pentadbiran, ekonomi dan sosial Jepun secara kolektif membawa kesengsaraan hidup, tetapi turut membangkitkan semangat juang dan mempercepatkan nasionalisme",
       "explanation": "Kesengsaraan akibat dasar pendudukan Jepun akhirnya membangkitkan kesedaran nasionalisme rakyat.",
@@ -204,9 +204,9 @@
       "prompt": "Antara pernyataan berikut, manakah yang PALING tepat merumuskan subtopik 3.6?",
       "options": [
         "Jepun mentadbir negara kita melalui dasar pentadbiran, ekonomi dan sosial yang ketat demi mengukuhkan kekuasaan dan menyokong perang, sekali gus membuktikan kekejaman penjajah membangkitkan kesedaran mempertahankan kedaulatan",
-        "Jepun mentadbir negara kita tanpa sebarang dasar tersusun",
-        "Jepun mentadbir negara kita hanya melalui dasar ekonomi semata-mata",
-        "Jepun mentadbir negara kita dengan bekerjasama sepenuhnya bersama British"
+        "Jepun mentadbir negara kita mengikut sistem pentadbiran British yang sedia ada",
+        "Jepun mentadbir negara kita terutamanya melalui dasar sosial sahaja",
+        "Jepun mentadbir negara kita dengan mengekalkan Raja-raja Melayu sebagai pemerintah berkuasa penuh"
       ],
       "answer": "Jepun mentadbir negara kita melalui dasar pentadbiran, ekonomi dan sosial yang ketat demi mengukuhkan kekuasaan dan menyokong perang, sekali gus membuktikan kekejaman penjajah membangkitkan kesedaran mempertahankan kedaulatan",
       "explanation": "Rumusan ini merangkumi tiga dasar utama dan iktibar besar daripada pendudukan Jepun.",

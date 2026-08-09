@@ -69,7 +69,7 @@
       "prompt": "Mengapakah keperluan perkenan Raja-raja Melayu melalui Majlis Raja-Raja bagi setiap rang undang-undang dianggap penting?",
       "options": [
         "Kerana ia menunjukkan sistem perundangan Persekutuan melibatkan peranan British dan Raja-raja Melayu secara bersama",
-        "Kerana ia menunjukkan Raja-raja Melayu mempunyai kuasa mutlak tanpa sebarang campur tangan British",
+        "Kerana ia menunjukkan Pesuruhjaya Tinggi memerlukan kelulusan Majlis Perundangan Negeri sahaja",
         "Kerana ia menunjukkan Pesuruhjaya Tinggi tidak mempunyai sebarang peranan dalam perundangan",
         "Kerana ia menunjukkan Majlis Perundangan Persekutuan tidak berfungsi secara rasmi"
       ],
@@ -99,7 +99,7 @@
       "prompt": "Mengapakah syarat kewarganegaraan dalam Persekutuan Tanah Melayu 1948 dianggap lebih ketat berbanding Malayan Union?",
       "options": [
         "Kerana pemohon perlu memenuhi syarat bermastautin, tingkah laku baik, penguasaan bahasa dan taat setia sebelum layak didaftarkan",
-        "Kerana semua penduduk secara automatik menjadi warganegara tanpa sebarang syarat",
+        "Kerana semua penduduk perlu memohon terus di London sebelum diiktiraf warganegara",
         "Kerana hanya Raja-raja Melayu sahaja yang layak menjadi warganegara",
         "Kerana kewarganegaraan hanya terbuka kepada pegawai British sahaja"
       ],
@@ -160,7 +160,7 @@
       "options": [
         "Di peringkat persekutuan, Raja-raja Melayu memberi pandangan melalui Majlis Raja-Raja, manakala di peringkat negeri, sultan mengesahkan rang undang-undang dalam Dewan Perundangan Negeri",
         "Di peringkat persekutuan, Raja-raja Melayu mempunyai kuasa mutlak tanpa had, manakala di peringkat negeri mereka tiada kuasa langsung",
-        "Di peringkat persekutuan dan peringkat negeri, Raja-raja Melayu mempunyai kuasa yang sama sepenuhnya tanpa sebarang perbezaan",
+        "Di peringkat persekutuan, sultan mengesahkan rang undang-undang dalam Dewan Perundangan Negeri, manakala di peringkat negeri Raja-raja Melayu memberi pandangan melalui Majlis Raja-Raja",
         "Di peringkat persekutuan, sultan mengetuai Majlis Perundangan Persekutuan, manakala di peringkat negeri mereka tiada peranan"
       ],
       "answer": "Di peringkat persekutuan, Raja-raja Melayu memberi pandangan melalui Majlis Raja-Raja, manakala di peringkat negeri, sultan mengesahkan rang undang-undang dalam Dewan Perundangan Negeri",
@@ -174,8 +174,8 @@
       "prompt": "Apakah persamaan utama antara dua cara memperoleh kewarganegaraan dalam Persekutuan Tanah Melayu 1948?",
       "options": [
         "Kedua-dua cara menetapkan syarat tertentu, sama ada asal usul keluarga atau tempoh bermastautin dan kelakuan, sebelum seseorang layak diiktiraf sebagai warganegara",
-        "Kedua-dua cara membuka kewarganegaraan secara automatik kepada semua penduduk tanpa sebarang syarat",
-        "Kedua-dua cara hanya terbuka kepada golongan bukan Melayu semata-mata",
+        "Kedua-dua cara memerlukan kelulusan terus daripada Majlis Raja-Raja",
+        "Kedua-dua cara hanya terbuka kepada golongan yang bekerja dengan kerajaan British",
         "Kedua-dua cara tidak mempunyai sebarang kaitan dengan tempoh bermastautin"
       ],
       "answer": "Kedua-dua cara menetapkan syarat tertentu, sama ada asal usul keluarga atau tempoh bermastautin dan kelakuan, sebelum seseorang layak diiktiraf sebagai warganegara",
@@ -189,8 +189,8 @@
       "prompt": "Antara hujah berikut, manakah PALING tepat menjelaskan mengapa ciri-ciri Persekutuan Tanah Melayu 1948 dianggap lebih menjaga kedudukan Raja-raja Melayu dan orang Melayu berbanding Malayan Union?",
       "options": [
         "Kedudukan Raja-raja Melayu dipulihkan melalui Majlis Raja-Raja dan sultan, manakala syarat kewarganegaraan turut diperketat berbanding Malayan Union",
-        "Persekutuan Tanah Melayu 1948 menghapuskan sepenuhnya peranan British dalam pentadbiran negara",
-        "Persekutuan Tanah Melayu 1948 memberikan kuasa mutlak kepada Pesuruhjaya Tinggi tanpa sebarang had",
+        "Persekutuan Tanah Melayu 1948 menggantikan Pesuruhjaya Tinggi dengan Majlis Raja-Raja sebagai ketua eksekutif",
+        "Persekutuan Tanah Melayu 1948 melonggarkan semula syarat kewarganegaraan berbanding Malayan Union",
         "Persekutuan Tanah Melayu 1948 tidak mempunyai sebarang perbezaan dengan Malayan Union"
       ],
       "answer": "Kedudukan Raja-raja Melayu dipulihkan melalui Majlis Raja-Raja dan sultan, manakala syarat kewarganegaraan turut diperketat berbanding Malayan Union",
@@ -204,9 +204,9 @@
       "prompt": "Antara pernyataan berikut, manakah PALING tepat merumuskan subtopik 5.3?",
       "options": [
         "Persekutuan Tanah Melayu 1948 memperkenalkan pentadbiran yang lebih tersusun, memulihkan kuasa Raja-raja Melayu, mewujudkan sistem perundangan yang melibatkan British dan Raja-raja Melayu, serta memperketat syarat kewarganegaraan berbanding Malayan Union",
-        "Persekutuan Tanah Melayu 1948 mengekalkan sepenuhnya struktur pentadbiran Malayan Union tanpa sebarang perubahan",
-        "Persekutuan Tanah Melayu 1948 menghapuskan sepenuhnya kedudukan Raja-raja Melayu dalam sistem pemerintahan",
-        "Persekutuan Tanah Melayu 1948 membuka kewarganegaraan secara automatik kepada semua penduduk tanpa sebarang syarat"
+        "Persekutuan Tanah Melayu 1948 meneruskan struktur pentadbiran Malayan Union yang sama persis",
+        "Persekutuan Tanah Melayu 1948 mengekalkan kedudukan Raja-raja Melayu sama seperti dalam Malayan Union",
+        "Persekutuan Tanah Melayu 1948 memperketatkan syarat kewarganegaraan sehingga tiada siapa layak memohon"
       ],
       "answer": "Persekutuan Tanah Melayu 1948 memperkenalkan pentadbiran yang lebih tersusun, memulihkan kuasa Raja-raja Melayu, mewujudkan sistem perundangan yang melibatkan British dan Raja-raja Melayu, serta memperketat syarat kewarganegaraan berbanding Malayan Union",
       "explanation": "Rumusan menggabungkan keempat-empat ciri utama: pentadbiran, kuasa raja, perundangan dan kewarganegaraan.",

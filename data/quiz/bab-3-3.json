@@ -70,7 +70,7 @@
       "options": [
         "Ia menggabungkan serangan pantas menggunakan kapal terbang, kereta kebal dan tentera bermotosikal untuk melumpuhkan musuh dalam masa singkat",
         "Ia hanya menggunakan tentera darat tanpa sokongan udara",
-        "Ia bergantung sepenuhnya kepada rundingan diplomatik",
+        "Ia meniru taktik peperangan parit yang digunakan dalam Perang Dunia Pertama",
         "Ia memerlukan masa bertahun-tahun untuk menawan sebuah negara"
       ],
       "answer": "Ia menggabungkan serangan pantas menggunakan kapal terbang, kereta kebal dan tentera bermotosikal untuk melumpuhkan musuh dalam masa singkat",
@@ -84,7 +84,7 @@
       "prompt": "Mengapakah Liga Bangsa-Bangsa gagal mengekang krisis seperti Krisis Manchuria dan Krisis Habsyah?",
       "options": [
         "Liga Bangsa-Bangsa gagal bertindak tegas terhadap negara agresif seperti Jepun dan Itali",
-        "Liga Bangsa-Bangsa berjaya menghalang kedua-dua krisis sepenuhnya",
+        "Liga Bangsa-Bangsa berjaya menghalang kedua-dua krisis dengan bantuan ketenteraan Amerika Syarikat",
         "Liga Bangsa-Bangsa tidak wujud pada masa krisis tersebut berlaku",
         "Liga Bangsa-Bangsa hanya menumpukan kepada isu ekonomi sahaja"
       ],
@@ -100,7 +100,7 @@
       "options": [
         "Tentera Bersekutu memperdayakan Jerman dengan menyebarkan maklumat palsu bahawa serangan akan berlaku di Calais, bukan Normandy",
         "Jerman sengaja tidak mempertahankan Perancis Barat langsung",
-        "Tentera Bersekutu menyerang tanpa sebarang perancangan",
+        "Tentera Bersekutu mendarat terus di Calais mengikut jangkaan Jerman",
         "Jerman telah menyerah kalah sebelum D-Day bermula"
       ],
       "answer": "Tentera Bersekutu memperdayakan Jerman dengan menyebarkan maklumat palsu bahawa serangan akan berlaku di Calais, bukan Normandy",
@@ -160,7 +160,7 @@
       "options": [
         "Fasisme mengutamakan kepentingan negara melebihi individu, manakala Nazisme mengagungkan bangsa Jerman dan menolak sekatan Perjanjian Versailles",
         "Fasisme hanya berlaku di Jerman, manakala Nazisme hanya berlaku di Itali",
-        "Fasisme dan Nazisme adalah fahaman yang sama sepenuhnya tanpa perbezaan",
+        "Fasisme menumpukan pembangunan ekonomi sahaja, manakala Nazisme menumpukan ketenteraan sahaja",
         "Fasisme menyokong Liga Bangsa-Bangsa, manakala Nazisme menyokong Amerika Syarikat"
       ],
       "answer": "Fasisme mengutamakan kepentingan negara melebihi individu, manakala Nazisme mengagungkan bangsa Jerman dan menolak sekatan Perjanjian Versailles",
@@ -176,7 +176,7 @@
         "Kedua-duanya menunjukkan kegagalan Liga Bangsa-Bangsa bertindak tegas terhadap penaklukan sebuah negara Kuasa Paksi ke atas negara lain",
         "Kedua-duanya berlaku di benua Eropah",
         "Kedua-duanya melibatkan serangan Jerman ke atas Rusia",
-        "Kedua-duanya berjaya diselesaikan sepenuhnya oleh Liga Bangsa-Bangsa"
+        "Kedua-duanya melibatkan campur tangan ketenteraan terus oleh Amerika Syarikat"
       ],
       "answer": "Kedua-duanya menunjukkan kegagalan Liga Bangsa-Bangsa bertindak tegas terhadap penaklukan sebuah negara Kuasa Paksi ke atas negara lain",
       "explanation": "Jepun menakluk Manchuria dan Itali menyerang Habsyah, kedua-duanya tanpa tindakan tegas Liga Bangsa-Bangsa.",
@@ -189,7 +189,7 @@
       "prompt": "Antara hujah berikut, manakah yang PALING tepat menerangkan sebab Kuasa Bersekutu berjaya mengalahkan Kuasa Paksi di Eropah?",
       "options": [
         "Kerjasama erat kuasa besar Bersekutu ditambah kegagalan Jerman menawan Rusia dan kejayaan Operasi D-Day melemahkan Kuasa Paksi secara menyeluruh",
-        "Kuasa Paksi menyerah kalah tanpa sebarang pertempuran",
+        "Kuasa Paksi kalah kerana kekurangan bekalan makanan sahaja",
         "Liga Bangsa-Bangsa campur tangan secara ketenteraan untuk mengalahkan Jerman",
         "Kuasa Bersekutu hanya bergantung kepada Britain seorang diri"
       ],
