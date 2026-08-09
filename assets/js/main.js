@@ -4056,7 +4056,14 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       '#zym-pr p.zp-ph{font-size:13px;font-weight:700;color:#1a1a3a;margin:6px 0 5px;line-height:1.32}',
       '#zym-pr p.zp-sentence{font-size:12.5px;color:#3a3a5a;margin:5px 0;padding:6px 11px;border-left:3px solid #c7d2fe;line-height:1.55}',
       // Kata kunci — penyerlah: inline-block + translateY supaya latar selari Fredoka/html2canvas
-      '#zym-pr .zpkw{display:inline-block;vertical-align:text-bottom;line-height:1.1;padding:0.05em 0.3em 0.09em;margin:0;border-radius:38% 42% 40% 44%/46% 40% 48% 42%;font-size:inherit;font-weight:700;transform:translateY(0.11em);-webkit-box-decoration-break:clone;box-decoration-break:clone;-webkit-print-color-adjust:exact;print-color-adjust:exact}',
+      // Kata kunci — penyerlah gaya <mark> PIAWAI (background+padding+border-radius
+      // sahaja, TIADA display:inline-block/vertical-align/transform). Versi lama guna
+      // kombinasi inline-block+vertical-align:text-bottom+translateY utk selari latar
+      // dgn Fredoka — rapuh dlm engine layout html2canvas (bukan pelayar biasa), punca
+      // sebenar bug "highlight terapung jauh di atas teks" dilaporkan pengguna (PDF
+      // sebenar, bukan sekadar offset px kecil). Teknik inline biasa jauh lebih selamat
+      // sbb latar dilukis terus di belakang aliran teks tanpa perlu kira semula posisi.
+      '#zym-pr .zpkw{padding:0.08em 0.3em;border-radius:38% 42% 40% 44%/46% 40% 48% 42%;font-size:inherit;font-weight:700;-webkit-box-decoration-break:clone;box-decoration-break:clone;-webkit-print-color-adjust:exact;print-color-adjust:exact}',
       '#zym-pr .zpkw-tokoh{color:#731b25;background:#f9bcc4}',
       '#zym-pr .zpkw-masa{color:#1b3573;background:#bccff9}',
       '#zym-pr .zpkw-tempat{color:#1b7338;background:#bcf9d1}',
@@ -4073,7 +4080,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     ];
     if (isEco) {
       rules.push(
-        '#zym-pr.zp-mode-eco .zpkw,#zym-pr.zp-mode-eco [class*="zpkw-"]{color:#1e293b!important;font-weight:700!important;display:inline-block!important;vertical-align:text-bottom!important;line-height:1.1!important;padding:0.05em 0.3em 0.09em!important;border-radius:38% 42% 40% 44%/46% 40% 48% 42%!important;background:rgba(241,245,249,0.95)!important;transform:translateY(0.11em)!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}',
+        '#zym-pr.zp-mode-eco .zpkw,#zym-pr.zp-mode-eco [class*="zpkw-"]{color:#1e293b!important;font-weight:700!important;padding:0.08em 0.3em!important;border-radius:38% 42% 40% 44%/46% 40% 48% 42%!important;background:rgba(241,245,249,0.95)!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}',
         '#zym-pr.zp-mode-eco .zp-chapter-lbl,#zym-pr.zp-mode-eco .zp-section-badge{background:#4b5563!important;color:#fff!important}',
         '#zym-pr.zp-mode-eco .zp-hero{border-bottom-color:#9ca3af!important}',
         '#zym-pr.zp-mode-eco .zp-subtopik{color:#52525b!important}',
@@ -4215,12 +4222,18 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       }
 
       // Ikon emoji (Fluent CDN & OpenMoji self-host) dimasukkan terus via innerHTML
-      // sejurus sebelum capture — html2canvas cuba muat semula/proses imej sendiri,
-      // tapi tak boleh dipercayai sepenuhnya (imej silang-asal & SVG kekadang senyap
-      // gagal dilukis kalau belum betul2 "complete" semasa snapshot bermula). Tunggu
-      // SETIAP <img class="zp-emoji"> load/error dulu (bukan sekadar timeout renjis)
-      // — elak ikon kosong dlm PDF akhir.
-      function _pdfWaitImages(fn) {
+      // sejurus sebelum capture. Percubaan pertama (tunggu img.complete/load/error
+      // sahaja) MASIH gagal dilaporkan pengguna (ikon terus tiada dlm PDF sebenar)
+      // — punca SEBENAR bukan race masa, tapi html2canvas "CORS-taint": imej
+      // silang-asal (cdn.jsdelivr.net) boleh jadi `complete`/`naturalWidth>0`
+      // (browser BENAR2 muat & papar ia secara normal) tapi html2canvas tetap
+      // GAGAL SENYAP lukis piksel ke kanvas kalua pelayan tak hantar header CORS
+      // sepenuhnya utk laluan/format tertentu — tiada ralat console, ikon
+      // sekadar kosong. Fix: fetch() setiap imej sendiri, tukar terus ke
+      // data: URI (FileReader) SEBELUM capture — data: URI sentiasa "canvas-safe"
+      // (asal sama, tiada isu CORS langsung) tak kira asal-usul rangkaian imej
+      // asal. Ini turut selesaikan race masa asal (fetch() tunggu bait penuh).
+      function _pdfInlineImages(fn) {
         var imgs = container.querySelectorAll('img.zp-emoji');
         if (!imgs.length) { fn(); return; }
         var pending = imgs.length;
@@ -4235,15 +4248,31 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
           if (pending <= 0) _settle();
         }
         for (var i = 0; i < imgs.length; i++) {
-          var img = imgs[i];
-          if (img.complete) { _onOne(); continue; }
-          img.addEventListener('load', _onOne, { once: true });
-          img.addEventListener('error', _onOne, { once: true });
+          (function (img) {
+            var src = img.getAttribute('src');
+            if (!src || /^data:/.test(src)) { _onOne(); return; }
+            fetch(src, { mode: 'cors' }).then(function (r) {
+              if (!r.ok) throw new Error('bad status');
+              return r.blob();
+            }).then(function (blob) {
+              var reader = new FileReader();
+              reader.onload = function () {
+                img.setAttribute('src', reader.result);
+                _onOne();
+              };
+              reader.onerror = _onOne;
+              reader.readAsDataURL(blob);
+            }).catch(function () {
+              // Fetch gagal (jaringan/CORS) — biar src asal kekal (spt tingkah
+              // laku asal), imej mungkin masih cuba render biasa tanpa jaminan.
+              _onOne();
+            });
+          })(imgs[i]);
         }
-        setTimeout(_settle, 8000);
+        setTimeout(_settle, 12000);
       }
 
-      _pdfWaitImages(function() {
+      _pdfInlineImages(function() {
       _pdfWaitFonts(function() {
       requestAnimationFrame(function() {
         requestAnimationFrame(function() {
@@ -6227,7 +6256,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=539').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=540').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
