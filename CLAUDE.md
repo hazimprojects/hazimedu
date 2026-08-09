@@ -889,6 +889,52 @@ sama (array kanvas muka surat penuh + metadata mm) tak kira mod —
 apa-apa diubah, sbb komposisi 2-lajur berlaku SEPENUHNYA di dlm
 `_generatePages()` sebelum `cb()` dipanggil.
 
+**Bug "kotak terpotong" — `_pickPdfSplitY()` MESTI tolak SELURUH blok
+yg dibelah ke muka surat/lajur seterusnya, bukan cuma cuba tetingkap
+carian terhad.** Dilaporkan pengguna (tangkapan skrin `bab-2-2.html`
+mod 2 lajur): kad accordion "Bill of Rights" (tajuk + ayat + 2 chip)
+terbelah antara lajur kiri (chip pertama sahaja) & lajur kanan (chip
+kedua terpisah, tercicir drpd kad induknya). Punca: `_pickPdfSplitY()`
+asalnya cuma cari ruang putih SELAMAT dlm tetingkap terhad (36% undur
+`pxPerPage` / 26% depan utk sempadan blok) sebelum jatuh balik ke
+`bestAnyY` (skor kombo whiteness-tempatan terbaik, DIKIRA dlm
+tetingkap 36% undur yg SAMA) — kalau blok (cth. kad accordion dgn
+chip-list) lebih tinggi drpd tetingkap tu (biasa berlaku mod 2 lajur:
+lebar lajur sempit → lebih byk baris wrap → kad jadi lebih tinggi
+berbanding bajet tinggi `pxPerPage` yg sama), `bestAnyY` boleh jatuh
+di CELAH ANTARA DUA CHIP dlm `.paper-chip-list` (nampak macam ruang
+putih tempatan yg baik) walhal masih di DALAM `blockRanges` blok
+induk — pisahan "selamat tempatan" tapi SEBENARNYA membelah kad.
+
+Fix: tambah `_findBisectedBlock()` + peringkat fallback BAHARU dlm
+`_pickPdfSplitY()` — kalau titik pisahan unggul (`approxY`) jatuh di
+DALAM sebarang `blockRanges` (dibelah), & bahagian ATAS blok tu masih
+boleh dicapai (`bisected.top > minY`), TERUS pulangkan `bisected.top`
+sbg titik pisah — tolak SELURUH blok ke muka surat/lajur seterusnya
+(terima jurang kosong lebih besar di penghujung muka surat semasa,
+drpd potong kandungan). **Peringkat ni TIADA had jarak carian** (bukan
+dibataskan 36%/26% spt peringkat lain) — sbb keutamaan MUTLAK ialah
+elak potong kad, bukan jimat ruang; jarak drpd `approxY` ke atas blok
+boleh jadi besar (kad yg SANGAT tinggi berbanding bajet muka surat).
+Peringkat ni cuma gagal (jatuh balik ke gelagat lama) dlm kes patologi
+sebenar: blok yg bahagian ATAS-nya SENDIRI tak boleh dicapai dlm bajet
+muka surat semasa (`bisected.top <= minY`) — blok tu bermula terlalu
+dekat dgn pisahan sebelumnya utk dielakkan langsung tanpa reka bentuk
+semula pagination sepenuhnya (jarang berlaku).
+
+Fungsi `_pickPdfSplitY()` DIKONGSI mod 1 lajur & 2 lajur (sama spt
+disebut atas — "operasi atas budget tinggi generik, tak kisah lebar")
+— fix ni jadi pembetulan KESAHIHAN am utk KEDUA-DUA mod, bukan khusus
+2-lajur, walau kebarangkalian tercetus lagi tinggi dlm mod 2-lajur
+(kad lebih kerap melebihi bajet tinggi drpd lebar lajur sempit).
+Disahkan via Playwright (§teknik ujian atas, tambah panggilan balik
+sementara `window.__pdfDebugCapture(blockRanges, splitPts)` selepas
+`splitPts.push(canvas.height)` — DIBUANG lepas ujian, JANGAN kekal dlm
+kod produksi): **SIFAR pembelahan** (`splitPts[i]` jatuh di dalam
+mana-mana `blockRanges`) merentas 12 halaman skop 2-lajur (Bab 1–2)
+& 8 halaman sampel mod 1-lajur (Bab 3–9), semua dgn pelbagai jumlah
+blok (9–29) & pisahan (4–8) — sifar ralat JS, sifar kad terpotong.
+
 ## Eksport PDF — Mod "Jimat Dakwat": ikon kekal, latar kata kunci gugur
 
 Mod eco (`isEco`/`zp-mode-eco` dlm `_getPrintCss()`) DUA keputusan

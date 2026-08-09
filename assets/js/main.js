@@ -4746,6 +4746,15 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
               return false;
             }
 
+            /** Pulangkan blok yg dibelah oleh baris y (atau null). */
+            function _findBisectedBlock(y, ranges) {
+              for (var i = 0; i < ranges.length; i++) {
+                var rg = ranges[i];
+                if (y > rg.top && y < rg.bottom) return rg;
+              }
+              return null;
+            }
+
             function _rowWhiteBlend(y) {
               return (_rowWhiteness(y) + _rowWhiteness(y - 1) + _rowWhiteness(y + 1)) / 3;
             }
@@ -4803,6 +4812,19 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
                 }
               }
               if (bestSafeY > minY && bestSafeWhite > 0.1) return bestSafeY;
+              // Blok (kad/aksordion/chip-list) yg dibelah oleh titik ideal, & tiada
+              // ruang putih selamat dijumpai dlm tetingkap carian terhad (36%
+              // undur/26% depan di bawah) — TOLAK SELURUH blok ke muka surat/lajur
+              // seterusnya (guna atas blok tu sbg titik pisah) drpd terus terima
+              // "bestAnyY" (skor kombo terbaik SETEMPAT, yg BOLEH jatuh di tengah
+              // blok, cth. celahan dua chip dlm .paper-chip-list — nampak macam
+              // ruang putih tempatan tapi sebenarnya masih di DALAM blok induk).
+              // Ni PUNCA SEBENAR bug "kotak terpotong" dilaporkan pengguna (mod
+              // 2 lajur, kad accordion lebih tinggi drpd bajet lajur sempit) —
+              // tiada had jarak carian ke atas blok (bukan dibataskan 36%/26%)
+              // sbb keutamaan MUTLAK ialah elak potong, bukan jimat ruang.
+              var bisected = _findBisectedBlock(approxY, ranges);
+              if (bisected && bisected.top > minY) return bisected.top;
               var fwd = Math.round(pxPerPage * 0.26);
               var bnd = _pickPdfBoundarySplit(approxY, minY, fwd, ranges);
               if (bnd > minY && !_rowBisectsBlock(bnd, ranges)) return bnd;
@@ -6726,7 +6748,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=551').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=552').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
