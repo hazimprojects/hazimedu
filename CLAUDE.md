@@ -826,6 +826,25 @@ kini raster SVG → PNG (canvas 96px) selepas fetch, sebelum capture.
 `data:` URI (bukan sekadar tunggu `load`) — elak "CORS-taint" imej
 silang-asal yg turut boleh sebabkan ikon kosong senyap.
 
+**3. `sw.js` JANGAN hidangkan respons OPAQUE kpd permintaan mode
+`cors`.** Ikon CDN dicache drpd `<img>` (mode `no-cors`) → respons
+**opaque**. Bila penjana PDF minta semula dgn mode `cors` (fetch →
+`data:` URI, & `useCORS` html2canvas), pelayar TOLAK respons opaque
+utk permintaan cors → fetch gagal → ikon Fluent kosong dlm PDF
+WALAUPUN CDN boleh dicapai. Simptomnya mengelirukan: "ikon OpenMoji
+muncul, Fluent tiada" (OpenMoji asal-sama, tak lalu laluan cache CDN
+ni langsung). Penjaga `cached.type === 'opaque'` dlm handler emoji-CDN
+`sw.js` MESTI dikekalkan.
+
+**Peta ikon PDF**: `HZ_PDF_OPENMOJI_MAP` kini liputi **100% ikon Bab 1**
+(78 konsep / 507 kemunculan) — sengaja penuh, bukan separa, sebab
+liputan separa (dulu 25 konsep = 82%) tinggalkan **campuran gaya
+OpenMoji + Fluent dlm senarai yg sama** (cth. keycap 1–4 OpenMoji tapi
+5–6 Fluent) yg ketara janggal. Bila luaskan ke bab lain, liputi
+SEMUA konsep bab itu sekali gus. `_pdfEmojiSrc()` turut terima segmen
+varian pilihan sebelum `/3D/` (cth. `/assets/Writing hand/Default/3D/`)
+— tanpa itu ikon sebegini senyap terlepas drpd peta.
+
 **Menguji eksport PDF dlm sandbox agen**: CDN html2canvas/jsPDF
 disekat, TAPI boleh `npm install html2canvas-pro jspdf --no-save`
 (`node_modules/` sudah di-gitignore) & suntik via Playwright
