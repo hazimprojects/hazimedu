@@ -846,6 +846,33 @@ sama (array kanvas muka surat penuh + metadata mm) tak kira mod —
 apa-apa diubah, sbb komposisi 2-lajur berlaku SEPENUHNYA di dlm
 `_generatePages()` sebelum `cb()` dipanggil.
 
+## Eksport PDF — Mod "Jimat Dakwat": ikon kekal, latar kata kunci gugur
+
+Mod eco (`isEco`/`zp-mode-eco` dlm `_getPrintCss()`) DUA keputusan
+reka bentuk yg mungkin nampak berlawanan intuisi pd pandangan pertama:
+
+- **Ikon emoji KEKAL dipapar** (dulu `display:none!important` — buang
+  ikon sepenuhnya). Sebab tukar: ikon berfungsi sbg penanda visual/
+  navigasi pantas walau tanpa kos dakwat penuh warna, & TIADA kod
+  "nyahwarna" berasingan diperlukan — muka surat eco PENUH (termasuk
+  piksel ikon dlm kanvas tertangkap) sudah ditukar ke skala kelabu
+  SELEPAS capture via `_pdfGrayscaleCanvas()` (rujuk
+  `_pdfCanvasToJpegDataUrl()`), jadi ikon automatik jadi kelabu sekali
+  dgn keseluruhan muka surat — tiada usaha tambahan.
+- **Latar/padding penyerlah kata kunci (`.zpkw`) DIGUGURKAN** (dulu
+  latar kelabu `rgba(241,245,249,0.95)` — kekal berlatar, cuma tukar
+  warna drpd versi berwarna). Sebab: latar di belakang SETIAP kata
+  kunci sebenarnya makan LEBIH BANYAK dakwat berbanding ikon (berpuluh
+  kata kunci vs beberapa ikon setiap muka surat) — bercanggah dgn
+  tujuan "jimat dakwat". Teks TEBAL (`font-weight:700`) sahaja
+  dikekalkan sbg isyarat visual, biar pelajar highlight sendiri ikut
+  cita rasa pd kertas cetak fizikal.
+
+**JANGAN togol balik kedua-dua keputusan ni serentak** (cth. buang
+ikon DAN buang latar sekali) tanpa tanya dulu — ia keputusan reka
+bentuk berasingan dgn justifikasi berasingan, bukan pasangan yg
+mesti sentiasa sama status.
+
 ## Eksport PDF — skop kandungan SENGAJA beza drpd nota digital
 
 PDF bukan gantian nota digital utk bacaan santai — ia utk bacaan

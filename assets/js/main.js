@@ -4193,7 +4193,13 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     ];
     if (isEco) {
       rules.push(
-        '#zym-pr.zp-mode-eco .zpkw,#zym-pr.zp-mode-eco [class*="zpkw-"]{color:#1e293b!important;font-weight:700!important;padding:0.08em 0.3em!important;border-radius:38% 42% 40% 44%/46% 40% 48% 42%!important;white-space:nowrap!important;background:rgba(241,245,249,0.95)!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}',
+        // Latar/padding kata kunci DIGUGURKAN dlm mod eco (bukan cuma tukar warna
+        // kelabu spt asal) — cadangan pengguna: latar di belakang SETIAP kata
+        // kunci sebenarnya makan LEBIH BANYAK dakwat berbanding ikon (berpuluh
+        // kata kunci vs beberapa ikon setiap muka surat), jadi bercanggah dgn
+        // tujuan "jimat dakwat". Teks TEBAL sahaja dikekalkan sbg isyarat visual
+        // (pelajar boleh highlight sendiri ikut cita rasa pd kertas cetak).
+        '#zym-pr.zp-mode-eco .zpkw,#zym-pr.zp-mode-eco [class*="zpkw-"]{color:#1e293b!important;font-weight:700!important;padding:0!important;background:transparent!important;white-space:nowrap!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}',
         '#zym-pr.zp-mode-eco .zp-chapter-lbl,#zym-pr.zp-mode-eco .zp-section-badge{background:#4b5563!important;color:#fff!important}',
         '#zym-pr.zp-mode-eco .zp-hero{border-bottom-color:#9ca3af!important}',
         '#zym-pr.zp-mode-eco .zp-subtopik{color:#52525b!important}',
@@ -4213,8 +4219,14 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
         '#zym-pr.zp-mode-eco .zp-step+.zp-step::before{color:#6b7280!important}',
         '#zym-pr.zp-mode-eco .zp-sentence{border-left-color:#9ca3af!important}',
         '#zym-pr.zp-mode-eco p.zp-p,#zym-pr.zp-mode-eco p.zp-ph,#zym-pr.zp-mode-eco p.zp-sentence{color:#27272a!important}',
-        '#zym-pr.zp-mode-eco .zp-desc{color:#3f3f46!important}',
-        '#zym-pr.zp-mode-eco .zp-emoji{display:none!important}'
+        '#zym-pr.zp-mode-eco .zp-desc{color:#3f3f46!important}'
+        // Ikon emoji KEKAL dipapar dlm mod eco (dulu display:none) — cadangan
+        // pengguna: ikon berguna sbg penanda visual/navigasi pantas walau
+        // tanpa kos dakwat penuh warna. TIADA kod tambahan diperlukan utk
+        // "nyahwarna" ikon secara berasingan — muka surat eco PENUH (termasuk
+        // piksel ikon dlm kanvas tertangkap) sudah ditukar ke skala kelabu
+        // selepas capture via _pdfGrayscaleCanvas() (rujuk _pdfCanvasToJpegDataUrl()),
+        // jadi ikon automatik jadi kelabu sekali dgn keseluruhan muka surat.
       );
     }
     return rules.join('');
@@ -6446,7 +6458,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=544').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=545').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
