@@ -4010,6 +4010,17 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     var h = '';
     el.childNodes.forEach(function(node) {
       if (node.nodeType !== 1) return;
+      h += _bodyHtmlNode(node);
+    });
+    return h;
+  }
+
+  /** Proses SATU nod (logik sama dgn gelung _bodyHtml, diekstrak supaya _renderBoard
+   * boleh panggil per-nod bila "buka" .paper-accordion keluar drpd bekas board —
+   * rujuk komen _renderBoard utk sebab). */
+  function _bodyHtmlNode(node) {
+    var h = '';
+    {
       var cls = node.className || '', tag = node.tagName;
       if (cls.indexOf('paper-chip-list') !== -1) {
         var hasSentence = node.querySelector('.paper-chip-sentence') !== null;
@@ -4055,7 +4066,15 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
         h += '</div>';
       } else if (cls.indexOf('paper-accordion') !== -1) {
         var idx2 = 0;
-        node.querySelectorAll('.paper-accordion-item').forEach(function(item) {
+        // :scope > SAHAJA — bukan querySelectorAll biasa (padan SEMUA keturunan
+        // tanpa kira kedalaman). Item accordion boleh ada sub-accordion BERSARANG
+        // dlm panel sendiri (cth. "Penubuhan gerila Melayu oleh Force 136"
+        // bab-3-7.html, 3 sub-item tarikh bersarang dlm satu item) — querySelectorAll
+        // tanpa skop akan padan item bersarang tu JUGA di peringkat accordion INDUK,
+        // hasilkan pendua (sekali via body accordion induk yg proses sub-accordion
+        // secara rekursif, sekali lagi kerana tersalah padan di sini) — rujuk
+        // CLAUDE.md.
+        node.querySelectorAll(':scope > .paper-accordion-item').forEach(function(item) {
           idx2++;
           var trig2  = item.querySelector('.paper-accordion-trigger');
           var panel2 = item.querySelector('.paper-accordion-panel');
@@ -4093,7 +4112,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       } else if (cls.indexOf('paper-timeline') !== -1) {
         h += _pdfPaperTimelineHtml(node);
       } else { h += _bodyHtml(node); }
-    });
+    }
     return h;
   }
 
@@ -4149,15 +4168,68 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
         else if (sc.indexOf('strip-glossary') !== -1) color = '#7c3aed';
         else if (sc.indexOf('strip-sub') !== -1) color = '#d97706';
       }
-      h += '<div class="zp-board" style="border-color:' + color + '">';
-      if (strip) h += '<div class="zp-board-lbl" style="color:' + color + '">' + _kwHtml(strip) + '</div>';
-      if (body) h += _bodyHtml(body);
-      h += '</div>';
-      return h;
+      var stripHtml = strip ? '<div class="zp-board-lbl" style="color:' + color + '">' + _kwHtml(strip) + '</div>' : '';
+
+      // Kad "komposit" (cth. papan pengenalan diikuti .paper-accordion BERSARANG
+      // dlm cv-unit-body SAMA, bukan sbg abang-adik berasingan — corak sedia ada
+      // di sesetengah subtopik, cth. "Nasionalisme di India" bab-2-3.html, 5 item
+      // accordion bersarang dlm SATU papan) jadi SATU blok gergasi tak boleh
+      // dipecah bagi _collectPdfBlockRanges/_pickPdfSplitY (§"Bug kotak terpotong"
+      // & susulannya di CLAUDE.md) — bila blok ni tak muat baki muka surat/lajur
+      // semasa, SELURUH kad (termasuk bahagian yg sepatutnya muat) tertolak ke
+      // muka surat seterusnya, buang byk ruang. Fix: "buka" .paper-accordion
+      // LANGSUNG anak papan (bukan bersarang lagi dlm) keluar drpd bekas
+      // `.zp-board`, jadikan SEBARIS (sibling) spt corak sedia ada yg SUDAH
+      // berfungsi baik (cth. "Revolusi Amerika" bab-2-2.html — papan pengenalan
+      // & accordion ialah kad BERASINGAN) — tiap item accordion jadi blok
+      // dilindungi SENDIRI, splitter boleh pisah ANTARA item tanpa tolak
+      // SELURUH kad induk.
+      var hasNestedAccordion = false;
+      if (body) {
+        for (var ci = 0; ci < body.children.length; ci++) {
+          if ((body.children[ci].className || '').indexOf('paper-accordion') !== -1) { hasNestedAccordion = true; break; }
+        }
+      }
+      if (!body || !hasNestedAccordion) {
+        h += '<div class="zp-board" style="border-color:' + color + '">' + stripHtml + (body ? _bodyHtml(body) : '') + '</div>';
+        return h;
+      }
+
+      // Bina output kad ni dlm penampan LOKAL (bukan terus ke `h`, elak kesilapan
+      // sisip strip yg akan menjejaskan SELURUH HTML muka surat terkumpul).
+      var out = '';
+      var openBoard = false;
+      var wroteStrip = false;
+      var kids = [];
+      for (var ki = 0; ki < body.children.length; ki++) kids.push(body.children[ki]);
+      for (var k = 0; k < kids.length; k++) {
+        var kid = kids[k];
+        var kcls = kid.className || '';
+        if (kcls.indexOf('paper-accordion') !== -1) {
+          if (openBoard) { out += '</div>'; openBoard = false; }
+          out = _renderAccordion(kid, out);
+        } else {
+          if (!openBoard) {
+            out += '<div class="zp-board" style="border-color:' + color + '">';
+            if (!wroteStrip) { out += stripHtml; wroteStrip = true; }
+            openBoard = true;
+          }
+          out += _bodyHtmlNode(kid);
+        }
+      }
+      if (openBoard) out += '</div>';
+      if (!wroteStrip && stripHtml) {
+        // Label strip belum sempat ditulis (cth. accordion ialah anak PERTAMA) —
+        // sisip sbg papan kosong ringkas di hadapan drpd hilang terus.
+        out = '<div class="zp-board" style="border-color:' + color + '">' + stripHtml + '</div>' + out;
+      }
+      return h + out;
     }
     function _renderAccordion(el, h) {
       var idx = 0;
-      el.querySelectorAll('.paper-accordion-item').forEach(function(item) {
+      // :scope > SAHAJA — rujuk komen sepadan dlm _bodyHtmlNode (elak pendua
+      // sub-accordion bersarang, cth. bab-3-7.html "Force 136").
+      el.querySelectorAll(':scope > .paper-accordion-item').forEach(function(item) {
         idx++;
         var trig  = item.querySelector('.paper-accordion-trigger');
         var panel = item.querySelector('.paper-accordion-panel');
@@ -6769,7 +6841,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=553').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=554').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });

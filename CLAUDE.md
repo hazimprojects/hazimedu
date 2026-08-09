@@ -984,6 +984,72 @@ kandungan yg dulu hilang senyap kini disusun atur betul, bukan
 regresi). Semakan visual sahkan "Dr. Sun Yat Sen dan Tiga Prinsip
 Rakyat" muncul penuh (tajuk + 2 ayat + 3 chip) pd muka surat 2.
 
+**Susulan LAGI — "tolak seluruh blok" (fix pertama di atas) sendiri
+boleh buang TERLALU BANYAK ruang kalau blok tu SEBENARNYA satu kad
+"komposit" gergasi** (papan pengenalan + `.paper-accordion` BERSARANG
+dlm `cv-unit-body` SAMA, bukan sbg abang-adik berasingan — cth.
+"Nasionalisme di India" `bab-2-3.html`, 5 item accordion bersarang
+dlm SATU papan ~1985px tinggi, hampir bajet SATU lajur penuh).
+Dilaporkan pengguna (tangkapan skrin lanjutan): lajur/muka surat
+SEBELUM kad ni jadi hampir KOSONG (cuma tajuk kecil), kad SELURUHNYA
+tertolak ke lajur seterusnya — buang byk ruang walau SEBAHAGIAN
+kandungan kad tu (cth. 2-3 item accordion pertama) sepatutnya muat
+selesa dlm lajur semasa. Pengguna cadang: "buat satu mekanisma utk
+pecahkan kad kepada beberapa bahagian".
+
+Punca: `_collectPdfBlockRanges()` hanya lindungi kad SEBAGAI SATU
+unit gergasi (elemen `.zp-board` induk) — item `.paper-accordion-item`
+BERSARANG dlm badan papan yg SAMA (bukan abang-adik `.zp-section-wrap`
+spt corak "Revolusi Amerika" `bab-2-2.html` yg SUDAH berfungsi baik)
+TIDAK didaftar sbg blok berasingan, jadi `_pickPdfSplitY()` tiada
+pilihan selain tolak SELURUH papan (termasuk bahagian yg patut muat).
+
+Fix (BUKAN ubah algoritma pisahan — ubah PENJANAAN HTML cetak supaya
+struktur DOM padan corak yg sudah berfungsi): `_renderBoard()`
+(`_buildPrintHtml`) kini kesan bila `cv-unit-body` papan ada anak
+LANGSUNG `.paper-accordion`, & "buka" accordion tu KELUAR drpd bekas
+papan (bukan bersarang lagi) — jadikan SEBARIS (sibling) spt corak
+sedia ada yg berfungsi baik. Kandungan SEBELUM accordion (cth. ayat
+pengenalan) kekal dlm papan bekas asal (label/warna strip dikekalkan);
+accordion pula dijana via `_renderAccordion()` yg SAMA digunakan
+utk accordion abang-adik biasa — SETIAP item accordion jadi
+`.zp-acc` blok dilindungi SENDIRI (padan `.zp-board, .zp-flap, .zp-acc,
+.zp-tl` di `_collectPdfBlockRanges`), splitter kini BOLEH pisah
+ANTARA item accordion (bukan terpaksa tolak KESELURUHAN papan).
+
+**Bug pendua ditemui semasa ujian fix ni (bukan disebabkan fix ni,
+SEDIA ADA sebelumnya — rujuk bawah)**: `_renderAccordion()` &
+cawangan `.paper-accordion` dlm `_bodyHtmlNode()` (dahulunya
+`_bodyHtml`) kedua-duanya guna `el.querySelectorAll('.paper-accordion-item')`
+TANPA skop — padan SEMUA keturunan tanpa kira kedalaman, bukan
+cuma anak LANGSUNG. Item accordion boleh ada SUB-ACCORDION bersarang
+dlm panel sendiri (cth. "Penubuhan gerila Melayu oleh Force 136"
+`bab-3-7.html`, 3 sub-item tarikh "Force 136" bersarang dlm satu
+item) — `querySelectorAll` tanpa skop padan item bersarang tu JUGA
+di peringkat accordion INDUK (sekali via pemprosesan rekursif body
+item induk, sekali lagi kerana tersalah padan di situ) — pendua
+kandungan dlm PDF (3 item "Force 136" muncul 2 kali). Bug ni WUJUD
+SEBELUM fix "buka accordion" di atas (kedua-dua laluan lama & baharu
+kongsi selector sama), cuma DITEMUI semasa audit menyeluruh lepas fix
+ni (bandingkan senarai tajuk accordion sumber vs cetak, teknik baharu
+tak pernah dipakai sblm ni). Fix: tukar KEDUA-DUA `querySelectorAll('.paper-accordion-item')`
+kpd `querySelectorAll(':scope > .paper-accordion-item')` (anak LANGSUNG
+sahaja) — sub-accordion bersarang tetap diproses BETUL (sekali sahaja)
+via panggilan rekursif `_bodyHtml`/`_bodyHtmlNode` semasa memproses
+badan item INDUKnya.
+
+Disahkan via Playwright merentas **49 halaman subtopik** (semua bab
+1–9): bandingkan senarai PENUH tajuk `.paper-accordion-item` sumber
+(tak termasuk `.keyword-legend-wrap`) vs senarai tajuk `.zp-acc`
+tercetak — **sifar hilang, sifar pendua, sifar ralat JS** pd
+kesemua 49 halaman (3 drpd 49 "kelihatan" tak padan pd ujian pertama
+disahkan positif-palsu — `data-cv-title` [ID pendek utk koleksi] vs
+teks `.paper-accordion-title` [teks penuh dipaparkan] memang SENGAJA
+berbeza pd kad tsb, cth. "Julai 1914" vs "28 Julai 1914" — kiraan
+item padan tepat 13=13/20=20/18=18 pd ketiga-tiga, mengesahkan bukan
+bug). Kes asal `bab-2-3.html` kini kembali ke 2 muka surat (bukan 3)
+— ruang digunakan cekap tanpa hilang/potong kandungan.
+
 ## Eksport PDF — Mod "Jimat Dakwat": ikon kekal, latar kata kunci gugur
 
 Mod eco (`isEco`/`zp-mode-eco` dlm `_getPrintCss()`) DUA keputusan
