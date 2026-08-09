@@ -3680,13 +3680,23 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     return i < n ? i : -1;
   }
 
-  // Lapisan ikon PDF gaya lakaran (OpenMoji self-host) — 78 konsep, meliputi
-  // 100% ikon Bab 1 (507/507 kemunculan) supaya PDF Bab 1 LANGSUNG tak
-  // bergantung CDN & tiada campuran gaya OpenMoji/Fluent dlm satu senarai
-  // (dulu 25 konsep = 82%; keycap 5/6 tercicir menyebabkan senarai bernombor
-  // nampak tak konsisten). Konsep TIADA dlm peta ni kekal Fluent 3D asal
-  // (fallback selamat, bukan pecah) — rujuk kod hex sumber di
-  // assets/openmoji/LICENSE.md (CC BY-SA 4.0, OpenMoji Contributors).
+  // Lapisan ikon PDF gaya lakaran (OpenMoji self-host) — 166 konsep, meliputi
+  // 100% ikon Bab 1 (507/507 kemunculan) & 100% konsep unik Bab 2 (143
+  // konsep merentas bab-2.html + bab-2-1..8.html) supaya PDF bab² tu
+  // LANGSUNG tak bergantung CDN & tiada campuran gaya OpenMoji/Fluent dlm
+  // satu senarai (dulu 25 konsep = 82% drpd Bab 1; keycap 5/6 tercicir
+  // menyebabkan senarai bernombor nampak tak konsisten — liputan MESTI
+  // penuh setiap bab yg dimasukkan skop, bukan separa). Konsep TIADA dlm
+  // peta ni kekal Fluent 3D asal (fallback selamat, bukan pecah) — rujuk
+  // kod hex sumber di assets/openmoji/LICENSE.md (CC BY-SA 4.0, OpenMoji
+  // Contributors). Sumber SVG: repo github.com/hfg-gmuend/openmoji,
+  // padan nama konsep Fluent (title-case, cth. "Anger symbol") ke
+  // `annotation` OpenMoji (lowercase) via data/openmoji.json, salin
+  // color/svg/<hexcode>.svg — 2 konsep BEZA nama drpd annotation OpenMoji
+  // (bukan padanan terus): "Keycap 7" → annotation "keycap: 7", "Pouting
+  // face" → annotation "enraged face" (Unicode rasmi namakan U+1F621
+  // "POUTING FACE" walau OpenMoji anotasi guna "enraged face" — emoji
+  // sama, cuma label beza; Fluent & OpenMoji kekal ikut sumber masing²).
   var HZ_PDF_OPENMOJI_MAP = {
     'Pushpin': '/assets/openmoji/pushpin.svg',
     'Light bulb': '/assets/openmoji/light-bulb.svg',
@@ -3765,7 +3775,98 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     'Test tube': '/assets/openmoji/test-tube.svg',
     'Trophy': '/assets/openmoji/trophy.svg',
     'Warning': '/assets/openmoji/warning.svg',
-    'Writing hand': '/assets/openmoji/writing-hand.svg'
+    'Writing hand': '/assets/openmoji/writing-hand.svg',
+    // Bab 2 (88 konsep baharu, luaskan liputan 100% drpd Bab 1 sahaja —
+    // rujuk komen atas HZ_PDF_OPENMOJI_MAP: liputan MESTI penuh setiap bab
+    // yg dimasukkan skop, bukan separa, elak campuran gaya OpenMoji/Fluent).
+    'Anchor': '/assets/openmoji/anchor.svg',
+    'Anger symbol': '/assets/openmoji/anger-symbol.svg',
+    'Angry face': '/assets/openmoji/angry-face.svg',
+    'Anxious face with sweat': '/assets/openmoji/anxious-face-with-sweat.svg',
+    'Ballot box with ballot': '/assets/openmoji/ballot-box-with-ballot.svg',
+    'Bell': '/assets/openmoji/bell.svg',
+    'Books': '/assets/openmoji/books.svg',
+    'Brick': '/assets/openmoji/brick.svg',
+    'Calendar': '/assets/openmoji/calendar.svg',
+    'Candy': '/assets/openmoji/candy.svg',
+    'Castle': '/assets/openmoji/castle.svg',
+    'Clipboard': '/assets/openmoji/clipboard.svg',
+    'Closed book': '/assets/openmoji/closed-book.svg',
+    'Counterclockwise arrows button': '/assets/openmoji/counterclockwise-arrows-button.svg',
+    'Cross mark': '/assets/openmoji/cross-mark.svg',
+    'Dagger': '/assets/openmoji/dagger.svg',
+    'Diya lamp': '/assets/openmoji/diya-lamp.svg',
+    'Dna': '/assets/openmoji/dna.svg',
+    'Dove': '/assets/openmoji/dove.svg',
+    'Envelope': '/assets/openmoji/envelope.svg',
+    'Evergreen tree': '/assets/openmoji/evergreen-tree.svg',
+    'Eye': '/assets/openmoji/eye.svg',
+    'Face with tears of joy': '/assets/openmoji/face-with-tears-of-joy.svg',
+    'Factory': '/assets/openmoji/factory.svg',
+    'Fire': '/assets/openmoji/fire.svg',
+    'Firecracker': '/assets/openmoji/firecracker.svg',
+    'Flexed biceps': '/assets/openmoji/flexed-biceps.svg',
+    'Fountain pen': '/assets/openmoji/fountain-pen.svg',
+    'Glowing star': '/assets/openmoji/glowing-star.svg',
+    'Graduation cap': '/assets/openmoji/graduation-cap.svg',
+    'Green book': '/assets/openmoji/green-book.svg',
+    'Green circle': '/assets/openmoji/green-circle.svg',
+    'High voltage': '/assets/openmoji/high-voltage.svg',
+    'Hot beverage': '/assets/openmoji/hot-beverage.svg',
+    'Japanese dolls': '/assets/openmoji/japanese-dolls.svg',
+    'Judge': '/assets/openmoji/judge.svg',
+    'Keycap 7': '/assets/openmoji/keycap-7.svg',
+    'Left speech bubble': '/assets/openmoji/left-speech-bubble.svg',
+    'Magnifying glass tilted right': '/assets/openmoji/magnifying-glass-tilted-right.svg',
+    'Man fairy': '/assets/openmoji/man-fairy.svg',
+    'Man student': '/assets/openmoji/man-student.svg',
+    'Man teacher': '/assets/openmoji/man-teacher.svg',
+    'Man wearing turban': '/assets/openmoji/man-wearing-turban.svg',
+    'Mans shoe': '/assets/openmoji/mans-shoe.svg',
+    'Medical symbol': '/assets/openmoji/medical-symbol.svg',
+    'Megaphone': '/assets/openmoji/megaphone.svg',
+    'Microphone': '/assets/openmoji/microphone.svg',
+    'Money with wings': '/assets/openmoji/money-with-wings.svg',
+    'Musical score': '/assets/openmoji/musical-score.svg',
+    'Name badge': '/assets/openmoji/name-badge.svg',
+    'Newspaper': '/assets/openmoji/newspaper.svg',
+    'Office building': '/assets/openmoji/office-building.svg',
+    'Om': '/assets/openmoji/om.svg',
+    'Open mailbox with raised flag': '/assets/openmoji/open-mailbox-with-raised-flag.svg',
+    'Orange circle': '/assets/openmoji/orange-circle.svg',
+    'Page facing up': '/assets/openmoji/page-facing-up.svg',
+    'Pen': '/assets/openmoji/pen.svg',
+    'Person': '/assets/openmoji/person.svg',
+    'Person running': '/assets/openmoji/person-running.svg',
+    'Person wearing turban': '/assets/openmoji/person-wearing-turban.svg',
+    'Person with crown': '/assets/openmoji/person-with-crown.svg',
+    'Police car light': '/assets/openmoji/police-car-light.svg',
+    'Pouting face': '/assets/openmoji/pouting-face.svg',
+    'Prayer beads': '/assets/openmoji/prayer-beads.svg',
+    'Prince': '/assets/openmoji/prince.svg',
+    'Princess': '/assets/openmoji/princess.svg',
+    'Purple circle': '/assets/openmoji/purple-circle.svg',
+    'Puzzle piece': '/assets/openmoji/puzzle-piece.svg',
+    'Raised fist': '/assets/openmoji/raised-fist.svg',
+    'Receipt': '/assets/openmoji/receipt.svg',
+    'Red circle': '/assets/openmoji/red-circle.svg',
+    'Red envelope': '/assets/openmoji/red-envelope.svg',
+    'Right-facing fist': '/assets/openmoji/right-facing-fist.svg',
+    'Rolled-up newspaper': '/assets/openmoji/rolled-up-newspaper.svg',
+    'Sailboat': '/assets/openmoji/sailboat.svg',
+    'School': '/assets/openmoji/school.svg',
+    'Speech balloon': '/assets/openmoji/speech-balloon.svg',
+    'Spiral calendar': '/assets/openmoji/spiral-calendar.svg',
+    'Statue of liberty': '/assets/openmoji/statue-of-liberty.svg',
+    'Student': '/assets/openmoji/student.svg',
+    'Sunrise over mountains': '/assets/openmoji/sunrise-over-mountains.svg',
+    'Teacher': '/assets/openmoji/teacher.svg',
+    'Tear-off calendar': '/assets/openmoji/tear-off-calendar.svg',
+    'Thread': '/assets/openmoji/thread.svg',
+    'Unlocked': '/assets/openmoji/unlocked.svg',
+    'Woman teacher': '/assets/openmoji/woman-teacher.svg',
+    'Woman with headscarf': '/assets/openmoji/woman-with-headscarf.svg',
+    'Wood': '/assets/openmoji/wood.svg'
   };
 
   function _pdfEmojiSrc(originalSrc) {
@@ -4127,7 +4228,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   var PDF_2COL_COL_WIDTH_PX = Math.round(PDF_2COL_COL_WIDTH_MM * PDF_BASE_DENSITY);
 
   function _pdfIsTwoColumnScope() {
-    return /\/notes\/bab-1(-\d+)?\.html$/i.test(window.location.pathname);
+    return /\/notes\/bab-[12](-\d+)?\.html$/i.test(window.location.pathname);
   }
 
   function _getPrintCss(mode, twoCol) {
