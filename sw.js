@@ -6,7 +6,7 @@
    - Same-origin non-document GET: cache-first
 */
 
-const CACHE = 'zym-v541';
+const CACHE = 'zym-v542';
 
 const PRECACHE_URLS = [
   '/',
@@ -55,7 +55,7 @@ const PRECACHE_URLS = [
   '/assets/css/fluent-shell-emoji.css?v=7',
   '/assets/css/bab-hub-fluent-3d.css?v=1',
   '/assets/css/shell-openmoji.css?v=18',
-  '/assets/js/main.js?v=393',
+  '/assets/js/main.js?v=394',
   '/assets/js/zh-mode.js?v=56',
   '/assets/js/subtopic-lab.js?v=9',
   '/data/zh-glossary.json',
@@ -213,11 +213,19 @@ self.addEventListener('fetch', function (e) {
   if (isEmojiCdn) {
     e.respondWith(
       caches.match(e.request).then(function (cached) {
-        return cached || fetch(e.request).then(function (res) {
+        // JANGAN hidangkan respons OPAQUE kpd permintaan mode 'cors'. Ikon ni
+        // biasanya dicache drpd <img> (mode 'no-cors') → respons opaque. Bila
+        // penjana PDF minta semula dgn mode 'cors' (fetch → data: URI, & juga
+        // html2canvas useCORS), pelayar TOLAK respons opaque utk permintaan cors
+        // → fetch gagal → ikon Fluent kosong dlm PDF walau CDN boleh dicapai.
+        // (Ini punca "openmoji muncul, fluent tiada" — openmoji asal-sama, tak
+        // melalui laluan ni.) Jatuh ke rangkaian; jsdelivr hantar CORS penuh.
+        if (cached && !(e.request.mode === 'cors' && cached.type === 'opaque')) return cached;
+        return fetch(e.request).then(function (res) {
           var clone = res.clone();
           caches.open(CACHE).then(function (c) { c.put(e.request, clone); });
           return res;
-        });
+        }).catch(function () { return cached; });
       })
     );
     return;

@@ -3620,9 +3620,12 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     return i < n ? i : -1;
   }
 
-  // Lapisan ikon PDF gaya lakaran (OpenMoji self-host) — 25 konsep paling
-  // kerap (Bab 1, ~82% kemunculan). Konsep TIADA dlm peta ni kekal Fluent
-  // 3D asal (fallback selamat, bukan pecah) — rujuk kod hex sumber di
+  // Lapisan ikon PDF gaya lakaran (OpenMoji self-host) — 78 konsep, meliputi
+  // 100% ikon Bab 1 (507/507 kemunculan) supaya PDF Bab 1 LANGSUNG tak
+  // bergantung CDN & tiada campuran gaya OpenMoji/Fluent dlm satu senarai
+  // (dulu 25 konsep = 82%; keycap 5/6 tercicir menyebabkan senarai bernombor
+  // nampak tak konsisten). Konsep TIADA dlm peta ni kekal Fluent 3D asal
+  // (fallback selamat, bukan pecah) — rujuk kod hex sumber di
   // assets/openmoji/LICENSE.md (CC BY-SA 4.0, OpenMoji Contributors).
   var HZ_PDF_OPENMOJI_MAP = {
     'Pushpin': '/assets/openmoji/pushpin.svg',
@@ -3649,11 +3652,67 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     'Globe showing asia-australia': '/assets/openmoji/globe-asia-australia.svg',
     'Magnifying glass tilted left': '/assets/openmoji/magnifying-glass-left.svg',
     'Bullseye': '/assets/openmoji/bullseye.svg',
-    'Brain': '/assets/openmoji/brain.svg'
+    'Brain': '/assets/openmoji/brain.svg',
+    'Artist palette': '/assets/openmoji/artist-palette.svg',
+    'Bar chart': '/assets/openmoji/bar-chart.svg',
+    'Blue book': '/assets/openmoji/blue-book.svg',
+    'Briefcase': '/assets/openmoji/briefcase.svg',
+    'Building construction': '/assets/openmoji/building-construction.svg',
+    'Bust in silhouette': '/assets/openmoji/bust-in-silhouette.svg',
+    'Chains': '/assets/openmoji/chains.svg',
+    'Cityscape at dusk': '/assets/openmoji/cityscape-at-dusk.svg',
+    'Collision': '/assets/openmoji/collision.svg',
+    'Compass': '/assets/openmoji/compass.svg',
+    'Cup with straw': '/assets/openmoji/cup-with-straw.svg',
+    'Desert island': '/assets/openmoji/desert-island.svg',
+    'Down arrow': '/assets/openmoji/down-arrow.svg',
+    'Droplet': '/assets/openmoji/droplet.svg',
+    'Drum': '/assets/openmoji/drum.svg',
+    'Fishing pole': '/assets/openmoji/fishing-pole.svg',
+    'Gem stone': '/assets/openmoji/gem-stone.svg',
+    'Globe showing europe-africa': '/assets/openmoji/globe-showing-europe-africa.svg',
+    'Globe with meridians': '/assets/openmoji/globe-with-meridians.svg',
+    'Hammer and wrench': '/assets/openmoji/hammer-and-wrench.svg',
+    'Headphone': '/assets/openmoji/headphone.svg',
+    'Hibiscus': '/assets/openmoji/hibiscus.svg',
+    'Hourglass not done': '/assets/openmoji/hourglass-not-done.svg',
+    'House with garden': '/assets/openmoji/house-with-garden.svg',
+    'Houses': '/assets/openmoji/houses.svg',
+    'Keycap 5': '/assets/openmoji/keycap-5.svg',
+    'Keycap 6': '/assets/openmoji/keycap-6.svg',
+    'Loudspeaker': '/assets/openmoji/loudspeaker.svg',
+    'Mantelpiece clock': '/assets/openmoji/mantelpiece-clock.svg',
+    'Military medal': '/assets/openmoji/military-medal.svg',
+    'Mosque': '/assets/openmoji/mosque.svg',
+    'Package': '/assets/openmoji/package.svg',
+    'People hugging': '/assets/openmoji/people-hugging.svg',
+    'Performing arts': '/assets/openmoji/performing-arts.svg',
+    'Red heart': '/assets/openmoji/red-heart.svg',
+    'Red question mark': '/assets/openmoji/red-question-mark.svg',
+    'Relieved face': '/assets/openmoji/relieved-face.svg',
+    'Repeat button': '/assets/openmoji/repeat-button.svg',
+    'Right arrow': '/assets/openmoji/right-arrow.svg',
+    'Ring': '/assets/openmoji/ring.svg',
+    'Rock': '/assets/openmoji/rock.svg',
+    'Round pushpin': '/assets/openmoji/round-pushpin.svg',
+    'Sheaf of rice': '/assets/openmoji/sheaf-of-rice.svg',
+    'Ship': '/assets/openmoji/ship.svg',
+    'Shopping bags': '/assets/openmoji/shopping-bags.svg',
+    'Smiling face with smiling eyes': '/assets/openmoji/smiling-face-with-smiling-eyes.svg',
+    'Sparkles': '/assets/openmoji/sparkles.svg',
+    'Speaking head': '/assets/openmoji/speaking-head.svg',
+    'Star': '/assets/openmoji/star.svg',
+    'Test tube': '/assets/openmoji/test-tube.svg',
+    'Trophy': '/assets/openmoji/trophy.svg',
+    'Warning': '/assets/openmoji/warning.svg',
+    'Writing hand': '/assets/openmoji/writing-hand.svg'
   };
 
   function _pdfEmojiSrc(originalSrc) {
-    var m = /\/assets\/([^/]+)\/3D\//.exec(originalSrc);
+    // Sesetengah ikon Fluent ada segmen varian sebelum /3D/ (cth. "Writing hand"
+    // → /assets/Writing hand/Default/3D/...). Terima segmen pilihan tu, jika
+    // tidak ikon berkenaan senyap terlepas drpd peta & kekal bergantung CDN.
+    var m = /\/assets\/([^/]+)\/(?:[^/]+\/)?3D\//.exec(originalSrc);
     if (!m) return originalSrc;
     var concept = decodeURIComponent(m[1]).replace(/\+/g, ' ');
     return HZ_PDF_OPENMOJI_MAP[concept] || originalSrc;
@@ -4035,9 +4094,15 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       '#zym-pr .zp-acc-hd{display:flex;align-items:center;gap:7px;padding:5px 9px;background:#f4f4ff;border-bottom:1px solid #e0e0ef}',
       '#zym-pr .zp-acc-num{font-family:"Patrick Hand",Fredoka,sans-serif;font-size:11.5px;font-weight:400;color:#4f46e5;min-width:20px;height:20px;line-height:1;background:#ede9fe;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}',
       '#zym-pr .zp-acc-ttl{font-family:"Patrick Hand",Fredoka,sans-serif;font-size:14.5px;font-weight:400;color:#1e1e3a;line-height:1.14;display:flex;align-items:center;flex-wrap:wrap;column-gap:.28em;row-gap:.1em}',
-      '#zym-pr .zp-acc-ttl-txt{position:relative;top:-0.26em;display:inline-block;line-height:1.06}',
-      // Teks selepas emoji (dibungkus semasa _kwHtml) — naikkan optik selari imej (html2canvas tidak sentiasa hormati :has())
-      '#zym-pr .zp-txt-up{position:relative;top:-0.32em;display:inline}',
+      // Sama spt .zp-txt-up — anjakan -0.26em ialah pampasan enjin lama, dibuang.
+      '#zym-pr .zp-acc-ttl-txt{display:inline-block;line-height:1.06}',
+      // Teks selepas emoji (dibungkus semasa _kwHtml). Dulu dinaikkan -0.32em utk
+      // "selari" dgn imej — itu pampasan utk pepijat html2canvas 1.4.1 (teks
+      // dilukis terlalu rendah). Lepas tukar ke html2canvas-pro, naikan tu jadi
+      // TERBALIK: teks terangkat lebih tinggi drpd ikon, itulah aduan "emoji tak
+      // betul-betul di tengah garisan huruf". Kekalkan pembalut (struktur DOM
+      // dikongsi logik lain) tapi TANPA anjakan.
+      '#zym-pr .zp-txt-up{display:inline}',
       '#zym-pr .zp-acc-body{padding:5px 9px}',
       '#zym-pr .zp-acc-body > p.zp-p{margin:2px 0 5px;line-height:1.46}',
       '#zym-pr .zp-acc-body > p.zp-ph{margin:3px 0 3px}',
@@ -4084,7 +4149,12 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       '#zym-pr .zpkw-istilah{color:#1b736d;background:#bcf9f5}',
       '#zym-pr .zpkw-karya{color:#1b5c73;background:#bce9f9}',
       // Saiz 1em; imej duduk sedikit lebih rendah berbanding rentak teks yang dibungkus .zp-txt-up
-      '#zym-pr .zp-emoji{display:inline-block;width:1em;height:1em;vertical-align:middle;margin:0 .24em 0 0;object-fit:contain;flex-shrink:0;line-height:1;position:relative;top:0.06em}',
+      // Saiz 1.3em (dulu 1em — pengguna lapor ikon "terlalu kecil"). `top` nudge
+      // LAMA (0.06em) DIBUANG: ia sebahagian pampasan utk enjin html2canvas 1.4.1
+      // yg melukis teks terlalu rendah; lepas tukar ke html2canvas-pro,
+      // `vertical-align:middle` sendiri sudah letak ikon betul-betul di tengah
+      // garisan huruf. Rujuk §"Eksport PDF" dlm CLAUDE.md.
+      '#zym-pr .zp-emoji{display:inline-block;width:1.3em;height:1.3em;vertical-align:middle;margin:0 .24em 0 0;object-fit:contain;flex-shrink:0;line-height:1}',
     ];
     if (isEco) {
       rules.push(
@@ -6292,7 +6362,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=541').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=542').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
