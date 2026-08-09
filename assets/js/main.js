@@ -3961,6 +3961,17 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     return HZ_PDF_OPENMOJI_MAP[concept] || originalSrc;
   }
 
+  // Bendera negara — PDF SAHAJA guna bendera OpenMoji (assets/openmoji/flags/,
+  // gaya "sketchy" sepadan ikon OpenMoji lain dlm eksport PDF), nota digital
+  // KEKAL guna circle-flags asal (assets/flags/) tanpa diubah langsung — dua
+  // sumber diselenggara BERASINGAN sengaja, laluan ni cuma dipakai bila jana
+  // HTML cetak (rujuk _kwHtmlOne di bawah), tak pernah sentuh laman hidup.
+  function _pdfFlagSrc(originalSrc) {
+    var m = /\/assets\/flags\/([a-z]{2})\.svg$/i.exec(originalSrc);
+    if (!m) return originalSrc;
+    return '/assets/openmoji/flags/' + m[1].toLowerCase() + '.svg';
+  }
+
   function _kwHtmlOne(node, o) {
     o = o || {};
     if (node.nodeType === 3) return _escPdfHtml(node.textContent);
@@ -3968,10 +3979,18 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     if (node.tagName === 'IMG') {
       var src = node.getAttribute('src');
       if (!src) return '';
-      src = _pdfEmojiSrc(src);
+      // Bendera negara (/assets/flags/*.svg) dikesan drpd src ASAL SEBELUM
+      // sebarang pemetaan (bukan lepas _pdfEmojiSrc/_pdfFlagSrc — laluan tu
+      // TUKAR src, jadi semakan mesti berlaku dulu supaya kelas zp-flag betul
+      // walau URL akhir dah beza). Kelas asal `flag-icon` sendiri TAK
+      // dikekalkan (SEMUA <img> jatuh ke class="zp-emoji" tunggal), jadi
+      // pengesanan mesti drpd corak src, bukan className.
+      var isFlag = /\/assets\/flags\//.test(src);
+      src = isFlag ? _pdfFlagSrc(src) : _pdfEmojiSrc(src);
       var w = node.getAttribute('width') || (node.width ? String(node.width) : '20');
       var h = node.getAttribute('height') || (node.height ? String(node.height) : '20');
-      return '<img class="zp-emoji" src="' + _escPdfAttr(src) + '" alt="" width="' + _escPdfAttr(String(w)) + '" height="' + _escPdfAttr(String(h)) + '" decoding="async" />';
+      var imgCls = isFlag ? 'zp-emoji zp-flag' : 'zp-emoji';
+      return '<img class="' + imgCls + '" src="' + _escPdfAttr(src) + '" alt="" width="' + _escPdfAttr(String(w)) + '" height="' + _escPdfAttr(String(h)) + '" decoding="async" />';
     }
     var m = (node.className || '').match(/\bkw-(tokoh|masa|tempat|peristiwa|pertubuhan|gerakan|kerajaan|pentadbiran|perjanjian|istilah|karya)\b/);
     if (m) return '<span class="zpkw zpkw-' + m[1] + '">' + _escPdfHtml(node.textContent) + '</span>';
@@ -4022,7 +4041,17 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     var h = '';
     {
       var cls = node.className || '', tag = node.tagName;
-      if (cls.indexOf('paper-chip-list') !== -1) {
+      // <img> boleh sampai sini (bukan _kwHtml) bila ia tersarang dlm bekas
+      // pembalut generik yg tak dikenali (cth. .bloc-legend-grid dlm kad
+      // "Panduan warna pihak perang" bab-3-2.html/bab-3-3.html — span polos
+      // tiada kelas dikenali, jatuh ke fallback else di bawah). Tiada cabang
+      // IMG di sini sblm ni (hanya _kwHtmlOne ada) — img yg sampai fallback
+      // `_bodyHtml(node)` pulang kosong (img tiada anak), bendera/ikon hilang
+      // senyap drpd PDF. Delegasi ke _kwHtmlOne (logik IMG SAMA, termasuk
+      // pengesanan bendera _pdfFlagSrc) betulkan tanpa duplikasi logik.
+      if (tag === 'IMG') {
+        h += _kwHtmlOne(node);
+      } else if (cls.indexOf('paper-chip-list') !== -1) {
         var hasSentence = node.querySelector('.paper-chip-sentence') !== null;
         if (hasSentence) {
           node.querySelectorAll('.paper-chip').forEach(function(c) {
@@ -4524,6 +4553,19 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       // `vertical-align:middle` sendiri sudah letak ikon betul-betul di tengah
       // garisan huruf. Rujuk §"Eksport PDF" dlm CLAUDE.md.
       '#zym-pr .zp-emoji{display:inline-block;width:1.3em;height:1.3em;vertical-align:middle;margin:0 .24em 0 0;object-fit:contain;flex-shrink:0;line-height:1}',
+      // Bendera negara — PDF SAHAJA guna bendera OpenMoji (assets/openmoji/flags/,
+      // gaya "sketchy" sepadan ikon OpenMoji lain dlm eksport PDF; nota digital
+      // KEKAL guna circle-flags bulat assets/flags/ tanpa diubah — rujuk
+      // _pdfFlagSrc di atas). SVG OpenMoji flag SEMUA kongsi struktur sama
+      // (viewBox 72x72, jalur bendera sebenar pd rect x=5,y=17,w=62,h=38 — padding
+      // di sekeliling utk grid emoji Unicode). object-fit:cover pd nisbah
+      // 1.375:1 (lebar:tinggi) dipilih khusus supaya "tetingkap" crop yg terhasil
+      // (~9.8–62.2 dlm koordinat SVG asal, drpd kiraan cover std) MELIPUTI SEPENUHNYA
+      // rect jalur bendera (17–55) tanpa modify SVG sumber — badge segi empat
+      // bersih tanpa padding kosong kelabu di tepi. object-fit:contain drpd
+      // .zp-emoji asas DIGANTIKAN cover di sini sbb tujuan lain (isi penuh
+      // ruang badge, bukan muat penuh imej).
+      '#zym-pr .zp-flag{width:1.375em;height:1em;object-fit:cover;object-position:center;border-radius:.16em;box-shadow:0 0 0 .06em rgba(255,255,255,0.95),.04em .04em 0 .03em rgba(79,70,229,0.4),-.03em -.03em 0 .03em rgba(79,70,229,0.22),0 .06em .18em rgba(15,23,42,0.25)}',
     ];
     if (isEco) {
       rules.push(
@@ -6841,7 +6883,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=554').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=555').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });

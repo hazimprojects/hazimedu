@@ -1341,6 +1341,81 @@ touchEnd, BUKAN `page.click()` pd butang carousel) utk sahkan ciri
 swipe — ujian berasaskan klik akan TERLEPAS kelas bug scroll-chaining
 sebegini sepenuhnya.
 
+## Eksport PDF — Bendera Negara guna OpenMoji, PDF SAHAJA (bukan nota digital)
+
+Pengguna cadang bendera dlm PDF tukar drpd circle-flags (bulat, sumber
+sedia ada §"Bendera Negara" atas) kpd OpenMoji (sepadan gaya ikon
+OpenMoji lain dlm eksport PDF), gaya lencana ditukar dari bulat ke
+segi empat "sketchy". **Skop DIHADKAN KETAT kpd PDF sahaja** — nota
+digital (`notes/*.html`, `assets/flags/*.svg`, `.flag-icon` CSS dlm
+`fluent-shell-emoji.css`) KEKAL circle-flags bulat TANPA DIUBAH
+langsung (pengguna sahkan eksplisit selepas percubaan awal tersalah
+skop site-wide: "tukar kepada bendera openmoji di pdf saja. bukan
+nota digital"). Aset OpenMoji bendera BAHARU (45 fail, drpd hexcode
+Unicode regional-indicator dikira drpd kod ISO2 — `0x1F1E6 +
+(huruf-'A')` setiap huruf) disimpan BERASINGAN di
+`assets/openmoji/flags/<kod-iso2>.svg` (bukan gantikan
+`assets/flags/`), diliputi lesen sedia ada `assets/openmoji/
+LICENSE.md` (CC BY-SA 4.0, sama drpd 166 ikon OpenMoji lain).
+
+**Pemetaan & CSS PDF-sahaja** (`assets/js/main.js`): `_pdfFlagSrc()`
+(lepas `_pdfEmojiSrc()`) petakan `/assets/flags/<kod>.svg` →
+`/assets/openmoji/flags/<kod>.svg`. `_kwHtmlOne()`'s cabang IMG semak
+`isFlag = /\/assets\/flags\//.test(src)` pd src ASAL SEBELUM sebarang
+pemetaan (bukan lepas), sbb laluan pemetaan TUKAR src — semakan lewat
+akan gagal padan corak asal. Kelas `flag-icon` sendiri TAK dikekalkan
+dlm output PDF (semua `<img>` jatuh ke `class="zp-emoji"` tunggal),
+jadi pengesanan MESTI drpd corak src, bukan className. `<img
+class="zp-emoji zp-flag">` (kelas tambahan bila isFlag) dpt CSS
+`object-fit:cover` nisbah 1.375:1 (lebar:tinggi) + border-radius +
+box-shadow berlapis (rujuk `_getPrintCss()`) — SVG OpenMoji bendera
+semua kongsi struktur SAMA (viewBox 72×72, jalur bendera sebenar pd
+rect x=5,y=17,w=62,h=38, padding sekeliling drpd grid emoji Unicode),
+jadi nisbah crop 1.375:1 ni universal merentas kesemua 45 bendera
+tanpa perlu ubah SVG sumber satu-satu.
+
+**Tiada kod rasterisasi/CORS tambahan diperlukan** — pipeline sedia
+ada `_pdfInlineImages()` (fetch setiap `<img class="zp-emoji">` →
+`data:` URI, raster SVG→PNG 96px) beroperasi generik atas SEMUA
+`.zp-emoji`, jadi bendera (yg SENTIASA bawa kelas `zp-emoji` SERTA
+`zp-flag`, bukan ganti) automatik ikut laluan sama tanpa kod baharu —
+disahkan empirik (`src` akhir kesemua bendera cetak ialah
+`data:image/png;base64,...`).
+
+**Bug SEBENAR ditemui semasa sahkan ciri ni**: `_bodyHtmlNode()`
+(fungsi laluan KEDUA drpd `_kwHtmlOne()` — dipakai bila `<img>`
+tersarang dlm bekas pembalut generik yg tak dikenali mana-mana
+cabang, cth. `<div class="bloc-legend-grid">` dlm kad "Panduan warna
+pihak perang" bab-3-2.html/bab-3-3.html) TIADA cabang IMG langsung
+sblm ni — `<img>` yg sampai ke fallback terakhirnya (`h +=
+_bodyHtml(node)`) pulang STRING KOSONG (img tiada anak nod), bendera
+hilang senyap drpd PDF. Ni bug SEDIA ADA (bukan disebabkan ciri
+bendera ni — akan jejaskan ikon emoji biasa jugak kalau tersarang
+serupa), ditemui secara kebetulan semasa audit menyeluruh (bandingkan
+kiraan `img.flag-icon` sumber vs kiraan `.zp-flag` PDF merentas 12
+halaman, disahkan Playwright + monkey-patch `window.fetch`/
+`html2canvas`). Fix: tambah cabang `if (tag === 'IMG') { h +=
+_kwHtmlOne(node); }` di awal `_bodyHtmlNode()` — delegasi ke logik
+IMG SAMA drpd `_kwHtmlOne` (termasuk pengesanan bendera), elak
+duplikasi.
+
+**Kiraan bendera "kurang" yg BAKI (5 halaman diuji, `bab-2-3`,
+`bab-2-4`, `bab-3-2`, `bab-3-3`, `bab-6-1`) SELEPAS fix di atas — SEMUA
+dah disahkan bukan bug, drpd pengecualian sedia ada TAK berkaitan
+bendera langsung**: (1) bendera dlm kad "Fokus X.Y"
+(`.paper-kingdom`) — kad Fokus SELURUHNYA digugurkan drpd PDF
+(§"skop kandungan SENGAJA beza" atas, dokumentasi sedia ada); (2)
+bendera dlm `.paper-accordion-no` (ikon di HADAPAN tajuk pencetus
+accordion) — header accordion cetak HANYA tarik teks
+`.paper-accordion-title`, bukan seluruh kandungan pencetus (gelagat
+generik SEDIA ADA, bukan khusus bendera — ikon lain yg diletak sana
+pun sama nasib). Disahkan via klasifikasi Playwright penuh
+(`img.closest('.paper-kingdom')`/`.closest('[data-cv-title^=Fokus]')`
+& `.closest('.paper-accordion-no')`) merentas kelima-lima halaman:
+kiraan "OTHER" (bukan Fokus, bukan accordion-no) SAMA PERSIS/lebih
+drpd kiraan cetak sebenar pd setiap halaman & setiap kod negara —
+SIFAR kehilangan bendera sebenar yg tak dijangka selepas fix.
+
 ## Aliran Kerja Versioning Aset (WAJIB lepas ubah CSS/JS/sw.js)
 
 Sumber kebenaran versi: `data/asset-versions.json`. Lepas ubah
