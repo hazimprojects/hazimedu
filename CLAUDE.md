@@ -1122,6 +1122,36 @@ programatik tak terjejas `overflow-x:hidden` (cuma sekat
 scroll/seret DIPACU PENGGUNA), jadi navigasi jelas via butang tetap
 tersedia tanpa gantung pd status zum.
 
+**AWAS — `overflow:auto` pd `.zym-pdf-page-canvas-wrap` MESTI skop
+`.zp-zoomed` sahaja, JANGAN letak dlm rule ASAS.** Versi awal ciri
+zum letak `overflow:auto` + `overscroll-behavior:contain` terus pd
+rule asas `.zym-pdf-page-canvas-wrap` (bukan sekadar rule `.zp-zoomed`
+yg sedia ada) — nampak tak berbahaya (bekas tiada overflow SEBENAR pd
+zoom=100%, imej muat penuh dlm `max-height`), tapi PECAHKAN swipe
+carousel SEPENUHNYA walau pd 100%. Puncanya: `overflow:auto` sahaja
+(tanpa overflow sebenar) dah cukup tandakan elemen tu "boleh tatal"
+kpd pelayar, & `overscroll-behavior:contain` SEKAT rantaian tatal
+(scroll chaining) drpd bekas dalaman ni ke carousel induk
+(`#zym-pdf-pages`) — gerak isyarat swipe mendatar "ditelan" senyap
+oleh bekas dalaman (yg tiada apa utk ditatal) sebelum sempat sampai
+ke carousel utk tukar muka surat. Dilaporkan pengguna: "swipe sentuh
+di pdf masih tak boleh alih ke page lain walaupun dah 100%" — disahkan
+via Playwright + CDP `Input.dispatchTouchEvent` (simulasi swipe
+sejari sebenar, BUKAN klik butang carousel — ujian klik butang
+`scrollLeft` terus via JS TAK dedah bug ni, sbb `element.scrollLeft`
+programatik tak terjejas `overscroll-behavior`, cuma gerak isyarat
+sentuh SEBENAR yg terjejas): `scrollLeft` KEKAL 0 lepas swipe
+sebelum fix, berubah betul (0→390) lepas `overflow:auto`/
+`-webkit-overflow-scrolling:touch`/`overscroll-behavior:contain`
+dipindah drpd rule asas ke rule `#zym-pdf-pages.zp-zoomed
+.zym-pdf-page-canvas-wrap` SAHAJA (bekas kekal `overflow:visible`
+lalai pd 100%, jadi swipe mendatar terus sampai ke carousel tanpa
+disekat). **Nota ujian**: guna teknik simulasi sentuhan sebenar
+(CDP `Input.dispatchTouchEvent` dgn urutan touchStart/touchMove/
+touchEnd, BUKAN `page.click()` pd butang carousel) utk sahkan ciri
+swipe — ujian berasaskan klik akan TERLEPAS kelas bug scroll-chaining
+sebegini sepenuhnya.
+
 ## Aliran Kerja Versioning Aset (WAJIB lepas ubah CSS/JS/sw.js)
 
 Sumber kebenaran versi: `data/asset-versions.json`. Lepas ubah
