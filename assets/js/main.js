@@ -4833,11 +4833,31 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
               return Math.max(minY + 1, Math.min(approxY, canvas.height - 1));
             }
 
+            // AWAS — sasaran "ideal" setiap pisahan MESTI relatif drpd splitPts[s-1]
+            // SEBENAR (prevY + pxPerPage), BUKAN grid mutlak tetap (s * pxPerPage).
+            // Bila _pickPdfSplitY() tolak SELURUH blok ke lajur/muka surat seterusnya
+            // (§"Bug kotak terpotong" atas — tiada had jarak carian utk elak potong),
+            // slice SEMASA jadi lebih PENDEK drpd pxPerPage. Kalau sasaran seterusnya
+            // kekal grid mutlak (s*pxPerPage), "hutang" ketinggian yg tertinggal tu
+            // terkumpul & jarak (ideal - prevY) utk slice SETERUSNYA jadi LEBIH BESAR
+            // drpd pxPerPage — tapi kanvas output setiap slice DITETAPKAN pd
+            // pxPerPage (rujuk gelung `slices` di bawah, `Math.min(srcH, pxPerPage)`),
+            // jadi lebihan tu SENYAP tak dilukis pd mana-mana muka surat — KANDUNGAN
+            // HILANG TERUS (bukan sekadar ruang kosong terbuang). Disahkan pengguna
+            // (tangkapan skrin bab-2-3.html: item accordion "Dr. Sun Yat Sen dan Tiga
+            // Prinsip Rakyat" hilang terus drpd PDF, tiada pd mana-mana muka surat).
+            // Fix: sasaran relatif (prevY + pxPerPage) pastikan SETIAP slice individu
+            // tak pernah lebih tinggi drpd pxPerPage tak kira berapa byk "tolakan
+            // blok" berlaku sebelumnya — bilangan slice jadi DINAMIK (gelung while
+            // sehingga sampai penghujung kanvas), bukan kiraan tetap `numPages`
+            // dikira awal (anggaran tu cuma titik mula, boleh kurang tepat bila
+            // byk blok besar ditolak, perlukan lebih byk slice drpd anggaran asal).
             var splitPts = [0];
             var minGapPx = Math.min(Math.round(pxPerPage * 0.055), 72);
-            for (var s = 1; s < numPages; s++) {
-              var ideal = Math.round(s * pxPerPage);
-              var prevY = splitPts[s - 1];
+            while (splitPts[splitPts.length - 1] < canvas.height - 1) {
+              var prevY = splitPts[splitPts.length - 1];
+              var ideal = prevY + pxPerPage;
+              if (ideal >= canvas.height) break;
               var minY = Math.min(prevY + minGapPx, ideal - 6);
               if (minY >= ideal) minY = prevY + 40;
               var yPick = _pickPdfSplitY(ideal, blockRanges, minY);
@@ -4845,6 +4865,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
               splitPts.push(yPick);
             }
             splitPts.push(canvas.height);
+            numPages = splitPts.length - 1;
 
             // "slices" = satu lajur (mod 2 lajur) ATAU satu muka surat penuh (mod
             // 1 lajur, spt asal) — kedua-dua kes budget tinggi sama (pxPerPage).
@@ -6748,7 +6769,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=552').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=553').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
