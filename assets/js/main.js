@@ -3963,6 +3963,14 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       '#zym-pr .zp-subtopik{display:flex;align-items:center;font-size:9.5px;color:#6b7280;letter-spacing:.1em;text-transform:uppercase;margin:4px 0 5px;line-height:1.2;min-height:18px}',
       '#zym-pr h1.zp-title{font-family:"Patrick Hand",Fredoka,sans-serif;display:flex;flex-wrap:wrap;align-items:center;column-gap:.35em;row-gap:.12em;font-size:25px;font-weight:400;color:#1e1e3a;line-height:1.25;margin:0 0 6px}',
       '#zym-pr .zp-desc{font-size:12px;color:#4a4a6a;margin:0;line-height:1.5}',
+      // Kesan "lakar dua kali" — lapisan sempadan kedua sedikit berputar/beranjak drpd
+      // sempadan sebenar (border-color:inherit ikut warna kontekstual box), simulasi
+      // garisan tangan yg tak pernah tepat sama bila dilukis ulang (spt gaya rough.js/
+      // Excalidraw). border-image/SVG filter dielakkan (html2canvas tak sokong dgn
+      // baik) — teknik ni cuma border+transform asas, disahkan selamat utk capture.
+      '#zym-pr .zp-board,#zym-pr .zp-flap,#zym-pr .zp-acc,#zym-pr .zp-tl-card{position:relative}',
+      '#zym-pr .zp-board::after,#zym-pr .zp-flap::after,#zym-pr .zp-acc::after,#zym-pr .zp-tl-card::after{content:"";position:absolute;inset:1.5px;border:1px solid;border-color:inherit;border-radius:inherit;opacity:.55;transform:rotate(-0.45deg) scale(1.006);pointer-events:none}',
+      '#zym-pr .zp-board::before,#zym-pr .zp-flap::before,#zym-pr .zp-acc::before,#zym-pr .zp-tl-card::before{content:"";position:absolute;inset:1.5px;border:1px solid;border-color:inherit;border-radius:inherit;opacity:.4;transform:rotate(0.35deg) scale(0.994);pointer-events:none}',
       // Boards — padding & margin lebih selesa (elak teks “tersepit” dengan sempadan)
       '#zym-pr .zp-board{border:1.5px solid;border-left-width:4px;border-radius:2px 12px 9px 3px/9px 8px 12px 6px;padding:9px 13px;margin-bottom:7px;background:#fafaff;break-inside:avoid;page-break-inside:avoid}',
       '#zym-pr .zp-board-lbl{font-family:"Patrick Hand",Fredoka,sans-serif;display:flex;align-items:center;min-height:20px;font-size:10.5px;font-weight:400;letter-spacing:.03em;text-transform:uppercase;margin-bottom:7px;line-height:1.08}',
@@ -4172,6 +4180,36 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
         ]).then(fn, fn);
       }
 
+      // Ikon emoji (Fluent CDN & OpenMoji self-host) dimasukkan terus via innerHTML
+      // sejurus sebelum capture — html2canvas cuba muat semula/proses imej sendiri,
+      // tapi tak boleh dipercayai sepenuhnya (imej silang-asal & SVG kekadang senyap
+      // gagal dilukis kalau belum betul2 "complete" semasa snapshot bermula). Tunggu
+      // SETIAP <img class="zp-emoji"> load/error dulu (bukan sekadar timeout renjis)
+      // — elak ikon kosong dlm PDF akhir.
+      function _pdfWaitImages(fn) {
+        var imgs = container.querySelectorAll('img.zp-emoji');
+        if (!imgs.length) { fn(); return; }
+        var pending = imgs.length;
+        var settled = false;
+        function _settle() {
+          if (settled) return;
+          settled = true;
+          fn();
+        }
+        function _onOne() {
+          pending--;
+          if (pending <= 0) _settle();
+        }
+        for (var i = 0; i < imgs.length; i++) {
+          var img = imgs[i];
+          if (img.complete) { _onOne(); continue; }
+          img.addEventListener('load', _onOne, { once: true });
+          img.addEventListener('error', _onOne, { once: true });
+        }
+        setTimeout(_settle, 8000);
+      }
+
+      _pdfWaitImages(function() {
       _pdfWaitFonts(function() {
       requestAnimationFrame(function() {
         requestAnimationFrame(function() {
@@ -4328,6 +4366,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
             });
           }).catch(function(e) { _cleanup(); cb(e); });
         });
+      });
       });
       });
     });
@@ -6090,7 +6129,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=537').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=538').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
