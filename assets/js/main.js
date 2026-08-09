@@ -3278,9 +3278,22 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     '.zym-pdf-page-hdr{display:flex;align-items:center;justify-content:space-between;padding:5px 9px;border-bottom:0.5px solid #d4d4e8;font-family:Fredoka,sans-serif}',
     '.zym-pdf-page-hdr-l{font-size:0.65rem;font-weight:700;color:#6060a0}',
     '.zym-pdf-page-hdr-r{font-size:0.57rem;color:#b0b0cc;max-width:55%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;text-align:right}',
-    '.zym-pdf-page-canvas-wrap{display:flex;align-items:center;justify-content:center;background:#fff;min-height:0;max-height:min(72vh,calc(100dvh - 210px));overflow:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}',
+    '.zym-pdf-page-canvas-wrap{display:flex;align-items:center;justify-content:center;background:#fff;min-height:0;max-height:min(72vh,calc(100dvh - 210px))}',
     '.zym-pdf-page-canvas-wrap img{display:block;max-width:100%;max-height:min(72vh,calc(100dvh - 210px));width:auto;height:auto;object-fit:contain;border:0}',
-    '#zym-pdf-pages.zp-zoomed .zym-pdf-page-canvas-wrap{align-items:flex-start;justify-content:flex-start}',
+    // overflow:auto (+ overscroll-behavior:contain) HANYA bila di-zum — bukan
+    // rule asas. Sebab: overflow:auto pd bekas ni, walau TIADA overflow
+    // SEBENAR pd zoom=100% (imej muat penuh dlm max-height), tetap ditanda
+    // pelayar sbg "elemen boleh tatal", & overscroll-behavior:contain
+    // SEKAT rantaian tatal (scroll chaining) drpd sampai ke carousel induk
+    // (#zym-pdf-pages) — swipe sentuh mendatar pd 100% "ditelan" senyap oleh
+    // bekas dalaman ni (tiada apa berlaku, sbb tiada overflow utk ditatal)
+    // tanpa sempat sampai ke carousel utk tukar muka surat. Punca SEBENAR
+    // aduan pengguna "swipe di PDF tak boleh alih ke page lain walaupun dah
+    // 100%". Fix: skop overflow:auto/-webkit-overflow-scrolling/
+    // overscroll-behavior kpd `.zp-zoomed` sahaja (bila imej sebenarnya
+    // lebih besar drpd bekas & perlu ditatal dalaman) — pd 100%, bekas
+    // KEKAL tanpa overflow, jadi swipe mendatar terus sampai ke carousel.
+    '#zym-pdf-pages.zp-zoomed .zym-pdf-page-canvas-wrap{align-items:flex-start;justify-content:flex-start;overflow:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}',
     '#zym-pdf-pages.zp-zoomed .zym-pdf-page-canvas-wrap img{max-width:none;max-height:none}',
     '#zym-pdf-zoom-ctrl{position:absolute;left:50%;bottom:10px;transform:translateX(-50%);z-index:4;display:flex;align-items:center;gap:2px;background:rgba(15,23,42,0.72);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);border-radius:999px;padding:4px;box-shadow:0 2px 12px rgba(0,0,0,0.35)}',
     '#zym-pdf-zoom-out,#zym-pdf-zoom-in{width:30px;height:30px;border-radius:50%;border:none;background:transparent;color:#e2e8f0;font-size:1.1rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.15s}',
@@ -6713,7 +6726,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=549').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=550').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
