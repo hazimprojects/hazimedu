@@ -4050,7 +4050,27 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     h += '</div>';
     return h;
   }
-  function _getPrintCss(mode) {
+
+  // Susun atur 2 lajur PDF — mudah lipat 2 & guna ruang kosong dgn bijak
+  // (pelajar Bab 1 sudah biasa dgn format ni drpd nota Scribd/rujukan luar).
+  // Skop DIHADKAN ke Bab 1 sahaja (data-driven, belum disahkan pd bab lain);
+  // bab lain kekal 1 lajur asal tanpa apa-apa perubahan.
+  //
+  // Geometri (mesti SAMA antara CSS lebar kontena & pengiraan kanvas JS —
+  // kedua-duanya guna ketumpatan asal 794px/186mm):
+  //   cW (lebar kandungan penuh) = 186mm (pageW210 - mLeft12 - mRight12)
+  //   PDF_2COL_GUTTER_MM = 6mm (jurang tengah, jadi garis lipatan)
+  //   colWidthMm = (186 - 6) / 2 = 90mm setiap lajur
+  var PDF_2COL_GUTTER_MM = 6;
+  var PDF_2COL_COL_WIDTH_MM = (186 - PDF_2COL_GUTTER_MM) / 2;
+  var PDF_BASE_DENSITY = 794 / 186; // container-px per mm (kekal utk 1 & 2 lajur)
+  var PDF_2COL_COL_WIDTH_PX = Math.round(PDF_2COL_COL_WIDTH_MM * PDF_BASE_DENSITY);
+
+  function _pdfIsTwoColumnScope() {
+    return /\/notes\/bab-1(-\d+)?\.html$/i.test(window.location.pathname);
+  }
+
+  function _getPrintCss(mode, twoCol) {
     var isEco = mode === 'eco';
     var rules = [
       // Fon lakaran tangan (Patrick Hand, self-host — SIL OFL 1.1, rujuk
@@ -4058,8 +4078,11 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       // Fredoka (kekal senang baca pd saiz kecil PDF).
       '@font-face{font-family:"Patrick Hand";font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/patrick-hand.woff2) format("woff2")}',
       '#zym-pr,#zym-pr *{box-sizing:border-box;font-family:Fredoka,sans-serif}',
-      '#zym-pr{position:fixed;left:-9999px;top:0;width:794px;background:#fff;font-size:13.5px;color:#1a1a3a;line-height:1.48;z-index:-9999;pointer-events:none}',
-      '#zym-pr .zp-page{padding:0 34px 26px}',
+      '#zym-pr{position:fixed;left:-9999px;top:0;width:' + (twoCol ? PDF_2COL_COL_WIDTH_PX : 794) + 'px;background:#fff;font-size:13.5px;color:#1a1a3a;line-height:1.48;z-index:-9999;pointer-events:none}',
+      // Padding sisi dikecilkan drastik utk mod 2 lajur (34px→14px) — pd lebar
+      // lajur sempit (~384px), padding asal makan ~18% ruang berbanding ~8.6%
+      // pd 1 lajur; kekalkan nisbah kandungan-vs-padding yg setanding.
+      '#zym-pr .zp-page{padding:' + (twoCol ? '0 14px 18px' : '0 34px 26px') + '}',
       // Hero
       '#zym-pr .zp-hero{padding:16px 0 12px;border-bottom:2px solid #4f46e5;margin-bottom:12px;break-inside:avoid;page-break-inside:avoid}',
       '#zym-pr .zp-chapter-lbl{font-family:"Patrick Hand",Fredoka,sans-serif;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:400;color:#fff;background:#4f46e5;padding:5px 12px;border-radius:40% 45% 42% 48%/55% 40% 55% 45%;letter-spacing:.03em;text-transform:uppercase;margin-bottom:6px;line-height:1;min-height:22px}',
@@ -4130,7 +4153,6 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       '#zym-pr p.zp-p{font-size:12.5px;color:#3a3a5a;margin:4px 0 7px;line-height:1.52}',
       '#zym-pr p.zp-ph{font-size:13px;font-weight:700;color:#1a1a3a;margin:6px 0 5px;line-height:1.32}',
       '#zym-pr p.zp-sentence{font-size:12.5px;color:#3a3a5a;margin:5px 0;padding:6px 11px;border-left:3px solid #c7d2fe;line-height:1.55}',
-      // Kata kunci — penyerlah: inline-block + translateY supaya latar selari Fredoka/html2canvas
       // Kata kunci — penyerlah gaya <mark> PIAWAI (background+padding+border-radius
       // sahaja, TIADA display:inline-block/vertical-align/transform). Versi lama guna
       // kombinasi inline-block+vertical-align:text-bottom+translateY utk selari latar
@@ -4138,7 +4160,18 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       // sebenar bug "highlight terapung jauh di atas teks" dilaporkan pengguna (PDF
       // sebenar, bukan sekadar offset px kecil). Teknik inline biasa jauh lebih selamat
       // sbb latar dilukis terus di belakang aliran teks tanpa perlu kira semula posisi.
-      '#zym-pr .zpkw{padding:0.08em 0.3em;border-radius:38% 42% 40% 44%/46% 40% 48% 42%;font-size:inherit;font-weight:700;-webkit-box-decoration-break:clone;box-decoration-break:clone;-webkit-print-color-adjust:exact;print-color-adjust:exact}',
+      //
+      // white-space:nowrap WAJIB (disahkan via mod 2 lajur, lebar kolum sempit ~300px):
+      // bila frasa BERBILANG PERKATAAN yg diserlah (cth. "Alam Melayu") terpaksa pisah
+      // PERTENGAHAN frasa merentas baris (box-decoration-break:clone cuba cetak 2
+      // serpihan latar bulat berasingan), html2canvas-pro GAGAL — hasilkan blob latar
+      // meleret merentasi SELURUH baki lebar baris & TELAN teks biasa di sekelilingnya
+      // (disahkan piksel demi piksel; frasa PENDEK/tak wrap tak terjejas). nowrap paksa
+      // seluruh frasa berpindah SEKALI GUS ke baris seterusnya (tak pernah pisah
+      // pertengahan), elak senario box-decoration-break yg rapuh ni terus. Frasa
+      // terpanjang di korpus Bab 1 (~36 aksara) diukur ~257px — muat selesa dlm lebar
+      // kolum ~300-330px, jadi nowrap tak sepatutnya sebabkan limpahan.
+      '#zym-pr .zpkw{padding:0.08em 0.3em;border-radius:38% 42% 40% 44%/46% 40% 48% 42%;font-size:inherit;font-weight:700;white-space:nowrap;-webkit-print-color-adjust:exact;print-color-adjust:exact}',
       '#zym-pr .zpkw-tokoh{color:#731b25;background:#f9bcc4}',
       '#zym-pr .zpkw-masa{color:#1b3573;background:#bccff9}',
       '#zym-pr .zpkw-tempat{color:#1b7338;background:#bcf9d1}',
@@ -4160,7 +4193,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     ];
     if (isEco) {
       rules.push(
-        '#zym-pr.zp-mode-eco .zpkw,#zym-pr.zp-mode-eco [class*="zpkw-"]{color:#1e293b!important;font-weight:700!important;padding:0.08em 0.3em!important;border-radius:38% 42% 40% 44%/46% 40% 48% 42%!important;background:rgba(241,245,249,0.95)!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}',
+        '#zym-pr.zp-mode-eco .zpkw,#zym-pr.zp-mode-eco [class*="zpkw-"]{color:#1e293b!important;font-weight:700!important;padding:0.08em 0.3em!important;border-radius:38% 42% 40% 44%/46% 40% 48% 42%!important;white-space:nowrap!important;background:rgba(241,245,249,0.95)!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}',
         '#zym-pr.zp-mode-eco .zp-chapter-lbl,#zym-pr.zp-mode-eco .zp-section-badge{background:#4b5563!important;color:#fff!important}',
         '#zym-pr.zp-mode-eco .zp-hero{border-bottom-color:#9ca3af!important}',
         '#zym-pr.zp-mode-eco .zp-subtopik{color:#52525b!important}',
@@ -4263,6 +4296,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     var mainEl = document.querySelector('main.note-reading-main');
     if (!mainEl) { cb(new Error('Tiada kandungan nota')); return; }
     var savedScrollY = window.scrollY || window.pageYOffset || 0;
+    var twoCol = _pdfIsTwoColumnScope();
 
     _ensureLibs(function(err) {
       if (err) { cb(err); return; }
@@ -4270,7 +4304,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       // Inject scoped CSS for the print renderer
       var cssEl = document.createElement('style');
       cssEl.id = 'zym-pr-css';
-      cssEl.textContent = _getPrintCss(pdfMode);
+      cssEl.textContent = _getPrintCss(pdfMode, twoCol);
       document.head.appendChild(cssEl);
 
       // Build clean print container from note DOM
@@ -4405,7 +4439,14 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
             var pageW=210, pageH=297;
             var cW = pageW - mLeft - mRight;
             var cH = pageH - mTop - mBottom;
-            var pxPerMm = canvas.width / cW;
+            // Mod 2 lajur: kanvas ditangkap pd lebar SATU lajur (PDF_2COL_COL_WIDTH_MM),
+            // bukan lebar kandungan penuh — ketumpatan piksel-per-mm dikira drpd
+            // lebar lajur tu supaya "pxPerPage" di bawah mewakili budget TINGGI
+            // sama (257mm) yg dikongsi kedua-dua mod (satu lajur = satu "page";
+            // satu lajur dlm 2-lajur = separuh lebar satu "page"). Logik split-
+            // point/whiteness di bawah TAK perlu diubah langsung — ia cuma
+            // beroperasi atas budget tinggi generik, tak kisah lebar.
+            var pxPerMm = canvas.width / (twoCol ? PDF_2COL_COL_WIDTH_MM : cW);
             var pxPerPage = Math.round(cH * pxPerMm);
             var numPages = Math.ceil(canvas.height / pxPerPage);
             var ctxFull = canvas.getContext('2d');
@@ -4509,7 +4550,9 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
             }
             splitPts.push(canvas.height);
 
-            var pages = [];
+            // "slices" = satu lajur (mod 2 lajur) ATAU satu muka surat penuh (mod
+            // 1 lajur, spt asal) — kedua-dua kes budget tinggi sama (pxPerPage).
+            var slices = [];
             for (var p = 0; p < numPages; p++) {
               var srcY = splitPts[p];
               var srcH = splitPts[p + 1] - srcY;
@@ -4520,7 +4563,46 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
               pctx.fillStyle = '#ffffff';
               pctx.fillRect(0, 0, pc.width, pc.height);
               pctx.drawImage(canvas, 0, srcY, canvas.width, srcH, 0, 0, canvas.width, Math.min(srcH, pxPerPage));
-              pages.push(pc);
+              slices.push(pc);
+            }
+
+            var pages;
+            if (!twoCol) {
+              pages = slices;
+            } else {
+              // Gandingkan 2 lajur bersebelahan (kiri+kanan) ke satu kanvas muka
+              // surat penuh — langkah komposisi CANVAS 2D biasa SELEPAS capture
+              // html2canvas selesai, jadi TIADA risiko keserasian enjin (bukan
+              // guna CSS column-count yg tak boleh dipercayai dlm html2canvas).
+              // Lebar hasil (2×lajur + jurang) sepadan tepat cW*pxPerMm sbb
+              // PDF_2COL_COL_WIDTH_MM*2 + PDF_2COL_GUTTER_MM === cW (186mm).
+              var gutterPx = Math.round(PDF_2COL_GUTTER_MM * pxPerMm);
+              pages = [];
+              for (var q = 0; q < slices.length; q += 2) {
+                var left = slices[q];
+                var right = slices[q + 1] || null;
+                var pageCanvas = document.createElement('canvas');
+                pageCanvas.width = left.width * 2 + gutterPx;
+                pageCanvas.height = pxPerPage;
+                var pgCtx = pageCanvas.getContext('2d');
+                pgCtx.fillStyle = '#ffffff';
+                pgCtx.fillRect(0, 0, pageCanvas.width, pageCanvas.height);
+                pgCtx.drawImage(left, 0, 0);
+                if (right) pgCtx.drawImage(right, left.width + gutterPx, 0);
+                // Garis panduan lipat — putus-putus halus di tengah jurang, gaya
+                // sketchy selari chrome lakaran PDF (bukan garis pejal formal).
+                pgCtx.save();
+                pgCtx.strokeStyle = 'rgba(148,146,196,0.55)';
+                pgCtx.lineWidth = Math.max(1, Math.round(pxPerMm * 0.12));
+                pgCtx.setLineDash([Math.round(pxPerMm * 1.6), Math.round(pxPerMm * 1.2)]);
+                pgCtx.beginPath();
+                var foldX = left.width + gutterPx / 2;
+                pgCtx.moveTo(foldX, 0);
+                pgCtx.lineTo(foldX, pageCanvas.height);
+                pgCtx.stroke();
+                pgCtx.restore();
+                pages.push(pageCanvas);
+              }
             }
             cb(null, pages, {
               pageW: pageW,
@@ -6364,7 +6446,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=543').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=544').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
