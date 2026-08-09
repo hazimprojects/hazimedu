@@ -792,6 +792,31 @@ popover) TAK boleh disahkan visual dlm sandbox, cuma geometri/DOM
 Produksi (CDN sebenar boleh dicapai) patut render normal — SAMA CDN
 yg dah berfungsi utk beribu ikon lain di seluruh laman.
 
+## Eksport PDF — skop kandungan SENGAJA beza drpd nota digital
+
+PDF bukan gantian nota digital utk bacaan santai — ia utk bacaan
+PANTAS musim peperiksaan, jadi kandungan navigasi/swa-uji SENGAJA
+digugurkan drpd PDF (kekal penuh di nota digital web) supaya lebih
+ringkas & jimat kertas. Skop (`_renderSubChild()` dlm `_buildPrintHtml()`,
+`main.js`):
+
+- **"Soalan Utama"** (`.paper-flap-card`) — DIGUGURKAN sepenuhnya drpd
+  PDF. Nilainya swa-uji semasa bacaan santai, bukan rujukan pantas.
+- **"Fokus X.Y"** (`.paper-board` dgn `data-cv-title` bermula "Fokus")
+  — DIGUGURKAN. Ia navigasi dalaman ke seksyen yg sama-sama ada
+  beberapa inci di bawahnya dlm PDF linear yg dah lengkap — 100%
+  redundan.
+- **"Ringkasan X.Y"** & **"Rumusan Besar Bab N"** (`.paper-board`,
+  `data-cv-title` LAIN drpd "Fokus") — KEKAL. Format padat/senarai
+  pendek ni PALING sesuai utk corak bacaan-pantas exam berbanding
+  perenggan penuh dlm Bahagian.
+
+Semakan `data-cv-title` (bukan class/kandungan) sengaja dipilih sbb
+"Ringkasan"/"Rumusan Besar" & "Fokus" kedua-duanya `.paper-board` —
+tiada cara lain bezakan tanpa cek atribut ni. Kalau tambah jenis
+board baharu kelak, semak `data-cv-title` ia dulu sebelum anggap ia
+patut kekal/gugur — jangan andaikan drpd class sahaja.
+
 ## Eksport PDF — enjin `html2canvas-pro`, & SVG WAJIB diraster dulu
 
 Eksport PDF (`_generatePages()` dlm `main.js`) render sisi-klien via

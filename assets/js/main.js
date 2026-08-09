@@ -3938,15 +3938,17 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     }
     function _renderSubChild(child, h) {
       var cls = child.className || '';
+      // PDF utk bacaan pantas musim exam, bukan bacaan santai gantian nota
+      // digital — "Soalan Utama" (swa-uji) & "Fokus X.Y" (navigasi dalaman ke
+      // seksyen yg sama-sama ada di bawah, redundan dlm PDF linear) sengaja
+      // digugurkan drpd PDF supaya lebih ringkas/jimat kertas. RINGKASAN &
+      // "Rumusan Besar Bab N" KEKAL (paling sesuai utk bacaan pantas — pelajar
+      // baca tu dulu bila tergesa-gesa) — rujuk data-cv-title semakan di bawah.
+      var cvTitle = child.getAttribute && child.getAttribute('data-cv-title');
       if (cls.indexOf('paper-flap-card') !== -1) {
-        var fTop = child.querySelector('.flap-top');
-        var fQ   = child.querySelector('.point-heading');
-        var fA   = child.querySelector('.answer-paper');
-        h += '<div class="zp-flap">';
-        if (fTop) h += '<div class="zp-flap-top">' + _kwHtml(fTop) + '</div>';
-        if (fQ)   h += '<div class="zp-flap-q">' + _kwHtml(fQ) + '</div>';
-        if (fA)   h += '<div class="zp-flap-a">' + _bodyHtml(fA) + '</div>';
-        h += '</div>';
+        /* Soalan Utama — digugurkan drpd PDF, rujuk nota di atas */
+      } else if (cls.indexOf('paper-board') !== -1 && cvTitle && /^Fokus\b/.test(cvTitle)) {
+        /* Fokus X.Y — digugurkan drpd PDF, rujuk nota di atas */
       } else if (cls.indexOf('section-heading') !== -1) {
         var badge = child.querySelector('.paper-label');
         var sh2   = child.querySelector('h2');
