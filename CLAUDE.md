@@ -1037,11 +1037,15 @@ kawalan zum MANUAL berskop-terhad:
   pan-y` + `gesturestart/change/end` `preventDefault()` + `touchmove`
   berbilang-jari `preventDefault()`) KEKAL AKTIF TANPA PENGECUALIAN,
   termasuk semasa modal PDF terbuka (fungsi `hzPdfPreviewIsOpen()` &
-  kedua-dua tapak panggilannya DIBUANG). Pinch native tak lagi
-  berfungsi dlm modal — digantikan kawalan +/- di bawah.
+  kedua-dua tapak panggilannya DIBUANG). Pinch native PELAYAR tak
+  lagi berfungsi dlm modal — digantikan kawalan +/- DAN pinch
+  dua-jari SKOP-TERHAD kendiri (`_pdfInitPinch()`, rujuk bullet di
+  bawah), bukan cuma butang sahaja.
 - `_pdfApplyZoom()`/`_pdfZoomBy()`/`_pdfResetZoom()` (`main.js`, lepas
   `var _pdfCache = {...}`) urus tahap zum (`_pdfZoomLevel`, langkah
-  0.25, julat 50%–300%) via kelas `#zym-pdf-pages.zp-zoomed` + `width`
+  0.25 butang / berterusan pinch, julat **100%–300%** — 100% ialah
+  MINIMUM, bukan 50%, sbb 100% ialah "muat skrin" asal, zoom
+  SELALUNYA membesar drpd situ) via kelas `#zym-pdf-pages.zp-zoomed` + `width`
   piksel eksplisit pd SETIAP `<img>` slaid (bukan CSS `transform:scale`
   atau lebar-peratus — dua-dua berisiko "lompatan saiz" pd sempadan
   100%→101% sbb saiz semula jadi zum=1 imej dikawal `max-height`
@@ -1080,6 +1084,43 @@ kawalan zum MANUAL berskop-terhad:
   `_pdfPopulateSlides()` (semua 4 tapak panggilan) supaya tahap zum
   semasa terpakai semula pd slaid baharu (jana semula/tukar mod TAK
   reset zum pengguna).
+
+**Pinch dua-jari skop-terhad + swipe tukar muka surat HANYA pd
+100%** — susulan maklum balas pengguna: butang +/- sahaja (versi
+awal ciri ni) tak semula jadi, gerak isyarat cubit lagi biasa drpd
+kebiasaan pinch-zoom peranti. `_pdfInitPinch()` (`main.js`, lepas
+`_pdfResetZoom()`) pasang `touchstart`/`touchmove`/`touchend`/
+`touchcancel` pd `#zym-pdf-pages-viewport` SAHAJA (elemen kekal, tak
+direset oleh `pagesDiv.innerHTML=''`) — BUKAN pd `document` spt
+pinch native lama yg dibuang. Bila 2 jari dikesan, kira jarak antara
+titik sentuh (`_pdfTouchDist()`, Pythagoras), skala zum drpd nisbah
+jarak-semasa/jarak-mula × zum-mula, clamp 100%–300%, panggil
+`_pdfApplyZoom()` terus setiap `touchmove` (bukan hanya di hujung
+gerak isyarat) utk maklum balas visual masa nyata. **Kenapa handler
+skop ni TETAP jalan walau sekatan sejagat `touchmove`
+`preventDefault()` semua sentuhan berbilang-jari kekal aktif** —
+event touch bubble drpd ELEMEN SASARAN ke ATAS (target → ... →
+document), jadi listener pd `#zym-pdf-pages-viewport` (lebih dalam
+drpd `document`) SENTIASA jalan DULU sebelum listener sejagat pd
+`document` sempat `preventDefault()` — pinch skop kita kekal
+berfungsi, sekatan sejagat cuma pastikan pinch NATIVE PELAYAR (yg
+zoom seluruh viewport) tak tercetus serentak.
+
+Swipe tukar muka surat (carousel `#zym-pdf-pages`, native
+`overflow-x:auto` + `scroll-snap-type:x mandatory`) kini **HANYA
+aktif pd 100%** — rule CSS `#zym-pdf-pages.zp-zoomed{overflow-x:
+hidden;scroll-snap-type:none}` lumpuhkan carousel sepenuhnya bila
+di-zum (togol serentak dgn kelas `zp-zoomed` yg sama drpd
+`_pdfApplyZoom()`, tiada logik berasingan perlu). Sebabnya: bila
+di-zum, seret mendatar/menegak PATUT panning imej besar di dlm
+`.zym-pdf-page-canvas-wrap` (viewport dalaman `overflow:auto`
+berasingan, sedia ada) — dua gerak isyarat (pan imej vs swipe
+carousel) berlanggar kalau kedua-dua aktif serentak pd seretan
+mendatar yg sama. Butang carousel `‹`/`›` (klik eksplisit, bukan
+seret) TETAP berfungsi walau di-zum — `element.scrollLeft` set
+programatik tak terjejas `overflow-x:hidden` (cuma sekat
+scroll/seret DIPACU PENGGUNA), jadi navigasi jelas via butang tetap
+tersedia tanpa gantung pd status zum.
 
 ## Aliran Kerja Versioning Aset (WAJIB lepas ubah CSS/JS/sw.js)
 

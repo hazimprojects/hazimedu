@@ -3257,6 +3257,12 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     '#zym-pdf-close-btn:hover{background:rgba(255,255,255,0.15);color:#e2e8f0}',
     '#zym-pdf-pages-viewport{flex:1;position:relative;min-height:0;display:flex;flex-direction:column;background:#1e293b}',
     '#zym-pdf-pages{flex:1;display:flex;flex-direction:row;align-items:center;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scroll-behavior:smooth;gap:0;width:100%;scrollbar-width:thin;overscroll-behavior-x:contain}',
+    // Bila di-zum, lumpuhkan swipe tukar muka surat (carousel) sepenuhnya —
+    // seret mendatar/menegak PATUT panning imej di dlm .zym-pdf-page-canvas-wrap
+    // (overflow:auto berasingan), bukan tukar slaid. overflow-x:hidden (bukan
+    // sekadar buang scroll-snap) perlu supaya seretan tak "tersasar" sedikit
+    // ke slaid sebelah sblm ditangkap semula oleh panning imej dalaman.
+    '#zym-pdf-pages.zp-zoomed{overflow-x:hidden;scroll-snap-type:none}',
     '#zym-pdf-pages::-webkit-scrollbar{height:6px}',
     '#zym-pdf-pages::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.18);border-radius:3px}',
     '.zym-pdf-page-slide{flex:0 0 100%;width:100%;min-width:100%;max-width:100%;box-sizing:border-box;scroll-snap-align:center;scroll-snap-stop:always;display:flex;align-items:center;justify-content:center;padding:12px 44px 18px;min-height:0}',
@@ -3527,11 +3533,29 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   // seluruh modal/halaman — punca aduan pengguna thd pinch-zoom native
   // sebelum ini (relaxed touch-action, rujuk sejarah PR): ia zoom SELURUH
   // modal termasuk topbar, rosakkan susun atur. Kawalan manual +/- & label
-  // peratus (bukan gerak isyarat pinch) sengaja dipilih — lebih boleh
-  // diramal & tak berlanggar dgn sekatan zoom sejagat swipe-nav yg KEKAL
-  // aktif tanpa pengecualian.
+  // peratus KEKAL, TAMBAH pinch dua-jari skop-terhad (touchstart/touchmove
+  // pd #zym-pdf-pages-viewport SAHAJA, bukan document sejagat — rujuk blok
+  // "PDF ZOOM — PINCH" di bawah) supaya pengguna boleh cubit-zoom spt
+  // gerak isyarat biasa TANPA hidupkan semula bug "zoom seluruh modal"
+  // (sekatan zoom sejagat swipe-nav — touch-action + gesturestart +
+  // touchmove berbilang-jari document-level — KEKAL aktif tanpa
+  // pengecualian; pinch dikendali SEPENUHNYA oleh handler skop ni,
+  // preventDefault() sendiri jadi tak bergantung pd handler sejagat).
+  //
+  // Zoom MINIMUM = 100% (bukan 50%) — 100% ialah "muat skrin" asal (imej
+  // dibatas max-width/max-height kontena), zoom SELALUNYA membesar drpd
+  // situ, tak pernah mengecil lagi (elak keperluan pengguna "zoom keluar"
+  // yg jarang berguna berbanding swipe tukar muka surat pd 100%).
+  //
+  // Swipe tukar muka surat (carousel #zym-pdf-pages, overflow-x:auto +
+  // scroll-snap) HANYA aktif pd 100% (kelas zp-zoomed togol
+  // overflow-x:hidden + scroll-snap-type:none bila di-zum — rujuk CSS
+  // `#zym-pdf-pages.zp-zoomed`) — bila di-zum, seret mendatar/menegak
+  // PATUT panning imej dlm .zym-pdf-page-canvas-wrap (overflow:auto
+  // sedia ada), BUKAN tukar muka surat; dua gerak isyarat (pan imej vs
+  // swipe carousel) berlanggar kalau kedua-dua aktif serentak.
   var _pdfZoomLevel = 1;
-  var PDF_ZOOM_MIN = 0.5;
+  var PDF_ZOOM_MIN = 1;
   var PDF_ZOOM_MAX = 3;
   var PDF_ZOOM_STEP = 0.25;
 
@@ -3594,6 +3618,51 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   function _pdfResetZoom() {
     _pdfZoomLevel = 1;
     _pdfApplyZoom();
+  }
+
+  // PDF ZOOM — PINCH (dua jari, skop-terhad kpd #zym-pdf-pages-viewport)
+  //
+  // Sekatan zoom sejagat (§"Swipe Nav") preventDefault() SEMUA touchmove
+  // berbilang-jari pd document — perlu supaya pinch native pelayar tak
+  // zoom SELURUH modal (§komen atas _pdfZoomLevel). Handler skop ni
+  // dipasang pd #zym-pdf-pages-viewport (elemen kekal, TAK direset oleh
+  // pagesDiv.innerHTML='' semasa jana semula/tukar mod), lapisan dlm/luar
+  // "target → ... → document" bermakna handler ni jalan DULU (event
+  // bubble drpd target ke atas), sebelum sekatan sejagat sempat
+  // preventDefault() di peringkat document — jadi pinch tetap berfungsi,
+  // dikira & digunakan SENDIRI oleh _pdfApplyZoom(), bukan native.
+  var _pdfPinchActive = false;
+  var _pdfPinchStartDist = 0;
+  var _pdfPinchStartZoom = 1;
+
+  function _pdfTouchDist(touches) {
+    var dx = touches[0].clientX - touches[1].clientX;
+    var dy = touches[0].clientY - touches[1].clientY;
+    return Math.sqrt(dx * dx + dy * dy);
+  }
+
+  function _pdfInitPinch() {
+    var viewport = document.getElementById('zym-pdf-pages-viewport');
+    if (!viewport) return;
+    viewport.addEventListener('touchstart', function (ev) {
+      if (ev.touches.length === 2) {
+        _pdfPinchActive = true;
+        _pdfPinchStartDist = _pdfTouchDist(ev.touches);
+        _pdfPinchStartZoom = _pdfZoomLevel;
+      }
+    }, { passive: true });
+    viewport.addEventListener('touchmove', function (ev) {
+      if (!_pdfPinchActive || ev.touches.length !== 2) return;
+      ev.preventDefault();
+      if (_pdfPinchStartDist <= 0) return;
+      var scale = _pdfTouchDist(ev.touches) / _pdfPinchStartDist;
+      var next = Math.min(PDF_ZOOM_MAX, Math.max(PDF_ZOOM_MIN, _pdfPinchStartZoom * scale));
+      _pdfZoomLevel = Math.round(next * 100) / 100;
+      _pdfApplyZoom();
+    }, { passive: false });
+    function endPinch() { _pdfPinchActive = false; }
+    viewport.addEventListener('touchend', endPinch, { passive: true });
+    viewport.addEventListener('touchcancel', endPinch, { passive: true });
   }
 
   function _escPdfHtml(s) {
@@ -5230,6 +5299,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   document.getElementById('zym-pdf-refresh-btn').addEventListener('click', _pdfRegenerate);
   document.getElementById('zym-pdf-zoom-out').addEventListener('click', function() { _pdfZoomBy(-PDF_ZOOM_STEP); });
   document.getElementById('zym-pdf-zoom-in').addEventListener('click', function() { _pdfZoomBy(PDF_ZOOM_STEP); });
+  _pdfInitPinch();
   pdfOverlay.addEventListener('click', function(e) {
     var t = e.target;
     if (t && t.id === 'zym-pdf-mode-full') {
@@ -6643,7 +6713,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=548').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=549').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
