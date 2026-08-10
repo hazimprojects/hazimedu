@@ -1930,6 +1930,55 @@ TERPANJANG korpus (`bab-9-3.html`, 70 aksara) papar PENUH (tiada
 potongan) walau lebih byk baris drpd PDF sebenar (had fon, dijangka
 & diterima — bukan bug hilang maklumat).
 
+**Susulan — keputusan "kongsi teks" di atas DITARIK BALIK, header/
+footer HTML pratonton DIBUANG SEPENUHNYA.** Pengguna lapor (tangkapan
+skrin, pinch-zoom 300%) header/footer `.zym-pdf-page-hdr`/`.zym-pdf-
+page-ftr` (baris teks HTML berasingan, saiz fon TETAP) kekal pd saiz
+asal semasa imej kandungan (`<img>`, discale via `_pdfApplyZoom()`)
+membesar 3× — muka surat pratonton nampak "terpisah-pisah" bila
+di-zum (header/footer tak turut membesar bersama kandungan spt SATU
+muka surat fizikal patut berkelakuan). Arahan pengguna eksplisit:
+"saya nak buang header dan footer itu seluruhnya. hanya a4 pdf statik
+saja yang ditunjukkan sama macam preview pdf di mana mana."
+
+**Kenapa fix ni SELAMAT (bukan regresi drpd fix "kongsi teks" atas)**:
+header/footer HTML pratonton (`_pdfPopulateSlides()`) SENTIASA
+berasingan drpd PDF muat turun SEBENAR (`_savePdf()`) — dua laluan
+render BERBEZA drpd awal (satu bina elemen HTML flex utk paparan
+modal, satu lukis teks vektor `pdf.text()` terus ke fail PDF via
+jsPDF). `_pdfHeaderFooterParts()` (sumber teks kongsi) & fungsi
+`_savePdf()` itu sendiri KEKAL TIDAK DISENTUH — muat turun PDF
+SEBENAR masih ada header/footer penuh (kiri "ZymNotes/zymnotes.com",
+kanan tajuk/hakcipta, tengah nombor muka surat), sbb teks tu teks
+vektor SEBENAR dlm PDF (bukan overlay HTML), jadi ZUM native
+mana-mana pembaca PDF akan skalakannya bersama kandungan secara
+semula jadi — cuma paparan MODAL PRATONTON dlm laman (sebelum muat
+turun) yg dipermudahkan. `_pdfTitleLines()` (fungsi pengiraan titik
+lipat baris tajuk HTML, khusus utk header pratonton yg kini dibuang)
+turut dibuang sbg kod mati — tiada pemanggil lain tinggal.
+
+**Fix**: `_pdfPopulateSlides()` kini bina `.zym-pdf-page-outer` dgn
+HANYA SATU anak (`.zym-pdf-page-canvas-wrap` berisi `<img>` kandungan)
+— tiada lagi elemen `.zym-pdf-page-hdr`/`.zym-pdf-page-ftr` dicipta
+langsung. Rule CSS berkaitan (`.zym-pdf-page-hdr*`, `.zym-pdf-page-
+ftr*`, & `.zym-pdf-page-num` yg didapati kod mati sedia ada semasa
+audit ni) dibuang sekali. Bajet tinggi `.zym-pdf-page-canvas-wrap`
+(`max-height`) dilonggarkan drpd `min(72vh,calc(100dvh - 210px))` kpd
+`min(78vh,calc(100dvh - 170px))` — ruang tambahan yg terbebas drpd
+buang 2 baris header/footer diberi balik kpd imej kandungan supaya
+muka surat pratonton nampak lebih besar/jelas.
+
+Disahkan via Playwright (suntik html2canvas-pro/jspdf tempatan,
+`bab-2-2.html`): `.zym-pdf-page-hdr`/`.zym-pdf-page-ftr` kiraan DOM
+= 0 selepas buka pratonton, `.zym-pdf-page-outer` kini cuma SATU anak
+(`.zym-pdf-page-canvas-wrap`); pratonton pd 100% & 300% (lapan klik
+`#zym-pdf-zoom-in`) kedua-duanya papar HANYA kad putih berisi imej
+kandungan — SATU unit tegar yg zum seragam, tiada baris teks
+terpisah di atas/bawah lagi. Muat turun PDF SEBENAR (`_savePdf`,
+pintas `jsPDF.API.text`) disahkan MASIH lukis teks header "ZymNotes"
+spt sebelum ni — fungsi tu tidak diubah, cuma paparan modal pratonton
+yg dipermudahkan.
+
 ## Sub-tajuk `.paper-strip.strip-sub` dlm accordion — pendua DIGUGURKAN (PDF & laman hidup)
 
 Pengguna lapor (tangkapan skrin pratonton PDF `bab-2-3.html`) item
