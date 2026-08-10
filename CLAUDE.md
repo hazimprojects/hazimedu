@@ -820,6 +820,55 @@ popover) TAK boleh disahkan visual dlm sandbox, cuma geometri/DOM
 Produksi (CDN sebenar boleh dicapai) patut render normal — SAMA CDN
 yg dah berfungsi utk beribu ikon lain di seluruh laman.
 
+**Susulan — lencana ikon `.kw-glossary-badge` & cip mandiri
+`.kw-glossary-standalone-chip` DIGUGURKAN drpd eksport PDF.**
+Pengguna tunjuk tangkapan skrin berpasangan (pratonton PDF
+`bab-3-3.html` vs laman hidup): tajuk accordion "Fasisme 📖 di Itali"
+papar ikon buku lencana selepas "Fasisme" dlm KEDUA-DUA versi — betul
+di laman hidup (isyarat "boleh klik, ada popover"), TAPI janggal &
+tiada fungsi dlm PDF (dokumen linear, tak boleh klik). Pengguna
+jelaskan definisi glosari/info dlm PDF SUDAH pun disertakan sbg kad
+berasingan tak boleh klik (gelagat sedia ada — rujuk nota
+`display:none` di atas: kad asal yg disembunyi popover TETAP masuk
+PDF sbb penjana tak semak `display`), jadi lencana pd istilah dlm
+PDF jadi berlebihan/mengelirukan.
+
+Fix (`assets/js/main.js`, dua tempat):
+- `_kwHtmlOne()` (IMG branch): skip terus `<img class="kw-glossary-
+  badge">` (kembali `''`) SEBELUM logik pemetaan bendera/emoji biasa
+  — lencana ni disisip SELEPAS istilah dlm tajuk/ayat (via
+  `activateTrigger()`), jadi bila `_kwHtml` rekursif proses tajuk cth.
+  `.paper-accordion-title`, ia terjumpa lencana sbg anak biasa & akan
+  dicetak spt ikon lain kalau tak ditapis eksplisit.
+- `_bodyHtmlNode()` DAN `_renderSubChild()` (dua laluan, sama corak
+  drpd skip `.hero-actions`/`.nota-feedback` sedia ada): tambah cabang
+  `kw-glossary-standalone-chip` yg skip TERUS (kembali `h` tanpa
+  diubah). Cip mandiri (`<button>`, fallback bila istilah TIADA
+  kemunculan lain di halaman — cth. "Teluk Intan" bab-3-9.html)
+  disisip sbg SAUDARA `card.parentNode.insertBefore(chip, card)`,
+  jadi ia sampai ke laluan block-level (bukan `_kwHtml` inline) —
+  tanpa cabang ni, jatuh ke fallback generik `_bodyHtml(node)` yg (a)
+  KEKALKAN ikon (betul, via cabang IMG sedia ada) TAPI (b) HILANGKAN
+  label teksnya senyap (`_bodyHtml` cuma proses nod ELEMEN, span
+  label cip tu cuma ada SATU nod teks anak — jatuh fallback lagi,
+  nod teks tak pernah sampai `_kwHtml`) — hasil: ikon terapung tanpa
+  label dlm PDF. Kad `.glossary-paper` sumber (masih disertakan
+  berasingan, tak berubah) sudah ada label+definisi penuh, jadi cip
+  pencetus (fungsi KLIK sahaja) tiada nilai tambah dlm dokumen linear
+  — digugurkan terus, bukan cuba papar teksnya.
+
+Disahkan via Playwright merentas **25 halaman** (semua halaman
+`notes/*.html` yg ada `.glossary-paper`): kira `.kw-glossary-trigger`/
+`.kw-glossary-standalone-chip` PADA LAMAN HIDUP (selepas JS
+popover-kan jalan) vs kira baki `kw-glossary-badge`/`kw-glossary-
+standalone-chip` dlm HTML print tertangkap (`window.html2canvas`
+dipintas, baca `el.innerHTML` sblm capture sebenar) — **SIFAR baki**
+pd SEMUA halaman (termasuk `bab-3-3.html` 2 trigger & `bab-3-9.html`
+1 trigger + 1 cip mandiri), **SIFAR ralat JS**. Semakan kandungan
+(`bab-3-3.html`): tajuk accordion tercetak bersih "Fasisme di Itali"
+(teks penuh KEKAL, cuma lencana tergugur), kad glosari sumber
+("Ringkasan 3.3" & lain-lain label papan) kekal disertakan spt biasa.
+
 ## Eksport PDF — Susun Atur 2 Lajur (skop Bab 1, Bab 2 & Bab 3)
 
 Pengguna minta gaya "2 lajur" (spt nota Scribd rujukan pelajar — mudah

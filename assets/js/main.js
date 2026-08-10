@@ -4073,6 +4073,15 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     if (node.nodeType === 3) return _escPdfHtml(node.textContent);
     if (node.nodeType !== 1) return '';
     if (node.tagName === 'IMG') {
+      // Lencana kecil "kw-glossary-badge" (rujuk activateTrigger, blok
+      // GLOSARI POPOVER) disisip SELEPAS istilah dlm tajuk/ayat laman
+      // hidup utk isyarat "boleh klik, ada popover" — TIADA makna dlm
+      // PDF (linear, tak boleh klik; definisi glosari/info SUDAH
+      // disertakan sbg kad berasingan tersendiri, rujuk §"skop kandungan
+      // SENGAJA beza" & nota display:none atas). Digugurkan drpd PDF
+      // supaya tajuk cth. "Fasisme di Itali" (accordion) tak papar ikon
+      // 📖 janggal lepas "Fasisme" yg tiada fungsi dlm dokumen cetak.
+      if ((node.className || '').indexOf('kw-glossary-badge') !== -1) return '';
       var src = node.getAttribute('src');
       if (!src) return '';
       // Bendera negara (/assets/flags/*.svg) dikesan drpd src ASAL SEBELUM
@@ -4155,6 +4164,22 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       // pengesanan bendera _pdfFlagSrc) betulkan tanpa duplikasi logik.
       if (tag === 'IMG') {
         h += _kwHtmlOne(node);
+      } else if (cls.indexOf('kw-glossary-standalone-chip') !== -1) {
+        // Cip mandiri "kw-glossary-standalone-chip" (rujuk blok GLOSARI
+        // POPOVER, fallback bila istilah TIADA kemunculan lain di laman —
+        // cth. "Teluk Intan" bab-3-9.html) ialah <button> pencetus popover
+        // BERDIRI SENDIRI, digantikan drpd kad `.glossary-paper` asal
+        // (yg `display:none` tapi KEKAL dlm PDF, rujuk nota display:none
+        // §"Glosari Popover" CLAUDE.md). Tanpa cabang ni, button jatuh ke
+        // fallback generik `_bodyHtml(node)` — ikon dikekalkan (betul, via
+        // cabang IMG) TAPI label teks (`<span>` tanpa kelas dikenali)
+        // HILANG senyap (`_bodyHtml` skip nod bukan-elemen, span tu cuma
+        // ada 1 nod teks anak, jadi jatuh ke fallback lagi & teksnya
+        // tak pernah sampai `_kwHtml`) — hasilkan ikon terapung tanpa
+        // label dlm PDF. Kad sumber (glossary-paper) yg masih disertakan
+        // berasingan SUDAH ada label+definisi penuh, jadi cip pencetus
+        // ni (fungsi klik SAHAJA, tiada nilai tambah dlm dokumen linear)
+        // digugurkan terus — bukan cuba paparkan teksnya di sini.
       } else if (cls.indexOf('paper-strip') !== -1) {
         // .paper-strip yg sampai SINI (bukan dilalui _renderBoard punya
         // querySelector('.paper-strip') sendiri, yg hanya tarik STRIP
@@ -4511,6 +4536,9 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
         });
       } else if (cls.indexOf('hero-actions') !== -1) {
         /* butang navigasi bawah halaman — tiada dalam PDF */
+      } else if (cls.indexOf('kw-glossary-standalone-chip') !== -1) {
+        /* Cip pencetus popover mandiri — rujuk nota sepadan _bodyHtmlNode; kad
+           glosari sumber (masih disertakan berasingan) sudah cukup. */
       } else if (cls.indexOf('nota-feedback') !== -1) {
         // Widget "Apa pendapat anda tentang nota ini?" (suka/kongsi/muat
         // turun PDF + reaksi emoji) — UI interaktif SAHAJA, tiada makna
@@ -7187,7 +7215,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=561').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=562').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
