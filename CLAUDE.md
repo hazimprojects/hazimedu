@@ -1099,6 +1099,69 @@ TEPAT 5 ayat (padan 5 `.paper-chip-sentence` sumber, bukan 5+4
 pendua), 40 chip `.zpbloc` warna betul (axis=merah/allies=biru)
 tersebar di seluruh halaman, sifar baris polos berulang.
 
+**Susulan — pengguna tunjuk 4 isu SAMBUNGAN (tangkapan skrin
+`bab-3-3.html` mod 2 lajur) selepas fix di atas dilancar**: "panduan
+warna pihak perang tidak jelas chipnya" (bendera bersendirian tanpa
+label/warna), "bendera pada nama negara blok tiada" (sebahagian drpd
+isu sama), "chip negara utama tiada warna" (senarai "Negara utama:"
+bawah kad Fokus Kuasa Paksi/Bersekutu papar chip kelabu neutral), &
+"ada highlight kuasa paksi yang rosak dalam ringkasan" (kotak warna
+"Kuasa Paksi" pecah/melimpah bila terpaksa lipat baris). Fix di atas
+(dedup + pengesanan warna dlm `_kwHtmlOne()`) TAK CUKUP sbb 3 laluan
+render BERASINGAN dlm fail ni tak semua lalu `_kwHtmlOne`:
+
+1. **Kad "Panduan warna pihak perang" (`.bloc-legend-grid`)** — corak
+   `.bloc-legend-item > span.bloc-legend-swatch (kosong) + span (label
+   polos "Kuasa Paksi — " + chip bloc-chip tersarang)` TIADA cabang
+   eksplisit dlm `_bodyHtmlNode()`, jatuh ke fallback generik
+   `_bodyHtml(node)` — yg skip SEMUA nod teks terus (label "Kuasa
+   Paksi — " HILANG) & tak pernah panggil `_kwHtml`/`_kwHtmlOne`
+   (jadi pengesanan warna bloc-chip yg BARU ditambah tak pernah
+   tercapai either) — cuma `<img>` bendera bersendirian yg terselamat
+   (drpd fix IMG PR lain). Fix: cabang baharu
+   `cls.indexOf('bloc-legend-grid')` proses label span (anak KEDUA
+   item, lepas swatch) terus via `_kwHtml()` — laluan SAMA yg kesan
+   `bloc-chip-*`, hasilkan "Kuasa Paksi — [chip merah 🇩🇪 Jerman]"
+   penuh.
+2. **Chip berdiri sendiri (bukan dlm ayat, cth. "Negara utama:" bawah
+   kad Fokus)** — cabang ELSE `.paper-chip-list` (chip biasa, bukan
+   `hasSentence`) sentiasa cetak `<span class="zp-chip">` TETAP, tak
+   kira kelas asal `c`. `_kwHtml(c)` proses ANAK `c` (kandungan dalam),
+   BUKAN `c` itu sendiri — jadi pengesanan `bloc-chip-*` (yg semak
+   `node.className` PADA node yg dihantar terus ke `_kwHtmlOne`) tak
+   pernah tercapai utk kes ni (`c` sendiri tak pernah dihantar ke
+   `_kwHtmlOne`, cuma anak-anaknya). Fix: semak `c.className` TERUS
+   dlm cabang ni sebelum bina wrapper, tambah `zpbloc zpbloc-*` ke
+   kelas `<span>` kalau padan.
+3. **Tajuk accordion (cth. "1 Kuasa Paksi")** — DUA fungsi
+   `_renderAccordion()` BERASINGAN wujud dlm fail ni (satu dlm
+   `_buildPrintHtml` utk accordion PERINGKAT ATAS, satu lagi dlm
+   `_bodyHtmlNode` utk accordion TERSARANG dlm badan papan — evolusi
+   sejarah berasingan, bukan disengajakan pendua). Yg SATU (tersarang)
+   guna `_kwHtml(ttl2)` betul; yg SATU LAGI (peringkat atas — DIGUNA
+   utk accordion "Kuasa Paksi"/"Kuasa Bersekutu" bab-3-3.html) guna
+   `_escPdfHtml(ttl.textContent.trim())` — teks POLOS SEPENUHNYA,
+   buang bloc-chip DAN sebarang `kw-*` span tersarang dlm tajuk. Fix:
+   tukar fungsi KEDUA kpd `_kwHtml(ttl)` jugak, padan fungsi pertama.
+4. **Kotak warna "Kuasa Paksi" pecah bila lipat baris** — `.zpbloc`
+   CSS TIADA `white-space:nowrap` (fix asal terlepas ni, walau `.zpkw`
+   sedia ada guna nowrap drpd awal). SAMA punca/fix drpd AWAS
+   `white-space:nowrap` `.zpkw` §"Susun Atur 2 Lajur" atas — frasa
+   berbilang perkataan ("Kuasa Paksi") terpisah pertengahan merentas
+   baris pd lebar lajur sempit buat latar melekit/pecah dlm
+   html2canvas. Tambah `white-space:nowrap` ke `.zpbloc`.
+
+Disahkan via Playwright merentas 9 halaman (`bab-3-2` s/d `bab-3-8` +
+sampel semula `bab-3-3`): legenda "Panduan warna pihak perang" papar
+label+chip penuh (bukan bendera kosong), chip "Negara utama" (25
+kejadian `bab-3-3.html`) semua warna betul, tajuk accordion "Kuasa
+Paksi"/"Kuasa Bersekutu" kini `.zpbloc` berwarna. Baki ketidakpadanan
+kiraan chip (`bab-3-4/5/6`, defisit SATU setiap satu) disahkan 100%
+dijelaskan oleh pengecualian sedia ada "Soalan Utama" (`.paper-flap-
+card`) DIGUGURKAN drpd PDF (§"skop kandungan SENGAJA beza" atas,
+bukan bug baharu) — chip "Jepun" dlm jawapan Soalan Utama, bukan
+kehilangan tak dijangka.
+
 ## Eksport PDF — Mod "Jimat Dakwat": ikon kekal, latar kata kunci gugur
 
 Mod eco (`isEco`/`zp-mode-eco` dlm `_getPrintCss()`) DUA keputusan
