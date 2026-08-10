@@ -820,14 +820,15 @@ popover) TAK boleh disahkan visual dlm sandbox, cuma geometri/DOM
 Produksi (CDN sebenar boleh dicapai) patut render normal — SAMA CDN
 yg dah berfungsi utk beribu ikon lain di seluruh laman.
 
-## Eksport PDF — Susun Atur 2 Lajur (skop Bab 1 & Bab 2)
+## Eksport PDF — Susun Atur 2 Lajur (skop Bab 1, Bab 2 & Bab 3)
 
 Pengguna minta gaya "2 lajur" (spt nota Scribd rujukan pelajar — mudah
 lipat 2, guna ruang kosong dgn bijak). Skop asal DIHADKAN kpd Bab 1
-sahaja, kemudian DILUASKAN ke Bab 2 (`_pdfIsTwoColumnScope()`, regex
-`/\/notes\/bab-[12](-\d+)?\.html$/i` pd `window.location.pathname`)
-— bab lain kekal 1 lajur asal, TIADA perubahan langsung drpd semakan
-skop ni (kod lama berjalan byte-demi-byte sama bila `twoCol=false`).
+sahaja, kemudian DILUASKAN ke Bab 2, kemudian Bab 3
+(`_pdfIsTwoColumnScope()`, regex `/\/notes\/bab-[123](-\d+)?\.html$/i`
+pd `window.location.pathname`) — bab lain kekal 1 lajur asal, TIADA
+perubahan langsung drpd semakan skop ni (kod lama berjalan
+byte-demi-byte sama bila `twoCol=false`).
 **Bila luaskan ke bab baharu, WAJIB turut lengkapkan liputan
 `HZ_PDF_OPENMOJI_MAP` 100% konsep bab tu dulu** (rujuk §"enjin
 `html2canvas-pro`" di bawah, seksyen "Peta ikon PDF") — 2 keputusan
@@ -1050,6 +1051,54 @@ item padan tepat 13=13/20=20/18=18 pd ketiga-tiga, mengesahkan bukan
 bug). Kes asal `bab-2-3.html` kini kembali ke 2 muka surat (bukan 3)
 — ruang digunakan cekap tanpa hilang/potong kandungan.
 
+## Eksport PDF — Chip blok PD1/PD2 (`.bloc-chip-*`) pendua & tiada warna
+
+Pengguna lapor (tangkapan skrin pratonton PDF `bab-3-3.html`, kad
+"Ringkasan 3.3") ayat "...ialah **Kuasa Paksi** dan **Kuasa
+Bersekutu**." diikuti garisan PENDUA ("Kuasa Paksi", "Kuasa
+Bersekutu", "Jerman", "Kuasa Bersekutu" berulang) sbg baris polos
+TANPA warna — walhal kad "PANDUAN WARNA PIHAK PERANG" sejurus di
+bawah menjanjikan warna chip bezakan blok (merah=Paksi/Axis,
+biru=Bersekutu/Allies).
+
+Punca: corak HTML `.paper-chip-list > div.paper-chip.paper-chip-
+sentence > span.paper-chip.bloc-chip-axis` (chip blok TERSARANG dlm
+ayat penuh, rujuk §"Bug Chip Terputus Baris" atas utk struktur sama)
+— DUA lapisan SAMA-SAMA padan selector CSS `.paper-chip`. Cabang
+`hasSentence` dlm `_bodyHtmlNode()` (mengendalikan `.paper-chip-list`)
+guna `node.querySelectorAll('.paper-chip')` (bukan `.paper-chip-
+sentence`), padan KEDUA-DUA lapisan — chip blok tersarang tu dicetak
+DUA KALI: sekali sbg sebahagian ayat penuh (betul, tapi TANPA warna
+sbb `bloc-chip-*` bukan sebahagian sistem 11 kelas `kw-*` kanonik,
+`_kwHtmlOne()` tiada pengesanan utk kelas ni), sekali lagi sbg
+`<p class="zp-sentence">` BERASINGAN & polos.
+
+**Fix pendua**: `_bodyHtmlNode()` tukar selector kpd
+`.paper-chip-sentence` (bukan `.paper-chip` generik) — hanya padan
+lapisan LUAR (ayat penuh). Disahkan tiada chip-list SELURUH korpus yg
+campur chip ayat + chip bukan-ayat sbg adik-beradik terus (`find_all`
+BeautifulSoup merentas `notes/bab-*.html`), jadi selector lebih
+spesifik ni selamat digunakan tanpa risiko terlepas chip standalone.
+
+**Fix warna**: `_kwHtmlOne()` tambah pengesanan
+`bloc-chip-(central|entente|axis|allies)` (SELEPAS semakan `kw-*`
+sedia ada) — bungkus dgn `<span class="zpbloc zpbloc-*">`, guna
+`_kwHtml(node, {freeze:true})` (BUKAN `_escPdfHtml(textContent)`
+spt kw-* — chip blok BOLEH ada anak `<img>` bendera + teks, cth.
+"🇩🇪 Jerman", perlu rekursi kekalkan bendera). CSS `.zpbloc-*`
+(`_getPrintCss()`) guna palet SAMA drpd `assets/css/keywords.css`
+mod terang: `central`=kelabu, `entente`=hijau, `axis`=merah,
+`allies`=biru — warna RATA (bukan gradien, elak risiko
+keserasian html2canvas). Mod "Jimat Dakwat" (rujuk §bawah) turut
+gugurkan latar `.zpbloc` (kekal teks tebal sahaja), konsisten dgn
+keputusan `.zpkw` sedia ada.
+
+Disahkan via Playwright (suntik html2canvas-pro/jspdf, pintas
+`window.html2canvas`): `bab-3-3.html` kad "Ringkasan 3.3" kini papar
+TEPAT 5 ayat (padan 5 `.paper-chip-sentence` sumber, bukan 5+4
+pendua), 40 chip `.zpbloc` warna betul (axis=merah/allies=biru)
+tersebar di seluruh halaman, sifar baris polos berulang.
+
 ## Eksport PDF — Mod "Jimat Dakwat": ikon kekal, latar kata kunci gugur
 
 Mod eco (`isEco`/`zp-mode-eco` dlm `_getPrintCss()`) DUA keputusan
@@ -1147,14 +1196,31 @@ ni langsung). Penjaga `cached.type === 'opaque'` dlm handler emoji-CDN
 `sw.js` MESTI dikekalkan.
 
 **Peta ikon PDF**: `HZ_PDF_OPENMOJI_MAP` kini liputi **100% ikon Bab 1**
-(78 konsep / 507 kemunculan) **& 100% konsep unik Bab 2** (+88 konsep
-baharu, 166 kesemuanya) — sengaja penuh, bukan separa, sebab
+(78 konsep / 507 kemunculan), **100% konsep unik Bab 2** (+88 konsep
+baharu, 166 kesemuanya), **& 100% konsep unik Bab 3** (+68 konsep
+baharu, 234 kesemuanya) — sengaja penuh, bukan separa, sebab
 liputan separa (dulu 25 konsep = 82%) tinggalkan **campuran gaya
 OpenMoji + Fluent dlm senarai yg sama** (cth. keycap 1–4 OpenMoji tapi
 5–6 Fluent) yg ketara janggal. Bila luaskan ke bab lain, liputi
 SEMUA konsep bab itu sekali gus. `_pdfEmojiSrc()` turut terima segmen
 varian pilihan sebelum `/3D/` (cth. `/assets/Writing hand/Default/3D/`)
 — tanpa itu ikon sebegini senyap terlepas drpd peta.
+
+**Bab 3 — kekecualian audit "100%": widget "Apa pendapat anda tentang
+nota ini?" (`.nota-feedback`, suntik JS setiap halaman) BUKAN sebahagian
+konsep Bab 3, tapi turut ketara semasa audit liputan.** Widget ni
+(reaksi emoji "Thinking face"/"Confused face" antara lain) disuntik
+sbg anak LANGSUNG satu `.note-subsection` (bukan saudara sejajar spt
+disangka drpd kod sisipan `insertBefore.parentNode.insertBefore(widget,
+insertBefore)`), jadi `_renderSubChild()` (tiada cabang eksplisit utk
+`.nota-feedback` sblm ni) jatuh ke fallback generik `_bodyHtml(child)`
+— seret 2 ikon reaksi ke PDF SETIAP halaman (pra-wujud, bukan
+disebabkan luaskan skop 2-lajur, cuma senyap "tersembunyi" pd bab lain
+kerana ikonnya kebetulan sudah dipeta drpd konsep lain). Widget ni
+UI interaktif SAHAJA (suka/kongsi/muat turun PDF/reaksi emoji), tiada
+makna dlm PDF cetak — fix SEBENAR bukan tambah 2 konsep ke peta, tapi
+GUGURKAN terus drpd print (cabang baharu `cls.indexOf('nota-feedback')`
+dlm `_renderSubChild()`, sama corak drpd `.hero-actions` sedia ada).
 
 **Sumber SVG utk ikon baharu**: klon cetek `git clone --depth 1
 --filter=blob:none --sparse` repo `github.com/hfg-gmuend/openmoji`,
