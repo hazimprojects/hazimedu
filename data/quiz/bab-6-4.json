@@ -86,7 +86,7 @@
         "Kerana British sedar darurat tidak dapat ditamatkan melalui ketenteraan semata-mata, dan kemenangan Parti Perikatan dalam Pilihan Raya Umum 1955 meyakinkan British bahawa rakyat berbilang kaum dapat menewaskan komunis melalui perpaduan",
         "Kerana Chin Peng bersetuju membubarkan PKM sebaik sahaja Rundingan Baling diadakan pada 1955",
         "Kerana MCA berjaya mengumpulkan $2.5 juta bagi membiayai kos rundingan kemerdekaan",
-        "Kerana Sir Gerald Templer mengisytiharkan kemerdekaan secara automatik selepas darurat tamat"
+        "Kerana Sir Henry Gurney berjaya menewaskan Chin Peng dalam Rundingan Baling"
       ],
       "answer": "Kerana British sedar darurat tidak dapat ditamatkan melalui ketenteraan semata-mata, dan kemenangan Parti Perikatan dalam Pilihan Raya Umum 1955 meyakinkan British bahawa rakyat berbilang kaum dapat menewaskan komunis melalui perpaduan",
       "explanation": "British menyedari darurat tidak dapat ditamatkan melalui ketenteraan semata-mata; penubuhan CLC dan kemenangan Parti Perikatan (UMNO–MCA–MIC) dalam PRU 1955 meyakinkan British bahawa perpaduan berbilang kaum dapat menewaskan komunis, lalu bersetuju memberi kemerdekaan.",
@@ -99,7 +99,7 @@
       "prompt": "Mengapakah hubungan antara kaum menjadi renggang akibat Rancangan Briggs dan penempatan semula penduduk?",
       "options": [
         "Kerana kaum Cina dikumpulkan di petempatan baharu yang berkembang menjadi bandar, manakala kaum Melayu tinggal di kampung serba kekurangan dan kaum lain di petempatan berasingan, menyebabkan kurang ruang bersosial antara kaum",
-        "Kerana kerajaan melarang sepenuhnya interaksi antara kaum semasa tempoh darurat",
+        "Kerana pendaftaran kebangsaan dan kad pengenalan pada 1948 menetapkan setiap kaum mendaftar di pusat berasingan",
         "Kerana MCA enggan bekerjasama dengan kerajaan dalam usaha menempatkan semula penduduk",
         "Kerana kaum Cina dan India dihalang daripada memperoleh taraf warganegara sepanjang darurat"
       ],
@@ -161,7 +161,7 @@
         "CLC meningkatkan kesedaran pemimpin pelbagai kaum bahawa mereka berkongsi kepentingan dan hala tuju yang sama, kesedaran ini membawa kepada penubuhan Parti Perikatan (UMNO–MCA–MIC)",
         "CLC dan Parti Perikatan kedua-duanya ditubuhkan oleh Tan Cheng Lock pada tarikh yang sama",
         "CLC ditubuhkan selepas Parti Perikatan memenangi Pilihan Raya Umum 1955",
-        "CLC dan Parti Perikatan tidak mempunyai sebarang perkaitan dari segi kesedaran politik pemimpin pelbagai kaum"
+        "CLC beranggotakan wakil UMNO sahaja dan tidak melibatkan pemimpin kaum lain"
       ],
       "answer": "CLC meningkatkan kesedaran pemimpin pelbagai kaum bahawa mereka berkongsi kepentingan dan hala tuju yang sama, kesedaran ini membawa kepada penubuhan Parti Perikatan (UMNO–MCA–MIC)",
       "explanation": "Penubuhan CLC meningkatkan kesedaran politik dalam kalangan pemimpin pelbagai kaum bahawa mereka boleh berkongsi kepentingan bersama dan hala tuju yang sama, kesedaran ini membawa kepada penubuhan Parti Perikatan.",
@@ -175,7 +175,7 @@
       "options": [
         "Kaum Cina di Kampung Baru turut menerima prasarana yang membawa kepada perkembangan bandar baharu, manakala kesan terhadap hubungan antara kaum secara umum adalah negatif kerana kehidupan terasing mengikut kaum merenggangkan hubungan sosial",
         "Kaum Cina di Kampung Baru tidak menerima sebarang kemudahan asas, manakala hubungan antara kaum secara umum bertambah erat",
-        "Kesan darurat terhadap kaum Cina di Kampung Baru dan terhadap hubungan antara kaum secara umum adalah sama sepenuhnya",
+        "Kesan darurat terhadap kaum Cina di Kampung Baru lebih ketara berbanding kesan darurat terhadap hubungan antara kaum Melayu dan India",
         "Kaum Cina di Kampung Baru dipaksa berpindah ke luar negara, manakala hubungan antara kaum tidak terjejas langsung"
       ],
       "answer": "Kaum Cina di Kampung Baru turut menerima prasarana yang membawa kepada perkembangan bandar baharu, manakala kesan terhadap hubungan antara kaum secara umum adalah negatif kerana kehidupan terasing mengikut kaum merenggangkan hubungan sosial",
@@ -189,7 +189,7 @@
       "prompt": "Antara hujah berikut, manakah PALING tepat menjelaskan mengapa darurat dianggap membawa kesan yang bercampur (positif dan negatif) terhadap negara kita?",
       "options": [
         "Darurat mempercepat kemerdekaan dan meningkatkan bilangan warganegara sebagai kesan politik yang positif, namun turut meningkatkan kos perbelanjaan, menyebabkan penderitaan rakyat dan merenggangkan hubungan kaum sebagai kesan sosioekonomi yang negatif",
-        "Darurat hanya membawa kesan positif kerana berjaya menewaskan komunis sepenuhnya tanpa sebarang kerugian",
+        "Darurat membawa lebih banyak kesan positif berbanding kesan negatif kepada rakyat dan negara",
         "Darurat hanya membawa kesan negatif kerana tidak menyumbang sebarang kemajuan politik kepada negara",
         "Darurat tidak membawa sebarang kesan kepada negara selepas ditamatkan pada 1960"
       ],
@@ -204,7 +204,7 @@
       "prompt": "Antara pernyataan berikut, manakah PALING tepat merumuskan subtopik 6.4 dan Rumusan Besar Bab 6?",
       "options": [
         "Zaman darurat selama 12 tahun membawa kesan besar dari aspek politik dan sosioekonomi termasuk mempercepat kemerdekaan, namun turut meninggalkan penderitaan dan kerenggangan hubungan kaum, sekali gus menyedarkan rakyat tentang pentingnya perpaduan dalam mempertahankan negara",
-        "Zaman darurat hanya memberi kesan kepada aspek ketenteraan tanpa sebarang kesan politik atau sosioekonomi",
+        "Zaman darurat memberi kesan yang lebih besar kepada aspek sosioekonomi berbanding aspek politik",
         "Darurat ditamatkan serta-merta selepas Rundingan Baling berjaya dipersetujui oleh kedua-dua pihak",
         "Kesan darurat hanya dirasai oleh kaum Cina tanpa menjejaskan kaum Melayu atau India"
       ],
