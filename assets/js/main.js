@@ -4739,28 +4739,53 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   // highlighter" (segi empat, BUKAN oval), yg secara semula jadi
   // "terpotong" bersih bila teks wrap — sbb kesan highlighter sebenar
   // memang segi empat, bukan bulat/organik.
+  // Percubaan 4 (dibuang): `border-radius:0` + `box-decoration-break:
+  // clone` (biar CSS uruskan kotak per-baris) — BERFUNGSI (sifar
+  // smear), TAPI pengguna jelaskan lagi: satu kotak highlighter
+  // patut muat TINGGI HURUF SATU BARIS sahaja, bukan gabung/sentuh
+  // baris ke-2 tanpa jurang (nampak macam SATU blok 2-baris, bukan 2
+  // lakaran highlighter berasingan). Diuji CSS-sahaja (line-height
+  // ibu bapa besar `2.6` + line-height span sendiri kecil `1`, corak
+  // piawai utk jurang antara baris) — BERJAYA dlm pelayar BIASA
+  // (screenshot terus, tanpa html2canvas), TAPI html2canvas-pro
+  // ABAIKAN line-height span sendiri semasa lukis serpihan `clone`
+  // (guna tinggi kotak garis PENUH drpd ibu bapa, bukan tinggi teks
+  // sebenar span) — disahkan kekal SIFAR jurang walau line-height
+  // diuji sehingga `2.6`/`3.0`. Ni had ENJIN html2canvas-pro (bukan
+  // isu CSS), jadi penyelesaian CSS semata-mata MUSTAHIL utk kes ni.
   //
-  // Fix (kekal, disahkan piksel+visual betul): PUNCA SEBENAR blob bug
-  // ialah border-radius ORGANIK (`38% 42%...`) bercampur box-
-  // decoration-break merentas >1 baris — BUKAN latar+wrap per se.
-  // `border-radius:0` (segi empat tulen, gaya highlighter pen sebenar)
-  // + `box-decoration-break:clone` (SETIAP baris dpt kotak+padding
-  // SENDIRI konsisten, bukan sambung ke tepi kontena spt `slice`
-  // lalai) disahkan SIFAR smear (0.000 pinkRatio kedua-dua baris,
-  // ulang uji varian `slice` & `clone` — kedua-dua BERSIH bila
-  // border-radius:0, geometri segi empat tiada lengkung utk enjin
-  // salah anggar). `clone` dipilih drpd `slice` sbb visual lebih
-  // kemas (kotak konsisten per-baris ikut lebar teks sebenar, bukan
-  // regangkan penuh ke tepi kontena spt `slice`).
+  // Fix (kekal): pindah drpd CSS box-decoration-break kpd kiraan
+  // JS terus — ukur `el.getClientRects()` (SATU rect setiap baris
+  // SEBENAR selepas wrap diaktifkan, drpd susun atur PELAYAR tulen,
+  // bukan anggaran) & lukis SATU `<span>` highlight BERASINGAN per
+  // baris (position:absolute, warna latar SAMA drpd kelas asal,
+  // disalin via getComputedStyle SEBELUM latar asal digugurkan),
+  // bukan bergantung pd box-decoration-break/clone CSS langsung —
+  // elak SEPENUHNYA had enjin di atas sbb setiap kotak cetakan RATA
+  // ringkas (span tunggal position:absolute), TIADA multi-baris/
+  // wrap-decoration sama sekali utk html2canvas-pro salah anggar.
+  // Tinggi kotak DISUSUTKAN (SCALE_H drpd tinggi baris PENUH
+  // getClientRects(), dipusatkan menegak dlm baris) supaya JURANG
+  // semula jadi wujud antara highlight baris bersebelahan (kesan pen
+  // highlighter genuine — setiap lakaran padan SATU baris teks
+  // sahaja, bukan sambung ke baris seterusnya). Nisbah diuji visual
+  // merentas beberapa peringkat: 0.65 (jurang paling jelas, TAPI
+  // huruf ekor/ascender cth. "g/y/p/j" nyaris tersentuh sempadan
+  // kotak — pengguna minta lebih ruang lebihan, bukan tepat sama
+  // saiz ketinggian huruf) → 0.88 (ruang selesa, TAPI jurang antara
+  // baris jadi nipis/nyaris hilang) → **0.78 dipilih** (imbangan
+  // terbaik: ruang lebihan jelas sekeliling huruf ascender/descender,
+  // jurang antara baris tetap jelas kelihatan).
   //
-  // Diukur SEBELUM sebarang perubahan (nowrap kekal aktif semasa ukur —
-  // getBoundingClientRect() dgn nowrap jamin lebar PENUH intrinsik
-  // frasa, tak terpotong walau container lagi sempit). HANYA dipanggil
-  // dlm mod 2 lajur (`twoCol`) — lebar kandungan 1 lajur (~700px) jauh
-  // melebihi frasa terpanjang korpus, tak perlu risiko ubah apa-apa
-  // di sana.
+  // Diukur lebar SEBELUM sebarang perubahan (nowrap kekal aktif
+  // semasa ukur — getBoundingClientRect() dgn nowrap jamin lebar
+  // PENUH intrinsik frasa, tak terpotong walau container lagi
+  // sempit). HANYA dipanggil dlm mod 2 lajur (`twoCol`) — lebar
+  // kandungan 1 lajur (~700px) jauh melebihi frasa terpanjang
+  // korpus, tak perlu risiko ubah apa-apa di sana.
   function _pdfDeboxOverlongKeywords(container) {
     var SAFE_MAX_W = 292; // px — konservatif merentas konteks papan/akordion/garis masa 2-lajur
+    var LINE_SCALE_H = 0.78; // nisbah tinggi kotak highlight drpd tinggi baris PENUH — cipta jurang antara baris + ruang lebihan sekeliling huruf
     // Skop KHUSUS nama orang (kw-tokoh) & tempat (kw-tempat) sahaja —
     // arahan pengguna eksplisit, elak "declass" kelas kw-* lain (masa/
     // peristiwa/pertubuhan/dll.) atau .zpbloc walau secara teori boleh
@@ -4771,14 +4796,43 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       var el = els[i];
       var w = el.getBoundingClientRect().width;
       if (w <= SAFE_MAX_W) continue;
-      // Kekalkan latar/warna/padding kelas kw-* (JANGAN declass) —
-      // cuma tukar bentuk kotak drpd "sketch" organik ke segi empat
-      // tulen (kesan pen highlighter sebenar) + box-decoration-break
-      // supaya wrap SELAMAT (rujuk komen fungsi di atas).
-      el.style.borderRadius = '0';
-      el.style.boxDecorationBreak = 'clone';
-      el.style.webkitBoxDecorationBreak = 'clone';
+      var parent = el.parentElement;
+      if (!parent) continue;
+      // position:relative pd ibu bapa (jika belum) — perlu sbg konteks
+      // kedudukan utk highlight <span> position:absolute di bawah.
+      if (getComputedStyle(parent).position === 'static') parent.style.position = 'relative';
+      var bg = getComputedStyle(el).backgroundColor;
+      var fontSize = parseFloat(getComputedStyle(el).fontSize) || 13.5;
+      var padX = fontSize * 0.3; // padan `.zpkw{padding:0.08em 0.3em}` asal
+      // Buka wrap & gugur latar/padding/bucu SPAN itu sendiri (teks
+      // BOLD berwarna kekal via `color` kelas asal, cuma kotak latar
+      // asal digugurkan — digantikan span highlight berasingan di
+      // bawah). `position:relative` pd `el` sendiri perlu supaya ia
+      // & highlight <span> (turut position:relative, disisip SEBELUM
+      // `el` dlm DOM) sama-sama masuk kumpulan susun lukis "positioned"
+      // — urutan DOM tentukan lapisan (highlight dulu = di belakang,
+      // teks kemudian = di depan), rujuk peraturan susun lukis CSS2.1.
       el.style.whiteSpace = 'normal';
+      el.style.position = 'relative';
+      el.style.background = 'transparent';
+      el.style.padding = '0';
+      el.style.borderRadius = '0';
+      var rects = el.getClientRects();
+      var parentRect = parent.getBoundingClientRect();
+      for (var r = 0; r < rects.length; r++) {
+        var rc = rects[r];
+        var newH = rc.height * LINE_SCALE_H;
+        var offsetY = (rc.height - newH) / 2;
+        var hi = document.createElement('span');
+        hi.style.position = 'absolute';
+        hi.style.left = (rc.left - parentRect.left - padX) + 'px';
+        hi.style.top = (rc.top - parentRect.top + offsetY) + 'px';
+        hi.style.width = (rc.width + padX * 2) + 'px';
+        hi.style.height = newH + 'px';
+        hi.style.background = bg;
+        hi.style.display = 'block';
+        parent.insertBefore(hi, el);
+      }
     }
   }
 
@@ -7433,7 +7487,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=566').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=567').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
