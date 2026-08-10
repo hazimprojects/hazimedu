@@ -1485,6 +1485,60 @@ TERPANJANG korpus (`bab-9-3.html`, 70 aksara) papar PENUH (tiada
 potongan) walau lebih byk baris drpd PDF sebenar (had fon, dijangka
 & diterima — bukan bug hilang maklumat).
 
+## Eksport PDF — Sub-tajuk `.paper-strip.strip-sub` dlm accordion DIGUGURKAN (pendua)
+
+Pengguna lapor (tangkapan skrin pratonton PDF `bab-2-3.html`) item
+accordion "Dahagi India 1857" papar tajuk "Dahagi India 1857" DUA
+KALI berturutan (sekali di header accordion, sekali lagi kad kecil
+sejurus di bawahnya) & satu ikon bendera 🇮🇳 "terputus" — muncul
+bersendirian pd baris sendiri tanpa apa-apa teks bersama.
+
+Punca: corak HTML sedia ada (`.paper-accordion-item > .paper-accordion-
+panel > .cv-unit-body > .paper-strip.strip-sub`) letak sub-tajuk
+"recap" (selalunya teks SAMA/singkatan drpd tajuk accordion tu
+sendiri, kadang + bendera) sbg anak PERTAMA badan panel — bermakna
+bila accordion dibuka di laman hidup, pembaca nampak semula tajuk +
+konteks (munasabah, sbb accordion boleh collapse/expand, pembaca
+mungkin lupa tajuk bila scroll dlm panel panjang). Tapi `_bodyHtmlNode()`
+(penjana PDF) TIADA cabang utk kelas `.paper-strip` — jatuh ke
+fallback generik `_bodyHtml(node)` yg (a) skip SEMUA nod teks terus
+(bukan dibalut tag dikenali) & (b) — SELEPAS fix `.bloc-legend-grid`
+sblm ni (tambah cabang IMG) — KEKALKAN sebarang `<img>` tersarang di
+situ. Kombinasi ni pulangkan: teks "Dahagi India 1857" HILANG (spt
+biasa), TAPI bendera (skrg terselamat drpd fix IMG) KEKAL bersendirian
+tanpa konteks — nampak "emoji terputus". Dlm PDF LINEAR (semua
+kandungan sentiasa "terbuka", tiada collapse/expand), sub-tajuk recap
+ni jadi 100% PENDUA drpd tajuk accordion yg SUDAH tercetak (`.zp-acc-
+ttl`, drpd `.paper-accordion-title`) — bukan sekadar bug render, TAPI
+pendua ketara pd konsepnya.
+
+Disahkan menyeluruh (regex `.cv-unit-body > .paper-strip.strip-sub`
+langsung, merentas SEMUA `notes/bab-*.html`): **77/79** kejadian
+berada DALAM `.paper-accordion-panel` & teksnya SAMA/singkatan drpd
+tajuk accordion sendiri (cth. "Gerakan Sosioagama Awal" vs tajuk
+accordion "Gerakan sosioagama awal" — beza case sahaja) — pendua
+tulen. **2/79** (`bab-8-3.html`, "Komposisi Ahli MPP 1948"/"1955")
+berada LUAR accordion (label unik carta bar `.paper-bar-list`,
+BUKAN pendua — satu-satunya label utk data tu).
+
+Fix (`_bodyHtmlNode()`): tambah cabang `cls.indexOf('paper-strip')`
+— jika elemen ADA `.closest('.paper-accordion-panel')` (dlm accordion),
+GUGURKAN terus (kembalikan `h` tanpa diubah); jika TIADA (di luar
+accordion, cth. kes bar-chart bab-8-3), cetak spt biasa via `_kwHtml`
+(sama corak `stripHtml` `_renderBoard`, kekalkan teks + bendera/ikon).
+Disahkan via Playwright (suntik html2canvas-pro/jspdf, pintas
+`window.html2canvas` baca `#zym-pr` sblm capture) merentas 6 halaman
+(`bab-2-3`, `bab-2-4`, `bab-3-3`, `bab-3-4`, `bab-6-1`, `bab-8-3`):
+SIFAR `<img class="zp-emoji">` bersendirian sbg anak langsung
+`.zp-acc-body` (dulu berlaku, kini 0 pd semua halaman), teks
+"Komposisi Ahli MPP 1948/1955" (bab-8-3, kes LUAR accordion) KEKAL
+tercetak penuh. Bilangan `.zp-acc-ttl` tercetak (title accordion
+SEBENAR, bukan sub-tajuk recap yg digugurkan) konsisten `sourceCount
+- 1` merentas KESEMUA 6 halaman berbanding `.paper-accordion-title`
+sumber — satu-satunya beza dikesan (`"Warna kata kunci"`, accordion
+legenda kata kunci) SUDAH digugurkan drpd PDF sebelum fix ni lagi
+(gelagat sedia ada tak berkaitan, bukan regresi fix ni).
+
 ## Aliran Kerja Versioning Aset (WAJIB lepas ubah CSS/JS/sw.js)
 
 Sumber kebenaran versi: `data/asset-versions.json`. Lepas ubah
