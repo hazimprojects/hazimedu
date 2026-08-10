@@ -1,0 +1,216 @@
+{
+  "id": "9-3",
+  "title": "Langkah Penggubalan Perlembagaan Persekutuan Tanah Melayu yang Merdeka",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Berapa banyak memorandum bertulis diterima Suruhanjaya Reid daripada pelbagai pihak?",
+      "options": [
+        "131",
+        "118",
+        "77",
+        "52"
+      ],
+      "answer": "131",
+      "explanation": "Suruhanjaya Reid menerima sebanyak 131 memorandum bertulis daripada pelbagai pihak.",
+      "tip": "131 memorandum diterima Suruhanjaya Reid."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Bilakah draf Perlembagaan Persekutuan dibentangkan dan dibahaskan di Majlis Perundangan Persekutuan?",
+      "options": [
+        "10–11 Julai 1957",
+        "9 Mei 1957",
+        "4–7 Mei 1957",
+        "27 Ogos 1957"
+      ],
+      "answer": "10–11 Julai 1957",
+      "explanation": "Draf Perlembagaan Persekutuan dibentangkan dan diperbahaskan di Majlis Perundangan Persekutuan pada 10 hingga 11 Julai 1957.",
+      "tip": "10-11 Julai 1957 = bahas draf di MPP."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Bilakah draf Perlembagaan diluluskan oleh Majlis Perundangan Persekutuan?",
+      "options": [
+        "27 Ogos 1957",
+        "31 Ogos 1957",
+        "10 Julai 1957",
+        "9 Mei 1957"
+      ],
+      "answer": "27 Ogos 1957",
+      "explanation": "Draf Perlembagaan diluluskan oleh Majlis Perundangan Persekutuan pada 27 Ogos 1957.",
+      "tip": "27 Ogos 1957 = lulus di MPP."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Bilakah Perlembagaan Persekutuan Tanah Melayu 1957 mula berkuat kuasa secara rasmi?",
+      "options": [
+        "31 Ogos 1957",
+        "27 Ogos 1957",
+        "5 Ogos 1957",
+        "10 Julai 1957"
+      ],
+      "answer": "31 Ogos 1957",
+      "explanation": "Perlembagaan Persekutuan Tanah Melayu 1957 mula berkuat kuasa secara rasmi pada 31 Ogos 1957.",
+      "tip": "31 Ogos 1957 = perlembagaan berkuat kuasa."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah rundingan semula di London diadakan pada 9 Mei 1957?",
+      "options": [
+        "Untuk membincangkan isu kewarganegaraan dan beberapa perkara lain yang belum dimuktamadkan dalam draf perlembagaan",
+        "Untuk mengumumkan kelulusan rasmi Perlembagaan Persekutuan Tanah Melayu 1957",
+        "Untuk melantik anggota baharu Suruhanjaya Perlembagaan Persekutuan Tanah Melayu",
+        "Untuk membincangkan tarikh pembentangan draf di Majlis Perundangan Persekutuan"
+      ],
+      "answer": "Untuk membincangkan isu kewarganegaraan dan beberapa perkara lain yang belum dimuktamadkan dalam draf perlembagaan",
+      "explanation": "Tunku Abdul Rahman dan rombongan berlepas ke London pada 9 Mei 1957 untuk membincangkan isu kewarganegaraan dan perkara lain yang belum dimuktamadkan.",
+      "tip": "9 Mei 1957 = runding semula isu kewarganegaraan."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah sebahagian ahli UMNO menolak konsep jus soli dalam draf perlembagaan?",
+      "options": [
+        "Kerana mereka bimbang kedudukan istimewa orang Melayu terjejas",
+        "Kerana konsep jus soli menghalang penubuhan Majlis Perundangan Persekutuan",
+        "Kerana konsep jus soli hanya terpakai kepada kaum India dan Cina sahaja",
+        "Kerana konsep jus soli bercanggah dengan cadangan Parti Negara mengenai bahasa kebangsaan"
+      ],
+      "answer": "Kerana mereka bimbang kedudukan istimewa orang Melayu terjejas",
+      "explanation": "Sebahagian ahli UMNO menolak pemberian kewarganegaraan secara jus soli kerana bimbang kedudukan istimewa orang Melayu terjejas.",
+      "tip": "UMNO tolak jus soli = bimbang kedudukan istimewa Melayu."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah Parti Negara, PAS dan Parti Rakyat mengadakan kongres bersama pada 4–7 Mei 1957?",
+      "options": [
+        "Untuk membincangkan draf perlembagaan, termasuk bantahan terhadap syarat kewarganegaraan yang dianggap terlalu longgar",
+        "Untuk membentuk gabungan politik baharu menggantikan Parti Perikatan",
+        "Untuk merundingkan tarikh kemerdekaan dengan kerajaan British secara terus",
+        "Untuk melantik wakil rasmi bagi menghadiri rundingan semula di London"
+      ],
+      "answer": "Untuk membincangkan draf perlembagaan, termasuk bantahan terhadap syarat kewarganegaraan yang dianggap terlalu longgar",
+      "explanation": "Parti Negara, PAS dan Parti Rakyat mengadakan kongres pada 4–7 Mei 1957 untuk membincangkan draf perlembagaan, termasuk bantahan Dato' Onn Jaafar terhadap syarat kewarganegaraan yang dianggap terlalu longgar.",
+      "tip": "Kongres 3 parti (Mei 1957) = bincang draf, isu kewarganegaraan."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sebuah memorandum dikemukakan oleh Raja-raja Melayu sendiri, mencadangkan Yang di-Pertuan Agong dipilih berdasarkan kekananan dengan tempoh jawatan lima tahun. Siapakah yang mengemukakan memorandum ini?",
+      "options": [
+        "Raja-raja Melayu",
+        "Parti Perikatan",
+        "MCA",
+        "Dewan Perniagaan Melayu"
+      ],
+      "answer": "Raja-raja Melayu",
+      "explanation": "Raja-raja Melayu mengemukakan memorandum sendiri, mencadangkan Yang di-Pertuan Agong dipilih berdasarkan kekananan dengan tempoh jawatan lima tahun.",
+      "tip": "Memorandum Yang di-Pertuan Agong = drpd Raja-raja Melayu."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sebuah parti mengemukakan memorandum \"Testament Amanah Politik Perikatan\" berkaitan isu kewarganegaraan. Parti manakah ini?",
+      "options": [
+        "Parti Perikatan",
+        "Parti Negara",
+        "PAS",
+        "MIC"
+      ],
+      "answer": "Parti Perikatan",
+      "explanation": "Parti Perikatan mengemukakan memorandum \"Testament Amanah Politik Perikatan\" berkaitan isu kewarganegaraan.",
+      "tip": "Testament Amanah Politik Perikatan = drpd Parti Perikatan."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sebuah pertubuhan mencadangkan sekolah aliran Inggeris dan vernakular diteruskan, dengan semua sekolah kebangsaan mempelajari empat bahasa (Melayu, Inggeris, Cina, Tamil). Pertubuhan manakah ini?",
+      "options": [
+        "MCA",
+        "MIC",
+        "PAS",
+        "Parti Negara"
+      ],
+      "answer": "MCA",
+      "explanation": "MCA mencadangkan sekolah aliran Inggeris dan vernakular diteruskan, dengan semua sekolah kebangsaan mempelajari Bahasa Melayu, Inggeris, Cina dan Tamil.",
+      "tip": "MCA = cadangan bahasa & sekolah dlm memorandum."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perbezaan antara reaksi UMNO dengan reaksi PAS terhadap draf perlembagaan berkaitan isu kewarganegaraan?",
+      "options": [
+        "UMNO (sebahagian ahli) bimbang jus soli menjejaskan kedudukan istimewa Melayu tetapi tidak menolak keseluruhan draf, manakala PAS mengkritik isu kewarganegaraan sebagai tidak menjaga kepentingan Melayu dan menuntut Islam dijadikan asas pemerintahan",
+        "UMNO menolak keseluruhan draf perlembagaan, manakala PAS menerima draf tersebut dengan sokongan penuh",
+        "UMNO dan PAS mempunyai reaksi yang sama terhadap isu kewarganegaraan",
+        "PAS menyokong konsep jus soli, manakala UMNO menuntut Islam dijadikan asas pemerintahan"
+      ],
+      "answer": "UMNO (sebahagian ahli) bimbang jus soli menjejaskan kedudukan istimewa Melayu tetapi tidak menolak keseluruhan draf, manakala PAS mengkritik isu kewarganegaraan sebagai tidak menjaga kepentingan Melayu dan menuntut Islam dijadikan asas pemerintahan",
+      "explanation": "Sebahagian ahli UMNO bimbang jus soli menjejaskan kedudukan istimewa Melayu, manakala PAS mengkritik isu kewarganegaraan dan menuntut Islam dijadikan asas pemerintahan negara.",
+      "tip": "UMNO = bimbang jus soli. PAS = tuntut Islam asas pemerintahan."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perkaitan antara \"Penerimaan Memorandum\" dengan \"Rundingan Semula di London\" dalam proses penggubalan perlembagaan?",
+      "options": [
+        "Memorandum dan reaksi pelbagai pihak terhadap draf awal mendedahkan isu yang belum dimuktamadkan (terutama kewarganegaraan), mendorong rundingan semula di London pada Mei 1957 untuk membuat pindaan",
+        "Rundingan Semula di London berlaku sebelum sebarang memorandum diterima Suruhanjaya Reid",
+        "Penerimaan Memorandum dan Rundingan Semula di London dijalankan serentak pada tarikh yang sama di lokasi berbeza",
+        "Rundingan Semula di London menggantikan keperluan menerima memorandum daripada pihak awam"
+      ],
+      "answer": "Memorandum dan reaksi pelbagai pihak terhadap draf awal mendedahkan isu yang belum dimuktamadkan (terutama kewarganegaraan), mendorong rundingan semula di London pada Mei 1957 untuk membuat pindaan",
+      "explanation": "Memorandum dan reaksi terhadap draf mendedahkan isu belum dimuktamadkan, terutama kewarganegaraan, mendorong rundingan semula di London pada Mei 1957 untuk membuat pindaan draf.",
+      "tip": "Memorandum + reaksi draf → dedah isu → runding semula London."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah PALING tepat menjelaskan mengapa proses penggubalan perlembagaan melibatkan begitu banyak peringkat (memorandum, draf, reaksi, rundingan semula, perkenan Majlis Raja-Raja, pembentangan MPP, kelulusan)?",
+      "options": [
+        "Peringkat berlapis ini membolehkan pandangan pelbagai kaum dan pihak berkepentingan (Raja-raja, parti politik, badan awam) dipertimbangkan dan diselaraskan secara sistematik sebelum perlembagaan akhir dipersetujui",
+        "Peringkat berlapis ini sengaja direka untuk melambatkan tarikh kemerdekaan yang telah ditetapkan",
+        "Peringkat berlapis ini hanya diperlukan kerana Suruhanjaya Reid gagal menyediakan draf yang lengkap pada percubaan pertama",
+        "Peringkat berlapis ini bertujuan mengurangkan penglibatan Raja-raja Melayu dalam penggubalan perlembagaan"
+      ],
+      "answer": "Peringkat berlapis ini membolehkan pandangan pelbagai kaum dan pihak berkepentingan (Raja-raja, parti politik, badan awam) dipertimbangkan dan diselaraskan secara sistematik sebelum perlembagaan akhir dipersetujui",
+      "explanation": "Proses berperingkat (memorandum, draf, reaksi, rundingan semula, perkenan, pembentangan, kelulusan) membolehkan pandangan pelbagai pihak dipertimbangkan secara sistematik, mencerminkan semangat permuafakatan dan toleransi.",
+      "tip": "Peringkat berlapis = selaraskan pandangan pelbagai pihak."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah PALING tepat merumuskan subtopik 9.3?",
+      "options": [
+        "Penggubalan Perlembagaan Persekutuan Tanah Melayu melibatkan penerimaan 131 memorandum, penyediaan draf oleh Suruhanjaya Reid, reaksi pelbagai parti, rundingan semula di London, perkenan Majlis Raja-Raja dan pembentangan MPP sebelum diluluskan 27 Ogos 1957 dan berkuat kuasa 31 Ogos 1957",
+        "Perlembagaan Persekutuan Tanah Melayu digubal terus oleh Suruhanjaya Reid tanpa keperluan maklum balas daripada pihak awam",
+        "Draf perlembagaan diluluskan serta-merta sebaik dikeluarkan oleh Suruhanjaya Reid pada pertengahan 1956",
+        "Suruhanjaya Reid menggubal perlembagaan tanpa perlu berunding dengan Majlis Raja-Raja"
+      ],
+      "answer": "Penggubalan Perlembagaan Persekutuan Tanah Melayu melibatkan penerimaan 131 memorandum, penyediaan draf oleh Suruhanjaya Reid, reaksi pelbagai parti, rundingan semula di London, perkenan Majlis Raja-Raja dan pembentangan MPP sebelum diluluskan 27 Ogos 1957 dan berkuat kuasa 31 Ogos 1957",
+      "explanation": "Rumusan menggabungkan penerimaan memorandum, draf, reaksi pelbagai pihak, rundingan semula, perkenan Majlis Raja-Raja, pembentangan MPP dan kelulusan sebagai langkah menyeluruh penggubalan perlembagaan.",
+      "tip": "131 memorandum → draf → reaksi → runding semula → lulus 27/berkuat kuasa 31 Ogos."
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "id": "9-2",
+  "title": "Peranan Suruhanjaya Perlembagaan Persekutuan Tanah Melayu",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Bilakah Suruhanjaya Perlembagaan Persekutuan Tanah Melayu (Suruhanjaya Reid) diumumkan?",
+      "options": [
+        "8 Mac 1956",
+        "18 Januari 1956",
+        "akhir Jun 1956",
+        "27 Ogos 1957"
+      ],
+      "answer": "8 Mac 1956",
+      "explanation": "Pada 8 Mac 1956, kerajaan British mengumumkan pembentukan Suruhanjaya Perlembagaan Persekutuan Tanah Melayu atau Suruhanjaya Reid.",
+      "tip": "8 Mac 1956 = umum Suruhanjaya Reid."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah Pengerusi Suruhanjaya Reid?",
+      "options": [
+        "Lord Reid",
+        "Sir William Ivor Jennings",
+        "Sir William McKell",
+        "Hakim Abdul Hamid"
+      ],
+      "answer": "Lord Reid",
+      "explanation": "Lord Reid daripada United Kingdom menjadi Pengerusi Suruhanjaya Perlembagaan Persekutuan Tanah Melayu.",
+      "tip": "Lord Reid = Pengerusi Suruhanjaya Reid."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Berapa orang anggota Suruhanjaya Reid?",
+      "options": [
+        "5 orang",
+        "3 orang",
+        "10 orang",
+        "118 orang"
+      ],
+      "answer": "5 orang",
+      "explanation": "Suruhanjaya Perlembagaan Persekutuan Tanah Melayu dianggotai oleh 5 orang ahli.",
+      "tip": "Suruhanjaya Reid = 5 anggota."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Berapa banyak perjumpaan diadakan Suruhanjaya Reid dari Jun hingga Oktober 1956?",
+      "options": [
+        "118",
+        "131",
+        "77",
+        "52"
+      ],
+      "answer": "118",
+      "explanation": "Sebanyak 118 perjumpaan diadakan oleh Suruhanjaya Reid dari Jun hingga Oktober 1956.",
+      "tip": "118 perjumpaan = Jun-Okt 1956."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah Suruhanjaya Reid bertemu Raja-raja Melayu, Menteri Besar dan Penasihat British di setiap negeri?",
+      "options": [
+        "Untuk meneliti kedudukan perlembagaan setiap negeri dalam Persekutuan sebelum merangka perlembagaan menyeluruh",
+        "Untuk melantik wakil negeri sebagai anggota rasmi Suruhanjaya Reid",
+        "Untuk mengumumkan tarikh kemerdekaan kepada setiap negeri secara berasingan",
+        "Untuk menggantikan peranan Majlis Perundangan Persekutuan di peringkat negeri"
+      ],
+      "answer": "Untuk meneliti kedudukan perlembagaan setiap negeri dalam Persekutuan sebelum merangka perlembagaan menyeluruh",
+      "explanation": "Suruhanjaya Reid meneliti kedudukan perlembagaan setiap negeri dengan menghadap Raja-raja Melayu, bertemu Menteri Besar dan berbincang dengan Penasihat British.",
+      "tip": "Teliti kedudukan negeri = sebelum rangka perlembagaan."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah terma rujukan Suruhanjaya Reid menekankan perlindungan kedudukan Raja-raja Melayu sebagai Raja Berperlembagaan?",
+      "options": [
+        "Kerana salah satu tugas suruhanjaya ialah melindungi kedudukan Raja-raja Melayu di negeri masing-masing dalam rangka perlembagaan baharu",
+        "Kerana Raja-raja Melayu menuntut kuasa mutlak menggantikan Majlis Perundangan Persekutuan",
+        "Kerana kedudukan Raja-raja Melayu hanya mula dibincangkan buat pertama kali dalam Suruhanjaya Reid pada 1956",
+        "Kerana British mahu menggantikan institusi beraja dengan sistem presiden selepas kemerdekaan"
+      ],
+      "answer": "Kerana salah satu tugas suruhanjaya ialah melindungi kedudukan Raja-raja Melayu di negeri masing-masing dalam rangka perlembagaan baharu",
+      "explanation": "Salah satu terma rujukan Suruhanjaya Reid ialah melindungi kedudukan Raja-raja Melayu sebagai Raja Berperlembagaan di negeri masing-masing.",
+      "tip": "Terma rujukan = lindung Raja-raja Melayu sbg Raja Berperlembagaan."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah Suruhanjaya Reid menerima memorandum bertulis dan lisan daripada penduduk yang berminat?",
+      "options": [
+        "Sebagai sebahagian gerak kerja mendapatkan cadangan pelbagai pihak sebelum merangka perlembagaan",
+        "Kerana kerajaan British mewajibkan setiap penduduk menghantar memorandum sebelum pilihan raya diadakan",
+        "Kerana Raja-raja Melayu enggan mengemukakan pandangan secara terus kepada suruhanjaya",
+        "Untuk menggantikan tugas Majlis Perundangan Persekutuan dalam menggubal undang-undang harian negara"
+      ],
+      "answer": "Sebagai sebahagian gerak kerja mendapatkan cadangan pelbagai pihak sebelum merangka perlembagaan",
+      "explanation": "Suruhanjaya meminta cadangan daripada semua penduduk yang berminat, secara bertulis atau lisan, sebagai sebahagian gerak kerja mendapatkan cadangan pelbagai pihak.",
+      "tip": "Terima memorandum = kumpul cadangan pelbagai pihak."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Seorang anggota Suruhanjaya Reid mewakili Australia. Siapakah beliau?",
+      "options": [
+        "Sir William McKell",
+        "Sir William Ivor Jennings",
+        "Hakim B. Malik",
+        "Hakim Abdul Hamid"
+      ],
+      "answer": "Sir William McKell",
+      "explanation": "Sir William McKell daripada Australia merupakan salah seorang anggota Suruhanjaya Perlembagaan Persekutuan Tanah Melayu.",
+      "tip": "Sir William McKell = wakil Australia dlm Suruhanjaya Reid."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Suruhanjaya Reid mencadangkan jawatan ketua negara yang kemudiannya dikenali sebagai Yang di-Pertuan Agong. Apakah nama cadangan awal jawatan ini?",
+      "options": [
+        "Yang di-Pertuan Besar",
+        "Ketua Menteri",
+        "Pesuruhjaya Tinggi",
+        "Raja Berperlembagaan"
+      ],
+      "answer": "Yang di-Pertuan Besar",
+      "explanation": "Suruhanjaya Reid mencadangkan jawatan ketua negara, iaitu Yang di-Pertuan Besar, yang kemudiannya dikenali sebagai Yang di-Pertuan Agong.",
+      "tip": "Yang di-Pertuan Besar → kemudian Yang di-Pertuan Agong."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Seorang hakim dari Pakistan menganggotai Suruhanjaya Reid. Siapakah beliau?",
+      "options": [
+        "Hakim Abdul Hamid",
+        "Hakim B. Malik",
+        "Lord Reid",
+        "Sir William Ivor Jennings"
+      ],
+      "answer": "Hakim Abdul Hamid",
+      "explanation": "Hakim Abdul Hamid daripada Pakistan merupakan salah seorang anggota Suruhanjaya Perlembagaan Persekutuan Tanah Melayu.",
+      "tip": "Hakim Abdul Hamid = wakil Pakistan dlm Suruhanjaya Reid."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perbezaan antara gerak kerja \"Mendapatkan Cadangan\" dengan \"Meneliti Kedudukan Negeri\" yang dijalankan Suruhanjaya Reid?",
+      "options": [
+        "\"Mendapatkan Cadangan\" melibatkan penerimaan memorandum bertulis atau lisan daripada penduduk berminat secara umum, manakala \"Meneliti Kedudukan Negeri\" melibatkan lawatan dan pertemuan khusus dengan Raja-raja Melayu, Menteri Besar dan pegawai negeri di setiap negeri",
+        "\"Mendapatkan Cadangan\" hanya melibatkan Raja-raja Melayu, manakala \"Meneliti Kedudukan Negeri\" melibatkan penduduk umum",
+        "Kedua-dua gerak kerja ini dijalankan oleh Majlis Perundangan Persekutuan, bukan Suruhanjaya Reid",
+        "\"Meneliti Kedudukan Negeri\" dijalankan sebelum suruhanjaya ditubuhkan secara rasmi pada 8 Mac 1956"
+      ],
+      "answer": "\"Mendapatkan Cadangan\" melibatkan penerimaan memorandum bertulis atau lisan daripada penduduk berminat secara umum, manakala \"Meneliti Kedudukan Negeri\" melibatkan lawatan dan pertemuan khusus dengan Raja-raja Melayu, Menteri Besar dan pegawai negeri di setiap negeri",
+      "explanation": "\"Mendapatkan Cadangan\" bersifat umum (memorandum daripada sesiapa yang berminat), manakala \"Meneliti Kedudukan Negeri\" melibatkan lawatan khusus dan pertemuan dengan pemimpin setiap negeri.",
+      "tip": "Cadangan = umum. Kedudukan negeri = lawatan khusus tiap negeri."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perkaitan antara terma rujukan Suruhanjaya Reid dengan hasil rundingan kemerdekaan di London (subtopik 9.1)?",
+      "options": [
+        "Kedua-dua pihak (Raja-raja Melayu dan British) bersetuju membentuk Suruhanjaya Perlembagaan semasa rundingan London, dan terma rujukan suruhanjaya ini kemudiannya melaksanakan persetujuan tersebut dengan merangka perlembagaan berteraskan Demokrasi Berparlimen dan Raja Berperlembagaan",
+        "Terma rujukan Suruhanjaya Reid dirangka sebelum rundingan kemerdekaan di London bermula",
+        "Suruhanjaya Reid ditubuhkan sebelum rundingan kemerdekaan di London bermula pada Januari 1956",
+        "Rundingan kemerdekaan di London hanya membincangkan isu ketenteraan, tidak berkaitan penubuhan Suruhanjaya Reid"
+      ],
+      "answer": "Kedua-dua pihak (Raja-raja Melayu dan British) bersetuju membentuk Suruhanjaya Perlembagaan semasa rundingan London, dan terma rujukan suruhanjaya ini kemudiannya melaksanakan persetujuan tersebut dengan merangka perlembagaan berteraskan Demokrasi Berparlimen dan Raja Berperlembagaan",
+      "explanation": "Semasa rundingan London, kedua-dua pihak bersetuju membentuk Suruhanjaya Perlembagaan; terma rujukan suruhanjaya ini kemudiannya melaksanakan persetujuan tersebut.",
+      "tip": "Rundingan London bersetuju bentuk suruhanjaya → terma rujukan Reid."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah PALING tepat menjelaskan mengapa lima anggota Suruhanjaya Reid dipilih daripada latar belakang undang-undang Komanwel yang berbeza negara (United Kingdom, Australia, India, Pakistan)?",
+      "options": [
+        "Kepelbagaian latar belakang undang-undang Komanwel membawa pengalaman merangka perlembagaan daripada konteks pelbagai negara, menyumbang perspektif lebih luas berbanding jika hanya dianggotai wakil British atau tempatan sahaja",
+        "Kerajaan British mewajibkan setiap negara Komanwel menghantar seorang wakil tanpa mengira latar belakang undang-undang",
+        "Anggota daripada pelbagai negara dipilih secara rawak tanpa mempertimbangkan pengalaman undang-undang mereka",
+        "Kepelbagaian negara asal anggota bertujuan mengurangkan bilangan memorandum yang perlu diteliti suruhanjaya"
+      ],
+      "answer": "Kepelbagaian latar belakang undang-undang Komanwel membawa pengalaman merangka perlembagaan daripada konteks pelbagai negara, menyumbang perspektif lebih luas berbanding jika hanya dianggotai wakil British atau tempatan sahaja",
+      "explanation": "Anggota Suruhanjaya Reid berpengalaman dalam sistem perundangan Komanwel daripada pelbagai negara, membawa perspektif lebih luas dalam merangka perlembagaan negara merdeka.",
+      "tip": "Anggota pelbagai negara Komanwel = perspektif lebih luas."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah PALING tepat merumuskan subtopik 9.2?",
+      "options": [
+        "Suruhanjaya Reid ditubuhkan pada 8 Mac 1956 dengan 5 anggota berlatar belakang undang-undang Komanwel, menjalankan gerak kerja menyeluruh (memorandum, lawatan negeri, 118 persidangan) untuk merangka Perlembagaan Persekutuan Tanah Melayu berteraskan Demokrasi Berparlimen dan Raja Berperlembagaan",
+        "Suruhanjaya Reid hanya dianggotai wakil British tanpa penglibatan negara Komanwel lain",
+        "Suruhanjaya Reid ditubuhkan selepas Perlembagaan Persekutuan Tanah Melayu 1957 berkuat kuasa",
+        "Suruhanjaya Reid hanya menjalankan satu perjumpaan sepanjang tempoh tugasnya"
+      ],
+      "answer": "Suruhanjaya Reid ditubuhkan pada 8 Mac 1956 dengan 5 anggota berlatar belakang undang-undang Komanwel, menjalankan gerak kerja menyeluruh (memorandum, lawatan negeri, 118 persidangan) untuk merangka Perlembagaan Persekutuan Tanah Melayu berteraskan Demokrasi Berparlimen dan Raja Berperlembagaan",
+      "explanation": "Rumusan menggabungkan penubuhan (8 Mac 1956), keanggotaan (5 orang) dan gerak kerja Suruhanjaya Reid dalam merangka perlembagaan berteraskan Demokrasi Berparlimen dan Raja Berperlembagaan.",
+      "tip": "8 Mac 1956, 5 anggota, gerak kerja menyeluruh → rangka perlembagaan."
+    }
+  ]
+}
