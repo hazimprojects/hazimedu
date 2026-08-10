@@ -4145,7 +4145,21 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     // digunakan merentas notes/bab-8*.html; 62/63 SUDAH sedia ada drpd
     // liputan Bab 1-7, 1 baki ni khusus baharu utk Bab 8. Padan TERUS
     // ke annotation OpenMoji — tiada kes edge.
-    'Hammer': '/assets/openmoji/hammer.svg'
+    'Hammer': '/assets/openmoji/hammer.svg',
+    // Bab 9 — +1 konsep baharu (312 kesemuanya) drpd 48 konsep unik
+    // digunakan merentas notes/bab-9*.html; 47/48 SUDAH sedia ada drpd
+    // liputan Bab 1-8, 1 baki ni khusus baharu utk Bab 9. 1 kes edge
+    // annotation OpenMoji: Fluent "Building" TIADA annotation "building"
+    // langsung dlm OpenMoji (bukan emoji rasmi berasingan) — dipetakan
+    // ke konsep Unicode yg sama, "office building" (U+1F3E2), padan
+    // konteks penggunaan sumber (ikon generik institusi/badan awam,
+    // cth. "badan awam", "Dewan Perniagaan Melayu", "jawatan
+    // perkhidmatan awam"). AWAS drpd §"Ikon Emoji" atas ttg kunci
+    // "building" PECAH di CDN Fluent (sistem client-side emoji_map.py)
+    // TIDAK relevan di sini — peta ni (HZ_PDF_OPENMOJI_MAP) sistem
+    // BERASINGAN (self-host OpenMoji utk PDF sahaja), svg disahkan
+    // wujud & sah sebelum push.
+    'Building': '/assets/openmoji/building.svg'
   };
 
   function _pdfEmojiSrc(originalSrc) {
@@ -4861,11 +4875,11 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   var PDF_2COL_COL_WIDTH_PX = Math.round(PDF_2COL_COL_WIDTH_MM * PDF_BASE_DENSITY);
 
   function _pdfIsTwoColumnScope() {
-    // Diluaskan drpd Bab 1-7 asal ke +Bab 8 — WAJIB lengkapkan liputan
-    // HZ_PDF_OPENMOJI_MAP 100% konsep unik Bab 8 dulu (rujuk komen di
+    // Diluaskan drpd Bab 1-8 asal ke +Bab 9 — WAJIB lengkapkan liputan
+    // HZ_PDF_OPENMOJI_MAP 100% konsep unik Bab 9 dulu (rujuk komen di
     // atas takrifan map, disahkan 0 konsep hilang sebelum baris ni diubah)
-    // supaya PDF Bab 8 tak papar campuran gaya OpenMoji + Fluent.
-    return /\/notes\/bab-[12345678](-\d+)?\.html$/i.test(window.location.pathname);
+    // supaya PDF Bab 9 tak papar campuran gaya OpenMoji + Fluent.
+    return /\/notes\/bab-[1-9](-\d+)?\.html$/i.test(window.location.pathname);
   }
 
   // Bab 4 (Malayan Union/Persekutuan) ada gelaran raja/sultan kw-tokoh
@@ -7730,7 +7744,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=575').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=576').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
