@@ -4209,7 +4209,17 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
         } else {
           h += '<div class="zp-chips">';
           node.querySelectorAll('.paper-chip').forEach(function(c) {
-            h += '<span class="zp-chip">' + _kwHtml(c) + '</span>';
+            // Chip blok berdiri sendiri (bukan dlm ayat, cth. "Negara
+            // utama:" bawah kad Fokus Kuasa Paksi/Bersekutu) — SAMA
+            // pengesanan bloc-chip-* drpd _kwHtmlOne, tapi kelas warna
+            // mesti ditambah SINI (bukan dlm _kwHtml(c) yg proses ANAK c,
+            // bukan c itu sendiri) sbb wrapper `<span class="zp-chip">`
+            // ni cipta terus drpd `c`, tak lalu _kwHtmlOne langsung.
+            // Tanpa ni, chip warna (cth. "Jerman" 🇩🇪) jatuh balik ke
+            // gaya .zp-chip neutral kelabu, kehilangan pembezaan blok.
+            var bm = (c.className || '').match(/\bbloc-chip-(central|entente|axis|allies)\b/);
+            var chipCls = bm ? 'zp-chip zpbloc zpbloc-' + bm[1] : 'zp-chip';
+            h += '<span class="' + chipCls + '">' + _kwHtml(c) + '</span>';
           });
           h += '</div>';
         }
@@ -4235,6 +4245,28 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
           h += '<span class="zp-chip">' + _kwHtml(k) + '</span>';
         });
         h += '</div>';
+      } else if (cls.indexOf('bloc-legend-grid') !== -1) {
+        // Kad "Panduan warna pihak perang" (bab-3-2 s/d bab-3-8) — corak
+        // `.bloc-legend-item > span.bloc-legend-swatch (kosong) + span
+        // (label polos, cth. "Kuasa Paksi — ") + span.paper-chip.bloc-
+        // chip-axis (tersarang, cth. "🇩🇪 Jerman") tersarang`. Sblm ni
+        // TIADA cabang eksplisit — jatuh ke fallback generik `_bodyHtml`
+        // yg (a) skip swatch (kosong, OK) TAPI (b) span label POLOS
+        // (tiada kelas dikenali) & span bloc-chip tersarang KEDUA-DUA
+        // jatuh lagi ke fallback SEKALI LAGI, akhirnya cuma <img>
+        // bendera bersendirian yg terselamat (drpd fix IMG lain) — teks
+        // label ("Kuasa Paksi — ") & warna blok (dikesan _kwHtmlOne,
+        // TAK PERNAH sampai sbb laluan `_bodyHtml` tak lalu `_kwHtml`)
+        // KEDUA-DUANYA hilang. Disahkan pengguna (tangkapan skrin
+        // bab-3-3.html): legenda papar bendera kosong tanpa label/warna.
+        // Fix: proses label span (anak KEDUA item, lepas swatch) terus
+        // via `_kwHtml()` — laluan SAMA yg kesan `bloc-chip-*` (rujuk
+        // _kwHtmlOne) & kekalkan bendera, hasilkan "Kuasa Paksi — [chip
+        // merah 🇩🇪 Jerman]" penuh.
+        node.querySelectorAll(':scope > .bloc-legend-item').forEach(function(item) {
+          var label = item.querySelector(':scope > span:not(.bloc-legend-swatch)');
+          if (label) h += '<p class="zp-p">' + _kwHtml(label) + '</p>';
+        });
       } else if (cls.indexOf('paper-steps') !== -1) {
         h += '<div class="zp-steps">';
         node.querySelectorAll('.paper-step').forEach(function(step) {
@@ -4416,8 +4448,20 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
           var ttl = trig.querySelector('.paper-accordion-title');
           h += '<div class="zp-acc-hd"><span class="zp-acc-num">' + idx + '</span>';
           if (ttl) {
+            // _kwHtml() (bukan _escPdfHtml(textContent) spt sebelum ni) —
+            // tajuk accordion BOLEH ada chip blok PD1/PD2 tersarang (cth.
+            // "Kuasa Paksi" bab-3-3.html, <span class="paper-accordion-
+            // title"><span class="paper-chip bloc-chip-axis">...</span>
+            // </span>) atau span kw-* — textContent polos buang KESEMUA
+            // pewarnaan/format. Ni DUA fungsi _renderAccordion() berasingan
+            // dlm fail ni (satu dlm _buildPrintHtml, satu dlm _bodyHtmlNode
+            // utk accordion tersarang dlm badan papan) — yg SATU LAGI
+            // sudah guna _kwHtml betul, cuma yg ni tertinggal (disahkan
+            // pengguna: tajuk "Kuasa Paksi"/"Kuasa Bersekutu" accordion
+            // atas bab-3-3.html papar polos tanpa warna walau kad Ringkasan
+            // & chip lain dlm halaman sama dah betul).
             h += '<span class="zp-acc-ttl"><span class="zp-acc-ttl-txt">' +
-              _escPdfHtml(ttl.textContent.trim()) + '</span></span>';
+              _kwHtml(ttl) + '</span></span>';
           }
           h += '</div>';
         }
@@ -4721,7 +4765,14 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       // terang (bukan gradien — gradien lebih berisiko dgn html2canvas,
       // rujuk sejarah pepijat html2canvas §"Eksport PDF" CLAUDE.md; warna
       // rata cukup utk bezakan blok pd cetakan).
-      '#zym-pr .zpbloc{padding:0.05em 0.35em;border-radius:5px;font-weight:600}',
+      // white-space:nowrap WAJIB — SAMA punca/fix drpd .zpkw (rujuk AWAS
+      // §"Susun Atur 2 Lajur" CLAUDE.md): frasa berbilang perkataan (cth.
+      // "Kuasa Paksi") yg terpisah pertengahan merentas baris pd lebar
+      // lajur sempit buat latar warna melekit/pecah dlm html2canvas.
+      // Disahkan pengguna (tangkapan skrin bab-3-3.html mod 2 lajur):
+      // "Kuasa Paksi" dlm kad Ringkasan papar kotak pecah/melimpah bila
+      // terpaksa lipat. nowrap paksa seluruh frasa berpindah SEKALI GUS.
+      '#zym-pr .zpbloc{padding:0.05em 0.35em;border-radius:5px;font-weight:600;white-space:nowrap}',
       '#zym-pr .zpbloc-central{color:#334155;background:#e2e8f0}',
       '#zym-pr .zpbloc-entente{color:#14532d;background:#dcfce7}',
       '#zym-pr .zpbloc-axis{color:#991b1b;background:#fee2e2}',
