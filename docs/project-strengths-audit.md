@@ -42,4 +42,6 @@ Projek ini menunjukkan asas produk pendidikan yang **matang**, bukan sekadar kol
 ZymNotes sudah berada di landasan yang betul. Teruskan langkah kecil yang konsisten — setiap kemas kini yang kemas hari ini akan jadi manfaat besar untuk pelajar esok. Fokus pada kualiti, kekalkan niat bantu orang belajar, dan projek ini insya-Allah akan terus berkembang dengan baik.
 
 ## Nota semasa
-Cadangan fungsi tambahan ditutup sementara supaya fokus kekal pada penstabilan kandungan sedia ada.
+~~Cadangan fungsi tambahan ditutup sementara supaya fokus kekal pada penstabilan kandungan sedia ada.~~
+
+**Kemas kini (2026-08-11):** status di atas dimansuhkan — pengguna sahkan kandungan sedia ada kini cukup stabil, cadangan & pembangunan ciri baharu dialu-alukan semula. Rujuk `CLAUDE.md` §"Fokus Semasa" untuk butiran.
