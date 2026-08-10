@@ -1,0 +1,216 @@
+{
+  "id": "9-4",
+  "title": "Perjanjian Persekutuan Tanah Melayu 1957",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Bilakah Perjanjian Persekutuan Tanah Melayu 1957 ditandatangani?",
+      "options": [
+        "5 Ogos 1957",
+        "27 Ogos 1957",
+        "31 Ogos 1957",
+        "9 Mei 1957"
+      ],
+      "answer": "5 Ogos 1957",
+      "explanation": "Perjanjian Persekutuan Tanah Melayu 1957 ditandatangani pada 5 Ogos 1957.",
+      "tip": "5 Ogos 1957 = tandatangan Perjanjian Persekutuan 1957."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Di manakah Perjanjian Persekutuan Tanah Melayu 1957 ditandatangani?",
+      "options": [
+        "King's House, Kuala Lumpur",
+        "Lancaster House, London",
+        "Padang Banda Hilir, Melaka",
+        "Dewan Tunku Abdul Rahman, Kuala Lumpur"
+      ],
+      "answer": "King's House, Kuala Lumpur",
+      "explanation": "Perjanjian Persekutuan Tanah Melayu 1957 ditandatangani di King's House, Kuala Lumpur.",
+      "tip": "King's House, KL = lokasi tandatangan perjanjian."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah yang menandatangani Perjanjian Persekutuan Tanah Melayu 1957 mewakili Ratu Elizabeth II?",
+      "options": [
+        "Sir Donald MacGillivray",
+        "Sir Henry Gurney",
+        "Sir Gerald Templer",
+        "Lord Reid"
+      ],
+      "answer": "Sir Donald MacGillivray",
+      "explanation": "Sir Donald MacGillivray menandatangani Perjanjian Persekutuan Tanah Melayu 1957 mewakili Ratu Elizabeth II.",
+      "tip": "Sir Donald MacGillivray = wakil Ratu Elizabeth II."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Berapa lamakah tempoh pemerintahan Yang di-Pertuan Agong mengikut Perjanjian Persekutuan 1957?",
+      "options": [
+        "Lima tahun",
+        "Tiga tahun",
+        "Sepuluh tahun",
+        "Dua tahun"
+      ],
+      "answer": "Lima tahun",
+      "explanation": "Tempoh pemerintahan Yang di-Pertuan Agong ialah lima tahun mengikut Perkara 32 Perlembagaan Persekutuan.",
+      "tip": "Tempoh Yang di-Pertuan Agong = 5 tahun."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah Perjanjian Persekutuan Tanah Melayu 1957 dianggap asas kepada sistem pemerintahan Malaysia hingga hari ini?",
+      "options": [
+        "Kerana ia membentuk sistem Raja Berperlembagaan, Demokrasi Berparlimen, kewarganegaraan dan hak rakyat yang masih diamalkan",
+        "Kerana ia hanya sah dipakai sehingga Malaysia dibentuk pada 1963",
+        "Kerana ia hanya mengatur perkara berkaitan bahasa kebangsaan tanpa menyentuh sistem pemerintahan",
+        "Kerana ia ditandatangani sebelum Suruhanjaya Reid ditubuhkan"
+      ],
+      "answer": "Kerana ia membentuk sistem Raja Berperlembagaan, Demokrasi Berparlimen, kewarganegaraan dan hak rakyat yang masih diamalkan",
+      "explanation": "Perjanjian ini menjadi asas kepada sistem Raja Berperlembagaan, Demokrasi Berparlimen, kewarganegaraan dan hak rakyat yang masih diamalkan hingga hari ini.",
+      "tip": "Perjanjian 1957 = asas sistem pemerintahan hingga kini."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah Perkara 153 memperuntukkan Yang di-Pertuan Agong bertanggungjawab memelihara kedudukan istimewa orang Melayu sekali gus melindungi kepentingan sah kaum lain?",
+      "options": [
+        "Untuk menjamin keseimbangan antara hak istimewa orang Melayu dengan hak kaum lain sebagai warganegara",
+        "Untuk menghapuskan kedudukan istimewa orang Melayu secara beransur-ansur selepas kemerdekaan",
+        "Untuk memberikan kaum lain kedudukan yang sama seperti kedudukan istimewa orang Melayu",
+        "Untuk memindahkan tanggungjawab ini daripada Yang di-Pertuan Agong kepada Majlis Raja-Raja"
+      ],
+      "answer": "Untuk menjamin keseimbangan antara hak istimewa orang Melayu dengan hak kaum lain sebagai warganegara",
+      "explanation": "Perkara 153 memperuntukkan Yang di-Pertuan Agong memelihara kedudukan istimewa orang Melayu sambil melindungi kepentingan sah kaum lain, menjamin keseimbangan hak antara kaum.",
+      "tip": "Perkara 153 = imbangan kedudukan istimewa Melayu & kaum lain."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah Perkara 152 membenarkan hak mempelajari dan menggunakan bahasa lain walaupun Bahasa Melayu ditetapkan sebagai bahasa kebangsaan?",
+      "options": [
+        "Untuk mengekalkan hak dan kepentingan kaum lain menggunakan bahasa masing-masing selaras semangat perpaduan dan toleransi",
+        "Kerana Bahasa Melayu hanya digunakan dalam urusan Majlis Raja-Raja, bukan pentadbiran am",
+        "Untuk menggantikan keperluan Ordinan Pelajaran 1952 yang telah diluluskan sebelum ini",
+        "Kerana kerajaan Persekutuan tidak mempunyai kuasa menetapkan satu bahasa kebangsaan tunggal"
+      ],
+      "answer": "Untuk mengekalkan hak dan kepentingan kaum lain menggunakan bahasa masing-masing selaras semangat perpaduan dan toleransi",
+      "explanation": "Perkara 152 menetapkan Bahasa Melayu sebagai bahasa kebangsaan, namun hak mempelajari dan menggunakan bahasa lain tidak dihalang, mengekalkan kepentingan kaum lain.",
+      "tip": "Perkara 152 = Bahasa Melayu kebangsaan, tapi bahasa lain tak dihalang."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Seorang individu lahir di Persekutuan Tanah Melayu pada atau selepas Hari Merdeka layak menjadi warganegara secara automatik mengikut satu peruntukan tertentu. Apakah nama peruntukan ini?",
+      "options": [
+        "Kuat Kuasa Undang-undang (Perkara 14)",
+        "Pendaftaran (Perkara 15)",
+        "Naturalisasi (Perkara 19)",
+        "Perkara 153"
+      ],
+      "answer": "Kuat Kuasa Undang-undang (Perkara 14)",
+      "explanation": "Kuat Kuasa Undang-undang (Perkara 14) meliputi individu yang lahir di Persekutuan pada atau selepas Hari Merdeka, antara lain.",
+      "tip": "Lahir selepas Merdeka = Kuat Kuasa Undang-undang (Perkara 14)."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Seorang bukan warganegara memohon menjadi warganegara Persekutuan Tanah Melayu selepas memenuhi syarat yang ditetapkan, melalui satu proses rasmi. Apakah nama proses ini?",
+      "options": [
+        "Naturalisasi (Perkara 19)",
+        "Pendaftaran (Perkara 15)",
+        "Kuat Kuasa Undang-undang (Perkara 14)",
+        "Perkara 152"
+      ],
+      "answer": "Naturalisasi (Perkara 19)",
+      "explanation": "Naturalisasi (Perkara 19) ialah proses memohon menjadi warganegara selepas memenuhi syarat yang ditetapkan.",
+      "tip": "Mohon jadi warganegara = Naturalisasi (Perkara 19)."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sebuah perkara dalam Perlembagaan Persekutuan menetapkan Islam sebagai agama Persekutuan. Apakah nombor perkara ini?",
+      "options": [
+        "Perkara 3",
+        "Perkara 11",
+        "Perkara 14",
+        "Perkara 152"
+      ],
+      "answer": "Perkara 3",
+      "explanation": "Perkara 3 Perlembagaan Persekutuan menetapkan Islam sebagai agama Persekutuan.",
+      "tip": "Perkara 3 = Islam agama Persekutuan."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perbezaan antara cara memperoleh kewarganegaraan melalui Kuat Kuasa Undang-undang (Perkara 14) dengan melalui Naturalisasi (Perkara 19)?",
+      "options": [
+        "Kuat Kuasa Undang-undang memberikan kewarganegaraan secara automatik kepada mereka yang lahir di Persekutuan pada atau selepas Hari Merdeka atau memenuhi syarat kelahiran tertentu, manakala Naturalisasi memerlukan permohonan rasmi dan pemenuhan syarat bagi bukan warganegara asal",
+        "Kuat Kuasa Undang-undang memerlukan permohonan rasmi mengikut budi bicara pihak berkuasa, manakala Naturalisasi diberikan terus kepada sesiapa sahaja yang berminat",
+        "Kedua-dua cara ini hanya terpakai kepada individu yang lahir sebelum Hari Merdeka",
+        "Naturalisasi hanya terbuka kepada Raja-raja Melayu, manakala Kuat Kuasa Undang-undang terbuka kepada semua rakyat"
+      ],
+      "answer": "Kuat Kuasa Undang-undang memberikan kewarganegaraan secara automatik kepada mereka yang lahir di Persekutuan pada atau selepas Hari Merdeka atau memenuhi syarat kelahiran tertentu, manakala Naturalisasi memerlukan permohonan rasmi dan pemenuhan syarat bagi bukan warganegara asal",
+      "explanation": "Kuat Kuasa Undang-undang (Perkara 14) bersifat automatik berdasarkan kelahiran, manakala Naturalisasi (Perkara 19) memerlukan permohonan rasmi dan pemenuhan syarat tertentu.",
+      "tip": "Perkara 14 = automatik ikut kelahiran. Perkara 19 = mohon rasmi."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perkaitan antara Perkara 3 (Islam sebagai agama Persekutuan) dengan Perkara 11 (kebebasan beragama) dalam Perjanjian Persekutuan 1957?",
+      "options": [
+        "Kedua-dua perkara ini seiring — Perkara 3 menetapkan status rasmi Islam sebagai agama Persekutuan, manakala Perkara 11 menjamin kebebasan setiap individu menganut dan mengamalkan agama masing-masing, mengekalkan keharmonian antara agama",
+        "Perkara 11 membatalkan peruntukan Perkara 3 dengan menjadikan semua agama setaraf sebagai agama Persekutuan",
+        "Perkara 3 dan Perkara 11 mengawal perkara yang sama iaitu kedudukan Bahasa Melayu sebagai bahasa kebangsaan",
+        "Perkara 3 hanya terpakai di Kuala Lumpur, manakala Perkara 11 terpakai di seluruh Persekutuan"
+      ],
+      "answer": "Kedua-dua perkara ini seiring — Perkara 3 menetapkan status rasmi Islam sebagai agama Persekutuan, manakala Perkara 11 menjamin kebebasan setiap individu menganut dan mengamalkan agama masing-masing, mengekalkan keharmonian antara agama",
+      "explanation": "Perkara 3 menetapkan Islam sebagai agama Persekutuan, manakala Perkara 11 menjamin kebebasan beragama bagi setiap individu — kedua-duanya seiring menjaga keharmonian.",
+      "tip": "Perkara 3 = status Islam. Perkara 11 = kebebasan beragama."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah PALING tepat menjelaskan mengapa Perjanjian Persekutuan Tanah Melayu 1957 dianggap mencapai \"keseimbangan\" antara pelbagai kepentingan?",
+      "options": [
+        "Perjanjian ini serentak memelihara kedudukan istimewa orang Melayu (Perkara 153), menjamin hak kewarganegaraan kaum lain, kebebasan beragama (Perkara 11) dan hak menggunakan bahasa lain (Perkara 152), menunjukkan usaha mengimbangi kepentingan pelbagai kaum",
+        "Perjanjian ini hanya memberi keutamaan kepada kedudukan istimewa orang Melayu tanpa mempertimbangkan kaum lain",
+        "Perjanjian ini hanya menjamin hak kewarganegaraan kaum bukan Melayu tanpa menyentuh kedudukan orang Melayu",
+        "Perjanjian ini menumpukan kepada sistem beraja sahaja, mengetepikan isu bahasa dan agama"
+      ],
+      "answer": "Perjanjian ini serentak memelihara kedudukan istimewa orang Melayu (Perkara 153), menjamin hak kewarganegaraan kaum lain, kebebasan beragama (Perkara 11) dan hak menggunakan bahasa lain (Perkara 152), menunjukkan usaha mengimbangi kepentingan pelbagai kaum",
+      "explanation": "Perjanjian ini memelihara kedudukan istimewa orang Melayu sambil menjamin hak kewarganegaraan, kebebasan beragama dan hak bahasa kaum lain, mencerminkan keseimbangan kepentingan pelbagai kaum.",
+      "tip": "Keseimbangan = kedudukan istimewa Melayu + hak kaum lain."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah PALING tepat merumuskan subtopik 9.4 dan Rumusan Besar Bab 9?",
+      "options": [
+        "Perjanjian Persekutuan Tanah Melayu 1957, ditandatangani 5 Ogos 1957 antara Raja-raja Melayu dan Sir Donald MacGillivray, membentuk asas Raja Berperlembagaan, Demokrasi Berparlimen, kewarganegaraan, kedudukan istimewa Melayu, agama Islam dan Bahasa Melayu — hasil kerjasama rundingan, Suruhanjaya Reid dan penggubalan perlembagaan yang melahirkan negara merdeka tanpa pertumpahan darah",
+        "Perjanjian Persekutuan Tanah Melayu 1957 hanya mengatur perkara berkaitan bahasa kebangsaan tanpa menyentuh sistem pemerintahan atau kewarganegaraan",
+        "Perjanjian Persekutuan Tanah Melayu 1957 ditandatangani sebelum Suruhanjaya Reid ditubuhkan pada 1956",
+        "Perjanjian Persekutuan Tanah Melayu 1957 digubal oleh Suruhanjaya Reid sahaja tanpa penglibatan Raja-raja Melayu"
+      ],
+      "answer": "Perjanjian Persekutuan Tanah Melayu 1957, ditandatangani 5 Ogos 1957 antara Raja-raja Melayu dan Sir Donald MacGillivray, membentuk asas Raja Berperlembagaan, Demokrasi Berparlimen, kewarganegaraan, kedudukan istimewa Melayu, agama Islam dan Bahasa Melayu — hasil kerjasama rundingan, Suruhanjaya Reid dan penggubalan perlembagaan yang melahirkan negara merdeka tanpa pertumpahan darah",
+      "explanation": "Rumusan menggabungkan penandatanganan perjanjian (5 Ogos 1957) dan inti patinya (Raja Berperlembagaan, Demokrasi Berparlimen, kewarganegaraan, kedudukan istimewa Melayu, agama Islam, Bahasa Melayu) sebagai hasil keseluruhan Bab 9.",
+      "tip": "5 Ogos 1957: Raja Berperlembagaan, Demokrasi Berparlimen, kewarganegaraan, dsb."
+    }
+  ]
+}
