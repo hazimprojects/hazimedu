@@ -4125,7 +4125,22 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     'Wilted flower': '/assets/openmoji/wilted-flower.svg',
     'Woman': '/assets/openmoji/woman.svg',
     'Woman police officer': '/assets/openmoji/woman-police-officer.svg',
-    'Wrench': '/assets/openmoji/wrench.svg'
+    'Wrench': '/assets/openmoji/wrench.svg',
+    // Bab 7 — +10 konsep baharu (310 kesemuanya) drpd 96 konsep unik
+    // digunakan merentas notes/bab-7*.html; 86/96 SUDAH sedia ada drpd
+    // liputan Bab 1-6, 10 baki ni khusus baharu utk Bab 7. Semua padan
+    // TERUS ke annotation OpenMoji (title-case → lowercase) — tiada kes
+    // edge kali ni.
+    'Black flag': '/assets/openmoji/black-flag.svg',
+    'Boy': '/assets/openmoji/boy.svg',
+    'Cloud with lightning and rain': '/assets/openmoji/cloud-with-lightning-and-rain.svg',
+    'Coffin': '/assets/openmoji/coffin.svg',
+    'Latin cross': '/assets/openmoji/latin-cross.svg',
+    'Man office worker': '/assets/openmoji/man-office-worker.svg',
+    'Office worker': '/assets/openmoji/office-worker.svg',
+    'Palms up together': '/assets/openmoji/palms-up-together.svg',
+    'Passport control': '/assets/openmoji/passport-control.svg',
+    'Red paper lantern': '/assets/openmoji/red-paper-lantern.svg'
   };
 
   function _pdfEmojiSrc(originalSrc) {
@@ -4841,11 +4856,11 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   var PDF_2COL_COL_WIDTH_PX = Math.round(PDF_2COL_COL_WIDTH_MM * PDF_BASE_DENSITY);
 
   function _pdfIsTwoColumnScope() {
-    // Diluaskan drpd Bab 1-5 asal ke +Bab 6 — WAJIB lengkapkan liputan
-    // HZ_PDF_OPENMOJI_MAP 100% konsep unik Bab 6 dulu (rujuk komen di
+    // Diluaskan drpd Bab 1-6 asal ke +Bab 7 — WAJIB lengkapkan liputan
+    // HZ_PDF_OPENMOJI_MAP 100% konsep unik Bab 7 dulu (rujuk komen di
     // atas takrifan map, disahkan 0 konsep hilang sebelum baris ni diubah)
-    // supaya PDF Bab 6 tak papar campuran gaya OpenMoji + Fluent.
-    return /\/notes\/bab-[123456](-\d+)?\.html$/i.test(window.location.pathname);
+    // supaya PDF Bab 7 tak papar campuran gaya OpenMoji + Fluent.
+    return /\/notes\/bab-[1234567](-\d+)?\.html$/i.test(window.location.pathname);
   }
 
   // Bab 4 (Malayan Union/Persekutuan) ada gelaran raja/sultan kw-tokoh
