@@ -4076,6 +4076,29 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       // pengesanan bendera _pdfFlagSrc) betulkan tanpa duplikasi logik.
       if (tag === 'IMG') {
         h += _kwHtmlOne(node);
+      } else if (cls.indexOf('paper-strip') !== -1) {
+        // .paper-strip yg sampai SINI (bukan dilalui _renderBoard punya
+        // querySelector('.paper-strip') sendiri, yg hanya tarik STRIP
+        // LANGSUNG anak papan, sbg saudara .cv-unit-body — rujuk
+        // _renderBoard) sentiasa .paper-strip.strip-sub tersarang DALAM
+        // .cv-unit-body sbg sub-tajuk. 77/79 kejadian (disahkan grep
+        // seluruh korpus) berada dlm .paper-accordion-panel & TEKS SAMA
+        // (case/singkatan beza) drpd tajuk accordion tu SENDIRI (.zp-acc-ttl
+        // sedia ada dicetak drpd .paper-accordion-title) — pendua tajuk
+        // dlm PDF linear (walau munasabah dlm laman hidup, accordion
+        // collapse/expand). Digugurkan bila dlm konteks accordion (elak
+        // pendua tajuk) — sebelum ni (tanpa cabang eksplisit ni) jatuh ke
+        // fallback generik `_bodyHtml(node)`, yg skip nod teks terus
+        // (Dahagi India/1857 dsb HILANG) tapi (lepas fix IMG di atas)
+        // KEKALKAN bendera bersendirian tanpa teks — nampak "emoji
+        // terputus" dilaporkan pengguna. 2/79 kejadian LUAR accordion
+        // (cth. "Komposisi Ahli MPP 1948/1955" bab-8-3.html, label unik
+        // carta bar, BUKAN pendua) — KEKAL dicetak penuh (_kwHtml, sama
+        // corak drpd stripHtml _renderBoard) sbb tiada tajuk lain
+        // gantikannya.
+        if (!node.closest('.paper-accordion-panel')) {
+          h += '<p class="zp-ph">' + _kwHtml(node) + '</p>';
+        }
       } else if (cls.indexOf('paper-chip-list') !== -1) {
         var hasSentence = node.querySelector('.paper-chip-sentence') !== null;
         if (hasSentence) {
