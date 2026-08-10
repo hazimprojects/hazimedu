@@ -4083,7 +4083,49 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     'Memo': '/assets/openmoji/memo.svg',
     'Necktie': '/assets/openmoji/necktie.svg',
     'Paperclip': '/assets/openmoji/paperclip.svg',
-    'Satellite antenna': '/assets/openmoji/satellite-antenna.svg'
+    'Satellite antenna': '/assets/openmoji/satellite-antenna.svg',
+    // Bab 6 — +35 konsep baharu (300 kesemuanya) drpd 146 konsep unik
+    // digunakan merentas notes/bab-6*.html; 111/146 SUDAH sedia ada drpd
+    // liputan Bab 1-5, 35 baki ni khusus baharu utk Bab 6. 1 kes edge
+    // annotation OpenMoji: "Rescue workers helmet" (Fluent, jamak tiada
+    // apostrof) → annotation OpenMoji "rescue worker's helmet" (tunggal,
+    // guna tanda petik lengkung ’ — BUKAN apostrof lurus '); baki 34
+    // padan TERUS title-case → lowercase.
+    'Admission tickets': '/assets/openmoji/admission-tickets.svg',
+    'Automobile': '/assets/openmoji/automobile.svg',
+    'Camping': '/assets/openmoji/camping.svg',
+    'Card index dividers': '/assets/openmoji/card-index-dividers.svg',
+    'Clapper board': '/assets/openmoji/clapper-board.svg',
+    'Confounded face': '/assets/openmoji/confounded-face.svg',
+    'Construction worker': '/assets/openmoji/construction-worker.svg',
+    'Crescent moon': '/assets/openmoji/crescent-moon.svg',
+    'Ear of corn': '/assets/openmoji/ear-of-corn.svg',
+    'Fearful face': '/assets/openmoji/fearful-face.svg',
+    'Fog': '/assets/openmoji/fog.svg',
+    'Girl': '/assets/openmoji/girl.svg',
+    'Hut': '/assets/openmoji/hut.svg',
+    'Incoming envelope': '/assets/openmoji/incoming-envelope.svg',
+    'Kitchen knife': '/assets/openmoji/kitchen-knife.svg',
+    'Luggage': '/assets/openmoji/luggage.svg',
+    'Man': '/assets/openmoji/man.svg',
+    'Person standing': '/assets/openmoji/person-standing.svg',
+    'Placard': '/assets/openmoji/placard.svg',
+    'Police car': '/assets/openmoji/police-car.svg',
+    'Police officer': '/assets/openmoji/police-officer.svg',
+    'Potable water': '/assets/openmoji/potable-water.svg',
+    'Raising hands': '/assets/openmoji/raising-hands.svg',
+    'Red square': '/assets/openmoji/red-square.svg',
+    'Rescue workers helmet': '/assets/openmoji/rescue-workers-helmet.svg',
+    'Roasted sweet potato': '/assets/openmoji/roasted-sweet-potato.svg',
+    'Scissors': '/assets/openmoji/scissors.svg',
+    'Skull and crossbones': '/assets/openmoji/skull-and-crossbones.svg',
+    'Telephone': '/assets/openmoji/telephone.svg',
+    'Train': '/assets/openmoji/train.svg',
+    'White flag': '/assets/openmoji/white-flag.svg',
+    'Wilted flower': '/assets/openmoji/wilted-flower.svg',
+    'Woman': '/assets/openmoji/woman.svg',
+    'Woman police officer': '/assets/openmoji/woman-police-officer.svg',
+    'Wrench': '/assets/openmoji/wrench.svg'
   };
 
   function _pdfEmojiSrc(originalSrc) {
@@ -4365,6 +4407,90 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
           h += '<div class="zp-splitbar-labels">';
           labelsEl.querySelectorAll('span').forEach(function(sp) {
             h += '<span>' + _escPdfHtml(sp.textContent.trim()) + '</span>';
+          });
+          h += '</div>';
+        }
+      } else if (cls.indexOf('paper-bar-list') !== -1) {
+        // Carta bar mendatar (perbandingan magnitud, cth. "Kesan serangan:
+        // Cedera parah 46 orang / Mati 4 orang" bab-6-2.html, Bab 6 SAHAJA
+        // — komponen baharu, Bab 1-5 tak pernah guna). TIADA cabang
+        // eksplisit sblm ni — jatuh ke fallback generik `_bodyHtml(node)`
+        // yg skip nod teks TERUS drpd `<div class="paper-bar-label">`/
+        // `<div class="paper-bar-value">` (tiada kelas dikenali, bukan
+        // <p>/<img>), label+nilai statistik HILANG SENYAP drpd PDF (sama
+        // kelas bug drpd `.paper-split-bar` Bab 4, rujuk CLAUDE.md). Fix:
+        // render bar RATA (`.paper-bar-fill` sumber guna linear-gradient
+        // — BUKAN direplikasi, digantikan warna rata indigo #4f46e5,
+        // rujuk sejarah pepijat html2canvas §"Eksport PDF") + label kiri +
+        // nilai kanan, drpd `.paper-bar-label`/`--bar-pct`/`.paper-bar-value`.
+        h += '<div class="zp-bar-list">';
+        node.querySelectorAll(':scope > .paper-bar').forEach(function(bar) {
+          var barLabel = bar.querySelector('.paper-bar-label');
+          var barValue = bar.querySelector('.paper-bar-value');
+          var pct = bar.style.getPropertyValue('--bar-pct') || '0%';
+          h += '<div class="zp-bar">' +
+            (barLabel ? '<span class="zp-bar-label">' + _escPdfHtml(barLabel.textContent.trim()) + '</span>' : '<span class="zp-bar-label"></span>') +
+            '<span class="zp-bar-track"><span class="zp-bar-fill" style="width:' + _escPdfAttr(pct) + '"></span></span>' +
+            (barValue ? '<span class="zp-bar-value">' + _escPdfHtml(barValue.textContent.trim()) + '</span>' : '') +
+            '</div>';
+        });
+        h += '</div>';
+      } else if (cls.indexOf('paper-donut-wrap') !== -1) {
+        // Carta donat (pecahan drpd satu keseluruhan, cth. "Statistik orang
+        // awam yang terbunuh, tercedera dan hilang" bab-6-2.html, Bab 6
+        // SAHAJA). TIADA cabang eksplisit sblm ni — jatuh ke fallback
+        // generik, data statistik HILANG SENYAP drpd PDF (sama kelas bug
+        // drpd `.paper-bar-list` atas). Bentuk BULATAN `.paper-donut`
+        // sendiri (conic-gradient) SENGAJA TIDAK direplikasi terus (rujuk
+        // sejarah pepijat html2canvas — gradien berisiko) — digantikan
+        // BAR PROPORSIONAL RATA (segmen warna SAMA drpd conic-gradient
+        // asal, diparse drpd `--donut-gradient` inline style, jadi peratus
+        // tepat kekal tanpa kira semula drpd nilai berformat koma cth.
+        // "4,668") + legenda teks (swatch rata + label + nilai) di bawah
+        // — kekalkan SEMUA maklumat (jumlah + pecahan) tanpa risiko enjin.
+        var donutEl = node.querySelector('.paper-donut');
+        var totalEl = node.querySelector('.paper-donut-total');
+        if (totalEl) {
+          // childNodes join (bukan textContent terus) — .paper-donut-total
+          // sumber guna <br/> antara nombor & label (cth. "4,668<br/>jumlah"),
+          // textContent gugur pemisah tu terus jadi "4,668jumlah" tanpa
+          // ruang. Gantikan setiap <br> dgn ruang eksplisit sebelum join.
+          var totalText = '';
+          totalEl.childNodes.forEach(function(cn) {
+            totalText += cn.nodeType === 3 ? cn.textContent : (cn.tagName === 'BR' ? ' ' : '');
+          });
+          h += '<p class="zp-donut-total">' + _escPdfHtml(totalText.replace(/\s+/g, ' ').trim()) + '</p>';
+        }
+        if (donutEl) {
+          var gradStyle = donutEl.style.getPropertyValue('--donut-gradient') || '';
+          var segRe = /(#[0-9a-fA-F]{3,8})\s+([\d.]+)%\s+([\d.]+)%/g;
+          var segs = [], segMatch;
+          while ((segMatch = segRe.exec(gradStyle))) {
+            segs.push({ color: segMatch[1], from: parseFloat(segMatch[2]), to: parseFloat(segMatch[3]) });
+          }
+          if (segs.length) {
+            h += '<div class="zp-donut-bar">';
+            segs.forEach(function(seg) {
+              h += '<div class="zp-donut-seg" style="width:' + _escPdfAttr((seg.to - seg.from) + '%') + ';background:' + _escPdfAttr(seg.color) + '"></div>';
+            });
+            h += '</div>';
+          }
+        }
+        var legendEl = node.querySelector('.paper-donut-legend');
+        if (legendEl) {
+          h += '<div class="zp-donut-legend">';
+          legendEl.querySelectorAll(':scope > .paper-donut-legend-item').forEach(function(item) {
+            var swatchEl = item.querySelector('.paper-donut-swatch');
+            var valueEl = item.querySelector('.paper-donut-legend-value');
+            var swatchColor = swatchEl ? (swatchEl.style.background || swatchEl.style.backgroundColor || '#94a3b8') : '#94a3b8';
+            var labelText = '';
+            item.childNodes.forEach(function(cn) {
+              if (cn.nodeType === 3) labelText += cn.textContent;
+            });
+            h += '<div class="zp-donut-legend-item"><span class="zp-donut-swatch" style="background:' + _escPdfAttr(swatchColor) + '"></span>' +
+              '<span class="zp-donut-legend-label">' + _escPdfHtml(labelText.trim()) + '</span>' +
+              (valueEl ? '<span class="zp-donut-legend-value">' + _escPdfHtml(valueEl.textContent.trim()) + '</span>' : '') +
+              '</div>';
           });
           h += '</div>';
         }
@@ -4715,11 +4841,11 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   var PDF_2COL_COL_WIDTH_PX = Math.round(PDF_2COL_COL_WIDTH_MM * PDF_BASE_DENSITY);
 
   function _pdfIsTwoColumnScope() {
-    // Diluaskan drpd Bab 1-4 asal ke +Bab 5 — WAJIB lengkapkan liputan
-    // HZ_PDF_OPENMOJI_MAP 100% konsep unik Bab 5 dulu (rujuk komen di
+    // Diluaskan drpd Bab 1-5 asal ke +Bab 6 — WAJIB lengkapkan liputan
+    // HZ_PDF_OPENMOJI_MAP 100% konsep unik Bab 6 dulu (rujuk komen di
     // atas takrifan map, disahkan 0 konsep hilang sebelum baris ni diubah)
-    // supaya PDF Bab 5 tak papar campuran gaya OpenMoji + Fluent.
-    return /\/notes\/bab-[12345](-\d+)?\.html$/i.test(window.location.pathname);
+    // supaya PDF Bab 6 tak papar campuran gaya OpenMoji + Fluent.
+    return /\/notes\/bab-[123456](-\d+)?\.html$/i.test(window.location.pathname);
   }
 
   // Bab 4 (Malayan Union/Persekutuan) ada gelaran raja/sultan kw-tokoh
@@ -4951,6 +5077,25 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       '#zym-pr .zp-splitbar-a{background:#4f46e5}',
       '#zym-pr .zp-splitbar-b{background:#94a3b8;color:#1e293b}',
       '#zym-pr .zp-splitbar-labels{display:flex;justify-content:space-between;margin-top:3px;font-size:10.5px;font-weight:700;color:#6b7280}',
+      // Carta bar mendatar (.paper-bar-list, rujuk _bodyHtmlNode) — sama
+      // prinsip warna RATA drpd .zp-splitbar (sumber .paper-bar-fill guna
+      // linear-gradient, digantikan indigo rata di sini).
+      '#zym-pr .zp-bar-list{display:flex;flex-direction:column;gap:6px;margin-top:6px}',
+      '#zym-pr .zp-bar{display:grid;grid-template-columns:minmax(64px,86px) 1fr auto;align-items:center;gap:7px}',
+      '#zym-pr .zp-bar-label{font-size:10.5px;font-weight:700;color:#3a3a5a;line-height:1.25}',
+      '#zym-pr .zp-bar-track{position:relative;height:8px;border-radius:999px;background:#eceef5;overflow:hidden}',
+      '#zym-pr .zp-bar-fill{display:block;height:100%;border-radius:999px;background:#4f46e5}',
+      '#zym-pr .zp-bar-value{font-size:10px;font-weight:800;color:#6b7280;white-space:nowrap;text-align:right}',
+      // Carta donat (.paper-donut-wrap, rujuk _bodyHtmlNode) — bulatan
+      // conic-gradient asal digantikan bar proporsional rata (segmen warna
+      // SAMA drpd sumber, diparse drpd --donut-gradient) + legenda teks.
+      '#zym-pr .zp-donut-total{font-size:12.5px;font-weight:800;color:#1a1a3a;margin:6px 0 4px}',
+      '#zym-pr .zp-donut-bar{display:flex;height:16px;margin:2px 0 8px;overflow:hidden;border-radius:999px}',
+      '#zym-pr .zp-donut-seg{display:block;height:100%}',
+      '#zym-pr .zp-donut-legend{display:flex;flex-direction:column;gap:4px}',
+      '#zym-pr .zp-donut-legend-item{display:flex;align-items:center;gap:6px;font-size:11px;font-weight:700;color:#3a3a5a}',
+      '#zym-pr .zp-donut-swatch{flex:0 0 auto;width:10px;height:10px;border-radius:3px}',
+      '#zym-pr .zp-donut-legend-value{margin-left:auto;padding-left:6px;color:#6b7280;font-weight:800;font-size:10.5px;white-space:nowrap}',
       // Answer box
       '#zym-pr .zp-answer{border-left:3px solid #d0d0e8;padding-left:10px;margin:5px 0}',
       // Text
@@ -5081,6 +5226,10 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
         '#zym-pr.zp-mode-eco .zp-chip,#zym-pr.zp-mode-eco .zp-step{background:#f4f4f5!important;border-color:#d4d4d8!important;color:#27272a!important}',
         '#zym-pr.zp-mode-eco .zp-step+.zp-step::before{color:#6b7280!important}',
         '#zym-pr.zp-mode-eco .zp-splitbar-seg{background:#f4f4f5!important;color:#27272a!important;border:1px solid #d4d4d8!important}',
+        '#zym-pr.zp-mode-eco .zp-bar-fill{background:#a1a1aa!important}',
+        '#zym-pr.zp-mode-eco .zp-bar-label,#zym-pr.zp-mode-eco .zp-bar-value{color:#27272a!important}',
+        '#zym-pr.zp-mode-eco .zp-donut-seg,#zym-pr.zp-mode-eco .zp-donut-swatch{background:#a1a1aa!important}',
+        '#zym-pr.zp-mode-eco .zp-donut-total,#zym-pr.zp-mode-eco .zp-donut-legend-item,#zym-pr.zp-mode-eco .zp-donut-legend-value{color:#27272a!important}',
         '#zym-pr.zp-mode-eco .zp-sentence{border-left-color:#9ca3af!important}',
         '#zym-pr.zp-mode-eco p.zp-p,#zym-pr.zp-mode-eco p.zp-ph,#zym-pr.zp-mode-eco p.zp-sentence{color:#27272a!important}',
         '#zym-pr.zp-mode-eco .zp-desc{color:#3f3f46!important}'
@@ -7561,7 +7710,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=572').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=573').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });

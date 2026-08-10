@@ -1441,6 +1441,71 @@ gagal jadi `data:` URI (`_pdfInlineImages()`), penjanaan PDF penuh
 (bukan sekadar pintas capture) berjaya 2-5 muka surat setiap subtopik,
 sifar ralat JS pd kesemua 4 subtopik.
 
+**Diluaskan ke Bab 6** — `_pdfIsTwoColumnScope()` skop kini `bab-[123456]`
+(WAJIB liputan `HZ_PDF_OPENMOJI_MAP` 100% konsep unik Bab 6 dulu, +35
+konsep baharu drpd 146 unik digunakan, 300 kesemuanya — 111/146 SUDAH
+sedia ada drpd liputan Bab 1-5. 1 kes edge annotation OpenMoji: Fluent
+"Rescue workers helmet" [jamak, tiada apostrof] → annotation OpenMoji
+"rescue worker's helmet" [tunggal, tanda petik lengkung ’ bukan
+apostrof lurus '] — baki 34 padan terus title-case → lowercase).
+
+Bab 6 (Ancaman Komunis/Darurat) dedah **DUA** komponen carta statistik
+BAHARU (`.paper-bar-list`/`.paper-bar` & `.paper-donut-wrap`/`.paper-
+donut`, tak pernah wujud Bab 1-5) **TIADA cabang PDF langsung** — jatuh
+ke fallback generik `_bodyHtml(node)` yg skip nod teks TERUS drpd
+`<div class="paper-bar-label">`/`<div class="paper-bar-value">`/
+`.paper-donut-legend-item` (tiada kelas dikenali, bukan `<p>`/`<img>`),
+data statistik (bilangan korban/peratus) HILANG SENYAP drpd PDF — SAMA
+kelas bug drpd `.paper-split-bar` Bab 4 (rujuk atas), ditemui semasa
+imbasan liputan komponen rutin sblm luaskan skop, bukan laporan
+pengguna.
+
+- **`.paper-bar-list`** (carta bar mendatar, perbandingan magnitud —
+  cth. "Kesan serangan: Cedera parah 46 orang / Mati 4 orang"
+  bab-6-2.html): fix render bar RATA (`.paper-bar-fill` sumber guna
+  linear-gradient — BUKAN direplikasi, digantikan indigo rata `#4f46e5`,
+  rujuk sejarah pepijat html2canvas §"Eksport PDF" atas) + label kiri +
+  nilai kanan, lebar bar drpd `--bar-pct` CSS custom property sumber
+  (dibaca via `style.getPropertyValue()`).
+- **`.paper-donut-wrap`** (carta donat, pecahan drpd satu keseluruhan
+  — cth. "Statistik orang awam yang terbunuh, tercedera dan hilang"
+  bab-6-2.html): bentuk BULATAN `.paper-donut` sendiri (CSS
+  `conic-gradient`, ditetapkan via custom property `--donut-gradient`)
+  SENGAJA TIDAK direplikasi terus dlm PDF (gradien + geometri bulatan
+  berisiko tinggi dgn html2canvas-pro, rujuk sejarah pepijat berulang
+  §"Eksport PDF" atas) — digantikan **bar proporsional rata** (segmen
+  warna SAMA drpd conic-gradient asal, diparse terus drpd nilai
+  `--donut-gradient` via regex `/(#[0-9a-fA-F]{3,8})\s+([\d.]+)%\s+
+  ([\d.]+)%/`, jadi peratus TEPAT kekal tanpa perlu kira semula drpd
+  nilai berformat koma cth. "4,668" yg terdedah kpd ralat parse) +
+  legenda teks (swatch rata segi empat kecil, warna diambil drpd
+  `.paper-donut-swatch` inline style + label + nilai) di bawah —
+  kekalkan SEMUA maklumat (jumlah + pecahan tiap kategori) tanpa
+  risiko enjin. **AWAS — `.paper-donut-total` sumber guna `<br/>`
+  antara nombor & label** (cth. `4,668<br/>jumlah`) — `textContent`
+  terus gugurkan pemisah ni jadi "4,668jumlah" tanpa ruang (ditemui
+  semasa ujian Playwright pertama); fix iterate `childNodes`, gantikan
+  setiap nod `<br>` dgn ruang eksplisit sebelum gabung teks.
+
+Kedua-dua komponen dpt override mod "Jimat Dakwat" (`.zp-bar-fill`/
+`.zp-donut-seg`/`.zp-donut-swatch` → kelabu rata `#a1a1aa`, padan
+corak `.zp-splitbar-seg` eco sedia ada — kehilangan keupayaan beza
+kategori via warna dlm mod ni DITERIMA, sama gelagat drpd
+`.zp-splitbar` yg turut jadi kelabu seragam kedua-dua bahagian dlm
+mod eco, nilai teks tetap kekal sbg rujukan tepat).
+
+Disahkan via Playwright: (1) suntik markup `.zp-bar-list`/`.zp-donut-*`
+berasingan (bukan laluan `_generatePages()` penuh) terus ke
+`html2canvas-pro` sebenar, zum imej 2× — SIFAR smear/blob (bar+segmen
+donat kekal geometri segi empat/kapsul bersih, label+nilai kekal
+tajam); (2) pintas `_bodyHtmlNode()` semasa capture sebenar
+(`bab-6-2.html`) — bandingkan data bar (label/nilai/lebar peratus) &
+data donat (jumlah/segmen/legenda) drpd kanvas cetak vs sumber DOM
+sebenar, SEMUA 6 bar & 1 set donat (3 kategori) padan TEPAT; (3)
+merentas kesemua 4 subtopik (`bab-6-1` s/d `bab-6-4`): sifar ikon
+gagal, sifar `.zpkw-tokoh`/`.zpkw-tempat` overflow, sifar ralat JS,
+penjanaan PDF penuh berjaya 3-6 muka surat setiap subtopik.
+
 ## Eksport PDF — Chip blok PD1/PD2 (`.bloc-chip-*`) pendua & tiada warna
 
 Pengguna lapor (tangkapan skrin pratonton PDF `bab-3-3.html`, kad
