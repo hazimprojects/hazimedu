@@ -4081,22 +4081,29 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
         // querySelector('.paper-strip') sendiri, yg hanya tarik STRIP
         // LANGSUNG anak papan, sbg saudara .cv-unit-body — rujuk
         // _renderBoard) sentiasa .paper-strip.strip-sub tersarang DALAM
-        // .cv-unit-body sbg sub-tajuk. 77/79 kejadian (disahkan grep
-        // seluruh korpus) berada dlm .paper-accordion-panel & TEKS SAMA
-        // (case/singkatan beza) drpd tajuk accordion tu SENDIRI (.zp-acc-ttl
-        // sedia ada dicetak drpd .paper-accordion-title) — pendua tajuk
-        // dlm PDF linear (walau munasabah dlm laman hidup, accordion
-        // collapse/expand). Digugurkan bila dlm konteks accordion (elak
-        // pendua tajuk) — sebelum ni (tanpa cabang eksplisit ni) jatuh ke
-        // fallback generik `_bodyHtml(node)`, yg skip nod teks terus
-        // (Dahagi India/1857 dsb HILANG) tapi (lepas fix IMG di atas)
-        // KEKALKAN bendera bersendirian tanpa teks — nampak "emoji
-        // terputus" dilaporkan pengguna. 2/79 kejadian LUAR accordion
-        // (cth. "Komposisi Ahli MPP 1948/1955" bab-8-3.html, label unik
-        // carta bar, BUKAN pendua) — KEKAL dicetak penuh (_kwHtml, sama
-        // corak drpd stripHtml _renderBoard) sbb tiada tajuk lain
-        // gantikannya.
-        if (!node.closest('.paper-accordion-panel')) {
+        // .cv-unit-body sbg sub-tajuk. 76 kejadian sub-tajuk "recap" ni
+        // (teks SAMA/singkatan drpd tajuk accordion tu SENDIRI, muncul
+        // sbg anak PERTAMA cv-unit-body SEBAIK accordion dibuka) SUDAH
+        // DIBUANG TERUS drpd HTML sumber notes/*.html (bukan lagi
+        // ditapis di sini) — pengguna minta gugurkan tajuk pendua ni
+        // drpd LAMAN HIDUP jugak, bukan PDF sahaja. Semakan `!isFirstChild`
+        // di bawah kekal sbg JARING KESELAMATAN utk kes SAH sub-tajuk
+        // TENGAH-BADAN (bukan pendua tajuk, cth. "Kegagalan Operasi
+        // Menawan Rusia" bab-3-3.html — muncul SELEPAS ayat lain dlm
+        // accordion yg SAMA, tanda peralihan topik baharu, teks
+        // LANGSUNG BERBEZA drpd tajuk accordion "B. Keberkesanan
+        // Strategi Serangan Balas") — semak `.closest('.paper-accordion-
+        // panel')` SAHAJA (tanpa semak kedudukan anak pertama) tersalah
+        // gugurkan kes SAH ni jugak (regresi PR #636, dibetulkan di sini).
+        // Kes LUAR accordion (cth. "Komposisi Ahli MPP 1948/1955"
+        // bab-8-3.html, label unik carta bar) turut KEKAL dicetak penuh
+        // sbb tiada tajuk lain gantikannya — hanya sub-tajuk yg jadi
+        // ANAK PERTAMA cv-unit-body accordion (pendua tulen, corak recap
+        // yg SUDAH dibuang drpd HTML sumber) yg digugurkan.
+        var isFirstChildOfAccordionBody = node.previousElementSibling === null &&
+          node.parentElement && node.parentElement.classList.contains('cv-unit-body') &&
+          !!node.closest('.paper-accordion-panel');
+        if (!isFirstChildOfAccordionBody) {
           h += '<p class="zp-ph">' + _kwHtml(node) + '</p>';
         }
       } else if (cls.indexOf('paper-chip-list') !== -1) {
@@ -6978,7 +6985,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=557').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=558').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
