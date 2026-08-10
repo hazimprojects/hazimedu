@@ -1,0 +1,216 @@
+{
+  "id": "8-1",
+  "title": "Perkembangan Pilihan Raya di Persekutuan Tanah Melayu",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Di manakah pilihan raya pertama diadakan di Tanah Melayu pada 1951?",
+      "options": [
+        "George Town, Pulau Pinang",
+        "Kuala Lumpur",
+        "Ipoh",
+        "Johor Bahru"
+      ],
+      "answer": "George Town, Pulau Pinang",
+      "explanation": "Pilihan raya pertama di Tanah Melayu diadakan di George Town, Pulau Pinang, pada 1951, untuk memilih 9 orang ahli Pesuruhjaya Perbandaran.",
+      "tip": "George Town 1951 = pilihan raya pertama."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Berapakah bilangan ahli yang dipilih dalam pilihan raya George Town 1951?",
+      "options": [
+        "9 orang",
+        "12 orang",
+        "52 orang",
+        "268 orang"
+      ],
+      "answer": "9 orang",
+      "explanation": "Pilihan raya George Town 1951 bertujuan memilih 9 orang ahli Pesuruhjaya Perbandaran.",
+      "tip": "George Town 1951 = 9 ahli."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Bilakah pilihan raya mula diadakan pada peringkat negeri di Persekutuan Tanah Melayu?",
+      "options": [
+        "1954",
+        "1951",
+        "1952",
+        "1955"
+      ],
+      "answer": "1954",
+      "explanation": "Pada 1954, pilihan raya mula diadakan pada peringkat negeri, dengan Perikatan UMNO-MCA memenangi 226 daripada 268 kerusi.",
+      "tip": "1954 = pilihan raya peringkat negeri."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Berapakah kerusi yang dimenangi Perikatan UMNO-MCA dalam pilihan raya peringkat negeri 1954?",
+      "options": [
+        "226 daripada 268 kerusi",
+        "51 daripada 52 kerusi",
+        "12 daripada 12 kerusi",
+        "9 daripada 9 kerusi"
+      ],
+      "answer": "226 daripada 268 kerusi",
+      "explanation": "Perikatan UMNO-MCA memenangi 226 daripada 268 kerusi dalam pilihan raya peringkat negeri 1954, membuktikan penerimaan rakyat terhadap politik kerjasama kaum.",
+      "tip": "226/268 kerusi = kemenangan Perikatan 1954."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah pilihan raya George Town 1951 penting dalam sejarah demokrasi Tanah Melayu?",
+      "options": [
+        "Kerana ia pilihan raya pertama di Tanah Melayu, menunjukkan permulaan penglibatan rakyat dalam sistem demokrasi berbanding pelantikan ahli majlis oleh Gabenor sebelum itu",
+        "Kerana ia pilihan raya pertama yang membentuk gabungan Perikatan UMNO-MCA",
+        "Kerana ia pilihan raya pertama yang melibatkan pemilihan Majlis Perundangan Persekutuan",
+        "Kerana ia pilihan raya pertama yang membenarkan penyertaan calon daripada Sarawak dan Sabah"
+      ],
+      "answer": "Kerana ia pilihan raya pertama di Tanah Melayu, menunjukkan permulaan penglibatan rakyat dalam sistem demokrasi berbanding pelantikan ahli majlis oleh Gabenor sebelum itu",
+      "explanation": "Sebelum pilihan raya George Town 1951, ahli majlis dilantik oleh Gabenor Negeri-negeri Selat; pilihan raya ini menunjukkan permulaan penglibatan rakyat dalam sistem demokrasi.",
+      "tip": "George Town 1951 = mula penglibatan rakyat, bukan lantikan Gabenor."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah pilihan raya Kuala Lumpur 1952 dianggap titik awal kerjasama antara kaum?",
+      "options": [
+        "Kerana UMNO dan MCA mula bekerjasama membentuk gabungan awal yang dikenali sebagai Perikatan",
+        "Kerana pilihan raya ini melibatkan penyertaan MIC buat pertama kali di Tanah Melayu",
+        "Kerana pilihan raya ini menyatukan semua parti politik menjadi satu parti tunggal",
+        "Kerana pilihan raya ini diadakan serentak dengan pilihan raya di Sarawak dan Sabah"
+      ],
+      "answer": "Kerana UMNO dan MCA mula bekerjasama membentuk gabungan awal yang dikenali sebagai Perikatan",
+      "explanation": "Dalam pilihan raya Kuala Lumpur Februari 1952, UMNO dan MCA mula bekerjasama membentuk gabungan awal dikenali sebagai Perikatan — titik awal kerjasama antara kaum dalam politik.",
+      "tip": "KL 1952 = mula kerjasama UMNO-MCA (Perikatan)."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah keputusan pilihan raya peringkat negeri 1954 membuktikan penerimaan rakyat terhadap Perikatan?",
+      "options": [
+        "Kerana Perikatan memenangi majoriti besar kerusi (226 daripada 268), menunjukkan keyakinan rakyat terhadap kepimpinan tempatan",
+        "Kerana Perikatan mendapat sokongan rasmi bertulis daripada Pesuruhjaya Tinggi British sebelum pilihan raya diadakan",
+        "Kerana pilihan raya ini diadakan serentak dengan Pilihan Raya Umum Pertama 1955",
+        "Kerana pilihan raya ini hanya melibatkan kawasan George Town dan Kuala Lumpur sahaja"
+      ],
+      "answer": "Kerana Perikatan memenangi majoriti besar kerusi (226 daripada 268), menunjukkan keyakinan rakyat terhadap kepimpinan tempatan",
+      "explanation": "Kemenangan Perikatan sebanyak 226 daripada 268 kerusi dalam pilihan raya peringkat negeri 1954 membuktikan penerimaan rakyat dan keyakinan terhadap kepimpinan tempatan.",
+      "tip": "226/268 kerusi = bukti penerimaan rakyat."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sebuah pilihan raya bandar diadakan pada Februari 1952 melibatkan kawasan Sentul, Bangsar, Imbi dan Petaling Jaya, merebut 12 kerusi Majlis Perbandaran. Di manakah pilihan raya ini diadakan?",
+      "options": [
+        "Kuala Lumpur",
+        "George Town, Pulau Pinang",
+        "Johor Bahru",
+        "Ipoh"
+      ],
+      "answer": "Kuala Lumpur",
+      "explanation": "Pilihan raya Kuala Lumpur Februari 1952 melibatkan kawasan Sentul, Bangsar, Imbi dan Petaling Jaya, dengan 12 kerusi Majlis Perbandaran dipertandingkan.",
+      "tip": "KL 1952 = Sentul, Bangsar, Imbi, Petaling Jaya, 12 kerusi."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sebuah proses pendaftaran pengundi berlangsung 17 Mei hingga 30 Jun 1951 (6 minggu), mencatatkan 14,514 orang pengundi berdaftar. Pilihan raya manakah ini?",
+      "options": [
+        "George Town, Pulau Pinang (1951)",
+        "Kuala Lumpur (1952)",
+        "Pilihan raya peringkat negeri (1954)",
+        "Pilihan Raya Umum Pertama (1955)"
+      ],
+      "answer": "George Town, Pulau Pinang (1951)",
+      "explanation": "Pendaftaran pengundi bagi pilihan raya George Town berlangsung 17 Mei hingga 30 Jun 1951, mencatatkan 14,514 orang pengundi berdaftar.",
+      "tip": "14,514 pengundi = George Town 1951."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Selepas kejayaan di Kuala Lumpur, gabungan UMNO-MCA terus memenangi banyak kerusi apabila pilihan raya diperluaskan ke bandar-bandar lain. Antara berikut, manakah TERMASUK dalam senarai bandar perluasan ini?",
+      "options": [
+        "Johor Bahru",
+        "Kuantan",
+        "Kota Bharu",
+        "Kuching"
+      ],
+      "answer": "Johor Bahru",
+      "explanation": "Pilihan raya diperluaskan ke Johor Bahru, Ipoh, Alor Setar, Melaka dan Seremban, dengan gabungan UMNO-MCA terus memenangi banyak kerusi.",
+      "tip": "Perluasan = Johor Bahru, Ipoh, Alor Setar, Melaka, Seremban."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perbezaan antara pilihan raya peringkat majlis perbandaran dengan pilihan raya peringkat negeri di Tanah Melayu?",
+      "options": [
+        "Peringkat majlis perbandaran (1951–1952) memilih ahli majlis bandar tertentu seperti George Town dan Kuala Lumpur, manakala peringkat negeri (1954) memilih ahli merentasi kawasan lebih luas dengan Perikatan memenangi majoriti besar (226/268 kerusi)",
+        "Peringkat majlis perbandaran hanya diadakan di Sarawak dan Sabah, manakala peringkat negeri hanya diadakan di Semenanjung",
+        "Peringkat majlis perbandaran diadakan selepas peringkat negeri dalam susunan kronologi sebenar",
+        "Peringkat majlis perbandaran melibatkan pemilihan Majlis Perundangan Persekutuan, manakala peringkat negeri tidak"
+      ],
+      "answer": "Peringkat majlis perbandaran (1951–1952) memilih ahli majlis bandar tertentu seperti George Town dan Kuala Lumpur, manakala peringkat negeri (1954) memilih ahli merentasi kawasan lebih luas dengan Perikatan memenangi majoriti besar (226/268 kerusi)",
+      "explanation": "Pilihan raya peringkat majlis perbandaran (1951–1952) tertumpu pada bandar tertentu, manakala peringkat negeri (1954) merentasi kawasan lebih luas, dengan Perikatan memenangi 226 daripada 268 kerusi.",
+      "tip": "Perbandaran = bandar tertentu. Negeri = lebih luas, 226/268."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perkaitan antara kejayaan Perikatan dalam pilihan raya peringkat majlis perbandaran dengan kejayaannya dalam pilihan raya peringkat negeri 1954?",
+      "options": [
+        "Kejayaan awal Perikatan di peringkat majlis perbandaran (Kuala Lumpur 1952 dan bandar lain) membina momentum sokongan rakyat yang berterusan sehingga membawa kepada kemenangan besar di peringkat negeri 1954",
+        "Kejayaan Perikatan di peringkat negeri 1954 berlaku secara berasingan tanpa dipengaruhi keputusan pilihan raya peringkat majlis perbandaran sebelumnya",
+        "Perikatan hanya menang di peringkat negeri 1954 selepas kalah di semua pilihan raya peringkat majlis perbandaran",
+        "Kejayaan di peringkat negeri 1954 berlaku sebelum penubuhan Perikatan di Kuala Lumpur pada 1952"
+      ],
+      "answer": "Kejayaan awal Perikatan di peringkat majlis perbandaran (Kuala Lumpur 1952 dan bandar lain) membina momentum sokongan rakyat yang berterusan sehingga membawa kepada kemenangan besar di peringkat negeri 1954",
+      "explanation": "Kejayaan Perikatan di peringkat majlis perbandaran membina sokongan rakyat yang berterusan, membawa kepada kemenangan besar (226/268 kerusi) di peringkat negeri 1954.",
+      "tip": "Kejayaan perbandaran → momentum → kejayaan negeri."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah PALING tepat menjelaskan mengapa pilihan raya berkembang secara berperingkat (majlis perbandaran → negeri → Persekutuan) dan bukan terus ke peringkat Persekutuan?",
+      "options": [
+        "Perkembangan berperingkat membolehkan rakyat dan pentadbir memperoleh pengalaman mengendalikan pilihan raya pada skala kecil dahulu, sekali gus melatih rakyat ke arah berkerajaan sendiri sebelum pilihan raya berskala besar diadakan",
+        "British enggan membenarkan pilihan raya peringkat Persekutuan diadakan sebelum kemerdekaan tercapai",
+        "Perkembangan berperingkat berlaku secara kebetulan akibat kekurangan sumber pentadbiran British pada masa itu",
+        "Pilihan raya peringkat Persekutuan hanya boleh diadakan selepas semua parti politik berasaskan kaum dibubarkan"
+      ],
+      "answer": "Perkembangan berperingkat membolehkan rakyat dan pentadbir memperoleh pengalaman mengendalikan pilihan raya pada skala kecil dahulu, sekali gus melatih rakyat ke arah berkerajaan sendiri sebelum pilihan raya berskala besar diadakan",
+      "explanation": "Pilihan raya peringkat awal (majlis perbandaran, negeri) menyedarkan rakyat tentang amalan demokrasi dan melatih rakyat ke arah berkerajaan sendiri sebelum Pilihan Raya Umum Pertama 1955 di peringkat Persekutuan.",
+      "tip": "Berperingkat = latih rakyat dulu sebelum skala besar."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah PALING tepat merumuskan subtopik 8.1?",
+      "options": [
+        "Pilihan raya di Persekutuan Tanah Melayu berkembang secara berperingkat daripada majlis perbandaran (1951–1952) kepada peringkat negeri (1954), melatih rakyat berkerajaan sendiri dan membina asas kerjasama Perikatan UMNO-MCA sebelum Pilihan Raya Umum Pertama 1955",
+        "Pilihan raya di Tanah Melayu bermula terus di peringkat Persekutuan pada 1955, mendahului pilihan raya peringkat majlis perbandaran dan negeri",
+        "Perikatan UMNO-MCA hanya ditubuhkan selepas Pilihan Raya Umum Pertama 1955 diadakan",
+        "Pilihan raya peringkat majlis perbandaran hanya diadakan di George Town tanpa diperluaskan ke bandar lain"
+      ],
+      "answer": "Pilihan raya di Persekutuan Tanah Melayu berkembang secara berperingkat daripada majlis perbandaran (1951–1952) kepada peringkat negeri (1954), melatih rakyat berkerajaan sendiri dan membina asas kerjasama Perikatan UMNO-MCA sebelum Pilihan Raya Umum Pertama 1955",
+      "explanation": "Rumusan menggabungkan perkembangan berperingkat pilihan raya (majlis perbandaran → negeri), pembentukan Perikatan UMNO-MCA dan fungsinya melatih rakyat ke arah berkerajaan sendiri sebelum Pilihan Raya Umum Pertama 1955.",
+      "tip": "Perbandaran → negeri → latih rakyat → Perikatan → PRU 1955."
+    }
+  ]
+}

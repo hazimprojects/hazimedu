@@ -1,0 +1,216 @@
+{
+  "id": "8-4",
+  "title": "Peranan Kabinet Pertama Persekutuan Tanah Melayu",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Berapakah bilangan menteri tempatan dalam Kabinet Pertama Persekutuan Tanah Melayu?",
+      "options": [
+        "10 orang",
+        "3 orang",
+        "13 orang",
+        "52 orang"
+      ],
+      "answer": "10 orang",
+      "explanation": "Kabinet Pertama Persekutuan Tanah Melayu dianggotai oleh 10 orang menteri tempatan dan 3 orang pegawai British.",
+      "tip": "Kabinet Pertama = 10 menteri tempatan."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah yang dilantik sebagai Menteri Pelajaran dalam Kabinet Pertama?",
+      "options": [
+        "Dato' Abdul Razak Hussein",
+        "Dr. Ismail Abdul Rahman",
+        "H.S. Lee",
+        "V.T. Sambanthan"
+      ],
+      "answer": "Dato' Abdul Razak Hussein",
+      "explanation": "Dato' Abdul Razak Hussein dilantik sebagai Menteri Pelajaran dalam Kabinet Pertama, membina bangsa yang bersatu melalui sistem pendidikan.",
+      "tip": "Dato' Abdul Razak Hussein = Menteri Pelajaran."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Bilakah Kabinet Pertama Persekutuan Tanah Melayu diumumkan secara rasmi?",
+      "options": [
+        "4 Ogos 1955",
+        "27 Julai 1955",
+        "31 Ogos 1955",
+        "11 September 1959"
+      ],
+      "answer": "4 Ogos 1955",
+      "explanation": "Kabinet Pertama diumumkan secara rasmi pada 4 Ogos 1955 oleh Sir Donald MacGillivray di King's House, Kuala Lumpur.",
+      "tip": "4 Ogos 1955 = umum Kabinet Pertama."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah Pesuruhjaya Tinggi British yang mengumumkan Kabinet Pertama secara rasmi?",
+      "options": [
+        "Sir Donald MacGillivray",
+        "Sir Henry Gurney",
+        "Sir Gerald Templer",
+        "Sir Edward Gent"
+      ],
+      "answer": "Sir Donald MacGillivray",
+      "explanation": "Sir Donald MacGillivray, Pesuruhjaya Tinggi British, mengumumkan Kabinet Pertama secara rasmi pada 4 Ogos 1955 di King's House, Kuala Lumpur.",
+      "tip": "Sir Donald MacGillivray = umumkan Kabinet Pertama."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah Kabinet Pertama meminta Kuasa Veto Pesuruhjaya Tinggi British dibatalkan?",
+      "options": [
+        "Sebagai sebahagian usaha mengurangkan kuasa pentadbiran British secara berperingkat",
+        "Kerana Pesuruhjaya Tinggi British enggan mengumumkan Kabinet Pertama secara rasmi",
+        "Kerana Kuasa Veto menghalang Tunku Abdul Rahman daripada dilantik sebagai Ketua Menteri",
+        "Kerana Kuasa Veto menyekat penubuhan Majlis Perundangan Persekutuan pada 1955"
+      ],
+      "answer": "Sebagai sebahagian usaha mengurangkan kuasa pentadbiran British secara berperingkat",
+      "explanation": "Kabinet Pertama meminta Kuasa Veto Pesuruhjaya Tinggi British dibatalkan sebagai sebahagian usaha mengurangkan kuasa pentadbiran British secara berperingkat.",
+      "tip": "Minta Kuasa Veto dibatalkan = kurangkan kuasa British."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah 3 orang pegawai British masih kekal dalam Kabinet Pertama walaupun majoriti menteri tempatan?",
+      "options": [
+        "Kerana mereka memegang portfolio tertentu (Setiausaha Kewangan, Hal Ehwal Ekonomi, Pertahanan) semasa tempoh peralihan kuasa",
+        "Kerana Perjanjian Persekutuan mewajibkan separuh anggota kabinet terdiri daripada pegawai British",
+        "Kerana Raja-raja Melayu menuntut supaya ketiga-tiga portfolio tersebut turut dipegang oleh wakil rasmi mereka sendiri",
+        "Kerana tiada seorang pun menteri tempatan yang layak memegang sebarang portfolio pada 1955"
+      ],
+      "answer": "Kerana mereka memegang portfolio tertentu (Setiausaha Kewangan, Hal Ehwal Ekonomi, Pertahanan) semasa tempoh peralihan kuasa",
+      "explanation": "3 orang pegawai British memegang portfolio Setiausaha Kewangan, Hal Ehwal Ekonomi dan Pertahanan, mencerminkan tempoh peralihan kuasa secara berperingkat.",
+      "tip": "3 pegawai British = portfolio kewangan, ekonomi, pertahanan."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah V.T. Sambanthan berusaha mengurangkan pegawai Eropah dalam Malayan Civil Service (MCS)?",
+      "options": [
+        "Untuk menjadikan perkhidmatan awam bercorak tempatan",
+        "Untuk memenuhi manifesto Parti Perikatan berkaitan perkhidmatan perubatan",
+        "Untuk membina bangsa yang bersatu melalui sistem pendidikan",
+        "Untuk mengurangkan kuasa Pesuruhjaya Tinggi British dalam isu pertahanan"
+      ],
+      "answer": "Untuk menjadikan perkhidmatan awam bercorak tempatan",
+      "explanation": "V.T. Sambanthan, Menteri Buruh, menjadikan perkhidmatan awam bercorak tempatan dengan mengurangkan pegawai Eropah dalam Malayan Civil Service (MCS) secara berperingkat.",
+      "tip": "Sambanthan = kurangkan pegawai Eropah, MCS tempatan."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Seorang menteri dalam Kabinet Pertama bertanggungjawab meningkatkan mutu perkhidmatan perubatan dan kesihatan, sekali gus memenuhi manifesto Parti Perikatan. Siapakah menteri ini?",
+      "options": [
+        "Leong Yew Koh",
+        "Dr. Ismail Abdul Rahman",
+        "Ong Yoke Lin",
+        "Abdul Aziz Ishak"
+      ],
+      "answer": "Leong Yew Koh",
+      "explanation": "Leong Yew Koh, Menteri Kesihatan, meningkatkan mutu perkhidmatan perubatan dan kesihatan, memenuhi manifesto Parti Perikatan.",
+      "tip": "Leong Yew Koh = Menteri Kesihatan, manifesto Perikatan."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Kabinet Pertama diumumkan secara rasmi di sebuah lokasi di Kuala Lumpur pada 4 Ogos 1955. Apakah nama lokasi ini?",
+      "options": [
+        "King's House",
+        "Dewan Tunku Abdul Rahman",
+        "Jalan Ampang",
+        "Sekolah Inggeris, Baling"
+      ],
+      "answer": "King's House",
+      "explanation": "Kabinet Pertama diumumkan secara rasmi di King's House, Kuala Lumpur, pada 4 Ogos 1955.",
+      "tip": "King's House = lokasi umum Kabinet Pertama."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Seorang menteri bertanggungjawab membina bangsa yang bersatu melalui sistem pendidikan. Siapakah menteri ini?",
+      "options": [
+        "Dato' Abdul Razak Hussein",
+        "Sardon Jubir",
+        "Dato' Sulaiman Dato' Abdul Rahman",
+        "Ong Yoke Lin"
+      ],
+      "answer": "Dato' Abdul Razak Hussein",
+      "explanation": "Dato' Abdul Razak Hussein, Menteri Pelajaran, membina bangsa yang bersatu melalui sistem pendidikan.",
+      "tip": "Razak Hussein = bina bangsa bersatu lwt pendidikan."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perbezaan antara peranan Tunku Abdul Rahman dengan peranan Dato' Abdul Razak Hussein dalam Kabinet Pertama?",
+      "options": [
+        "Tunku Abdul Rahman, sebagai Ketua Menteri, menunaikan mandat rakyat mencapai kemerdekaan, manakala Dato' Abdul Razak Hussein, sebagai Menteri Pelajaran, membina bangsa bersatu melalui sistem pendidikan",
+        "Tunku Abdul Rahman menjaga portfolio pendidikan, manakala Dato' Abdul Razak Hussein menjaga portfolio kemerdekaan",
+        "Kedua-duanya memegang portfolio Menteri Kesihatan secara bergilir-gilir",
+        "Tunku Abdul Rahman dan Dato' Abdul Razak Hussein memegang portfolio yang sama iaitu Menteri Buruh"
+      ],
+      "answer": "Tunku Abdul Rahman, sebagai Ketua Menteri, menunaikan mandat rakyat mencapai kemerdekaan, manakala Dato' Abdul Razak Hussein, sebagai Menteri Pelajaran, membina bangsa bersatu melalui sistem pendidikan",
+      "explanation": "Tunku Abdul Rahman sebagai Ketua Menteri menunaikan mandat rakyat mencapai kemerdekaan, manakala Dato' Abdul Razak Hussein sebagai Menteri Pelajaran membina bangsa bersatu melalui pendidikan.",
+      "tip": "Tunku = kemerdekaan. Razak Hussein = pendidikan/perpaduan."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perkaitan antara peranan Kabinet Pertama \"mengurangkan kuasa pentadbiran British secara berperingkat\" dengan usaha \"meminta Kuasa Veto Pesuruhjaya Tinggi dibatalkan\"?",
+      "options": [
+        "Kedua-dua usaha ini sebahagian daripada strategi Kabinet Pertama memindahkan kuasa membuat keputusan daripada British kepada pemimpin tempatan secara beransur-ansur menjelang kemerdekaan",
+        "Meminta Kuasa Veto dibatalkan tiada kaitan dengan usaha mengurangkan kuasa pentadbiran British",
+        "Mengurangkan kuasa pentadbiran British hanya melibatkan portfolio kesihatan, bukan Kuasa Veto Pesuruhjaya Tinggi",
+        "Kedua-dua usaha ini dilaksanakan oleh Pesuruhjaya Tinggi British sendiri, bukan Kabinet Pertama"
+      ],
+      "answer": "Kedua-dua usaha ini sebahagian daripada strategi Kabinet Pertama memindahkan kuasa membuat keputusan daripada British kepada pemimpin tempatan secara beransur-ansur menjelang kemerdekaan",
+      "explanation": "Mengurangkan kuasa pentadbiran British dan meminta pembatalan Kuasa Veto Pesuruhjaya Tinggi kedua-duanya sebahagian daripada strategi Kabinet Pertama memindahkan kuasa kepada pemimpin tempatan menjelang kemerdekaan.",
+      "tip": "Kurangkan kuasa British + batal Kuasa Veto = pindah kuasa tempatan."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah PALING tepat menjelaskan mengapa Kabinet Pertama mengekalkan 3 orang pegawai British dalam portfolio kewangan, ekonomi dan pertahanan, walaupun matlamatnya mengurangkan kuasa British?",
+      "options": [
+        "Pengekalan ini mencerminkan proses peralihan kuasa yang berperingkat — bidang teknikal dan kritikal seperti kewangan dan pertahanan memerlukan kepakaran sedia ada semasa pemimpin tempatan membina pengalaman mentadbir",
+        "Pengekalan ini menunjukkan Kabinet Pertama sebenarnya gagal mencapai sebarang matlamat mengurangkan kuasa British",
+        "Pengekalan ini berlaku kerana Perjanjian Persekutuan mewajibkan portfolio tersebut kekal dipegang British sehingga Parlimen Persekutuan Malaya ditubuhkan pada 1959",
+        "Pengekalan ini tiada kaitan dengan strategi peralihan kuasa, sekadar keputusan rawak Pesuruhjaya Tinggi"
+      ],
+      "answer": "Pengekalan ini mencerminkan proses peralihan kuasa yang berperingkat — bidang teknikal dan kritikal seperti kewangan dan pertahanan memerlukan kepakaran sedia ada semasa pemimpin tempatan membina pengalaman mentadbir",
+      "explanation": "Pengekalan 3 pegawai British dalam portfolio kewangan, ekonomi dan pertahanan mencerminkan proses peralihan kuasa berperingkat, selaras dengan usaha lain Kabinet Pertama mengurangkan kuasa British secara beransur-ansur.",
+      "tip": "3 pegawai British kekal = peralihan berperingkat, bukan kegagalan."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah PALING tepat merumuskan subtopik 8.4 dan Rumusan Besar Bab 8?",
+      "options": [
+        "Kabinet Pertama (10 menteri tempatan + 3 pegawai British) dibentuk selepas Pilihan Raya 1955 untuk mentadbir negara dan mengurangkan kuasa British secara berperingkat, melengkapkan rangkaian pilihan raya, MPP dan kabinet sebagai asas demokrasi dan langkah penting ke arah kemerdekaan",
+        "Kabinet Pertama Persekutuan Tanah Melayu hanya dianggotai pegawai British, dengan menteri tempatan dilantik hanya selepas Parlimen Persekutuan Malaya ditubuhkan pada 1959",
+        "Kabinet Pertama dibentuk sebelum Pilihan Raya Umum 1955 diadakan",
+        "Kabinet Pertama tidak memainkan sebarang peranan dalam usaha ke arah kemerdekaan negara"
+      ],
+      "answer": "Kabinet Pertama (10 menteri tempatan + 3 pegawai British) dibentuk selepas Pilihan Raya 1955 untuk mentadbir negara dan mengurangkan kuasa British secara berperingkat, melengkapkan rangkaian pilihan raya, MPP dan kabinet sebagai asas demokrasi dan langkah penting ke arah kemerdekaan",
+      "explanation": "Rumusan menggabungkan pembentukan Kabinet Pertama, keahliannya, peranannya mengurangkan kuasa British, dan kaitannya dengan perkembangan pilihan raya serta MPP sebagai asas demokrasi ke arah kemerdekaan.",
+      "tip": "Kabinet Pertama = pelengkap rangkaian pilihan raya-MPP-kemerdekaan."
+    }
+  ]
+}

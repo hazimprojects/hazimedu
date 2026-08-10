@@ -1,0 +1,216 @@
+{
+  "id": "8-3",
+  "title": "Penubuhan Majlis Perundangan Persekutuan",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Berapakah jumlah keseluruhan ahli Majlis Perundangan Persekutuan (MPP) pada 1948?",
+      "options": [
+        "77 orang",
+        "100 orang",
+        "52 orang",
+        "35 orang"
+      ],
+      "answer": "77 orang",
+      "explanation": "Jumlah keseluruhan ahli MPP pada 1948 ialah 77 orang.",
+      "tip": "MPP 1948 = 77 ahli."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Berapakah jumlah keseluruhan ahli Majlis Perundangan Persekutuan (MPP) pada 1955?",
+      "options": [
+        "100 orang",
+        "77 orang",
+        "52 orang",
+        "268 orang"
+      ],
+      "answer": "100 orang",
+      "explanation": "Jumlah keseluruhan ahli MPP pada 1955 ialah 100 orang, meningkat daripada 77 orang pada 1948.",
+      "tip": "MPP 1955 = 100 ahli."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah yang dilantik sebagai Ketua Menteri pertama Persekutuan Tanah Melayu?",
+      "options": [
+        "Tunku Abdul Rahman",
+        "Dato' Onn Jaafar",
+        "Dato' Abdul Razak Hussein",
+        "Sir Donald MacGillivray"
+      ],
+      "answer": "Tunku Abdul Rahman",
+      "explanation": "Tunku Abdul Rahman dilantik sebagai Ketua Menteri pertama Persekutuan Tanah Melayu selepas kemenangan Parti Perikatan dalam Pilihan Raya 1955.",
+      "tip": "Tunku Abdul Rahman = Ketua Menteri pertama."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Bilakah Majlis Perundangan Persekutuan (MPP) baharu bersidang buat julung kalinya?",
+      "options": [
+        "31 Ogos 1955",
+        "27 Julai 1955",
+        "11 September 1959",
+        "4 Ogos 1955"
+      ],
+      "answer": "31 Ogos 1955",
+      "explanation": "MPP baharu bersidang buat julung kalinya pada 31 Ogos 1955 di Dewan Tunku Abdul Rahman, Kuala Lumpur.",
+      "tip": "31 Ogos 1955 = sidang pertama MPP baharu."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah Sistem Ahli dimansuhkan selepas MPP baharu ditubuhkan pada 1955?",
+      "options": [
+        "Kerana perubahan pentadbiran (Kerajaan Persekutuan diketuai Ketua Menteri tempatan) menggantikan keperluan sistem latihan awal tersebut",
+        "Kerana Sistem Ahli didapati gagal mencapai matlamatnya sejak ia dilancarkan pada 1951",
+        "Kerana Raja-raja Melayu memerintahkan pemansuhan Sistem Ahli secara langsung",
+        "Kerana Rang Undang-Undang Pilihan Raya 1954 melarang kewujudan Sistem Ahli"
+      ],
+      "answer": "Kerana perubahan pentadbiran (Kerajaan Persekutuan diketuai Ketua Menteri tempatan) menggantikan keperluan sistem latihan awal tersebut",
+      "explanation": "Sistem Ahli dimansuhkan selepas perubahan pentadbiran ini, kerana Kerajaan Persekutuan kini diketuai Ketua Menteri tempatan hasil Pilihan Raya 1955.",
+      "tip": "Kerajaan Persekutuan baharu → Sistem Ahli mansuh."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah keanggotaan MPP 1955 dianggap perkembangan penting dalam amalan demokrasi?",
+      "options": [
+        "Kerana Kerajaan Persekutuan kini dipimpin rakyat tempatan dan ahli MPP dipilih oleh rakyat melalui pilihan raya",
+        "Kerana keanggotaan MPP 1955 hanya terdiri daripada pegawai British sahaja",
+        "Kerana MPP 1955 menghapuskan jawatan Menteri Besar negeri dan menggantikannya dengan Ketua Menteri di setiap negeri",
+        "Kerana MPP 1955 hanya bersidang sekali sebelum dibubarkan semula"
+      ],
+      "answer": "Kerana Kerajaan Persekutuan kini dipimpin rakyat tempatan dan ahli MPP dipilih oleh rakyat melalui pilihan raya",
+      "explanation": "Keanggotaan MPP 1955 (52 daripada 100 ahli dipilih) menunjukkan perkembangan demokrasi kerana Kerajaan Persekutuan dipimpin rakyat tempatan dan ahli dipilih melalui pilihan raya.",
+      "tip": "MPP 1955 = dipimpin tempatan + ahli dipilih rakyat."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah proses pertukaran kuasa daripada British kepada rakyat tempatan berlaku secara berperingkat, bukan serta-merta?",
+      "options": [
+        "Kerana ia mengambil masa sebelum pentadbiran diserahkan sepenuhnya, dengan Pesuruhjaya Tinggi British masih memegang kepimpinan peringkat atasan dalam tempoh peralihan",
+        "Kerana Raja-raja Melayu enggan membenarkan sebarang pertukaran kuasa berlaku",
+        "Kerana Tunku Abdul Rahman menolak tawaran mengetuai Kerajaan Persekutuan pada peringkat awal",
+        "Kerana Parlimen Persekutuan Malaya perlu ditubuhkan dahulu sebelum sebarang pertukaran kuasa"
+      ],
+      "answer": "Kerana ia mengambil masa sebelum pentadbiran diserahkan sepenuhnya, dengan Pesuruhjaya Tinggi British masih memegang kepimpinan peringkat atasan dalam tempoh peralihan",
+      "explanation": "Proses pertukaran kuasa berlaku secara berperingkat kerana mengambil masa sebelum pentadbiran diserahkan sepenuhnya; Pesuruhjaya Tinggi British masih memegang kepimpinan peringkat atasan dalam tempoh peralihan.",
+      "tip": "Pertukaran berperingkat = British masih kepimpinan atasan sementara."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Dalam komposisi MPP 1948, seramai 9 orang mewakili sembilan buah Majlis Negeri. Siapakah golongan yang diwakili ini?",
+      "options": [
+        "Residen British",
+        "Ahli tidak rasmi",
+        "Ahli rasmi",
+        "Wakil Negeri-negeri Selat"
+      ],
+      "answer": "Residen British",
+      "explanation": "Dalam komposisi MPP 1948, 9 orang Residen British mewakili sembilan buah Majlis Negeri.",
+      "tip": "9 orang wakil Majlis Negeri = Residen British."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Dalam komposisi MPP 1955, 35 orang ahli mewakili kumpulan berkepentingan seperti perindustrian, perlombongan, pertanian dan keusahawanan. Apakah kategori ahli ini dipanggil?",
+      "options": [
+        "Ahli lantikan",
+        "Ahli dipilih (pilihan raya)",
+        "Menteri Besar",
+        "Wakil Negeri-negeri Selat"
+      ],
+      "answer": "Ahli lantikan",
+      "explanation": "35 orang ahli lantikan dalam MPP 1955 mewakili kumpulan berkepentingan seperti perindustrian, perlombongan, pertanian dan keusahawanan.",
+      "tip": "35 ahli lantikan = wakil kumpulan berkepentingan."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sebuah dewan legislatif baharu ditubuhkan pada 11 September 1959, dengan persidangan pertamanya dirasmikan oleh Yang di-Pertuan Agong pertama keesokan harinya. Apakah nama dewan ini?",
+      "options": [
+        "Parlimen Persekutuan Malaya",
+        "Majlis Perundangan Persekutuan (MPP)",
+        "Majlis Mesyuarat Persekutuan",
+        "Suruhanjaya Penentuan Sempadan Kawasan"
+      ],
+      "answer": "Parlimen Persekutuan Malaya",
+      "explanation": "Parlimen Persekutuan Malaya ditubuhkan pada 11 September 1959, dengan persidangan pertama dirasmikan Yang di-Pertuan Agong pertama, Tuanku Abdul Rahman ibni Almarhum Tuanku Muhammad, pada 12 September 1959.",
+      "tip": "11 Sept 1959 = penubuhan Parlimen Persekutuan Malaya."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perbezaan utama antara komposisi MPP 1948 dengan MPP 1955?",
+      "options": [
+        "MPP 1948 (77 ahli) didominasi ahli tidak rasmi lantikan (52) dan Residen British (9), manakala MPP 1955 (100 ahli) memperkenalkan 52 ahli dipilih melalui pilihan raya sebagai kumpulan terbesar",
+        "MPP 1948 memperkenalkan ahli dipilih melalui pilihan raya, manakala MPP 1955 hanya terdiri daripada ahli lantikan",
+        "MPP 1948 dan MPP 1955 mempunyai komposisi yang sama, hanya berbeza dari segi nama rasminya",
+        "MPP 1948 mempunyai lebih ramai ahli berbanding MPP 1955"
+      ],
+      "answer": "MPP 1948 (77 ahli) didominasi ahli tidak rasmi lantikan (52) dan Residen British (9), manakala MPP 1955 (100 ahli) memperkenalkan 52 ahli dipilih melalui pilihan raya sebagai kumpulan terbesar",
+      "explanation": "MPP 1948 (77 ahli) didominasi ahli tidak rasmi lantikan dan Residen British, manakala MPP 1955 (100 ahli) memperkenalkan 52 ahli dipilih melalui pilihan raya sebagai kumpulan terbesar.",
+      "tip": "1948: dominasi lantikan. 1955: dominasi dipilih."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perkaitan antara kemenangan Parti Perikatan dalam Pilihan Raya 1955 dengan pelantikan Tunku Abdul Rahman sebagai Ketua Menteri?",
+      "options": [
+        "Kemenangan besar Parti Perikatan (51/52 kerusi) membolehkan Tunku Abdul Rahman, sebagai pemimpin parti yang menang, dilantik memimpin Kerajaan Persekutuan yang baru dibentuk sebagai Ketua Menteri pertama",
+        "Tunku Abdul Rahman dilantik sebagai Ketua Menteri sebelum Pilihan Raya 1955 diadakan",
+        "Kemenangan Parti Perikatan tiada kaitan langsung dengan pelantikan Ketua Menteri kerana jawatan ini dilantik terus oleh British",
+        "Parti Perikatan kalah dalam Pilihan Raya 1955 tetapi Tunku tetap dilantik Ketua Menteri"
+      ],
+      "answer": "Kemenangan besar Parti Perikatan (51/52 kerusi) membolehkan Tunku Abdul Rahman, sebagai pemimpin parti yang menang, dilantik memimpin Kerajaan Persekutuan yang baru dibentuk sebagai Ketua Menteri pertama",
+      "explanation": "Kemenangan besar Parti Perikatan dalam Pilihan Raya 1955 membolehkan Tunku Abdul Rahman, pemimpin parti yang menang, dilantik sebagai Ketua Menteri pertama Persekutuan Tanah Melayu.",
+      "tip": "Perikatan menang → Tunku jadi Ketua Menteri."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah PALING tepat menjelaskan kepentingan persidangan pertama MPP baharu pada 31 Ogos 1955?",
+      "options": [
+        "Persidangan ini menandakan Kerajaan Persekutuan kini diketuai pemimpin tempatan dan ahli dipilih rakyat, sekali gus langkah konkrit pertama Tanah Melayu ke arah berkerajaan sendiri sebelum kemerdekaan penuh",
+        "Persidangan ini menandakan Tanah Melayu telah mencapai kemerdekaan penuh daripada British",
+        "Persidangan ini menandakan pemansuhan segera Perjanjian Persekutuan Tanah Melayu 1948",
+        "Persidangan ini menandakan penubuhan rasmi Parlimen Persekutuan Malaya"
+      ],
+      "answer": "Persidangan ini menandakan Kerajaan Persekutuan kini diketuai pemimpin tempatan dan ahli dipilih rakyat, sekali gus langkah konkrit pertama Tanah Melayu ke arah berkerajaan sendiri sebelum kemerdekaan penuh",
+      "explanation": "Persidangan pertama MPP baharu pada 31 Ogos 1955, disifatkan Tunku Abdul Rahman sebagai hari penting, menandakan langkah penting Tanah Melayu ke arah berkerajaan sendiri.",
+      "tip": "31 Ogos 1955 = langkah konkrit ke arah berkerajaan sendiri."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah PALING tepat merumuskan subtopik 8.3?",
+      "options": [
+        "Selepas kemenangan Parti Perikatan dalam Pilihan Raya 1955, keanggotaan MPP berkembang daripada 77 (1948) kepada 100 ahli (1955) dengan lebih ramai wakil tempatan, Tunku Abdul Rahman dilantik Ketua Menteri pertama, membuka jalan ke arah Parlimen Persekutuan Malaya 1959",
+        "Keanggotaan MPP kekal 77 ahli sepanjang tempoh 1948 hingga 1959, walaupun Pilihan Raya 1955 diadakan",
+        "Majlis Perundangan Persekutuan ditubuhkan buat pertama kali pada 1955, menggantikan Jawatankuasa Kerja yang wujud sebelum itu",
+        "Sistem Ahli terus dikekalkan selepas penubuhan MPP baharu pada 1955"
+      ],
+      "answer": "Selepas kemenangan Parti Perikatan dalam Pilihan Raya 1955, keanggotaan MPP berkembang daripada 77 (1948) kepada 100 ahli (1955) dengan lebih ramai wakil tempatan, Tunku Abdul Rahman dilantik Ketua Menteri pertama, membuka jalan ke arah Parlimen Persekutuan Malaya 1959",
+      "explanation": "Rumusan menggabungkan perkembangan keanggotaan MPP (77 → 100 ahli), pelantikan Tunku Abdul Rahman sebagai Ketua Menteri pertama dan langkah seterusnya ke arah Parlimen Persekutuan Malaya 1959.",
+      "tip": "77→100 ahli, Tunku jadi Ketua Menteri, → Parlimen 1959."
+    }
+  ]
+}
