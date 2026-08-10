@@ -4044,7 +4044,36 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     'Up arrow': '/assets/openmoji/up-arrow.svg',
     'Water pistol': '/assets/openmoji/water-pistol.svg',
     'Worried face': '/assets/openmoji/worried-face.svg',
-    'Yen banknote': '/assets/openmoji/yen-banknote.svg'
+    'Yen banknote': '/assets/openmoji/yen-banknote.svg',
+    // Bab 4 — +23 konsep baharu (257 kesemuanya) drpd 114 konsep unik
+    // digunakan merentas notes/bab-4*.html; 91/114 SUDAH sedia ada drpd
+    // liputan Bab 1-3 (kongsi konsep umum cth. Pushpin/Light bulb/Globe
+    // showing...), 23 baki ni khusus baharu utk Bab 4. Semua padan
+    // TERUS ke annotation OpenMoji (title-case → lowercase, "Keycap N"
+    // → "keycap: N" spt Bab 2/3) — tiada kes edge kali ni.
+    'Brown circle': '/assets/openmoji/brown-circle.svg',
+    'Dollar banknote': '/assets/openmoji/dollar-banknote.svg',
+    'Downcast face with sweat': '/assets/openmoji/downcast-face-with-sweat.svg',
+    'Drop of blood': '/assets/openmoji/drop-of-blood.svg',
+    'Egg': '/assets/openmoji/egg.svg',
+    'Envelope with arrow': '/assets/openmoji/envelope-with-arrow.svg',
+    'Face with thermometer': '/assets/openmoji/face-with-thermometer.svg',
+    'Fire engine': '/assets/openmoji/fire-engine.svg',
+    'Gear': '/assets/openmoji/gear.svg',
+    'House': '/assets/openmoji/house.svg',
+    'Identification card': '/assets/openmoji/identification-card.svg',
+    'Keycap 8': '/assets/openmoji/keycap-8.svg',
+    'Keycap 9': '/assets/openmoji/keycap-9.svg',
+    'Laptop': '/assets/openmoji/laptop.svg',
+    'Motorway': '/assets/openmoji/motorway.svg',
+    'Nut and bolt': '/assets/openmoji/nut-and-bolt.svg',
+    'Place of worship': '/assets/openmoji/place-of-worship.svg',
+    'Post office': '/assets/openmoji/post-office.svg',
+    'Printer': '/assets/openmoji/printer.svg',
+    'Soccer ball': '/assets/openmoji/soccer-ball.svg',
+    'Stethoscope': '/assets/openmoji/stethoscope.svg',
+    'Sunglasses': '/assets/openmoji/sunglasses.svg',
+    'White circle': '/assets/openmoji/white-circle.svg'
   };
 
   function _pdfEmojiSrc(originalSrc) {
@@ -4299,6 +4328,36 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
           if (p) h += '<span class="zp-step">' + _escPdfHtml(p.textContent.trim()) + '</span>';
         });
         h += '</div>';
+      } else if (cls.indexOf('paper-split-bar-labels') !== -1) {
+        /* Diproses BERSAMA `.paper-split-bar` (saudara SEBELUM ni) — elak
+           pendua, rujuk cabang `paper-split-bar` di bawah. */
+      } else if (cls.indexOf('paper-split-bar') !== -1) {
+        // Carta bar undian dua pihak (cth. "Keputusan undian: 19 menyokong
+        // / 16 menentang" bab-4-4.html, SATU-SATUNYA kejadian korpus —
+        // khusus Bab 4). Tiada cabang eksplisit sblm ni (komponen baharu,
+        // Bab 1-3 tak pernah guna) — jatuh ke fallback generik
+        // `_bodyHtml(node)` yg skip nod teks TERUS drpd `<div class=
+        // "paper-split-bar-seg">` (bukan `<p>`, bukan `<img>`, tiada kelas
+        // dikenali), kandungan undian (bilangan & peratus) HILANG SENYAP
+        // drpd PDF. Fix: render bar rata (flat, BUKAN gradien — rujuk
+        // sejarah pepijat html2canvas §"Eksport PDF" CLAUDE.md) + label
+        // peratus di bawah, drpd `.paper-split-bar-seg`/`.paper-split-bar-
+        // labels` (saudara SEJAJAR lepas ni, ditangani sekali gus di sini).
+        h += '<div class="zp-splitbar">';
+        node.querySelectorAll(':scope > .paper-split-bar-seg').forEach(function(seg) {
+          var segCls = seg.classList.contains('seg-a') ? 'zp-splitbar-a' : 'zp-splitbar-b';
+          var w = seg.style.width || '50%';
+          h += '<div class="zp-splitbar-seg ' + segCls + '" style="width:' + _escPdfAttr(w) + '">' + _escPdfHtml(seg.textContent.trim()) + '</div>';
+        });
+        h += '</div>';
+        var labelsEl = node.nextElementSibling;
+        if (labelsEl && (labelsEl.className || '').indexOf('paper-split-bar-labels') !== -1) {
+          h += '<div class="zp-splitbar-labels">';
+          labelsEl.querySelectorAll('span').forEach(function(sp) {
+            h += '<span>' + _escPdfHtml(sp.textContent.trim()) + '</span>';
+          });
+          h += '</div>';
+        }
       } else if (cls.indexOf('paper-accordion') !== -1) {
         var idx2 = 0;
         // :scope > SAHAJA — bukan querySelectorAll biasa (padan SEMUA keturunan
@@ -4646,11 +4705,72 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   var PDF_2COL_COL_WIDTH_PX = Math.round(PDF_2COL_COL_WIDTH_MM * PDF_BASE_DENSITY);
 
   function _pdfIsTwoColumnScope() {
-    // Diluaskan drpd Bab 1-2 asal ke +Bab 3 — WAJIB lengkapkan liputan
-    // HZ_PDF_OPENMOJI_MAP 100% konsep unik Bab 3 dulu (rujuk komen di
+    // Diluaskan drpd Bab 1-3 asal ke +Bab 4 — WAJIB lengkapkan liputan
+    // HZ_PDF_OPENMOJI_MAP 100% konsep unik Bab 4 dulu (rujuk komen di
     // atas takrifan map, disahkan 0 konsep hilang sebelum baris ni diubah)
-    // supaya PDF Bab 3 tak papar campuran gaya OpenMoji + Fluent.
-    return /\/notes\/bab-[123](-\d+)?\.html$/i.test(window.location.pathname);
+    // supaya PDF Bab 4 tak papar campuran gaya OpenMoji + Fluent.
+    return /\/notes\/bab-[1234](-\d+)?\.html$/i.test(window.location.pathname);
+  }
+
+  // Bab 4 (Malayan Union/Persekutuan) ada gelaran raja/sultan kw-tokoh
+  // JAUH lebih panjang drpd korpus Bab 1-3 (cth. "Sultan Hisamuddin
+  // Alam Shah ibni Almarhum Sultan Alauddin Sulaiman Shah" — diukur
+  // ~508px pd 13.5px bold Fredoka, drpd frasa terpanjang Bab 1-3 yg
+  // cuma ~257-340px), tak muat sbg SATU kotak nowrap dlm lebar lajur
+  // 2-kolum (~330px kandungan sebenar dlm kad papan/akordion).
+  //
+  // Percubaan 1 (dibuang): kecilkan font-size ikut nisbah lebar —
+  // pengguna nyata nampak "tak kemas" (fon jadi terlalu kecil drpd
+  // teks sekeliling, cth. 7.46px vs 13.5px asal).
+  // Percubaan 2 (dibuang, disahkan piksel+visual): buang je
+  // white-space:nowrap terus (biar wrap, saiz sama) — hidupkan SEMULA
+  // bug LAMA html2canvas-pro yg SEBAB nowrap jadi wajib drpd awal
+  // (rujuk AWAS §"Susun Atur 2 Lajur" CLAUDE.md): latar `.zpkw`
+  // (background+border-radius) yg terpaksa wrap merentas >1 baris
+  // dilukis SALAH — blob latar melekit merentasi SELURUH baki lebar
+  // BARIS PERTAMA (jauh melepasi teks sebenar), diuji SAMA ada
+  // box-decoration-break dibiar lalai (`slice`) atau ditetapkan
+  // `clone` eksplisit — KEDUA-DUA varian tetap rosak (disahkan piksel:
+  // >40% kawasan "smear check" [jalur 40px kanan drpd sempadan teks
+  // baris 2] tetap warna latar `.zpkw-tokoh`, walhal patut kosong;
+  // disahkan visual — tangkapan crop kanvas sebenar).
+  //
+  // Fix (kekal): bila frasa terlalu panjang utk 1 baris nowrap, GUGUR
+  // TERUS latar/padding/border-radius (bukan kecilkan fon) & BENARKAN
+  // wrap — corak SAMA drpd gaya mod "Jimat Dakwat" sedia ada (teks
+  // BOLD BERWARNA tanpa kotak) yg SUDAH disahkan selamat wrap normal
+  // (ia teks polos site-wide, tiada latar span >1 baris yg mencetus
+  // bug ni langsung). Warna spesifik kelas kw-*/zpbloc-* (cth.
+  // `#731b25` kw-tokoh) KEKAL drpd rule CSS asal (kelas TAK dibuang,
+  // cuma override background/padding/border-radius/white-space via
+  // inline style — specificity inline menang drpd class), pembezaan
+  // warna kata kunci tak hilang, cuma bentuk "kotak" gugur utk frasa
+  // outlier ni sahaja (majoriti kw-* korpus TAK terjejas, kekal kotak
+  // spt biasa — hanya frasa MELEBIHI ambang lebar kena declass).
+  //
+  // Diukur SEBELUM sebarang perubahan (nowrap kekal aktif semasa ukur —
+  // getBoundingClientRect() dgn nowrap jamin lebar PENUH intrinsik
+  // frasa, tak terpotong walau container lagi sempit). HANYA dipanggil
+  // dlm mod 2 lajur (`twoCol`) — lebar kandungan 1 lajur (~700px) jauh
+  // melebihi frasa terpanjang korpus, tak perlu risiko ubah apa-apa
+  // di sana.
+  function _pdfDeboxOverlongKeywords(container) {
+    var SAFE_MAX_W = 292; // px — konservatif merentas konteks papan/akordion/garis masa 2-lajur
+    // Skop KHUSUS nama orang (kw-tokoh) & tempat (kw-tempat) sahaja —
+    // arahan pengguna eksplisit, elak "declass" kelas kw-* lain (masa/
+    // peristiwa/pertubuhan/dll.) atau .zpbloc walau secara teori boleh
+    // panjang jugak; kejadian sebenar korpus (Bab 4) SEMUANYA tokoh/
+    // tempat, jadi skop ni padan realiti tanpa perlu longgarkan lagi.
+    var els = container.querySelectorAll('.zpkw-tokoh, .zpkw-tempat');
+    for (var i = 0; i < els.length; i++) {
+      var el = els[i];
+      var w = el.getBoundingClientRect().width;
+      if (w <= SAFE_MAX_W) continue;
+      el.style.background = 'transparent';
+      el.style.padding = '0';
+      el.style.borderRadius = '0';
+      el.style.whiteSpace = 'normal';
+    }
   }
 
   function _getPrintCss(mode, twoCol) {
@@ -4749,6 +4869,15 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       '#zym-pr .zp-steps{display:flex;flex-wrap:wrap;gap:5px 8px;margin:7px 0;align-items:center}',
       '#zym-pr .zp-step{border:1px solid #c7d2fe;background:#eef2ff;border-radius:6px;padding:5px 10px;font-size:11.5px;color:#3730a3;position:relative;display:inline-flex;align-items:center;justify-content:center;line-height:1.34;min-height:30px}',
       '#zym-pr .zp-step+.zp-step::before{content:"→";margin-right:6px;color:#6366f1;font-size:12px}',
+      // Carta bar undian dua pihak (.paper-split-bar, rujuk _bodyHtmlNode)
+      // — warna RATA (bukan gradien spt versi laman hidup — gradien lebih
+      // berisiko dgn html2canvas, rujuk sejarah pepijat §"Eksport PDF"
+      // CLAUDE.md).
+      '#zym-pr .zp-splitbar{display:flex;height:22px;margin-top:6px;overflow:hidden;border-radius:999px}',
+      '#zym-pr .zp-splitbar-seg{display:flex;min-width:26px;align-items:center;justify-content:center;padding:0 6px;color:#fff;font-weight:700;font-size:10.5px;white-space:nowrap}',
+      '#zym-pr .zp-splitbar-a{background:#4f46e5}',
+      '#zym-pr .zp-splitbar-b{background:#94a3b8;color:#1e293b}',
+      '#zym-pr .zp-splitbar-labels{display:flex;justify-content:space-between;margin-top:3px;font-size:10.5px;font-weight:700;color:#6b7280}',
       // Answer box
       '#zym-pr .zp-answer{border-left:3px solid #d0d0e8;padding-left:10px;margin:5px 0}',
       // Text
@@ -4878,6 +5007,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
         '#zym-pr.zp-mode-eco .zp-tl-bd{background:#fafafa!important;color:#27272a!important}',
         '#zym-pr.zp-mode-eco .zp-chip,#zym-pr.zp-mode-eco .zp-step{background:#f4f4f5!important;border-color:#d4d4d8!important;color:#27272a!important}',
         '#zym-pr.zp-mode-eco .zp-step+.zp-step::before{color:#6b7280!important}',
+        '#zym-pr.zp-mode-eco .zp-splitbar-seg{background:#f4f4f5!important;color:#27272a!important;border:1px solid #d4d4d8!important}',
         '#zym-pr.zp-mode-eco .zp-sentence{border-left-color:#9ca3af!important}',
         '#zym-pr.zp-mode-eco p.zp-p,#zym-pr.zp-mode-eco p.zp-ph,#zym-pr.zp-mode-eco p.zp-sentence{color:#27272a!important}',
         '#zym-pr.zp-mode-eco .zp-desc{color:#3f3f46!important}'
@@ -4977,6 +5107,29 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
         pushRange(rg.top, rg.bottom);
       });
 
+      // Kad garis masa INDIVIDU (.zp-tl-card, satu per tarikh/peristiwa
+      // dlm .zp-tl) — TIADA perlindungan berasingan sblm ni (`.zp-tl`
+      // induk KESELURUHANnya sahaja didaftar di atas, bukan setiap kad).
+      // Tak jadi masalah selagi `.zp-tl` induk muat 1 muka surat/lajur
+      // (splitter tak perlu belah apa-apa di dalamnya langsung) — tapi
+      // bila `.zp-tl` (atau gabungan tajuk+.zp-tl via §"tajuk yatim" atas)
+      // LEBIH TINGGI drpd 1 muka surat & fallback "tolak SELURUH blok"
+      // (_findBisectedBlock) dah "habis guna" (cubaan kedua dgn blok
+      // induk yg SAMA gagal semakan minY), splitter jatuh ke fallback
+      // whiteness/boundary generik yg TIADA pengetahuan sempadan kad
+      // individu — boleh potong TEPAT di tengah SATU kad (border+latar
+      // terbelah dua muka surat, cth. kad "Rang Undang-Undang Penyerahan"
+      // bab-4-4.html — header di muka 2, badan+carta undian di muka 3).
+      // Daftar setiap `.zp-tl-card` di sini (SELALU, tak kira dlm/luar
+      // .zp-section-wrap — perlindungan kad tunggal tak berkait syarat
+      // gam tajuk) supaya `_findSmallestBisectedBlock()` (rujuk
+      // _pickPdfSplitY) ada range LEBIH KECIL/DALAM utk ditolak drpd blok
+      // induk gergasi bila blok induk tu sendiri dah gagal ditolak.
+      container.querySelectorAll('.zp-tl-card').forEach(function(el) {
+        var rg = rectRange(el);
+        pushRange(rg.top, rg.bottom);
+      });
+
       container.querySelectorAll('.zp-section').forEach(function(el) {
         if (el.closest && el.closest('.zp-section-wrap')) return;
         var rg2 = rectRange(el);
@@ -5009,6 +5162,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       container.setAttribute('aria-hidden', 'true');
       container.innerHTML = _buildPrintHtml(mainEl);
       document.body.appendChild(container);
+      if (twoCol) _pdfDeboxOverlongKeywords(container);
 
       function _cleanup() {
         container.remove();
@@ -5176,6 +5330,24 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
               return null;
             }
 
+            /** Pulangkan blok TERKECIL (paling dalam bersarang) yg dibelah oleh
+             * baris y — rujuk _pickPdfSplitY: bila blok INDUK gergasi (cth. tajuk
+             * "Bahagian N" digam dgn .zp-tl panjang) dah "habis guna" (tolakan
+             * pertama gagal semakan minY sbb kita sudah di awal muka surat/lajur),
+             * cari range LEBIH KECIL yg turut terkandung (cth. SATU .zp-tl-card)
+             * drpd terus jatuh ke heuristik whiteness generik yg boleh potong
+             * TEPAT tengah kad tunggal. */
+            function _findSmallestBisectedBlock(y, ranges) {
+              var best = null;
+              for (var i = 0; i < ranges.length; i++) {
+                var rg = ranges[i];
+                if (y > rg.top && y < rg.bottom) {
+                  if (!best || (rg.bottom - rg.top) < (best.bottom - best.top)) best = rg;
+                }
+              }
+              return best;
+            }
+
             function _rowWhiteBlend(y) {
               return (_rowWhiteness(y) + _rowWhiteness(y - 1) + _rowWhiteness(y + 1)) / 3;
             }
@@ -5246,6 +5418,21 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
               // sbb keutamaan MUTLAK ialah elak potong, bukan jimat ruang.
               var bisected = _findBisectedBlock(approxY, ranges);
               if (bisected && bisected.top > minY) return bisected.top;
+              // Blok INDUK (bisected di atas) dah "habis guna" — top-nya SUDAH
+              // jadi prevY semasa (kita di awal muka surat/lajur & MASIH tak
+              // muat), jadi tolakan blok induk SEKALI LAGI mustahil membantu.
+              // Cari range LEBIH KECIL/dalam bersarang (cth. SATU .zp-tl-card
+              // dlm .zp-tl gergasi yg digam dgn tajuk "Bahagian N" — rujuk
+              // §"tajuk yatim" CLAUDE.md) yg turut dibelah oleh titik ideal;
+              // kalau jumpa & masih boleh dicapai, tolak IA sahaja (kad tunggal
+              // kecil) drpd terus jatuh ke heuristik whiteness generik di bawah
+              // yg boleh potong TEPAT tengah kad (border+latar terbelah dua
+              // muka surat — disahkan pengguna, bab-4-4.html "Rang Undang-Undang
+              // Penyerahan": header muka 2, badan+carta undian muka 3).
+              if (bisected) {
+                var smallest = _findSmallestBisectedBlock(approxY, ranges);
+                if (smallest && smallest.top > minY) return smallest.top;
+              }
               var fwd = Math.round(pxPerPage * 0.26);
               var bnd = _pickPdfBoundarySplit(approxY, minY, fwd, ranges);
               if (bnd > minY && !_rowBisectsBlock(bnd, ranges)) return bnd;
@@ -7237,7 +7424,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=564').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=565').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });

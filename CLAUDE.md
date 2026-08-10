@@ -1158,6 +1158,109 @@ bersama KEDUA-DUA kad garis masa (12 kad "Garisan Masa Serangan
 Jepun" + kad "Info Penting: Masa Tokyo") ke lajur kanan muka surat 3,
 tiada tajuk atau kandungan yatim lagi.
 
+**Diluaskan ke Bab 4** — `_pdfIsTwoColumnScope()` skop kini `bab-[1234]`
+(WAJIB liputan `HZ_PDF_OPENMOJI_MAP` 100% konsep unik Bab 4 dulu, +23
+konsep baharu drpd 114 unik digunakan, 257 kesemuanya, disahkan tiada
+kes edge annotation OpenMoji kali ni). Bab 4 (Malayan Union/Persekutuan)
+dedah **DUA** isu baharu tak pernah tercetus di Bab 1-3, kedua-duanya
+lebih relevan drpd sekadar liputan ikon:
+
+1. **Gelaran raja/sultan `kw-tokoh` JAUH lebih panjang drpd korpus
+   sebelum ni** (cth. "Sultan Hisamuddin Alam Shah ibni Almarhum
+   Sultan Alauddin Sulaiman Shah" — diukur ~508px pd 13.5px bold
+   Fredoka, drpd frasa terpanjang Bab 1-3 yg cuma ~257-340px), tak
+   muat sbg SATU kotak `white-space:nowrap` (WAJIB kekal, rujuk AWAS
+   §"Susun Atur 2 Lajur" atas) dlm lebar lajur 2-kolum (~330px).
+   **Percubaan 1** (kecilkan font-size ikut nisbah lebar): pengguna
+   nyata "tak kemas" (fon jadi terlalu kecil drpd teks sekeliling,
+   cth. 7.46px vs 13.5px asal) — DIBUANG. **Percubaan 2** (buang
+   nowrap terus, biar wrap saiz sama): disahkan piksel+visual
+   HIDUPKAN SEMULA bug LAMA html2canvas-pro yg SEBAB nowrap jadi
+   wajib drpd awal — latar `.zpkw` yg wrap >1 baris dilukis SALAH,
+   blob melekit merentasi SELURUH baki lebar BARIS PERTAMA (diuji
+   box-decoration-break lalai `slice` & `clone` eksplisit, KEDUA-DUA
+   tetap rosak, >40% kawasan smear-check tetap warna latar) — DIBUANG.
+   **Fix (kekal)**: `_pdfDeboxOverlongKeywords(container)` (dipanggil
+   SELEPAS kontena cetak dilekap, hanya dlm mod 2 lajur) ukur lebar
+   SEBENAR (nowrap kekal aktif semasa ukur) setiap `.zpkw-tokoh`/
+   `.zpkw-tempat` (skop KHUSUS dua kelas ni sahaja — arahan pengguna
+   eksplisit "khusus untuk nama orang atau tempat yg sangat panjang
+   sahaja", elak declass kelas kw-*/zpbloc lain walau secara teori
+   boleh panjang jugak); kalau melebihi ambang selamat (292px), GUGUR
+   TERUS latar/padding/border-radius (bukan kecilkan fon) & BENARKAN
+   wrap (`white-space:normal`) — corak SAMA drpd gaya mod "Jimat
+   Dakwat" sedia ada (teks BOLD BERWARNA tanpa kotak), yg SUDAH
+   disahkan selamat wrap normal (teks polos site-wide, tiada latar
+   span >1 baris langsung). Warna spesifik kelas (cth. `#731b25`
+   kw-tokoh) KEKAL drpd rule CSS asal (kelas TAK dibuang, cuma
+   override background/padding/border-radius/white-space via inline
+   style — specificity inline menang drpd class). Disahkan piksel+
+   visual (crop kanvas sebenar): SIFAR overflow keluar sempadan kad
+   merentas 7 halaman Bab 4 (277 `.zpkw`/`.zpbloc` kesemuanya), SIFAR
+   blob/smear (variasi piksel "tak normal" yg dikesan awal disahkan
+   POSITIF-PALSU — cuma teks biasa yg sambung terus lepas frasa
+   dideclass pd baris SAMA, cth. "...Sulaiman Shah**.**" — bukan bug).
+
+2. **Kad garis masa individu (`.zp-tl-card`) TIADA perlindungan
+   berasingan drpd `_collectPdfBlockRanges()`** — hanya `.zp-tl`
+   INDUK (KESELURUHAN garis masa) didaftar, bukan setiap kad. Tak jadi
+   isu selagi `.zp-tl` induk muat 1 muka surat/lajur, tapi timeline
+   "Kronologi Tandatangan Sultan" (bab-4-2.html, 9 negeri) & "Proses
+   Penyerahan Sarawak" (bab-4-4.html) CUKUP panjang (2578-2977px)
+   utk cetus fallback "tolak SELURUH blok" (`_findBisectedBlock`,
+   rujuk §"Bug kotak terpotong" atas) DUA kali — cubaan PERTAMA
+   berjaya (tolak SELURUH gabungan tajuk+tl), tapi cubaan KEDUA gagal
+   semakan `minY` (blok induk "dah guna", top-nya SUDAH jadi prevY
+   semasa) & jatuh ke heuristik whiteness/boundary generik yg TIADA
+   pengetahuan sempadan kad individu — **boleh potong TEPAT tengah
+   SATU kad** (border+latar terbelah dua muka surat). Disahkan
+   pengguna: kad "Rang Undang-Undang Penyerahan" (bab-4-4.html)
+   header di muka 2, badan+carta undian di muka 3.
+
+   Fix: daftar setiap `.zp-tl-card` sbg range berasingan (SELALU,
+   tak kira dlm/luar `.zp-section-wrap`). `_findBisectedBlock()`
+   (pulang match PERTAMA ikut urutan array) DIKEKALKAN tanpa ubah
+   utk cubaan pertama (still prefer blok induk gergasi dulu — jangan
+   ubah gelagat sedia ada yg dah disahkan selamat 27+ halaman).
+   Fungsi BAHARU `_findSmallestBisectedBlock()` (pulang range
+   TERKECIL/paling dalam bersarang yg mengandungi titik) dipanggil
+   sbg langkah PERANTARAAN baharu dlm `_pickPdfSplitY()` — SELEPAS
+   semakan blok induk gagal (`bisected.top <= minY`), SEBELUM jatuh
+   ke heuristik whiteness/boundary generik: cari range terkecil (cth.
+   SATU `.zp-tl-card`) yg turut dibelah, kalau top-nya masih boleh
+   dicapai (`> minY`), tolak IA sahaja (bukan blok induk gergasi
+   sekali lagi) ke muka surat/lajur seterusnya. Disahkan: kad "Rang
+   Undang-Undang Penyerahan" kini berpindah UTUH (header+badan+carta+
+   kesimpulan) ke muka surat baharu, titik pisah bertukar drpd
+   tengah-tengah kad (6859, di dalam julat kad [6799,7217]) ke
+   SEBELUM kad (6798.875, di luar julat kad sepenuhnya).
+
+   Disahkan via Playwright merentas **65 halaman subtopik** (semua
+   Bab 1–10, teknik suntik `window.__pdfDebugCapture` sama drpd
+   susulan tajuk yatim atas — DIBUANG lepas ujian): SIFAR bisections
+   pd 63/65 halaman; 2 baki (bab-4-2.html, bab-4-4.html) disahkan via
+   semakan kedudukan tambahan (bandingkan titik pisah vs SEMUA julat
+   `.zp-tl-card` individu) SIFAR memotong kad SEBENAR — bisections yg
+   dilaporkan cuma jatuh di dlm range INDUK kasar (`.zp-section-wrap`/
+   `.zp-tl` gergasi), tak pernah di dlm kad kecil — corak DITERIMA
+   (rujuk falsafah sedia ada "terima jurang kosong lebih besar drpd
+   potong kandungan").
+
+3. **Komponen carta bar undian dua pihak (`.paper-split-bar`,
+   SATU-SATUNYA kejadian korpus, bab-4-4.html "Keputusan undian: 19
+   menyokong / 16 menentang") TIADA cabang PDF langsung** — jatuh ke
+   fallback generik `_bodyHtml(node)` yg skip nod teks terus drpd
+   `<div class="paper-split-bar-seg">` (bukan `<p>`/`<img>`/kelas
+   dikenali), kandungan undian (bilangan & peratus) HILANG SENYAP
+   drpd PDF (ditemui semasa siasat isu #2 di atas, bukan berkaitan
+   langsung). Fix: cabang baharu `paper-split-bar`/`paper-split-bar-
+   labels` dlm `_bodyHtmlNode()`, render bar RATA (`.zp-splitbar-a`
+   indigo `#4f46e5`, `.zp-splitbar-b` kelabu `#94a3b8` — BUKAN
+   gradien spt versi laman hidup, rujuk sejarah pepijat html2canvas
+   §"Eksport PDF" atas) + label peratus di bawah. Mod "Jimat Dakwat"
+   turut dpt override (`.zp-splitbar-seg` → kelabu muda, padan corak
+   `.zp-chip`/`.zp-step` eco sedia ada).
+
 ## Eksport PDF — Chip blok PD1/PD2 (`.bloc-chip-*`) pendua & tiada warna
 
 Pengguna lapor (tangkapan skrin pratonton PDF `bab-3-3.html`, kad
