@@ -1100,6 +1100,64 @@ item padan tepat 13=13/20=20/18=18 pd ketiga-tiga, mengesahkan bukan
 bug). Kes asal `bab-2-3.html` kini kembali ke 2 muka surat (bukan 3)
 — ruang digunakan cekap tanpa hilang/potong kandungan.
 
+**Susulan — tajuk "Bahagian N" (`.zp-section`) boleh tertinggal
+YATIM di penghujung muka surat/lajur, kandungannya bermula di muka
+surat/lajur SETERUSNYA tanpa tajuk.** Pengguna tunjuk tangkapan skrin
+pratonton PDF `bab-3-4.html` mod 2 lajur: badge "BAHAGIAN KEEMPAT" +
+tajuk "4️⃣ Bermulanya Perang Dunia Kedua di Asia Pasifik" muncul
+BERSENDIRIAN di penghujung lajur kanan (ruang kosong di bawahnya,
+tiada kandungan langsung), & kandungan sebenar ("Perang Dunia Kedua
+di Asia Pasifik bermula apabila Jepun menyerang...") muncul di muka
+surat SETERUSNYA TANPA tajuk berulang. Corak sama utk "BAHAGIAN
+KELIMA" / "5️⃣ Garisan Masa..." (tajuk di penghujung lajur kiri,
+kandungan timeline bermula di ATAS lajur kanan). Arahan pengguna:
+"tajuk jangan dibiarkan terpisah tanpa apa apa kandungan, dan
+kandungan tidak patut bermula di muka baru tanpa tajuknya."
+
+Punca: `_collectPdfBlockRanges()` SUDAH ada mekanisme "gam" tajuk
+seksyen dgn blok kandungan PERTAMA (`.zp-board`/`.zp-flap`/`.zp-acc`/
+`.zp-tl` selepas tajuk dlm `.zp-section-wrap` sama) jadi SATU range
+dilindungi — TAPI dihadkan `mergedDocH <= 560` (unit dok, sblm skala).
+Bila blok kandungan pertama BESAR (cth. `.zp-tl` garis masa 12 kad,
+atau `.zp-board` panjang), gabungan lebih drpd 560 → gam DILANGKAU,
+tajuk didaftar sbg range TERASING kecilnya sendiri (~40-60px). Tajuk
+kecil ni jarang kena `_findBisectedBlock` (titik pisah "ideal" jarang
+jatuh TEPAT di dlm range sekecil tu), tapi JURANG selepas tajuk
+(margin, sebelum range kandungan besar yg kini berasingan bermula)
+nampak "ruang putih selamat" pd pengesan splitter — splitter gembira
+potong situ, punca tajuk yatim.
+
+Fix (`_collectPdfBlockRanges()`): buang had `mergedDocH <= 560` —
+SENTIASA gam tajuk dgn blok kandungan pertama jadi SATU range, tak
+kira besar mana blok tu. Kalau gabungan (tajuk+blok besar) SENDIRI
+tak muat 1 muka surat/lajur, mekanisme SEDIA ADA "tolak SELURUH blok"
+(`_findBisectedBlock` dlm `_pickPdfSplitY`, rujuk §"Bug kotak
+terpotong" atas) tangani spt biasa: cubaan PERTAMA tolak SELURUH
+gabungan ke muka surat/lajur seterusnya (terima jurang kosong lebih
+besar drpd tajuk kecil sahaja); kalau MASIH tak muat pd cubaan kedua
+(gabungan lebih tinggi drpd SATU muka surat/lajur penuh), fallback
+sedia ada buat pisahan PAKSA di DALAM kandungan (bukan pd tajuk, sbb
+tajuk kekal kecil & sentiasa di awal range gabungan) — mekanisme SAMA
+yg dah disahkan selamat merentas 27+ halaman utk kad komposit besar,
+digunakan semula tanpa ubah, cuma daftar range lebih besar drpd
+sebelum ni. Tiada logik baharu ditambah.
+
+Disahkan via Playwright: (1) suntik panggilan balik sementara
+`window.__pdfDebugCapture(blockRanges, splitPts)` selepas
+`splitPts.push(canvas.height)` (SAMA teknik drpd §"Bug kotak
+terpotong" atas — DIBUANG lepas ujian, JANGAN kekal dlm kod
+produksi), semak SIFAR `splitPts[i]` jatuh di dalam mana-mana
+`blockRanges` merentas **65 halaman subtopik** (semua Bab 1–10,
+termasuk 20 halaman skop 2-lajur Bab 1–3 & sampel 1-lajur Bab 4–10)
+— sifar bisections, sifar ralat JS pd SEMUA halaman; (2) pratonton
+visual (`bab-3-4.html`, kes asal pengguna): "BAHAGIAN KEEMPAT" kini
+berpindah SEPENUHNYA (badge+tajuk+papan) ke muka surat 3 bersama
+kandungannya, muka surat 2 berakhir kemas selepas kad "KEMUNCAK
+KETEGANGAN" (tanpa jurang janggal); "BAHAGIAN KELIMA" turut berpindah
+bersama KEDUA-DUA kad garis masa (12 kad "Garisan Masa Serangan
+Jepun" + kad "Info Penting: Masa Tokyo") ke lajur kanan muka surat 3,
+tiada tajuk atau kandungan yatim lagi.
+
 ## Eksport PDF — Chip blok PD1/PD2 (`.bloc-chip-*`) pendua & tiada warna
 
 Pengguna lapor (tangkapan skrin pratonton PDF `bab-3-3.html`, kad

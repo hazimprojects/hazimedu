@@ -4925,14 +4925,36 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
           (first.classList.contains('zp-board') || first.classList.contains('zp-flap') || first.classList.contains('zp-acc') || first.classList.contains('zp-tl'));
         var mergedFirst = false;
         if (sectionEl && glueFirst) {
+          // SENTIASA gam tajuk "Bahagian N" dgn blok kandungan PERTAMA jadi
+          // SATU range (dulu ada had `mergedDocH <= 560` — kalau blok
+          // pertama besar [cth. .zp-tl garis masa 12 kad], gam DILANGKAU,
+          // tajuk didaftar sbg range TERASING kecilnya sendiri). Bug
+          // "tajuk yatim": tajuk kecil ni jarang kena _findBisectedBlock
+          // (titik pisah "ideal" jarang jatuh tepat di dlmnya, sbb kecil),
+          // tapi JURANG selepas tajuk (margin, sebelum range kandungan
+          // besar yg berasingan bermula) nampak "ruang putih selamat" pd
+          // pengesan splitter — splitter gembira potong situ, tajuk
+          // "Bahagian N" tertinggal SENDIRIAN di penghujung lajur/muka
+          // surat, kandungannya bermula di lajur/muka surat SETERUSNYA
+          // tanpa tajuk. Disahkan pengguna (tangkapan skrin bab-3-4.html
+          // mod 2 lajur): "4️⃣ Bermulanya Perang Dunia Kedua..." &
+          // "5️⃣ Garisan Masa..." kedua-duanya tertinggal begitu.
+          //
+          // Fix: buang had saiz — SENTIASA gam, tak kira besar mana blok
+          // pertama. Kalau gabungan tajuk+blok besar tu SENDIRI tak muat
+          // 1 muka surat/lajur, `_findBisectedBlock` (rujuk _pickPdfSplitY,
+          // §"Bug kotak terpotong" CLAUDE.md) SUDAH sedia tolak SELURUH
+          // range ke muka surat/lajur seterusnya bila mula-mula ditemui,
+          // & bila range tu MASIH tak muat pd cubaan kedua (range.top
+          // dah jadi prevY semasa), fallback sedia ada dgn selamat buat
+          // pisahan PAKSA di DALAM kandungan (bukan pd tajuk, sbb tajuk
+          // kecil & sentiasa berada di awal range) — mekanisme SAMA yg
+          // dah disahkan selamat merentas 27 halaman utk kad komposit
+          // besar, digunakan semula di sini tanpa ubah, cuma daftar
+          // range gabungan lebih besar drpd sebelum ni.
           var merged = mergePair(rectRange(sectionEl), rectRange(first));
-          var mergedDocH = (merged.bottom - merged.top) / scale;
-          if (mergedDocH <= 560) {
-            pushRange(merged.top, merged.bottom);
-            mergedFirst = true;
-          } else {
-            pushRange(rectRange(sectionEl).top, rectRange(sectionEl).bottom);
-          }
+          pushRange(merged.top, merged.bottom);
+          mergedFirst = true;
         } else if (sectionEl) {
           var secRg = rectRange(sectionEl);
           pushRange(secRg.top, secRg.bottom);
@@ -7215,7 +7237,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=562').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=563').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
