@@ -1,0 +1,216 @@
+{
+  "id": "7-3",
+  "title": "Sistem Ahli",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Bilakah Sistem Ahli mula dilaksanakan?",
+      "options": [
+        "April 1951",
+        "Januari 1949",
+        "Julai 1955",
+        "1954"
+      ],
+      "answer": "April 1951",
+      "explanation": "Sistem Ahli dilaksanakan bermula April 1951 sehingga Jun 1955.",
+      "tip": "April 1951 = mula Sistem Ahli."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah Pesuruhjaya Tinggi British yang mengumumkan senarai anggota Sistem Ahli pada 1951?",
+      "options": [
+        "Sir Henry Gurney",
+        "Sir Edward Gent",
+        "Sir Gerald Templer",
+        "Malcolm MacDonald"
+      ],
+      "answer": "Sir Henry Gurney",
+      "explanation": "Sir Henry Gurney, Pesuruhjaya Tinggi British, mengumumkan senarai anggota Sistem Ahli pada 1951.",
+      "tip": "Gurney = umum Sistem Ahli 1951."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Berapakah portfolio yang kekal di bawah pentadbiran British dalam Sistem Ahli?",
+      "options": [
+        "Tiga",
+        "Dua",
+        "Lima",
+        "Tujuh"
+      ],
+      "answer": "Tiga",
+      "explanation": "Tiga portfolio kekal di bawah pentadbiran British: Hal Ehwal Ekonomi, Perindustrian dan Perhubungan Sosial, serta Perumahan dan Kerja Raya.",
+      "tip": "Tiga portfolio kekal di bawah British."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah yang dilantik sebagai Ahli Pelajaran dalam Sistem Ahli?",
+      "options": [
+        "E.E.C. Thuraisingham",
+        "Dato' Onn Jaafar",
+        "Lee Tiang Keng",
+        "Dato' Mahmud Mat"
+      ],
+      "answer": "E.E.C. Thuraisingham",
+      "explanation": "E.E.C. Thuraisingham dilantik sebagai Ahli Pelajaran dalam Sistem Ahli.",
+      "tip": "Thuraisingham = Ahli Pelajaran."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah Sistem Ahli dibentuk pada 1951?",
+      "options": [
+        "Kerana kekurangan pegawai tempatan dalam perkhidmatan kerajaan mendorong Dato' Onn Jaafar meminta lebih peluang pentadbiran diberikan kepada wakil tempatan",
+        "Kerana Majlis Perundangan Persekutuan (MPP) menuntut penubuhan sistem baharu selepas pilihan raya 1955",
+        "Kerana Jawatankuasa Hubungan Antara Kaum (CLC) menuntut penubuhan sistem ini secara rasmi",
+        "Kerana pilihan raya MPP Julai 1955 memerlukan calon berpengalaman mentadbir"
+      ],
+      "answer": "Kerana kekurangan pegawai tempatan dalam perkhidmatan kerajaan mendorong Dato' Onn Jaafar meminta lebih peluang pentadbiran diberikan kepada wakil tempatan",
+      "explanation": "Kekurangan pegawai tempatan dalam perkhidmatan kerajaan mendorong Dato' Onn Jaafar meminta lebih banyak peluang pentadbiran diberikan kepada wakil tempatan, membawa kepada pembentukan Sistem Ahli.",
+      "tip": "Kurang pegawai tempatan → Onn Jaafar minta peluang → Sistem Ahli."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah Sistem Ahli dikatakan berbentuk \"kabinet bayangan\"?",
+      "options": [
+        "Kerana Ahli bertaraf \"Menteri\" dan bertanggungjawab menjaga portfolio jabatan/agensi kerajaan, tetapi masih diletakkan di bawah kuasa Pesuruhjaya Tinggi British",
+        "Kerana Ahli dipilih melalui pilihan raya rasmi Majlis Perundangan Persekutuan",
+        "Kerana Ahli hanya berperanan sebagai penasihat kepada Pesuruhjaya Tinggi tanpa memegang portfolio jabatan tertentu",
+        "Kerana Ahli hanya terdiri daripada pegawai British tanpa penglibatan tempatan"
+      ],
+      "answer": "Kerana Ahli bertaraf \"Menteri\" dan bertanggungjawab menjaga portfolio jabatan/agensi kerajaan, tetapi masih diletakkan di bawah kuasa Pesuruhjaya Tinggi British",
+      "explanation": "Sistem Ahli berbentuk kabinet bayangan kerana Ahli bertaraf \"Menteri\" dengan portfolio jabatan/agensi kerajaan, namun kekal di bawah kuasa Pesuruhjaya Tinggi British.",
+      "tip": "Kabinet bayangan = taraf Menteri, tapi bawah kuasa British."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah Sistem Ahli penting dalam memupuk perpaduan kaum?",
+      "options": [
+        "Kerana ahlinya terdiri daripada gabungan pemimpin pelbagai kaum yang bekerjasama mentadbir sebelum kemerdekaan",
+        "Kerana Sistem Ahli mengambil alih peranan Jawatankuasa Hubungan Antara Kaum (CLC) dalam isu perpaduan kaum",
+        "Kerana Sistem Ahli hanya melibatkan pemimpin kaum Melayu dalam pentadbirannya",
+        "Kerana Sistem Ahli menghapuskan keperluan pilihan raya bagi Majlis Perundangan Persekutuan"
+      ],
+      "answer": "Kerana ahlinya terdiri daripada gabungan pemimpin pelbagai kaum yang bekerjasama mentadbir sebelum kemerdekaan",
+      "explanation": "Sistem Ahli memupuk perpaduan kaum kerana ahlinya terdiri daripada gabungan pemimpin pelbagai kaum (Melayu, Cina dan lain-lain) yang bekerjasama mentadbir sebelum kemerdekaan.",
+      "tip": "Sistem Ahli = ahli pelbagai kaum, pupuk perpaduan."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Seorang Ahli dilantik menjaga portfolio Hal Ehwal Dalam Negeri, termasuk hal ehwal imigran, penyiaran, urusan haji dan pendaftaran kerakyatan. Siapakah beliau?",
+      "options": [
+        "Dato' Onn Jaafar",
+        "E.E.C. Thuraisingham",
+        "Dato' Nik Ahmad Kamil",
+        "Dr. Ismail Abdul Rahman"
+      ],
+      "answer": "Dato' Onn Jaafar",
+      "explanation": "Dato' Onn Jaafar menjadi Ahli Hal Ehwal Dalam Negeri, bertanggungjawab ke atas hal ehwal imigran, penyiaran, urusan haji dan pendaftaran kerakyatan, selain RIDA dan Jabatan Pilihan Raya.",
+      "tip": "Dato' Onn Jaafar = Ahli Hal Ehwal Dalam Negeri."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Pada rombakan Sistem Ahli 1954, sebuah portfolio baharu Ahli Pengangkutan diwujudkan. Siapakah yang dilantik memegang portfolio ini?",
+      "options": [
+        "H.S. Lee",
+        "Dato' Mahmud Mat",
+        "Dr. Ismail Abdul Rahman",
+        "Tunku Yaacob ibni Almarhum Sultan Abdul Hamid Halim Shah"
+      ],
+      "answer": "H.S. Lee",
+      "explanation": "Pada rombakan Sistem Ahli 1954, H.S. Lee dilantik sebagai Ahli Pengangkutan.",
+      "tip": "H.S. Lee = Ahli Pengangkutan (1954)."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sistem Ahli berlangsung daripada April 1951 sehingga sebelum pilihan raya Majlis Perundangan Persekutuan (MPP) diadakan pada Julai 1955. Bilakah tempoh Sistem Ahli tamat?",
+      "options": [
+        "Jun 1955",
+        "1954",
+        "Januari 1949",
+        "1951"
+      ],
+      "answer": "Jun 1955",
+      "explanation": "Sistem Ahli dilaksanakan daripada April 1951 hingga Jun 1955, sebelum pilihan raya MPP diadakan pada Julai 1955.",
+      "tip": "Sistem Ahli tamat Jun 1955."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perbezaan antara ciri Sistem Ahli dengan sistem pentadbiran kolonial British sebelum 1951?",
+      "options": [
+        "Sistem Ahli memberi penduduk tempatan taraf \"Menteri\" dan tanggungjawab mencadangkan undang-undang berkaitan jabatan mereka, manakala pentadbiran sebelum itu tiada penglibatan rasmi penduduk tempatan setaraf ini dalam membuat dasar",
+        "Sistem Ahli meletakkan kuasa membuat dasar di tangan Majlis Raja-Raja, bukan Pesuruhjaya Tinggi British",
+        "Sistem Ahli hanya dianggotai pegawai British, sama seperti pentadbiran sebelum 1951",
+        "Sistem Ahli memberikan kuasa penuh kepada Raja-raja Melayu tanpa penglibatan Pesuruhjaya Tinggi"
+      ],
+      "answer": "Sistem Ahli memberi penduduk tempatan taraf \"Menteri\" dan tanggungjawab mencadangkan undang-undang berkaitan jabatan mereka, manakala pentadbiran sebelum itu tiada penglibatan rasmi penduduk tempatan setaraf ini dalam membuat dasar",
+      "explanation": "Sistem Ahli memperkenalkan taraf \"Menteri\" dengan tanggungjawab mencadangkan undang-undang bagi penduduk tempatan — satu penglibatan formal dalam dasar yang tiada sebelum 1951.",
+      "tip": "Sistem Ahli = penglibatan formal tempatan (taraf Menteri)."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perkaitan antara kekurangan pegawai tempatan dalam perkhidmatan kerajaan dengan pembentukan Sistem Ahli?",
+      "options": [
+        "Kekurangan pegawai tempatan mendorong Dato' Onn Jaafar meminta lebih peluang pentadbiran, dan permintaan ini membawa kepada pembentukan Sistem Ahli sebagai langkah melatih penduduk tempatan mentadbir",
+        "Kekurangan pegawai tempatan menyebabkan British menangguhkan rancangan berkerajaan sendiri sehingga selepas kemerdekaan",
+        "Kekurangan pegawai tempatan diselesaikan melalui pengambilan pegawai British tambahan, bukan Sistem Ahli",
+        "Kekurangan pegawai tempatan tiada kaitan langsung dengan pembentukan Sistem Ahli"
+      ],
+      "answer": "Kekurangan pegawai tempatan mendorong Dato' Onn Jaafar meminta lebih peluang pentadbiran, dan permintaan ini membawa kepada pembentukan Sistem Ahli sebagai langkah melatih penduduk tempatan mentadbir",
+      "explanation": "Kekurangan pegawai tempatan mendorong Dato' Onn Jaafar meminta lebih peluang pentadbiran diberikan kepada wakil tempatan, dan cadangan ini membawa kepada pembentukan Sistem Ahli.",
+      "tip": "Kurang pegawai tempatan → cadangan Onn Jaafar → Sistem Ahli."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah PALING tepat menjelaskan kepentingan Sistem Ahli ke arah kemerdekaan Tanah Melayu?",
+      "options": [
+        "Sistem ini memberi pendedahan sebenar kepada penduduk tempatan untuk belajar mentadbir dan menerajui kerajaan sebelum merdeka, sekali gus memupuk perpaduan kaum dan memastikan kemerdekaan mendapat sokongan seluruh penduduk",
+        "Sistem ini penting kerana ia menggantikan keperluan mengadakan pilihan raya Majlis Perundangan Persekutuan pada Julai 1955",
+        "Sistem ini penting kerana ia memberikan kemerdekaan penuh kepada Tanah Melayu serta-merta pada 1951",
+        "Sistem ini penting kerana ia hanya melibatkan pegawai British dalam pentadbiran negeri"
+      ],
+      "answer": "Sistem ini memberi pendedahan sebenar kepada penduduk tempatan untuk belajar mentadbir dan menerajui kerajaan sebelum merdeka, sekali gus memupuk perpaduan kaum dan memastikan kemerdekaan mendapat sokongan seluruh penduduk",
+      "explanation": "Sistem Ahli penting kerana menyediakan asas melatih orang tempatan berkerajaan sendiri, memberi pendedahan mentadbir, memupuk perpaduan kaum dan memastikan kemerdekaan mendapat sokongan seluruh penduduk Persekutuan Tanah Melayu.",
+      "tip": "Sistem Ahli = latih tempatan + perpaduan + sokongan merdeka."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah PALING tepat merumuskan subtopik 7.3?",
+      "options": [
+        "Sistem Ahli ialah langkah latihan awal (1951–1955) yang membolehkan penduduk tempatan pelbagai kaum belajar mentadbir Persekutuan Tanah Melayu di bawah kuasa Pesuruhjaya Tinggi British, sebagai persediaan penting ke arah kemerdekaan",
+        "Sistem Ahli menandakan Persekutuan Tanah Melayu telah bebas daripada pentadbiran British sejak 1951",
+        "Sistem Ahli hanya melibatkan portfolio ekonomi tanpa melibatkan portfolio lain",
+        "Sistem Ahli ditubuhkan selepas Persekutuan Tanah Melayu mencapai kemerdekaan"
+      ],
+      "answer": "Sistem Ahli ialah langkah latihan awal (1951–1955) yang membolehkan penduduk tempatan pelbagai kaum belajar mentadbir Persekutuan Tanah Melayu di bawah kuasa Pesuruhjaya Tinggi British, sebagai persediaan penting ke arah kemerdekaan",
+      "explanation": "Rumusan menggabungkan tempoh (1951–1955), fungsi (latihan mentadbir bagi penduduk tempatan pelbagai kaum) dan kedudukan (di bawah Pesuruhjaya Tinggi British) Sistem Ahli sebagai persediaan ke arah kemerdekaan.",
+      "tip": "1951-1955: latih tempatan mentadbir → persediaan merdeka."
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "id": "7-4",
+  "title": "Sistem Pendidikan Kebangsaan",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah pengerusi Jawatankuasa Pelajaran Melayu yang menghasilkan Laporan Barnes 1951?",
+      "options": [
+        "L.J. Barnes",
+        "Dr. William P. Fenn",
+        "Dr. Wu Teh Yao",
+        "E.W. Woodhead"
+      ],
+      "answer": "L.J. Barnes",
+      "explanation": "Jawatankuasa Pelajaran Melayu yang menghasilkan Laporan Barnes 1951 dipengerusikan oleh L.J. Barnes.",
+      "tip": "L.J. Barnes = Laporan Barnes."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah nama lain bagi Penyata Jawatankuasa Pelajaran 1956?",
+      "options": [
+        "Penyata Razak",
+        "Laporan Barnes",
+        "Laporan Fenn-Wu",
+        "Laporan Woodhead"
+      ],
+      "answer": "Penyata Razak",
+      "explanation": "Penyata Jawatankuasa Pelajaran 1956, dipengerusikan Dato' Abdul Razak Hussein, turut dikenali sebagai Penyata Razak.",
+      "tip": "Penyata Jawatankuasa Pelajaran 1956 = Penyata Razak."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah Menteri Pelajaran yang mempengerusikan Jawatankuasa Pelajaran 1956?",
+      "options": [
+        "Dato' Abdul Razak Hussein",
+        "L.J. Barnes",
+        "E.W. Woodhead",
+        "Dr. William P. Fenn"
+      ],
+      "answer": "Dato' Abdul Razak Hussein",
+      "explanation": "Jawatankuasa Pelajaran 1956 dipengerusikan oleh Dato' Abdul Razak Hussein selaku Menteri Pelajaran.",
+      "tip": "Dato' Abdul Razak Hussein = Menteri Pelajaran, 1956."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah yang diundang meninjau perkembangan pendidikan di Sarawak dan Sabah pada 1955?",
+      "options": [
+        "E.W. Woodhead",
+        "L.J. Barnes",
+        "Dr. Wu Teh Yao",
+        "Dato' Abdul Razak Hussein"
+      ],
+      "answer": "E.W. Woodhead",
+      "explanation": "E.W. Woodhead, Ketua Pegawai Pelajaran dari Britain, diundang meninjau perkembangan pendidikan di Sarawak dan Sabah pada 1955.",
+      "tip": "Woodhead = tinjau pendidikan Sarawak/Sabah."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah Laporan Fenn-Wu 1951 diterbitkan?",
+      "options": [
+        "Kerana bantahan masyarakat Cina terhadap Laporan Barnes 1951",
+        "Kerana Jawatankuasa Penasihat Pusat Pelajaran menolak Ordinan Pelajaran 1952",
+        "Kerana Ordinan Pelajaran 1952 mewajibkan penutupan sekolah vernakular Cina",
+        "Kerana masyarakat India menuntut laporan berasingan tentang pendidikan Tamil"
+      ],
+      "answer": "Kerana bantahan masyarakat Cina terhadap Laporan Barnes 1951",
+      "explanation": "Laporan Fenn-Wu 1951 diterbitkan akibat bantahan masyarakat Cina terhadap Laporan Barnes, bertujuan mengkaji pendidikan Cina dan mencadangkan penambahbaikan sekolah Cina.",
+      "tip": "Fenn-Wu = respons kpd bantahan Laporan Barnes."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah sistem persekolahan berasingan mengikut kaum semasa pentadbiran British menyukarkan pembentukan perpaduan?",
+      "options": [
+        "Kerana bahasa pengantar dan kurikulum yang berbeza mewujudkan jurang ekonomi dan sosial serta tiada satu identiti bangsa yang sama",
+        "Kerana kerajaan British melarang sekolah vernakular menerima murid daripada kaum lain",
+        "Kerana kesemua sekolah vernakular ditutup selepas Perang Dunia Kedua",
+        "Kerana hanya sekolah Inggeris dibenarkan beroperasi di Tanah Melayu"
+      ],
+      "answer": "Kerana bahasa pengantar dan kurikulum yang berbeza mewujudkan jurang ekonomi dan sosial serta tiada satu identiti bangsa yang sama",
+      "explanation": "Perbezaan bahasa pengantar dan kurikulum antara sekolah vernakular Melayu, Cina, Tamil dan Inggeris menyebabkan jurang ekonomi dan sosial serta kesukaran membentuk satu identiti bangsa.",
+      "tip": "Sekolah berasingan = jurang sosioekonomi, tiada identiti sama."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah Ordinan Pelajaran 1952 masih tidak memenuhi aspirasi semua kaum?",
+      "options": [
+        "Kerana ordinan ini mendapat tentangan daripada semua kaum walaupun cuba menyatukan murid pelbagai kaum dalam satu sistem berorientasikan Tanah Melayu",
+        "Kerana ordinan ini hanya menyediakan peruntukan untuk sekolah menengah, tanpa merangkumi sekolah rendah",
+        "Kerana ordinan ini hanya dikuatkuasakan di Sarawak dan Sabah, bukan Tanah Melayu",
+        "Kerana ordinan ini digubal tanpa merujuk Laporan Barnes atau Laporan Fenn-Wu langsung"
+      ],
+      "answer": "Kerana ordinan ini mendapat tentangan daripada semua kaum walaupun cuba menyatukan murid pelbagai kaum dalam satu sistem berorientasikan Tanah Melayu",
+      "explanation": "Walaupun Ordinan Pelajaran 1952 menjadi undang-undang pertama membentuk sistem persekolahan rendah berteraskan bahasa Inggeris dan Melayu, ia masih mendapat tentangan daripada semua kaum.",
+      "tip": "Ordinan 1952 = ditentang semua kaum walau cuba satukan."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sebuah laporan mencadangkan sekolah Cina diteruskan secara berasingan di bawah sistem kebangsaan, tetapi pendidikannya mesti berorientasikan Tanah Melayu. Apakah nama laporan ini?",
+      "options": [
+        "Laporan Fenn-Wu 1951",
+        "Laporan Barnes 1951",
+        "Laporan Woodhead 1955",
+        "Ordinan Pelajaran 1952"
+      ],
+      "answer": "Laporan Fenn-Wu 1951",
+      "explanation": "Laporan Fenn-Wu 1951 mencadangkan sekolah Cina diteruskan secara berasingan di bawah sistem kebangsaan, dengan pendidikan yang berorientasikan Tanah Melayu.",
+      "tip": "Fenn-Wu = sekolah Cina kekal, tapi orientasi Tanah Melayu."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sebuah ordinan menetapkan dua jenis sekolah rendah (bahasa Melayu & bahasa Inggeris), dengan bahasa Cina dan Tamil diajar sebagai bahasa ketiga jika terdapat 15 orang murid dalam kumpulan yang sama. Apakah nama ordinan ini?",
+      "options": [
+        "Ordinan Pelajaran 1952",
+        "Ordinan Pelajaran Koloni 1956",
+        "Laporan Barnes 1951",
+        "Penyata Jawatankuasa Pelajaran 1956"
+      ],
+      "answer": "Ordinan Pelajaran 1952",
+      "explanation": "Ordinan Pelajaran 1952 menetapkan dua jenis sekolah rendah (bahasa Melayu, bahasa Inggeris), dengan bahasa Cina dan Tamil diajar sebagai bahasa ketiga jika terdapat 15 orang murid.",
+      "tip": "Ordinan 1952 = 2 jenis sekolah rendah + syarat 15 murid."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sebuah ordinan diperkenalkan pada 1956 untuk meneruskan rancangan Woodhead menyeragamkan kurikulum dan peperiksaan peringkat rendah dan menengah di Sabah. Apakah nama ordinan ini?",
+      "options": [
+        "Ordinan Pelajaran Koloni 1956",
+        "Ordinan Pelajaran 1952",
+        "Laporan Fenn-Wu 1951",
+        "Penyata Jawatankuasa Pelajaran 1956"
+      ],
+      "answer": "Ordinan Pelajaran Koloni 1956",
+      "explanation": "Ordinan Pelajaran Koloni 1956 diperkenalkan untuk meneruskan rancangan Woodhead, menyeragamkan kurikulum dan peperiksaan meliputi peringkat rendah dan menengah di Sabah.",
+      "tip": "Ordinan Pelajaran Koloni 1956 = teruskan rancangan Woodhead (Sabah)."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perbezaan antara cadangan Laporan Barnes 1951 dengan cadangan Laporan Fenn-Wu 1951?",
+      "options": [
+        "Laporan Barnes menekankan bahasa Melayu/Inggeris sebagai bahasa pengantar sekolah rendah untuk bina satu rupa bangsa, manakala Laporan Fenn-Wu menyokong sekolah Cina diteruskan berasingan tetapi berorientasikan Tanah Melayu",
+        "Laporan Barnes menyokong sekolah Cina diteruskan berasingan, manakala Laporan Fenn-Wu menekankan bahasa Melayu/Inggeris sebagai bahasa pengantar",
+        "Kedua-dua laporan ini dihasilkan oleh jawatankuasa yang sama pada tarikh yang sama",
+        "Laporan Barnes hanya membincangkan pendidikan di Sarawak, manakala Laporan Fenn-Wu membincangkan pendidikan di Tanah Melayu"
+      ],
+      "answer": "Laporan Barnes menekankan bahasa Melayu/Inggeris sebagai bahasa pengantar sekolah rendah untuk bina satu rupa bangsa, manakala Laporan Fenn-Wu menyokong sekolah Cina diteruskan berasingan tetapi berorientasikan Tanah Melayu",
+      "explanation": "Laporan Barnes menekankan bahasa Melayu atau Inggeris sebagai bahasa pengantar sekolah rendah bagi membina satu rupa bangsa, manakala Laporan Fenn-Wu (respons bantahan Cina) menyokong sekolah Cina diteruskan secara berasingan tetapi berorientasikan Tanah Melayu.",
+      "tip": "Barnes = bahasa Melayu/Inggeris. Fenn-Wu = sekolah Cina kekal."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah persamaan antara Ordinan Pelajaran 1952 dengan Penyata Razak 1956 dari segi matlamat?",
+      "options": [
+        "Kedua-duanya bertujuan membentuk satu sistem pendidikan yang menyatukan murid pelbagai kaum dan memupuk perpaduan menggunakan bahasa kebangsaan/rasmi, walaupun struktur cadangan berbeza",
+        "Kedua-duanya bertujuan menghapuskan sekolah vernakular Cina dan Tamil serta-merta",
+        "Kedua-duanya hanya memberi tumpuan kepada pendidikan di Sarawak dan Sabah",
+        "Kedua-duanya digubal sebelum Laporan Barnes dan Laporan Fenn-Wu diterbitkan"
+      ],
+      "answer": "Kedua-duanya bertujuan membentuk satu sistem pendidikan yang menyatukan murid pelbagai kaum dan memupuk perpaduan menggunakan bahasa kebangsaan/rasmi, walaupun struktur cadangan berbeza",
+      "explanation": "Ordinan Pelajaran 1952 dan Penyata Razak 1956 kedua-duanya bertujuan menyatukan murid pelbagai kaum dalam satu sistem berteraskan bahasa kebangsaan/rasmi untuk memupuk perpaduan, walaupun struktur jenis sekolah yang dicadangkan berbeza.",
+      "tip": "Ordinan 1952 & Penyata Razak = satukan murid, bahasa kebangsaan."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah PALING tepat menjelaskan mengapa Penyata Razak 1956 dianggap asas utama pembentukan sistem pendidikan kebangsaan berbanding laporan/ordinan terdahulu?",
+      "options": [
+        "Kerana Penyata Razak menggariskan teras menyeluruh (sistem persekolahan sama semua bangsa, bahasa kebangsaan sebagai bahasa pengantar utama, kurikulum seragam) berbanding laporan/ordinan terdahulu yang lebih tertumpu kepada isu bahasa pengantar sekolah rendah sahaja",
+        "Kerana Penyata Razak ialah laporan pertama yang membincangkan pendidikan di Tanah Melayu",
+        "Kerana Penyata Razak digubal oleh pegawai British, tidak seperti laporan terdahulu",
+        "Kerana Penyata Razak hanya menyentuh pendidikan di Sarawak dan Sabah, bukan Tanah Melayu"
+      ],
+      "answer": "Kerana Penyata Razak menggariskan teras menyeluruh (sistem persekolahan sama semua bangsa, bahasa kebangsaan sebagai bahasa pengantar utama, kurikulum seragam) berbanding laporan/ordinan terdahulu yang lebih tertumpu kepada isu bahasa pengantar sekolah rendah sahaja",
+      "explanation": "Penyata Razak menggariskan teras menyeluruh sistem pendidikan kebangsaan (sistem sama semua bangsa, bahasa kebangsaan sebagai pengantar utama, kurikulum seragam), lebih menyeluruh daripada laporan/ordinan terdahulu.",
+      "tip": "Penyata Razak = teras MENYELURUH sistem pendidikan kebangsaan."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah PALING tepat merumuskan subtopik 7.4?",
+      "options": [
+        "Sistem persekolahan berasingan mengikut kaum semasa British mewujudkan jurang sosioekonomi, mendorong siri laporan dan ordinan (Barnes, Fenn-Wu, Ordinan 1952, Woodhead, Penyata Razak) yang akhirnya membentuk sistem pendidikan kebangsaan bagi memupuk perpaduan dan identiti negara",
+        "Sistem pendidikan kebangsaan diperkenalkan serentak dengan penubuhan Jawatankuasa Hubungan Antara Kaum pada 1949",
+        "Penyata Razak 1956 ialah laporan pertama dan terakhir yang membincangkan pendidikan di negara kita",
+        "Sistem persekolahan berasingan mengikut kaum tidak memberi sebarang kesan kepada perpaduan negara"
+      ],
+      "answer": "Sistem persekolahan berasingan mengikut kaum semasa British mewujudkan jurang sosioekonomi, mendorong siri laporan dan ordinan (Barnes, Fenn-Wu, Ordinan 1952, Woodhead, Penyata Razak) yang akhirnya membentuk sistem pendidikan kebangsaan bagi memupuk perpaduan dan identiti negara",
+      "explanation": "Rumusan menggabungkan latar belakang (sistem berasingan mengikut kaum), usaha (siri laporan dan ordinan) dan kesan (sistem pendidikan kebangsaan yang memupuk perpaduan dan identiti negara).",
+      "tip": "Sekolah berasingan → siri laporan/ordinan → sistem kebangsaan."
+    }
+  ]
+}
