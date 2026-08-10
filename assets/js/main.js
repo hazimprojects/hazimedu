@@ -2314,6 +2314,7 @@ var HZ_ICONS8_SPARKLE = {
   trophy:        'https://img.icons8.com/?size=96&id=94bZrF6ZIaXP&format=png',
   memo:          'https://img.icons8.com/?size=96&id=zIKcpVIKdvP1&format=png',
   wastebasket:   HZ_ICONS8_3D + 'trash.png',
+  pdfDownload:   'https://img.icons8.com/?size=100&id=d2H6kHCiPSIg&format=png&color=000000',
 
 };
 function hzIcons8SparkleImg(url, extraClass, w, h) {
@@ -2482,6 +2483,22 @@ function hzLabQuizSparklePair() {
       itemsContainer.appendChild(
         makeSparkleItemFluent(labQuizSparklePair, 'Kuiz', 'lab', labHref)
       );
+    }
+
+    // Item muat turun PDF — hanya pd halaman subtopik nota (ciri PDF wujud
+    // via widget "Apa pendapat anda tentang nota ini?" di bawah halaman).
+    // Dibuat terus di sini (bukan router delegasi) sbb kita cuma "klik-kan"
+    // butang tersembunyi sedia ada (`.nota-feedback-pdf-btn`), bukan navigasi.
+    if (hzZymnotesIsSubtopicNotePathname(_p)) {
+      (function () {
+        var pdfEl = makeSparkleItemFluent(HZ_ICONS8_SPARKLE.pdfDownload, 'Muat turun PDF', 'pdf');
+        pdfEl.addEventListener('click', function () {
+          wrap.classList.remove('is-open');
+          var realPdfBtn = document.querySelector('.nota-feedback-pdf-btn');
+          if (realPdfBtn) realPdfBtn.click();
+        });
+        itemsContainer.appendChild(pdfEl);
+      })();
     }
 
     // Item tetapan — dibuat terus di sini supaya timing betul
@@ -7487,7 +7504,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=567').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=568').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
