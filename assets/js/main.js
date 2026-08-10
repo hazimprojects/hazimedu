@@ -4140,7 +4140,12 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     'Office worker': '/assets/openmoji/office-worker.svg',
     'Palms up together': '/assets/openmoji/palms-up-together.svg',
     'Passport control': '/assets/openmoji/passport-control.svg',
-    'Red paper lantern': '/assets/openmoji/red-paper-lantern.svg'
+    'Red paper lantern': '/assets/openmoji/red-paper-lantern.svg',
+    // Bab 8 — +1 konsep baharu (311 kesemuanya) drpd 63 konsep unik
+    // digunakan merentas notes/bab-8*.html; 62/63 SUDAH sedia ada drpd
+    // liputan Bab 1-7, 1 baki ni khusus baharu utk Bab 8. Padan TERUS
+    // ke annotation OpenMoji — tiada kes edge.
+    'Hammer': '/assets/openmoji/hammer.svg'
   };
 
   function _pdfEmojiSrc(originalSrc) {
@@ -4856,11 +4861,11 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   var PDF_2COL_COL_WIDTH_PX = Math.round(PDF_2COL_COL_WIDTH_MM * PDF_BASE_DENSITY);
 
   function _pdfIsTwoColumnScope() {
-    // Diluaskan drpd Bab 1-6 asal ke +Bab 7 — WAJIB lengkapkan liputan
-    // HZ_PDF_OPENMOJI_MAP 100% konsep unik Bab 7 dulu (rujuk komen di
+    // Diluaskan drpd Bab 1-7 asal ke +Bab 8 — WAJIB lengkapkan liputan
+    // HZ_PDF_OPENMOJI_MAP 100% konsep unik Bab 8 dulu (rujuk komen di
     // atas takrifan map, disahkan 0 konsep hilang sebelum baris ni diubah)
-    // supaya PDF Bab 7 tak papar campuran gaya OpenMoji + Fluent.
-    return /\/notes\/bab-[1234567](-\d+)?\.html$/i.test(window.location.pathname);
+    // supaya PDF Bab 8 tak papar campuran gaya OpenMoji + Fluent.
+    return /\/notes\/bab-[12345678](-\d+)?\.html$/i.test(window.location.pathname);
   }
 
   // Bab 4 (Malayan Union/Persekutuan) ada gelaran raja/sultan kw-tokoh
