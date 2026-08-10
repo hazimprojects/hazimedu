@@ -1506,6 +1506,54 @@ merentas kesemua 4 subtopik (`bab-6-1` s/d `bab-6-4`): sifar ikon
 gagal, sifar `.zpkw-tokoh`/`.zpkw-tempat` overflow, sifar ralat JS,
 penjanaan PDF penuh berjaya 3-6 muka surat setiap subtopik.
 
+**Diluaskan ke Bab 7** — `_pdfIsTwoColumnScope()` skop kini `bab-[1234567]`
+(WAJIB liputan `HZ_PDF_OPENMOJI_MAP` 100% konsep unik Bab 7 dulu, +10
+konsep baharu drpd 96 unik digunakan, 310 kesemuanya — 86/96 SUDAH
+sedia ada drpd liputan Bab 1-6, tiada kes edge annotation OpenMoji
+kali ni).
+
+**Kes disiasat tapi TERNYATA BUKAN bug — `.mini-chip-list`/`.mini-chip`
+(`bab-7-4.html`, SATU-SATUNYA kejadian korpus, "sekolah yang
+menggunakan bahasa Melayu"/"...bahasa Inggeris").** Imbasan awal kelas
+komponen baharu (rutin sama drpd penemuan `.paper-bar-list`/`.paper-
+donut-wrap` Bab 6) nampak macam corak sama — TIADA CSS `.mini-chip`/
+`.mini-chip-list` langsung (disahkan `getComputedStyle`), TIADA cabang
+eksplisit dlm `_bodyHtmlNode()` — cukup utk mencetuskan andaian awal
+"akan jatuh ke fallback generik `_bodyHtml`, teks hilang senyap sama
+kelas bug drpd `.paper-bar-list`". **Andaian ni SILAP** — fix awal
+(cabang baharu render setiap `.mini-chip` sbg `<p class="zp-p">`
+berasingan) DITULIS & DIUJI, tapi ujian Playwright (pintas
+`html2canvas`, cari teks tepat "sekolah yang menggunakan" dlm HTML
+cetak) pulangkan SIFAR — nampak macam mengesahkan andaian awal.
+Siasatan lanjut (cari teks STRONG heading terdekat "dua jenis sekolah
+rendah" sbg titik rujuk, baca 500 aksara SELEPASNYA) dedah teks
+SEBENARNYA ADA, cuma terpisah drpd carian `indexOf` string-tepat sbb
+`<span class="zpkw zpkw-istilah">` membelah rentetan "...menggunakan
+bahasa Melayu" pd sempadan tag.
+
+**Punca ketepatan (BUKAN bug)**: `.mini-chip-list` di korpus ni
+SENTIASA tersarang dlm SATU `.paper-chip` (bukan child terus
+`.cv-unit-body`), jadi laluan render SEBENAR ialah `_kwHtml(chipEl)`
+(dipanggil drpd cabang standalone `.paper-chip-list`, BUKAN
+`_bodyHtmlNode`/`_bodyHtml`) — DUA fungsi rekursi BERBEZA drpd apa
+dianggap. `_kwHtml`/`_kwHtmlOne` (laluan SEBENAR) proses NOD TEKS
+terus (`nodeType===3 → _escPdfHtml`), BEZA drpd `_bodyHtml` (skip nod
+bukan-elemen) — jadi teks kekal walau tiada cabang kelas eksplisit.
+Fix awal (cabang `mini-chip-list` dlm `_bodyHtmlNode`) DIBUANG balik
+selepas disahkan — kod mati/tak boleh dicapai (laluan sebenar tak
+pernah singgah `_bodyHtmlNode` utk elemen ni), mengekalkannya
+melanggar disiplin minimalis codebase ni ("jangan tambah kod
+spekulatif utk kes tak wujud"). **Pengajaran utk audit komponen akan
+datang**: sahkan laluan RENDER SEBENAR (`_kwHtml` vs `_bodyHtmlNode`)
+dulu — bukan sekadar "tiada cabang eksplisit + tiada CSS" — sebelum
+tulis fix; carian `indexOf` teks-tepat dlm ujian boleh beri
+POSITIF-PALSU bila kandungan span kata kunci membelah rentetan carian.
+
+Disahkan via Playwright merentas kesemua 5 subtopik (`bab-7-1` s/d
+`bab-7-5`): sifar ikon gagal, sifar `.zpkw-tokoh`/`.zpkw-tempat`
+overflow, sifar ralat JS, penjanaan PDF penuh berjaya 3-5 muka surat
+setiap subtopik.
+
 ## Eksport PDF — Chip blok PD1/PD2 (`.bloc-chip-*`) pendua & tiada warna
 
 Pengguna lapor (tangkapan skrin pratonton PDF `bab-3-3.html`, kad
