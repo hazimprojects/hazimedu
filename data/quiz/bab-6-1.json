@@ -1,0 +1,216 @@
+{
+  "id": "6-1",
+  "title": "Kemasukan Pengaruh Komunis di Negara Kita",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah pengasas ideologi komunisme melalui karya Communist Manifesto dan Das Kapital?",
+      "options": [
+        "Karl Marx dan Friedrich Engels",
+        "Vladimir Lenin dan Joseph Stalin",
+        "Mao Zedong dan Chin Peng",
+        "Tan Malaka dan Alimin"
+      ],
+      "answer": "Karl Marx dan Friedrich Engels",
+      "explanation": "Komunisme ialah ideologi yang diasaskan oleh Karl Marx dan Friedrich Engels melalui karya Communist Manifesto dan Das Kapital.",
+      "tip": "Marx + Engels = pengasas komunisme."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Bilakah Parti Komunis Malaya (PKM) ditubuhkan?",
+      "options": [
+        "30 April 1930",
+        "25 Julai 1946",
+        "16 Jun 1948",
+        "1 Disember 1945"
+      ],
+      "answer": "30 April 1930",
+      "explanation": "PKM ditubuhkan pada 30 April 1930 di Kuala Pilah, Negeri Sembilan, selepas Parti Komunis Nanyang (PKN) gagal mencapai matlamatnya.",
+      "tip": "30 April 1930 = tarikh PKM ditubuhkan."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Di manakah Parti Komunis Malaya (PKM) ditubuhkan?",
+      "options": [
+        "Kuala Pilah, Negeri Sembilan",
+        "Sungai Siput, Perak",
+        "Muar, Johor",
+        "Kuala Lumpur"
+      ],
+      "answer": "Kuala Pilah, Negeri Sembilan",
+      "explanation": "PKM ditubuhkan di Kuala Pilah, Negeri Sembilan, pada 30 April 1930.",
+      "tip": "PKM ditubuhkan di Kuala Pilah."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah nama pasukan yang ditubuhkan oleh PKM pada tahun 1942 untuk menentang Jepun?",
+      "options": [
+        "Malayan People's Anti-Japanese Army (MPAJA)",
+        "Parti Komunis Nanyang (PKN)",
+        "Pan-Malayan Federation of Trade Unions (PMFTU)",
+        "Cawangan Khas (Special Branch)"
+      ],
+      "answer": "Malayan People's Anti-Japanese Army (MPAJA)",
+      "explanation": "Pada 1942, PKM menubuhkan Malayan People's Anti-Japanese Army (MPAJA), yang turut dikenali sebagai Bintang Tiga, untuk bekerjasama dengan British menentang Jepun.",
+      "tip": "1942 = MPAJA (Bintang Tiga)."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah Communist International (Comintern) menubuhkan Parti Komunis Malaya (PKM) selepas menubuhkan Parti Komunis Nanyang (PKN)?",
+      "options": [
+        "Kerana Parti Komunis Nanyang (PKN) gagal mencapai matlamatnya",
+        "Kerana Parti Kuomintang (KMT) enggan bekerjasama dengan Comintern lagi",
+        "Kerana Partai Komunis Indonesia (PKI) berjaya menguasai Pulau Jawa",
+        "Kerana British mengharamkan Parti Komunis Nanyang secara rasmi"
+      ],
+      "answer": "Kerana Parti Komunis Nanyang (PKN) gagal mencapai matlamatnya",
+      "explanation": "Comintern yang berpusat di Moscow mengarahkan penubuhan PKN pada 1928, namun PKN gagal mencapai matlamatnya, menyebabkan Comintern menubuhkan PKM sebagai gantinya.",
+      "tip": "PKN gagal → Comintern tubuh PKM."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah Partai Komunis Indonesia (PKI) tidak mendapat sambutan daripada orang Melayu apabila cuba membuka cawangan di Tanah Melayu selepas gagal menguasai Pulau Jawa?",
+      "options": [
+        "Kerana komunis menggunakan kekerasan untuk mencapai matlamat mereka",
+        "Kerana PKI hanya bergerak dalam kalangan orang Hailam sahaja",
+        "Kerana PKI enggan bekerjasama dengan Parti Kuomintang (KMT)",
+        "Kerana PKI tidak mempunyai sebarang tokoh yang dikenali di Tanah Melayu"
+      ],
+      "answer": "Kerana komunis menggunakan kekerasan untuk mencapai matlamat mereka",
+      "explanation": "PKI cuba membuka cawangan di Tanah Melayu selepas gagal menguasai Pulau Jawa pada 1926, tetapi tidak mendapat sambutan orang Melayu kerana komunis menggunakan kekerasan untuk mencapai matlamat mereka.",
+      "tip": "PKI ditolak = komunis guna kekerasan."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah keadaan kekosongan politik selepas Perang Dunia Kedua memberi peluang kepada PKM untuk meluaskan pengaruhnya?",
+      "options": [
+        "Kerana British lewat kembali mentadbir Tanah Melayu selepas Jepun menyerah kalah",
+        "Kerana British terus membenarkan MPAJA bergerak secara bersenjata",
+        "Kerana Parti Kuomintang (KMT) mengambil alih pentadbiran Tanah Melayu",
+        "Kerana Comintern menghantar bantuan ketenteraan secara terbuka kepada PKM"
+      ],
+      "answer": "Kerana British lewat kembali mentadbir Tanah Melayu selepas Jepun menyerah kalah",
+      "explanation": "Selepas Jepun menyerah kalah pada 1945, berlaku kekosongan politik kerana kelewatan British kembali, dan keadaan ini memberi peluang kepada PKM untuk meluaskan pengaruhnya.",
+      "tip": "Kekosongan politik = British lewat kembali."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sebuah pertubuhan pendidikan bergerak dalam kalangan orang Hailam di bawah arahan sebuah parti komunis luar negara, sebelum penubuhan Parti Komunis Malaya. Apakah nama pertubuhan ini?",
+      "options": [
+        "Main School",
+        "Parti Komunis Nanyang (PKN)",
+        "Communist International (Comintern)",
+        "Pan-Malayan Federation of Trade Unions (PMFTU)"
+      ],
+      "answer": "Main School",
+      "explanation": "Main School bergerak dalam kalangan orang Hailam di bawah arahan Parti Komunis China (PKC), sebelum PKM ditubuhkan pada 1930.",
+      "tip": "Main School = orang Hailam + PKC."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sekumpulan bekas anggota tentera gerila keluar dari hutan selepas Jepun menyerah kalah lalu melakukan kekacauan dan pembunuhan terhadap sesiapa yang dituduh bersubahat dengan Jepun. Apakah nama pasukan ini?",
+      "options": [
+        "Malayan People's Anti-Japanese Army (MPAJA)",
+        "Cawangan Khas (Special Branch)",
+        "Parti Komunis Nanyang (PKN)",
+        "Pan-Malayan Federation of Trade Unions (PMFTU)"
+      ],
+      "answer": "Malayan People's Anti-Japanese Army (MPAJA)",
+      "explanation": "MPAJA (Bintang Tiga) keluar dari hutan selepas Jepun menyerah kalah dan melakukan kekacauan serta pembunuhan terhadap Melayu, Cina dan India yang dituduh bersubahat dengan Jepun.",
+      "tip": "Keluar hutan + kekacauan selepas Jepun = MPAJA."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "British meluluskan sebuah ordinan bagi menyekat pengaruh sebuah parti politik yang berjaya menguasai 335 buah kesatuan sekerja dalam tempoh kurang dua tahun. Apakah nama ordinan tersebut?",
+      "options": [
+        "Trade Union Ordinance No. 9 of 1948",
+        "Perjanjian Persekutuan Tanah Melayu 1948",
+        "Perlembagaan Rakyat",
+        "Rancangan Briggs"
+      ],
+      "answer": "Trade Union Ordinance No. 9 of 1948",
+      "explanation": "British meluluskan Trade Union Ordinance No. 9 of 1948 bagi menyekat pengaruh komunis dan mengharamkan PKM, ekoran penguasaan PKM ke atas 335 kesatuan sekerja antara Dis 1947 hingga Mei 1948.",
+      "tip": "Sekat PKM dlm kesatuan sekerja = Trade Union Ordinance 1948."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah persamaan antara saluran kemasukan pengaruh komunis dari China dengan saluran kemasukan pengaruh komunis dari Indonesia ke negara kita?",
+      "options": [
+        "Kedua-duanya dibawa masuk oleh tokoh atau pertubuhan luar negara sejak tahun 1920-an dan tertumpu di kawasan geografi tertentu sebelum disatukan di bawah PKM",
+        "Kedua-duanya berjaya menguasai sepenuhnya kerajaan tempatan sebelum penubuhan PKM",
+        "Kedua-duanya ditubuhkan secara rasmi oleh British sebagai sebahagian dasar pentadbiran",
+        "Kedua-duanya hanya bergerak melalui kesatuan sekerja tanpa melibatkan mana-mana pertubuhan lain"
+      ],
+      "answer": "Kedua-duanya dibawa masuk oleh tokoh atau pertubuhan luar negara sejak tahun 1920-an dan tertumpu di kawasan geografi tertentu sebelum disatukan di bawah PKM",
+      "explanation": "Pengaruh dari China (KMT, PKC, Comintern) dan dari Indonesia (Tan Malaka, Alimin dan lain-lain) sama-sama bermula sejak 1920-an, tertumpu di kawasan tertentu (bandar-bandar KMT; Seberang Perai, Pulau Pinang, Perak Utara, Kedah), sebelum akhirnya bersatu di bawah PKM pada 1930.",
+      "tip": "China & Indonesia: 1920-an, kawasan tertentu, akhirnya PKM."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perbezaan utama antara peranan PKM semasa pendudukan Jepun (1941–1945) dengan peranan PKM selepas Jepun menyerah kalah?",
+      "options": [
+        "Semasa pendudukan Jepun, PKM bekerjasama dengan British menentang Jepun melalui MPAJA, manakala selepas Jepun menyerah kalah, MPAJA pula melakukan kekacauan dan menyerang penduduk tempatan",
+        "Semasa pendudukan Jepun, PKM menyusup ke dalam kesatuan sekerja, manakala selepas Jepun menyerah kalah, PKM menghentikan semua kegiatannya",
+        "Semasa pendudukan Jepun, PKM diharamkan oleh British, manakala selepas Jepun menyerah kalah, PKM dibenarkan bergerak secara bersenjata",
+        "Semasa pendudukan Jepun, PKM ditubuhkan buat pertama kali, manakala selepas Jepun menyerah kalah, PKM dibubarkan sepenuhnya"
+      ],
+      "answer": "Semasa pendudukan Jepun, PKM bekerjasama dengan British menentang Jepun melalui MPAJA, manakala selepas Jepun menyerah kalah, MPAJA pula melakukan kekacauan dan menyerang penduduk tempatan",
+      "explanation": "Semasa pendudukan Jepun, PKM (melalui MPAJA) menerima bantuan British untuk menentang Jepun. Selepas Jepun menyerah kalah pada 1945, MPAJA pula keluar dari hutan dan melakukan kekacauan serta pembunuhan terhadap penduduk yang dituduh bersubahat dengan Jepun.",
+      "tip": "Semasa Jepun: kerjasama British. Selepas Jepun: kekacauan MPAJA."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara faktor berikut, manakah PALING menyumbang kepada kejayaan PKM meluaskan pengaruhnya menjelang tahun 1948?",
+      "options": [
+        "Penyusupan PKM ke dalam kesatuan sekerja dan pertubuhan politik lain ketika British masih membenarkannya bergerak secara sah selepas MPAJA dibubarkan",
+        "Bantuan senjata dan kewangan yang diterima PKM daripada Comintern sepanjang tempoh darurat",
+        "Sokongan padu Raja-raja Melayu terhadap perjuangan PKM selepas Perang Dunia Kedua",
+        "Kejayaan Parti Komunis Nanyang (PKN) menguasai kesatuan sekerja di seluruh Tanah Melayu"
+      ],
+      "answer": "Penyusupan PKM ke dalam kesatuan sekerja dan pertubuhan politik lain ketika British masih membenarkannya bergerak secara sah selepas MPAJA dibubarkan",
+      "explanation": "Selepas MPAJA dibubarkan pada 1 Disember 1945, PKM masih dibenarkan bergerak secara sah, memberi peluang untuk menyusup ke dalam PMFTU (menguasai 335 kesatuan sekerja), PKMM, MDU dan PUTERA-AMCJA, sehingga akhirnya diharamkan British melalui Trade Union Ordinance 1948.",
+      "tip": "Bergerak sah selepas MPAJA dibubar = punca PKM meluas."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah PALING tepat merumuskan subtopik 6.1?",
+      "options": [
+        "Kekosongan politik selepas Perang Dunia Kedua serta pengaruh dari China dan Indonesia membolehkan PKM meluaskan pengaruhnya melalui kesatuan sekerja dan pertubuhan sehingga akhirnya diharamkan British",
+        "Ideologi komunis hanya tersebar di negara kita selepas Perjanjian Persekutuan Tanah Melayu 1948 ditandatangani",
+        "PKM ditubuhkan oleh British sebagai sebahagian usaha membanteras pengaruh Jepun di Tanah Melayu",
+        "Pengaruh komunis dari China dan Indonesia gagal sepenuhnya sebelum penubuhan PKM pada 1930"
+      ],
+      "answer": "Kekosongan politik selepas Perang Dunia Kedua serta pengaruh dari China dan Indonesia membolehkan PKM meluaskan pengaruhnya melalui kesatuan sekerja dan pertubuhan sehingga akhirnya diharamkan British",
+      "explanation": "Rumusan menggabungkan kemasukan pengaruh komunis dari China dan Indonesia, penubuhan PKM, kekosongan politik selepas Perang Dunia Kedua dan pengharaman PKM oleh British melalui Trade Union Ordinance 1948.",
+      "tip": "China + Indonesia → PKM → meluas → diharamkan."
+    }
+  ]
+}

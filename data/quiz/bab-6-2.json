@@ -1,0 +1,216 @@
+{
+  "id": "6-2",
+  "title": "Ancaman Komunis di Negara Kita",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Bilakah komunis membunuh tiga orang pengurus ladang Eropah di Sungai Siput, Perak, yang membawa kepada pengisytiharan darurat?",
+      "options": [
+        "16 Jun 1948",
+        "30 April 1930",
+        "13 September 1948",
+        "6 Oktober 1951"
+      ],
+      "answer": "16 Jun 1948",
+      "explanation": "Pada 16 Jun 1948, komunis membunuh tiga orang pengurus ladang Eropah di Sungai Siput, Perak, dan peristiwa ini membawa kepada pengisytiharan darurat.",
+      "tip": "16 Jun 1948 = pembunuhan di Sungai Siput."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah Pesuruhjaya Tinggi British yang mengisytiharkan darurat pada tahun 1948?",
+      "options": [
+        "Sir Edward Gent",
+        "Sir Henry Gurney",
+        "Sir Gerald Templer",
+        "Guy C. Madoc"
+      ],
+      "answer": "Sir Edward Gent",
+      "explanation": "Sir Edward Gent, Pesuruhjaya Tinggi British di Tanah Melayu, mengisytiharkan darurat berikutan pembunuhan tiga pengurus ladang di Sungai Siput.",
+      "tip": "Sir Edward Gent = isytihar darurat 1948."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Di manakah Sir Henry Gurney menjadi mangsa serang hendap komunis pada 6 Oktober 1951?",
+      "options": [
+        "Jalan Kuala Kubu Bharu",
+        "Sungai Siput, Perak",
+        "Sheum Circus, Kampar, Perak",
+        "Bukit Kepong, Muar, Johor"
+      ],
+      "answer": "Jalan Kuala Kubu Bharu",
+      "explanation": "Sir Henry Gurney terbunuh dalam serang hendap komunis di Jalan Kuala Kubu Bharu semasa dalam perjalanan ke Bukit Fraser.",
+      "tip": "Gurney terbunuh di Jalan Kuala Kubu Bharu."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah matlamat PKM apabila melancarkan perjuangan bersenjata selepas Perang Dunia Kedua?",
+      "options": [
+        "Menubuhkan Republik Komunis di Tanah Melayu",
+        "Mengembalikan pentadbiran British Military Administration (BMA)",
+        "Menyertai Persekutuan Tanah Melayu 1948 secara rasmi",
+        "Mengukuhkan kedudukan Raja-raja Melayu dalam pentadbiran"
+      ],
+      "answer": "Menubuhkan Republik Komunis di Tanah Melayu",
+      "explanation": "Jawatankuasa Eksekutif Pusat PKM mengambil keputusan melancarkan perjuangan bersenjata bagi menubuhkan sebuah Republik Komunis di Tanah Melayu.",
+      "tip": "Matlamat PKM = Republik Komunis."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah Jawatankuasa Eksekutif Pusat PKM mengambil keputusan melancarkan perjuangan bersenjata pada tahun 1948?",
+      "options": [
+        "Kerana pengikut komunis digesa dalam Persidangan Calcutta supaya memperhebat perjuangan menentang kuasa imperialis di setiap negara Asia",
+        "Kerana British enggan berunding dengan PKM tentang kemerdekaan Tanah Melayu",
+        "Kerana Perlembagaan Rakyat yang dicadangkan PUTERA-AMCJA telah ditolak sepenuhnya",
+        "Kerana Trade Union Ordinance No. 9 of 1948 telah menghalang PKM daripada bergerak secara sah"
+      ],
+      "answer": "Kerana pengikut komunis digesa dalam Persidangan Calcutta supaya memperhebat perjuangan menentang kuasa imperialis di setiap negara Asia",
+      "explanation": "Dalam Persidangan Kongres Belia Asia dan Persidangan Parti Komunis India di Calcutta pada awal 1948, pengikut komunis di negara jajahan digesa memperhebat perjuangan, dan gesaan ini mendorong PKM melancarkan perjuangan bersenjata.",
+      "tip": "Persidangan Calcutta → PKM lancar perjuangan bersenjata."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah komunis menyerang lombong bijih timah dan ladang getah selepas darurat dikuatkuasakan?",
+      "options": [
+        "Untuk melumpuhkan ekonomi British di Tanah Melayu",
+        "Untuk memperoleh senjata dan kewangan daripada pekerja ladang",
+        "Untuk memaksa pekerja ladang menyertai perjuangan bersenjata PKM",
+        "Untuk mengelakkan pasukan keselamatan British menjejaki mereka"
+      ],
+      "answer": "Untuk melumpuhkan ekonomi British di Tanah Melayu",
+      "explanation": "Lombong bijih timah dan ladang getah menjadi sasaran utama serangan komunis kerana bertujuan melemahkan ekonomi British.",
+      "tip": "Serang lombong/ladang = lumpuh ekonomi British."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah komunis turut menyerang pekerja awam yang membaiki jalan raya, memasang paip air dan membina sistem pengairan?",
+      "options": [
+        "Sebagai sebahagian usaha merosakkan infrastruktur negara supaya rakyat kehilangan keyakinan terhadap British",
+        "Kerana pekerja awam ini merupakan ahli pasukan keselamatan yang menyamar",
+        "Kerana kerajaan enggan membayar gaji pekerja awam semasa tempoh darurat",
+        "Untuk memaksa pekerja awam menyertai Home Guard secara sukarela"
+      ],
+      "answer": "Sebagai sebahagian usaha merosakkan infrastruktur negara supaya rakyat kehilangan keyakinan terhadap British",
+      "explanation": "Komunis sengaja mencetuskan huru-hara dan ketakutan bagi menghilangkan keyakinan rakyat terhadap British, termasuk melalui sabotaj infrastruktur pengangkutan dan perhubungan serta serangan terhadap pekerja awam yang menyelenggaranya.",
+      "tip": "Serang pekerja awam = sabotaj infrastruktur + goyah keyakinan."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sekumpulan komunis mencampakkan bom tangan di sebuah pasar, menyebabkan 46 orang cedera parah dan 4 orang terkorban. Bilakah dan di manakah kejadian ini berlaku?",
+      "options": [
+        "5 Julai 1949, Sheum Circus, Kampar, Perak",
+        "16 Jun 1948, Sungai Siput, Perak",
+        "6 Oktober 1951, Jalan Kuala Kubu Bharu",
+        "22 Februari 1950, Bukit Kepong, Muar, Johor"
+      ],
+      "answer": "5 Julai 1949, Sheum Circus, Kampar, Perak",
+      "explanation": "Pada 5 Julai 1949, komunis mencampakkan bom tangan di Sheum Circus, Kampar, Perak, menyebabkan 46 orang cedera parah dan 4 orang terkorban.",
+      "tip": "Bom Kampar 1949 = 46 cedera, 4 mati."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Seorang Pesuruhjaya Tinggi British dilantik pada 13 September 1948 untuk menggantikan pendahulunya, tetapi kemudiannya turut menjadi mangsa serang hendap komunis semasa dalam perjalanan ke Bukit Fraser. Siapakah beliau?",
+      "options": [
+        "Sir Henry Gurney",
+        "Sir Edward Gent",
+        "Sir Gerald Templer",
+        "Guy C. Madoc"
+      ],
+      "answer": "Sir Henry Gurney",
+      "explanation": "Sir Henry Gurney dilantik pada 13 September 1948 menggantikan Sir Edward Gent, dan terbunuh dalam serang hendap komunis di Jalan Kuala Kubu Bharu pada 6 Oktober 1951.",
+      "tip": "Gurney gantikan Gent, kemudian terbunuh 1951."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Statistik antara tahun 1948 hingga 1960 menunjukkan sebuah pasukan keselamatan mencatatkan jumlah korban dan cedera tertinggi (1,478 orang) berbanding pasukan lain. Pasukan manakah ini?",
+      "options": [
+        "Tentera",
+        "Polis",
+        "Special Constable",
+        "Auxiliary Police"
+      ],
+      "answer": "Tentera",
+      "explanation": "Antara 1948 hingga 1960, Tentera mencatatkan jumlah korban dan cedera tertinggi iaitu 1,478 orang (519 terkorban, 959 tercedera), berbanding Polis (1,214), Special Constable (1,339) dan Auxiliary Police (396).",
+      "tip": "Tentera = korban+cedera tertinggi (1,478)."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perkaitan antara Persidangan Calcutta dengan keputusan PKM melancarkan perjuangan bersenjata di Tanah Melayu?",
+      "options": [
+        "Persidangan Calcutta menggesa pengikut komunis di negara jajahan memperhebat perjuangan menentang kuasa imperialis, dan gesaan ini mendorong Jawatankuasa Eksekutif Pusat PKM melancarkan perjuangan bersenjata",
+        "Persidangan Calcutta merupakan tempat PKM diisytiharkan haram secara rasmi oleh British",
+        "Persidangan Calcutta menetapkan tarikh rasmi pengisytiharan darurat di Tanah Melayu",
+        "Persidangan Calcutta dianjurkan oleh British untuk berunding secara terus dengan wakil PKM"
+      ],
+      "answer": "Persidangan Calcutta menggesa pengikut komunis di negara jajahan memperhebat perjuangan menentang kuasa imperialis, dan gesaan ini mendorong Jawatankuasa Eksekutif Pusat PKM melancarkan perjuangan bersenjata",
+      "explanation": "Gerakan Komunis Antarabangsa menganjurkan Persidangan Kongres Belia Asia dan Persidangan Parti Komunis India di Calcutta pada awal 1948, yang mana wakil PKM turut hadir; gesaan dalam persidangan itu mendorong PKM melancarkan perjuangan bersenjata.",
+      "tip": "Calcutta gesa lawan imperialis → PKM lancar perjuangan."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perbezaan antara cara komunis mengancam ekonomi negara dengan cara komunis mengancam infrastruktur negara selepas darurat?",
+      "options": [
+        "Ancaman ekonomi tertumpu kepada lombong bijih timah dan ladang getah untuk melumpuhkan sumber pendapatan, manakala ancaman infrastruktur tertumpu kepada kemudahan pengangkutan dan perhubungan seperti landasan keretapi, telefon dan paip air",
+        "Ancaman ekonomi hanya melibatkan serangan terhadap balai polis, manakala ancaman infrastruktur hanya melibatkan serangan terhadap ladang getah",
+        "Ancaman ekonomi dan ancaman infrastruktur kedua-duanya hanya berlaku di negeri Perak sahaja",
+        "Ancaman ekonomi bertujuan menakutkan pasukan keselamatan, manakala ancaman infrastruktur bertujuan mendapatkan sokongan Orang Asli"
+      ],
+      "answer": "Ancaman ekonomi tertumpu kepada lombong bijih timah dan ladang getah untuk melumpuhkan sumber pendapatan, manakala ancaman infrastruktur tertumpu kepada kemudahan pengangkutan dan perhubungan seperti landasan keretapi, telefon dan paip air",
+      "explanation": "Komunis melumpuhkan ekonomi dengan menyerang lombong bijih timah dan ladang getah, manakala merosakkan infrastruktur dengan mensabotaj landasan keretapi, telefon, telegraf dan paip air demi mengganggu kehidupan harian penduduk.",
+      "tip": "Ekonomi = lombong/ladang. Infrastruktur = pengangkutan/perhubungan."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah PALING tepat menjelaskan corak perluasan kawasan darurat pada Jun 1948?",
+      "options": [
+        "Darurat mula dikuatkuasakan di kawasan tertentu berhampiran lokasi pembunuhan di Perak dan Johor sebelum diperluas secara berperingkat ke seluruh kedua-dua negeri itu dan akhirnya ke seluruh Tanah Melayu",
+        "Seluruh Tanah Melayu terus dikenakan darurat serentak pada 16 Jun 1948 tanpa sebarang peringkat",
+        "Darurat hanya dikuatkuasakan di Sungai Siput sahaja sepanjang tempoh darurat",
+        "Darurat dikuatkuasakan bermula di Kuala Lumpur sebelum merebak ke negeri-negeri lain"
+      ],
+      "answer": "Darurat mula dikuatkuasakan di kawasan tertentu berhampiran lokasi pembunuhan di Perak dan Johor sebelum diperluas secara berperingkat ke seluruh kedua-dua negeri itu dan akhirnya ke seluruh Tanah Melayu",
+      "explanation": "Darurat dikuatkuasakan pada 16 Jun 1948 di kawasan tertentu Perak dan Johor, diperluas ke seluruh kedua-dua negeri pada 17 Jun 1948, dan akhirnya ke seluruh Tanah Melayu pada 18 Jun 1948 — menunjukkan tindak balas British bermula tempatan sebelum menyeluruh.",
+      "tip": "16→17→18 Jun: tempatan → negeri → seluruh negara."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah PALING tepat merumuskan subtopik 6.2?",
+      "options": [
+        "Selepas Perang Dunia Kedua, PKM melancarkan perjuangan bersenjata yang membawa kepada pengisytiharan darurat pada Jun 1948, dan komunis terus mengancam ekonomi, infrastruktur, keselamatan rakyat serta pasukan keselamatan sehingga mendorong kerjasama rakyat dan kerajaan",
+        "Darurat diisytiharkan sejurus selepas Perjanjian Persekutuan Tanah Melayu 1948 ditandatangani oleh British",
+        "PKM menghentikan semua kegiatan bersenjata sebaik sahaja darurat diisytiharkan pada Jun 1948",
+        "Ancaman komunis hanya tertumpu kepada serangan terhadap pasukan keselamatan tanpa menjejaskan ekonomi atau infrastruktur"
+      ],
+      "answer": "Selepas Perang Dunia Kedua, PKM melancarkan perjuangan bersenjata yang membawa kepada pengisytiharan darurat pada Jun 1948, dan komunis terus mengancam ekonomi, infrastruktur, keselamatan rakyat serta pasukan keselamatan sehingga mendorong kerjasama rakyat dan kerajaan",
+      "explanation": "Rumusan menggabungkan perjuangan bersenjata PKM, pengisytiharan darurat ekoran pembunuhan di Sungai Siput, dan empat bentuk ancaman komunis selepas darurat yang mendorong kerjasama rakyat dan kerajaan membanteras ancaman tersebut.",
+      "tip": "Perjuangan bersenjata → darurat → 4 ancaman → kerjasama."
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "id": "6-4",
+  "title": "Kesan Zaman Darurat terhadap Negara Kita",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Bilakah zaman darurat tamat secara rasmi di negara kita?",
+      "options": [
+        "31 Julai 1960",
+        "28 Disember 1955",
+        "14 September 1952",
+        "27 Februari 1949"
+      ],
+      "answer": "31 Julai 1960",
+      "explanation": "Zaman darurat tamat secara rasmi pada 31 Julai 1960, selepas berlangsung selama 12 tahun.",
+      "tip": "31 Julai 1960 = tamat darurat."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah yang menubuhkan Malayan Chinese Association (MCA) pada 27 Februari 1949?",
+      "options": [
+        "Tan Cheng Lock",
+        "Sir Henry Gurney",
+        "Tunku Abdul Rahman",
+        "David Marshall"
+      ],
+      "answer": "Tan Cheng Lock",
+      "explanation": "Tan Cheng Lock menubuhkan Malayan Chinese Association (MCA) di Kuala Lumpur pada 27 Februari 1949.",
+      "tip": "Tan Cheng Lock = penubuh MCA."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Berapa lamakah zaman darurat berlangsung di negara kita?",
+      "options": [
+        "12 tahun",
+        "10 tahun",
+        "15 tahun",
+        "8 tahun"
+      ],
+      "answer": "12 tahun",
+      "explanation": "Zaman darurat berlangsung selama 12 tahun, bermula 1948 dan tamat pada 31 Julai 1960.",
+      "tip": "Darurat = 12 tahun."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah Pesuruhjaya Tinggi British yang mendorong penubuhan MCA bagi menawan hati penduduk Cina?",
+      "options": [
+        "Sir Henry Gurney",
+        "Sir Edward Gent",
+        "Sir Gerald Templer",
+        "Guy C. Madoc"
+      ],
+      "answer": "Sir Henry Gurney",
+      "explanation": "Zaman darurat mendorong Sir Henry Gurney mengambil langkah menawan hati penduduk Cina dengan menggalakkan penubuhan parti politik yang berorientasikan tempatan, iaitu MCA.",
+      "tip": "Gurney galak penubuhan MCA."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah kerajaan melonggarkan syarat kewarganegaraan pada tahun 1952?",
+      "options": [
+        "Untuk menarik kaum Cina dan India menjadi warganegara Persekutuan Tanah Melayu demi mewujudkan perpaduan rakyat",
+        "Untuk membolehkan lebih ramai anggota PKM menyerah diri secara sukarela",
+        "Untuk menggantikan sistem pendaftaran kebangsaan dan kad pengenalan yang sedia ada",
+        "Untuk memenuhi syarat yang ditetapkan oleh Chin Peng dalam Rundingan Baling"
+      ],
+      "answer": "Untuk menarik kaum Cina dan India menjadi warganegara Persekutuan Tanah Melayu demi mewujudkan perpaduan rakyat",
+      "explanation": "Kelonggaran syarat kewarganegaraan pada 1952 (menjadikan kira-kira 1.2 juta orang Cina dan 180 ribu orang India warganegara) bertujuan mewujudkan bangsa yang bersatu dan menunjukkan pengorbanan orang Melayu demi perpaduan.",
+      "tip": "1952 = longgar syarat kerakyatan demi perpaduan."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah zaman darurat dikatakan mempercepat kemerdekaan Persekutuan Tanah Melayu?",
+      "options": [
+        "Kerana British sedar darurat tidak dapat ditamatkan melalui ketenteraan semata-mata, dan kemenangan Parti Perikatan dalam Pilihan Raya Umum 1955 meyakinkan British bahawa rakyat berbilang kaum dapat menewaskan komunis melalui perpaduan",
+        "Kerana Chin Peng bersetuju membubarkan PKM sebaik sahaja Rundingan Baling diadakan pada 1955",
+        "Kerana MCA berjaya mengumpulkan $2.5 juta bagi membiayai kos rundingan kemerdekaan",
+        "Kerana Sir Gerald Templer mengisytiharkan kemerdekaan secara automatik selepas darurat tamat"
+      ],
+      "answer": "Kerana British sedar darurat tidak dapat ditamatkan melalui ketenteraan semata-mata, dan kemenangan Parti Perikatan dalam Pilihan Raya Umum 1955 meyakinkan British bahawa rakyat berbilang kaum dapat menewaskan komunis melalui perpaduan",
+      "explanation": "British menyedari darurat tidak dapat ditamatkan melalui ketenteraan semata-mata; penubuhan CLC dan kemenangan Parti Perikatan (UMNO–MCA–MIC) dalam PRU 1955 meyakinkan British bahawa perpaduan berbilang kaum dapat menewaskan komunis, lalu bersetuju memberi kemerdekaan.",
+      "tip": "PRU 1955 menang → yakinkan British bagi kemerdekaan."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah hubungan antara kaum menjadi renggang akibat Rancangan Briggs dan penempatan semula penduduk?",
+      "options": [
+        "Kerana kaum Cina dikumpulkan di petempatan baharu yang berkembang menjadi bandar, manakala kaum Melayu tinggal di kampung serba kekurangan dan kaum lain di petempatan berasingan, menyebabkan kurang ruang bersosial antara kaum",
+        "Kerana kerajaan melarang sepenuhnya interaksi antara kaum semasa tempoh darurat",
+        "Kerana MCA enggan bekerjasama dengan kerajaan dalam usaha menempatkan semula penduduk",
+        "Kerana kaum Cina dan India dihalang daripada memperoleh taraf warganegara sepanjang darurat"
+      ],
+      "answer": "Kerana kaum Cina dikumpulkan di petempatan baharu yang berkembang menjadi bandar, manakala kaum Melayu tinggal di kampung serba kekurangan dan kaum lain di petempatan berasingan, menyebabkan kurang ruang bersosial antara kaum",
+      "explanation": "Penempatan semula menyebabkan kaum Cina dikumpulkan di Kampung Baru yang berkembang menjadi bandar, kaum Melayu kekal di kampung serba kekurangan dan kaum lain di petempatan berasingan; kawalan ketat pasukan keselamatan turut menghadkan interaksi sosial antara kaum.",
+      "tip": "Petempatan berasingan ikut kaum = hubungan renggang."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sebuah parti politik ditubuhkan di Kuala Lumpur pada 27 Februari 1949 bagi meyakinkan British bahawa tidak semua orang Cina menyokong komunis. Apakah nama parti ini?",
+      "options": [
+        "Malayan Chinese Association (MCA)",
+        "Parti Perikatan",
+        "Jawatankuasa Hubungan Antara Kaum (CLC)",
+        "All Malaya Council of Joint Action (AMCJA)"
+      ],
+      "answer": "Malayan Chinese Association (MCA)",
+      "explanation": "MCA ditubuhkan oleh Tan Cheng Lock pada 27 Februari 1949 di Kuala Lumpur, antara lain untuk meyakinkan British bahawa tidak semua orang Cina menyokong komunis.",
+      "tip": "MCA = 27 Feb 1949, Kuala Lumpur."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sebuah gabungan tiga parti politik berjaya memenangi Pilihan Raya Umum 1955 sehingga meyakinkan British bahawa Persekutuan Tanah Melayu dapat menewaskan komunis melalui perpaduan berbilang kaum. Apakah nama gabungan ini?",
+      "options": [
+        "Parti Perikatan (UMNO–MCA–MIC)",
+        "PUTERA-AMCJA",
+        "Jawatankuasa Kerja",
+        "Jawatankuasa Hubungan Antara Kaum (CLC)"
+      ],
+      "answer": "Parti Perikatan (UMNO–MCA–MIC)",
+      "explanation": "Parti Perikatan (gabungan UMNO, MCA dan MIC) memenangi Pilihan Raya Umum 1955, meyakinkan British bahawa perpaduan berbilang kaum dapat menewaskan komunis.",
+      "tip": "Parti Perikatan menang PRU 1955."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Disebabkan catuan makanan yang dikenakan kerajaan semasa darurat, ramai penduduk terpaksa bergantung pada makanan seperti ubi kayu, keledek dan jagung. Kesan ini merupakan kesan darurat dari aspek manakah?",
+      "options": [
+        "Sosioekonomi",
+        "Politik",
+        "Ketenteraan",
+        "Perlembagaan"
+      ],
+      "answer": "Sosioekonomi",
+      "explanation": "Catuan makanan dan pergantungan kepada ubi kayu, keledek dan jagung merupakan sebahagian daripada kesan sosioekonomi darurat, iaitu penderitaan dan kesengsaraan rakyat.",
+      "tip": "Catuan makanan = kesan sosioekonomi."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perkaitan antara penubuhan Jawatankuasa Hubungan Antara Kaum (CLC) dengan penubuhan Parti Perikatan?",
+      "options": [
+        "CLC meningkatkan kesedaran pemimpin pelbagai kaum bahawa mereka berkongsi kepentingan dan hala tuju yang sama, kesedaran ini membawa kepada penubuhan Parti Perikatan (UMNO–MCA–MIC)",
+        "CLC dan Parti Perikatan kedua-duanya ditubuhkan oleh Tan Cheng Lock pada tarikh yang sama",
+        "CLC ditubuhkan selepas Parti Perikatan memenangi Pilihan Raya Umum 1955",
+        "CLC dan Parti Perikatan tidak mempunyai sebarang perkaitan dari segi kesedaran politik pemimpin pelbagai kaum"
+      ],
+      "answer": "CLC meningkatkan kesedaran pemimpin pelbagai kaum bahawa mereka berkongsi kepentingan dan hala tuju yang sama, kesedaran ini membawa kepada penubuhan Parti Perikatan (UMNO–MCA–MIC)",
+      "explanation": "Penubuhan CLC meningkatkan kesedaran politik dalam kalangan pemimpin pelbagai kaum bahawa mereka boleh berkongsi kepentingan bersama dan hala tuju yang sama, kesedaran ini membawa kepada penubuhan Parti Perikatan.",
+      "tip": "CLC → kesedaran perkongsian → Parti Perikatan."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perbezaan antara kesan darurat terhadap kaum Cina di Kampung Baru dengan kesan darurat terhadap hubungan antara kaum secara umum?",
+      "options": [
+        "Kaum Cina di Kampung Baru turut menerima prasarana yang membawa kepada perkembangan bandar baharu, manakala kesan terhadap hubungan antara kaum secara umum adalah negatif kerana kehidupan terasing mengikut kaum merenggangkan hubungan sosial",
+        "Kaum Cina di Kampung Baru tidak menerima sebarang kemudahan asas, manakala hubungan antara kaum secara umum bertambah erat",
+        "Kesan darurat terhadap kaum Cina di Kampung Baru dan terhadap hubungan antara kaum secara umum adalah sama sepenuhnya",
+        "Kaum Cina di Kampung Baru dipaksa berpindah ke luar negara, manakala hubungan antara kaum tidak terjejas langsung"
+      ],
+      "answer": "Kaum Cina di Kampung Baru turut menerima prasarana yang membawa kepada perkembangan bandar baharu, manakala kesan terhadap hubungan antara kaum secara umum adalah negatif kerana kehidupan terasing mengikut kaum merenggangkan hubungan sosial",
+      "explanation": "Kampung Baru yang dilengkapi prasarana membawa kepada perkembangan bandar baharu bagi kaum Cina, namun kehidupan terasing mengikut kaum (Cina di Kampung Baru, Melayu di kampung, kaum lain berasingan) merenggangkan hubungan sosial antara kaum secara keseluruhan.",
+      "tip": "Kampung Baru: prasarana utk Cina, tapi renggangkan hubungan kaum."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah PALING tepat menjelaskan mengapa darurat dianggap membawa kesan yang bercampur (positif dan negatif) terhadap negara kita?",
+      "options": [
+        "Darurat mempercepat kemerdekaan dan meningkatkan bilangan warganegara sebagai kesan politik yang positif, namun turut meningkatkan kos perbelanjaan, menyebabkan penderitaan rakyat dan merenggangkan hubungan kaum sebagai kesan sosioekonomi yang negatif",
+        "Darurat hanya membawa kesan positif kerana berjaya menewaskan komunis sepenuhnya tanpa sebarang kerugian",
+        "Darurat hanya membawa kesan negatif kerana tidak menyumbang sebarang kemajuan politik kepada negara",
+        "Darurat tidak membawa sebarang kesan kepada negara selepas ditamatkan pada 1960"
+      ],
+      "answer": "Darurat mempercepat kemerdekaan dan meningkatkan bilangan warganegara sebagai kesan politik yang positif, namun turut meningkatkan kos perbelanjaan, menyebabkan penderitaan rakyat dan merenggangkan hubungan kaum sebagai kesan sosioekonomi yang negatif",
+      "explanation": "Darurat membawa kesan politik yang boleh dilihat sebagai kemajuan (peningkatan warganegara, penubuhan MCA, mempercepat kemerdekaan), tetapi turut meninggalkan kesan sosioekonomi yang negatif seperti kos perbelanjaan tinggi, penderitaan rakyat dan hubungan kaum yang renggang.",
+      "tip": "Politik = kesan positif. Sosioekonomi = kesan negatif."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah PALING tepat merumuskan subtopik 6.4 dan Rumusan Besar Bab 6?",
+      "options": [
+        "Zaman darurat selama 12 tahun membawa kesan besar dari aspek politik dan sosioekonomi termasuk mempercepat kemerdekaan, namun turut meninggalkan penderitaan dan kerenggangan hubungan kaum, sekali gus menyedarkan rakyat tentang pentingnya perpaduan dalam mempertahankan negara",
+        "Zaman darurat hanya memberi kesan kepada aspek ketenteraan tanpa sebarang kesan politik atau sosioekonomi",
+        "Darurat ditamatkan serta-merta selepas Rundingan Baling berjaya dipersetujui oleh kedua-dua pihak",
+        "Kesan darurat hanya dirasai oleh kaum Cina tanpa menjejaskan kaum Melayu atau India"
+      ],
+      "answer": "Zaman darurat selama 12 tahun membawa kesan besar dari aspek politik dan sosioekonomi termasuk mempercepat kemerdekaan, namun turut meninggalkan penderitaan dan kerenggangan hubungan kaum, sekali gus menyedarkan rakyat tentang pentingnya perpaduan dalam mempertahankan negara",
+      "explanation": "Rumusan menggabungkan tempoh darurat 12 tahun, kesan politik (kewarganegaraan, MCA, mempercepat kemerdekaan) dan sosioekonomi (kos, penderitaan, hubungan kaum), serta pengajaran tentang kepentingan perpaduan dan kerjasama.",
+      "tip": "12 tahun: kesan politik + sosioekonomi → sedar perpaduan."
+    }
+  ]
+}
