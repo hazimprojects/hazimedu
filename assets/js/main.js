@@ -4070,7 +4070,20 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     'Soccer ball': '/assets/openmoji/soccer-ball.svg',
     'Stethoscope': '/assets/openmoji/stethoscope.svg',
     'Sunglasses': '/assets/openmoji/sunglasses.svg',
-    'White circle': '/assets/openmoji/white-circle.svg'
+    'White circle': '/assets/openmoji/white-circle.svg',
+    // Bab 5 — +8 konsep baharu (265 kesemuanya) drpd 69 konsep unik
+    // digunakan merentas notes/bab-5*.html; 61/69 SUDAH sedia ada drpd
+    // liputan Bab 1-4, 8 baki ni khusus baharu utk Bab 5. Semua padan
+    // TERUS ke annotation OpenMoji (title-case → lowercase, "Keycap N"
+    // → "keycap: N" spt Bab 2-4) — tiada kes edge kali ni.
+    'Blue circle': '/assets/openmoji/blue-circle.svg',
+    'Check mark button': '/assets/openmoji/check-mark-button.svg',
+    'Convenience store': '/assets/openmoji/convenience-store.svg',
+    'Keycap 10': '/assets/openmoji/keycap-10.svg',
+    'Memo': '/assets/openmoji/memo.svg',
+    'Necktie': '/assets/openmoji/necktie.svg',
+    'Paperclip': '/assets/openmoji/paperclip.svg',
+    'Satellite antenna': '/assets/openmoji/satellite-antenna.svg'
   };
 
   function _pdfEmojiSrc(originalSrc) {
@@ -4702,11 +4715,11 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   var PDF_2COL_COL_WIDTH_PX = Math.round(PDF_2COL_COL_WIDTH_MM * PDF_BASE_DENSITY);
 
   function _pdfIsTwoColumnScope() {
-    // Diluaskan drpd Bab 1-3 asal ke +Bab 4 — WAJIB lengkapkan liputan
-    // HZ_PDF_OPENMOJI_MAP 100% konsep unik Bab 4 dulu (rujuk komen di
+    // Diluaskan drpd Bab 1-4 asal ke +Bab 5 — WAJIB lengkapkan liputan
+    // HZ_PDF_OPENMOJI_MAP 100% konsep unik Bab 5 dulu (rujuk komen di
     // atas takrifan map, disahkan 0 konsep hilang sebelum baris ni diubah)
-    // supaya PDF Bab 4 tak papar campuran gaya OpenMoji + Fluent.
-    return /\/notes\/bab-[1234](-\d+)?\.html$/i.test(window.location.pathname);
+    // supaya PDF Bab 5 tak papar campuran gaya OpenMoji + Fluent.
+    return /\/notes\/bab-[12345](-\d+)?\.html$/i.test(window.location.pathname);
   }
 
   // Bab 4 (Malayan Union/Persekutuan) ada gelaran raja/sultan kw-tokoh
@@ -7548,7 +7561,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=571').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=572').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });

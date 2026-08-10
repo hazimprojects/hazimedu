@@ -1419,6 +1419,28 @@ lebih relevan drpd sekadar liputan ikon:
    turut dpt override (`.zp-splitbar-seg` → kelabu muda, padan corak
    `.zp-chip`/`.zp-step` eco sedia ada).
 
+**Diluaskan ke Bab 5** — `_pdfIsTwoColumnScope()` skop kini `bab-[12345]`
+(WAJIB liputan `HZ_PDF_OPENMOJI_MAP` 100% konsep unik Bab 5 dulu, +8
+konsep baharu drpd 69 unik digunakan, 265 kesemuanya — 61/69 SUDAH
+sedia ada drpd liputan Bab 1-4, tiada kes edge annotation OpenMoji
+kali ni, format keycap "Keycap 10" → "keycap: 10" padan corak sedia
+ada). Bab 5 (Persekutuan Tanah Melayu) TIADA komponen/isu baharu spt
+Bab 4 (tiada `.paper-split-bar`/kelas lain yg belum dikendalikan) —
+kad `.paper-kingdom` senarai Ahli Jawatankuasa Kerja bernombor keycap
+guna corak sedia ada, semua dikendalikan tanpa kod tambahan.
+
+Frasa `kw-tokoh`/`kw-tempat` terpanjang korpus Bab 5 ("Raja
+Kamaralzaman Raja Ngah Mansur", 34 aksara) JAUH drpd ambang selamat
+292px `_pdfDeboxOverlongKeywords()` (fungsi tu SUDAH generik merentas
+SEMUA bab dlm skop 2-lajur sejak Bab 4, bukan khusus Bab 4 — automatik
+terpakai tanpa ubah kod) — disahkan via Playwright (pintas
+`window.html2canvas` sebelum capture, semak `.zpkw-tokoh`/`.zpkw-
+tempat` melangkaui sempadan kad induk) SIFAR overflow merentas
+kesemua 4 subtopik. Disahkan jugak: SIFAR ikon `<img class="zp-emoji">`
+gagal jadi `data:` URI (`_pdfInlineImages()`), penjanaan PDF penuh
+(bukan sekadar pintas capture) berjaya 2-5 muka surat setiap subtopik,
+sifar ralat JS pd kesemua 4 subtopik.
+
 ## Eksport PDF — Chip blok PD1/PD2 (`.bloc-chip-*`) pendua & tiada warna
 
 Pengguna lapor (tangkapan skrin pratonton PDF `bab-3-3.html`, kad
