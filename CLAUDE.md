@@ -1185,33 +1185,66 @@ lebih relevan drpd sekadar liputan ikon:
    cadang lebih baik — kekalkan latar drpd "kesan pen highlighter"
    (SEGI EMPAT, bukan oval/organik), yg secara semula jadi "terpotong"
    bersih bila teks wrap, sbb kesan highlighter sebenar memang segi
-   empat. **Fix (kekal, disahkan lebih baik)**: PUNCA SEBENAR blob bug
-   ialah kombinasi border-radius ORGANIK `.zpkw` (`38% 42% 40%
-   44%/46% 40% 48% 42%`, gaya "sketch" tangan) + box-decoration-break
-   merentas >1 baris — BUKAN latar+wrap per se. `_pdfDeboxOverlongKeywords(container)`
-   (dipanggil SELEPAS kontena cetak dilekap, hanya dlm mod 2 lajur)
-   ukur lebar SEBENAR (nowrap kekal aktif semasa ukur) setiap
-   `.zpkw-tokoh`/`.zpkw-tempat` (skop KHUSUS dua kelas ni sahaja —
-   arahan pengguna eksplisit "khusus untuk nama orang atau tempat yg
-   sangat panjang sahaja"); kalau melebihi ambang selamat (292px),
-   KEKALKAN latar/warna/padding (JANGAN declass — beza drpd Percubaan
-   3), cuma tukar `border-radius:0` (segi empat tulen) +
-   `box-decoration-break:clone` (SETIAP baris dpt kotak+padding
-   SENDIRI konsisten ikut lebar teks sebenar, bukan regangkan penuh
-   ke tepi kontena spt `slice` lalai) + `white-space:normal` (benar
-   wrap). Diuji semula box-decoration-break `slice` vs `clone` DENGAN
-   `border-radius:0` — KEDUA-DUA varian kini BERSIH (0.000 pinkRatio
-   smear-check, drpd >40% sblm ni dgn border-radius organik) — geometri
-   segi empat tiada lengkung utk html2canvas-pro salah anggar; `clone`
-   dipilih drpd `slice` sbb visual lebih kemas (kotak konsisten
-   per-baris, bukan regang ke tepi). Disahkan piksel+visual (crop
-   kanvas sebenar, enjin PDF sebenar): kotak pink kekal, kelihatan
-   TEPAT spt kesan pen highlighter merentas 2-3 baris, SIFAR
-   overflow keluar sempadan kad merentas 7 halaman Bab 4 (277
-   `.zpkw`/`.zpbloc` kesemuanya), SIFAR blob/smear sebenar (variasi
-   piksel kecil yg dikesan drpd semakan pertama disahkan POSITIF-PALSU
-   — cuma padding/anti-alias tepi kotak yg memang sengaja ada sekarang,
-   bukan corruption).
+   empat.
+
+   **Percubaan 4** (dibuang): `border-radius:0` (segi empat tulen) +
+   `box-decoration-break:clone` (CSS uruskan kotak per-baris) — PUNCA
+   SEBENAR blob bug disahkan sbg kombinasi border-radius ORGANIK
+   `.zpkw` (`38% 42% 40% 44%/46% 40% 48% 42%`, gaya "sketch" tangan)
+   + box-decoration-break merentas >1 baris, BUKAN latar+wrap per se
+   — geometri segi empat BERSIH sepenuhnya (0.000 pinkRatio smear-
+   check, drpd >40% dgn border-radius organik). TAPI pengguna jelaskan
+   lagi: satu kotak highlighter patut muat TINGGI SATU BARIS sahaja,
+   bukan gabung/sentuh baris ke-2 tanpa jurang (nampak macam SATU
+   blok 2-baris, bukan 2 lakaran highlighter berasingan). Diuji CSS
+   line-height ibu bapa besar (`2.6`) + line-height span sendiri kecil
+   (`1`) — corak piawai jurang antara baris — BERJAYA dlm pelayar
+   BIASA (screenshot native, tanpa html2canvas), TAPI html2canvas-pro
+   ABAIKAN line-height span sendiri semasa lukis serpihan `clone`
+   (guna tinggi kotak garis PENUH drpd ibu bapa, bukan tinggi teks
+   sebenar span) — disahkan kekal SIFAR jurang walau line-height
+   diuji sehingga `3.0`. Ni had ENJIN html2canvas-pro (bukan isu CSS),
+   penyelesaian CSS semata-mata MUSTAHIL utk kes ni.
+
+   **Fix (kekal)**: pindah drpd CSS box-decoration-break kpd kiraan
+   JS terus dlm `_pdfDeboxOverlongKeywords(container)` (dipanggil
+   SELEPAS kontena cetak dilekap, hanya dlm mod 2 lajur, skop KHUSUS
+   `.zpkw-tokoh`/`.zpkw-tempat` — arahan pengguna eksplisit "khusus
+   utk nama orang atau tempat yg sangat panjang sahaja"; kalau lebar
+   nowrap melebihi ambang selamat 292px): ukur `el.getClientRects()`
+   (SATU rect setiap baris SEBENAR selepas `white-space:normal`
+   diaktifkan, drpd susun atur PELAYAR tulen, bukan anggaran) & lukis
+   SATU `<span>` highlight BERASINGAN per baris (`position:absolute`,
+   warna latar disalin via `getComputedStyle` SEBELUM latar asal `el`
+   digugurkan, disisip SEBELUM `el` dlm DOM supaya urutan susun lukis
+   CSS2.1 letak highlight di BELAKANG teks — `el` & highlight span
+   sama-sama `position:relative` utk masuk kumpulan "positioned",
+   urutan DOM tentukan lapisan), bukan bergantung pd box-decoration-
+   break/clone CSS langsung — elak SEPENUHNYA had enjin di atas sbb
+   setiap kotak cetakan span RATA tunggal, TIADA multi-baris/wrap-
+   decoration utk html2canvas-pro salah anggar.
+
+   Tinggi kotak setiap baris DISUSUTKAN drpd tinggi baris PENUH
+   `getClientRects()` (dipusatkan menegak dlm baris) — nisbah
+   `LINE_SCALE_H` diuji beberapa peringkat: 0.65 (jurang paling
+   jelas, TAPI huruf ascender/descender cth. "g/y/p/j" nyaris
+   tersentuh sempadan kotak — pengguna minta lebih ruang lebihan,
+   "bukan tepat sama saiz dengan ketinggian huruf") → 0.88 (ruang
+   selesa sekeliling huruf, TAPI jurang antara baris jadi nipis/nyaris
+   hilang) → **0.78 dipilih** (imbangan terbaik: ruang lebihan jelas
+   sekeliling ascender/descender, jurang antara baris kekal jelas
+   kelihatan). Lebar (padX) kekal `0.3em` drpd padding `.zpkw` asal.
+
+   Disahkan piksel+visual (crop kanvas sebenar, enjin PDF sebenar,
+   ujian huruf ascender/descender "Gagap Payung Jujur"): SETIAP baris
+   frasa panjang kini dpt lakaran highlighter TERSENDIRI dgn jurang
+   jelas antara baris (bukan lagi 1 blok 2-baris bersambung), ruang
+   lebihan selesa sekeliling huruf, SIFAR overflow keluar sempadan
+   kad SEBENAR (semak vs sempadan LUAR kad — encroach ~3-4px ke dlm
+   padding sedia ada kad, TAK PERNAH langgar sempadan kad kelihatan)
+   merentas 7 halaman Bab 4, SIFAR regresi pagination/bisection (2
+   kes sedia ada bab-4-2/bab-4-4 kekal keputusan SAMA drpd fix
+   sebelum ni).
 
 2. **Kad garis masa individu (`.zp-tl-card`) TIADA perlindungan
    berasingan drpd `_collectPdfBlockRanges()`** — hanya `.zp-tl`
