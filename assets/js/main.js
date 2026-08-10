@@ -3973,7 +3973,78 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     'Unlocked': '/assets/openmoji/unlocked.svg',
     'Woman teacher': '/assets/openmoji/woman-teacher.svg',
     'Woman with headscarf': '/assets/openmoji/woman-with-headscarf.svg',
-    'Wood': '/assets/openmoji/wood.svg'
+    'Wood': '/assets/openmoji/wood.svg',
+    // Bab 3 (+68 konsep baharu, liputi 100% konsep unik Bab 3 — rujuk
+    // CLAUDE.md §"Susun Atur 2 Lajur" utk sebab liputan penuh WAJIB
+    // sebelum luaskan skop 2-lajur ke bab baharu).
+    'Airplane': '/assets/openmoji/airplane.svg',
+    'Alarm clock': '/assets/openmoji/alarm-clock.svg',
+    'Ant': '/assets/openmoji/ant.svg',
+    'Backhand index pointing right': '/assets/openmoji/backhand-index-pointing-right.svg',
+    'Beach with umbrella': '/assets/openmoji/beach-with-umbrella.svg',
+    'Bird': '/assets/openmoji/bird.svg',
+    'Black circle': '/assets/openmoji/black-circle.svg',
+    'Bomb': '/assets/openmoji/bomb.svg',
+    'Bread': '/assets/openmoji/bread.svg',
+    'Chart decreasing': '/assets/openmoji/chart-decreasing.svg',
+    'Chart increasing with yen': '/assets/openmoji/chart-increasing-with-yen.svg',
+    'Chequered flag': '/assets/openmoji/chequered-flag.svg',
+    'Cityscape': '/assets/openmoji/cityscape.svg',
+    'Coin': '/assets/openmoji/coin.svg',
+    'Cooked rice': '/assets/openmoji/cooked-rice.svg',
+    'Crossed flags': '/assets/openmoji/crossed-flags.svg',
+    'Crying face': '/assets/openmoji/crying-face.svg',
+    'Deciduous tree': '/assets/openmoji/deciduous-tree.svg',
+    'Derelict house': '/assets/openmoji/derelict-house.svg',
+    'Detective': '/assets/openmoji/detective.svg',
+    'Disappointed face': '/assets/openmoji/disappointed-face.svg',
+    'Face with steam from nose': '/assets/openmoji/face-with-steam-from-nose.svg',
+    'Four oclock': '/assets/openmoji/four-oclock.svg',
+    'Fuel pump': '/assets/openmoji/fuel-pump.svg',
+    'Herb': '/assets/openmoji/herb.svg',
+    'Hospital': '/assets/openmoji/hospital.svg',
+    'Hot face': '/assets/openmoji/hot-face.svg',
+    'Kaaba': '/assets/openmoji/kaaba.svg',
+    'Kimono': '/assets/openmoji/kimono.svg',
+    'Lion': '/assets/openmoji/lion.svg',
+    'Microbe': '/assets/openmoji/microbe.svg',
+    'Military helmet': '/assets/openmoji/military-helmet.svg',
+    'Motorcycle': '/assets/openmoji/motorcycle.svg',
+    'Musical notes': '/assets/openmoji/musical-notes.svg',
+    'National park': '/assets/openmoji/national-park.svg',
+    'No entry': '/assets/openmoji/no-entry.svg',
+    'Oil drum': '/assets/openmoji/oil-drum.svg',
+    'Oncoming police car': '/assets/openmoji/oncoming-police-car.svg',
+    'Parachute': '/assets/openmoji/parachute.svg',
+    'Passenger ship': '/assets/openmoji/passenger-ship.svg',
+    'Person walking': '/assets/openmoji/person-walking.svg',
+    'Pick': '/assets/openmoji/pick.svg',
+    'Pill': '/assets/openmoji/pill.svg',
+    'Pine decoration': '/assets/openmoji/pine-decoration.svg',
+    'Radio': '/assets/openmoji/radio.svg',
+    'Salt': '/assets/openmoji/salt.svg',
+    'Seedling': '/assets/openmoji/seedling.svg',
+    'Shopping cart': '/assets/openmoji/shopping-cart.svg',
+    'Skull': '/assets/openmoji/skull.svg',
+    'Small airplane': '/assets/openmoji/small-airplane.svg',
+    'Small blue diamond': '/assets/openmoji/small-blue-diamond.svg',
+    'Snow-capped mountain': '/assets/openmoji/snow-capped-mountain.svg',
+    'Snowflake': '/assets/openmoji/snowflake.svg',
+    'Sports medal': '/assets/openmoji/sports-medal.svg',
+    'Stop sign': '/assets/openmoji/stop-sign.svg',
+    'Stopwatch': '/assets/openmoji/stopwatch.svg',
+    'Straight ruler': '/assets/openmoji/straight-ruler.svg',
+    'Sunrise': '/assets/openmoji/sunrise.svg',
+    'Sushi': '/assets/openmoji/sushi.svg',
+    'Three oclock': '/assets/openmoji/three-oclock.svg',
+    'Tiger face': '/assets/openmoji/tiger-face.svg',
+    'Tornado': '/assets/openmoji/tornado.svg',
+    'Triangular flag': '/assets/openmoji/triangular-flag.svg',
+    'Two oclock': '/assets/openmoji/two-oclock.svg',
+    'Up arrow': '/assets/openmoji/up-arrow.svg',
+    'Water pistol': '/assets/openmoji/water-pistol.svg',
+    'Worried face': '/assets/openmoji/worried-face.svg',
+    'Yen banknote': '/assets/openmoji/yen-banknote.svg'
   };
 
   function _pdfEmojiSrc(originalSrc) {
@@ -4019,6 +4090,14 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     }
     var m = (node.className || '').match(/\bkw-(tokoh|masa|tempat|peristiwa|pertubuhan|gerakan|kerajaan|pentadbiran|perjanjian|istilah|karya)\b/);
     if (m) return '<span class="zpkw zpkw-' + m[1] + '">' + _escPdfHtml(node.textContent) + '</span>';
+    // Chip blok PD1/PD2 (.bloc-chip-central/entente/axis/allies) — badan
+    // chip ni BOLEH ada anak (bendera <img> + teks, cth. "🇩🇪 Jerman"),
+    // beza drpd kw-* span yg polos teks sahaja, jadi guna _kwHtml rekursif
+    // (freeze:true — bukan konteks tajuk, elak logik potong emoji hadapan/
+    // belakang yg tak relevan pd chip kecil ni) supaya bendera dlm chip
+    // turut render, bukan _escPdfHtml(textContent) semata (akan buang img).
+    var bm = (node.className || '').match(/\bbloc-chip-(central|entente|axis|allies)\b/);
+    if (bm) return '<span class="zpbloc zpbloc-' + bm[1] + '">' + _kwHtml(node, { freeze: true }) + '</span>';
     return _kwHtml(node, { freeze: !!o.freeze });
   }
 
@@ -4109,7 +4188,22 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       } else if (cls.indexOf('paper-chip-list') !== -1) {
         var hasSentence = node.querySelector('.paper-chip-sentence') !== null;
         if (hasSentence) {
-          node.querySelectorAll('.paper-chip').forEach(function(c) {
+          // `.paper-chip-sentence` SAHAJA — bukan `.paper-chip` generik.
+          // Ayat penuh (cth. "...ialah Kuasa Paksi dan Kuasa Bersekutu.")
+          // selalu ada chip blok PD1/PD2 (.bloc-chip-axis/allies dll.)
+          // TERSARANG di dlm ayat (`span.paper-chip.bloc-chip-axis` dlm
+          // `div.paper-chip.paper-chip-sentence`) — DUA lapisan SAMA-SAMA
+          // padan `.paper-chip`. `querySelectorAll('.paper-chip')` (versi
+          // lama) padan KEDUA-DUA lapisan, hasilkan chip bersarang tu
+          // dicetak DUA KALI: sekali sbg sebahagian ayat penuh (betul),
+          // sekali lagi sbg baris `.zp-sentence` BERASINGAN & POLOS (tiada
+          // warna blok, sbb _kwHtml rekursif ayat induk dah "guna" konteks
+          // warnanya). Disahkan pengguna (tangkapan skrin bab-3-3.html):
+          // "Kuasa Paksi"/"Kuasa Bersekutu"/"Jerman" muncul sbg baris
+          // pendua tanpa warna. `.paper-chip-sentence` (bukan `.paper-chip`)
+          // hanya padan lapisan LUAR (disahkan tiada chip-list corpus
+          // campur ayat+bukan-ayat sbg adik-beradik terus — rujuk CLAUDE.md).
+          node.querySelectorAll('.paper-chip-sentence').forEach(function(c) {
             h += '<p class="zp-sentence">' + _kwHtml(c) + '</p>';
           });
         } else {
@@ -4373,6 +4467,20 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
         });
       } else if (cls.indexOf('hero-actions') !== -1) {
         /* butang navigasi bawah halaman — tiada dalam PDF */
+      } else if (cls.indexOf('nota-feedback') !== -1) {
+        // Widget "Apa pendapat anda tentang nota ini?" (suka/kongsi/muat
+        // turun PDF + reaksi emoji) — UI interaktif SAHAJA, tiada makna
+        // dlm PDF cetak. Ditemui semasa sahkan liputan ikon Bab 3: widget
+        // ni (disuntik JS, `insertBefore.parentNode.insertBefore(widget,
+        // insertBefore)` — insertBefore ialah `.note-subsection`, jadi
+        // widget jatuh sbg ANAK LANGSUNG `.note-subsection` lain, bukan
+        // saudara sejajar spt disangka) jatuh ke fallback generik
+        // `_bodyHtml(child)` tanpa cabang eksplisit ni, seret 2 ikon
+        // reaksi ("Thinking face"/"Confused face") ke print output SETIAP
+        // halaman — pra-wujud, bukan sebab luaskan skop 2-lajur, tapi
+        // hanya ketara bila diaudit liputan ikon (widget selalu SAMA
+        // 4 ikon reaksi, jadi kekal "tersembunyi" kalau ikon tu kebetulan
+        // sudah dipeta drpd konsep lain).
       } else {
         /* Bungkus baharu / blok tidak dikenali: elak kandungan hilang (cth. .paper-timeline dalam div pembungkus) */
         h += _bodyHtml(child);
@@ -4466,7 +4574,11 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   var PDF_2COL_COL_WIDTH_PX = Math.round(PDF_2COL_COL_WIDTH_MM * PDF_BASE_DENSITY);
 
   function _pdfIsTwoColumnScope() {
-    return /\/notes\/bab-[12](-\d+)?\.html$/i.test(window.location.pathname);
+    // Diluaskan drpd Bab 1-2 asal ke +Bab 3 — WAJIB lengkapkan liputan
+    // HZ_PDF_OPENMOJI_MAP 100% konsep unik Bab 3 dulu (rujuk komen di
+    // atas takrifan map, disahkan 0 konsep hilang sebelum baris ni diubah)
+    // supaya PDF Bab 3 tak papar campuran gaya OpenMoji + Fluent.
+    return /\/notes\/bab-[123](-\d+)?\.html$/i.test(window.location.pathname);
   }
 
   function _getPrintCss(mode, twoCol) {
@@ -4601,6 +4713,19 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       '#zym-pr .zpkw-perjanjian{color:#731b4a;background:#f9bcdd}',
       '#zym-pr .zpkw-istilah{color:#1b736d;background:#bcf9f5}',
       '#zym-pr .zpkw-karya{color:#1b5c73;background:#bce9f9}',
+      // Chip blok PD1/PD2 (.bloc-chip-central/entente/axis/allies, bab-3-2
+      // s/d bab-3-8) — sblm ni langsung TIADA warna dlm PDF (teks polos,
+      // sbb bloc-chip-* bukan sebahagian sistem 11 kelas kw-* kanonik),
+      // walhal ia legenda warna eksplisit pd laman hidup ("Panduan warna
+      // pihak perang"). Palet SAMA drpd assets/css/keywords.css mod
+      // terang (bukan gradien — gradien lebih berisiko dgn html2canvas,
+      // rujuk sejarah pepijat html2canvas §"Eksport PDF" CLAUDE.md; warna
+      // rata cukup utk bezakan blok pd cetakan).
+      '#zym-pr .zpbloc{padding:0.05em 0.35em;border-radius:5px;font-weight:600}',
+      '#zym-pr .zpbloc-central{color:#334155;background:#e2e8f0}',
+      '#zym-pr .zpbloc-entente{color:#14532d;background:#dcfce7}',
+      '#zym-pr .zpbloc-axis{color:#991b1b;background:#fee2e2}',
+      '#zym-pr .zpbloc-allies{color:#1d4ed8;background:#dbeafe}',
       // Saiz 1em; imej duduk sedikit lebih rendah berbanding rentak teks yang dibungkus .zp-txt-up
       // Saiz 1.3em (dulu 1em — pengguna lapor ikon "terlalu kecil"). `top` nudge
       // LAMA (0.06em) DIBUANG: ia sebahagian pampasan utk enjin html2canvas 1.4.1
@@ -4631,6 +4756,9 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
         // tujuan "jimat dakwat". Teks TEBAL sahaja dikekalkan sbg isyarat visual
         // (pelajar boleh highlight sendiri ikut cita rasa pd kertas cetak).
         '#zym-pr.zp-mode-eco .zpkw,#zym-pr.zp-mode-eco [class*="zpkw-"]{color:#1e293b!important;font-weight:700!important;padding:0!important;background:transparent!important;white-space:nowrap!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}',
+        // Chip blok PD1/PD2 ikut keputusan SAMA drpd zpkw di atas (§"Mod
+        // Jimat Dakwat" CLAUDE.md) — gugur latar, kekal teks tebal.
+        '#zym-pr.zp-mode-eco .zpbloc,#zym-pr.zp-mode-eco [class*="zpbloc-"]{color:#1e293b!important;font-weight:700!important;padding:0!important;background:transparent!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}',
         '#zym-pr.zp-mode-eco .zp-chapter-lbl,#zym-pr.zp-mode-eco .zp-section-badge{background:#4b5563!important;color:#fff!important}',
         '#zym-pr.zp-mode-eco .zp-hero{border-bottom-color:#9ca3af!important}',
         '#zym-pr.zp-mode-eco .zp-subtopik{color:#52525b!important}',
