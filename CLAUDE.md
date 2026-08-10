@@ -1569,6 +1569,31 @@ Disahkan via Playwright merentas kesemua 4 subtopik (`bab-8-1` s/d
 overflow, sifar ralat JS, penjanaan PDF penuh berjaya 2-4 muka surat
 setiap subtopik.
 
+**Diluaskan ke Bab 9** — `_pdfIsTwoColumnScope()` skop kini `bab-[1-9]`
+(regex `[1-9]` tunggal, bukan senarai `[123456789]` panjang — ELAK
+padan `bab-10*` scr tak sengaja: aksara tunggal diikuti `(-\d+)?\.html$`
+wajib, "1" dlm "bab-10.html" gagal padan sbb aksara SELEPAS "1" ialah
+"0" bukan "-"/".html" terus, disahkan via ujian regex eksplisit
+merentas kelima-lima corak laluan sebelum push). WAJIB liputan
+`HZ_PDF_OPENMOJI_MAP` 100% konsep unik Bab 9 dulu, +1 konsep baharu
+drpd 48 unik digunakan, 312 kesemuanya — 47/48 SUDAH sedia ada drpd
+liputan Bab 1-8. 1 kes edge annotation OpenMoji: Fluent "Building"
+TIADA annotation "building" langsung dlm OpenMoji (bukan emoji rasmi
+berasingan) — dipetakan ke konsep Unicode yg SAMA, "office building"
+(U+1F3E2), padan konteks penggunaan sumber (ikon generik institusi/
+badan awam, cth. "badan awam", "Dewan Perniagaan Melayu"). **AWAS —
+JANGAN keliru dgn amaran §"Ikon Emoji" atas ttg kunci `"building"`
+PECAH di CDN** — amaran tu ttg SISTEM BERBEZA (`scripts/emoji_map.py`,
+client-side Fluent CDN penjanaan HTML statik), bukan `HZ_PDF_
+OPENMOJI_MAP` (self-host OpenMoji khusus PDF) di sini; svg disahkan
+wujud & sah (`head -c 200`) sebelum push, bukan sekadar percaya nama.
+
+Bab 9 TIADA komponen baharu — semua corak (chip/accordion/kingdom)
+guna pengendali PDF sedia ada tanpa kod tambahan. Disahkan via
+Playwright merentas kesemua 4 subtopik (`bab-9-1` s/d `bab-9-4`):
+sifar ikon gagal, sifar `.zpkw-tokoh`/`.zpkw-tempat` overflow, sifar
+ralat JS, penjanaan PDF penuh berjaya 2-3 muka surat setiap subtopik.
+
 ## Eksport PDF — Chip blok PD1/PD2 (`.bloc-chip-*`) pendua & tiada warna
 
 Pengguna lapor (tangkapan skrin pratonton PDF `bab-3-3.html`, kad
