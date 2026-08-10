@@ -1180,26 +1180,38 @@ lebih relevan drpd sekadar liputan ikon:
    blob melekit merentasi SELURUH baki lebar BARIS PERTAMA (diuji
    box-decoration-break lalai `slice` & `clone` eksplisit, KEDUA-DUA
    tetap rosak, >40% kawasan smear-check tetap warna latar) — DIBUANG.
-   **Fix (kekal)**: `_pdfDeboxOverlongKeywords(container)` (dipanggil
-   SELEPAS kontena cetak dilekap, hanya dlm mod 2 lajur) ukur lebar
-   SEBENAR (nowrap kekal aktif semasa ukur) setiap `.zpkw-tokoh`/
-   `.zpkw-tempat` (skop KHUSUS dua kelas ni sahaja — arahan pengguna
-   eksplisit "khusus untuk nama orang atau tempat yg sangat panjang
-   sahaja", elak declass kelas kw-*/zpbloc lain walau secara teori
-   boleh panjang jugak); kalau melebihi ambang selamat (292px), GUGUR
-   TERUS latar/padding/border-radius (bukan kecilkan fon) & BENARKAN
-   wrap (`white-space:normal`) — corak SAMA drpd gaya mod "Jimat
-   Dakwat" sedia ada (teks BOLD BERWARNA tanpa kotak), yg SUDAH
-   disahkan selamat wrap normal (teks polos site-wide, tiada latar
-   span >1 baris langsung). Warna spesifik kelas (cth. `#731b25`
-   kw-tokoh) KEKAL drpd rule CSS asal (kelas TAK dibuang, cuma
-   override background/padding/border-radius/white-space via inline
-   style — specificity inline menang drpd class). Disahkan piksel+
-   visual (crop kanvas sebenar): SIFAR overflow keluar sempadan kad
-   merentas 7 halaman Bab 4 (277 `.zpkw`/`.zpbloc` kesemuanya), SIFAR
-   blob/smear (variasi piksel "tak normal" yg dikesan awal disahkan
-   POSITIF-PALSU — cuma teks biasa yg sambung terus lepas frasa
-   dideclass pd baris SAMA, cth. "...Sulaiman Shah**.**" — bukan bug).
+   **Percubaan 3** (gugur TERUS latar/padding/border-radius, teks
+   bold berwarna tanpa kotak): BERFUNGSI (sifar smear), tapi pengguna
+   cadang lebih baik — kekalkan latar drpd "kesan pen highlighter"
+   (SEGI EMPAT, bukan oval/organik), yg secara semula jadi "terpotong"
+   bersih bila teks wrap, sbb kesan highlighter sebenar memang segi
+   empat. **Fix (kekal, disahkan lebih baik)**: PUNCA SEBENAR blob bug
+   ialah kombinasi border-radius ORGANIK `.zpkw` (`38% 42% 40%
+   44%/46% 40% 48% 42%`, gaya "sketch" tangan) + box-decoration-break
+   merentas >1 baris — BUKAN latar+wrap per se. `_pdfDeboxOverlongKeywords(container)`
+   (dipanggil SELEPAS kontena cetak dilekap, hanya dlm mod 2 lajur)
+   ukur lebar SEBENAR (nowrap kekal aktif semasa ukur) setiap
+   `.zpkw-tokoh`/`.zpkw-tempat` (skop KHUSUS dua kelas ni sahaja —
+   arahan pengguna eksplisit "khusus untuk nama orang atau tempat yg
+   sangat panjang sahaja"); kalau melebihi ambang selamat (292px),
+   KEKALKAN latar/warna/padding (JANGAN declass — beza drpd Percubaan
+   3), cuma tukar `border-radius:0` (segi empat tulen) +
+   `box-decoration-break:clone` (SETIAP baris dpt kotak+padding
+   SENDIRI konsisten ikut lebar teks sebenar, bukan regangkan penuh
+   ke tepi kontena spt `slice` lalai) + `white-space:normal` (benar
+   wrap). Diuji semula box-decoration-break `slice` vs `clone` DENGAN
+   `border-radius:0` — KEDUA-DUA varian kini BERSIH (0.000 pinkRatio
+   smear-check, drpd >40% sblm ni dgn border-radius organik) — geometri
+   segi empat tiada lengkung utk html2canvas-pro salah anggar; `clone`
+   dipilih drpd `slice` sbb visual lebih kemas (kotak konsisten
+   per-baris, bukan regang ke tepi). Disahkan piksel+visual (crop
+   kanvas sebenar, enjin PDF sebenar): kotak pink kekal, kelihatan
+   TEPAT spt kesan pen highlighter merentas 2-3 baris, SIFAR
+   overflow keluar sempadan kad merentas 7 halaman Bab 4 (277
+   `.zpkw`/`.zpbloc` kesemuanya), SIFAR blob/smear sebenar (variasi
+   piksel kecil yg dikesan drpd semakan pertama disahkan POSITIF-PALSU
+   — cuma padding/anti-alias tepi kotak yg memang sengaja ada sekarang,
+   bukan corruption).
 
 2. **Kad garis masa individu (`.zp-tl-card`) TIADA perlindungan
    berasingan drpd `_collectPdfBlockRanges()`** — hanya `.zp-tl`
