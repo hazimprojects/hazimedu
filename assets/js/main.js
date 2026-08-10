@@ -4772,7 +4772,30 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       // Disahkan pengguna (tangkapan skrin bab-3-3.html mod 2 lajur):
       // "Kuasa Paksi" dlm kad Ringkasan papar kotak pecah/melimpah bila
       // terpaksa lipat. nowrap paksa seluruh frasa berpindah SEKALI GUS.
-      '#zym-pr .zpbloc{padding:0.05em 0.35em;border-radius:5px;font-weight:600;white-space:nowrap}',
+      //
+      // display:inline-block WAJIB — beza drpd .zpkw (kekal `inline` biasa,
+      // tiada child <img>). .zpbloc BOLEH ada anak <img> bendera (rujuk
+      // _kwHtmlOne, freeze:true rekursif) — bila span induk `display:inline`
+      // (lalai) ADA background-color, html2canvas-pro melukis latar tapi
+      // GAGAL SENYAP melukis <img> anak di atasnya (kanvas hasil = latar
+      // rata polos di lokasi imej, SIFAR piksel imej, walau DOM/computed
+      // style/pratonton pelayar biasa semua betul & imej kelihatan penuh).
+      // Disahkan piksel demi piksel (bab-3-2.html "Pada awalnya melibatkan
+      // Jerman, Austria-Hungary..."): sampel kawasan penuh setiap <img>
+      // dlm kanvas tertangkap = SIFAR variasi warna (100% #e2e8f0, warna
+      // latar zpbloc-central sahaja) walhal pratonton pelayar terus (screenshot
+      // DOM sebelum html2canvas panggil) papar bendera penuh & jelas. Punca
+      // BUKAN border-radius/nowrap/font-weight (diuji satu-satu, tiada
+      // kesan) — punca ialah kombinasi span `inline` + background + anak
+      // <img>; `display:inline-block` (atau `position:relative`, turut
+      // diuji berjaya, tapi inline-block lebih konsisten dgn `.zp-chip`
+      // dll. sedia ada) beri span kotak susun-atur SEBENAR, betulkan
+      // urutan lukisan html2canvas sepenuhnya (disahkan SIFAR variasi →
+      // variasi penuh pd kesemua sampel selepas fix). Imej "Itali" dlm
+      // ayat sama (span `.paper-chip` TANPA `bloc-chip-*`, BUKAN dibalut
+      // `.zpbloc`) sentiasa render betul drpd awal — bukti tambahan bug
+      // khusus corak span-inline-berlatar+anak-img ni, bukan isu imej am.
+      '#zym-pr .zpbloc{display:inline-block;padding:0.05em 0.35em;border-radius:5px;font-weight:600;white-space:nowrap}',
       '#zym-pr .zpbloc-central{color:#334155;background:#e2e8f0}',
       '#zym-pr .zpbloc-entente{color:#14532d;background:#dcfce7}',
       '#zym-pr .zpbloc-axis{color:#991b1b;background:#fee2e2}',
@@ -7164,7 +7187,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=560').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=561').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
