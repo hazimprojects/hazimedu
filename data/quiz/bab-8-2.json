@@ -1,0 +1,216 @@
+{
+  "id": "8-2",
+  "title": "Proses Pilihan Raya Umum Pertama",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Bilakah Pilihan Raya Umum Pertama diadakan di Persekutuan Tanah Melayu?",
+      "options": [
+        "27 Julai 1955",
+        "1 Februari 1954",
+        "18–19 Ogos 1954",
+        "31 Ogos 1955"
+      ],
+      "answer": "27 Julai 1955",
+      "explanation": "Pilihan Raya Umum Pertama diadakan pada 27 Julai 1955.",
+      "tip": "27 Julai 1955 = Hari Mengundi PRU Pertama."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Berapakah kerusi yang dimenangi Parti Perikatan dalam Pilihan Raya Umum 1955?",
+      "options": [
+        "51 daripada 52 kerusi",
+        "226 daripada 268 kerusi",
+        "12 daripada 12 kerusi",
+        "9 daripada 9 kerusi"
+      ],
+      "answer": "51 daripada 52 kerusi",
+      "explanation": "Parti Perikatan memenangi 51 daripada 52 kerusi dalam Pilihan Raya Umum 1955.",
+      "tip": "51/52 kerusi = kemenangan Perikatan 1955."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah yang dilantik oleh British untuk menyelia urusan Pilihan Raya Umum 1955?",
+      "options": [
+        "T.E. Smith",
+        "Sir Donald MacGillivray",
+        "Oliver Lyttelton",
+        "Lord Ogmore"
+      ],
+      "answer": "T.E. Smith",
+      "explanation": "T.E. Smith dilantik oleh British untuk menyelia urusan Pilihan Raya Umum 1955 secara sistematik.",
+      "tip": "T.E. Smith = penyelia pilihan raya."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Bilakah Jawatankuasa Pilihan Raya ditubuhkan?",
+      "options": [
+        "1 Februari 1954",
+        "21 April 1954",
+        "14 Mei 1954",
+        "18 Oktober 1954"
+      ],
+      "answer": "1 Februari 1954",
+      "explanation": "Jawatankuasa Pilihan Raya ditubuhkan pada 1 Februari 1954 dengan keanggotaan seramai 46 orang ahli.",
+      "tip": "1 Feb 1954 = Jawatankuasa Pilihan Raya."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah Tunku Abdul Rahman berangkat ke London pada 1954?",
+      "options": [
+        "Untuk merundingkan supaya 3/5 daripada anggota Majlis Perundangan Persekutuan (MPP) dipilih melalui pilihan raya",
+        "Untuk mengumumkan kemenangan Parti Perikatan dalam Pilihan Raya Umum 1955",
+        "Untuk melantik T.E. Smith sebagai penyelia Pilihan Raya Umum 1955",
+        "Untuk menandatangani Rang Undang-Undang Pilihan Raya Persekutuan secara rasmi di London"
+      ],
+      "answer": "Untuk merundingkan supaya 3/5 daripada anggota Majlis Perundangan Persekutuan (MPP) dipilih melalui pilihan raya",
+      "explanation": "Tunku Abdul Rahman berangkat ke London pada April 1954 bersama Tan Cheng Lock dan T.H. Tan untuk merundingkan supaya 3/5 anggota MPP dipilih melalui pilihan raya.",
+      "tip": "London 1954 = runding 3/5 ahli MPP dipilih."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah Pilihan Raya Persekutuan hanya dapat diadakan pada 1955 walaupun rundingan bermula pada 1954?",
+      "options": [
+        "Kerana persetujuan akhir (52 orang ahli dipilih) hanya dicapai pada awal Julai 1954, tidak mencukupi masa untuk aturan sebelum tahun itu tamat",
+        "Kerana Raja-raja Melayu meminta pilihan raya ditangguhkan sehingga selepas MPP 1948 tamat penggal perkhidmatannya",
+        "Kerana Tunku Abdul Rahman menangguhkan rundingan dengan Oliver Lyttelton ke tahun 1955",
+        "Kerana Jawatankuasa Pilihan Raya masih belum ditubuhkan sehingga awal 1955"
+      ],
+      "answer": "Kerana persetujuan akhir (52 orang ahli dipilih) hanya dicapai pada awal Julai 1954, tidak mencukupi masa untuk aturan sebelum tahun itu tamat",
+      "explanation": "Oleh sebab persetujuan akhir mengenai 52 orang ahli MPP yang dipilih hanya dicapai pada awal Julai 1954, Pilihan Raya Persekutuan hanya dapat diadakan pada 1955.",
+      "tip": "Persetujuan lewat (Julai 1954) → PRU baru 1955."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah kemenangan besar Parti Perikatan dalam Pilihan Raya Umum 1955 penting kepada usaha ke arah kemerdekaan?",
+      "options": [
+        "Kerana ia meyakinkan British bahawa rakyat menyokong kerjasama antara kaum dan Tanah Melayu mampu ditadbir oleh pemimpin tempatan",
+        "Kerana ia mendorong penubuhan semula Sistem Ahli untuk menggantikan MPP",
+        "Kerana ia menyebabkan pilihan raya tempatan di Sarawak dan Sabah dibatalkan",
+        "Kerana ia membolehkan pegawai British menambah bilangan portfolio yang dipegang mereka dalam MPP"
+      ],
+      "answer": "Kerana ia meyakinkan British bahawa rakyat menyokong kerjasama antara kaum dan Tanah Melayu mampu ditadbir oleh pemimpin tempatan",
+      "explanation": "Kemenangan besar Parti Perikatan meyakinkan British bahawa rakyat menyokong kerjasama antara kaum dan Tanah Melayu mampu ditadbir oleh pemimpin tempatan, langkah penting ke arah kemerdekaan.",
+      "tip": "Kemenangan Perikatan = yakinkan British utk merdeka."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Dua bentuk susunan MPP dicadangkan oleh Jawatankuasa Pilihan Raya — satu mencadangkan 60 orang dipilih melalui pilihan raya, satu lagi hanya 44 orang. Tunku Abdul Rahman dan Parti Perikatan memilih bentuk manakah?",
+      "options": [
+        "Bentuk A",
+        "Bentuk B",
+        "Bentuk C",
+        "Kedua-dua bentuk secara serentak"
+      ],
+      "answer": "Bentuk A",
+      "explanation": "Tunku Abdul Rahman dan Parti Perikatan memilih Bentuk A (60 dipilih pilihan raya), manakala Jawatankuasa Pilihan Raya memilih Bentuk B (44 dipilih).",
+      "tip": "Tunku & Perikatan pilih Bentuk A (60 dipilih)."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Seorang wanita muda berusia 23 tahun menanggalkan gelang emasnya untuk membiayai perjalanan rombongan Tunku ke London, mencetuskan sumbangan rakyat lain dalam satu selendang merah. Siapakah wanita ini?",
+      "options": [
+        "Siti Rahmah Kassim",
+        "Khatijah Sidek",
+        "Barbara D.R. Wentworth",
+        "Rosli Dhoby"
+      ],
+      "answer": "Siti Rahmah Kassim",
+      "explanation": "Siti Rahmah Kassim menanggalkan gelang emasnya untuk membiayai perjalanan rombongan Tunku ke London, mencetuskan Peristiwa Selendang Merah.",
+      "tip": "Siti Rahmah Kassim = Peristiwa Selendang Merah."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sebuah pilihan raya tempatan diadakan di Sarawak pada 1956, membahagikan Kuching kepada 9 kawasan, dengan William Tan dipilih sebagai Pengerusi pertama. Apakah nama majlis ini?",
+      "options": [
+        "Kuching Municipal Council (KMC)",
+        "Sibu Urban District Council (SUDC)",
+        "Majlis Perundangan Persekutuan (MPP)",
+        "Local Government Elections Ordinance"
+      ],
+      "answer": "Kuching Municipal Council (KMC)",
+      "explanation": "Pilihan raya Kuching Municipal Council (KMC) diadakan pada 1956, dengan William Tan dipilih sebagai Pengerusi pertama dan Ong Kee Hui sebagai Timbalan Pengerusi.",
+      "tip": "KMC (1956) = William Tan, Pengerusi pertama."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perbezaan antara Bentuk A dengan Bentuk B yang dicadangkan Jawatankuasa Pilihan Raya untuk susunan MPP?",
+      "options": [
+        "Bentuk A mencadangkan 60 orang dipilih pilihan raya dengan tarikh tidak lewat November 1954, manakala Bentuk B mencadangkan hanya 44 orang dipilih (tambahan 8 orang dilantik Pesuruhjaya Tinggi) tanpa tarikh tertentu ditetapkan",
+        "Bentuk A mencadangkan 44 orang dipilih pilihan raya, manakala Bentuk B mencadangkan 60 orang dipilih pilihan raya",
+        "Bentuk A dan Bentuk B kedua-duanya mencadangkan bilangan ahli dipilih yang sama, hanya berbeza dari segi tarikh pelaksanaan",
+        "Bentuk A dicadangkan oleh Jawatankuasa Pilihan Raya, manakala Bentuk B dicadangkan oleh Tunku Abdul Rahman"
+      ],
+      "answer": "Bentuk A mencadangkan 60 orang dipilih pilihan raya dengan tarikh tidak lewat November 1954, manakala Bentuk B mencadangkan hanya 44 orang dipilih (tambahan 8 orang dilantik Pesuruhjaya Tinggi) tanpa tarikh tertentu ditetapkan",
+      "explanation": "Bentuk A mencadangkan 60 orang dipilih dengan tarikh ditetapkan (tidak lewat November 1954), manakala Bentuk B mencadangkan hanya 44 orang dipilih dengan 8 orang tambahan dilantik Pesuruhjaya Tinggi, tanpa tarikh tertentu.",
+      "tip": "Bentuk A = 60 dipilih + tarikh. Bentuk B = 44 dipilih, tiada tarikh."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perkaitan antara pilihan raya tempatan di Kuching (1956)/Sibu (1957) dengan Pilihan Raya Umum 1955 di Semenanjung?",
+      "options": [
+        "Kedua-duanya sebahagian daripada usaha menyeluruh melatih rakyat pelbagai wilayah (Semenanjung, Sarawak) ke arah berkerajaan sendiri melalui penyertaan dalam sistem demokrasi, walaupun berlainan tahun dan skop",
+        "Kedua-duanya diadakan pada tarikh yang sama di bawah pentadbiran Jawatankuasa Pilihan Raya yang sama",
+        "Pilihan raya di Kuching dan Sibu digunakan sebagai templat rasmi bagi Pilihan Raya Umum 1955 di Semenanjung",
+        "Kedua-duanya tiada kaitan langsung kerana melibatkan wilayah dan sistem pentadbiran yang sama sekali berasingan"
+      ],
+      "answer": "Kedua-duanya sebahagian daripada usaha menyeluruh melatih rakyat pelbagai wilayah (Semenanjung, Sarawak) ke arah berkerajaan sendiri melalui penyertaan dalam sistem demokrasi, walaupun berlainan tahun dan skop",
+      "explanation": "Pilihan Raya Umum 1955 di Semenanjung dan pilihan raya tempatan di Kuching/Sibu kedua-duanya melatih rakyat pelbagai wilayah ke arah berkerajaan sendiri melalui penyertaan demokrasi, walaupun berlainan tahun dan skop.",
+      "tip": "PRU 1955 & Kuching/Sibu = latih rakyat pelbagai wilayah."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah PALING tepat menjelaskan mengapa rundingan Tunku ke London pada 1954 dianggap penting walaupun gagal mendapatkan tuntutan penuh 3/5 ahli MPP dipilih?",
+      "options": [
+        "Rundingan itu tetap membuka laluan kepada persetujuan akhir (52 orang dipilih) dan kelulusan Rang Undang-Undang Pilihan Raya, sekali gus meletakkan asas rasmi untuk Pilihan Raya Umum 1955 diadakan",
+        "Rundingan itu berjaya kerana British menerima terus cadangan Bentuk A pada pertemuan pertama dengan Tunku Abdul Rahman",
+        "Rundingan itu tidak memberi sebarang kesan kepada perkembangan Pilihan Raya Umum 1955",
+        "Rundingan itu penting kerana membolehkan Tunku Abdul Rahman menggantikan Sir Donald MacGillivray sebagai Pesuruhjaya Tinggi"
+      ],
+      "answer": "Rundingan itu tetap membuka laluan kepada persetujuan akhir (52 orang dipilih) dan kelulusan Rang Undang-Undang Pilihan Raya, sekali gus meletakkan asas rasmi untuk Pilihan Raya Umum 1955 diadakan",
+      "explanation": "Walaupun tuntutan 3/5 gagal, rundingan London membawa kepada persetujuan akhir (52 orang dipilih) dan kelulusan Rang Undang-Undang Pilihan Raya pada Ogos 1954, membuka laluan kepada Pilihan Raya Umum 1955.",
+      "tip": "Rundingan London gagal tuntutan penuh, tapi buka laluan PRU 1955."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah PALING tepat merumuskan subtopik 8.2?",
+      "options": [
+        "Pilihan Raya Umum Pertama 1955 dijalankan hasil rundingan panjang (termasuk misi Tunku ke London), lapan peringkat pelaksanaan dan kemenangan besar Parti Perikatan (51/52 kerusi), disusuli pilihan raya awal di Sarawak dan Sabah sebagai langkah penting ke arah kemerdekaan",
+        "Pilihan Raya Umum Pertama 1955 diadakan terus selepas Jawatankuasa Pilihan Raya ditubuhkan pada awal 1954, tanpa memerlukan rundingan susulan di London",
+        "Pilihan Raya Umum Pertama 1955 turut merangkumi pilihan raya rasmi Majlis Perundangan Persekutuan di Sarawak dan Sabah pada tahun yang sama",
+        "Parti Perikatan kalah dalam Pilihan Raya Umum Pertama 1955 kepada Parti Islam Se-Tanah Melayu (PAS)"
+      ],
+      "answer": "Pilihan Raya Umum Pertama 1955 dijalankan hasil rundingan panjang (termasuk misi Tunku ke London), lapan peringkat pelaksanaan dan kemenangan besar Parti Perikatan (51/52 kerusi), disusuli pilihan raya awal di Sarawak dan Sabah sebagai langkah penting ke arah kemerdekaan",
+      "explanation": "Rumusan menggabungkan rundingan sebelum pilihan raya, lapan peringkat pelaksanaan, keputusan kemenangan Parti Perikatan dan pilihan raya awal di Sarawak/Sabah sebagai langkah ke arah kemerdekaan.",
+      "tip": "Rundingan → 8 peringkat → Perikatan menang → Sarawak/Sabah."
+    }
+  ]
+}
