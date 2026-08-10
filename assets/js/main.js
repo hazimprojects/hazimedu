@@ -5656,11 +5656,114 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     };
   }
 
+  // Balut teks (greedy, ctx.measureText) — dipakai HANYA utk lukis tajuk
+  // header pratonton pd kanvas komposit di bawah (bukan lipatan jsPDF
+  // splitTextToSize sebenar, tapi anggaran munasabah drpd fon canvas sebenar
+  // yg dipakai — cukup baik utk pratonton visual, bukan output PDF akhir).
+  function _pdfWrapCanvasText(ctx, text, maxW) {
+    if (!text) return [];
+    var words = text.split(/\s+/);
+    var lines = [];
+    var cur = '';
+    for (var i = 0; i < words.length; i++) {
+      var test = cur ? cur + ' ' + words[i] : words[i];
+      if (cur && ctx.measureText(test).width > maxW) {
+        lines.push(cur);
+        cur = words[i];
+      } else {
+        cur = test;
+      }
+    }
+    if (cur) lines.push(cur);
+    return lines;
+  }
+
+  // Bina SATU kanvas muka surat PENUH (header teks + imej kandungan + footer
+  // teks digabung jadi SATU raster) — pratonton kini papar HANYA imej ni
+  // (bukan header/footer HTML berasingan, rujuk CLAUDE.md), supaya muka
+  // surat pratonton ialah SATU unit tegar yg zum secara seragam & kelihatan
+  // 100% sama dgn PDF muat turun sebenar. Kedudukan/teks/warna SENGAJA
+  // padan TEPAT drpd apa `_savePdf()` lukis via jsPDF (garis 0.3mm #d4d4e8,
+  // hdrL bold 9pt #6060a0, hdrR normal 7pt #b0b0cc, ftrL/C/R normal 7pt
+  // #9090b8/#b0b0cc/#b8b8d0) — SUMBER teks kongsi drpd `_pdfHeaderFooterParts()`
+  // yg sama, cuma laluan lukis berbeza (canvas 2D di sini, jsPDF vektor pd
+  // _savePdf). Header/footer SENTIASA lukis PENUH WARNA tak kira mod eco —
+  // padan PDF sebenar (jsPDF text tak pernah dinyahwarna, cuma imej JPEG
+  // kandungan yg jadi kelabu dlm mod eco, rujuk _pdfGrayscaleCanvas).
+  function _pdfComposePreviewPage(pc, dims, parts) {
+    var pxPerMm = pc.width / dims.cW;
+    var mm = function (v) { return v * pxPerMm; };
+    var ptPx = function (v) { return v * (25.4 / 72) * pxPerMm; };
+
+    var canvas = document.createElement('canvas');
+    canvas.width = Math.round(mm(dims.pageW));
+    canvas.height = Math.round(mm(dims.pageH));
+    var ctx = canvas.getContext('2d');
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    var mLeftPx = mm(dims.mLeft);
+    var mRightPx = mm(dims.mRight);
+    var mTopPx = mm(dims.mTop);
+
+    var contentSrc = dims.grayscalePdf ? _pdfGrayscaleCanvas(pc) : pc;
+    ctx.drawImage(contentSrc, mLeftPx, mTopPx);
+
+    ctx.strokeStyle = '#d4d4e8';
+    ctx.lineWidth = Math.max(1, Math.round(mm(0.3)));
+
+    var hdrLineY = mm(dims.mTop - 2);
+    ctx.beginPath();
+    ctx.moveTo(mLeftPx, hdrLineY);
+    ctx.lineTo(canvas.width - mRightPx, hdrLineY);
+    ctx.stroke();
+
+    var hdrBaseline = mm(dims.mTop - 5);
+    ctx.textBaseline = 'alphabetic';
+    ctx.font = 'bold ' + ptPx(9) + 'px Arial, Helvetica, sans-serif';
+    ctx.fillStyle = '#6060a0';
+    ctx.textAlign = 'left';
+    ctx.fillText(parts.hdrL, mLeftPx, hdrBaseline);
+
+    if (parts.hdrR) {
+      ctx.font = ptPx(7) + 'px Arial, Helvetica, sans-serif';
+      ctx.fillStyle = '#b0b0cc';
+      ctx.textAlign = 'right';
+      var hdrMaxW = mm(dims.cW * 0.6);
+      var hdrLines = _pdfWrapCanvasText(ctx, parts.hdrR, hdrMaxW);
+      var hdrLineH = ptPx(7) * 1.2;
+      for (var i = 0; i < hdrLines.length; i++) {
+        var fromEnd = hdrLines.length - 1 - i;
+        ctx.fillText(hdrLines[i], canvas.width - mRightPx, hdrBaseline - fromEnd * hdrLineH);
+      }
+    }
+
+    var fY = mm(dims.pageH - dims.mBottom + 2);
+    ctx.beginPath();
+    ctx.moveTo(mLeftPx, fY);
+    ctx.lineTo(canvas.width - mRightPx, fY);
+    ctx.stroke();
+
+    var ftrBaseline = fY + mm(4);
+    ctx.font = ptPx(7) + 'px Arial, Helvetica, sans-serif';
+    ctx.textAlign = 'left';
+    ctx.fillStyle = '#9090b8';
+    ctx.fillText(parts.ftrL, mLeftPx, ftrBaseline);
+    ctx.textAlign = 'center';
+    ctx.fillStyle = '#b0b0cc';
+    ctx.fillText(parts.ftrC, canvas.width / 2, ftrBaseline);
+    ctx.textAlign = 'right';
+    ctx.fillStyle = '#b8b8d0';
+    ctx.fillText(parts.ftrR, canvas.width - mRightPx, ftrBaseline);
+
+    return canvas;
+  }
+
   function _pdfPopulateSlides(pages, dims) {
     var pagesDiv = document.getElementById('zym-pdf-pages');
     if (!pagesDiv) return;
     pagesDiv.innerHTML = '';
-    pages.forEach(function(pc) {
+    pages.forEach(function(pc, i) {
       var slide = document.createElement('div');
       slide.className = 'zym-pdf-page-slide';
 
@@ -5669,8 +5772,10 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
 
       var wrap = document.createElement('div');
       wrap.className = 'zym-pdf-page-canvas-wrap';
+      var parts = _pdfHeaderFooterParts(_pdfNoteTitle, i, pages.length);
+      var composed = _pdfComposePreviewPage(pc, dims, parts);
       var img = document.createElement('img');
-      img.src = _pdfCanvasToJpegDataUrl(pc, dims);
+      img.src = composed.toDataURL('image/jpeg', dims && typeof dims.jpegQuality === 'number' ? dims.jpegQuality : 0.92);
       img.alt = '';
       img.decoding = 'async';
       wrap.appendChild(img);
@@ -7443,7 +7548,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=569').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=570').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });

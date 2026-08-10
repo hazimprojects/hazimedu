@@ -1979,6 +1979,67 @@ pintas `jsPDF.API.text`) disahkan MASIH lukis teks header "ZymNotes"
 spt sebelum ni — fungsi tu tidak diubah, cuma paparan modal pratonton
 yg dipermudahkan.
 
+**Susulan LAGI — "buang seluruhnya" di atas SILAP faham arahan
+pengguna.** Pengguna tunjuk tangkapan skrin PDF sebenar (2 muka surat,
+header "ZymNotes" + tajuk kanan, footer "zymnotes.com | 1/2 | © 2026
+ZymNotes" kelihatan JELAS pd setiap muka surat) & jelaskan: "saya nak
+paparan preview sama dengan pdf sebenar seperti gambar ini. ada
+header dan footer yang statik supaya preview 100% sama seperti apa
+yang akan mereka download dan print." Maksud sebenar arahan asal
+("buang header dan footer... fleksibel") BUKAN "buang terus drpd
+paparan" — tapi "buang versi FLEKSIBEL (baris HTML berasingan yg tak
+turut zum) & gantikan dgn versi STATIK (terbenam terus dlm imej muka
+surat, sama macam PDF sebenar)". Fix "buang seluruhnya" (PR #647)
+terlalu literal — hilangkan maklumat header/footer terus drpd
+pratonton walhal pengguna sebenarnya mahukannya KEKAL, cuma dlm
+bentuk yg betul.
+
+**Fix (menggantikan PR #647)**: `_pdfPopulateSlides()` kini panggil
+fungsi BAHARU `_pdfComposePreviewPage(pc, dims, parts)` yg bina SATU
+kanvas muka surat PENUH (bukan sekadar imej kandungan `pc` mentah) —
+lukis latar putih saiz A4 penuh (`dims.pageW × dims.pageH` pd
+`pxPerMm` yg sama drpd imej kandungan), letak imej kandungan pd
+kedudukan `(mLeft, mTop)`, kemudian LUKIS TERUS teks header/footer
+via Canvas 2D `ctx.fillText()` pd kedudukan/warna/saiz fon SAMA drpd
+apa `_savePdf()` lukis via jsPDF vektor (rujuk §"Header/Footer WAJIB
+kongsi teks SAMA" atas utk kedudukan asal: garis 0.3mm `#d4d4e8`,
+`hdrL` bold 9pt `#6060a0` kiri, `hdrR` normal 7pt `#b0b0cc` kanan
+[balut baris via `_pdfWrapCanvasText()`, anggaran greedy `ctx.
+measureText()` — bukan `splitTextToSize()` jsPDF sebenar, tapi cukup
+baik utk pratonton visual], `ftrL/C/R` normal 7pt `#9090b8`/`#b0b0cc`/
+`#b8b8d0`). Sumber teks (`_pdfHeaderFooterParts()`) KEKAL dikongsi
+kedua-dua laluan (canvas 2D di sini, jsPDF vektor pd `_savePdf`) —
+prinsip "satu sumber kebenaran" drpd fix asal tak berubah, cuma
+laluan LUKIS bertukar drpd HTML flex kpd canvas 2D terbenam.
+
+Kanvas komposit ni jadi SATU-SATUNYA `<img>` yg dipaparkan pd setiap
+slaid pratonton — muka surat kini SATU unit raster tegar, jadi zum
+(pinch/butang) automatik skala header+kandungan+footer SERAGAM (tiada
+lagi baris teks HTML berasingan yg boleh "tertinggal" saiz asal).
+`_pdfCanvasToJpegDataUrl()` (yg grayscale SELURUH kanvas dlm mod eco)
+SENGAJA TIDAK dipakai utk kanvas komposit ni — sebab `_savePdf()`
+sebenar TAK PERNAH grayscale teks header/footer (vektor jsPDF, cuma
+imej JPEG kandungan yg jadi kelabu via `_pdfGrayscaleCanvas` dlm mod
+eco). `_pdfComposePreviewPage()` grayscale HANYA imej kandungan (`pc`)
+SEBELUM dilukis ke kanvas komposit (`dims.grayscalePdf ?
+_pdfGrayscaleCanvas(pc) : pc`), header/footer teks SENTIASA lukis
+PENUH WARNA tak kira mod — padan tepat gelagat PDF sebenar dlm KEDUA-
+DUA mod, bukan cuma mod penuh.
+
+Disahkan via Playwright (suntik html2canvas-pro/jspdf tempatan)
+merentas 3 senario: `bab-2-2.html` (skop 2-lajur) pd 100% & 300%
+zum — header "ZymNotes"+tajuk & footer 3-lajur kelihatan terbenam
+dlm imej, skala SERAGAM bersama kandungan semasa zum (dibandingkan
+piksel dgn bug asal di mana header kekal saiz kecil tetap semasa
+kandungan membesar 3×); mod "Jimat dakwat" (`bab-2-2.html`) — imej
+kandungan bertukar kelabu, header "ZymNotes" KEKAL warna asal
+(`#6060a0`); `bab-9-3.html` (skop 1-lajur, luar julat 2-lajur) —
+kanvas komposit turut berfungsi betul (geometri margin/dims sama
+struktur tak kira mod lajur). Sifar ralat JS pd kesemua senario.
+Muat turun PDF sebenar TIDAK terjejas — `_pdfPageCanvases`/`_pdfDims`
+(dipakai `_savePdf()`) kekal imej kandungan MENTAH tanpa header/
+footer terbenam (elak lukis dua kali dlm fail PDF akhir).
+
 ## Sub-tajuk `.paper-strip.strip-sub` dlm accordion — pendua DIGUGURKAN (PDF & laman hidup)
 
 Pengguna lapor (tangkapan skrin pratonton PDF `bab-2-3.html`) item
