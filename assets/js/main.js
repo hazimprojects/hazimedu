@@ -4723,30 +4723,35 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   // pengguna nyata nampak "tak kemas" (fon jadi terlalu kecil drpd
   // teks sekeliling, cth. 7.46px vs 13.5px asal).
   // Percubaan 2 (dibuang, disahkan piksel+visual): buang je
-  // white-space:nowrap terus (biar wrap, saiz sama) — hidupkan SEMULA
-  // bug LAMA html2canvas-pro yg SEBAB nowrap jadi wajib drpd awal
-  // (rujuk AWAS §"Susun Atur 2 Lajur" CLAUDE.md): latar `.zpkw`
-  // (background+border-radius) yg terpaksa wrap merentas >1 baris
+  // white-space:nowrap terus (biar wrap, saiz sama, KEKALKAN
+  // border-radius sedia ada `.zpkw` — 38%/42%/40%/44% "sketch"
+  // organik) — hidupkan SEMULA bug LAMA html2canvas-pro yg SEBAB
+  // nowrap jadi wajib drpd awal (rujuk AWAS §"Susun Atur 2 Lajur"
+  // CLAUDE.md): latar `.zpkw` yg terpaksa wrap merentas >1 baris
   // dilukis SALAH — blob latar melekit merentasi SELURUH baki lebar
   // BARIS PERTAMA (jauh melepasi teks sebenar), diuji SAMA ada
   // box-decoration-break dibiar lalai (`slice`) atau ditetapkan
   // `clone` eksplisit — KEDUA-DUA varian tetap rosak (disahkan piksel:
-  // >40% kawasan "smear check" [jalur 40px kanan drpd sempadan teks
-  // baris 2] tetap warna latar `.zpkw-tokoh`, walhal patut kosong;
-  // disahkan visual — tangkapan crop kanvas sebenar).
+  // >40% kawasan "smear check" tetap warna latar `.zpkw-tokoh`).
+  // Percubaan 3 (dibuang): gugur TERUS latar/padding/border-radius
+  // (teks bold berwarna tanpa kotak) — BERFUNGSI (sifar smear), tapi
+  // pengguna cadang lebih baik: kekalkan latar drpd "kesan pen
+  // highlighter" (segi empat, BUKAN oval), yg secara semula jadi
+  // "terpotong" bersih bila teks wrap — sbb kesan highlighter sebenar
+  // memang segi empat, bukan bulat/organik.
   //
-  // Fix (kekal): bila frasa terlalu panjang utk 1 baris nowrap, GUGUR
-  // TERUS latar/padding/border-radius (bukan kecilkan fon) & BENARKAN
-  // wrap — corak SAMA drpd gaya mod "Jimat Dakwat" sedia ada (teks
-  // BOLD BERWARNA tanpa kotak) yg SUDAH disahkan selamat wrap normal
-  // (ia teks polos site-wide, tiada latar span >1 baris yg mencetus
-  // bug ni langsung). Warna spesifik kelas kw-*/zpbloc-* (cth.
-  // `#731b25` kw-tokoh) KEKAL drpd rule CSS asal (kelas TAK dibuang,
-  // cuma override background/padding/border-radius/white-space via
-  // inline style — specificity inline menang drpd class), pembezaan
-  // warna kata kunci tak hilang, cuma bentuk "kotak" gugur utk frasa
-  // outlier ni sahaja (majoriti kw-* korpus TAK terjejas, kekal kotak
-  // spt biasa — hanya frasa MELEBIHI ambang lebar kena declass).
+  // Fix (kekal, disahkan piksel+visual betul): PUNCA SEBENAR blob bug
+  // ialah border-radius ORGANIK (`38% 42%...`) bercampur box-
+  // decoration-break merentas >1 baris — BUKAN latar+wrap per se.
+  // `border-radius:0` (segi empat tulen, gaya highlighter pen sebenar)
+  // + `box-decoration-break:clone` (SETIAP baris dpt kotak+padding
+  // SENDIRI konsisten, bukan sambung ke tepi kontena spt `slice`
+  // lalai) disahkan SIFAR smear (0.000 pinkRatio kedua-dua baris,
+  // ulang uji varian `slice` & `clone` — kedua-dua BERSIH bila
+  // border-radius:0, geometri segi empat tiada lengkung utk enjin
+  // salah anggar). `clone` dipilih drpd `slice` sbb visual lebih
+  // kemas (kotak konsisten per-baris ikut lebar teks sebenar, bukan
+  // regangkan penuh ke tepi kontena spt `slice`).
   //
   // Diukur SEBELUM sebarang perubahan (nowrap kekal aktif semasa ukur —
   // getBoundingClientRect() dgn nowrap jamin lebar PENUH intrinsik
@@ -4766,9 +4771,13 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       var el = els[i];
       var w = el.getBoundingClientRect().width;
       if (w <= SAFE_MAX_W) continue;
-      el.style.background = 'transparent';
-      el.style.padding = '0';
+      // Kekalkan latar/warna/padding kelas kw-* (JANGAN declass) —
+      // cuma tukar bentuk kotak drpd "sketch" organik ke segi empat
+      // tulen (kesan pen highlighter sebenar) + box-decoration-break
+      // supaya wrap SELAMAT (rujuk komen fungsi di atas).
       el.style.borderRadius = '0';
+      el.style.boxDecorationBreak = 'clone';
+      el.style.webkitBoxDecorationBreak = 'clone';
       el.style.whiteSpace = 'normal';
     }
   }
@@ -7424,7 +7433,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=565').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=566').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
