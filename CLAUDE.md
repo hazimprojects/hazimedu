@@ -1162,6 +1162,67 @@ card`) DIGUGURKAN drpd PDF (§"skop kandungan SENGAJA beza" atas,
 bukan bug baharu) — chip "Jepun" dlm jawapan Soalan Utama, bukan
 kehilangan tak dijangka.
 
+**Susulan — bendera pd chip blok dlm AYAT PROSA BIASA (bukan
+chip-list/legenda) hilang senyap dlm PDF, walau HTML/DOM/pratonton
+pelayar semua betul.** Pengguna tunjuk 2 tangkapan skrin (`bab-3-2.html`
+"Latar Belakang Perang Dunia", `bab-3-3.html` "Perang Dunia Kedua"):
+"bendera tak muncul di sebelah nama negara blok pada teks biasa" —
+cth. ayat "Pada awalnya melibatkan **Jerman**, **Austria-Hungary**
+dan 🇮🇹 **Itali**." papar highlight kelabu betul utk "Jerman"/
+"Austria-Hungary" (span `.zpbloc`) TAPI TIADA bendera, walhal "Itali"
+kemudian dlm ayat SAMA (span `.paper-chip` polos, TIADA kelas
+`bloc-chip-*`, jadi TAK dibalut `.zpbloc`) papar bendera dgn betul.
+
+Disahkan BUKAN isu penjanaan HTML/DOM (siasatan piksel demi piksel,
+Playwright): HTML print tercetak MEMANG ada `<img>` bendera dgn
+`data:image/png;base64,...` sah, `getBoundingClientRect()` pulang
+saiz bukan-sifar, `getComputedStyle()` semua betul (`display`/
+`visibility`/`opacity`), & screenshot DOM SEBENAR (pratonton pelayar
+biasa, SEBELUM html2canvas dipanggil — teknik: `pr.style.position=
+'relative'` + `transform:translateY()` gantikan scroll, sbb `#zym-pr`
+`position:fixed` + modal PDF kunci scroll body) papar bendera PENUH
+& JELAS. TAPI sampel piksel kawasan PENUH (bukan satu titik — elak
+positif-palsu koordinat) drpd KANVAS SEBENAR yg ditangkap html2canvas
+(hook `window.html2canvas`, baca `ctx.getImageData()` pd lokasi
+`<img>` diskala `opts.scale`) pulang **SIFAR variasi warna** (100%
+`#e2e8f0`, warna latar `.zpbloc-central` sahaja) — bermakna
+html2canvas-pro GAGAL SENYAP melukis `<img>` anak, bukan isu
+DOM/CSS/data-URI.
+
+**Punca diasingkan via ujian variasi CSS satu-per-satu** (mutate
+`#zym-pr-css` tepat sebelum panggilan `html2canvas` sebenar, ukur
+variasi piksel selepas): `border-radius`, `white-space:nowrap`, &
+`font-weight` pd `.zpbloc` — SIFAR kesan (bendera kekal hilang
+kesemua variasi ni, menolak suspek awal drpd fix "Kuasa Paksi pecah"
+sblm ni). Sebaliknya, MEMBUANG `background` pd `.zpbloc-central`,
+ATAU menambah `position:relative`, ATAU menambah `display:inline-
+block` — KESEMUA membetulkan SEPENUHNYA (variasi piksel penuh selepas).
+Kesimpulan: punca ialah kombinasi `display:inline` (lalai span) +
+`background-color` + anak `<img>` — html2canvas-pro nampaknya lukis
+latar bagi kotak inline TANPA susun-atur "sebenar" (span polos,
+bukan positioned/block) dgn urutan yg overwrite anak `<img>` selepas
+latar, bukan sebelum. `.zpkw` (span kata kunci `kw-*`) TAK PERNAH
+kena bug ni sbb TIADA anak `<img>` langsung (teks polos sahaja via
+`_escPdfHtml`) — bug ni khusus corak "span inline berlatar + anak
+`<img>`", `.zpbloc` SATU-SATUNYA kelas berkongsi corak tu.
+
+**Fix**: tambah `display:inline-block` ke `#zym-pr .zpbloc` (dipilih
+drpd `position:relative` sbb lebih konsisten dgn `.zp-chip`/dll.
+sedia ada yg turut guna `inline-flex`/`inline-block` utk elemen
+badge). `white-space:nowrap` (fix sblm ni) KEKAL diperlukan drpd
+sebab asal (elak frasa berbilang perkataan pisah pertengahan baris)
+— dua fix ni BERASINGAN, bukan pengganti satu sama lain.
+
+Disahkan via Playwright merentas 7 halaman skop 2-lajur Bab 3
+(`bab-3-2` s/d `bab-3-8`): **SIFAR bendera hilang** drpd 135 imej
+chip blok (160 chip kesemuanya) — sampel variasi piksel PENUH pd
+SETIAP satu (bukan cuma tiada ralat), **SIFAR** `.zpbloc` melimpah
+keluar sempadan kad induk (regresi-semak fix "Kuasa Paksi pecah"
+sblm ni kekal selamat). Pratonton visual (zum 250%, `bab-3-2.html`
+kad "Kuasa Tengah") sahkan bendera Jerman/Austria/Hungary/Bulgaria/
+Uthmaniyah kesemuanya jelas di dlm ayat prosa biasa, bukan cuma
+chip-list/legenda.
+
 ## Eksport PDF — Mod "Jimat Dakwat": ikon kekal, latar kata kunci gugur
 
 Mod eco (`isEco`/`zp-mode-eco` dlm `_getPrintCss()`) DUA keputusan
