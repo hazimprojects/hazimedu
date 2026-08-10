@@ -9,11 +9,23 @@ supaya tak tersalah anggap senibina sedia ada.
 
 ## Fokus Semasa
 
-`docs/project-strengths-audit.md` catat: **cadangan ciri baharu sengaja
-ditutup buat masa ini — fokus kekal penstabilan kandungan sedia ada**
-(prestasi, kebolehpercayaan, kualiti kandungan Bab 1–8 Sejarah T4).
-Jangan cadang/tambah ciri baharu secara proaktif melainkan diminta;
-utamakan kerja jenis bug-fix/prestasi/kestabilan.
+**Kemas kini (2026-08-11): sekatan lama di bawah DIMANSUHKAN.** Kandungan
+sedia ada (Bab 1–10 Sejarah T4, sistem kuiz, eksport PDF, dll.) kini
+dianggap cukup stabil oleh pengguna. `docs/project-strengths-audit.md`
+sebelum ni catat "cadangan ciri baharu ditutup sementara" — status tu
+tak lagi berkuat kuasa. Boleh cadang & bina ciri baharu (cth. gambar/
+peta sejarah bercerita — dibincang eksplisit, belum dilaksana lagi,
+rujuk isu lesen/self-hosting/PDF sebelum mula) secara proaktif bila
+nampak bernilai, bukan sekadar tunggu diminta.
+
+Walau begitu, disiplin sedia ada dlm fail ni KEKAL wajib utk ciri
+baharu jugak — bukan lesen utk kurangkan ketelitian: sahkan ikon/aset
+baharu benar2 berfungsi sebelum push (§"Ikon Emoji"), uji via
+Playwright sebelum ship (bukan teka drpd CSS/kod semata), ikut
+struktur HTML/kelas kata kunci kanonik sedia ada, kemas kini
+dokumentasi (fail ni) bila corak baharu diperkenal, & jalankan
+semakan penuh (`seo-audit.py`, `check-zh-coverage.py`, `npm run lint`)
+sebelum commit.
 
 ## Realiti "Sistem Build" — content/*.yaml TIDAK aktif
 
