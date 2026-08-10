@@ -189,6 +189,105 @@ self-host lebih ringkas drpd urus rule cache tambahan dlm `sw.js`.
     `assets/flags/`, +3 baharu drpd pusingan ni: `eg.svg`, `pk.svg`,
     `et.svg`).
 
+  **Pusingan 3 — audit ikon 🌐 "Globe with meridians" (bukan chip
+  identiti negara, tapi ikon generik dipilih utk pelbagai kandungan
+  serantau).** Pengguna tunjuk tangkapan skrin kad "Pengaruh Luar &
+  Serantau" (bab-2-6.html) dgn ikon 🌐🌐 berganda di hadapan
+  "gerakan nasionalisme di Filipina dan Indonesia", minta semakan
+  kesemua penggunaan ikon 🌐 merentas laman — "ada diantaranya lebih
+  sesuai digunakan ikon bendera". BEZA drpd 2 pusingan sebelum (yg
+  scope `.paper-chip`/`.paper-kingdom`/`.paper-accordion-item` bernama
+  negara tepat), pusingan ni case-by-case: ikon 🌐 (`globe_with_
+  meridians_3d.png`, BUKAN `globe_showing_asia-australia` yg dikhaskan
+  utk lencana entiti dikecualikan) dipakai meluas sbg ikon generik utk
+   apa sahaja "luar negara/serantau/antarabangsa" — kajian penuh **89
+  kejadian merentas 27 fail** (regex cari semua `globe_with_meridians_
+  3d.png` + strip tag utk baca teks konteks) dedah kebanyakan MEMANG
+  sesuai kekal generik (cth. "Kuasa Utama dalam Perang Dunia Kedua" —
+  label kategori merangkumi BANYAK negara, bukan satu; "politik
+  antarabangsa" — istilah abstrak; kesemua kes "British bertindak ke
+  atas [Sabah/Sarawak/Tanah Melayu/gerakan nasionalisme kita]" — corak
+  KEKAL DIKECUALIKAN sedia ada, "Negara Kita" sbg fokus naratif; "kaum
+  Cina"/"orang India"/"wakil orang Ceylon"/dll — komuniti ETNIK dlm
+  Tanah Melayu, BUKAN identiti negara asing; "bahasa Inggeris"/"sekolah
+  Inggeris" — deskriptor bahasa, bukan negara; "Krisis Manchuria" —
+  disahkan KEKAL ikut keputusan sedia ada, Sushi+globe dwi-ikon betul).
+
+  **20 kejadian merentas 10 fail** disahkan patut ditukar kpd bendera
+  (chip/point-line/point-heading/strip-sub yg teksnya secara eksplisit
+  namakan SATU negara berdaulat sedia-ada-bendera sbg fokus/subjek,
+  walau kadang kedudukan tatabahasa jadi objek — ikut precedent
+  "Sekatan Ekonomi terhadap Jepun"/"Garisan Masa Serangan Jepun" drpd
+  pusingan lalu):
+  - `bab-1-2.html` — "Melaka turut diiktiraf oleh **Dinasti Ming**"
+    → `cn.svg` (dinasti historis ↔ China, sama logik "Empayar
+    Uthmaniyah" ↔ Turki drpd pusingan lalu).
+  - `bab-2-2.html` — kad "Kesudahan Revolusi Amerika" ("...bergabung
+    menjadi **Amerika Syarikat**...") → `us.svg`; kad "Kesudahan
+    Revolusi Perancis" ("**Republik Perancis** ditubuhkan...") →
+    `fr.svg`.
+  - `bab-2-3.html` — accordion "Kemerdekaan India dan Pakistan" (dah
+    ada dwi-bendera `in.svg`+`pk.svg` pd header) — 2 CHIP anak
+    "14 Ogos 1947 – Pakistan merdeka" & "15 Ogos 1947 – India merdeka"
+    yg SEBELUM ni terlepas drpd bendera header → `pk.svg`/`in.svg`
+    masing-masing (header dwi-bendera BUKAN automatik terpakai kpd
+    chip anak — setiap chip perlu ikon sendiri).
+  - `bab-2-4.html` — "**Filipina** kemudian diletakkan di bawah
+    penguasaan Amerika Syarikat" → `ph.svg`; "**Vietnam Selatan**
+    (Saigon) masih di bawah pengaruh Perancis dan Amerika Syarikat" →
+    `vn.svg` (padan bendera accordion induk "Kesudahan perjuangan di
+    Vietnam"); 3 chip "Penasihat **Britain** – kewangan..."/"Penasihat
+    **Amerika** – kastam"/"Penasihat **Perancis** – ketenteraan"
+    (corak "Penasihat NEGARA – ringkasan") → `gb.svg`/`us.svg`/`fr.svg`.
+  - `bab-2-6.html` — "**Revolusi China** – Dr. Sun Yat Sen..." →
+    `cn.svg`; "gerakan nasionalisme di **Filipina dan Indonesia** –
+    memberi inspirasi..." (kes asal tangkapan skrin pengguna, dwi-ikon
+    🌐🌐 sedia ada digantikan dwi-bendera) → `ph.svg`+`id.svg`.
+  - `bab-2-8.html` — sub-tajuk `.paper-strip.strip-sub` "**Kesedaran
+    Politik India**" (dlm accordion gabungan China+India, header
+    accordion kekal ikon generik sbb liputi 2 negara) → `in.svg`.
+  - `bab-3-2.html` — accordion "A. Keruntuhan Pemerintahan Beraja"
+    (Jerman/Austria-Hungary/Rusia dah berbendera drpd pusingan lalu,
+    TAPI 2 chip "**Empayar Uthmaniyah** → Sultan Mehmed VI
+    digulingkan" & "**Turki** → lahir Republik Turki..." terlepas) →
+    `tr.svg` kedua-duanya; accordion "B. Kemunculan Negara Baharu" —
+    3 tajuk `point-heading` pengenalan sub-senarai "Daripada
+    **Austria-Hungary**:"/"Daripada **Empayar Rusia**:"/"Daripada
+    **Empayar Uthmaniyah**:" (anak-anak chip senarai di bawah SETIAP
+    satu dah berbendera individu drpd pusingan lalu, tajuk pengenalan
+    sendiri terlepas) → dwi `at.svg`+`hu.svg` (turut buang ikon Hibiscus
+    dekoratif tak relevan yg tersasar di situ), `ru.svg`, `tr.svg`.
+  - `bab-3-3.html` — chip "menjadi titik tolak **pembebasan
+    Perancis**" (dlm kad "Kejayaan ini:" susulan D-Day, sibling chip
+    "membantu membebaskan negara-negara Eropah Barat" KEKAL generik
+    sbb merangkumi BANYAK negara) → `fr.svg`.
+  - `bab-3-4.html` — chip "1937 — Jepun menduduki **China**" (dlm
+    senarai "Peluasan Kuasa Jepun", sibling "1910 — Jepun menguasai
+    Korea" & chip senarai "Korea" DIKEKALKAN buat masa ini — Korea
+    tiada svg bendera lagi dlm `assets/flags/`, DAN berpecah 2 negara
+    moden [Korea Utara/Selatan] sejak 1948, jadi tiada "1 bendera yg
+    betul" utk rujukan sejarah era 1910–1940-an bersatu — SAMA kelas
+    isu Czechoslovakia/Yugoslavia drpd pusingan lalu, perlu tanya user
+    dulu sebelum tambah, BUKAN keputusan mekanikal) → `cn.svg`.
+  - `bab-6-3.html` — chip senarai komposisi tentera "1 batalion
+    **rejimen Fiji**" (sibling "25 ribu askar Britain"/"10 ribu askar
+    Gurkha" guna ikon lain, "1 batalion askar Afrika" KEKAL generik
+    benua) → `fj.svg` (svg sedia ada, tak pernah dipakai sebelum ni).
+
+  Disahkan selepas edit: `python3 scripts/seo-audit.py` &
+  `python3 scripts/check-zh-coverage.py` kekal 100% lulus (elemen
+  disunting cuma tukar `src`/kelas `<img>`, tiada `data-zh-unit-id`
+  disentuh), semua 13 laluan `assets/flags/*.svg` dirujuk sedia wujud
+  (`ls assets/flags/` sebelum edit — tiada svg baharu diperlukan
+  pusingan ni, kesemua 13 negara/kod [`cn`,`us`,`fr`,`pk`,`in`,`ph`,
+  `vn`,`gb`,`tr`,`at`,`hu`,`ru`,`fj`] sudah ada drpd pusingan lalu),
+  Playwright pratonton visual (`bab-2-6.html` dwi-bendera Filipina+
+  Indonesia, `bab-3-2.html` accordion "B" dwi-bendera Austria-Hungary
+  + bendera Rusia/Turki pd tajuk pengenalan) sahkan render betul.
+  **68 kejadian 🌐 BAKI** (turun drpd 89) disahkan SEMUA kekal betul
+  ikut klasifikasi di atas (generik sengaja/dikecualikan/komuniti
+  etnik/deskriptor bahasa) — bukan terlepas pandang.
+
 ## Bug Chip Terputus Baris — combinator `.paper-chip-list .paper-chip`
 
 **Elak selector CSS bentuk `.paper-chip-list .paper-chip` (descendant,
