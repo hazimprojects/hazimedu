@@ -1485,7 +1485,7 @@ TERPANJANG korpus (`bab-9-3.html`, 70 aksara) papar PENUH (tiada
 potongan) walau lebih byk baris drpd PDF sebenar (had fon, dijangka
 & diterima — bukan bug hilang maklumat).
 
-## Eksport PDF — Sub-tajuk `.paper-strip.strip-sub` dlm accordion DIGUGURKAN (pendua)
+## Sub-tajuk `.paper-strip.strip-sub` dlm accordion — pendua DIGUGURKAN (PDF & laman hidup)
 
 Pengguna lapor (tangkapan skrin pratonton PDF `bab-2-3.html`) item
 accordion "Dahagi India 1857" papar tajuk "Dahagi India 1857" DUA
@@ -1538,6 +1538,82 @@ SEBENAR, bukan sub-tajuk recap yg digugurkan) konsisten `sourceCount
 sumber — satu-satunya beza dikesan (`"Warna kata kunci"`, accordion
 legenda kata kunci) SUDAH digugurkan drpd PDF sebelum fix ni lagi
 (gelagat sedia ada tak berkaitan, bukan regresi fix ni).
+
+**Susulan — pengguna tunjuk tangkapan skrin LAMAN HIDUP (bukan PDF)**
+lepas fix di atas: sub-tajuk pendua "Dahagi India 1857" ni turut
+kelihatan di laman hidup sendiri (kad hijau berulang tajuk yg SAMA
+persis dgn header accordion sejurus di atasnya), minta digugurkan
+terus drpd HTML sumber — "biar accordion saja jadi tajuk", bukan
+sekadar ditapis semasa eksport PDF.
+
+**Ketepatan skop PENTING**: bukan SEMUA 77 kejadian ni pendua tulen.
+Audit lanjut (bandingkan kedudukan — adakah sub-tajuk ANAK PERTAMA
+`.cv-unit-body`, atau muncul KEMUDIAN selepas kandungan lain) dedah
+**1 kekecualian SAH**: `bab-3-3.html` "Kegagalan Operasi Menawan
+Rusia" — muncul SELEPAS satu perenggan lain dlm accordion "B.
+Keberkesanan Strategi Serangan Balas", ikon "Snowflake" (bukan
+bendera), teks LANGSUNG BERBEZA drpd tajuk accordion (bukan
+singkatan/case-beza spt 76 kes lain) — ini penanda PERALIHAN topik
+SAH di tengah badan accordion, BUKAN pendua tajuk. Kedudukan "anak
+PERTAMA `.cv-unit-body`" (bukan sekadar "di dalam accordion mana-
+mana") ialah pembeza tepat: 76/77 kejadian ADA di kedudukan ni
+(disahkan BeautifulSoup, `cvbody.children` pertama === strip node),
+1/77 (Rusia) TIADA.
+
+**Fix (HTML sumber, `notes/*.html`)**: regex sepadan corak PERSIS
+`<div class="paper-accordion-panel"...><div class="cv-unit-body">\n
+[ruang pilihan]<div class="paper-strip strip-sub">...</div>\n` (anak
+pertama SEBAIK panel/body dibuka) & buang SELURUH baris strip-sub tu
+(kekalkan `<div class="cv-unit-body">` & baris seterusnya tanpa
+diubah) — regex TAK PADAN corak "Rusia" (ada kandungan LAIN antara
+`cv-unit-body` & strip tu), jadi kes SAH tu automatik terselamat
+tanpa senarai pengecualian manual. **76 kejadian dibuang merentas 12
+fail** (`bab-2-2`×8, `bab-2-3`×8, `bab-2-4`×18, `bab-2-6`×2, `bab-2-7`
+×11, `bab-2-8`×10, `bab-8-1`×3, `bab-8-2`×2, `bab-9-1`×2, `bab-9-2`×3,
+`bab-9-3`×6, `bab-9-4`×3) — perhatikan senarai fail ni BERBEZA drpd
+senarai 6 halaman diuji semasa fix PDF asal di atas (`bab-2-3`,
+`bab-2-4`, `bab-3-3`, `bab-3-4`, `bab-6-1`, `bab-8-3`) — corak pendua
+ni jauh lebih meluas drpd sampel awal, hanya ketara selepas audit
+SEPENUH korpus (`notes/bab-*.html`, bukan sampel manual). Disahkan
+selepas buang: `.paper-accordion-title` kekal padan `.paper-
+accordion-panel` (bilangan sama) pd SEMUA 12 fail, `<div>`/`</div>`
+seimbang (kiraan grep sama), `python3 scripts/check-zh-coverage.py`
+kekal 100% (elemen dibuang TIADA `data-zh-unit-id` langsung — teks
+sub-tajuk ni sentiasa polos, bukan unit ZH berasingan).
+
+Bendera negara pd sub-tajuk yg dibuang (cth. `in.svg` India) TAK
+hilang drpd laman hidup — accordion tu SENDIRI (di `.paper-accordion-
+no`, slot ikon sebelah kiri header) SUDAH papar bendera SAMA (rujuk
+§"Bendera Negara" atas, corak "ikon dlm `.paper-accordion-no`" +
+".paper-strip.strip-sub` sepadan" — dua tempat memang sengaja papar
+bendera SAMA drpd awal, ni yg buat sub-tajuk jadi pendua penuh, bukan
+separa). Kesan sampingan: PDF pun turut kehilangan laluan sub-tajuk
+ni (sumber utama bendera muncul dlm PDF linear, sbb `.paper-
+accordion-no` sendiri dikecualikan drpd cetak — rujuk §"Bendera
+Negara... PDF SAHAJA" — accordion-no flags SUDAH sedia dikecualikan
+drpd PDF sblm ni) — DITERIMA sbb konsisten dgn gelagat `.paper-
+accordion-no` yg SUDAH pun tak muncul dlm PDF, bukan regresi baharu.
+
+**Fix (JS PDF, `_bodyHtmlNode()`)**: laluan skip lama (semak SAHAJA
+`.closest('.paper-accordion-panel')`, tanpa kira kedudukan) tersalah
+gugurkan "Kegagalan Operasi Menawan Rusia" jugak drpd PDF (regresi PR
+#636). Diketatkan kpd `node.previousElementSibling === null &&
+node.parentElement.classList.contains('cv-unit-body') &&
+.closest('.paper-accordion-panel')` — SAMA kriteria "anak pertama"
+drpd regex HTML di atas, jamin dua laluan (buang drpd sumber & tapis
+PDF) sentiasa SEPAKAT. Lepas fix HTML sumber, cabang JS ni jadi
+jaring keselamatan (should never trigger lagi, sbb 76 kejadian dah
+tiada terus drpd DOM) — tapi kekal berguna kalau kandungan masa depan
+tersilap ulang corak pendua ni.
+
+Disahkan (Playwright, ulang teknik suntik html2canvas-pro/jspdf)
+merentas 13 halaman (12 halaman disunting + `bab-3-3` kes
+kekecualian): sifar `unexpectedMissing` (bandingkan `.paper-
+accordion-title` sumber vs `.zp-acc-ttl` cetak, kecuali "Warna kata
+kunci" legenda yg sedia dikecualikan), `orphanCount` (imej
+bersendirian dlm `.zp-acc-body`) SIFAR pd SEMUA halaman, & teks
+"Kegagalan Operasi Menawan Rusia" disahkan HADIR semula dlm PDF
+`bab-3-3.html` (pulih drpd regresi PR #636).
 
 ## Aliran Kerja Versioning Aset (WAJIB lepas ubah CSS/JS/sw.js)
 
