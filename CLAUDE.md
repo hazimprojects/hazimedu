@@ -1554,6 +1554,21 @@ Disahkan via Playwright merentas kesemua 5 subtopik (`bab-7-1` s/d
 overflow, sifar ralat JS, penjanaan PDF penuh berjaya 3-5 muka surat
 setiap subtopik.
 
+**Diluaskan ke Bab 8** — `_pdfIsTwoColumnScope()` skop kini `bab-[12345678]`
+(WAJIB liputan `HZ_PDF_OPENMOJI_MAP` 100% konsep unik Bab 8 dulu, +1
+konsep baharu drpd 63 unik digunakan, 311 kesemuanya — 62/63 SUDAH
+sedia ada drpd liputan Bab 1-7, tiada kes edge annotation OpenMoji
+kali ni). Bab 8 TIADA komponen baharu — `.paper-bar-list`/`.paper-
+donut-wrap` (bab-8-2.html, bab-8-3.html) guna semula pengendali PDF
+sedia ada drpd fix Bab 6 tanpa kod tambahan, disahkan 24 bar + 4 item
+legenda donat (bab-8-2.html) & 9 bar (bab-8-3.html) semua dikesan &
+dirender betul.
+
+Disahkan via Playwright merentas kesemua 4 subtopik (`bab-8-1` s/d
+`bab-8-4`): sifar ikon gagal, sifar `.zpkw-tokoh`/`.zpkw-tempat`
+overflow, sifar ralat JS, penjanaan PDF penuh berjaya 2-4 muka surat
+setiap subtopik.
+
 ## Eksport PDF — Chip blok PD1/PD2 (`.bloc-chip-*`) pendua & tiada warna
 
 Pengguna lapor (tangkapan skrin pratonton PDF `bab-3-3.html`, kad
