@@ -1,0 +1,216 @@
+{
+  "id": "7-5",
+  "title": "Penubuhan Parti Politik",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Bilakah United Malays National Organisation (UMNO) ditubuhkan?",
+      "options": [
+        "Mei 1946",
+        "Oktober 1945",
+        "Februari 1946",
+        "Jun 1946"
+      ],
+      "answer": "Mei 1946",
+      "explanation": "UMNO ditubuhkan pada Mei 1946, dipimpin oleh Dato' Onn Jaafar dan Tunku Abdul Rahman.",
+      "tip": "Mei 1946 = penubuhan UMNO."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah logo yang dipilih oleh Parti Perikatan?",
+      "options": [
+        "Kapal layar",
+        "Bulan sabit",
+        "Bintang tiga",
+        "Bunga raya"
+      ],
+      "answer": "Kapal layar",
+      "explanation": "Parti Perikatan memilih kapal layar sebagai logo, melambangkan kesediaan menempuh cabaran dan tekad mencapai kemerdekaan.",
+      "tip": "Kapal layar = logo Parti Perikatan."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Bilakah Malayan Indian Congress (MIC) menyertai UMNO dan MCA membentuk Parti Perikatan?",
+      "options": [
+        "Oktober 1954",
+        "Ogos 1954",
+        "Februari 1954",
+        "Disember 1947"
+      ],
+      "answer": "Oktober 1954",
+      "explanation": "MIC menyertai UMNO dan MCA membentuk Parti Perikatan pada Oktober 1954, melengkapkan kerjasama tiga kaum terbesar.",
+      "tip": "Oktober 1954 = MIC sertai Parti Perikatan."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah yang memimpin Pusat Tenaga Rakyat (PUTERA) dalam pakatan PUTERA-AMCJA?",
+      "options": [
+        "Dr. Burhanuddin al-Helmi",
+        "Tan Cheng Lock",
+        "Dato' Onn Jaafar",
+        "Tunku Abdul Rahman"
+      ],
+      "answer": "Dr. Burhanuddin al-Helmi",
+      "explanation": "Pusat Tenaga Rakyat (PUTERA) dipimpin oleh Dr. Burhanuddin al-Helmi, manakala All Malaya Council of Joint Action (AMCJA) diketuai Tan Cheng Lock.",
+      "tip": "PUTERA = Dr. Burhanuddin al-Helmi."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah penyertaan MIC dalam Parti Perikatan pada Oktober 1954 penting?",
+      "options": [
+        "Kerana penyertaan ini melengkapkan kerjasama tiga kaum terbesar di Tanah Melayu (Melayu, Cina, India)",
+        "Kerana penyertaan ini menyebabkan UMNO dan MCA menarik diri daripada Parti Perikatan",
+        "Kerana penyertaan ini menamatkan penglibatan MCA dalam politik Tanah Melayu",
+        "Kerana penyertaan ini menggantikan keperluan Konvensyen Kebangsaan 1954"
+      ],
+      "answer": "Kerana penyertaan ini melengkapkan kerjasama tiga kaum terbesar di Tanah Melayu (Melayu, Cina, India)",
+      "explanation": "Penyertaan MIC bersama UMNO dan MCA melengkapkan kerjasama tiga kaum terbesar di Tanah Melayu — Melayu, Cina dan India — dalam Parti Perikatan.",
+      "tip": "MIC sertai = lengkap 3 kaum terbesar."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah Persidangan Kebangsaan Februari 1954 diadakan?",
+      "options": [
+        "Untuk membincangkan langkah membentuk gabungan parti politik kebangsaan Tanah Melayu yang bersatu, dengan tuntutan utama mengadakan pilihan raya Persekutuan",
+        "Untuk membentuk Parti Perikatan secara rasmi antara UMNO, MCA dan MIC",
+        "Untuk membincangkan Manifesto Perlembagaan Rakyat yang dicadangkan PUTERA-AMCJA",
+        "Untuk melantik Ahli Sistem Ahli bagi tempoh 1954 hingga 1955"
+      ],
+      "answer": "Untuk membincangkan langkah membentuk gabungan parti politik kebangsaan Tanah Melayu yang bersatu, dengan tuntutan utama mengadakan pilihan raya Persekutuan",
+      "explanation": "Persidangan Kebangsaan Februari 1954, diketuai Dato' Panglima Bukit Gantang dan Dato' Abdul Wahab Abdul Aziz, membincangkan pembentukan gabungan parti kebangsaan bersatu, dengan tuntutan mengadakan pilihan raya Persekutuan.",
+      "tip": "Persidangan Kebangsaan 1954 = gabungan parti + tuntut PRU."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah kebanyakan parti politik yang ditubuhkan selepas Perang Dunia Kedua menuju matlamat yang sama walaupun berasaskan kaum berbeza?",
+      "options": [
+        "Kerana matlamat akhir mereka ialah membebaskan tanah air daripada penjajah dan membina negara merdeka yang berdaulat, walaupun pendekatan awal tertumpu kepada kepentingan kaum masing-masing",
+        "Kerana semua parti ini ditubuhkan oleh pemimpin yang sama pada tahun yang sama",
+        "Kerana British memaksa semua parti bergabung menjadi satu parti tunggal sejak awal penubuhan",
+        "Kerana parti-parti ini tidak mempunyai perbezaan pendekatan langsung antara satu sama lain"
+      ],
+      "answer": "Kerana matlamat akhir mereka ialah membebaskan tanah air daripada penjajah dan membina negara merdeka yang berdaulat, walaupun pendekatan awal tertumpu kepada kepentingan kaum masing-masing",
+      "explanation": "Walaupun banyak parti bermula dengan asas kaum atau wilayah, kebanyakannya menuju matlamat yang sama iaitu membebaskan tanah air daripada penjajah dan membina negara yang berdaulat.",
+      "tip": "Asas kaum berbeza, tapi matlamat sama: bebas drpd penjajah."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sebuah gabungan dua pertubuhan pada Disember 1947 melahirkan Manifesto Perlembagaan Rakyat sebagai alternatif pembinaan negara bangsa merdeka. Apakah nama gabungan ini?",
+      "options": [
+        "Pakatan PUTERA-AMCJA",
+        "Konvensyen Kebangsaan",
+        "Persidangan Kebangsaan",
+        "Parti Perikatan"
+      ],
+      "answer": "Pakatan PUTERA-AMCJA",
+      "explanation": "Pakatan PUTERA (Dr. Burhanuddin al-Helmi) dan AMCJA (Tan Cheng Lock) bergabung pada Disember 1947, melahirkan Manifesto Perlembagaan Rakyat.",
+      "tip": "PUTERA-AMCJA (1947) = Manifesto Perlembagaan Rakyat."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sebuah konvensyen dianjurkan oleh UMNO dan MCA pada Ogos 1954, turut dihadiri PAS, yang meluluskan resolusi mendesak British mengadakan pilihan raya Persekutuan. Apakah nama konvensyen ini?",
+      "options": [
+        "Konvensyen Kebangsaan",
+        "Persidangan Kebangsaan",
+        "Pakatan PUTERA-AMCJA",
+        "Persidangan Kongres Belia Asia"
+      ],
+      "answer": "Konvensyen Kebangsaan",
+      "explanation": "Konvensyen Kebangsaan Ogos 1954, dianjurkan UMNO (Tunku Abdul Rahman) dan MCA (Tan Cheng Lock), turut dihadiri PAS, meluluskan resolusi mendesak British mengadakan pilihan raya Persekutuan.",
+      "tip": "Konvensyen Kebangsaan (Ogos 1954) = desak PRU Persekutuan."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sebuah parti ditubuhkan di Jesselton dan Labuan pada Disember 1946 untuk menyatukan anak negeri dan menuntut keadilan daripada pentadbiran British. Apakah nama parti ini?",
+      "options": [
+        "Barisan Pemuda (BARIP)",
+        "Barisan Pemuda Sarawak (BPS)",
+        "Parti Kebangsaan Melayu Labuan (PKML)",
+        "Pergerakan Pemuda Melayu (PPM)"
+      ],
+      "answer": "Barisan Pemuda (BARIP)",
+      "explanation": "Barisan Pemuda (BARIP) ditubuhkan di Jesselton dan Labuan pada Disember 1946, menyatukan anak negeri dan menuntut keadilan daripada pentadbiran British.",
+      "tip": "BARIP (Jesselton & Labuan, Dis 1946) = anak negeri."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perbezaan antara ciri penubuhan parti politik pada tahun 1940-an dengan tahun 1950-an di negara kita?",
+      "options": [
+        "Kebanyakan parti 1940-an ditubuhkan berasaskan kaum/wilayah tertentu (cth. UMNO, MCA, MIC, PKMS), manakala beberapa parti 1950-an (cth. IMP, Parti Negara) lebih menekankan penyatuan rakyat pelbagai kaum sebagai dasar penubuhan",
+        "Semua parti 1940-an ditubuhkan berasaskan pelbagai kaum, manakala semua parti 1950-an ditubuhkan berasaskan satu kaum sahaja",
+        "Parti 1940-an hanya ditubuhkan di Tanah Melayu, manakala parti 1950-an hanya ditubuhkan di Sarawak dan Sabah",
+        "Tiada perbezaan antara ciri penubuhan parti 1940-an dengan 1950-an"
+      ],
+      "answer": "Kebanyakan parti 1940-an ditubuhkan berasaskan kaum/wilayah tertentu (cth. UMNO, MCA, MIC, PKMS), manakala beberapa parti 1950-an (cth. IMP, Parti Negara) lebih menekankan penyatuan rakyat pelbagai kaum sebagai dasar penubuhan",
+      "explanation": "Kebanyakan parti 1940-an (10 parti) ditubuhkan berasaskan kaum atau wilayah, manakala beberapa parti 1950-an seperti IMP dan Parti Negara lebih menekankan penyatuan rakyat pelbagai kaum sebagai dasar penubuhannya.",
+      "tip": "1940-an: kaum/wilayah. 1950-an: mula tekan penyatuan kaum."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perkaitan antara Pakatan PUTERA-AMCJA (1947) dengan Konvensyen Kebangsaan (1954) dari segi matlamat?",
+      "options": [
+        "Kedua-duanya berusaha memupuk kerjasama politik antara kaum dan mendesak langkah konkrit ke arah kemerdekaan/pilihan raya, walaupun digerakkan oleh gabungan pertubuhan berbeza",
+        "Kedua-duanya ditubuhkan oleh UMNO dan MCA pada tahun yang sama",
+        "Kedua-duanya menolak sebarang bentuk pilihan raya Persekutuan Tanah Melayu",
+        "Kedua-duanya hanya melibatkan pemimpin kaum Melayu tanpa penyertaan kaum lain"
+      ],
+      "answer": "Kedua-duanya berusaha memupuk kerjasama politik antara kaum dan mendesak langkah konkrit ke arah kemerdekaan/pilihan raya, walaupun digerakkan oleh gabungan pertubuhan berbeza",
+      "explanation": "PUTERA-AMCJA (1947) melahirkan Manifesto Perlembagaan Rakyat, manakala Konvensyen Kebangsaan (1954) meluluskan resolusi mendesak pilihan raya Persekutuan — kedua-duanya memupuk kerjasama antara kaum dan mendesak langkah konkrit ke arah kemerdekaan.",
+      "tip": "PUTERA-AMCJA & Konvensyen Kebangsaan = kerjasama kaum, desak langkah konkrit."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah PALING tepat menjelaskan bagaimana penubuhan pelbagai parti politik berasaskan kaum akhirnya membawa kepada kerjasama antara kaum?",
+      "options": [
+        "Kesedaran daripada pengalaman berorganisasi politik dan keperluan menghadapi cabaran bersama (cth. tuntutan pilihan raya Persekutuan) mendorong parti berasaskan kaum seperti UMNO, MCA dan MIC bergabung membentuk Parti Perikatan",
+        "British mengarahkan semua parti berasaskan kaum bergabung menjadi Parti Perikatan tanpa perbincangan pemimpin tempatan",
+        "Semua parti berasaskan kaum dibubarkan serentak dan digantikan terus dengan Parti Perikatan",
+        "Kerjasama antara kaum hanya berlaku selepas Persekutuan Tanah Melayu mencapai kemerdekaan"
+      ],
+      "answer": "Kesedaran daripada pengalaman berorganisasi politik dan keperluan menghadapi cabaran bersama (cth. tuntutan pilihan raya Persekutuan) mendorong parti berasaskan kaum seperti UMNO, MCA dan MIC bergabung membentuk Parti Perikatan",
+      "explanation": "Penubuhan parti politik membuktikan kesedaran rakyat tentang kepentingan organisasi politik; kematangan ini, ditambah keperluan menghadapi cabaran bersama, mendorong UMNO, MCA dan MIC bergabung membentuk Parti Perikatan.",
+      "tip": "Kesedaran politik + cabaran bersama → Parti Perikatan."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah PALING tepat merumuskan subtopik 7.5 dan Rumusan Besar Bab 7?",
+      "options": [
+        "Penubuhan pelbagai parti politik selepas Perang Dunia Kedua, walaupun kebanyakannya berasaskan kaum, akhirnya mendorong kerjasama politik antara kaum (seperti Parti Perikatan) yang menjadi asas penting perjuangan ke arah kemerdekaan negara",
+        "Kesemua parti politik yang ditubuhkan selepas Perang Dunia Kedua bergabung terus menjadi Parti Perikatan pada tahun 1946",
+        "Kerjasama politik antara kaum hanya bermula selepas Sistem Ahli tamat pada Jun 1955",
+        "Penubuhan parti politik tidak memberi sebarang sumbangan kepada perjuangan kemerdekaan negara"
+      ],
+      "answer": "Penubuhan pelbagai parti politik selepas Perang Dunia Kedua, walaupun kebanyakannya berasaskan kaum, akhirnya mendorong kerjasama politik antara kaum (seperti Parti Perikatan) yang menjadi asas penting perjuangan ke arah kemerdekaan negara",
+      "explanation": "Rumusan menggabungkan kemunculan pelbagai parti politik berasaskan kaum selepas Perang Dunia Kedua dan bagaimana ini akhirnya membawa kepada kerjasama politik antara kaum sebagai asas penting ke arah kemerdekaan — selaras Rumusan Besar Bab 7 tentang kerjasama antara kaum, identiti kebangsaan dan persediaan berkerajaan sendiri.",
+      "tip": "Parti berasaskan kaum → kerjasama antara kaum → asas kemerdekaan."
+    }
+  ]
+}

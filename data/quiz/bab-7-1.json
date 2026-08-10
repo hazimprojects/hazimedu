@@ -1,0 +1,216 @@
+{
+  "id": "7-1",
+  "title": "Latar Belakang Idea Negara Merdeka",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah pemimpin Kesatuan Melayu Muda (KMM) yang memperjuangkan konsep Melayu Raya?",
+      "options": [
+        "Ibrahim Haji Yaakob",
+        "Dr. Burhanuddin al-Helmi",
+        "Ahmad Boestamam",
+        "Dato' Onn Jaafar"
+      ],
+      "answer": "Ibrahim Haji Yaakob",
+      "explanation": "Kesatuan Melayu Muda (KMM) di bawah pimpinan Ibrahim Haji Yaakob memperjuangkan kemerdekaan tanah air melalui konsep Melayu Raya.",
+      "tip": "Ibrahim Haji Yaakob = KMM + Melayu Raya."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah pengasas Malayan Indian Congress (MIC)?",
+      "options": [
+        "John Thivy",
+        "Tan Cheng Lock",
+        "Dato' Onn Jaafar",
+        "Dr. Burhanuddin al-Helmi"
+      ],
+      "answer": "John Thivy",
+      "explanation": "MIC diasaskan oleh John Thivy, yang meletakkan objektif bekerjasama dengan kaum lain dan memperjuangkan kemerdekaan Tanah Melayu.",
+      "tip": "John Thivy = pengasas MIC."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah slogan UMNO sebelum diubah kepada \"Merdeka\" pada 1951?",
+      "options": [
+        "Hidup Melayu",
+        "Merdeka dengan Darah",
+        "Hidup Melayu-Merdeka",
+        "Tanah Melayu untuk Malayan"
+      ],
+      "answer": "Hidup Melayu",
+      "explanation": "UMNO berjuang menentang Malayan Union dengan slogan \"Hidup Melayu\", sebelum slogannya diubah kepada \"Merdeka\" pada 1951.",
+      "tip": "UMNO: \"Hidup Melayu\" → \"Merdeka\" (1951)."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah pengasas Independence of Malayan Party (IMP)?",
+      "options": [
+        "Dato' Onn Jaafar",
+        "Tunku Abdul Rahman",
+        "Tan Cheng Lock",
+        "Dr. Burhanuddin al-Helmi"
+      ],
+      "answer": "Dato' Onn Jaafar",
+      "explanation": "Dato' Onn Jaafar mengasaskan Independence of Malayan Party (IMP) untuk melaksanakan idea \"Tanah Melayu untuk Malayan\".",
+      "tip": "Dato' Onn Jaafar = pengasas IMP."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah Angkatan Pemuda Insaf (API) diharamkan oleh British?",
+      "options": [
+        "Kerana pendekatan dan imej radikal API, termasuk slogan \"Merdeka dengan Darah\" yang menyeru kekerasan jika terpaksa",
+        "Kerana API menolak sebarang bentuk kerjasama dengan Kesatuan Melayu Muda (KMM)",
+        "Kerana API bergabung terus dengan Parti Komunis Malaya (PKM) secara rasmi",
+        "Kerana API menuntut Sarawak dimerdekakan di bawah pemerintahan Raja Brooke"
+      ],
+      "answer": "Kerana pendekatan dan imej radikal API, termasuk slogan \"Merdeka dengan Darah\" yang menyeru kekerasan jika terpaksa",
+      "explanation": "Pendekatan dan imej radikal API, terutama slogan \"Merdeka dengan Darah\" dalam risalah Testament Politik API, menyebabkan API diharamkan oleh British.",
+      "tip": "API diharamkan = imej radikal + \"Merdeka dengan Darah\"."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah Pergerakan Pemuda Melayu (PPM) menubuhkan pakatan sulit Rukun 13?",
+      "options": [
+        "Kerana PPM nekad membunuh gabenor, pegawai British dan Datu Melayu yang menyokong penyerahan Sarawak kepada British",
+        "Kerana PPM mahu menyertai Kesatuan Rakyat Indonesia Semenanjung (KRIS) secara rasmi",
+        "Kerana PPM mahu mengambil alih kepimpinan Persatuan Kebangsaan Melayu Sarawak (PKMS)",
+        "Kerana PPM ingin bekerjasama dengan Jepun menentang British di Sarawak"
+      ],
+      "answer": "Kerana PPM nekad membunuh gabenor, pegawai British dan Datu Melayu yang menyokong penyerahan Sarawak kepada British",
+      "explanation": "Anggota PPM menubuhkan pakatan sulit Rukun 13 yang nekad membunuh gabenor, pegawai British dan Datu Melayu yang menyokong penyerahan Sarawak, membuktikan kebencian PPM terhadap kolonial.",
+      "tip": "Rukun 13 = pakatan sulit PPM lawan penyokong penyerahan Sarawak."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah Dato' Onn Jaafar menubuhkan Independence of Malayan Party (IMP) selepas 1949?",
+      "options": [
+        "Kerana pemikiran politiknya semakin terarah kepada perpaduan kebangsaan dan baginya tuntutan kemerdekaan tidak boleh dibuat tanpa kerjasama kaum lain",
+        "Kerana beliau ditolak oleh UMNO sebagai Presiden parti tersebut",
+        "Kerana beliau mahu menggantikan peranan Malayan Chinese Association (MCA) dalam politik Cina",
+        "Kerana beliau ingin memperjuangkan Tanah Melayu sebagai negara Islam"
+      ],
+      "answer": "Kerana pemikiran politiknya semakin terarah kepada perpaduan kebangsaan dan baginya tuntutan kemerdekaan tidak boleh dibuat tanpa kerjasama kaum lain",
+      "explanation": "Selepas 1949, pemikiran politik Dato' Onn Jaafar semakin terarah kepada perpaduan kebangsaan; beliau berpendapat tuntutan kemerdekaan perlu disertai kerjasama dan penerimaan kaum lain sebagai rakyat Tanah Melayu.",
+      "tip": "IMP = Onn Jaafar cari perpaduan kebangsaan."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sebuah pertubuhan menentang penyerahan Sarawak kepada British dan mahu menjadikan Sarawak negeri merdeka di bawah pemerintahan Raja Brooke, seperti dijanjikan dalam Perlembagaan 1941. Apakah nama pertubuhan ini?",
+      "options": [
+        "Persatuan Kebangsaan Melayu Sarawak (PKMS)",
+        "Pergerakan Pemuda Melayu (PPM)",
+        "Barisan Pemuda Sarawak (BPS)",
+        "Kesatuan Rakyat Indonesia Semenanjung (KRIS)"
+      ],
+      "answer": "Persatuan Kebangsaan Melayu Sarawak (PKMS)",
+      "explanation": "PKMS di bawah pimpinan Datu Patinggi Abang Haji Abdillah mempelopori gerakan menentang penyerahan Sarawak kepada British, dengan matlamat menjadikan Sarawak negeri merdeka di bawah Raja Brooke seperti dijanjikan dalam Perlembagaan 1941.",
+      "tip": "PKMS = lawan penyerahan Sarawak, mahu Raja Brooke kekal."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sebuah risalah bertajuk \"Testament Politik API\" diterbitkan pada Disember 1946, membawa slogan yang menyeru perjuangan melalui jalan terbuka secara lembut, tetapi kekerasan jika terpaksa. Apakah slogan risalah ini?",
+      "options": [
+        "Merdeka dengan Darah",
+        "Hidup Melayu",
+        "Hidup Melayu-Merdeka",
+        "Tanah Melayu untuk Malayan"
+      ],
+      "answer": "Merdeka dengan Darah",
+      "explanation": "Testament Politik API membawa slogan \"Merdeka dengan Darah\", menyeru perjuangan kemerdekaan melalui jalan terbuka secara lembut, tetapi diteruskan melalui kekerasan jika terpaksa.",
+      "tip": "Testament Politik API = \"Merdeka dengan Darah\"."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sebuah parti berpusat di Sabah menjalankan dasar tidak bekerjasama dengan penjajah dan melaung \"Hidup Melayu-Merdeka\" dalam surat-menyurat ahlinya. Apakah nama parti ini?",
+      "options": [
+        "Parti Kebangsaan Melayu Labuan (PKML)",
+        "United Malays National Organisation (UMNO)",
+        "Persatuan Kebangsaan Melayu Sarawak (PKMS)",
+        "Parti Kebangsaan Melayu Malaya (PKMM)"
+      ],
+      "answer": "Parti Kebangsaan Melayu Labuan (PKML)",
+      "explanation": "PKML, dipimpin Tengku Noordin dan Zakaria Gunn, menjalankan dasar tidak bekerjasama dengan penjajah dan menuntut Sabah dimerdekakan, dengan laungan \"Hidup Melayu-Merdeka\" dalam surat Zakaria Gunn.",
+      "tip": "PKML (Sabah) = \"Hidup Melayu-Merdeka\"."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perbezaan utama antara pendekatan Kesatuan Melayu Muda (KMM) dengan pendekatan Parti Islam Se-Tanah Melayu (PAS) dalam memperjuangkan kemerdekaan?",
+      "options": [
+        "KMM memperjuangkan penyatuan dunia Melayu melalui konsep Melayu Raya berasaskan persamaan darah, daerah, bahasa dan kebudayaan, manakala PAS memperjuangkan kemerdekaan berasaskan hukum Islam dengan bahasa Melayu sebagai bahasa kebangsaan tunggal",
+        "KMM memperjuangkan negara Islam, manakala PAS memperjuangkan penyatuan dunia Melayu melalui Melayu Raya",
+        "KMM dan PAS kedua-duanya ditubuhkan oleh Dr. Burhanuddin al-Helmi pada tahun yang sama",
+        "KMM menentang Malayan Union secara terbuka, manakala PAS bekerjasama rapat dengan British dalam pentadbiran"
+      ],
+      "answer": "KMM memperjuangkan penyatuan dunia Melayu melalui konsep Melayu Raya berasaskan persamaan darah, daerah, bahasa dan kebudayaan, manakala PAS memperjuangkan kemerdekaan berasaskan hukum Islam dengan bahasa Melayu sebagai bahasa kebangsaan tunggal",
+      "explanation": "KMM memperjuangkan Melayu Raya (penyatuan rumpun Melayu berdasarkan persamaan darah, daerah, bahasa dan kebudayaan), manakala PAS memperjuangkan negara Islam dengan bahasa Melayu sebagai bahasa kebangsaan dan rasmi tunggal.",
+      "tip": "KMM = Melayu Raya. PAS = negara Islam."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah persamaan antara perjuangan Malayan Chinese Association (MCA) dengan perjuangan Independence of Malayan Party (IMP)?",
+      "options": [
+        "Kedua-duanya menekankan kerjasama antara kaum berbilang bangsa sebagai asas mencapai kemerdekaan Tanah Melayu yang berdemokrasi, walaupun ditubuhkan oleh pemimpin berlainan kaum",
+        "Kedua-duanya ditubuhkan khusus untuk memperjuangkan kepentingan kaum Cina di Tanah Melayu",
+        "Kedua-duanya menentang penyertaan kaum India dalam sebarang gabungan politik",
+        "Kedua-duanya memperjuangkan Tanah Melayu sebagai negara Islam berasaskan hukum syariah"
+      ],
+      "answer": "Kedua-duanya menekankan kerjasama antara kaum berbilang bangsa sebagai asas mencapai kemerdekaan Tanah Melayu yang berdemokrasi, walaupun ditubuhkan oleh pemimpin berlainan kaum",
+      "explanation": "MCA (Tan Cheng Lock) menegaskan Tanah Melayu berbilang kaum sebagai negara berdemokrasi penuh, manakala IMP (Dato' Onn Jaafar) menekankan perpaduan kebangsaan — kedua-duanya menjadikan kerjasama antara kaum sebagai asas kemerdekaan.",
+      "tip": "MCA & IMP = kerjasama antara kaum, demokrasi."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah PALING tepat menjelaskan mengapa idea negara merdeka di negara kita berkembang melalui pelbagai pendekatan (Melayu Raya, demokrasi, negara Islam, perpaduan antara kaum) dan bukan satu ideologi tunggal?",
+      "options": [
+        "Kerana idea kemerdekaan dibawa oleh pelbagai pertubuhan dan tokoh dengan latar ideologi, kaum dan matlamat berbeza yang masing-masing menyumbang kepada kesedaran politik secara berperingkat sebelum menuju matlamat yang sama",
+        "Kerana British sengaja mewujudkan pelbagai ideologi bagi memecahbelahkan gerakan kebangsaan tempatan",
+        "Kerana hanya satu pertubuhan, iaitu UMNO, yang bertanggungjawab memperkenalkan semua idea kemerdekaan tersebut",
+        "Kerana idea negara merdeka hanya wujud selepas Perjanjian Persekutuan Tanah Melayu 1948 ditandatangani"
+      ],
+      "answer": "Kerana idea kemerdekaan dibawa oleh pelbagai pertubuhan dan tokoh dengan latar ideologi, kaum dan matlamat berbeza yang masing-masing menyumbang kepada kesedaran politik secara berperingkat sebelum menuju matlamat yang sama",
+      "explanation": "Idea negara merdeka tidak lahir daripada satu pertubuhan sahaja, tetapi berkembang melalui perjuangan pelbagai pertubuhan dan tokoh (KMM, PKMM, API, Hizbul Muslimin, MCA, PAS, IMP dan lain-lain) dengan pendekatan berbeza yang menuju matlamat yang sama.",
+      "tip": "Pelbagai pertubuhan + tokoh → kesedaran berperingkat → matlamat sama."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah PALING tepat merumuskan subtopik 7.1?",
+      "options": [
+        "Idea negara merdeka lahir daripada perjuangan pelbagai pertubuhan dan tokoh dengan ideologi berbeza seperti Melayu Raya, demokrasi, negara Islam dan perpaduan kaum, namun kesemuanya menuju matlamat membebaskan tanah air daripada kolonial British",
+        "Idea negara merdeka hanya diperjuangkan oleh Kesatuan Melayu Muda (KMM) sebelum diharamkan oleh British",
+        "Pertubuhan yang disebut dalam subtopik ini menumpukan perjuangan mereka kepada isu ekonomi, bukan kemerdekaan politik",
+        "Idea negara merdeka tercetus selepas Jawatankuasa Hubungan Antara Kaum (CLC) ditubuhkan pada 1949"
+      ],
+      "answer": "Idea negara merdeka lahir daripada perjuangan pelbagai pertubuhan dan tokoh dengan ideologi berbeza seperti Melayu Raya, demokrasi, negara Islam dan perpaduan kaum, namun kesemuanya menuju matlamat membebaskan tanah air daripada kolonial British",
+      "explanation": "Rumusan menggabungkan kepelbagaian pertubuhan/tokoh dan ideologi (Melayu Raya, demokrasi, negara Islam, perpaduan kaum) yang membawa idea negara merdeka, namun menuju matlamat sama iaitu membebaskan tanah air daripada kolonial British.",
+      "tip": "Pelbagai ideologi → matlamat sama: bebas drpd British."
+    }
+  ]
+}

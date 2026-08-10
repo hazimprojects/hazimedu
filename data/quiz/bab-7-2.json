@@ -1,0 +1,216 @@
+{
+  "id": "7-2",
+  "title": "Jawatankuasa Hubungan Antara Kaum",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Bilakah Jawatankuasa Hubungan Antara Kaum (CLC) ditubuhkan?",
+      "options": [
+        "Januari 1949",
+        "April 1951",
+        "Februari 1954",
+        "Oktober 1954"
+      ],
+      "answer": "Januari 1949",
+      "explanation": "Jawatankuasa Hubungan Antara Kaum atau Communities Liaison Committee (CLC) ditubuhkan pada Januari 1949.",
+      "tip": "Januari 1949 = penubuhan CLC."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah Pengerusi Jawatankuasa Hubungan Antara Kaum (CLC)?",
+      "options": [
+        "E.E.C. Thuraisingham",
+        "Malcolm MacDonald",
+        "Dato' Onn Jaafar",
+        "Tan Cheng Lock"
+      ],
+      "answer": "E.E.C. Thuraisingham",
+      "explanation": "E.E.C. Thuraisingham, wakil orang Ceylon, menjadi Pengerusi CLC.",
+      "tip": "Thuraisingham = Pengerusi CLC."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah moto Jawatankuasa Hubungan Antara Kaum (CLC)?",
+      "options": [
+        "Kesamaan dan Keadilan untuk Penduduk Tanah Melayu",
+        "Merdeka dengan Darah",
+        "Tanah Melayu untuk Malayan",
+        "Hidup Melayu"
+      ],
+      "answer": "Kesamaan dan Keadilan untuk Penduduk Tanah Melayu",
+      "explanation": "Moto CLC ialah \"Kesamaan dan Keadilan untuk Penduduk Tanah Melayu\".",
+      "tip": "Moto CLC = \"Kesamaan dan Keadilan...\"."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah Penasihat CLC yang berjawatan Gabenor Jeneral British di Asia Tenggara?",
+      "options": [
+        "Malcolm MacDonald",
+        "E.E.C. Thuraisingham",
+        "Roland Braddell",
+        "Dato' Onn Jaafar"
+      ],
+      "answer": "Malcolm MacDonald",
+      "explanation": "Malcolm MacDonald, Gabenor Jeneral British di Asia Tenggara, menjadi Penasihat CLC.",
+      "tip": "Malcolm MacDonald = Penasihat CLC."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah CLC bersetuju memberikan kedudukan istimewa kepada orang Melayu?",
+      "options": [
+        "Kerana taat setia mereka tidak berbelah bahagi sebagai penduduk asal Tanah Melayu",
+        "Kerana orang Melayu mengancam akan menarik diri daripada CLC jika tuntutan tidak dipenuhi",
+        "Kerana British memaksa CLC menerima tuntutan tersebut tanpa perbincangan",
+        "Kerana kaum lain bersetuju menyerahkan hak politik mereka kepada orang Melayu"
+      ],
+      "answer": "Kerana taat setia mereka tidak berbelah bahagi sebagai penduduk asal Tanah Melayu",
+      "explanation": "CLC bersetuju orang Melayu mempunyai kedudukan istimewa kerana taat setia mereka tidak berbelah bahagi, sambil turut mengiktiraf kepentingan sah kaum lain.",
+      "tip": "Kedudukan istimewa Melayu = taat setia + penduduk asal."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah CLC mencadangkan penubuhan RIDA (Lembaga Pembangunan Industri Desa)?",
+      "options": [
+        "Kerana orang Melayu ketinggalan dalam sektor ekonomi, jadi CLC mencadangkan agensi untuk meningkatkan ekonomi dan pendidikan mereka",
+        "Kerana kerajaan mahu menggantikan peranan Majlis Perundangan Persekutuan dalam hal ekonomi",
+        "Kerana kaum Cina menuntut agensi khas untuk membangunkan perniagaan mereka",
+        "Kerana British mahu menyekat penglibatan orang Melayu dalam politik dengan memberi tumpuan kepada ekonomi"
+      ],
+      "answer": "Kerana orang Melayu ketinggalan dalam sektor ekonomi, jadi CLC mencadangkan agensi untuk meningkatkan ekonomi dan pendidikan mereka",
+      "explanation": "Orang Melayu ketinggalan dalam sektor ekonomi, mendorong CLC mencadangkan penubuhan agensi (RIDA, ditubuhkan 1950) untuk meningkatkan ekonomi dan pendidikan mereka, hasil cadangan Dato' Onn Jaafar.",
+      "tip": "RIDA = jawapan CLC kpd ketinggalan ekonomi Melayu."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah CLC mencadangkan sistem pendidikan yang seragam?",
+      "options": [
+        "Kerana sistem pendidikan berbeza mengikut kaum, jadi keseragaman diperlukan untuk memupuk kesetiaan dan memperkukuh perpaduan kaum",
+        "Kerana kerajaan British mahu menjadikan bahasa Inggeris bahasa pengantar utama menggantikan bahasa ibunda di semua sekolah",
+        "Kerana Majlis Perundangan Persekutuan menolak kewujudan sekolah vernakular Melayu",
+        "Kerana pilihan raya peringkat majlis bandaran memerlukan syarat pendidikan yang sama bagi semua calon"
+      ],
+      "answer": "Kerana sistem pendidikan berbeza mengikut kaum, jadi keseragaman diperlukan untuk memupuk kesetiaan dan memperkukuh perpaduan kaum",
+      "explanation": "CLC mencadangkan sistem pendidikan seragam kerana sistem sedia ada berbeza mengikut kaum; kesan cadangan ini ialah penubuhan jawatankuasa pendidikan untuk mengkaji sistem pendidikan kebangsaan.",
+      "tip": "Pendidikan seragam = kesetiaan + perpaduan kaum."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Seorang wakil Cina dalam CLC yang mewakili Melaka turut memimpin Malayan Chinese Association (MCA). Siapakah beliau?",
+      "options": [
+        "Tan Cheng Lock",
+        "Lee Tiang Keng",
+        "C.C. Tan",
+        "Yong Shook Lin"
+      ],
+      "answer": "Tan Cheng Lock",
+      "explanation": "Tan Cheng Lock mewakili Melaka dalam CLC, dan juga memimpin MCA.",
+      "tip": "Tan Cheng Lock = wakil Melaka dlm CLC + pemimpin MCA."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sebuah agensi ditubuhkan pada 1950 hasil cadangan Dato' Onn Jaafar dalam CLC untuk meningkatkan ekonomi dan pendidikan orang Melayu, sebagai tolak ansur kepada pelonggaran syarat kewarganegaraan. Apakah nama agensi ini?",
+      "options": [
+        "RIDA (Lembaga Pembangunan Industri Desa)",
+        "Majlis Perundangan Persekutuan (MPP)",
+        "Jabatan Rupa Bangsa Nasional",
+        "Jabatan Pilihan Raya"
+      ],
+      "answer": "RIDA (Lembaga Pembangunan Industri Desa)",
+      "explanation": "RIDA ditubuhkan pada 1950 hasil cadangan Dato' Onn Jaafar dalam CLC, sebagai tolak ansur kepada pelonggaran syarat kewarganegaraan oleh orang Melayu.",
+      "tip": "1950 = RIDA ditubuhkan."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Susulan cadangan CLC dalam isu politik, pengalaman pilihan raya diberikan secara berperingkat bermula daripada peringkat majlis bandaran. Apakah peringkat TERAKHIR pilihan raya menurut cadangan CLC?",
+      "options": [
+        "Majlis Perundangan Persekutuan",
+        "Majlis bandaran",
+        "Majlis negeri",
+        "Sistem Ahli"
+      ],
+      "answer": "Majlis Perundangan Persekutuan",
+      "explanation": "Kesan cadangan CLC ialah pilihan raya diadakan secara berperingkat: peringkat majlis bandaran, kemudian majlis negeri, dan akhirnya Majlis Perundangan Persekutuan.",
+      "tip": "Peringkat akhir pilihan raya CLC = MPP."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perkaitan antara CLC bersetuju memberi kedudukan istimewa kepada orang Melayu dengan CLC melonggarkan syarat kewarganegaraan bukan Melayu?",
+      "options": [
+        "Kedua-duanya sebahagian daripada tolak ansur CLC untuk mengimbangi kepentingan pelbagai kaum — pengiktirafan kedudukan istimewa Melayu diimbangi dengan pelonggaran kewarganegaraan bukan Melayu demi memupuk taat setia bersama",
+        "Kedudukan istimewa Melayu digugurkan sebaik sahaja kewarganegaraan bukan Melayu dilonggarkan",
+        "Kedua-dua isu ini diputuskan oleh Malcolm MacDonald secara bersendirian tanpa perbincangan CLC",
+        "Pelonggaran kewarganegaraan bukan Melayu berlaku sebelum CLC ditubuhkan pada 1949"
+      ],
+      "answer": "Kedua-duanya sebahagian daripada tolak ansur CLC untuk mengimbangi kepentingan pelbagai kaum — pengiktirafan kedudukan istimewa Melayu diimbangi dengan pelonggaran kewarganegaraan bukan Melayu demi memupuk taat setia bersama",
+      "explanation": "CLC mengiktiraf kedudukan istimewa orang Melayu sambil turut melonggarkan syarat kewarganegaraan bukan Melayu — kedua-dua langkah ini saling berkait sebagai tolak ansur demi memupuk taat setia dan hak politik bersama.",
+      "tip": "Kedudukan istimewa Melayu ↔ kewarganegaraan bukan Melayu = tolak ansur."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perbezaan antara pendekatan CLC dalam isu kedudukan istimewa orang Melayu dengan pendekatan CLC dalam isu pendidikan?",
+      "options": [
+        "Isu kedudukan istimewa diselesaikan melalui pengiktirafan status khas orang Melayu sebagai penduduk asal, manakala isu pendidikan diselesaikan melalui cadangan sistem yang seragam merentasi kaum",
+        "Isu kedudukan istimewa diselesaikan melalui sistem pendidikan seragam, manakala isu pendidikan diselesaikan melalui pengiktirafan status khas orang Melayu",
+        "Kedua-dua isu ini diselesaikan melalui pendekatan yang sama, iaitu penubuhan RIDA",
+        "CLC tidak membincangkan isu pendidikan langsung dalam mesyuaratnya"
+      ],
+      "answer": "Isu kedudukan istimewa diselesaikan melalui pengiktirafan status khas orang Melayu sebagai penduduk asal, manakala isu pendidikan diselesaikan melalui cadangan sistem yang seragam merentasi kaum",
+      "explanation": "Isu kedudukan istimewa Melayu diselesaikan melalui pengiktirafan taat setia dan status penduduk asal, manakala isu pendidikan diselesaikan melalui cadangan sistem yang seragam bagi memupuk kesetiaan dan perpaduan merentasi kaum.",
+      "tip": "Kedudukan istimewa = pengiktirafan status. Pendidikan = keseragaman."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah PALING tepat menjelaskan kejayaan CLC menyelesaikan isu sensitif antara kaum?",
+      "options": [
+        "Pendekatan perundingan, tolak ansur dan persefahaman membolehkan setiap kaum mendapat sebahagian tuntutan mereka (kedudukan istimewa Melayu, kewarganegaraan lebih longgar bagi bukan Melayu) tanpa satu pihak berasa dipinggirkan",
+        "CLC berjaya kerana Malcolm MacDonald memberi arahan terus kepada semua wakil kaum tanpa perbincangan",
+        "CLC berjaya kerana hanya wakil Melayu yang dibenarkan membuat keputusan dalam jawatankuasa",
+        "CLC berjaya kerana semua isu diselesaikan melalui pilihan raya peringkat Majlis Perundangan Persekutuan sahaja"
+      ],
+      "answer": "Pendekatan perundingan, tolak ansur dan persefahaman membolehkan setiap kaum mendapat sebahagian tuntutan mereka (kedudukan istimewa Melayu, kewarganegaraan lebih longgar bagi bukan Melayu) tanpa satu pihak berasa dipinggirkan",
+      "explanation": "Pendekatan perundingan, tolak ansur dan persefahaman CLC membolehkan isu politik, kedudukan istimewa, ekonomi, kewarganegaraan dan pendidikan diselesaikan secara aman, dengan setiap kaum mendapat sebahagian tuntutan mereka.",
+      "tip": "Kejayaan CLC = tolak ansur seimbang semua kaum."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah PALING tepat merumuskan subtopik 7.2?",
+      "options": [
+        "CLC ditubuhkan kerana hubungan kaum yang tegang selepas Perang Dunia Kedua, dan berjaya menghimpunkan pemimpin pelbagai kaum untuk berunding isu politik, ekonomi, kewarganegaraan dan pendidikan sebagai asas ke arah berkerajaan sendiri",
+        "CLC ditubuhkan khusus untuk membincangkan isu ekonomi sahaja tanpa melibatkan isu politik atau pendidikan",
+        "CLC hanya dianggotai oleh wakil British tanpa penyertaan pemimpin tempatan",
+        "CLC ditubuhkan selepas Sistem Ahli dilaksanakan pada 1951"
+      ],
+      "answer": "CLC ditubuhkan kerana hubungan kaum yang tegang selepas Perang Dunia Kedua, dan berjaya menghimpunkan pemimpin pelbagai kaum untuk berunding isu politik, ekonomi, kewarganegaraan dan pendidikan sebagai asas ke arah berkerajaan sendiri",
+      "explanation": "Rumusan menggabungkan sebab penubuhan CLC (hubungan kaum tegang selepas Perang Dunia Kedua), keahliannya (pemimpin pelbagai kaum) dan peranannya (isu politik, ekonomi, kewarganegaraan, pendidikan) ke arah berkerajaan sendiri.",
+      "tip": "Hubungan kaum tegang → CLC → runding isu utama → berkerajaan sendiri."
+    }
+  ]
+}
