@@ -3292,28 +3292,18 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     '.zym-pdf-spinner{width:36px;height:36px;border:3px solid rgba(79,70,229,0.2);border-top-color:#4f46e5;border-radius:50%;animation:zym-spin 0.8s linear infinite;flex-shrink:0}',
     '@keyframes zym-spin{to{transform:rotate(360deg)}}',
     '.zym-pdf-page-outer{background:#fff;box-shadow:0 6px 28px rgba(0,0,0,0.4);width:100%;max-width:min(520px,calc(100vw - 88px));overflow:hidden;border-radius:2px;flex-shrink:0}',
-    '.zym-pdf-page-hdr{display:flex;align-items:center;justify-content:space-between;padding:5px 9px;border-bottom:0.5px solid #d4d4e8;font-family:Fredoka,sans-serif}',
-    '.zym-pdf-page-hdr-l{font-size:0.65rem;font-weight:700;color:#6060a0;flex-shrink:0}',
-    // TIADA white-space:nowrap/text-overflow:ellipsis lagi — PDF sebenar
-    // (_savePdf, pdf.text dgn opts.maxWidth) TAK PERNAH memotong tajuk, ia
-    // lipat (wrap) ke baris baharu jika perlu (tajuk terpanjang dlm korpus,
-    // ~70 aksara, disahkan MUAT satu baris pd 7pt Helvetica dlm maxWidth
-    // sebenar — jarang/tak pernah perlu lipat langsung dlm amalan).
-    // Memotong tajuk dgn "…" dlm pratonton (versi lama) menyembunyikan
-    // maklumat yg SEBENARNYA akan tercetak PENUH dlm PDF muat turun —
-    // pelajar tak dapat "expect apa yang mereka dapat". Titik lipat SEBENAR
-    // dikira via _pdfTitleLines() (splitTextToSize jsPDF SAMA drpd
-    // _savePdf) & disisip sbg <br> eksplisit — max-width:60% (nisbah SAMA
-    // dgn dims.cW*0.6 sebenar) di sini cuma jaring keselamatan CSS kalau
-    // fon web (Fredoka) perlukan sedikit lebih ruang drpd metrik Helvetica
-    // PDF pd bilangan baris yg SAMA dikira (bilangan baris VISUAL kekal
-    // BOLEH lebih byk drpd PDF sebenar bila fon web lebih lebar — tak
-    // dapat dielak sepenuhnya merentas fon berbeza — tapi PENTING: TIADA
-    // maklumat pernah hilang lagi, beza drpd bug ellipsis asal yg PADAM
-    // teks terus).
-    '.zym-pdf-page-hdr-r{font-size:0.57rem;color:#b0b0cc;max-width:60%;text-align:right;overflow-wrap:break-word}',
-    '.zym-pdf-page-canvas-wrap{display:flex;align-items:center;justify-content:center;background:#fff;min-height:0;max-height:min(72vh,calc(100dvh - 210px))}',
-    '.zym-pdf-page-canvas-wrap img{display:block;max-width:100%;max-height:min(72vh,calc(100dvh - 210px));width:auto;height:auto;object-fit:contain;border:0}',
+    // Pratonton dulu ada baris header/footer HTML berasingan (teks fleksibel,
+    // saiz fon tetap) di ATAS/BAWAH imej muka surat — bila imej di-zum,
+    // baris ni KEKAL saiz asal (bukan sebahagian imej), jadi muka surat
+    // "terpisah-pisah" bila di-zum (header/footer tak turut membesar spt
+    // kandungan). Dibuang SEPENUHNYA — pratonton kini papar HANYA imej muka
+    // surat statik (padan struktur PDF muat turun sebenar, di mana
+    // header/footer ialah teks vektor jsPDF yg dilukis TERUS pd muka surat
+    // PDF akhir via _savePdf()/_pdfHeaderFooterParts(), tak berkaitan
+    // langsung dgn HTML pratonton ni) — satu unit tegar yg zum secara
+    // seragam, spt pratonton PDF di mana-mana.
+    '.zym-pdf-page-canvas-wrap{display:flex;align-items:center;justify-content:center;background:#fff;min-height:0;max-height:min(78vh,calc(100dvh - 170px))}',
+    '.zym-pdf-page-canvas-wrap img{display:block;max-width:100%;max-height:min(78vh,calc(100dvh - 170px));width:auto;height:auto;object-fit:contain;border:0}',
     // overflow:auto (+ overscroll-behavior:contain) HANYA bila di-zum — bukan
     // rule asas. Sebab: overflow:auto pd bekas ni, walau TIADA overflow
     // SEBENAR pd zoom=100% (imej muat penuh dlm max-height), tetap ditanda
@@ -3334,16 +3324,6 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     '#zym-pdf-zoom-out:hover,#zym-pdf-zoom-in:hover{background:rgba(79,70,229,0.45)}',
     '#zym-pdf-zoom-out:disabled,#zym-pdf-zoom-in:disabled{opacity:0.3;cursor:default;pointer-events:none}',
     '#zym-pdf-zoom-label{min-width:42px;text-align:center;font-family:Fredoka,sans-serif;font-size:0.72rem;font-weight:600;color:#cbd5e1;user-select:none}',
-    // 3 lajur (kiri/tengah/kanan) — padan STRUKTUR footer PDF sebenar
-    // (_savePdf: zymnotes.com kiri, nombor muka surat TENGAH pageW/2,
-    // © 2026 ZymNotes kanan). Versi lama pratonton cuma 2 lajur (hilang
-    // "© 2026 ZymNotes" & nombor muka surat di kanan bukan tengah) — tak
-    // sepadan apa yg sebenarnya tercetak.
-    '.zym-pdf-page-ftr{display:flex;align-items:center;padding:4px 9px;border-top:0.5px solid #d4d4e8;font-size:0.55rem;color:#b8b8d0;font-family:Fredoka,sans-serif}',
-    '.zym-pdf-page-ftr-l{flex:1;text-align:left}',
-    '.zym-pdf-page-ftr-c{flex:1;text-align:center;color:#9090b8;font-weight:600}',
-    '.zym-pdf-page-ftr-r{flex:1;text-align:right;color:#b8b8d0}',
-    '.zym-pdf-page-num{color:#6b7280;font-size:0.7rem;text-align:center;font-family:Fredoka,sans-serif;padding:2px}',
     '@media print{#zym-pdf-overlay{display:none!important}}',
     '#zym-print-header,#zym-print-footer{display:none}'
   ].join('');
@@ -5676,50 +5656,16 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     };
   }
 
-  // Titik-pisah baris tajuk header — SAMA pengiraan drpd _savePdf (pdf.text
-  // dgn opts.maxWidth, yg secara dalaman panggil splitTextToSize()). CSS
-  // auto-wrap (font web Fredoka, unit px/rem) TAK PERNAH boleh padan tepat
-  // metrik fon PDF sebenar (Helvetica, unit mm) — cth. tajuk 34 aksara
-  // "Perkembangan Nasionalisme di Asia" muat SATU baris dlm PDF sebenar
-  // tapi lipat ke DUA baris dlm CSS auto-wrap pd lebar preview yg sama
-  // (disahkan Playwright). Panggil splitTextToSize() SAMA yg PDF sebenar
-  // guna (font+saiz+maxWidth SAMA) drpd cuba teka nisbah CSS — jamin titik
-  // lipat pratonton 100% sepadan PDF sebenar, bukan hampir sama.
-  function _pdfTitleLines(title, cW) {
-    if (!title) return [];
-    try {
-      var jsPDF = (window.jspdf && window.jspdf.jsPDF) || window.jsPDF;
-      if (!jsPDF) return [title];
-      var pdf = new jsPDF({ orientation:'portrait', unit:'mm', format:'a4' });
-      pdf.setFont('helvetica', 'normal');
-      pdf.setFontSize(7);
-      var lines = pdf.splitTextToSize(title, cW * 0.6);
-      return Array.isArray(lines) ? lines : [String(lines)];
-    } catch (e) {
-      return [title];
-    }
-  }
-
   function _pdfPopulateSlides(pages, dims) {
     var pagesDiv = document.getElementById('zym-pdf-pages');
     if (!pagesDiv) return;
     pagesDiv.innerHTML = '';
-    var titleLines = _pdfTitleLines(_pdfNoteTitle, dims.cW);
-    var hdrRHtml = titleLines.map(function(l) { return _escPdfHtml(l); }).join('<br>');
-    pages.forEach(function(pc, i) {
+    pages.forEach(function(pc) {
       var slide = document.createElement('div');
       slide.className = 'zym-pdf-page-slide';
 
       var outer = document.createElement('div');
       outer.className = 'zym-pdf-page-outer';
-
-      var parts = _pdfHeaderFooterParts(_pdfNoteTitle, i, pages.length);
-
-      var hdr = document.createElement('div');
-      hdr.className = 'zym-pdf-page-hdr';
-      hdr.innerHTML = '<span class="zym-pdf-page-hdr-l">' + _escPdfHtml(parts.hdrL) + '</span>' +
-        '<span class="zym-pdf-page-hdr-r">' + hdrRHtml + '</span>';
-      outer.appendChild(hdr);
 
       var wrap = document.createElement('div');
       wrap.className = 'zym-pdf-page-canvas-wrap';
@@ -5729,13 +5675,6 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       img.decoding = 'async';
       wrap.appendChild(img);
       outer.appendChild(wrap);
-
-      var ftr = document.createElement('div');
-      ftr.className = 'zym-pdf-page-ftr';
-      ftr.innerHTML = '<span class="zym-pdf-page-ftr-l">' + _escPdfHtml(parts.ftrL) + '</span>' +
-        '<span class="zym-pdf-page-ftr-c">' + _escPdfHtml(parts.ftrC) + '</span>' +
-        '<span class="zym-pdf-page-ftr-r">' + _escPdfHtml(parts.ftrR) + '</span>';
-      outer.appendChild(ftr);
 
       slide.appendChild(outer);
       pagesDiv.appendChild(slide);
@@ -7504,7 +7443,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=568').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=569').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
