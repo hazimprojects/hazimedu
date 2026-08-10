@@ -2060,6 +2060,52 @@ bersendirian dlm `.zp-acc-body`) SIFAR pd SEMUA halaman, & teks
 "Kegagalan Operasi Menawan Rusia" disahkan HADIR semula dlm PDF
 `bab-3-3.html` (pulih drpd regresi PR #636).
 
+## Eksport PDF — entri dlm menu FAB sparkle (ciri kekal tersembunyi)
+
+Sebelum ni satu-satunya laluan cetuskan pratonton PDF ialah butang kecil
+`.nota-feedback-pdf-btn` dlm widget "Apa pendapat anda tentang nota ini?"
+di PENGHUJUNG halaman subtopik — pengguna nyata ciri PDF "tidak begitu
+menonjol sedangkan ia boleh menjadi ciri yang berharga", minta ditambah
+ke menu FAB sparkle (butang bulat terapung, sentiasa kelihatan tanpa
+scroll ke bawah).
+
+`setupNoteFeatures()` (`assets/js/main.js`) kini tambah item "Muat turun
+PDF" (ikon `HZ_ICONS8_SPARKLE.pdfDownload`, URL SAMA drpd `PDF_DL_SRC`
+sedia ada — nilai terpaksa DIDUPLIKASI sbg entri regisrti baharu, bukan
+rujuk terus, sbb `PDF_DL_SRC` diisytihar dlm IIFE eksport PDF BERASINGAN
+[baris ~3189+] yg tak boleh diakses drpd IIFE `setupNoteFeatures()`)
+digerbangkan `hzZymnotesIsSubtopicNotePathname(_p)` — SAMA fungsi semak
+yg sedia ada dipakai gerbang keseluruhan menu FAB, jadi item ni HANYA
+muncul pd halaman subtopik nota (bukan hab bab/`index.html`/kuiz — laman
+tu tiada ciri PDF langsung).
+
+**Klik-kan butang tersembunyi sedia ada, JANGAN panggil `openPdfPreview()`
+terus.** Fungsi `openPdfPreview()` PRIVAT dlm closure IIFE PDF (tak
+didedah `window`), jadi item FAB baharu guna
+`document.querySelector('.nota-feedback-pdf-btn').click()` — cetus
+pipeline sedia ada tanpa perlu ubah/dedah fungsi privat tu. Ini SELAMAT
+drpd isu timing (elemen tak wujud lagi) sbb IIFE PDF (yg bina & sisip
+`.nota-feedback-pdf-btn` ke DOM) TIADA gerbang `DOMContentLoaded`
+sendiri — ia jalan segerak semasa skrip dimuat, jauh SEBELUM pengguna
+sempat berinteraksi dgn FAB (buka menu FAB perlukan klik pengguna,
+mustahil berlaku sebelum skrip habis jalan).
+
+**Item baharu guna corak listener BERASINGAN (spt item `settings` sedia
+ada), BUKAN router klik delegasi `itemsContainer` (yg cuma kendali
+`nav`/`audio`/`lab`)** — router delegasi semak `data-sparkle-type` tapi
+tiada cabang `pdf`, jadi klik pd item ni jatuh melalui router tanpa
+kesan (tiada konflik double-fire), listener sendiri (dilekap terus pd
+elemen item, IIFE sama corak `settingsEl.addEventListener(...)`) yg
+tutup panel FAB (`wrap.classList.remove('is-open')`) & cetus klik.
+
+Disahkan via Playwright (suntik html2canvas-pro/jspdf tempatan,
+`_ensureLibs()` langkau CDN bila lib dah wujud) merentas 4 jenis
+halaman: item "Muat turun PDF" MUNCUL pd halaman subtopik (`bab-4-2.html`,
+klik → `#zym-pdf-overlay` bertukar `is-open` = betul, pratonton PDF
+sebenar terjana), TIADA item pd hab bab (`bab-4.html`), indeks nota
+(`notes/index.html`), & halaman kuiz (`quiz/bab-4-2.html`) — sifar
+ralat JS pd keempat-empat jenis halaman.
+
 ## Aliran Kerja Versioning Aset (WAJIB lepas ubah CSS/JS/sw.js)
 
 Sumber kebenaran versi: `data/asset-versions.json`. Lepas ubah
