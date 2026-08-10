@@ -274,6 +274,19 @@ self-host lebih ringkas drpd urus rule cache tambahan dlm `sw.js`.
     Gurkha" guna ikon lain, "1 batalion askar Afrika" KEKAL generik
     benua) → `fj.svg` (svg sedia ada, tak pernah dipakai sebelum ni).
 
+  **Susulan — Korea (2 kejadian di atas, `bab-3-4.html`) DITANYA kpd
+  pengguna via `AskUserQuestion`** (2 pilihan: tambah bendera Korea
+  Selatan `kr.svg` SEBAGAI rujukan lazim, ATAU kekalkan globe generik
+  elak isu ketepatan sejarah). Pengguna pilih **tambah `kr.svg`** —
+  ditarik drpd `circle-flags` (git proxy baca awanama, klon cetek
+  `--depth 1`, salin `flags/kr.svg` ke `assets/flags/`, padam klon
+  lepas siap, sama corak drpd bendera baharu sebelum ni — LICENSE.md
+  sedia ada sudah cukup, MIT sama). Kedua-dua chip "Korea" (senarai
+  "Jepun mewujudkan orde baharu...") & "1910 — Jepun menguasai Korea"
+  (senarai "Peluasan Kuasa Jepun") kini `kr.svg`. Skop semasa selepas
+  pusingan 3 + susulan Korea: **46 negara** (rujuk `assets/flags/`,
+  +1 baharu `kr.svg`).
+
   Disahkan selepas edit: `python3 scripts/seo-audit.py` &
   `python3 scripts/check-zh-coverage.py` kekal 100% lulus (elemen
   disunting cuma tukar `src`/kelas `<img>`, tiada `data-zh-unit-id`
@@ -284,9 +297,10 @@ self-host lebih ringkas drpd urus rule cache tambahan dlm `sw.js`.
   Playwright pratonton visual (`bab-2-6.html` dwi-bendera Filipina+
   Indonesia, `bab-3-2.html` accordion "B" dwi-bendera Austria-Hungary
   + bendera Rusia/Turki pd tajuk pengenalan) sahkan render betul.
-  **68 kejadian 🌐 BAKI** (turun drpd 89) disahkan SEMUA kekal betul
-  ikut klasifikasi di atas (generik sengaja/dikecualikan/komuniti
-  etnik/deskriptor bahasa) — bukan terlepas pandang.
+  **66 kejadian 🌐 BAKI** (turun drpd 89 — 20 pusingan 3 + 2 susulan
+  Korea) disahkan SEMUA kekal betul ikut klasifikasi di atas (generik
+  sengaja/dikecualikan/komuniti etnik/deskriptor bahasa) — bukan
+  terlepas pandang.
 
 ## Bug Chip Terputus Baris — combinator `.paper-chip-list .paper-chip`
 
