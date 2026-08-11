@@ -2891,9 +2891,49 @@ var HZ_INFOGRAPHIC_PAGES = {
     fab.className = 'note-gallery-fab';
     fab.setAttribute('aria-label', 'Lihat infografik — ' + data.title);
     fab.setAttribute('data-tooltip', 'Infografik');
-    fab.appendChild(hzIcons8SparkleImg(HZ_ICONS8_SPARKLE.gallery, 'openmoji--gallery-fab', 22, 22));
+    fab.appendChild(hzIcons8SparkleImg(HZ_ICONS8_SPARKLE.gallery, 'openmoji--gallery-fab', 25, 25));
     wrap.appendChild(fab);
     document.body.appendChild(wrap);
+
+    // ── Ikut FAB sparkle: penjuru (drag/snap) & "beri ruang" bila menu
+    // sparkle terbuka. Guna MutationObserver pd classList sparkle wrap
+    // (bukan gandingan terus dgn kod seret/snap-penjuru sparkle — kekal
+    // pantau DOM sahaja, rujuk CLAUDE.md §"Infografik Galeri" utk sebab
+    // dua ciri ni sengaja IIFE berasingan). Penjuru atas (tr/tl) sparkle
+    // guna column-reverse (fab di ATAS, item buka ke BAWAH) — jadi FAB
+    // galeri KENA "swap" ke BAWAH fab sparkle utk penjuru ni (rujuk CSS
+    // `.note-gallery-fab-wrap.fab-corner-tr/tl`), berbanding ATAS utk
+    // penjuru bawah (br/bl, corak lalai).
+    (function () {
+      var sparkleWrap = document.querySelector('.note-sparkle-wrap');
+      if (!sparkleWrap) return;
+
+      function sync() {
+        var m2 = sparkleWrap.className.match(/fab-corner-(br|bl|tr|tl)/);
+        var isTop;
+        if (m2) {
+          ['br', 'bl', 'tr', 'tl'].forEach(function (cc) { wrap.classList.remove('fab-corner-' + cc); });
+          wrap.classList.add('fab-corner-' + m2[1]);
+          isTop = m2[1].charAt(0) === 't';
+        } else {
+          // Mid-drag (kelas penjuru sparkle sengaja dibuang sementara,
+          // rujuk snapToCorner()) — kekal kedudukan penjuru TERAKHIR FAB
+          // galeri, jangan cuba ikut kedudukan piksel drag secara langsung.
+          isTop = wrap.classList.contains('fab-corner-tr') || wrap.classList.contains('fab-corner-tl');
+        }
+
+        if (sparkleWrap.classList.contains('is-open')) {
+          var itemsEl = sparkleWrap.querySelector('.note-sparkle-items');
+          var shift = (itemsEl ? itemsEl.offsetHeight : 0) + 14;
+          wrap.style.transform = 'translateY(' + (isTop ? shift : -shift) + 'px)';
+        } else {
+          wrap.style.transform = '';
+        }
+      }
+
+      sync();
+      new MutationObserver(sync).observe(sparkleWrap, { attributes: true, attributeFilter: ['class'] });
+    })();
 
     // Overlay dibina LEWAT (bila FAB diklik kali pertama sahaja) — imej
     // (loading="lazy" pd semua slaid selain slaid 1) elak muat turun 10
@@ -7970,7 +8010,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=585').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=586').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });

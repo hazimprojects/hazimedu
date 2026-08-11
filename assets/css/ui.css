@@ -1623,24 +1623,45 @@ body.sparkle-panel-open .audio-notice-sheet {
    subtopik yg ada data HZ_INFOGRAPHIC_PAGES, bukan semua halaman)
 ========================= */
 
-/* ── FAB — sentiasa nampak, ditindih di ATAS sparkle FAB sedia ada.
-   Kekal berasingan drpd .note-sparkle-wrap (bukan diseret/pindah
-   penjuru) — offset guna --floating-bottom-offset-avoid-sparkle sedia
-   ada (dicipta asalnya utk zh-disclaimer-toast/audio-notice-sheet,
-   nilai sama tepat utk "susun di atas FAB sparkle" di sini). ── */
+/* ── FAB — sentiasa nampak, ditindih di ATAS/BAWAH sparkle FAB sedia
+   ada ikut penjuru semasa. Berasingan drpd .note-sparkle-wrap dari segi
+   ELEMEN (bukan diseret sendiri — elak gandingan dgn logik seret rapuh
+   sparkle FAB), TAPI disegerakkan drpd DOM sparkle via MutationObserver
+   dlm main.js (bukan dicantum ke wrap yg sama) — rujuk
+   syncGalleryFabWithSparkle() di sana utk corner-follow & "yield"
+   bila menu sparkle terbuka. Offset dasar (br/bl) guna
+   --floating-bottom-offset-avoid-sparkle sedia ada (dicipta asalnya
+   utk zh-disclaimer-toast/audio-notice-sheet, nilai sama tepat utk
+   "susun di atas FAB sparkle"); offset tr/tl (80px top sparkle + sama
+   4.25rem) TERBALIK arah (di BAWAH fab, sbb corak column-reverse
+   sparkle pd penjuru atas). ── */
 .note-gallery-fab-wrap {
   position: fixed;
-  right: 14px; bottom: calc(18px + 4.25rem);
+  right: 14px; bottom: calc(18px + 4.25rem); left: auto; top: auto;
   z-index: var(--z-floating);
+  transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.note-gallery-fab-wrap.fab-corner-br {
+  right: 14px; bottom: calc(18px + 4.25rem); left: auto; top: auto;
+}
+.note-gallery-fab-wrap.fab-corner-bl {
+  left: 14px; bottom: calc(18px + 4.25rem); right: auto; top: auto;
+}
+.note-gallery-fab-wrap.fab-corner-tr {
+  right: 14px; top: calc(80px + 4.25rem); left: auto; bottom: auto;
+}
+.note-gallery-fab-wrap.fab-corner-tl {
+  left: 14px; top: calc(80px + 4.25rem); right: auto; bottom: auto;
 }
 @media (max-width: 760px) {
-  .note-gallery-fab-wrap {
+  .note-gallery-fab-wrap.fab-corner-br,
+  .note-gallery-fab-wrap.fab-corner-bl {
     bottom: var(--floating-bottom-offset-avoid-sparkle);
   }
 }
 
 .note-gallery-fab {
-  width: 46px; height: 46px;
+  width: 48px; height: 48px;
   border-radius: 50%;
   border: 1px solid rgba(92, 110, 132, 0.13);
   background: rgba(255, 253, 248, 0.97);
@@ -1652,7 +1673,7 @@ body.sparkle-panel-open .audio-notice-sheet {
   position: relative;
   transition: transform 0.16s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.15s ease, box-shadow 0.15s ease;
 }
-.note-gallery-fab .openmoji--gallery-fab { width: 22px; height: 22px; }
+.note-gallery-fab .openmoji--gallery-fab { width: 25px; height: 25px; }
 .note-gallery-fab:hover {
   background: rgba(255, 253, 248, 1);
   box-shadow: 0 8px 22px rgba(36, 49, 63, 0.19), 0 2px 8px rgba(36, 49, 63, 0.11);
@@ -1672,6 +1693,11 @@ body.sparkle-panel-open .audio-notice-sheet {
   white-space: nowrap; opacity: 0;
   pointer-events: none; transition: opacity 0.15s ease;
 }
+/* Penjuru kiri: tooltip di sebelah kanan (sama corak fab-corner-bl/tl sparkle) */
+.note-gallery-fab-wrap.fab-corner-bl .note-gallery-fab[data-tooltip]::before,
+.note-gallery-fab-wrap.fab-corner-tl .note-gallery-fab[data-tooltip]::before {
+  right: auto; left: calc(100% + 10px);
+}
 .note-gallery-fab[data-tooltip]:hover::before { opacity: 1; }
 
 [data-theme="dark"] .note-gallery-fab {
@@ -1686,8 +1712,8 @@ body.sparkle-panel-open .audio-notice-sheet {
 }
 
 @media (max-width: 640px) {
-  .note-gallery-fab { width: 42px; height: 42px; }
-  .note-gallery-fab .openmoji--gallery-fab { width: 20px; height: 20px; }
+  .note-gallery-fab { width: 44px; height: 44px; }
+  .note-gallery-fab .openmoji--gallery-fab { width: 23px; height: 23px; }
   .note-gallery-fab[data-tooltip]::before { display: none; }
 }
 
