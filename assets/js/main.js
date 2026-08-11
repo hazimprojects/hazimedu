@@ -2315,11 +2315,11 @@ var HZ_ICONS8_SPARKLE = {
   memo:          'https://img.icons8.com/?size=96&id=zIKcpVIKdvP1&format=png',
   wastebasket:   HZ_ICONS8_3D + 'trash.png',
   pdfDownload:   'https://img.icons8.com/?size=100&id=d2H6kHCiPSIg&format=png&color=000000',
-  // Fluent CDN (bukan Icons8) — nama emoji standard "Framed picture", ikut
-  // konvensyen folder/fail hzFluent3dAsset() sedia ada (cth. "World map" →
-  // world_map_3d.png). hzIcons8SparkleImg() terima sebarang URL, jadi ni
-  // selamat dicampur dgn kunci Icons8 lain dlm objek yg sama.
-  gallery:       hzFluent3dAsset('Framed picture', 'framed_picture_3d.png'),
+  // "Photo Gallery" (3D Fluency) — URL disahkan terus drpd icons8.com
+  // (pengguna salin laluan CDN sebenar drpd panel "Link (CDN)" di
+  // laman tu, bukan teka drpd nama/kunci), gantikan cubaan awal Fluent
+  // CDN ("Framed picture") yg tak dpt disahkan dlm sandbox agen.
+  gallery:       'https://img.icons8.com/3d-fluency/94/stack-of-photos.png',
 };
 function hzIcons8SparkleImg(url, extraClass, w, h) {
   var img = document.createElement('img');
@@ -7961,7 +7961,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=579').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=580').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });

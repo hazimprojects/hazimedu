@@ -2586,21 +2586,22 @@ corner-aware (kalau pengguna seret FAB sparkle ke penjuru lain via
 — DITERIMA sengaja, sama had drpd `zh-disclaimer-toast` sedia ada yg
 turut tak corner-aware.
 
-**Ikon FAB galeri (`HZ_ICONS8_SPARKLE.gallery`) guna CDN Fluent
-(`hzFluent3dAsset('Framed picture', 'framed_picture_3d.png')`), BUKAN
-Icons8** — kunci Icons8 baharu (cth. cuba cari "gallery"/"picture" di
-`img.icons8.com`) TAK BOLEH disahkan dlm sandbox agen (CDN Icons8 DAN
-jsdelivr KEDUA-DUANYA disekat proksi sandbox — `curl -sI` pulang 403
-utk kedua-dua, disahkan `$HTTPS_PROXY/__agentproxy/status` ialah
-sekatan dasar proksi, BUKAN 404 ikon sebenar). "Framed picture" ialah
-emoji Unicode piawai (nama rasmi tepat), ikut konvensyen
-folder/fail `hzFluent3dAsset()` sedia ada yg dah terbukti utk
-berpuluh kunci lain (cth. "World map" → world_map_3d.png) — risiko
-rendah tapi **BELUM disahkan visual di CDN produksi sebenar**
-(pantauan Playwright screenshot dlm sandbox tunjuk FAB kosong/tiada
-ikon — SAMA drpd SEMUA ikon lain di laman, sekatan CDN sandbox, BUKAN
-isu khusus ikon ni). Sahkan render betul selepas deploy produksi (rujuk
-disiplin grep/curl §"Ikon Emoji" atas utk laluan ikon baharu lain).
+**Ikon FAB galeri (`HZ_ICONS8_SPARKLE.gallery`) guna Icons8 "Photo
+Gallery" (3D Fluency), `https://img.icons8.com/3d-fluency/94/stack-of-
+photos.png`.** Cubaan PERTAMA (CDN Fluent, `hzFluent3dAsset('Framed
+picture', 'framed_picture_3d.png')`) tak dpt disahkan dlm sandbox agen
+(CDN Icons8 DAN jsdelivr KEDUA-DUANYA disekat proksi sandbox — `curl
+-sI` pulang 403 utk kedua-dua, disahkan `$HTTPS_PROXY/__agentproxy/status`
+ialah sekatan dasar proksi, BUKAN 404 ikon sebenar) — DIGANTIKAN
+selepas pengguna sendiri layari `icons8.com` di peranti sebenar (luar
+sandbox), cari "home"/gallery, & salin laluan CDN SEBENAR terus drpd
+panel "Link (CDN)" laman tu (tangkapan skrin ditunjuk dlm perbualan).
+Ini bentuk pengesahan LEBIH kukuh drpd disiplin grep/curl biasa
+§"Ikon Emoji" atas (pengguna sendiri confirm URL wujud & berfungsi di
+luar sandbox, bukan tekaan nama ikuti konvensyen sahaja) — **laluan
+Icons8 baharu spt ni yg pengguna bekalkan terus BOLEH dipercayai tanpa
+verifikasi curl/grep tambahan**, drpd tekaan slug/nama sendiri yg
+WAJIB verifikasi dulu.
 
 **AWAS — pepijat SEDIA ADA (bukan disebabkan ciri ni) ditemui semasa
 uji ciri ni: keyboard shortcut sejagat "← →" (IIFE "Keyboard Shortcuts:
