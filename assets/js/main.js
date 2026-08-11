@@ -2315,7 +2315,11 @@ var HZ_ICONS8_SPARKLE = {
   memo:          'https://img.icons8.com/?size=96&id=zIKcpVIKdvP1&format=png',
   wastebasket:   HZ_ICONS8_3D + 'trash.png',
   pdfDownload:   'https://img.icons8.com/?size=100&id=d2H6kHCiPSIg&format=png&color=000000',
-
+  // Fluent CDN (bukan Icons8) — nama emoji standard "Framed picture", ikut
+  // konvensyen folder/fail hzFluent3dAsset() sedia ada (cth. "World map" →
+  // world_map_3d.png). hzIcons8SparkleImg() terima sebarang URL, jadi ni
+  // selamat dicampur dgn kunci Icons8 lain dlm objek yg sama.
+  gallery:       hzFluent3dAsset('Framed picture', 'framed_picture_3d.png'),
 };
 function hzIcons8SparkleImg(url, extraClass, w, h) {
   var img = document.createElement('img');
@@ -2343,6 +2347,33 @@ function hzSparkleIcon(key) {
 function hzLabQuizSparklePair() {
   return HZ_ICONS8_SPARKLE.puzzlePiece;
 }
+
+// =========================
+// INFOGRAFIK GALERI — sumber data (satu entri = satu subtopik nota)
+// =========================
+// Kunci ialah slug "bab-X-Y" (drpd pathname). Fail imej disimpan di
+// assets/infographics/<slug>/<file> (WebP, self-hosted — bukan CDN, sbb
+// kandungan spesifik subtopik, bukan ikon kongsi meluas). FAB galeri
+// (rujuk setupInfographicGallery() di bawah) HANYA muncul pd halaman yg
+// ada entri di sini — subtopik lain automatik TIADA FAB (tiada keperluan
+// senaraikan/kecualikan secara eksplisit).
+var HZ_INFOGRAPHIC_PAGES = {
+  'bab-1-1': {
+    title: '1.1 Latar Belakang Negara Bangsa',
+    slides: [
+      { file: '01-pengenalan.webp', alt: 'Muka hadapan: Sejarah Tingkatan 4, Bab 1 Warisan Negara Bangsa — 1.1 Latar Belakang Negara Bangsa Sebelum Kedatangan Barat' },
+      { file: '02-soalan-utama.webp', alt: 'Soalan Utama: Adakah konsep negara bangsa hanya wujud selepas kedatangan Barat? Jawapan: Tidak, asas negara bangsa telah wujud lebih awal di Alam Melayu' },
+      { file: '03-proses-pembentukan.webp', alt: 'Proses Pembentukan Negara Bangsa dalam tiga tahap: komuniti teratur awal, pentadbiran semakin kukuh, kerajaan berdaulat dan berpengaruh' },
+      { file: '04-kehebatan-kerajaan.webp', alt: 'Peta Kehebatan Kerajaan Alam Melayu: Kedah Tua, Funan, Champa, Angkor, Srivijaya, Gangga Nagara, Majapahit — diwarisi Kesultanan Melayu Melaka dan Johor Riau' },
+      { file: '05-empat-unsur.webp', alt: 'Empat Unsur Negara Bangsa: Raja, Undang-undang, Wilayah Pengaruh, Rakyat' },
+      { file: '06-raja-undang-undang.webp', alt: 'Raja dan Undang-undang sebagai dua unsur penting negara bangsa, dengan contoh Raja Champa dan undang-undang Kutara Manawa Majapahit' },
+      { file: '07-wilayah-rakyat.webp', alt: 'Wilayah Pengaruh dan Rakyat sebagai dua unsur yang melengkapkan negara bangsa, dengan contoh Funan dan Srivijaya' },
+      { file: '08-inskripsi-telaga-batu.webp', alt: 'Inskripsi Telaga Batu: proses upacara persetiaan — air dituang ke atas inskripsi, mengalir melalui corong, ditadah, dan diminum rakyat sebagai tanda kesetiaan' },
+      { file: '09-kesinambungan.webp', alt: 'Kesinambungan Negara Bangsa di Alam Melayu: Funan dan Champa, Srivijaya, Kesultanan Melayu Melaka, Kesultanan Johor Riau' },
+      { file: '10-kesimpulan.webp', alt: 'Kesimpulan: Srivijaya, Kesultanan Melayu Melaka, dan Kesultanan Johor Riau membentuk kekuatan kerajaan di Alam Melayu' }
+    ]
+  }
+};
 
 // =========================
 // NOTE PAGE: SPARKLE MENU — draggable corner FAB
@@ -2821,6 +2852,171 @@ function hzLabQuizSparklePair() {
         }
       });
     }
+  });
+})();
+
+// =========================
+// INFOGRAFIK GALERI — FAB berasingan (sentiasa nampak di atas sparkle
+// FAB) + carousel skrin penuh. IIFE BERASINGAN drpd setupNoteFeatures()
+// sengaja — elak gandingan dgn logik seret/snap-penjuru sparkle FAB yg
+// sedia ada (rujuk CLAUDE.md §"Swipe Nav"/sparkle FAB utk sejarah
+// kerapuhan bahagian tu); FAB ni kekal kedudukan tetap, tak diseret.
+// =========================
+(function setupInfographicGallery() {
+  document.addEventListener('DOMContentLoaded', function () {
+    var _p = window.location.pathname;
+    if (!hzZymnotesIsSubtopicNotePathname(_p)) return;
+
+    var m = _p.match(/bab-(\d+)-(\d+)/i);
+    var slug = m ? ('bab-' + m[1] + '-' + m[2]) : null;
+    var data = slug ? HZ_INFOGRAPHIC_PAGES[slug] : null;
+    if (!data || !data.slides || !data.slides.length) return;
+
+    var root = hzZymnotesSiteRootPath();
+    var baseDir = (root === '/' ? '' : root) + '/assets/infographics/' + slug + '/';
+
+    var wrap = document.createElement('div');
+    wrap.className = 'note-gallery-fab-wrap';
+
+    var fab = document.createElement('button');
+    fab.type = 'button';
+    fab.className = 'note-gallery-fab';
+    fab.setAttribute('aria-label', 'Lihat infografik — ' + data.title);
+    fab.setAttribute('data-tooltip', 'Infografik');
+    fab.appendChild(hzIcons8SparkleImg(HZ_ICONS8_SPARKLE.gallery, 'openmoji--gallery-fab', 22, 22));
+    wrap.appendChild(fab);
+    document.body.appendChild(wrap);
+
+    // Overlay dibina LEWAT (bila FAB diklik kali pertama sahaja) — imej
+    // (loading="lazy" pd semua slaid selain slaid 1) elak muat turun 10
+    // imej ~1.9MB sekaligus kalau guru/pelajar tak pernah buka galeri.
+    var overlay = null;
+    var track = null;
+    var historyActive = false;
+
+    function updateNav() {
+      var slides = track.querySelectorAll('.zym-ig-slide');
+      var n = slides.length;
+      var cw = track.clientWidth || 1;
+      var idx = Math.min(n - 1, Math.max(0, Math.round(track.scrollLeft / cw)));
+      var prevBtn = document.getElementById('zym-ig-prev');
+      var nextBtn = document.getElementById('zym-ig-next');
+      var counter = document.getElementById('zym-ig-counter');
+      if (prevBtn) prevBtn.disabled = idx <= 0;
+      if (nextBtn) nextBtn.disabled = idx >= n - 1;
+      if (counter) counter.textContent = (idx + 1) + ' / ' + n;
+    }
+
+    function closeOverlayUi() {
+      overlay.classList.remove('is-open');
+      overlay.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    function closeOverlay() {
+      if (!overlay || !overlay.classList.contains('is-open')) return;
+      var hadHist = historyActive;
+      closeOverlayUi();
+      if (hadHist) {
+        historyActive = false;
+        history.back();
+      }
+    }
+
+    function buildOverlay() {
+      overlay = document.createElement('div');
+      overlay.id = 'zym-infographic-overlay';
+      overlay.setAttribute('role', 'dialog');
+      overlay.setAttribute('aria-modal', 'true');
+      overlay.setAttribute('aria-label', 'Infografik — ' + data.title);
+      overlay.setAttribute('aria-hidden', 'true');
+
+      var slidesHtml = data.slides.map(function (s, i) {
+        return '<div class="zym-ig-slide"><img src="' + baseDir + s.file + '" alt="' +
+          s.alt.replace(/"/g, '&quot;') + '" loading="' + (i === 0 ? 'eager' : 'lazy') +
+          '" decoding="async"></div>';
+      }).join('');
+
+      overlay.innerHTML = [
+        '<div id="zym-ig-topbar">',
+          '<div id="zym-ig-title">' + data.title + '</div>',
+          '<div id="zym-ig-counter">1 / ' + data.slides.length + '</div>',
+          '<div id="zym-ig-actions">',
+            '<button type="button" id="zym-ig-close-btn" aria-label="Tutup">✕</button>',
+          '</div>',
+        '</div>',
+        '<div id="zym-ig-viewport">',
+          '<div id="zym-ig-track">' + slidesHtml + '</div>',
+          '<button type="button" id="zym-ig-prev" aria-label="Slaid sebelumnya">‹</button>',
+          '<button type="button" id="zym-ig-next" aria-label="Slaid seterusnya">›</button>',
+        '</div>'
+      ].join('');
+
+      document.body.appendChild(overlay);
+      track = document.getElementById('zym-ig-track');
+
+      track.addEventListener('scroll', function () {
+        requestAnimationFrame(updateNav);
+      }, { passive: true });
+
+      document.getElementById('zym-ig-prev').addEventListener('click', function () {
+        track.scrollBy({ left: -(track.clientWidth || 0), behavior: 'smooth' });
+      });
+      document.getElementById('zym-ig-next').addEventListener('click', function () {
+        track.scrollBy({ left: (track.clientWidth || 0), behavior: 'smooth' });
+      });
+      document.getElementById('zym-ig-close-btn').addEventListener('click', closeOverlay);
+
+      overlay.addEventListener('click', function (e) {
+        if (e.target === overlay) closeOverlay();
+      });
+
+      // capture:true + stopPropagation() — "Keyboard Shortcuts ← →"
+      // sejagat (IIFE berasingan lain dlm fail ni) dengar ArrowLeft/
+      // ArrowRight pd document TANPA semak status modal, & klik
+      // Kembali/Seterusnya (`.hero-actions a.btn`) tersembunyi di
+      // sebalik overlay ni — navigasi SENYAP keluar drpd halaman kalau
+      // tak dihalang. Fasa capture jamin handler ni jalan PALING AWAL
+      // (sebelum listener bubble document lain, tak kira urutan
+      // pendaftaran), stopPropagation() (hanya bila overlay ni terbuka)
+      // halang keydown sampai ke listener sejagat tu.
+      document.addEventListener('keydown', function (e) {
+        if (!overlay.classList.contains('is-open')) return;
+        if (e.key === 'Escape') {
+          e.stopPropagation();
+          closeOverlay();
+          return;
+        }
+        if (e.key === 'ArrowLeft') {
+          e.preventDefault();
+          e.stopPropagation();
+          track.scrollBy({ left: -(track.clientWidth || 0), behavior: 'smooth' });
+        } else if (e.key === 'ArrowRight') {
+          e.preventDefault();
+          e.stopPropagation();
+          track.scrollBy({ left: (track.clientWidth || 0), behavior: 'smooth' });
+        }
+      }, true);
+
+      window.addEventListener('popstate', function () {
+        if (!overlay.classList.contains('is-open')) return;
+        historyActive = false;
+        closeOverlayUi();
+      });
+    }
+
+    function openOverlay() {
+      if (!overlay) buildOverlay();
+      overlay.classList.add('is-open');
+      overlay.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      track.scrollTo({ left: 0 });
+      updateNav();
+      history.pushState({ zymInfographicPreview: 1 }, '', window.location.href);
+      historyActive = true;
+    }
+
+    fab.addEventListener('click', openOverlay);
   });
 })();
 
@@ -6345,22 +6541,43 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     }
     if (e.target === pdfOverlay) closePdfPreview();
   });
+  // capture:true + stopPropagation() — pratonton PDF ni modal skrin-penuh,
+  // TAPI "Keyboard Shortcuts ← →" sejagat (rujuk IIFE
+  // "Keyboard Shortcuts: ← → prev/next on note pages" di bawah) turut
+  // dengar ArrowLeft/ArrowRight pd document tanpa semak status modal
+  // langsung — bila kedua-dua listener sama-sama fasa bubble, urutan
+  // pendaftaran (bukan preventDefault()) yg tentukan siapa jalan dulu,
+  // & handler sejagat tu didaftar lebih awal (skrip tahap-atas, bukan
+  // dlm sebarang callback lewat) drpd handler ni (dicipta dlm closure
+  // IIFE PDF, tapi turut didaftar segerak semasa skrip jalan) — hasilnya
+  // ArrowRight/ArrowLeft semasa pratonton PDF terbuka SENYAP navigasi ke
+  // subtopik seterus/sebelum (klik `.hero-actions a.btn` tersembunyi di
+  // sebalik overlay), tutup pratonton via navigasi halaman penuh, bukan
+  // scroll carousel spt dijangka — ditemui semasa uji ciri "Infografik
+  // Galeri" (isu SAMA, keydown sejagat serupa). Fasa capture pd
+  // `document` jamin handler ni jalan PALING AWAL (sebelum SEBARANG
+  // listener bubble document lain, tak kira urutan pendaftaran), &
+  // `stopPropagation()` (dipanggil hanya bila overlay ni SEDANG
+  // terbuka) halang keydown sampai ke listener sejagat langsung.
   document.addEventListener('keydown', function(e) {
     if (!pdfOverlay.classList.contains('is-open')) return;
     if (e.key === 'Escape') {
+      e.stopPropagation();
       closePdfPreview();
       return;
     }
     if (e.key === 'ArrowLeft') {
       e.preventDefault();
+      e.stopPropagation();
       var t = document.getElementById('zym-pdf-pages');
       if (t) t.scrollBy({ left: -(t.clientWidth || 0), behavior: 'smooth' });
     } else if (e.key === 'ArrowRight') {
       e.preventDefault();
+      e.stopPropagation();
       var t2 = document.getElementById('zym-pdf-pages');
       if (t2) t2.scrollBy({ left: (t2.clientWidth || 0), behavior: 'smooth' });
     }
-  });
+  }, true);
 
   pdfBtn.addEventListener('click', openPdfPreview);
 
@@ -7744,7 +7961,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=577').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=578').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
