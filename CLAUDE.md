@@ -2679,6 +2679,55 @@ lwn `?v=2`) jadi entri cache BAHARU sepenuhnya drpd sudut pandang
 TAK perlu naik kalau cuma TAMBAH slaid baharu ke senarai `slides`
 (laluan fail baharu automatik "baharu" di cache).
 
+**Susulan — FAB galeri kini IKUT FAB sparkle bila diseret/dibuka**
+(pengguna nyata FAB sparkle boleh diseret ke mana-mana 4 penjuru
+skrin — rujuk `ZymStore.getPref('fabCorner')`/`snapToCorner()` §sedia
+ada — & minta FAB galeri turut serta, termasuk "swap" kedudukan
+[atas↔bawah fab sparkle] bila penjuru ATAS dipilih, & beri laluan
+[berganjak] bila menu sparkle dibuka supaya tak bertindih dgn item yg
+mengembang). **Pendekatan: PANTAU DOM sparkle via `MutationObserver`
+pd atribut `class` `.note-sparkle-wrap` (dlm IIFE
+`setupInfographicGallery()`), BUKAN gandingan terus dgn kod seret/
+snap-penjuru sparkle** (kekal disiplin "IIFE berasingan" sedia ada,
+rujuk atas) — fungsi `sync()` baca kelas `fab-corner-*` sparkle semasa
+& salin ke wrap FAB galeri sendiri (CSS `.note-gallery-fab-wrap.
+fab-corner-tr/tl` letak FAB galeri di BAWAH anchor `top:80px` sparkle
+— TERBALIK drpd `fab-corner-br/bl` yg letak DI ATAS, memadankan corak
+`column-reverse` sparkle pd penjuru atas [fab dekat anchor, item
+kembang KE ARAH BERLAWANAN drpd penjuru bawah]).
+
+**Semasa drag AKTIF** (antara `pointerdown`→`pointerup`), sparkle
+buang KESEMUA kelas `fab-corner-*` drpd wrapnya (rujuk `snapToCorner()`/
+handler `pointermove` sedia ada) & guna `wrap.style.left/top` piksel
+terus ikut jari — `sync()` SENGAJA TIDAK cuba ikut kedudukan piksel
+drag tu (elak gandingan rapuh dgn matematik drag sparkle); FAB galeri
+kekal diam di kedudukan penjuru TERAKHIR sepanjang drag aktif, &
+"melompat" terus ke penjuru BAHARU sebaik `snapToCorner()` letak
+semula kelas `fab-corner-*` (pengesanan: `sparkleWrap.className.match(...)`
+gagal → `isTop` kekal drpd kelas FAB galeri SENDIRI yg belum diubah).
+Disahkan cukup baik secara UX (bukan bug) — tiada aduan "FAB galeri
+tercicir semasa seret", cuma kedudukan akhir yg penting.
+
+**Bila menu sparkle terbuka** (`sparkleWrap.classList.contains('is-open')`):
+`sync()` ukur `.note-sparkle-items` punya `offsetHeight` (SUDAH
+sentiasa reserved dlm DOM tak kira status buka/tutup — rujuk
+`opacity:0` bukan `display:none` pd `.note-sparkle-item`, jadi tinggi
+tu STABIL, bukan berubah ikut animasi) + 14px jarak, & lekap
+`transform:translateY(±shift)` pd wrap FAB galeri (arah NEGATIF utk
+penjuru bawah [naik lagi ke atas, jauhi item yg mengembang KE ATAS],
+POSITIF utk penjuru atas [turun lagi ke bawah, jauhi item yg
+mengembang KE BAWAH]) — animasi CSS `transition:transform` sedia ada
+pd `.note-gallery-fab-wrap` jadikan pergerakan ni licin, bukan
+melompat. Disahkan via Playwright (simulasi drag tetikus sebenar
+`mouse.down/move/up`, BUKAN set kelas terus): penjuru asal `br` →
+seret ke `tl` → kelas & kedudukan FAB galeri betul (BAWAH fab
+sparkle) → buka menu sparkle → FAB galeri berganjak jauh (y
+152→409) → tutup menu → kembali (y 409→152).
+
+**Ikon FAB galeri turut dibesarkan** (46px→48px bulatan, 22px→25px
+ikon dalaman; mudah alih 42px→44px/20px→23px) — pengguna nyata "lebih
+kemas" drpd nisbah asal.
+
 ## Aliran Kerja Versioning Aset (WAJIB lepas ubah CSS/JS/sw.js)
 
 Sumber kebenaran versi: `data/asset-versions.json`. Lepas ubah
