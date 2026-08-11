@@ -1618,6 +1618,159 @@ body.sparkle-panel-open .audio-notice-sheet {
 }
 
 /* =========================
+   INFOGRAFIK GALERI — FAB berasingan + carousel skrin penuh
+   (rujuk setupInfographicGallery() dlm main.js — HANYA muncul pd
+   subtopik yg ada data HZ_INFOGRAPHIC_PAGES, bukan semua halaman)
+========================= */
+
+/* ── FAB — sentiasa nampak, ditindih di ATAS sparkle FAB sedia ada.
+   Kekal berasingan drpd .note-sparkle-wrap (bukan diseret/pindah
+   penjuru) — offset guna --floating-bottom-offset-avoid-sparkle sedia
+   ada (dicipta asalnya utk zh-disclaimer-toast/audio-notice-sheet,
+   nilai sama tepat utk "susun di atas FAB sparkle" di sini). ── */
+.note-gallery-fab-wrap {
+  position: fixed;
+  right: 14px; bottom: calc(18px + 4.25rem);
+  z-index: var(--z-floating);
+}
+@media (max-width: 760px) {
+  .note-gallery-fab-wrap {
+    bottom: var(--floating-bottom-offset-avoid-sparkle);
+  }
+}
+
+.note-gallery-fab {
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  border: 1px solid rgba(92, 110, 132, 0.13);
+  background: rgba(255, 253, 248, 0.97);
+  box-shadow: 0 6px 18px rgba(36, 49, 63, 0.14), 0 2px 6px rgba(36, 49, 63, 0.08);
+  font-size: 0;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--muted);
+  position: relative;
+  transition: transform 0.16s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.15s ease, box-shadow 0.15s ease;
+}
+.note-gallery-fab .openmoji--gallery-fab { width: 22px; height: 22px; }
+.note-gallery-fab:hover {
+  background: rgba(255, 253, 248, 1);
+  box-shadow: 0 8px 22px rgba(36, 49, 63, 0.19), 0 2px 8px rgba(36, 49, 63, 0.11);
+  transform: scale(1.06);
+}
+.note-gallery-fab:active { transform: scale(0.94); }
+
+.note-gallery-fab[data-tooltip]::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  right: calc(100% + 10px); top: 50%;
+  transform: translateY(-50%);
+  background: rgba(36, 49, 63, 0.88); color: #fff;
+  font-size: 0.72rem; font-weight: 700;
+  font-family: var(--font-sans, "Nunito", sans-serif);
+  padding: 0.28rem 0.6rem; border-radius: 8px;
+  white-space: nowrap; opacity: 0;
+  pointer-events: none; transition: opacity 0.15s ease;
+}
+.note-gallery-fab[data-tooltip]:hover::before { opacity: 1; }
+
+[data-theme="dark"] .note-gallery-fab {
+  background: rgba(52, 49, 46, 0.96);
+  border-color: rgba(220, 210, 190, 0.22);
+  color: rgba(235, 228, 218, 0.9);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.28), 0 2px 6px rgba(0,0,0,0.18);
+}
+[data-theme="dark"] .note-gallery-fab:hover {
+  background: rgba(65, 62, 58, 0.98);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.35), 0 2px 8px rgba(0,0,0,0.22);
+}
+
+@media (max-width: 640px) {
+  .note-gallery-fab { width: 42px; height: 42px; }
+  .note-gallery-fab .openmoji--gallery-fab { width: 20px; height: 20px; }
+  .note-gallery-fab[data-tooltip]::before { display: none; }
+}
+
+/* ── Carousel overlay — skrin penuh, lightbox gelap (padan estetik
+   #zym-pdf-overlay sedia ada supaya konsisten dgn modal skrin-penuh
+   lain di laman ni), sesuai dibaca dari jauh (projektor kelas). ── */
+#zym-infographic-overlay {
+  position: fixed; inset: 0; z-index: 10001;
+  display: flex; flex-direction: column;
+  background: #18182b;
+  opacity: 0; visibility: hidden;
+  transition: opacity 0.22s, visibility 0.22s;
+}
+#zym-infographic-overlay.is-open { opacity: 1; visibility: visible; }
+
+#zym-ig-topbar {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 14px; background: #0f172a; flex-shrink: 0; min-height: 52px;
+}
+#zym-ig-title {
+  font-family: Fredoka, sans-serif; font-size: 0.92rem; font-weight: 600;
+  color: #cbd5e1; flex: 1; min-width: 0;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+#zym-ig-counter {
+  font-family: var(--font-sans, "Nunito", sans-serif);
+  font-size: 0.78rem; font-weight: 700; font-variant-numeric: tabular-nums;
+  color: #94a3b8; flex-shrink: 0;
+}
+#zym-ig-actions { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+#zym-ig-close-btn {
+  width: 34px; height: 34px; border-radius: 50%; border: none;
+  background: rgba(255,255,255,0.07); color: #94a3b8; font-size: 1.1rem;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; transition: background 0.14s, color 0.14s;
+}
+#zym-ig-close-btn:hover { background: rgba(255,255,255,0.15); color: #e2e8f0; }
+
+#zym-ig-viewport { flex: 1; position: relative; min-height: 0; }
+
+#zym-ig-track {
+  display: flex; height: 100%; overflow-x: auto;
+  scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+#zym-ig-track::-webkit-scrollbar { display: none; }
+
+.zym-ig-slide {
+  flex: 0 0 100%; scroll-snap-align: center;
+  display: flex; align-items: center; justify-content: center;
+  padding: 18px; box-sizing: border-box;
+}
+.zym-ig-slide img {
+  max-width: 100%; max-height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.45);
+}
+
+#zym-ig-prev, #zym-ig-next {
+  position: absolute; top: 50%; transform: translateY(-50%); z-index: 3;
+  width: 40px; height: 40px; border-radius: 50%; border: none;
+  background: rgba(15,23,42,0.55); color: #e2e8f0;
+  font-size: 1.35rem; line-height: 1; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.35);
+  transition: background 0.15s, color 0.15s;
+}
+#zym-ig-prev:hover, #zym-ig-next:hover { background: rgba(79,70,229,0.55); color: #fff; }
+#zym-ig-prev:disabled, #zym-ig-next:disabled { opacity: 0.25; cursor: default; pointer-events: none; }
+#zym-ig-prev { left: 10px; }
+#zym-ig-next { right: 10px; }
+
+@media (max-width: 640px) {
+  #zym-ig-prev, #zym-ig-next { width: 36px; height: 36px; font-size: 1.15rem; }
+  .zym-ig-slide { padding: 10px; }
+}
+
+@media print {
+  #zym-infographic-overlay { display: none !important; }
+}
+
+/* =========================
    GLOBAL SEARCH OVERLAY
 ========================= */
 

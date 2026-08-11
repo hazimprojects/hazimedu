@@ -2516,6 +2516,130 @@ sebenar terjana), TIADA item pd hab bab (`bab-4.html`), indeks nota
 (`notes/index.html`), & halaman kuiz (`quiz/bab-4-2.html`) — sifar
 ralat JS pd keempat-empat jenis halaman.
 
+## Infografik Galeri — FAB berasingan, carousel skrin penuh (prototaip bab-1-1)
+
+Ciri BAHARU (2026-08-11): kad infografik gaya carousel media sosial
+(imej cerita ilustrasi bergaya "Instagram carousel", diselang-selikan
+dgn kandungan teks nota sedia ada) — utk pelajar visual & guru
+membentang via projektor kelas. **Skop semasa: prototaip 1 subtopik
+sahaja (`bab-1-1`), 10 slaid.** Peluasan ke subtopik lain kekal kerja
+akan datang (perlu proses/mampatkan imej baharu tiap kali — rujuk
+langkah di bawah), BUKAN automatik drpd struktur ciri ni.
+
+**Keputusan reka bentuk (dibincang dgn pengguna dulu, rujuk sejarah
+perbualan)**: FAB BERASINGAN (bukan item dlm menu sparkle sedia ada,
+beza drpd corak "Muat turun PDF" §atas) — sbb ciri ni "bukan ciri
+kecil", perlu SENTIASA kelihatan tanpa buka menu dulu (kegunaan
+projektor kelas perlukan akses satu-klik). **Digerbangkan ikut WUJUD
+DATA, bukan senarai laluan** — `HZ_INFOGRAPHIC_PAGES` (`main.js`,
+sebelum IIFE `setupNoteFeatures`) ialah objek `{ 'bab-X-Y': {title,
+slides:[...]} }`; FAB (& carousel) HANYA muncul pd subtopik yg ada
+kunci sepadan. Nak tambah infografik utk subtopik lain: (1) proses
+imej ke WebP (rujuk langkah di bawah), (2) tambah SATU entri baharu ke
+`HZ_INFOGRAPHIC_PAGES` — TIADA tempat lain perlu disunting (bukan
+senarai laluan berasingan drpd data).
+
+**Storan imej**: `assets/infographics/<slug>/<01-nama-slaid>.webp` —
+self-hosted (BUKAN CDN luar, sbb kandungan spesifik-subtopik, bukan
+ikon kongsi meluas macam bendera/emoji). Sumber asal (PNG ~2.3MB
+setiap satu, 852×1846) dimampatkan via Pillow (`Image.save(...,
+"WEBP", quality=80, method=6)`) → ~150-230KB setiap satu (~1.9MB utk
+10 slaid) — imbangan kualiti teks (masih tajam pd zum biasa) vs saiz
+muat turun. **AWAS — sahkan turutan slaid padan turutan BAHAGIAN
+sebenar pd halaman** (rujuk `notes/bab-X-Y.html`, cari `paper-label
+small` utk senarai "Bahagian Pertama/Kedua/..."), BUKAN turutan
+muat naik/tempel imej drpd pengguna — turutan asal (ikut ID muat naik)
+utk `bab-1-1` didapati TERSILAP (imej "Empat Unsur" & "cover" tertukar
+kedudukan berbanding kandungan sebenar) semasa prototaip ni dibina;
+dibetulkan dgn baca SETIAP imej sumber satu-satu (bukan anggap drpd
+urutan paste dlm chat) & padan dgn struktur `data-cv-title`/
+`paper-label small` halaman sebenar sebelum mampat & simpan.
+
+**TIADA precache `sw.js`** (sengaja, sama corak drpd audio naratif
+`.mp3` yg turut tak dipracache) — imej ni "berat, per-halaman, opt-in"
+(pelajar/guru yg tak pernah buka galeri tak patut tanggung muat turun
+~1.9MB percuma). Peraturan sedia ada `sw.js` "Same-origin non-document
+GET: cache-first" SUDAH cukup — imej automatik ter-cache lepas kali
+PERTAMA dibuka (online), tersedia offline lepas tu.
+
+**Overlay dibina LEWAT** (`buildOverlay()`, hanya bila FAB diklik kali
+PERTAMA — bukan semasa `DOMContentLoaded`) — slaid pertama `loading=
+"eager"`, baki 9 `loading="lazy"`, jadi 10 imej TAK dimuat turun
+sekaligus kalau FAB tak pernah diklik. Struktur (topbar + track
+scroll-snap-x + butang prev/next + kiraan "N / M") sengaja MENIRU
+corak pratonton PDF sedia ada (`#zym-pdf-overlay`/`#zym-pdf-pages`,
+rujuk §"Pratonton PDF" atas) utk konsisten estetik modal skrin-penuh
+di laman ni — BUKAN guna semula kod PDF terus (IIFE berasingan
+sepenuhnya, rujuk sebab di bawah).
+
+**AWAS — IIFE `setupInfographicGallery()` sengaja BERASINGAN drpd
+`setupNoteFeatures()`** (bukan tambah sbg item dlm sparkle FAB) — elak
+gandingan dgn logik seret/snap-penjuru sparkle FAB yg sedia ada rapuh
+(rujuk §"Swipe Nav" & sejarah sparkle FAB atas). FAB galeri ni kekal
+kedudukan TETAP (tak boleh diseret), letak guna
+`--floating-bottom-offset-avoid-sparkle` sedia ada (dicipta asalnya
+utk `zh-disclaimer-toast`/`audio-notice-sheet`, nilai +4.25rem drpd
+offset FAB sparkle biasa — SAMA nilai tepat utk "susun di atas FAB
+sparkle" di sini, tiada nombor piksel baharu dikarang). Tak
+corner-aware (kalau pengguna seret FAB sparkle ke penjuru lain via
+`ZymStore.getPref('fabCorner')`, FAB galeri kekal kanan-bawah lalai)
+— DITERIMA sengaja, sama had drpd `zh-disclaimer-toast` sedia ada yg
+turut tak corner-aware.
+
+**Ikon FAB galeri (`HZ_ICONS8_SPARKLE.gallery`) guna CDN Fluent
+(`hzFluent3dAsset('Framed picture', 'framed_picture_3d.png')`), BUKAN
+Icons8** — kunci Icons8 baharu (cth. cuba cari "gallery"/"picture" di
+`img.icons8.com`) TAK BOLEH disahkan dlm sandbox agen (CDN Icons8 DAN
+jsdelivr KEDUA-DUANYA disekat proksi sandbox — `curl -sI` pulang 403
+utk kedua-dua, disahkan `$HTTPS_PROXY/__agentproxy/status` ialah
+sekatan dasar proksi, BUKAN 404 ikon sebenar). "Framed picture" ialah
+emoji Unicode piawai (nama rasmi tepat), ikut konvensyen
+folder/fail `hzFluent3dAsset()` sedia ada yg dah terbukti utk
+berpuluh kunci lain (cth. "World map" → world_map_3d.png) — risiko
+rendah tapi **BELUM disahkan visual di CDN produksi sebenar**
+(pantauan Playwright screenshot dlm sandbox tunjuk FAB kosong/tiada
+ikon — SAMA drpd SEMUA ikon lain di laman, sekatan CDN sandbox, BUKAN
+isu khusus ikon ni). Sahkan render betul selepas deploy produksi (rujuk
+disiplin grep/curl §"Ikon Emoji" atas utk laluan ikon baharu lain).
+
+**AWAS — pepijat SEDIA ADA (bukan disebabkan ciri ni) ditemui semasa
+uji ciri ni: keyboard shortcut sejagat "← →" (IIFE "Keyboard Shortcuts:
+← → prev/next on note pages", `main.js`) klik
+`.hero-actions a.btn` (Kembali/Seterusnya) TANPA semak status
+mana-mana modal skrin-penuh terbuka.** Disahkan via Playwright: buka
+carousel infografik (atau pratonton PDF — SAMA pepijat, KEDUA-DUA
+guna corak `document.addEventListener('keydown', ...)` fasa bubble
+tanpa `stopPropagation()`), tekan ArrowRight → carousel/PDF SENYAP
+tertutup drpd navigasi keluar halaman (klik pautan tersembunyi di
+sebalik overlay), bukan gerak ke slaid/muka surat seterusnya spt
+dijangka. **Punca**: pelbagai listener `keydown` berasingan pd
+`document`, fasa bubble — `preventDefault()` SAHAJA tak cukup halang
+listener LAIN drpd turut jalan; urutan pendaftaran (bukan kod dlm
+handler) tentukan siapa jalan dulu, & handler shortcut sejagat
+didaftar lebih awal (skrip tahap-atas) drpd handler modal manapun.
+**Fix (kedua-dua pratonton PDF & carousel infografik)**: tukar
+pendaftaran keydown ke fasa CAPTURE (`addEventListener('keydown', fn,
+true)` — hujah ke-3 `true`) + panggil `e.stopPropagation()` pd
+cabang Escape/ArrowLeft/ArrowRight (hanya bila overlay berkenaan
+SEDANG terbuka). Fasa capture jamin handler modal jalan PALING AWAL
+(sebelum SEBARANG listener bubble document lain, tak kira urutan
+pendaftaran), `stopPropagation()` halang keydown sampai ke shortcut
+sejagat terus. **Kalau tambah modal skrin-penuh BAHARU dgn keyboard
+nav sendiri, guna corak capture+stopPropagation ni drpd awal** — jangan
+ulang corak bubble-tanpa-stop lama.
+
+Disahkan via Playwright (blok semua permintaan rentas-asal via
+`ctx.route()`, elak bunyi CDN tersekat dlm sandbox): FAB muncul HANYA
+pd `bab-1-1.html` (SIFAR pd `bab-1-2.html`/`bab-1.html`/
+`notes/index.html`/`quiz/bab-1-1.html`), carousel buka & papar 10
+slaid (kiraan + tajuk betul), imej pertama & terakhir SAH dimuat
+(`naturalWidth` bukan sifar), butang next/ArrowRight/Escape semua
+berfungsi (lepas fix capture+stopPropagation atas), FAB galeri &
+sparkle TAK bertindih (ujian `boundingBox()` menegak), `seo-audit.py`
+(117 halaman) & `check-zh-coverage.py` (100% merentas semua bab) KEKAL
+lulus (elemen baharu tiada `data-zh-unit-id`, tak sentuh struktur SEO
+sedia ada).
+
 ## Aliran Kerja Versioning Aset (WAJIB lepas ubah CSS/JS/sw.js)
 
 Sumber kebenaran versi: `data/asset-versions.json`. Lepas ubah
