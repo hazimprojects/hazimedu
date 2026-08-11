@@ -2641,6 +2641,44 @@ sparkle TAK bertindih (ujian `boundingBox()` menegak), `seo-audit.py`
 lulus (elemen baharu tiada `data-zh-unit-id`, tak sentuh struktur SEO
 sedia ada).
 
+**Susulan — carousel BUKAN betul-betul skrin penuh (pengguna lapor
+tangkapan skrin peranti sebenar).** Susun atur ASAL: `#zym-ig-topbar`
+bar pepejal (`#0f172a`) yg tolak imej ke bawah + `.zym-ig-slide`
+berpadding dgn imej berbucu-bulat/bayang terapung dlm latar gelap
+(`#18182b`) — nampak macam "kad dlm bilik gelap", BUKAN pengalaman
+tepi-ke-tepi cerita Instagram/status WhatsApp yg dimaksudkan sejak
+awal. Fix: imej isi SELURUH `#zym-ig-viewport` (`position:absolute;
+inset:0`, imej `width/height:100%; object-fit:contain`, TIADA
+padding/bucu-bulat/bayang), `#zym-ig-topbar` bertukar
+`position:absolute` TERAPUNG di atas imej dgn latar
+`linear-gradient(to bottom, rgba(0,0,0,.68), transparent)` (gaya
+scrim cerita, bukan bar pepejal berasingan) — `padding-top: calc(12px
++ env(safe-area-inset-top))` elak bertindih notch/status bar.
+
+**Susulan LAGI — logo "ZN"/header "SEJARAH TINGKATAN 4 · BAB 1" TERBAKAR
+dlm imej sumber jadi PENDUA lepas fix skrin-penuh atas** (topbar
+overlay kita SENDIRI dah papar tajuk "1.1 Latar Belakang Negara
+Bangsa" telus di atas imej — logo+label bab dlm imej jadi lapisan
+kedua yg bertindih/berlainan dgn overlay). Pengguna bekalkan SEMULA
+10 imej sumber (versi TANPA logo/header terbakar, "supaya kita boleh
+letak sendiri di header") — imej WEBP sedia ada di
+`assets/infographics/bab-1-1/` DIGANTIKAN penuh (nama fail KEKAL sama,
+kandungan tukar).
+
+**AWAS — nama fail imej TAK bertukar bila kandungan ditukar, jadi
+`sw.js` cache-first (rujuk atas) TAKKAN nampak imej "baharu" di peranti
+yg dah pernah buka galeri sebelum ni** (SAMA punca aduan pengguna
+"masih tiada" sblm fix skrin-penuh di atas — cache PWA). Fix (kekal,
+bukan sekadar sekali sahaja): `HZ_INFOGRAPHIC_PAGES['bab-X-Y']` kini
+ada medan `imgVersion` (integer, mula drpd `1`); `buildOverlay()`
+lampirkan `?v=<imgVersion>` pd SETIAP `src` slaid. **Bila TUKAR
+kandungan fail imej sedia ada (nama fail sama, isi baharu), WAJIB
+naikkan `imgVersion`** — URL berubah (`...01-pengenalan.webp?v=3`
+lwn `?v=2`) jadi entri cache BAHARU sepenuhnya drpd sudut pandang
+`sw.js`/pelayar, elak peranti pengguna terperangkap dgn versi lama.
+TAK perlu naik kalau cuma TAMBAH slaid baharu ke senarai `slides`
+(laluan fail baharu automatik "baharu" di cache).
+
 ## Aliran Kerja Versioning Aset (WAJIB lepas ubah CSS/JS/sw.js)
 
 Sumber kebenaran versi: `data/asset-versions.json`. Lepas ubah

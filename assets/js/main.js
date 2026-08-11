@@ -2360,6 +2360,14 @@ function hzLabQuizSparklePair() {
 var HZ_INFOGRAPHIC_PAGES = {
   'bab-1-1': {
     title: '1.1 Latar Belakang Negara Bangsa',
+    // Naikkan nombor ni bila TUKAR kandungan fail imej sedia ada (nama
+    // fail sama, isi baharu) — sw.js cache-first (rujuk §"Infografik
+    // Galeri" atas) takkan re-fetch imej yg dah dicache di peranti
+    // pengguna kalau URL kekal SAMA persis, jadi versi query ni ("?v=")
+    // WAJIB naik supaya peranti yg dah pernah buka galeri terima
+    // kandungan baharu. TAK perlu naik kalau cuma TAMBAH slaid baharu
+    // (URL fail baharu automatik "baharu" di cache, tiada konflik).
+    imgVersion: 2,
     slides: [
       { file: '01-pengenalan.webp', alt: 'Muka hadapan: Sejarah Tingkatan 4, Bab 1 Warisan Negara Bangsa — 1.1 Latar Belakang Negara Bangsa Sebelum Kedatangan Barat' },
       { file: '02-soalan-utama.webp', alt: 'Soalan Utama: Adakah konsep negara bangsa hanya wujud selepas kedatangan Barat? Jawapan: Tidak, asas negara bangsa telah wujud lebih awal di Alam Melayu' },
@@ -2931,8 +2939,9 @@ var HZ_INFOGRAPHIC_PAGES = {
       overlay.setAttribute('aria-label', 'Infografik — ' + data.title);
       overlay.setAttribute('aria-hidden', 'true');
 
+      var imgVer = data.imgVersion || 1;
       var slidesHtml = data.slides.map(function (s, i) {
-        return '<div class="zym-ig-slide"><img src="' + baseDir + s.file + '" alt="' +
+        return '<div class="zym-ig-slide"><img src="' + baseDir + s.file + '?v=' + imgVer + '" alt="' +
           s.alt.replace(/"/g, '&quot;') + '" loading="' + (i === 0 ? 'eager' : 'lazy') +
           '" decoding="async"></div>';
       }).join('');
@@ -7961,7 +7970,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=583').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=584').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
