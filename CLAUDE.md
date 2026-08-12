@@ -2728,6 +2728,29 @@ sparkle) → buka menu sparkle → FAB galeri berganjak jauh (y
 ikon dalaman; mudah alih 42px→44px/20px→23px) — pengguna nyata "lebih
 kemas" drpd nisbah asal.
 
+**Susulan — scrim topbar terlalu lutsinar (bocor warna krim imej sbg
+"jalur putih tak kemas" di bawah status bar OS) & anak panah prev/next
+sentiasa kelihatan dilaporkan mengganggu.** Fix scrim: `#zym-ig-topbar`
+gradient tukar drpd `rgba(0,0,0,.68)→0%` (lutsinar drpd awal) kpd
+LEGAP PENUH `rgba(0,0,0,.92)` kekal sehingga 30% tinggi topbar, baru
+reda ke `.55` (65%) & lutsinar (100%) — padding-bottom turut
+dipanjangkan 28px→46px supaya blend ke imej lebih graduan (bukan
+reveal mendadak). Fix anak panah: `#zym-ig-prev`/`#zym-ig-next` kini
+`opacity:0;pointer-events:none` LALAI (bukan sentiasa nampak) — hanya
+berdenyut SEBENTAR (`@keyframes zymIgHintPulsePrev/Next`, ~1.6s, arah
+translateX bertentangan kiri/kanan sbg isyarat "boleh swipe") bila
+`openOverlay()` tambah kelas `.zym-ig-hint-pulse` pd overlay (dibuang
+via `setTimeout` lepas animasi tamat). Logik `scrollBy()` sedia ada
+KEKAL sama, cuma kelihatan/klik yg berubah — swipe & kekunci panah
+KEKAL cara utama navigasi (disahkan Playwright: `ArrowRight` masih
+berfungsi lepas hint reda, klik pd kawasan anak panah yg dah lutsinar
+TIDAK berdaftar sbb `pointer-events:none`). Guna `void overlay.
+offsetWidth` (paksa reflow) sebelum tambah semula kelas hint pd SETIAP
+`openOverlay()` — CSS animation TAK restart kalau kelas dibuang &
+ditambah semula dlm tick JS yg sama tanpa reflow paksa di antaranya
+(bug animasi terkenal), jadi buka-tutup-buka carousel pantas tetap
+dapat denyut baharu setiap kali.
+
 ## Aliran Kerja Versioning Aset (WAJIB lepas ubah CSS/JS/sw.js)
 
 Sumber kebenaran versi: `data/asset-versions.json`. Lepas ubah

@@ -1735,8 +1735,15 @@ body.sparkle-panel-open .audio-notice-sheet {
 #zym-ig-topbar {
   position: absolute; top: 0; left: 0; right: 0; z-index: 5;
   display: flex; align-items: center; gap: 10px;
-  padding: calc(12px + env(safe-area-inset-top, 0px)) 14px 28px;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.68) 0%, rgba(0,0,0,0.38) 55%, transparent 100%);
+  padding: calc(12px + env(safe-area-inset-top, 0px)) 14px 46px;
+  /* Pekat SEPENUHNYA (bukan lutsinar) drpd 0%-30% — versi awal
+     (0.68 alpha drpd 0%) biar warna cerah imej sumber (latar
+     "kertas lama" krim) tembus, nampak spt jalur putih/pudar tak
+     kemas di bawah OS status bar. Kekal legap lagi lama (0-30%)
+     sebelum reda ke lutsinar (100%) drpd cerminkan corak scrim
+     cerita IG/status WhatsApp sebenar (header sentiasa jelas
+     dibaca atas latar gelap solid, bukan separuh lutsinar). */
+  background: linear-gradient(to bottom, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.92) 30%, rgba(0,0,0,0.55) 65%, transparent 100%);
   pointer-events: none;
 }
 #zym-ig-topbar > * { pointer-events: auto; }
@@ -1779,6 +1786,12 @@ body.sparkle-panel-open .audio-notice-sheet {
   object-fit: contain;
 }
 
+/* Anak panah prev/next TERSEMBUNYI lalai (pengguna dah biasa swipe,
+   butang sentiasa kelihatan dilaporkan "mengganggu") — hanya berdenyut
+   SEBENTAR (`.zym-ig-hint-pulse` pd overlay, ditambah `openOverlay()`
+   main.js, dibuang lepas ~1.6s) bila carousel BARU dibuka, sbg petunjuk
+   swipeability, kemudian reda & jadi tak-boleh-klik semula. Logik
+   next/prev scrollBy() KEKAL sama — hanya kelihatan/klik berubah. */
 #zym-ig-prev, #zym-ig-next {
   position: absolute; top: 50%; transform: translateY(-50%); z-index: 3;
   width: 40px; height: 40px; border-radius: 50%; border: none;
@@ -1786,12 +1799,38 @@ body.sparkle-panel-open .audio-notice-sheet {
   font-size: 1.35rem; line-height: 1; cursor: pointer;
   display: flex; align-items: center; justify-content: center;
   box-shadow: 0 2px 12px rgba(0,0,0,0.35);
-  transition: background 0.15s, color 0.15s;
+  opacity: 0; pointer-events: none;
+  transition: background 0.15s, color 0.15s, opacity 0.3s ease;
 }
 #zym-ig-prev:hover, #zym-ig-next:hover { background: rgba(79,70,229,0.55); color: #fff; }
-#zym-ig-prev:disabled, #zym-ig-next:disabled { opacity: 0; pointer-events: none; }
+#zym-ig-prev:disabled, #zym-ig-next:disabled { opacity: 0 !important; pointer-events: none !important; }
 #zym-ig-prev { left: 10px; }
 #zym-ig-next { right: 10px; }
+
+/* Guna dua @keyframes ARAH-BERBEZA (bukan satu shorthand `animation`
+   digantikan `animation-name` selector lain) — dua selector sama
+   spesifisiti (:disabled dikendali berasingan via !important atas)
+   elak konflik cascade "siapa menang" antara rule generik & spesifik. */
+#zym-infographic-overlay.zym-ig-hint-pulse #zym-ig-prev {
+  pointer-events: auto;
+  animation: zymIgHintPulsePrev 1.6s ease-out;
+}
+#zym-infographic-overlay.zym-ig-hint-pulse #zym-ig-next {
+  pointer-events: auto;
+  animation: zymIgHintPulseNext 1.6s ease-out;
+}
+@keyframes zymIgHintPulsePrev {
+  0%   { opacity: 0; transform: translateY(-50%) translateX(-6px) scale(0.85); }
+  25%  { opacity: 0.95; transform: translateY(-50%) translateX(0) scale(1.05); }
+  70%  { opacity: 0.95; transform: translateY(-50%) translateX(0) scale(1); }
+  100% { opacity: 0; transform: translateY(-50%) translateX(0) scale(1); }
+}
+@keyframes zymIgHintPulseNext {
+  0%   { opacity: 0; transform: translateY(-50%) translateX(6px) scale(0.85); }
+  25%  { opacity: 0.95; transform: translateY(-50%) translateX(0) scale(1.05); }
+  70%  { opacity: 0.95; transform: translateY(-50%) translateX(0) scale(1); }
+  100% { opacity: 0; transform: translateY(-50%) translateX(0) scale(1); }
+}
 
 @media (max-width: 640px) {
   #zym-ig-prev, #zym-ig-next { width: 34px; height: 34px; font-size: 1.1rem; }
