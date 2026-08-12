@@ -1,10 +1,10 @@
 {
-  "style_css": "329",
-  "main_js": "443",
+  "style_css": "330",
+  "main_js": "444",
   "zh_mode_js": "56",
   "subtopic_lab_js": "9",
   "manifest": "20",
-  "sw_cache": "593",
+  "sw_cache": "594",
   "icon": "6",
   "icon_maskable": "6",
   "logo": "5",
@@ -16,7 +16,7 @@
   "css": {
     "base": "112",
     "layout": "29",
-    "ui": "86",
+    "ui": "87",
     "paper": "30",
     "keywords": "60",
     "responsive": "14",
