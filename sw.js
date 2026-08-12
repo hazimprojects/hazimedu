@@ -4,9 +4,25 @@
    - Google Fonts (cross-origin): cache-first with opaque response
    - HTML pages: network-first, fallback to cache (with /notes ↔ /notes/index.html aliases)
    - Same-origin non-document GET: cache-first
+   - /assets/infographics/ (galeri infografik): cache-first, cache BERASINGAN
+     drpd CACHE (rujuk MEDIA_CACHE di bawah) — imej "berat" ni patut kekal
+     dicache MERENTAS deploy CSS/JS biasa (bukan terpadam setiap kali CACHE
+     naik versi), sbb pelajar/guru yg dah buka galeri sekali tak patut muat
+     turun semula ~2MB tiap kali app-shell dikemas kini
 */
 
 const CACHE = 'zym-v595';
+
+// Cache imej infografik — versi TETAP (bukan ikut CACHE di atas, TAK naik
+// setiap PR ubah CSS/JS). Kekal disebut dlm senarai "jangan padam" activate()
+// di bawah, jadi imej yg dah dicache SELAMAT drpd wipe cache app-shell biasa.
+// Cache-busting kandungan imej individu tetap guna `?v=<imgVersion>` sedia ada
+// (rujuk HZ_INFOGRAPHIC_PAGES, main.js) — match KENA exact-URL (bukan
+// ignoreSearch:true macam cache-first assets lain), sbb tiada wipe automatik
+// utk paksa versi baharu di sini. Naikkan nombor versi cache ni MANUAL
+// (zym-media-v1 → v2) HANYA kalau strategi caching sendiri berubah, bukan
+// bila kandungan imej bertukar (guna imgVersion utk kes tu).
+const MEDIA_CACHE = 'zym-media-v1';
 
 const PRECACHE_URLS = [
   '/',
@@ -167,12 +183,12 @@ self.addEventListener('install', function (e) {
   );
 });
 
-// ── Activate: clear old caches ────────────────────────────────────────────
+// ── Activate: clear old caches (KEKALKAN MEDIA_CACHE — rujuk nota atas) ───
 self.addEventListener('activate', function (e) {
   e.waitUntil(
     caches.keys().then(function (keys) {
       return Promise.all(
-        keys.filter(function (k) { return k !== CACHE; })
+        keys.filter(function (k) { return k !== CACHE && k !== MEDIA_CACHE; })
             .map(function (k) { return caches.delete(k); })
       );
     }).then(function () {
@@ -238,6 +254,28 @@ self.addEventListener('fetch', function (e) {
                (e.request.headers.get('accept') &&
                 e.request.headers.get('accept').indexOf('text/html') !== -1);
   var isAsset = /\.(css|js|svg|png|jpg|jpeg|gif|webp|woff2?|ico|json|mp3|webm|opus)(\?.*)?$/i.test(url);
+  // indexOf (bukan startsWith path) — laman kadang dihoskan bawah subpath
+  // (rujuk hzZymnotesSiteRootPath() dlm main.js), jadi laluan penuh boleh
+  // ada prefix sblm "/assets/".
+  var isInfographic = new URL(url).pathname.indexOf('/assets/infographics/') !== -1;
+
+  if (isInfographic) {
+    // Cache-first, cache BERASINGAN (MEDIA_CACHE) drpd app-shell — rujuk nota
+    // atas fail ni. Match TANPA ignoreSearch (exact URL) — `?v=<imgVersion>`
+    // baharu automatik jadi entri cache baharu, imej lama BUKAN dipadam (biar
+    // browser urus storan ikut keperluan, bukan kod ni).
+    e.respondWith(
+      caches.open(MEDIA_CACHE).then(function (cache) {
+        return cache.match(e.request).then(function (cached) {
+          return cached || fetch(e.request).then(function (res) {
+            if (res && res.ok) cache.put(e.request, res.clone());
+            return res;
+          });
+        });
+      })
+    );
+    return;
+  }
 
   if (isAsset) {
     // Cache-first for static assets
