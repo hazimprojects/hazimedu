@@ -11,7 +11,7 @@
      turun semula ~2MB tiap kali app-shell dikemas kini
 */
 
-const CACHE = 'zym-v595';
+const CACHE = 'zym-v596';
 
 // Cache imej infografik — versi TETAP (bukan ikut CACHE di atas, TAK naik
 // setiap PR ubah CSS/JS). Kekal disebut dlm senarai "jangan padam" activate()
