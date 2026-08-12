@@ -1309,6 +1309,68 @@ body.page-theme-home.app-shell-page .home-hero-primary-cta:hover {
   box-shadow: 0 14px 36px rgba(79, 70, 229, 0.42), 0 2px 10px rgba(67, 56, 202, 0.25);
 }
 
+/* ── Sambung Membaca — kad "teruskan baca" (disuntik main.js bila ada rekod
+   ZymStore.getApp('lastRead'), TIADA kalau tiada rekod). Guna token
+   --page-surface-* sedia ada (sama corak .home-brand-hero) utk latar/sempang
+   supaya ikut tema automatik; warna aksen bab (--cr-accent, disuntik JS)
+   HANYA pd elemen kecil (eyebrow/anak panah) — bukan seluruh latar, elak kad
+   pastel terang tak sepadan mod gelap (sama sebab drpd --mm-ch-* pd overlay
+   mindmap, rujuk ui.css). ── */
+body.page-theme-home.app-shell-page .home-continue-card {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  padding: 0.95rem 2.4rem 0.95rem 1.15rem;
+  border-radius: 18px;
+  margin-bottom: 1rem;
+  background: var(--page-surface-bg);
+  border: 1px solid var(--page-surface-border);
+  box-shadow: var(--page-surface-shadow);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+body.page-theme-home.app-shell-page .home-continue-card:hover {
+  transform: translateY(-2px);
+}
+
+body.page-theme-home.app-shell-page .home-continue-eyebrow {
+  display: block;
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--cr-accent, #6366f1);
+  margin-bottom: 0.3rem;
+}
+
+body.page-theme-home.app-shell-page .home-continue-chapter {
+  display: block;
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--muted, #64748b);
+  margin-bottom: 0.15rem;
+}
+
+body.page-theme-home.app-shell-page .home-continue-title {
+  display: block;
+  font-size: 0.98rem;
+  font-weight: 800;
+  color: var(--ink, #1e293b);
+  line-height: 1.32;
+}
+
+body.page-theme-home.app-shell-page .home-continue-arrow {
+  position: absolute;
+  right: 1.1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--cr-accent, #6366f1);
+}
+
 body.page-theme-home.app-shell-page .home-feature-grid,
 body.page-theme-about.app-shell-page .home-feature-grid {
   gap: 14px;

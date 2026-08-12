@@ -2843,6 +2843,39 @@ sentuh SEBENAR (CDP `Input.dispatchTouchEvent`, BUKAN klik) drpd tepi
 KIRI (x=20) & tepi KANAN (x=370, viewport 390px) kedua-duanya
 disahkan majukan/mundurkan `track.scrollLeft` dgn betul.
 
+## Sambung Membaca — kad "teruskan baca" pd laman utama (2026-08-12)
+
+Laman utama (`index.html`) sebelum ni **100% statik** (sama utk semua
+pelawat, tiada personalisasi). Ciri ni ciri PERTAMA yg suntik kandungan
+peribadi (ikut peranti, bukan akaun — tiada backend) ke laman utama via
+JS. Dua IIFE berasingan dlm `main.js` (letak lepas 2 IIFE "CTA subtopik
+terakhir/pertama"):
+
+1. **Tulis** (jalan pd SETIAP halaman subtopik nota, `hzZymnotesIsSubtopicNotePathname`)
+   — simpan `{url, ts}` ke `ZymStore.getApp('lastRead')`
+   (`zym.app` — kunci generik sedia ada, BUKAN kunci baharu). Simpan
+   LALUAN sahaja (bukan tajuk) — elak staleness kalau tajuk subtopik
+   disunting kemudian.
+2. **Baca** (gerbang guna kewujudan `.home-brand-hero` dlm DOM, bukan
+   pathname — `.home-brand-hero` HANYA wujud pd laman utama) — padan
+   `lastRead.url` dgn `ZYMNOTES_NAV.chapters[].subtopics[]` utk dapat
+   tajuk/nombor/warna TERKINI, suntik kad `.home-continue-card` lepas
+   `.home-brand-hero` via `insertAdjacentElement('afterend', ...)`.
+   **TIADA apa-apa disuntik kalau tiada rekod** (pelawat pertama kali
+   kekal nampak laman asal, tiada "kotak kosong").
+
+**Warna aksen bab HANYA pd elemen kecil (eyebrow/anak panah)** — CSS
+custom property `--cr-accent` disuntik JS drpd `chapter.color.accent`
+(rujuk `ZYMNOTES_NAV`), TAPI latar kad sendiri guna token
+`--page-surface-bg`/`--page-surface-border`/`--page-surface-shadow`
+sedia ada (SAMA persis drpd `.home-brand-hero`) — BUKAN warna pastel
+bab (`chapter.color.bg`) sbg latar penuh, sbb warna tu direka utk mod
+CERAH sahaja & akan nampak tak sepadan mod gelap (sama isu/fix drpd
+`--mm-ch-bg` pd overlay mindmap, cuma di situ diterima sbg had sbb
+badge kecil bulat, bukan kad lebar). Ikut corak ni bila tambah UI baharu
+guna warna bab dinamik — jangan letak warna pastel terus jadi latar
+kad besar.
+
 ## Aliran Kerja Versioning Aset (WAJIB lepas ubah CSS/JS/sw.js)
 
 Sumber kebenaran versi: `data/asset-versions.json`. Lepas ubah
