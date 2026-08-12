@@ -1734,8 +1734,7 @@ body.sparkle-panel-open .audio-notice-sheet {
 
 #zym-ig-topbar {
   position: absolute; top: 0; left: 0; right: 0; z-index: 5;
-  display: flex; align-items: center; gap: 10px;
-  padding: calc(12px + env(safe-area-inset-top, 0px)) 14px 46px;
+  padding: calc(10px + env(safe-area-inset-top, 0px)) 14px 46px;
   /* Pekat SEPENUHNYA (bukan lutsinar) drpd 0%-30% — versi awal
      (0.68 alpha drpd 0%) biar warna cerah imej sumber (latar
      "kertas lama" krim) tembus, nampak spt jalur putih/pudar tak
@@ -1747,6 +1746,31 @@ body.sparkle-panel-open .audio-notice-sheet {
   pointer-events: none;
 }
 #zym-ig-topbar > * { pointer-events: auto; }
+
+/* ── Dash indicator (gaya "segmented progress bar" cerita IG) —
+   GANTIKAN anak panah prev/next sepenuhnya (dilaporkan pengguna
+   "mengganggu" walau cuma berdenyut sekejap) sbg petunjuk kedudukan
+   & swipeability, kekal kelihatan SEPANJANG carousel dibuka (bukan
+   sekadar denyut sekali) tapi cukup samar (opacity rendah) drpd tak
+   ganggu kandungan imej. ── */
+#zym-ig-dashes {
+  display: flex; gap: 4px; margin-bottom: 10px;
+}
+.zym-ig-dash {
+  flex: 1; height: 3px; border-radius: 2px;
+  background: rgba(255,255,255,0.28);
+  transition: background 0.2s ease;
+}
+.zym-ig-dash.is-active { background: rgba(255,255,255,0.95); }
+.zym-ig-dash.is-passed { background: rgba(255,255,255,0.6); }
+
+#zym-ig-header-row {
+  display: flex; align-items: center; gap: 9px;
+}
+#zym-ig-logo {
+  width: 26px; height: 26px; border-radius: 7px; flex-shrink: 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.35);
+}
 #zym-ig-title {
   font-family: Fredoka, sans-serif; font-size: 0.92rem; font-weight: 600;
   color: #f1f5f9; flex: 1; min-width: 0;
@@ -1786,54 +1810,34 @@ body.sparkle-panel-open .audio-notice-sheet {
   object-fit: contain;
 }
 
-/* Anak panah prev/next TERSEMBUNYI lalai (pengguna dah biasa swipe,
-   butang sentiasa kelihatan dilaporkan "mengganggu") — hanya berdenyut
-   SEBENTAR (`.zym-ig-hint-pulse` pd overlay, ditambah `openOverlay()`
-   main.js, dibuang lepas ~1.6s) bila carousel BARU dibuka, sbg petunjuk
-   swipeability, kemudian reda & jadi tak-boleh-klik semula. Logik
-   next/prev scrollBy() KEKAL sama — hanya kelihatan/klik berubah. */
-#zym-ig-prev, #zym-ig-next {
-  position: absolute; top: 50%; transform: translateY(-50%); z-index: 3;
-  width: 40px; height: 40px; border-radius: 50%; border: none;
-  background: rgba(15,23,42,0.4); color: #f1f5f9;
-  font-size: 1.35rem; line-height: 1; cursor: pointer;
-  display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.35);
-  opacity: 0; pointer-events: none;
-  transition: background 0.15s, color 0.15s, opacity 0.3s ease;
+/* Zon ketik kiri/kanan (30% tepi setiap satu) pd imej — gantikan
+   anak panah sbg cara navigasi klik/tetikus (guru projektor tanpa
+   skrin sentuh), corak SAMA dgn cerita IG/status WhatsApp sebenar
+   (ketik tepi imej, bukan butang panah kekal). Tiada gaya visual
+   (invisible) — swipe & kekunci panah kekal cara utama, ni cuma
+   lapisan tambahan utk tetikus. */
+.zym-ig-tap-zone {
+  position: absolute; top: 0; bottom: 0; width: 30%; z-index: 2;
+  cursor: pointer;
 }
-#zym-ig-prev:hover, #zym-ig-next:hover { background: rgba(79,70,229,0.55); color: #fff; }
-#zym-ig-prev:disabled, #zym-ig-next:disabled { opacity: 0 !important; pointer-events: none !important; }
-#zym-ig-prev { left: 10px; }
-#zym-ig-next { right: 10px; }
+.zym-ig-tap-zone-prev { left: 0; }
+.zym-ig-tap-zone-next { right: 0; }
 
-/* Guna dua @keyframes ARAH-BERBEZA (bukan satu shorthand `animation`
-   digantikan `animation-name` selector lain) — dua selector sama
-   spesifisiti (:disabled dikendali berasingan via !important atas)
-   elak konflik cascade "siapa menang" antara rule generik & spesifik. */
-#zym-infographic-overlay.zym-ig-hint-pulse #zym-ig-prev {
-  pointer-events: auto;
-  animation: zymIgHintPulsePrev 1.6s ease-out;
-}
-#zym-infographic-overlay.zym-ig-hint-pulse #zym-ig-next {
-  pointer-events: auto;
-  animation: zymIgHintPulseNext 1.6s ease-out;
-}
-@keyframes zymIgHintPulsePrev {
-  0%   { opacity: 0; transform: translateY(-50%) translateX(-6px) scale(0.85); }
-  25%  { opacity: 0.95; transform: translateY(-50%) translateX(0) scale(1.05); }
-  70%  { opacity: 0.95; transform: translateY(-50%) translateX(0) scale(1); }
-  100% { opacity: 0; transform: translateY(-50%) translateX(0) scale(1); }
-}
-@keyframes zymIgHintPulseNext {
-  0%   { opacity: 0; transform: translateY(-50%) translateX(6px) scale(0.85); }
-  25%  { opacity: 0.95; transform: translateY(-50%) translateX(0) scale(1.05); }
-  70%  { opacity: 0.95; transform: translateY(-50%) translateX(0) scale(1); }
-  100% { opacity: 0; transform: translateY(-50%) translateX(0) scale(1); }
-}
-
-@media (max-width: 640px) {
-  #zym-ig-prev, #zym-ig-next { width: 34px; height: 34px; font-size: 1.1rem; }
+/* ── Disclaimer AI — etika pendedahan kandungan janaan AI, terapung
+   di bahagian bawah (SEPANJANG carousel dibuka, bukan per-slaid —
+   berkaitan SEMUA 10 ilustrasi). Frasa "mungkin tidak tepat — nota
+   teks kekal rujukan utama" ikut corak disclaimer sedia ada
+   `.audio-notice-text` ("Audio mungkin mengandungi ringkasan — nota
+   adalah rujukan utama") supaya nada konsisten merentas laman. ── */
+#zym-ig-ai-disclaimer {
+  position: absolute; left: 0; right: 0;
+  bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+  z-index: 4; text-align: center; padding: 0 20px;
+  font-family: var(--font-sans, "Nunito", sans-serif);
+  font-size: 0.68rem; line-height: 1.35;
+  color: rgba(255,255,255,0.78);
+  text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+  pointer-events: none;
 }
 
 @media print {
