@@ -2516,15 +2516,18 @@ sebenar terjana), TIADA item pd hab bab (`bab-4.html`), indeks nota
 (`notes/index.html`), & halaman kuiz (`quiz/bab-4-2.html`) — sifar
 ralat JS pd keempat-empat jenis halaman.
 
-## Infografik Galeri — FAB berasingan, carousel skrin penuh (prototaip bab-1-1)
+## Infografik Galeri — FAB berasingan, carousel skrin penuh
 
 Ciri BAHARU (2026-08-11): kad infografik gaya carousel media sosial
 (imej cerita ilustrasi bergaya "Instagram carousel", diselang-selikan
 dgn kandungan teks nota sedia ada) — utk pelajar visual & guru
-membentang via projektor kelas. **Skop semasa: prototaip 1 subtopik
-sahaja (`bab-1-1`), 10 slaid.** Peluasan ke subtopik lain kekal kerja
-akan datang (perlu proses/mampatkan imej baharu tiap kali — rujuk
-langkah di bawah), BUKAN automatik drpd struktur ciri ni.
+membentang via projektor kelas. **Skop semasa: 2 subtopik (`bab-1-1`,
+`bab-1-2`), 10 slaid setiap satu** — `bab-1-2` (2026-08-12) mengesahkan
+corak `HZ_INFOGRAPHIC_PAGES` generalize bersih ke subtopik kedua tanpa
+ubah kod (cuma tambah satu entri data + fail WebP, sama proses persis
+drpd bab-1-1). Peluasan ke subtopik lain kekal kerja akan datang (perlu
+proses/mampatkan imej baharu tiap kali — rujuk langkah di bawah), BUKAN
+automatik drpd struktur ciri ni.
 
 **Keputusan reka bentuk (dibincang dgn pengguna dulu, rujuk sejarah
 perbualan)**: FAB BERASINGAN (bukan item dlm menu sparkle sedia ada,

@@ -2380,6 +2380,22 @@ var HZ_INFOGRAPHIC_PAGES = {
       { file: '09-kesinambungan.webp', alt: 'Kesinambungan Negara Bangsa di Alam Melayu: Funan dan Champa, Srivijaya, Kesultanan Melayu Melaka, Kesultanan Johor Riau' },
       { file: '10-kesimpulan.webp', alt: 'Kesimpulan: Srivijaya, Kesultanan Melayu Melaka, dan Kesultanan Johor Riau membentuk kekuatan kerajaan di Alam Melayu' }
     ]
+  },
+  'bab-1-2': {
+    title: '1.2 Ciri-ciri Negara Bangsa Kesultanan Melayu Melaka',
+    imgVersion: 1,
+    slides: [
+      { file: '01-pengenalan.webp', alt: 'Muka hadapan: 1.2 Ciri-ciri Negara Bangsa Kesultanan Melayu Melaka — Sistem pemerintahan yang tersusun dan lengkap' },
+      { file: '02-soalan-utama.webp', alt: 'Soalan Utama: Apakah ciri-ciri negara bangsa yang terdapat dalam Kesultanan Melayu Melaka? Enam ciri utama: Kerajaan, Rakyat, Kedaulatan, Wilayah Pengaruh, Undang-undang, Lambang Kebesaran' },
+      { file: '03-kerajaan.webp', alt: 'Kerajaan: Raja sebagai pemerintah tertinggi bergelar Sultan selepas kedatangan Islam, Sistem Pembesar Empat Lipatan — Sultan, Pembesar Berempat, Pembesar Berlapan, Pembesar Enam Belas, Pembesar Tiga Puluh Dua' },
+      { file: '04-rakyat.webp', alt: 'Rakyat: taat setia kepada Sultan dan mematuhi undang-undang — golongan pemerintah (Sultan & Pembesar) dan golongan diperintah (Orang Melayu, Orang Laut, rakyat merdeka, hamba) dalam hubungan timbal balik' },
+      { file: '05-kedaulatan.webp', alt: 'Kedaulatan: lambang kekuasaan tertinggi Sultan — hak mutlak mengawal rakyat dan wilayah, bebas daripada campur tangan kuasa asing, diakui oleh Dinasti Ming melalui hubungan dengan China dan kedatangan Laksamana Cheng Ho' },
+      { file: '06-wilayah-pengaruh.webp', alt: 'Wilayah Pengaruh: kawasan yang menerima, mengakui dan mematuhi pemerintahan Sultan merangkumi Semenanjung Tanah Melayu dan pantai timur Sumatera, diperluas melalui penaklukan, naungan, dan perkahwinan' },
+      { file: '07-cara-peluasan-wilayah.webp', alt: 'Cara Peluasan Wilayah: penaklukan (Pahang, Kuala Linggi, Kelantan, Rokan, Inderagiri, Kampar), naungan (Lingga, Patani, Kedah), perkahwinan (Siantan — hadiah Kerajaan Majapahit kepada Sultan Mansur Shah)' },
+      { file: '08-undang-undang.webp', alt: 'Undang-undang: dua undang-undang bertulis, Hukum Kanun Melaka dan Undang-undang Laut Melaka, menjadi asas pemerintahan — mengukuhkan kerajaan, melindungi rakyat, memastikan pentadbiran berjalan lancar' },
+      { file: '09-lambang-kebesaran.webp', alt: 'Lambang Kebesaran: identiti dan keistimewaan Sultan — adat istiadat, warna diraja, nobat, regalia, cap mohor — melambangkan kedaulatan pemerintah dan keagungan kerajaan' },
+      { file: '10-kesimpulan.webp', alt: 'Kesimpulan: Kesultanan Melayu Melaka mempunyai ciri-ciri negara bangsa yang lengkap — Kerajaan, Rakyat, Kedaulatan, Wilayah Pengaruh, Undang-undang, Lambang Kebesaran — asas negara bangsa Malaysia masa kini' }
+    ]
   }
 };
 
