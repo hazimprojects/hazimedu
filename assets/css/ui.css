@@ -1810,19 +1810,6 @@ body.sparkle-panel-open .audio-notice-sheet {
   object-fit: contain;
 }
 
-/* Zon ketik kiri/kanan (30% tepi setiap satu) pd imej — gantikan
-   anak panah sbg cara navigasi klik/tetikus (guru projektor tanpa
-   skrin sentuh), corak SAMA dgn cerita IG/status WhatsApp sebenar
-   (ketik tepi imej, bukan butang panah kekal). Tiada gaya visual
-   (invisible) — swipe & kekunci panah kekal cara utama, ni cuma
-   lapisan tambahan utk tetikus. */
-.zym-ig-tap-zone {
-  position: absolute; top: 0; bottom: 0; width: 30%; z-index: 2;
-  cursor: pointer;
-}
-.zym-ig-tap-zone-prev { left: 0; }
-.zym-ig-tap-zone-next { right: 0; }
-
 /* ── Disclaimer AI — etika pendedahan kandungan janaan AI, terapung
    di bahagian bawah (SEPANJANG carousel dibuka, bukan per-slaid —
    berkaitan SEMUA 10 ilustrasi). Frasa "mungkin tidak tepat — nota

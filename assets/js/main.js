@@ -3017,8 +3017,6 @@ var HZ_INFOGRAPHIC_PAGES = {
         '</div>',
         '<div id="zym-ig-viewport">',
           '<div id="zym-ig-track">' + slidesHtml + '</div>',
-          '<div class="zym-ig-tap-zone zym-ig-tap-zone-prev" aria-hidden="true"></div>',
-          '<div class="zym-ig-tap-zone zym-ig-tap-zone-next" aria-hidden="true"></div>',
         '</div>',
         '<div id="zym-ig-ai-disclaimer">Ilustrasi dijana AI, mungkin tidak tepat — nota teks kekal rujukan utama</div>'
       ].join('');
@@ -3030,17 +3028,29 @@ var HZ_INFOGRAPHIC_PAGES = {
         requestAnimationFrame(updateNav);
       }, { passive: true });
 
-      // Zon ketik kiri/kanan (30% tepi imej) — cara navigasi tetikus
-      // gantikan anak panah kekal, sama corak cerita IG/status
-      // WhatsApp. Tak kesan sbg klik semasa swipe SEBENAR (native
-      // scroll-snap drag) sbb pelayar sendiri tak lepaskan event
-      // 'click' bila gerakan mouse/touch melebihi ambang dalaman.
-      overlay.querySelector('.zym-ig-tap-zone-prev').addEventListener('click', function () {
-        track.scrollBy({ left: -(track.clientWidth || 0), behavior: 'smooth' });
+      // Ketik kiri/kanan (30% tepi imej) navigasi prev/next — cara
+      // tetikus (guru projektor tanpa skrin sentuh) gantikan anak
+      // panah kekal, sama corak cerita IG/status WhatsApp. Listener
+      // 'click' TERUS pd #zym-ig-track (BUKAN elemen overlay
+      // berasingan berlapis di ATASnya — percubaan awal guna div
+      // `.zym-ig-tap-zone` position:absolute z-index:2 di atas track
+      // PECAHKAN swipe tepi kiri/kanan, sbb div tu "menelan" touch
+      // SEBELUM sampai ke track scroll-snap di bawahnya, walau
+      // `pointer-events` tak disentuh — dilaporkan pengguna "swipe tak
+      // berfungsi bila diseret dari hujung skrin, cuma tengah boleh").
+      // Klik TERUS pd track/imej TAK berlanggar dgn swipe kerana
+      // pelayar sendiri tak lepaskan event 'click' bila gerakan
+      // touch/tetikus melebihi ambang dalaman (drag ≠ tap).
+      track.addEventListener('click', function (e) {
+        var r = track.getBoundingClientRect();
+        var frac = (e.clientX - r.left) / (r.width || 1);
+        if (frac < 0.3) {
+          track.scrollBy({ left: -(track.clientWidth || 0), behavior: 'smooth' });
+        } else if (frac > 0.7) {
+          track.scrollBy({ left: (track.clientWidth || 0), behavior: 'smooth' });
+        }
       });
-      overlay.querySelector('.zym-ig-tap-zone-next').addEventListener('click', function () {
-        track.scrollBy({ left: (track.clientWidth || 0), behavior: 'smooth' });
-      });
+
       document.getElementById('zym-ig-close-btn').addEventListener('click', closeOverlay);
 
       overlay.addEventListener('click', function (e) {
@@ -8038,7 +8048,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=591').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=592').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
