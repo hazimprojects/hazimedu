@@ -2751,6 +2751,52 @@ ditambah semula dlm tick JS yg sama tanpa reflow paksa di antaranya
 (bug animasi terkenal), jadi buka-tutup-buka carousel pantas tetap
 dapat denyut baharu setiap kali.
 
+**Susulan — 4 pembaikan lanjut lepas pengguna tunjuk tangkapan skrin
+peranti sebenar (mod cerah): (1) status bar OS putih, (2) gantikan
+anak panah dgn dash/dot, (3) logo ZymNotes rasmi pd header, (4)
+disclaimer beretika kandungan janaan AI.**
+
+1. **Status bar putih dlm mod cerah** — `applyTheme()` (dekat awal
+   fail ni) tukar `meta[name=theme-color]` ikut tema laman (`#ffffff`
+   mod cerah, `#0D0F1A` mod gelap) — bila carousel (lightbox gelap)
+   dibuka semasa mod cerah, status bar OS kekal putih, berlanggar dgn
+   overlay gelap. Fix: `setOverlayThemeColor(dark)` (dlm
+   `setupInfographicGallery()`) paksa `#000000` bila `openOverlay()`,
+   pulih ikut tema SEBENAR (baca `data-theme` drpd `<html>` terus,
+   bukan andaian tetap) bila `closeOverlayUi()`.
+2. **Anak panah digantikan dash indicator kekal** (bukan sekadar
+   denyut sekali spt susulan sblm ni — DIBUANG sepenuhnya, gantung
+   `#zym-ig-dashes`: N `<span class="zym-ig-dash">` nipis gaya
+   "segmented progress bar" cerita IG, `.is-active`/`.is-passed`
+   dikemas kini dlm `updateNav()` ikut slaid semasa). Navigasi
+   tetikus (guru projektor tanpa skrin sentuh) kini via
+   `.zym-ig-tap-zone-prev/next` (30% tepi kiri/kanan imej, invisible,
+   `scrollBy()` SAMA logik) — corak "ketik tepi imej" gantikan butang
+   panah kekal, padan cerita IG/status WhatsApp sebenar (bukan cuma
+   swipe/kekunci panah).
+3. **Logo ZymNotes rasmi pd header** — `#zym-ig-logo` guna
+   `/icons/icon.svg` SEDIA ADA (badge gradien "ZN", sama aset persis
+   dipakai pd `.app-logo-icon` header laman biasa) — SELF-HOSTED, tak
+   terjejas sekatan CDN sandbox spt ikon Fluent/Icons8 lain. Diletak
+   sbg pengganti logo/header yg dibuang drpd imej sumber sblm ni
+   (rujuk susulan "logo ZN terbakar" atas) — jenama kini datang drpd
+   chrome overlay kita, bukan dibakar dlm imej.
+4. **Disclaimer AI beretika** — `#zym-ig-ai-disclaimer` (teks kecil
+   terapung bawah, SEPANJANG carousel terbuka, bukan per-slaid sbb
+   berkaitan SEMUA 10 ilustrasi): "Ilustrasi dijana AI, mungkin tidak
+   tepat — nota teks kekal rujukan utama" — frasa sengaja ikut corak
+   disclaimer SEDIA ADA `.audio-notice-text` ("Audio mungkin
+   mengandungi ringkasan — nota adalah rujukan utama") supaya nada
+   konsisten merentas laman, bukan dikarang generik/beza gaya.
+
+Disahkan via Playwright: `meta[theme-color]` betul `#ffffff`(sebelum)
+→`#000000`(terbuka)→`#ffffff`(tutup, mod cerah default), 10 dash
+wujud dgn `.is-active` betul pd slaid 1, `#zym-ig-prev`/`#zym-ig-next`
+disahkan SIFAR (dibuang penuh drpd DOM), logo & disclaimer wujud &
+teks tepat, klik `.zym-ig-tap-zone-next` majukan carousel (kiraan
+2/10) & kemas kini dash (`.is-passed` pd dash 1, `.is-active` pd dash
+2) dgn betul.
+
 ## Aliran Kerja Versioning Aset (WAJIB lepas ubah CSS/JS/sw.js)
 
 Sumber kebenaran versi: `data/asset-versions.json`. Lepas ubah

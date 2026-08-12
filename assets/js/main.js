@@ -2947,18 +2947,32 @@ var HZ_INFOGRAPHIC_PAGES = {
       var n = slides.length;
       var cw = track.clientWidth || 1;
       var idx = Math.min(n - 1, Math.max(0, Math.round(track.scrollLeft / cw)));
-      var prevBtn = document.getElementById('zym-ig-prev');
-      var nextBtn = document.getElementById('zym-ig-next');
       var counter = document.getElementById('zym-ig-counter');
-      if (prevBtn) prevBtn.disabled = idx <= 0;
-      if (nextBtn) nextBtn.disabled = idx >= n - 1;
       if (counter) counter.textContent = (idx + 1) + ' / ' + n;
+      var dashes = overlay.querySelectorAll('.zym-ig-dash');
+      for (var i = 0; i < dashes.length; i++) {
+        dashes[i].classList.toggle('is-active', i === idx);
+        dashes[i].classList.toggle('is-passed', i < idx);
+      }
+    }
+
+    // Status bar OS ikut meta theme-color semasa (rujuk applyTheme()
+    // di atas fail ni) — di mod cerah nilainya #ffffff, jadi bila
+    // carousel (lightbox gelap) dibuka, status bar terus nampak
+    // "jalur putih tak kemas" atas overlay gelap. Paksa gelap SEMASA
+    // carousel terbuka sahaja, pulih ikut tema SEBENAR (baca
+    // data-theme drpd <html>, bukan andaian) bila ditutup.
+    function setOverlayThemeColor(dark) {
+      var tc = document.querySelector('meta[name="theme-color"]');
+      if (!tc) return;
+      tc.content = dark ? '#000000' : (document.documentElement.getAttribute('data-theme') === 'dark' ? '#0D0F1A' : '#ffffff');
     }
 
     function closeOverlayUi() {
       overlay.classList.remove('is-open');
       overlay.setAttribute('aria-hidden', 'true');
       document.body.style.overflow = '';
+      setOverlayThemeColor(false);
     }
 
     function closeOverlay() {
@@ -2985,20 +2999,28 @@ var HZ_INFOGRAPHIC_PAGES = {
           s.alt.replace(/"/g, '&quot;') + '" loading="' + (i === 0 ? 'eager' : 'lazy') +
           '" decoding="async"></div>';
       }).join('');
+      var dashesHtml = data.slides.map(function (s, i) {
+        return '<span class="zym-ig-dash' + (i === 0 ? ' is-active' : '') + '"></span>';
+      }).join('');
 
       overlay.innerHTML = [
         '<div id="zym-ig-topbar">',
-          '<div id="zym-ig-title">' + data.title + '</div>',
-          '<div id="zym-ig-counter">1 / ' + data.slides.length + '</div>',
-          '<div id="zym-ig-actions">',
-            '<button type="button" id="zym-ig-close-btn" aria-label="Tutup">✕</button>',
+          '<div id="zym-ig-dashes">' + dashesHtml + '</div>',
+          '<div id="zym-ig-header-row">',
+            '<img id="zym-ig-logo" src="/icons/icon.svg?v=6" alt="" width="26" height="26">',
+            '<div id="zym-ig-title">' + data.title + '</div>',
+            '<div id="zym-ig-counter">1 / ' + data.slides.length + '</div>',
+            '<div id="zym-ig-actions">',
+              '<button type="button" id="zym-ig-close-btn" aria-label="Tutup">✕</button>',
+            '</div>',
           '</div>',
         '</div>',
         '<div id="zym-ig-viewport">',
           '<div id="zym-ig-track">' + slidesHtml + '</div>',
-          '<button type="button" id="zym-ig-prev" aria-label="Slaid sebelumnya">‹</button>',
-          '<button type="button" id="zym-ig-next" aria-label="Slaid seterusnya">›</button>',
-        '</div>'
+          '<div class="zym-ig-tap-zone zym-ig-tap-zone-prev" aria-hidden="true"></div>',
+          '<div class="zym-ig-tap-zone zym-ig-tap-zone-next" aria-hidden="true"></div>',
+        '</div>',
+        '<div id="zym-ig-ai-disclaimer">Ilustrasi dijana AI, mungkin tidak tepat — nota teks kekal rujukan utama</div>'
       ].join('');
 
       document.body.appendChild(overlay);
@@ -3008,10 +3030,15 @@ var HZ_INFOGRAPHIC_PAGES = {
         requestAnimationFrame(updateNav);
       }, { passive: true });
 
-      document.getElementById('zym-ig-prev').addEventListener('click', function () {
+      // Zon ketik kiri/kanan (30% tepi imej) — cara navigasi tetikus
+      // gantikan anak panah kekal, sama corak cerita IG/status
+      // WhatsApp. Tak kesan sbg klik semasa swipe SEBENAR (native
+      // scroll-snap drag) sbb pelayar sendiri tak lepaskan event
+      // 'click' bila gerakan mouse/touch melebihi ambang dalaman.
+      overlay.querySelector('.zym-ig-tap-zone-prev').addEventListener('click', function () {
         track.scrollBy({ left: -(track.clientWidth || 0), behavior: 'smooth' });
       });
-      document.getElementById('zym-ig-next').addEventListener('click', function () {
+      overlay.querySelector('.zym-ig-tap-zone-next').addEventListener('click', function () {
         track.scrollBy({ left: (track.clientWidth || 0), behavior: 'smooth' });
       });
       document.getElementById('zym-ig-close-btn').addEventListener('click', closeOverlay);
@@ -3061,18 +3088,9 @@ var HZ_INFOGRAPHIC_PAGES = {
       document.body.style.overflow = 'hidden';
       track.scrollTo({ left: 0 });
       updateNav();
+      setOverlayThemeColor(true);
       history.pushState({ zymInfographicPreview: 1 }, '', window.location.href);
       historyActive = true;
-
-      // Denyut kecil anak panah prev/next SEBENTAR sahaja (petunjuk
-      // swipeability bila carousel baru dibuka) — anak panah sentiasa
-      // tersembunyi (opacity:0/pointer-events:none) selain tempoh ni,
-      // rujuk CSS `.zym-ig-hint-pulse`. Buang kelas lepas animasi
-      // (1.6s) tamat supaya butang kembali tak-boleh-klik.
-      overlay.classList.remove('zym-ig-hint-pulse');
-      void overlay.offsetWidth; // paksa reflow supaya animasi re-trigger tiap kali dibuka
-      overlay.classList.add('zym-ig-hint-pulse');
-      setTimeout(function () { overlay.classList.remove('zym-ig-hint-pulse'); }, 1700);
     }
 
     fab.addEventListener('click', openOverlay);
@@ -8020,7 +8038,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=589').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=590').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
