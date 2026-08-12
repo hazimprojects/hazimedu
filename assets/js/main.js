@@ -2229,6 +2229,60 @@ var ZYMNOTES_NAV = { chapters: [
   }
 })();
 
+// ── Sambung Membaca — rekod subtopik terakhir dibaca ─────────────────────────
+// Ditulis pd SETIAP kunjungan halaman subtopik nota (bukan hub bab — hub
+// ialah menu, bukan "bacaan"). Simpan LALUAN sahaja (bukan tajuk) — kad
+// paparan pd laman utama (IIFE "Kad Sambung Membaca" dlm setupNoteFeatures
+// sekitar) padan semula drpd ZYMNOTES_NAV supaya tajuk/nombor/warna kekal
+// segerak walau tajuk subtopik disunting kemudian.
+(function () {
+  var pathname = window.location.pathname;
+  if (!hzZymnotesIsSubtopicNotePathname(pathname)) return;
+  var m = pathname.match(/bab-(\d+)-(\d+)/i);
+  if (!m || !window.ZymStore) return;
+  ZymStore.setApp('lastRead', { url: 'bab-' + m[1] + '-' + m[2] + '.html', ts: Date.now() });
+})();
+
+// ── Sambung Membaca — kad pd laman utama sahaja ──────────────────────────────
+// Baca rekod ZymStore.getApp('lastRead') (ditulis oleh IIFE atas pd halaman
+// subtopik) & padankan dgn ZYMNOTES_NAV utk dapat tajuk/nombor/warna TERKINI
+// (bukan simpan tajuk terus dlm rekod — elak staleness kalau tajuk disunting).
+// Gerbang guna kewujudan `.home-brand-hero` (bukan pathname) — laman utama
+// sahaja ada elemen ni. TIADA apa-apa disuntik kalau tiada rekod (pelawat
+// pertama kali kekal nampak laman asal, tiada "kotak kosong").
+document.addEventListener('DOMContentLoaded', function () {
+  var hero = document.querySelector('.home-brand-hero');
+  if (!hero || !window.ZymStore || !window.ZYMNOTES_NAV) return;
+  var last = ZymStore.getApp('lastRead');
+  if (!last || !last.url) return;
+
+  var m = String(last.url).match(/bab-(\d+)-(\d+)/i);
+  if (!m) return;
+  var chapter = ZYMNOTES_NAV.chapters[parseInt(m[1], 10) - 1];
+  if (!chapter || !chapter.subtopics) return;
+  var sub = null;
+  for (var i = 0; i < chapter.subtopics.length; i++) {
+    if (String(chapter.subtopics[i].url || '').toLowerCase() === String(last.url).toLowerCase()) {
+      sub = chapter.subtopics[i];
+      break;
+    }
+  }
+  if (!sub) return;
+
+  var card = document.createElement('a');
+  card.className = 'home-continue-card';
+  card.href = 'notes/' + last.url;
+  card.setAttribute('aria-label', 'Sambung membaca ' + sub.num + ' — ' + sub.title);
+  if (chapter.color) {
+    card.style.setProperty('--cr-accent', chapter.color.accent);
+  }
+  card.innerHTML =
+    '<span class="home-continue-eyebrow">Sambung Membaca</span>' +
+    '<span class="home-continue-chapter">Bab ' + chapter.num + ' · ' + chapter.title + '</span>' +
+    '<span class="home-continue-title">' + sub.num + ' ' + sub.title + '</span>' +
+    '<span class="home-continue-arrow" aria-hidden="true">→</span>';
+  hero.insertAdjacentElement('afterend', card);
+});
 
 // =========================
 // AUDIO PLAYER
@@ -8057,7 +8111,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=596').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=597').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
