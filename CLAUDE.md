@@ -2820,6 +2820,27 @@ sentuh SEBENAR (CDP `Input.dispatchTouchEvent`, BUKAN klik) drpd tepi
 KIRI (x=20) & tepi KANAN (x=370, viewport 390px) kedua-duanya
 disahkan majukan/mundurkan `track.scrollLeft` dgn betul.
 
+**Susulan — 2 pembaikan halus lepas pengguna tunjuk tangkapan skrin
+peranti sebenar (fungsi sudah betul, cuma kemas):**
+
+1. **`#zym-ig-counter` ("N / M") DIBUANG** — pengguna nyata ia lebihan
+   sbb dash indicator (§atas) SUDAH tunjuk kedudukan secara visual.
+   `updateNav()` kini cuma kemas kini kelas dash, tiada rujukan
+   elemen counter lagi (dibuang drpd `buildOverlay()` & CSS).
+2. **Scrim topbar dikurangkan kegelapan** — versi awal (0.92 alpha
+   kekal sehingga 30% tinggi, rujuk fix "jalur putih tak kemas" atas)
+   DITERLAMPAU-betulkan: pengguna lapor ia kini "terlalu gelap &
+   mengganggu" (teks tajuk imej sumber yg terletak dekat bahagian atas
+   sesetengah slaid jadi keruh/susah baca di bawah scrim legap tu).
+   Dikurangkan ke 0.72 puncak, tempoh legap dipendekkan 30%→18% —
+   cukup kekalkan tajuk/kiraan overlay kita sendiri jelas dibaca
+   (teks putih atas gelap) tanpa jadi blok hitam berat yg menutup
+   kandungan imej di bawahnya. Imbangan antara DUA laporan pengguna
+   bertentangan (mula-mula "terlalu lutsinar/putih", kemudian "terlalu
+   gelap") — kekalkan nilai 0.72/18% ni sbg titik seimbang yg disahkan,
+   jangan kembali ke 0.92/30% atau ke alpha asal 0.68/0% tanpa
+   pengesahan visual semula.
+
 ## Aliran Kerja Versioning Aset (WAJIB lepas ubah CSS/JS/sw.js)
 
 Sumber kebenaran versi: `data/asset-versions.json`. Lepas ubah

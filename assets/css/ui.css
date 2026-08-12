@@ -1735,14 +1735,16 @@ body.sparkle-panel-open .audio-notice-sheet {
 #zym-ig-topbar {
   position: absolute; top: 0; left: 0; right: 0; z-index: 5;
   padding: calc(10px + env(safe-area-inset-top, 0px)) 14px 46px;
-  /* Pekat SEPENUHNYA (bukan lutsinar) drpd 0%-30% — versi awal
+  /* Pekat SEPENUHNYA (bukan lutsinar) drpd 0%-18% — versi awal
      (0.68 alpha drpd 0%) biar warna cerah imej sumber (latar
      "kertas lama" krim) tembus, nampak spt jalur putih/pudar tak
-     kemas di bawah OS status bar. Kekal legap lagi lama (0-30%)
-     sebelum reda ke lutsinar (100%) drpd cerminkan corak scrim
-     cerita IG/status WhatsApp sebenar (header sentiasa jelas
-     dibaca atas latar gelap solid, bukan separuh lutsinar). */
-  background: linear-gradient(to bottom, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.92) 30%, rgba(0,0,0,0.55) 65%, transparent 100%);
+     kemas di bawah OS status bar. TAPI percubaan pertama (0.92 kekal
+     sehingga 30%) dilaporkan pengguna terlalu gelap & "mengganggu"
+     (sebahagian teks imej di bawahnya jadi keruh) — dikurangkan ke
+     0.72 puncak & tempoh legap dipendekkan (18% drpd 30%), cukup
+     utk kekalkan header kita jelas dibaca tanpa jadi blok hitam
+     berat. */
+  background: linear-gradient(to bottom, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.72) 18%, rgba(0,0,0,0.32) 55%, transparent 100%);
   pointer-events: none;
 }
 #zym-ig-topbar > * { pointer-events: auto; }
@@ -1775,12 +1777,6 @@ body.sparkle-panel-open .audio-notice-sheet {
   font-family: Fredoka, sans-serif; font-size: 0.92rem; font-weight: 600;
   color: #f1f5f9; flex: 1; min-width: 0;
   overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
-}
-#zym-ig-counter {
-  font-family: var(--font-sans, "Nunito", sans-serif);
-  font-size: 0.78rem; font-weight: 700; font-variant-numeric: tabular-nums;
-  color: #e2e8f0; flex-shrink: 0;
   text-shadow: 0 1px 4px rgba(0,0,0,0.5);
 }
 #zym-ig-actions { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
