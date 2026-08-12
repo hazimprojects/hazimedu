@@ -2769,11 +2769,31 @@ disclaimer beretika kandungan janaan AI.**
    `#zym-ig-dashes`: N `<span class="zym-ig-dash">` nipis gaya
    "segmented progress bar" cerita IG, `.is-active`/`.is-passed`
    dikemas kini dlm `updateNav()` ikut slaid semasa). Navigasi
-   tetikus (guru projektor tanpa skrin sentuh) kini via
-   `.zym-ig-tap-zone-prev/next` (30% tepi kiri/kanan imej, invisible,
-   `scrollBy()` SAMA logik) — corak "ketik tepi imej" gantikan butang
-   panah kekal, padan cerita IG/status WhatsApp sebenar (bukan cuma
-   swipe/kekunci panah).
+   tetikus (guru projektor tanpa skrin sentuh) — ketik 30% tepi
+   kiri/kanan imej, corak "ketik tepi imej" cerita IG/status WhatsApp
+   sebenar (bukan cuma swipe/kekunci panah).
+
+   **AWAS — JANGAN laksanakan zon ketik ni sbg elemen `<div>`
+   berasingan position:absolute BERLAPIS DI ATAS `#zym-ig-track`.**
+   Percubaan PERTAMA (`.zym-ig-tap-zone-prev/next`, `z-index:2`, 30%
+   lebar tepi) PECAHKAN swipe tepi kiri/kanan sepenuhnya — dilaporkan
+   pengguna "swipe tak berfungsi bila diseret dari hujung skrin, cuma
+   bahagian tengah boleh". Punca: div overlay tu "menelan" gerak
+   isyarat SENTUH SEBELUM sampai ke `#zym-ig-track` (scroll-snap
+   sebenar) di bawahnya — walau `pointer-events`/`preventDefault`
+   TAK disentuh langsung, kewujudan elemen SIBLING yg dilapis di atas
+   (bukan CHILD track) sudah cukup jadi TARGET touch pertama pd 30%
+   kawasan tu, & elemen tu sendiri tiada `overflow-x`/scroll-snap
+   (bukan keturunan track), jadi touch drag di situ MATI (tiada
+   scroll native berlaku, cuma tap/click SAHAJA yg didaftar). **Fix
+   (kekal)**: buang elemen `.zym-ig-tap-zone` terus, gantikan dgn
+   SATU listener `click` terus pd `#zym-ig-track` sendiri (`e.clientX`
+   dikira relatif drpd `track.getBoundingClientRect()`, <30% =
+   prev, >70% = next). Klik TERUS pd track/imej (bukan elemen berlapis
+   berasingan) TAK berlanggar dgn swipe — pelayar sendiri TAK
+   lepaskan event `click` bila gerakan touch/tetikus melebihi ambang
+   dalaman (drag ≠ tap), jadi track kekal 100% scroll-snap-kan
+   sepanjang lebarnya sambil TETAP dpt klik/tap kiri-kanan.
 3. **Logo ZymNotes rasmi pd header** — `#zym-ig-logo` guna
    `/icons/icon.svg` SEDIA ADA (badge gradien "ZN", sama aset persis
    dipakai pd `.app-logo-icon` header laman biasa) — SELF-HOSTED, tak
@@ -2793,9 +2813,12 @@ Disahkan via Playwright: `meta[theme-color]` betul `#ffffff`(sebelum)
 →`#000000`(terbuka)→`#ffffff`(tutup, mod cerah default), 10 dash
 wujud dgn `.is-active` betul pd slaid 1, `#zym-ig-prev`/`#zym-ig-next`
 disahkan SIFAR (dibuang penuh drpd DOM), logo & disclaimer wujud &
-teks tepat, klik `.zym-ig-tap-zone-next` majukan carousel (kiraan
+teks tepat, klik pd 30% kanan `#zym-ig-track` majukan carousel (kiraan
 2/10) & kemas kini dash (`.is-passed` pd dash 1, `.is-active` pd dash
-2) dgn betul.
+2) dgn betul — & lepas fix zon-ketik (rujuk AWAS atas), gerak isyarat
+sentuh SEBENAR (CDP `Input.dispatchTouchEvent`, BUKAN klik) drpd tepi
+KIRI (x=20) & tepi KANAN (x=370, viewport 390px) kedua-duanya
+disahkan majukan/mundurkan `track.scrollLeft` dgn betul.
 
 ## Aliran Kerja Versioning Aset (WAJIB lepas ubah CSS/JS/sw.js)
 
