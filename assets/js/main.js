@@ -2947,8 +2947,6 @@ var HZ_INFOGRAPHIC_PAGES = {
       var n = slides.length;
       var cw = track.clientWidth || 1;
       var idx = Math.min(n - 1, Math.max(0, Math.round(track.scrollLeft / cw)));
-      var counter = document.getElementById('zym-ig-counter');
-      if (counter) counter.textContent = (idx + 1) + ' / ' + n;
       var dashes = overlay.querySelectorAll('.zym-ig-dash');
       for (var i = 0; i < dashes.length; i++) {
         dashes[i].classList.toggle('is-active', i === idx);
@@ -3009,10 +3007,6 @@ var HZ_INFOGRAPHIC_PAGES = {
           '<div id="zym-ig-header-row">',
             '<img id="zym-ig-logo" src="/icons/icon.svg?v=6" alt="" width="26" height="26">',
             '<div id="zym-ig-title">' + data.title + '</div>',
-            '<div id="zym-ig-counter">1 / ' + data.slides.length + '</div>',
-            '<div id="zym-ig-actions">',
-              '<button type="button" id="zym-ig-close-btn" aria-label="Tutup">✕</button>',
-            '</div>',
           '</div>',
         '</div>',
         '<div id="zym-ig-viewport">',
@@ -3050,8 +3044,6 @@ var HZ_INFOGRAPHIC_PAGES = {
           track.scrollBy({ left: (track.clientWidth || 0), behavior: 'smooth' });
         }
       });
-
-      document.getElementById('zym-ig-close-btn').addEventListener('click', closeOverlay);
 
       overlay.addEventListener('click', function (e) {
         if (e.target === overlay) closeOverlay();
@@ -7177,7 +7169,8 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     return (
       document.querySelector('.hz-search-overlay.is-open') ||
       document.body.classList.contains('mindmap-open') ||
-      document.body.classList.contains('sparkle-panel-open')
+      document.body.classList.contains('sparkle-panel-open') ||
+      document.querySelector('#zym-infographic-overlay.is-open')
     );
   }
 
@@ -8048,7 +8041,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=593').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=594').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
