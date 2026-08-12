@@ -3063,6 +3063,16 @@ var HZ_INFOGRAPHIC_PAGES = {
       updateNav();
       history.pushState({ zymInfographicPreview: 1 }, '', window.location.href);
       historyActive = true;
+
+      // Denyut kecil anak panah prev/next SEBENTAR sahaja (petunjuk
+      // swipeability bila carousel baru dibuka) — anak panah sentiasa
+      // tersembunyi (opacity:0/pointer-events:none) selain tempoh ni,
+      // rujuk CSS `.zym-ig-hint-pulse`. Buang kelas lepas animasi
+      // (1.6s) tamat supaya butang kembali tak-boleh-klik.
+      overlay.classList.remove('zym-ig-hint-pulse');
+      void overlay.offsetWidth; // paksa reflow supaya animasi re-trigger tiap kali dibuka
+      overlay.classList.add('zym-ig-hint-pulse');
+      setTimeout(function () { overlay.classList.remove('zym-ig-hint-pulse'); }, 1700);
     }
 
     fab.addEventListener('click', openOverlay);
@@ -8010,7 +8020,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=587').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=588').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
