@@ -2558,9 +2558,29 @@ urutan paste dlm chat) & padan dgn struktur `data-cv-title`/
 **TIADA precache `sw.js`** (sengaja, sama corak drpd audio naratif
 `.mp3` yg turut tak dipracache) — imej ni "berat, per-halaman, opt-in"
 (pelajar/guru yg tak pernah buka galeri tak patut tanggung muat turun
-~1.9MB percuma). Peraturan sedia ada `sw.js` "Same-origin non-document
-GET: cache-first" SUDAH cukup — imej automatik ter-cache lepas kali
-PERTAMA dibuka (online), tersedia offline lepas tu.
+~1.9MB percuma). Imej automatik ter-cache lepas kali PERTAMA dibuka
+(online), tersedia offline lepas tu.
+
+**AWAS — imej infografik guna cache TERSENDIRI (`MEDIA_CACHE = 'zym-
+media-v1'` dlm `sw.js`), BUKAN cache app-shell biasa (`CACHE`)** — isu
+skala ditemui 2026-08-12: `activate()` `sw.js` padam SEMUA cache lama
+tiap kali `CACHE` naik versi (berlaku SETIAP PR ubah CSS/JS, kerap).
+Kalau imej infografik dicache di bawah `CACHE` biasa (asalnya guna
+peraturan generik "Same-origin non-document GET: cache-first"), pelajar
+yg dah buka galeri terpaksa muat turun SEMULA ~2MB stiap kali app-shell
+dikemas kini — defeat tujuan cache offline. Fix: laluan
+`/assets/infographics/` dilayan cabang berasingan dlm fetch handler,
+simpan ke `MEDIA_CACHE` yg DIKECUALIKAN drpd senarai padam `activate()`.
+Match kena EXACT URL (bukan `{ ignoreSearch: true }` spt cache-first
+assets lain) — tiada wipe automatik di sini utk paksa versi baharu,
+jadi cache-busting kandungan imej individu bergantung SEPENUHNYA pd
+`?v=<imgVersion>` (rujuk atas) mencipta entri URL baharu, bukan padam
+entri lama. Naikkan nombor `zym-media-v1` → `v2` MANUAL hanya kalau
+STRATEGI caching sendiri berubah — JANGAN naikkan bila kandungan imej
+bertukar (tu kerja `imgVersion`). **Bila tambah jenis media "berat,
+per-halaman, opt-in" baharu (cth. video, audio besar), guna corak
+MEDIA_CACHE ni drpd awal** — jangan letak di bawah `CACHE` app-shell yg
+di-wipe kerap.
 
 **Overlay dibina LEWAT** (`buildOverlay()`, hanya bila FAB diklik kali
 PERTAMA — bukan semasa `DOMContentLoaded`) — slaid pertama `loading=
