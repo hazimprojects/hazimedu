@@ -2911,6 +2911,70 @@ terus, bukan lepas JS render) utk kedua-dua `bab-1-1`/`bab-1-2`, klik
 kad teaser disahkan buka `#zym-infographic-overlay.is-open` SAMA persis
 drpd FAB. `scripts/seo-audit.py` (117 halaman) kekal lulus.
 
+## FAB Suka — akses pantas reaksi "Suka" (2026-08-14)
+
+**Isu**: butang "Suka!" boleh-klik SEBENAR cuma wujud dlm widget
+`.nota-feedback` di HUJUNG halaman subtopik (rujuk IIFE "Nota Feedback
+Widget", `main.js`) — pengguna perlu skrol jauh utk bertindak balas,
+walau bar statistik ringkas `.nota-stat-bar` (paparan sahaja, TAK boleh
+klik) dah muncul dekat atas lepas `.lead`. Pengguna laporkan ni jejaskan
+"first impression".
+
+**Fix**: FAB baharu (`.note-suka-fab-wrap`/`.note-suka-fab`, IIFE
+`setupSukaFab()` dlm `main.js`, lepas IIFE `setupInfographicGallery()`)
+bagi akses SATU-KLIK segera. **Skop v1 (disahkan pengguna): "Suka" ❤️
+SAHAJA** — 3 reaksi opinion lain (Mudah difahami/Boleh diperbaiki/Kurang
+jelas) KEKAL di widget bawah sahaja, sbb perlukan pelajar dah BACA &
+fikir dulu (tak sesuai jadi FAB satu-klik).
+
+**Kedudukan — ikut penjuru FAB sparkle SEMASA** (SAMA corak `sync()`
+FAB galeri: pantau `.note-sparkle-wrap` via MutationObserver, BUKAN
+gandingan terus — kekal falsafah "IIFE berasingan" §"Infografik
+Galeri"). **Kalau FAB galeri turut wujud pd halaman ni** (cth.
+`bab-1-1`/`bab-1-2`), FAB Suka susun SATU TINGKAT LEBIH JAUH (translateY
+tambahan ±58px desktop/±54px mobile, dikesan drpd wujud
+`.note-gallery-fab-wrap` semasa — BUKAN dikodkan keras per-halaman)
+supaya 3 FAB (Suka/Galeri/Sparkle) tersusun kemas TANPA bertindih.
+
+**SATU sumber kebenaran storan** — guna SEMULA
+`ZymStore.getSukaGiven/saveFeedback/clearSuka` sedia ada (BUKAN storan
+berasingan). **Penyegerakan 2-hala merentas 3 lokasi** (FAB, widget
+bawah, `.nota-stat-bar` atas) guna event custom `document.dispatchEvent
+(new CustomEvent('zym-suka-changed', {detail:{path}}))` — disiar
+SETIAP kali state berubah drpd MANA-MANA lokasi, ketiga-tiga lokasi
+dengar & baca semula `ZymStore` (bukan kongsi closure/variable terus
+rentas IIFE, kekal falsafah decoupling sedia ada). **Kalau tambah
+lokasi UI baharu utk reaksi Suka pd masa depan, ikut corak event ni**
+drpd cuba panggil fungsi IIFE lain terus (tak boleh — skop tertutup).
+
+**Panggilan RPC Supabase disalin kecil** (`submitSukaRpc`/`deleteSukaRpc`
+dlm IIFE FAB) drpd cuba kongsi terus dgn `submitFeedback`/
+`deleteSukaFromSupabase` dlm IIFE widget bawah (skop LOKAL kedua-dua,
+tak boleh diakses rentas IIFE) — ikut disiplin sedia ada fail ni (rujuk
+`fetchReactionCounts`/`fetchPdfDownloadCount` yg turut buat salinan
+kecil serupa drpd cuba abstrak fungsi kongsi).
+
+**Hati melayang bila TAMBAH Suka** (bukan bila buang) — 3 emoji ❤️
+literal (bukan imej CDN, elak permintaan rangkaian tambahan) disemai
+di kedudukan FAB, animasi CSS `@keyframes zym-heart-float` (translate
+naik + fade out + jitter mendatar rawak via `--hx`), dibuang JS lepas
+~1.2s. Murni hiasan (`aria-hidden`, `pointer-events:none`).
+
+**Skop TAK termasuk (buat masa ini, disengajakan)**: akses reaksi Suka
+DALAM carousel galeri fullscreen sendiri — pengguna cadangkan asalnya
+tapi keputusan skop v1 kekal "FAB sahaja". Boleh tambah kemudian sbg
+susulan (rujuk sejarah perbualan) — kalau buat, ikut corak event
+`zym-suka-changed` sedia ada, JANGAN gandingan terus dgn IIFE galeri.
+
+Disahkan via Playwright: FAB muncul & posisi betul pd halaman TANPA
+galeri (`bab-1-3`) & DGN galeri (`bab-1-1`, tersusun tanpa bertindih,
+disahkan `bounding_box()` tiada overlap menegak), klik FAB spawn 3
+hati melayang & tukar `ZymStore.getSukaGiven` ke `true`, keadaan
+disahkan sync KEDUA-DUA arah (klik FAB → widget bawah `is-active` ikut
+sama; klik widget bawah → FAB `is-active` ikut sama), FAB yield betul
+bila menu sparkle dibuka (translateY berubah). `scripts/seo-audit.py`
+(117 halaman) lulus.
+
 ## Sambung Membaca — kad "teruskan baca" pd laman utama (2026-08-12)
 
 Laman utama (`index.html`) sebelum ni **100% statik** (sama utk semua
