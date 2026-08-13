@@ -2421,18 +2421,23 @@ var HZ_INFOGRAPHIC_PAGES = {
     // WAJIB naik supaya peranti yg dah pernah buka galeri terima
     // kandungan baharu. TAK perlu naik kalau cuma TAMBAH slaid baharu
     // (URL fail baharu automatik "baharu" di cache, tiada konflik).
-    imgVersion: 2,
+    // v3 (2026-08-13): gaya ilustrasi baharu (latar rata + tipografi
+    // headline besar, gantikan gaya painterly asal sepenuhnya) — rujuk
+    // PR "Gantikan galeri infografik bab-1-1 dgn gaya ilustrasi baharu".
+    // Slaid 2 kini "Empat Perkara Utama" (pratonton 4 Bahagian, BUKAN
+    // "Soalan Utama" asal — kandungan soalan utama digabung ke slaid 1).
+    imgVersion: 3,
     slides: [
-      { file: '01-pengenalan.webp', alt: 'Muka hadapan: Sejarah Tingkatan 4, Bab 1 Warisan Negara Bangsa — 1.1 Latar Belakang Negara Bangsa Sebelum Kedatangan Barat' },
-      { file: '02-soalan-utama.webp', alt: 'Soalan Utama: Adakah konsep negara bangsa hanya wujud selepas kedatangan Barat? Jawapan: Tidak, asas negara bangsa telah wujud lebih awal di Alam Melayu' },
-      { file: '03-proses-pembentukan.webp', alt: 'Proses Pembentukan Negara Bangsa dalam tiga tahap: komuniti teratur awal, pentadbiran semakin kukuh, kerajaan berdaulat dan berpengaruh' },
+      { file: '01-pengenalan.webp', alt: 'Muka hadapan: Sejarah Tingkatan 4, Bab 1 Warisan Negara Bangsa — Latar Belakang Negara Bangsa Sebelum Kedatangan Barat. Soalan Utama: Adakah konsep negara bangsa hanya wujud selepas kedatangan Barat? Jawapan: Tidak, asas negara bangsa telah berkembang melalui kemunculan kerajaan yang kuat dan berpengaruh' },
+      { file: '02-empat-perkara-utama.webp', alt: 'Empat Perkara Utama: Proses Pembentukan Negara Bangsa, Kehebatan Kerajaan Alam Melayu, Empat Unsur Utama Negara Bangsa, Kesinambungan Negara Bangsa di Alam Melayu' },
+      { file: '03-proses-pembentukan.webp', alt: 'Proses Pembentukan Negara Bangsa Secara Berperingkat: berlaku secara berperingkat, mengambil masa yang panjang, mengikut keperluan zaman' },
       { file: '04-kehebatan-kerajaan.webp', alt: 'Peta Kehebatan Kerajaan Alam Melayu: Kedah Tua, Funan, Champa, Angkor, Srivijaya, Gangga Nagara, Majapahit — diwarisi Kesultanan Melayu Melaka dan Johor Riau' },
-      { file: '05-empat-unsur.webp', alt: 'Empat Unsur Negara Bangsa: Raja, Undang-undang, Wilayah Pengaruh, Rakyat' },
-      { file: '06-raja-undang-undang.webp', alt: 'Raja dan Undang-undang sebagai dua unsur penting negara bangsa, dengan contoh Raja Champa dan undang-undang Kutara Manawa Majapahit' },
+      { file: '05-empat-unsur.webp', alt: 'Empat Unsur Utama Negara Bangsa: Raja, Undang-undang, Wilayah Pengaruh, Rakyat' },
+      { file: '06-raja-undang-undang.webp', alt: 'Raja dan Undang-undang sebagai dua unsur penting negara bangsa, dengan contoh Raja Champa dianggap suci dan undang-undang Kutara Manawa Majapahit' },
       { file: '07-wilayah-rakyat.webp', alt: 'Wilayah Pengaruh dan Rakyat sebagai dua unsur yang melengkapkan negara bangsa, dengan contoh Funan dan Srivijaya' },
-      { file: '08-inskripsi-telaga-batu.webp', alt: 'Inskripsi Telaga Batu: proses upacara persetiaan — air dituang ke atas inskripsi, mengalir melalui corong, ditadah, dan diminum rakyat sebagai tanda kesetiaan' },
+      { file: '08-inskripsi-telaga-batu.webp', alt: 'Inskripsi Telaga Batu: proses upacara persetiaan — air dituang ke atas inskripsi, mengalir melalui corong, ditadah, dan diminum rakyat sebagai tanda kesetiaan kepada pemerintah' },
       { file: '09-kesinambungan.webp', alt: 'Kesinambungan Negara Bangsa di Alam Melayu: Funan dan Champa, Srivijaya, Kesultanan Melayu Melaka, Kesultanan Johor Riau' },
-      { file: '10-kesimpulan.webp', alt: 'Kesimpulan: Srivijaya, Kesultanan Melayu Melaka, dan Kesultanan Johor Riau membentuk kekuatan kerajaan di Alam Melayu' }
+      { file: '10-kesimpulan.webp', alt: 'Kesimpulan: asas negara bangsa telah wujud lebih awal di Alam Melayu — diperkukuh kerajaan Srivijaya, dikuatkan Kesultanan Melayu Melaka, diteruskan Kesultanan Johor Riau' }
     ]
   },
   'bab-1-2': {
