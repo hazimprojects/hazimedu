@@ -2521,13 +2521,28 @@ ralat JS pd keempat-empat jenis halaman.
 Ciri BAHARU (2026-08-11): kad infografik gaya carousel media sosial
 (imej cerita ilustrasi bergaya "Instagram carousel", diselang-selikan
 dgn kandungan teks nota sedia ada) — utk pelajar visual & guru
-membentang via projektor kelas. **Skop semasa: 2 subtopik (`bab-1-1`,
-`bab-1-2`), 10 slaid setiap satu** — `bab-1-2` (2026-08-12) mengesahkan
-corak `HZ_INFOGRAPHIC_PAGES` generalize bersih ke subtopik kedua tanpa
-ubah kod (cuma tambah satu entri data + fail WebP, sama proses persis
-drpd bab-1-1). Peluasan ke subtopik lain kekal kerja akan datang (perlu
-proses/mampatkan imej baharu tiap kali — rujuk langkah di bawah), BUKAN
-automatik drpd struktur ciri ni.
+membentang via projektor kelas. **Skop semasa: 1 subtopik (`bab-1-1`
+sahaja), 10 slaid**, gaya ilustrasi BAHARU (latar rata krim + tipografi
+headline besar + label penanda highlight, ilustrasi isometrik sbg
+elemen sokongan bukan latar penuh) — GANTIKAN gaya painterly/
+fotorealistik asal (2026-08-13). Mampat jauh lebih kecil drpd gaya lama
+(~115KB/slaid, ~1.15MB utk 10 slaid, BANDING ~150-230KB/slaid & ~2.2MB
+gaya lama — HAMPIR SEPARUH, sbb latar rata mampat lebih cekap drpd
+lukisan penuh detail).
+
+**AWAS — `bab-1-2` sengaja DIGUGURKAN buat masa ni (2026-08-13)**,
+BUKAN pepijat. Sempat dibina (2026-08-12) guna gaya painterly LAMA,
+mengesahkan corak `HZ_INFOGRAPHIC_PAGES` generalize bersih ke subtopik
+kedua tanpa ubah kod — tapi entri & 10 fail WebP kemudiannya DIBUANG
+sepenuhnya (bukan sekadar disembunyikan) supaya laman TAK ada 2 gaya
+ilustrasi bercampur (satu bab-1-1 gaya baharu, satu bab-1-2 gaya lama).
+**Nak aktifkan semula bab-1-2 (bila versi gaya baharu tersedia)**: (1)
+proses imej gaya BAHARU ke WebP (rujuk langkah di bawah), (2) tambah
+balik SATU entri `HZ_INFOGRAPHIC_PAGES['bab-1-2']` (rujuk git log utk
+struktur asal — commit "Tambah galeri infografik Bab 1.2..." &
+"Gugurkan galeri infografik bab-1-2..."). **Peluasan ke subtopik BAHARU
+mana-mana pun WAJIB guna gaya baharu ni (bukan gaya lama)** — elak ulang
+isu percampuran gaya yg baru diselesaikan ni.
 
 **AWAS — 2 GAYA ILUSTRASI berbeza wujud serentak merentas 2 subtopik ni
 (2026-08-13, DITERIMA sengaja buat masa ni)**: `bab-1-1` diganti
