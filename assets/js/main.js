@@ -2439,14 +2439,26 @@ var HZ_INFOGRAPHIC_PAGES = {
       { file: '09-kesinambungan.webp', alt: 'Kesinambungan Negara Bangsa di Alam Melayu: Funan dan Champa, Srivijaya, Kesultanan Melayu Melaka, Kesultanan Johor Riau' },
       { file: '10-kesimpulan.webp', alt: 'Kesimpulan: asas negara bangsa telah wujud lebih awal di Alam Melayu — diperkukuh kerajaan Srivijaya, dikuatkan Kesultanan Melayu Melaka, diteruskan Kesultanan Johor Riau' }
     ]
+  },
+  // 'bab-1-2' diaktifkan SEMULA (2026-08-13) guna gaya ilustrasi BAHARU
+  // (padan bab-1-1 persis) — sebelum ni digugurkan sementara krn cuma
+  // ada versi gaya lama. Rujuk CLAUDE.md §"Infografik Galeri".
+  'bab-1-2': {
+    title: '1.2 Ciri-ciri Negara Bangsa Kesultanan Melayu Melaka',
+    imgVersion: 1,
+    slides: [
+      { file: '01-pengenalan.webp', alt: 'Muka hadapan: Ciri-ciri Negara Bangsa Kesultanan Melayu Melaka. Kesultanan Melayu Melaka mempunyai sistem pemerintahan yang tersusun dan lengkap. Enam ciri utama membuktikan pembentukan negara bangsa yang kukuh sebelum kedatangan Barat' },
+      { file: '02-enam-ciri-utama.webp', alt: 'Enam Ciri Utama Negara Bangsa: Kerajaan, Rakyat, Kedaulatan, Wilayah Pengaruh, Undang-undang, Lambang Kebesaran — keenam-enam ciri ini membentuk negara bangsa yang kukuh di Kesultanan Melayu Melaka' },
+      { file: '03-kerajaan.webp', alt: 'Kerajaan: wujud kerana adanya raja sebagai pemerintah tertinggi, bergelar Sultan selepas kedatangan Islam. Sistem Pembesar Empat Lipatan — Sultan, Bendahara, Penghulu Bendahari, Temenggung, Laksamana — menjadi tonggak pentadbiran kerajaan' },
+      { file: '04-rakyat.webp', alt: 'Rakyat: memberi taat setia kepada Sultan dan mematuhi undang-undang — golongan pemerintah (Sultan dan Pembesar) dan golongan diperintah (Orang Melayu, Orang Laut, rakyat merdeka, hamba) dalam hubungan timbal balik' },
+      { file: '05-kedaulatan.webp', alt: 'Kedaulatan: lambang kekuasaan tertinggi Sultan — hak mutlak mengawal rakyat dan wilayah, bebas daripada campur tangan kuasa asing, diakui oleh Dinasti Ming melalui hubungan dengan China dan kedatangan Laksamana Cheng Ho' },
+      { file: '06-wilayah-pengaruh.webp', alt: 'Wilayah Pengaruh: kawasan yang menerima, mengakui dan mematuhi pemerintahan Sultan merangkumi Semenanjung Tanah Melayu dan pantai timur Sumatera' },
+      { file: '07-cara-peluasan-wilayah.webp', alt: 'Cara Peluasan Wilayah Pengaruh: wilayah taklukan (Pahang, Kuala Linggi, Kelantan, Rokan, Inderagiri, Kampar), wilayah naungan (Lingga, Patani, Kedah), wilayah melalui perkahwinan (Siantan — hadiah Kerajaan Majapahit kepada Sultan Mansur Shah)' },
+      { file: '08-undang-undang.webp', alt: 'Undang-undang: Kesultanan Melayu Melaka mempunyai dua undang-undang bertulis, Hukum Kanun Melaka dan Undang-undang Laut Melaka — mengukuhkan kerajaan, melindungi rakyat, memastikan pentadbiran berjalan lancar' },
+      { file: '09-lambang-kebesaran.webp', alt: 'Lambang Kebesaran: identiti dan keistimewaan Sultan — adat istiadat, warna diraja, nobat, regalia, cap mohor — melambangkan kedaulatan pemerintah dan keagungan kerajaan' },
+      { file: '10-kesimpulan.webp', alt: 'Kesimpulan: Kesultanan Melayu Melaka mempunyai ciri-ciri negara bangsa yang lengkap — Kerajaan, Rakyat, Kedaulatan, Wilayah Pengaruh, Undang-undang, Lambang Kebesaran — menjadi panduan kepada pembentukan negara bangsa Malaysia masa kini' }
+    ]
   }
-  // 'bab-1-2' sengaja DIGUGURKAN buat masa ni (2026-08-13) — galeri gaya
-  // lama (painterly) dibuang drpd senarai supaya FAB & carousel TAK
-  // muncul pd bab-1-2.html sehingga versi gaya baharu (padan bab-1-1)
-  // disediakan. Fail WebP asal turut dipadam (rujuk git log, bukan
-  // ditinggal sbg fail mati). Rujuk CLAUDE.md §"Infografik Galeri" utk
-  // sebab & langkah nak aktifkan semula (tambah balik SATU entri di
-  // sini + fail WebP baharu — TIADA tempat lain perlu disunting).
 };
 
 // =========================
