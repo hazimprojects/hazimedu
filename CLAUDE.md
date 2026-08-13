@@ -2544,6 +2544,22 @@ struktur asal — commit "Tambah galeri infografik Bab 1.2..." &
 mana-mana pun WAJIB guna gaya baharu ni (bukan gaya lama)** — elak ulang
 isu percampuran gaya yg baru diselesaikan ni.
 
+**AWAS — 2 GAYA ILUSTRASI berbeza wujud serentak merentas 2 subtopik ni
+(2026-08-13, DITERIMA sengaja buat masa ni)**: `bab-1-1` diganti
+sepenuhnya ke gaya BAHARU (latar rata krim + tipografi headline besar +
+label penanda highlight, ilustrasi isometrik sbg elemen sokongan bukan
+latar penuh) — GANTIKAN gaya asal (lukisan painterly/fotorealistik
+penuh skrin, teks terapung atas adegan). `bab-1-2` KEKAL gaya asal
+(painterly). Keputusan tukar gaya dibuat sbb gaya baharu lebih padan
+positioning produk ("Visual & Tersusun" — teks headline berdiri sendiri
+atas latar kosong, tak bersaing dgn adegan sibuk di belakang) DAN
+mampat jauh lebih kecil (~115KB/slaid, ~1.15MB utk 10 slaid — BANDING
+~150-230KB/slaid, ~2.2MB gaya lama, HAMPIR SEPARUH lebih kecil sbb latar
+rata mampat lebih cekap drpd lukisan penuh detail). **Kalau proses
+subtopik BAHARU akan datang, guna gaya BAHARU ni (bukan gaya lama) —
+`bab-1-2` patut turut diselaraskan ke gaya baharu bila versi tersedia,
+supaya seluruh laman akhirnya seragam SATU gaya.**
+
 **Keputusan reka bentuk (dibincang dgn pengguna dulu, rujuk sejarah
 perbualan)**: FAB BERASINGAN (bukan item dlm menu sparkle sedia ada,
 beza drpd corak "Muat turun PDF" §atas) — sbb ciri ni "bukan ciri
