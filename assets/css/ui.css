@@ -1725,7 +1725,14 @@ body.sparkle-panel-open .audio-notice-sheet {
   position: fixed;
   right: 14px; bottom: calc(18px + 4.25rem); left: auto; top: auto;
   z-index: var(--z-floating);
-  transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
+  opacity: 1;
+  transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.32s ease;
+}
+/* Lepas "Suka" diberi — FAB hilang perlahan (elak ganggu, undo tetap ada
+   di widget nota-feedback bawah). Rujuk syncVisual() dlm main.js. */
+.note-suka-fab-wrap.is-given {
+  opacity: 0;
+  pointer-events: none;
 }
 .note-suka-fab-wrap.fab-corner-br {
   right: 14px; bottom: calc(18px + 4.25rem); left: auto; top: auto;
