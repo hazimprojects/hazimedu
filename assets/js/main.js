@@ -2426,7 +2426,9 @@ var HZ_INFOGRAPHIC_PAGES = {
     // PR "Gantikan galeri infografik bab-1-1 dgn gaya ilustrasi baharu".
     // Slaid 2 kini "Empat Perkara Utama" (pratonton 4 Bahagian, BUKAN
     // "Soalan Utama" asal — kandungan soalan utama digabung ke slaid 1).
-    imgVersion: 3,
+    // v4 (2026-08-13): 08-inskripsi-telaga-batu.webp diganti dgn versi
+    // baharu drpd pengguna.
+    imgVersion: 4,
     slides: [
       { file: '01-pengenalan.webp', alt: 'Muka hadapan: Sejarah Tingkatan 4, Bab 1 Warisan Negara Bangsa — Latar Belakang Negara Bangsa Sebelum Kedatangan Barat. Soalan Utama: Adakah konsep negara bangsa hanya wujud selepas kedatangan Barat? Jawapan: Tidak, asas negara bangsa telah berkembang melalui kemunculan kerajaan yang kuat dan berpengaruh' },
       { file: '02-empat-perkara-utama.webp', alt: 'Empat Perkara Utama: Proses Pembentukan Negara Bangsa, Kehebatan Kerajaan Alam Melayu, Empat Unsur Utama Negara Bangsa, Kesinambungan Negara Bangsa di Alam Melayu' },
@@ -8122,7 +8124,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=601').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=602').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
