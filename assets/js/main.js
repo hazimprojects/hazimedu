@@ -3179,6 +3179,16 @@ var HZ_INFOGRAPHIC_PAGES = {
     }
 
     fab.addEventListener('click', openOverlay);
+
+    // Teaser SEO statik dlm HTML (rujuk CLAUDE.md §"Infografik Galeri")
+    // — buka overlay carousel SAMA bila diklik, sama macam FAB.
+    var seoTeaser = document.getElementById('zym-ig-seo-teaser');
+    if (seoTeaser) {
+      seoTeaser.addEventListener('click', function (e) {
+        e.preventDefault();
+        openOverlay();
+      });
+    }
   });
 })();
 
@@ -8124,7 +8134,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=602').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=603').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });

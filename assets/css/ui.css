@@ -1717,6 +1717,45 @@ body.sparkle-panel-open .audio-notice-sheet {
   .note-gallery-fab[data-tooltip]::before { display: none; }
 }
 
+/* ── Teaser infografik SEO — <img> STATIK dlm HTML (bukan suntik JS macam
+   carousel penuh), rujuk CLAUDE.md §"Infografik Galeri". Tujuan: imej cover
+   berwatermark ni jadi satu-satunya bahagian infografik yg wujud dlm HTML
+   awal halaman (Googlebot execute JS tapi TAK simulasi klik pengguna, jadi
+   overlay carousel yg dibina lewat via buildOverlay() tak pernah dicrawl).
+   Klik terus buka overlay penuh yg sama (rujuk main.js). ── */
+.note-infographic-teaser {
+  display: block;
+  border-radius: 18px;
+  overflow: hidden;
+  text-decoration: none;
+  margin: 0 0 1.1rem;
+  border: 1px solid var(--page-surface-border, rgba(15, 23, 42, 0.1));
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.1);
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.note-infographic-teaser:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.14);
+}
+.note-infographic-teaser img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.note-infographic-teaser-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.62rem 1rem;
+  font-family: var(--font-sans, "Nunito", sans-serif);
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, #4f46e5 0%, #6366f1 45%, #4338ca 100%);
+}
+
 /* ── Carousel overlay — skrin PENUH sebenar (gaya cerita IG/status
    WhatsApp): imej isi seluruh viewport tepi-ke-tepi, topbar+kawalan
    TERAPUNG (position:absolute, latar gradien lutsinar) DI ATAS imej,
