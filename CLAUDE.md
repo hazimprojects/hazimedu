@@ -2854,6 +2854,53 @@ sentuh SEBENAR (CDP `Input.dispatchTouchEvent`, BUKAN klik) drpd tepi
 KIRI (x=20) & tepi KANAN (x=370, viewport 390px) kedua-duanya
 disahkan majukan/mundurkan `track.scrollLeft` dgn betul.
 
+## Teaser SEO Infografik — `<img>` STATIK berwatermark utk Google Image (2026-08-13)
+
+**Isu ditemui**: carousel galeri (§atas) 100% JS-injected — `buildOverlay()`
+HANYA dipanggil bila FAB diklik (`openOverlay()`), jadi elemen `<img>`
+slaid TIADA LANGSUNG dlm HTML halaman kecuali pengguna sebenar klik.
+Googlebot execute JS semasa crawl tapi TAK simulasi klik pengguna, jadi
+kesemua 10 slaid setiap galeri kekal TAK PERNAH diindeks Google Image
+walau `alt` text ditulis rapi — disahkan via `curl`/fetch mentah HTML
+(tiada laluan `assets/infographics/` langsung dlm sumber).
+
+**Fix**: satu `<img>` STATIK (slaid 1/cover sahaja, BUKAN 10-10) diletak
+terus dlm HTML setiap halaman yg ada entri `HZ_INFOGRAPHIC_PAGES` —
+`<a class="note-infographic-teaser" id="zym-ig-seo-teaser">` dgn `<img>`
++ label CTA "Lihat infografik penuh", diletak dlm `note-section` PERTAMA
+lepas hero (sblm pemain audio). Klik disambungkan semula ke
+`openOverlay()` SEDIA ADA (`main.js`, dlm `setupInfographicGallery()`
+lepas `fab.addEventListener`) — cari `#zym-ig-seo-teaser`, kalau wujud
+lampirkan listener yg buka carousel penuh SAMA macam FAB, `href` jatuh
+balik ke laluan imej terus (bukan `#`) sekiranya JS gagal.
+
+**AWAS — imej teaser BERWATERMARK, BERBEZA drpd slaid 1 dlm galeri
+sendiri** (`assets/infographics/<slug>/seo-thumbnail.webp`, fail
+BERASINGAN drpd `01-pengenalan.webp`) — logo "ZN" (`icons/icon-512.png`)
++ teks "zymnotes.com" diletak dlm JALUR FOOTER KHAS ditambah DI BAWAH
+imej asal (kanvas baharu, tinggi asal + ~11% lebar), BUKAN overlay atas
+kandungan asal. **Sebab jalur berasingan (bukan overlay atas imej)**:
+percubaan pertama overlay lutsinar di penjuru bawah-kanan menutupi teks
+sebenar pd sesetengah kandungan (footer band bab-1-2 sampai hujung
+bawah, tiada margin kosong konsisten merentas semua cover) — jalur
+footer khas jamin TIADA overlap walau reka letak cover berbeza-beza.
+Cuma imej COVER sahaja (bukan semua 10 slaid) diwatermark — cukup utk
+tujuan SEO/pengecaman jenama tanpa proses 10× kerja tiap subtopik.
+
+**Skrip janaan** (bukan automatik, jalan manual tiap kali cover baharu/
+diganti): rujuk corak dlm sejarah PR "Tambah teaser SEO infografik" —
+`Image.new('RGB', (w, h+strip_h), (250,247,238))`, tampal imej asal di
+`(0,0)`, logo + teks Liberation Sans Bold (`/usr/share/fonts/truetype/
+liberation/`) dicantum tengah dlm jalur bawah. **Bila cover subtopik
+digantikan** (rujuk §"Infografik Galeri" atas, disiplin `imgVersion`),
+`seo-thumbnail.webp` WAJIB turut dijana semula drpd cover baharu — janji
+`<img>` statik dlm HTML kekal segerak dgn slaid 1 galeri sebenar.
+
+Disahkan via Playwright: `<img>` disahkan wujud dlm HTML MENTAH (fetch
+terus, bukan lepas JS render) utk kedua-dua `bab-1-1`/`bab-1-2`, klik
+kad teaser disahkan buka `#zym-infographic-overlay.is-open` SAMA persis
+drpd FAB. `scripts/seo-audit.py` (117 halaman) kekal lulus.
+
 ## Sambung Membaca — kad "teruskan baca" pd laman utama (2026-08-12)
 
 Laman utama (`index.html`) sebelum ni **100% statik** (sama utk semua

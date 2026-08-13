@@ -3179,6 +3179,16 @@ var HZ_INFOGRAPHIC_PAGES = {
     }
 
     fab.addEventListener('click', openOverlay);
+
+    // Teaser SEO statik dlm HTML (rujuk CLAUDE.md §"Infografik Galeri")
+    // — buka overlay carousel SAMA bila diklik, sama macam FAB.
+    var seoTeaser = document.getElementById('zym-ig-seo-teaser');
+    if (seoTeaser) {
+      seoTeaser.addEventListener('click', function (e) {
+        e.preventDefault();
+        openOverlay();
+      });
+    }
   });
 })();
 
