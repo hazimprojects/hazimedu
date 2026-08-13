@@ -2521,44 +2521,24 @@ ralat JS pd keempat-empat jenis halaman.
 Ciri BAHARU (2026-08-11): kad infografik gaya carousel media sosial
 (imej cerita ilustrasi bergaya "Instagram carousel", diselang-selikan
 dgn kandungan teks nota sedia ada) — utk pelajar visual & guru
-membentang via projektor kelas. **Skop semasa: 1 subtopik (`bab-1-1`
-sahaja), 10 slaid**, gaya ilustrasi BAHARU (latar rata krim + tipografi
-headline besar + label penanda highlight, ilustrasi isometrik sbg
-elemen sokongan bukan latar penuh) — GANTIKAN gaya painterly/
-fotorealistik asal (2026-08-13). Mampat jauh lebih kecil drpd gaya lama
-(~115KB/slaid, ~1.15MB utk 10 slaid, BANDING ~150-230KB/slaid & ~2.2MB
-gaya lama — HAMPIR SEPARUH, sbb latar rata mampat lebih cekap drpd
-lukisan penuh detail).
+membentang via projektor kelas. **Skop semasa: 2 subtopik (`bab-1-1`,
+`bab-1-2`), 10 slaid setiap satu, KEDUA-DUA guna SATU gaya ilustrasi
+seragam** (latar rata krim + tipografi headline besar + label penanda
+highlight, ilustrasi isometrik sbg elemen sokongan bukan latar penuh).
 
-**AWAS — `bab-1-2` sengaja DIGUGURKAN buat masa ni (2026-08-13)**,
-BUKAN pepijat. Sempat dibina (2026-08-12) guna gaya painterly LAMA,
-mengesahkan corak `HZ_INFOGRAPHIC_PAGES` generalize bersih ke subtopik
-kedua tanpa ubah kod — tapi entri & 10 fail WebP kemudiannya DIBUANG
-sepenuhnya (bukan sekadar disembunyikan) supaya laman TAK ada 2 gaya
-ilustrasi bercampur (satu bab-1-1 gaya baharu, satu bab-1-2 gaya lama).
-**Nak aktifkan semula bab-1-2 (bila versi gaya baharu tersedia)**: (1)
-proses imej gaya BAHARU ke WebP (rujuk langkah di bawah), (2) tambah
-balik SATU entri `HZ_INFOGRAPHIC_PAGES['bab-1-2']` (rujuk git log utk
-struktur asal — commit "Tambah galeri infografik Bab 1.2..." &
-"Gugurkan galeri infografik bab-1-2..."). **Peluasan ke subtopik BAHARU
-mana-mana pun WAJIB guna gaya baharu ni (bukan gaya lama)** — elak ulang
-isu percampuran gaya yg baru diselesaikan ni.
-
-**AWAS — 2 GAYA ILUSTRASI berbeza wujud serentak merentas 2 subtopik ni
-(2026-08-13, DITERIMA sengaja buat masa ni)**: `bab-1-1` diganti
-sepenuhnya ke gaya BAHARU (latar rata krim + tipografi headline besar +
-label penanda highlight, ilustrasi isometrik sbg elemen sokongan bukan
-latar penuh) — GANTIKAN gaya asal (lukisan painterly/fotorealistik
-penuh skrin, teks terapung atas adegan). `bab-1-2` KEKAL gaya asal
-(painterly). Keputusan tukar gaya dibuat sbb gaya baharu lebih padan
-positioning produk ("Visual & Tersusun" — teks headline berdiri sendiri
-atas latar kosong, tak bersaing dgn adegan sibuk di belakang) DAN
-mampat jauh lebih kecil (~115KB/slaid, ~1.15MB utk 10 slaid — BANDING
-~150-230KB/slaid, ~2.2MB gaya lama, HAMPIR SEPARUH lebih kecil sbb latar
-rata mampat lebih cekap drpd lukisan penuh detail). **Kalau proses
-subtopik BAHARU akan datang, guna gaya BAHARU ni (bukan gaya lama) —
-`bab-1-2` patut turut diselaraskan ke gaya baharu bila versi tersedia,
-supaya seluruh laman akhirnya seragam SATU gaya.**
+**Sejarah ringkas gaya (kekal sbg rujukan, bukan keadaan semasa)**:
+`bab-1-1` dibina 2026-08-11 guna gaya painterly/fotorealistik asal,
+`bab-1-2` menyusul 2026-08-12 gaya sama (mengesahkan corak
+`HZ_INFOGRAPHIC_PAGES` generalize bersih ke subtopik kedua tanpa ubah
+kod). 2026-08-13: `bab-1-1` diganti ke gaya BAHARU ni; `bab-1-2` mula-
+mula DIGUGURKAN sementara (elak 2 gaya bercampur, entri+fail WebP lama
+dibuang sepenuhnya) sehingga versi gaya baharu bab-1-2 disediakan &
+diaktifkan semula hari yg sama — laman kini seragam SATU gaya merentas
+kedua-dua subtopik. Gaya baharu mampat jauh lebih kecil drpd gaya lama
+(~100-130KB/slaid, ~1.1MB utk 10 slaid, BANDING ~150-230KB/slaid &
+~2.2MB gaya lama — hampir separuh, sbb latar rata mampat lebih cekap
+drpd lukisan penuh detail). **Peluasan ke subtopik BAHARU mana-mana pun
+WAJIB guna gaya baharu ni** — jangan ulang gaya painterly lama.
 
 **Keputusan reka bentuk (dibincang dgn pengguna dulu, rujuk sejarah
 perbualan)**: FAB BERASINGAN (bukan item dlm menu sparkle sedia ada,
