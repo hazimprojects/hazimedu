@@ -3200,6 +3200,150 @@ var HZ_INFOGRAPHIC_PAGES = {
   });
 })();
 
+// ── FAB Suka — akses pantas reaksi "Suka" (2026-08-14) ───────────────────────
+// Sebelum ni butang "Suka!" sebenar cuma wujud dlm widget nota-feedback di
+// HUJUNG halaman (rujuk IIFE "Nota Feedback Widget" di bawah) — pengguna
+// perlu skrol jauh utk bertindak balas, walau bar statistik ringkas
+// (`.nota-stat-bar`, hanya PAPARAN, bukan boleh klik) dah muncul dekat atas.
+// FAB ni beri akses SATU-KLIK segera, ikut kedudukan penjuru FAB sparkle
+// SEMASA (sama corak `sync()` FAB galeri di atas — pantau
+// `.note-sparkle-wrap` via MutationObserver, BUKAN gandingan terus). Kalau
+// FAB galeri turut wujud pd halaman ni, FAB Suka susun SATU tingkat lagi ke
+// luar (jarak tetap ~58px/54px ikut breakpoint) supaya tak bertindih —
+// dikesan drpd wujud `.note-gallery-fab-wrap` semasa, bukan dikodkan keras.
+// Guna SEMULA ZymStore.getSukaGiven/saveFeedback/clearSuka sedia ada (SATU
+// sumber kebenaran storan) supaya keadaan kekal segerak dgn widget bawah —
+// event `zym-suka-changed` disiarkan/didengar KEDUA-DUA arah (rujuk IIFE
+// "Nota Feedback Widget" di bawah utk sisi satu lagi).
+(function setupSukaFab() {
+  document.addEventListener('DOMContentLoaded', function () {
+    var pathname = window.location.pathname;
+    if (!hzZymnotesIsSubtopicNotePathname(pathname)) return;
+    if (!window.ZymStore) return;
+
+    var SUKA_FAB_ICON = 'https://img.icons8.com/?size=100&id=5twNojKL5zU7&format=png&color=000000';
+
+    var wrap = document.createElement('div');
+    wrap.className = 'note-suka-fab-wrap';
+
+    var fab = document.createElement('button');
+    fab.type = 'button';
+    fab.className = 'note-suka-fab';
+    fab.setAttribute('aria-label', 'Suka nota ini');
+    fab.setAttribute('data-tooltip', 'Suka');
+    fab.innerHTML = '<img src="' + SUKA_FAB_ICON + '" alt="" width="25" height="25" loading="lazy">';
+    wrap.appendChild(fab);
+    document.body.appendChild(wrap);
+
+    function applyActiveState() {
+      fab.classList.toggle('is-active', ZymStore.getSukaGiven(pathname));
+    }
+    applyActiveState();
+
+    // ── Ikut penjuru FAB sparkle (sama corak drpd FAB galeri) + susun satu
+    // tingkat lebih jauh drpd FAB galeri kalau ia turut wujud. ──
+    (function () {
+      var sparkleWrap = document.querySelector('.note-sparkle-wrap');
+      if (!sparkleWrap) return;
+      var galleryWrap = document.querySelector('.note-gallery-fab-wrap');
+
+      function sync() {
+        var m2 = sparkleWrap.className.match(/fab-corner-(br|bl|tr|tl)/);
+        var isTop;
+        if (m2) {
+          ['br', 'bl', 'tr', 'tl'].forEach(function (cc) { wrap.classList.remove('fab-corner-' + cc); });
+          wrap.classList.add('fab-corner-' + m2[1]);
+          isTop = m2[1].charAt(0) === 't';
+        } else {
+          isTop = wrap.classList.contains('fab-corner-tr') || wrap.classList.contains('fab-corner-tl');
+        }
+
+        var stackExtra = 0;
+        if (galleryWrap) {
+          stackExtra = window.matchMedia('(max-width: 640px)').matches ? 54 : 58;
+        }
+        var baseShift = isTop ? stackExtra : -stackExtra;
+
+        if (sparkleWrap.classList.contains('is-open')) {
+          var itemsEl = sparkleWrap.querySelector('.note-sparkle-items');
+          var openShift = (itemsEl ? itemsEl.offsetHeight : 0) + 14;
+          wrap.style.transform = 'translateY(' + (baseShift + (isTop ? openShift : -openShift)) + 'px)';
+        } else {
+          wrap.style.transform = baseShift ? 'translateY(' + baseShift + 'px)' : '';
+        }
+      }
+
+      sync();
+      new MutationObserver(sync).observe(sparkleWrap, { attributes: true, attributeFilter: ['class'] });
+      window.addEventListener('resize', sync);
+    })();
+
+    // ── Hati melayang bila "Suka" ditambah (bukan bila dibuang) — gaya
+    // cerita media sosial, murni hiasan (aria-hidden, tiada pointer-events). ──
+    function spawnFloatingHearts(originEl) {
+      var rect = originEl.getBoundingClientRect();
+      var count = 3;
+      for (var i = 0; i < count; i++) {
+        (function (i) {
+          var heart = document.createElement('span');
+          heart.className = 'zym-float-heart';
+          heart.textContent = '❤️';
+          heart.setAttribute('aria-hidden', 'true');
+          heart.style.left = (rect.left + rect.width / 2) + 'px';
+          heart.style.top = (rect.top + rect.height * 0.3) + 'px';
+          heart.style.setProperty('--hx', (Math.random() * 44 - 22) + 'px');
+          heart.style.animationDelay = (i * 90) + 'ms';
+          document.body.appendChild(heart);
+          setTimeout(function () { heart.remove(); }, 1300 + i * 90);
+        })(i);
+      }
+    }
+
+    // ── RPC Supabase — cermin drpd IIFE "Nota Feedback Widget" (submitFeedback/
+    // deleteSukaFromSupabase di sana skop LOKAL, tak boleh diguna semula terus
+    // — salin kecil ni sengaja, ikut disiplin sedia ada fail ni: setiap ciri
+    // simpan salinan kecil RPC sendiri drpd cuba kongsi rentas IIFE). ──
+    function submitSukaRpc() {
+      if (!NOTA_FB_SUPABASE_URL || !NOTA_FB_SUPABASE_KEY) return Promise.resolve(null);
+      return fetch(NOTA_FB_SUPABASE_URL + '/rest/v1/rpc/submit_nota_feedback', {
+        method: 'POST',
+        headers: { 'apikey': NOTA_FB_SUPABASE_KEY, 'Authorization': 'Bearer ' + NOTA_FB_SUPABASE_KEY, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ p_path: pathname, p_reaction: 'suka', p_secret: ZymStore.getUserSecret() })
+      }).then(function (r) { return r && r.ok ? r.json() : null; }).catch(function () { return null; });
+    }
+    function deleteSukaRpc(id) {
+      if (!id || !NOTA_FB_SUPABASE_URL || !NOTA_FB_SUPABASE_KEY) return;
+      fetch(NOTA_FB_SUPABASE_URL + '/rest/v1/rpc/delete_nota_feedback_entries', {
+        method: 'POST',
+        headers: { 'apikey': NOTA_FB_SUPABASE_KEY, 'Authorization': 'Bearer ' + NOTA_FB_SUPABASE_KEY, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ p_ids: [id], p_secret: ZymStore.getUserSecret() })
+      }).catch(function () {});
+    }
+
+    fab.addEventListener('click', function () {
+      var given = ZymStore.getSukaGiven(pathname);
+      if (given) {
+        var id = ZymStore.getSukaId(pathname);
+        ZymStore.clearSuka(pathname);
+        deleteSukaRpc(id);
+      } else {
+        if (typeof gtag === 'function') gtag('event', 'nota_reaction', { reaction: 'suka', page_path: pathname });
+        ZymStore.saveFeedback(pathname, 'suka', null);
+        spawnFloatingHearts(fab);
+        submitSukaRpc().then(function (supId) {
+          if (supId) ZymStore.saveFeedback(pathname, 'suka', supId);
+        });
+      }
+      applyActiveState();
+      document.dispatchEvent(new CustomEvent('zym-suka-changed', { detail: { path: pathname } }));
+    });
+
+    document.addEventListener('zym-suka-changed', function (ev) {
+      if (ev.detail && ev.detail.path === pathname) applyActiveState();
+    });
+  });
+})();
+
 // =========================
 // MINDMAP NAVIGATION OVERLAY
 // =========================
@@ -3786,8 +3930,18 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
         });
       }
       renderSuka();
+      document.dispatchEvent(new CustomEvent('zym-suka-changed', { detail: { path: pathname } }));
     });
   }
+  // FAB Suka (rujuk IIFE "FAB Suka" atas) turut boleh ubah keadaan "Suka" —
+  // baca semula ZymStore (sumber kebenaran tunggal) & render ulang widget ni
+  // bila perubahan datang drpd luar (bukan drpd klik butang widget ni sendiri).
+  document.addEventListener('zym-suka-changed', function (ev) {
+    if (!ev.detail || ev.detail.path !== pathname) return;
+    sukaState.given = ZymStore.getSukaGiven(pathname);
+    sukaState.id = ZymStore.getSukaId(pathname);
+    renderSuka();
+  });
   renderSuka();
 
   // ── Opinion section ───────────────────────────────
@@ -6880,6 +7034,10 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     if (!ev || !ev.detail || ev.detail.path !== pathname) return;
     mountNotaStatBar();
   });
+  document.addEventListener('zym-suka-changed', function (ev) {
+    if (!ev || !ev.detail || ev.detail.path !== pathname) return;
+    mountNotaStatBar();
+  });
 })();
 
 // ── Brand Logo Injection ───────────────────────────────────────────────────────
@@ -8142,7 +8300,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=606').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=607').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
