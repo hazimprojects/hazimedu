@@ -2445,7 +2445,10 @@ var HZ_INFOGRAPHIC_PAGES = {
   // ada versi gaya lama. Rujuk CLAUDE.md §"Infografik Galeri".
   'bab-1-2': {
     title: '1.2 Ciri-ciri Negara Bangsa Kesultanan Melayu Melaka',
-    imgVersion: 1,
+    // v2 (2026-08-13): 05-kedaulatan.webp diganti dgn versi baharu drpd
+    // pengguna — naikkan imgVersion WAJIB bila kandungan fail sedia ada
+    // bertukar (rujuk CLAUDE.md §"Infografik Galeri").
+    imgVersion: 2,
     slides: [
       { file: '01-pengenalan.webp', alt: 'Muka hadapan: Ciri-ciri Negara Bangsa Kesultanan Melayu Melaka. Kesultanan Melayu Melaka mempunyai sistem pemerintahan yang tersusun dan lengkap. Enam ciri utama membuktikan pembentukan negara bangsa yang kukuh sebelum kedatangan Barat' },
       { file: '02-enam-ciri-utama.webp', alt: 'Enam Ciri Utama Negara Bangsa: Kerajaan, Rakyat, Kedaulatan, Wilayah Pengaruh, Undang-undang, Lambang Kebesaran — keenam-enam ciri ini membentuk negara bangsa yang kukuh di Kesultanan Melayu Melaka' },
