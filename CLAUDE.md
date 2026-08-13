@@ -2966,13 +2966,33 @@ tapi keputusan skop v1 kekal "FAB sahaja". Boleh tambah kemudian sbg
 susulan (rujuk sejarah perbualan) — kalau buat, ikut corak event
 `zym-suka-changed` sedia ada, JANGAN gandingan terus dgn IIFE galeri.
 
+**AWAS — FAB HILANG PERLAHAN lepas "Suka" diberi** (susulan maklum
+balas pengguna: kekal kelihatan lepas diklik dilaporkan "mengganggu").
+`syncVisual(immediate)` dlm `setupSukaFab()` urus DUA laluan berbeza —
+(1) **muat kali PERTAMA halaman** (`immediate=true`): kalau rekod dah
+"suka" drpd sesi lalu, FAB terus `opacity:0` SEBELUM cat pertama,
+TIADA kelip kelihatan-lalu-hilang; (2) **tukar SEMASA sesi ni**
+(`immediate=false`, klik FAB atau klik widget bawah): FAB kekal
+kelihatan 700ms dulu (beri ruang animasi hati melayang habis) SEBELUM
+`opacity` beralih ke 0 via CSS transition — `hideTimer` (var closure)
+disahkan clear sblm jadual baharu, elak timer bertindih kalau
+`syncVisual()` dipanggil berulang pantas (cth. klik sendiri turut
+picu event `zym-suka-changed` yg dengar balik pd IIFE sama). **Undo
+(klik "Suka!" di widget bawah) buat FAB MUNCUL SEMULA serta-merta**
+(bukan kekal tersembunyi) — keadaan FAB sentiasa cerminkan "bolehkah
+bagi reaksi ni SEKARANG", bukan "adakah pernah diklik".
+
 Disahkan via Playwright: FAB muncul & posisi betul pd halaman TANPA
 galeri (`bab-1-3`) & DGN galeri (`bab-1-1`, tersusun tanpa bertindih,
 disahkan `bounding_box()` tiada overlap menegak), klik FAB spawn 3
 hati melayang & tukar `ZymStore.getSukaGiven` ke `true`, keadaan
 disahkan sync KEDUA-DUA arah (klik FAB → widget bawah `is-active` ikut
 sama; klik widget bawah → FAB `is-active` ikut sama), FAB yield betul
-bila menu sparkle dibuka (translateY berubah). `scripts/seo-audit.py`
+bila menu sparkle dibuka (translateY berubah). Susulan (hilang
+perlahan): disahkan FAB KEKAL kelihatan 200ms lepas klik (animasi
+hati sempat nampak), `opacity` jatuh ke ~0 lepas ~900ms, undo drpd
+widget bawah pulihkan `opacity` ke 1 serta-merta, & muat semula halaman
+dgn rekod "suka" sedia ada terus `opacity:0` (tiada kelip). `scripts/seo-audit.py`
 (117 halaman) lulus.
 
 ## Sambung Membaca — kad "teruskan baca" pd laman utama (2026-08-12)

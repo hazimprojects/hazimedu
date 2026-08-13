@@ -3235,10 +3235,29 @@ var HZ_INFOGRAPHIC_PAGES = {
     wrap.appendChild(fab);
     document.body.appendChild(wrap);
 
-    function applyActiveState() {
-      fab.classList.toggle('is-active', ZymStore.getSukaGiven(pathname));
+    // Lepas "Suka" diberi, FAB hilang perlahan (elak ganggu — pengguna dah
+    // sahkan reaksi, undo tetap ada di widget nota-feedback bawah). Muat
+    // kali PERTAMA (dah pernah suka sblm ni) sembunyi TERUS (tiada kelip
+    // kelihatan-lalu-hilang); tukar SEMASA sesi ni (klik FAB, atau widget
+    // bawah) sembunyi/muncul BERLAHAN (delay 700ms, beri ruang animasi hati
+    // melayang habis dulu sblm FAB sendiri hilang).
+    var hideTimer = null;
+    function syncVisual(immediate) {
+      var given = ZymStore.getSukaGiven(pathname);
+      fab.classList.toggle('is-active', given);
+      if (hideTimer) { clearTimeout(hideTimer); hideTimer = null; }
+      if (!given) {
+        wrap.classList.remove('is-given');
+      } else if (immediate) {
+        wrap.classList.add('is-given');
+      } else {
+        hideTimer = setTimeout(function () {
+          wrap.classList.add('is-given');
+          hideTimer = null;
+        }, 700);
+      }
     }
-    applyActiveState();
+    syncVisual(true);
 
     // ── Ikut penjuru FAB sparkle (sama corak drpd FAB galeri) + susun satu
     // tingkat lebih jauh drpd FAB galeri kalau ia turut wujud. ──
@@ -3334,12 +3353,12 @@ var HZ_INFOGRAPHIC_PAGES = {
           if (supId) ZymStore.saveFeedback(pathname, 'suka', supId);
         });
       }
-      applyActiveState();
+      syncVisual(false);
       document.dispatchEvent(new CustomEvent('zym-suka-changed', { detail: { path: pathname } }));
     });
 
     document.addEventListener('zym-suka-changed', function (ev) {
-      if (ev.detail && ev.detail.path === pathname) applyActiveState();
+      if (ev.detail && ev.detail.path === pathname) syncVisual(false);
     });
   });
 })();
