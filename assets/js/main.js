@@ -2450,7 +2450,10 @@ var HZ_INFOGRAPHIC_PAGES = {
     // v2 (2026-08-13): 05-kedaulatan.webp diganti dgn versi baharu drpd
     // pengguna — naikkan imgVersion WAJIB bila kandungan fail sedia ada
     // bertukar (rujuk CLAUDE.md §"Infografik Galeri").
-    imgVersion: 2,
+    // v3 (2026-08-13): 01-pengenalan.webp, 08-undang-undang.webp,
+    // 10-kesimpulan.webp diganti dgn versi baharu drpd pengguna — cover
+    // (01) bertukar jadi seo-thumbnail.webp turut dijana semula.
+    imgVersion: 3,
     slides: [
       { file: '01-pengenalan.webp', alt: 'Muka hadapan: Ciri-ciri Negara Bangsa Kesultanan Melayu Melaka. Kesultanan Melayu Melaka mempunyai sistem pemerintahan yang tersusun dan lengkap. Enam ciri utama membuktikan pembentukan negara bangsa yang kukuh sebelum kedatangan Barat' },
       { file: '02-enam-ciri-utama.webp', alt: 'Enam Ciri Utama Negara Bangsa: Kerajaan, Rakyat, Kedaulatan, Wilayah Pengaruh, Undang-undang, Lambang Kebesaran — keenam-enam ciri ini membentuk negara bangsa yang kukuh di Kesultanan Melayu Melaka' },
@@ -8134,7 +8137,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=603').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=604').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
