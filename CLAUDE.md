@@ -2896,6 +2896,16 @@ digantikan** (rujuk §"Infografik Galeri" atas, disiplin `imgVersion`),
 `seo-thumbnail.webp` WAJIB turut dijana semula drpd cover baharu — janji
 `<img>` statik dlm HTML kekal segerak dgn slaid 1 galeri sebenar.
 
+**AWAS — `<img src>`/`<a href>` teaser WAJIB ada `?v=<imgVersion>`
+(sama nilai drpd `HZ_INFOGRAPHIC_PAGES[slug].imgVersion` semasa)** — laluan
+`seo-thumbnail.webp` STATIK dlm HTML (bukan disuntik JS), jadi TIADA
+mekanisme automatik utk tambah query cache-bust macam slaid galeri
+(`buildOverlay()` lampirkan `?v=` sendiri). Tanpa `?v=` di sini, peranti
+yg dah cache URL tu (via `MEDIA_CACHE`, match EXACT URL) kekal papar
+kandungan LAMA selama-lamanya walau fail sumber dah diganti — lupa
+tambah/naikkan nombor ni ialah punca paling senang tersasar bila cover
+diganti kemudian.
+
 Disahkan via Playwright: `<img>` disahkan wujud dlm HTML MENTAH (fetch
 terus, bukan lepas JS render) utk kedua-dua `bab-1-1`/`bab-1-2`, klik
 kad teaser disahkan buka `#zym-infographic-overlay.is-open` SAMA persis
