@@ -441,6 +441,67 @@ mereka, berasingan drpd `MEDIA_CACHE` peranti) kekal papar cover LAMA.
 Disahkan: `python3 scripts/seo-audit.py` (117 halaman) kekal lulus lepas
 edit (skrip tu tak semak nilai `og:image` spesifik, cuma kewujudan tag).
 
+## Watermark menegak pd slaid carousel (2026-08-14)
+
+**Isu**: menu simpan-imej natif peranti (long-press pd `<img>` →
+"Download image"/"Share image"/"Copy image", cth. Android) ambil fail
+SUMBER `src` TERUS, langkau apa jua overlay CSS/JS — bermakna sesiapa
+boleh simpan/kongsi mana-mana drpd 10 slaid carousel setiap subtopik
+infografik TANPA identiti/asal-usul (`zymnotes.com`) langsung, walau
+teaser SEO (`seo-thumbnail.webp`, cover sahaja) dah ada watermark jalur
+footer sejak awal. **Elak muat turun terus TIDAK boleh dipercayai di
+web** (long-press/screenshot/devtools semua tembus sekatan JS/CSS —
+tak dicuba/dilaksanakan) — watermark dibakar terus ke piksel fail
+ialah satu-satunya lapisan realistik.
+
+**Fix**: `scripts/watermark-infographic-slides.py` (skrip BAHARU, Pillow)
+tampal watermark **menegak** kecil di **sudut kanan-bawah** SETIAP fail
+`NN-*.webp` dlm folder subtopik (`assets/infographics/<slug>/`) —
+`seo-thumbnail.webp` DILANGKAU eksplisit (fail tu dah ada watermark
+jalur footer sendiri, jangan tindih dua). Reka bentuk (disahkan visual
+via crop sudut + imej penuh, Playwright/PIL, sebelum proses fail
+sebenar):
+- Teks `"zymnotes.com"`, Liberation Sans Bold 20px, **rotate 90°**
+  (lawan jam — dibaca bawah-ke-atas, gaya "tulang buku" biasa).
+- **Fill putih + stroke hitam 2px** (BUKAN satu warna rata) — jamin
+  kontras/kebolehbacaan tak kira latar imej cerah/gelap di sudut tu,
+  sbb latar carousel berbeza-beza ikut ilustrasi (elak kerja semak
+  kontras manual setiap fail).
+- Opacity KESELURUHAN label ~55% (`140/255`, diterapkan pd alpha
+  channel label SEBELUM composite) — kelihatan tapi tak bersaing dgn
+  kandungan ilustrasi/teks sebenar.
+- Margin 18px drpd kedua-dua tepi kanan & bawah.
+
+**Skop**: SEMUA 20 slaid sedia ada (`bab-1-1` + `bab-1-2`, 10 setiap
+satu) diproses SEKALI GUS (bukan cuma piawai akan datang) — pengguna
+pilih via `AskUserQuestion` (2 soalan: gaya watermark [menegak sudut
+kanan-bawah dipilih, drpd alternatif logo-sahaja/dwi-sisi] & skop kerja
+[kedua-dua sedia ada+akan datang dipilih, drpd akan-datang-sahaja]).
+**Bila tambah subtopik infografik BAHARU** (§"Infografik Galeri" atas),
+jalankan skrip ni SEBAGAI LANGKAH TAMBAHAN (bukan automatik/build-time)
+SEBELUM daftar entri `HZ_INFOGRAPHIC_PAGES` — skrip ubah fail secara
+KEKAL (overwrite in-place, `quality=92` WebP), TIADA cara "buang
+watermark" lepas simpan selain jana semula drpd sumber asal.
+
+**AWAS — `imgVersion` WAJIB naik bila jalankan skrip ni pd fail sedia
+ada** (rujuk disiplin `imgVersion` §"Infografik Galeri" atas — sama
+keperluan drpd ganti kandungan cover) — `buildOverlay()` (`main.js`)
+auto-lampirkan `?v=<imgVersion>` pd SETIAP slaid carousel (`src="' +
+baseDir + s.file + '?v=' + imgVer`), jadi bump nombor tu SAHAJA (dlm
+komen `HZ_INFOGRAPHIC_PAGES[slug]`) sudah cukup cache-bust slaid — BEZA
+drpd teaser SEO statik (`<img>` mentah dlm HTML, perlukan sunting
+`?v=` manual berasingan, rujuk §"Kongsi Pautan" atas).
+
+Disahkan: crop sudut kanan-bawah + imej penuh (`10-kesimpulan.webp`
+bab-1-1, `09-lambang-kebesaran.webp` bab-1-2 — dipilih sbb latar gelap/
+padat teks berdekatan sudut, kes paling berisiko kontras) kekal jelas
+dibaca & tak bertindih kandungan; `git status` sahkan HANYA 20 slaid
+tersentuh (`seo-thumbnail.webp` KEDUA-DUA subtopik tak berubah);
+`python3 scripts/seo-audit.py` (117 halaman) kekal lulus; aliran kerja
+versioning (`scripts/bump-versions.py --files assets/js/main.js` +
+`scripts/sync-asset-versions.py`) dijalankan sbb `main.js` turut
+disunting (komen versi + `imgVersion`).
+
 ## FAB Suka — akses pantas reaksi "Suka" (2026-08-14)
 
 **Isu**: butang "Suka!" boleh-klik SEBENAR cuma wujud dlm widget

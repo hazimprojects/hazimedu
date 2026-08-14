@@ -904,6 +904,14 @@ FAB reaksi "Suka" — rujuk **`docs/infographic-gallery.md`** sebelum ubah
   naikkan `imgVersion`, WAJIB kemas kini 5 tag `og:image*`/
   `twitter:image*` di `<head>` halaman tu SERENTAK (dims sebenar
   `1376×919`, bukan `1200×630` OG piawai).
+- **SETIAP slaid carousel (bukan cuma `seo-thumbnail.webp`) WAJIB
+  watermark menegak** (`scripts/watermark-infographic-slides.py`, sudut
+  kanan-bawah, "zymnotes.com") — menu "Download image"/"Share image"
+  natif peranti ambil fail `src` TERUS, langkau overlay CSS/JS, jadi
+  watermark MESTI dibakar ke piksel. Jalankan skrip ni SEBELUM daftar
+  subtopik baharu ke `HZ_INFOGRAPHIC_PAGES`, & naikkan `imgVersion`
+  (cache-bust auto via `buildOverlay()`, TAK perlu sunting HTML manual
+  — beza drpd teaser SEO).
 
 Rekod penuh (evolusi gaya ilustrasi, kedudukan FAB, pengesahan Playwright):
 **`docs/infographic-gallery.md`**.
