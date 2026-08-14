@@ -502,6 +502,71 @@ versioning (`scripts/bump-versions.py --files assets/js/main.js` +
 `scripts/sync-asset-versions.py`) dijalankan sbb `main.js` turut
 disunting (komen versi + `imgVersion`).
 
+## Butang "Kongsi slaid ini" pd topbar carousel (2026-08-14)
+
+**Isu**: pengguna tanya patutkah galeri infografik ada butang share —
+sejajar dgn watermark slaid (§atas): sekarang kongsi slaid MEMANG baik
+utk jenama (bertera air), bukan risiko lagi, jadi buat ia senang
+dilakukan (1 ketik, bukan cuma via menu simpan-imej natif tersembunyi)
+ialah langkah semula jadi seterusnya. Disahkan dgn user (`AskUserQuestion`,
+2 soalan) — **share sahaja** (BUKAN butang tutup eksplisit, walau
+overlay ni turut tiada X — tutup kekal via tap luar/Escape/back
+pelayar, tak disentuh PR ni), & kongsi **imej slaid semasa** (bukan
+cuma pautan halaman — beza drpd butang "Kongsi Pautan" widget bawah
+sedia ada).
+
+**Fix**: `<button id="zym-ig-share-btn">` ditambah dlm `#zym-ig-header-
+row` (topbar), SELEPAS `#zym-ig-title` — bulatan lutsinar kecil (30px,
+`rgba(255,255,255,0.16)`) sama corak drpd `#zym-pdf-close-btn` (ikon pd
+scrim gelap). **Kekal di zon "chrome" topbar, TAK melekap atas
+ilustrasi** — sbb tu tak ganggu pengalaman tengok/baca (soalan asal
+pengguna) — sama falsafah drpd dash kemajuan & tajuk sedia ada yg turut
+duduk dlm jalur scrim atas, bukan terapung atas kandungan.
+
+**Logik share** (Web Share API level 2 diutamakan, kongsi FAIL IMEJ
+sebenar bukan cuma pautan):
+1. Kira indeks slaid SEMASA drpd `track.scrollLeft`/`clientWidth` —
+   FORMULA SAMA drpd `updateNav()` sedia ada (bukan simpan state
+   berasingan, elak dua sumber kebenaran boleh tak segerak).
+2. `fetch()` imej slaid semasa (self-hosted, same-origin — tiada isu
+   CORS), bina `File` drpd blob (nama `zymnotes-<nama-fail-slaid>`).
+3. `navigator.canShare({files:[file]})` true → `navigator.share({files,
+   title, text})` — sheet share OS asli dgn imej terlampir terus.
+4. `canShare` false (pelayar sokong share asas tapi bukan `files`) →
+   jatuh balik kpd `navigator.share({title, url})` (SAMA corak drpd
+   butang "Kongsi Pautan" sedia ada).
+5. `navigator.share` langsung xde, ATAU pengguna batal sheet (promise
+   `AbortError`), ATAU `fetch`/`File` gagal → SENYAP (tiada fallback
+   klipbod imej — kerumitan tambah drpd nilai, ciri ni sasaran utama
+   peranti sentuh mudah alih yg hampir semua sokong Web Share, rujuk
+   seluruh disiplin swipe-nav/touch-action fail ni).
+
+`e.stopPropagation()` pd klik butang — pertahanan tambahan (bukan wajib
+ketat, `overlay` punya listener klik-luar-tutup cuma semak `e.target
+=== overlay` yg takkan padan butang dlm topbar), tapi konsisten dgn
+disiplin `#zym-ig-topbar > * { pointer-events: auto; }` sedia ada
+(elemen interaktif topbar sengaja diasingkan drpd gelagat klik overlay
+am).
+
+**Ikon**: URL icons8 SAMA PERSIS drpd `KONGSI_SRC` (butang "Kongsi
+Pautan" widget bawah, IIFE BERASINGAN — skop tertutup, tak boleh rujuk
+terus, disalin sbg pemalar tempatan `IG_SHARE_ICON_SRC` dlm
+`setupInfographicGallery()`) — ikon icons8 hitam, dinyahwarna putih via
+`filter: brightness(0) invert(1)` (teknik SAMA drpd `.nota-feedback-
+kongsi-btn img`/`.nota-feedback-pdf-btn img` mod gelap, `keywords.css`
+tak berkaitan — rujuk `main.js`).
+
+Disahkan via Playwright (`bab-1-1.html`, viewport mudah alih 390px):
+mock `navigator.share`/`navigator.canShare` (headless chromium TIADA
+sheet OS sebenar) — navigasi ke slaid KE-2 (tap zon kanan) sebelum
+klik share, sahkan panggilan `share()` bawa `files[0].name =
+"zymnotes-02-empat-perkara-utama.webp"` (BUKAN slaid 1 — bukti indeks
+slaid semasa dikira betul, bukan sentiasa default slaid pertama),
+`type: "image/webp"`, saiz fail padan fail sumber sebenar. Sifar ralat
+JS. Kedudukan/saiz butang disahkan via tangkapan skrin (ikon sendiri
+tak render dlm sandbox — CDN icons8 disekat, had ujian sedia ada,
+BUKAN isu baharu — rujuk nota persekitaran ujian §"Lencana ikon" atas).
+
 ## FAB Suka — akses pantas reaksi "Suka" (2026-08-14)
 
 **Isu**: butang "Suka!" boleh-klik SEBENAR cuma wujud dlm widget

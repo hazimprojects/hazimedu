@@ -1927,6 +1927,23 @@ body.sparkle-panel-open .audio-notice-sheet {
   text-shadow: 0 1px 3px rgba(0,0,0,0.85), 0 1px 8px rgba(0,0,0,0.5);
 }
 
+/* Kongsi slaid semasa — bulatan lutsinar kecil, sama corak drpd
+   #zym-pdf-close-btn (ikon pd scrim gelap) — kekal di zon "chrome"
+   topbar, tak melekap atas ilustrasi supaya tak ganggu pengalaman
+   tengok/baca. */
+#zym-ig-share-btn {
+  flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%;
+  border: none; background: rgba(255,255,255,0.16); cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.14s, transform 0.14s;
+}
+#zym-ig-share-btn:hover { background: rgba(255,255,255,0.26); }
+#zym-ig-share-btn:active { transform: scale(0.92); }
+#zym-ig-share-btn img {
+  width: 16px; height: 16px; pointer-events: none;
+  filter: brightness(0) invert(1);
+}
+
 #zym-ig-viewport { position: absolute; inset: 0; }
 
 #zym-ig-track {
