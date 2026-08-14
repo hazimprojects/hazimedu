@@ -401,6 +401,46 @@ terus, bukan lepas JS render) utk kedua-dua `bab-1-1`/`bab-1-2`, klik
 kad teaser disahkan buka `#zym-infographic-overlay.is-open` SAMA persis
 drpd FAB. `scripts/seo-audit.py` (117 halaman) kekal lulus.
 
+## `og:image`/`twitter:image` guna teaser infografik pd halaman berkenaan (2026-08-14)
+
+**Sebelum ni SEMUA halaman `notes/*.html` (termasuk yg ADA infografik)
+guna SATU `og:image` generik sama** (`assets/og-image.png`, banner
+jenama umum) — bermakna bila pautan halaman dikongsi (butang "Kongsi
+Pautan", `navigator.share({title,url})` di `main.js`), preview yg
+terpapar dlm WhatsApp/Telegram/Facebook (semua unfurl guna tag
+`og:image`, BUKAN apa-apa yg `navigator.share` hantar — `share()` cuma
+kongsi title+url, gambar preview 100% ditentukan pihak penerima baca
+meta tag URL tu) sentiasa banner generik, tak kira halaman tu ada
+infografik menarik atau tidak.
+
+**Fix**: utk SETIAP halaman yg ada entri `HZ_INFOGRAPHIC_PAGES`
+(`main.js`), `og:image`/`og:image:url`/`og:image:secure_url`/
+`twitter:image`/`twitter:image:src` dlm `<head>` ditukar drpd
+`assets/og-image.png` kpd laluan `seo-thumbnail.webp` PENUH halaman tu
+sendiri (`https://zymnotes.com/assets/infographics/<slug>/seo-
+thumbnail.webp?v=<imgVersion>` — SAMA fail teaser SEO §atas, bukan aset
+baharu) + `og:image:type` → `image/webp` (drpd `image/png`) +
+`og:image:width`/`height` → `1376`/`919` (dimensi sebenar
+`seo-thumbnail.webp`, disahkan via `file` — BUKAN `1200`/`630` OG
+piawai, jgn salin nilai lama tanpa semak) + `og:image:alt` → salin teks
+`alt` `<img id="zym-ig-seo-teaser">` sedia ada pd halaman sama (dah
+ditulis khusus terangkan kandungan cover, bukan generik).
+
+**WAJIB tanya diri: halaman ni ADA entri `HZ_INFOGRAPHIC_PAGES`?**
+Kalau TIADA, `og:image` KEKAL `assets/og-image.png` generik — degradasi
+selamat, jgn cuba rujuk fail `seo-thumbnail.webp` yg tak wujud. Bila
+tambah subtopik BAHARU ke `HZ_INFOGRAPHIC_PAGES` (rujuk §"Infografik
+Galeri" atas), WAJIB turut kemas kini `og:image`/`twitter:image` 5 tag
+di atas SERENTAK — pattern ni TAK automatik, kena disunting tangan sama
+spt teaser `<img>` sendiri. **Bila `imgVersion` dinaikkan** (cover
+diganti), `?v=` dlm KELIMA-LIMA tag ni turut WAJIB naik sekali (SAMA
+nombor drpd `<img id="zym-ig-seo-teaser">`) — lupa langkah ni bermakna
+platform yg dah cache preview lama (WhatsApp/FB sendiri cache OG scrape
+mereka, berasingan drpd `MEDIA_CACHE` peranti) kekal papar cover LAMA.
+
+Disahkan: `python3 scripts/seo-audit.py` (117 halaman) kekal lulus lepas
+edit (skrip tu tak semak nilai `og:image` spesifik, cuma kewujudan tag).
+
 ## FAB Suka — akses pantas reaksi "Suka" (2026-08-14)
 
 **Isu**: butang "Suka!" boleh-klik SEBENAR cuma wujud dlm widget

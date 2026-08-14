@@ -896,6 +896,14 @@ FAB reaksi "Suka" — rujuk **`docs/infographic-gallery.md`** sebelum ubah
 - **FAB Suka**: satu sumber kebenaran `ZymStore`, sync 3 lokasi (FAB/
   widget bawah/stat bar) via event custom `zym-suka-changed` — JANGAN
   panggil fungsi IIFE lain terus (skop tertutup).
+- **`og:image`/`twitter:image` halaman berinfografik guna `seo-
+  thumbnail.webp` halaman tu sendiri** (bukan `assets/og-image.png`
+  generik) — supaya preview "Kongsi Pautan" (WhatsApp/Telegram/FB baca
+  tag OG, bukan `navigator.share()`) papar cover sebenar. **TAK
+  automatik** — bila tambah subtopik ke `HZ_INFOGRAPHIC_PAGES` atau
+  naikkan `imgVersion`, WAJIB kemas kini 5 tag `og:image*`/
+  `twitter:image*` di `<head>` halaman tu SERENTAK (dims sebenar
+  `1376×919`, bukan `1200×630` OG piawai).
 
 Rekod penuh (evolusi gaya ilustrasi, kedudukan FAB, pengesahan Playwright):
 **`docs/infographic-gallery.md`**.
