@@ -2074,6 +2074,22 @@ body.page-theme-notes.app-shell-page .nota-row:hover {
   border-color: rgba(129, 140, 248, 0.22);
 }
 
+/* Penanda subtopik yg kandungan penuhnya belum siap ditulis (rujuk
+   docs "Bab Baharu — Senarai Semak Scaffold", stub "Akan datang") —
+   neutral (bukan warna amaran/negatif), sekadar jujurkan jangkaan
+   pelajar SEBELUM klik masuk, bukan lencana ciri/kualiti. */
+.nota-badge-akan-datang {
+  background: rgba(100, 116, 139, 0.10);
+  color: #475569;
+  border: 1px solid rgba(100, 116, 139, 0.2);
+}
+
+[data-theme="dark"] .nota-badge-akan-datang {
+  background: rgba(148, 163, 184, 0.1);
+  color: #cbd5e1;
+  border-color: rgba(148, 163, 184, 0.22);
+}
+
 /* Chevron arrow */
 .nota-row-arrow {
   width: 14px;

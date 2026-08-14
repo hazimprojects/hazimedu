@@ -19,8 +19,13 @@ elak silap biasa, tapi bukan pengganti konteks penuh.
 ## Fokus Semasa
 
 **Kemas kini (2026-08-11): sekatan lama di bawah DIMANSUHKAN.** Kandungan
-sedia ada (Bab 1–10 Sejarah T4, sistem kuiz, eksport PDF, dll.) kini
-dianggap cukup stabil oleh pengguna. `docs/project-strengths-audit.md`
+sedia ada (Bab 1–9 penuh + hab Bab 10 Sejarah T4, sistem kuiz, eksport
+PDF, dll.) kini dianggap cukup stabil oleh pengguna. **AWAS — Bab 10
+subtopik (10.1–10.5) MASIH stub "Akan Datang"** (hab `bab-10.html`
+sahaja ada sinopsis sebenar) — jgn anggap "Bab 1–10" bermaksud SEMUA
+10 bab 100% siap, semak `notes/index.html`/`bab-10.html` utk lencana
+"Akan Datang" sebelum rujuk kandungan Bab 10 sbg contoh "stabil".
+`docs/project-strengths-audit.md`
 sebelum ni catat "cadangan ciri baharu ditutup sementara" — status tu
 tak lagi berkuat kuasa. Boleh cadang & bina ciri baharu (cth. gambar/
 peta sejarah bercerita — dibincang eksplisit, belum dilaksana lagi,
@@ -1016,7 +1021,15 @@ kalau terlepas. Guna senarai ni penuh, bukan sebahagian:
 2. **`notes/bab-N-1.html` … `bab-N-M.html`** — stub "Akan datang" utk
    tiap subtopik (rujuk sejarah git `bab-8-3.html` SEBELUM diisi, cth.
    `git show <commit-lama>:notes/bab-8-3.html`), nav Kembali/Seterusnya
-   penuh antara subtopik (termasuk hab).
+   penuh antara subtopik (termasuk hab). **WAJIB turut tambah lencana
+   `<span class="nota-badge nota-badge-akan-datang">Akan Datang</span>`
+   pd item subtopik berkaitan `notes/index.html` (dlm panel, BUKAN pd
+   "Bab Induk") DAN `<div class="bab-card-meta"><span class="bab-
+   status-badge">Akan Datang</span></div>` pd setiap `.bab-card` hab
+   `notes/bab-N.html`** — tanpa ni, subtopik stub kelihatan IDENTIK
+   drpd subtopik siap dlm senarai/hab (pelajar terkejut bila diklik).
+   Bila subtopik akhirnya diisi kandungan sebenar, BUANG lencana ni
+   drpd KEDUA-DUA tempat.
 3. **`notes/index.html`** — blok baris + panel `<div class="nota-row-
    item">...<div id="panel-bab-N">` (ikut corak bab sebelumnya), PLUS
    breadcrumb `JSON-LD` posisi seterusnya di hujung fail.
