@@ -1355,6 +1355,52 @@ Muat turun PDF sebenar TIDAK terjejas — `_pdfPageCanvases`/`_pdfDims`
 (dipakai `_savePdf()`) kekal imej kandungan MENTAH tanpa header/
 footer terbenam (elak lukis dua kali dlm fail PDF akhir).
 
+## Logo header PDF (2026-08-14)
+
+**Isu**: header PDF sebelum ni teks SAHAJA ("ZymNotes" bold, drpd
+`_pdfHeaderFooterParts().hdrL`) — tiada ikon/logo grafik. Pengguna
+tunjuk pratonton PDF & tanya patutkah tambah logo, sejajar dgn kerja
+identiti/jenama yg sama sesi (`og:image` guna teaser infografik,
+watermark menegak slaid carousel — rujuk `docs/infographic-gallery.md`)
+— PDF turut dimuat turun/dicetak/dikongsi berasingan drpd laman, logo
+grafik (bukan teks je) buat jenama lagi mudah dikenali pandang sekali
+lintas.
+
+**Fix**: logo `icons/icon-512.png` (PNG self-hosted — **BUKAN**
+`icon.svg` yg dipakai header laman hidup, elak SEPENUHNYA isu
+rasterisasi SVG html2canvas yg biasa menyusahkan bahagian lain PDF ni,
+rujuk §"enjin `html2canvas-pro`" atas) dimuat SEKALI di parse-time
+(`_pdfLogoImg` + `_pdfLogoDataUrl`, modul `main.js`) — imej kecil,
+byk masa utk load sblm pengguna sempat klik "Muat turun PDF" & tunggu
+html2canvas-pro/jsPDF. **Degradasi selamat**: kalau `_pdfLogoDataUrl`
+masih `null` (jarang — load gagal/belum sempat), header jatuh balik ke
+teks sahaja tanpa ralat (semak `if (_pdfLogoDataUrl)` sebelum lukis di
+KEDUA-DUA laluan).
+
+Logo dilukis SEBELUM teks "ZymNotes" pd sisi kiri header, teks beralih
+kanan (`hdrTextX`) ikut lebar logo — saiz/kedudukan (`PDF_LOGO_SIZE_MM`
+4.2mm, `PDF_LOGO_GAP_MM` 1.4mm, `PDF_LOGO_BASELINE_OFFSET_MM` 3.3mm,
+pemalar modul dikongsi) **DIKONGSI** antara KEDUA-DUA laluan lukis —
+`_pdfComposePreviewPage()` (canvas 2D, `ctx.drawImage(_pdfLogoImg,...)`,
+guna `Image` elemen terus) & `_savePdf()` (jsPDF, `pdf.addImage
+(_pdfLogoDataUrl, 'PNG', ...)`, guna dataURL PNG — ikut corak sedia ada
+`_pdfCanvasToJpegDataUrl` drpd fail yg sama, bukan hantar `Image`
+elemen terus ke jsPDF) — sama disiplin "SUMBER dikongsi, laluan lukis
+berbeza" drpd teks header/footer (`_pdfHeaderFooterParts`, §atas).
+Logo KEKAL warna penuh dlm mod "Jimat Dakwat" (dilukis SELEPAS
+`_pdfGrayscaleCanvas` diterapkan pd kandungan sahaja, sama gelagat
+drpd teks header — rujuk §"Mod Jimat Dakwat" atas).
+
+Disahkan via Playwright (suntik html2canvas-pro/jspdf tempatan,
+`bab-1-1.html`): (1) pratonton mod penuh — logo kelihatan jelas,
+sejajar menegak kemas dgn teks "ZymNotes", tak bertindih/tergendala;
+(2) laluan MUAT TURUN SEBENAR — `page.waitForEvent('download')` tangkap
+fail PDF sebenar, dibuka semula via PyMuPDF (`fitz`), crop header
+sahkan logo hadir & sejajar SAMA persis drpd pratonton (bukti KEDUA-DUA
+laluan lukis padan); (3) mod "Jimat Dakwat" — logo disahkan KEKAL warna
+asal (gradien ungu-biru) walau kandungan kelabu. Sifar ralat JS pd
+kesemua 3 senario.
+
 ## Sub-tajuk `.paper-strip.strip-sub` dlm accordion — pendua DIGUGURKAN (PDF & laman hidup)
 
 Pengguna lapor (tangkapan skrin pratonton PDF `bab-2-3.html`) item

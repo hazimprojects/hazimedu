@@ -4121,6 +4121,34 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   var _pdfActiveMode = 'full';
   var _pdfCache = { full: { pages: null, dims: null }, eco: { pages: null, dims: null } };
 
+  // Logo header PDF — dimuat SEKALI di parse-time (PNG self-hosted, sama fail
+  // drpd skrip watermark teaser SEO — BUKAN icon.svg yg dipakai header laman
+  // hidup, elak sepenuhnya isu rasterisasi SVG html2canvas, rujuk CLAUDE.md
+  // §"Eksport PDF"). Degradasi selamat: kalau imej gagal/belum load lagi bila
+  // PDF dijana (jarang — imej kecil, ada masa banyak semasa pengguna klik
+  // "Muat turun PDF" & tunggu html2canvas-pro/jsPDF muat), header PDF jatuh
+  // balik ke teks sahaja tanpa ralat (semak `_pdfLogoDataUrl` sebelum lukis).
+  // Saiz/kedudukan logo header DIKONGSI antara pratonton (canvas 2D,
+  // _pdfComposePreviewPage) & muat turun sebenar (jsPDF, _savePdf) — kekal
+  // SEGERAK bila ubah salah satu, spt disiplin sedia ada teks header/footer
+  // (_pdfHeaderFooterParts).
+  var PDF_LOGO_SIZE_MM = 4.2;
+  var PDF_LOGO_GAP_MM = 1.4;
+  var PDF_LOGO_BASELINE_OFFSET_MM = 3.3;
+
+  var _pdfLogoImg = new Image();
+  var _pdfLogoDataUrl = null;
+  _pdfLogoImg.onload = function () {
+    try {
+      var c = document.createElement('canvas');
+      c.width = _pdfLogoImg.naturalWidth;
+      c.height = _pdfLogoImg.naturalHeight;
+      c.getContext('2d').drawImage(_pdfLogoImg, 0, 0);
+      _pdfLogoDataUrl = c.toDataURL('image/png');
+    } catch (e) { _pdfLogoDataUrl = null; }
+  };
+  _pdfLogoImg.src = '/icons/icon-512.png';
+
   // Zoom SKOP-TERHAD kpd kandungan pratonton sahaja (#zym-pdf-pages), BUKAN
   // seluruh modal/halaman — punca aduan pengguna thd pinch-zoom native
   // sebelum ini (relaxed touch-action, rujuk sejarah PR): ia zoom SELURUH
@@ -6472,11 +6500,21 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     ctx.stroke();
 
     var hdrBaseline = mm(dims.mTop - 5);
+    var hdrTextX = mLeftPx;
+    // Logo kecil sebelum wordmark "ZymNotes" — rujuk CLAUDE.md §"Eksport
+    // PDF" (nota `_pdfLogoImg`) & _savePdf() di bawah (laluan jsPDF SAMA
+    // saiz/kedudukan, kongsi PDF_LOGO_SIZE_MM/PDF_LOGO_GAP_MM).
+    if (_pdfLogoDataUrl) {
+      var logoSizePx = mm(PDF_LOGO_SIZE_MM);
+      var logoYPx = hdrBaseline - mm(PDF_LOGO_BASELINE_OFFSET_MM);
+      ctx.drawImage(_pdfLogoImg, mLeftPx, logoYPx, logoSizePx, logoSizePx);
+      hdrTextX = mLeftPx + logoSizePx + mm(PDF_LOGO_GAP_MM);
+    }
     ctx.textBaseline = 'alphabetic';
     ctx.font = 'bold ' + ptPx(9) + 'px Arial, Helvetica, sans-serif';
     ctx.fillStyle = '#6060a0';
     ctx.textAlign = 'left';
-    ctx.fillText(parts.hdrL, mLeftPx, hdrBaseline);
+    ctx.fillText(parts.hdrL, hdrTextX, hdrBaseline);
 
     if (parts.hdrR) {
       ctx.font = ptPx(7) + 'px Arial, Helvetica, sans-serif';
@@ -6698,10 +6736,16 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       pdf.setDrawColor(212, 212, 232);
       pdf.setLineWidth(0.3);
       pdf.line(dims.mLeft, dims.mTop - 2, dims.pageW - dims.mRight, dims.mTop - 2);
+      var hdrTextX = dims.mLeft;
+      if (_pdfLogoDataUrl) {
+        var logoY = (dims.mTop - 5) - PDF_LOGO_BASELINE_OFFSET_MM;
+        pdf.addImage(_pdfLogoDataUrl, 'PNG', dims.mLeft, logoY, PDF_LOGO_SIZE_MM, PDF_LOGO_SIZE_MM);
+        hdrTextX = dims.mLeft + PDF_LOGO_SIZE_MM + PDF_LOGO_GAP_MM;
+      }
       pdf.setFont('helvetica', 'bold');
       pdf.setFontSize(9);
       pdf.setTextColor(96, 96, 160);
-      pdf.text(parts.hdrL, dims.mLeft, dims.mTop - 5);
+      pdf.text(parts.hdrL, hdrTextX, dims.mTop - 5);
       if (parts.hdrR) {
         pdf.setFont('helvetica', 'normal');
         pdf.setFontSize(7);
