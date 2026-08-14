@@ -623,6 +623,32 @@ versioning (`scripts/bump-versions.py --files assets/js/main.js` +
 `scripts/sync-asset-versions.py`) dijalankan sbb `main.js` turut
 disunting (komen versi + `imgVersion`).
 
+**Gaya putih+garis luar DIGANTIKAN — subtle/profesional (2026-08-14
+susulan)** — pengguna laporkan (tangkapan skrin) gaya asal (fill putih
++ stroke hitam 2px, opacity ~55%) nampak spt "sticker"/label kartun,
+bukan watermark profesional. Fix (`scripts/watermark-infographic-
+slides.py`): buang `stroke_width`/`stroke_fill` SEPENUHNYA, tukar fill
+kpd `(30,41,59)` (slate-800, neutral gelap) & turunkan opacity
+`140→100` (drpd 255, ~55%→~39%) — gaya "watermark stok foto" (teks rata
+lutsinar rendah, tiada garis luar tebal). **Selamat drpd risiko
+kontras** sbb latar sudut kanan-bawah SEMUA slaid korpus ni konsisten
+cerah/krim (gaya ilustrasi "latar rata krim" sengaja, bukan kebetulan)
+— disahkan kekal terbaca pd `10-kesimpulan.webp`/`09-lambang-
+kebesaran.webp` (kes kontras plg berisiko drpd audit asal).
+
+**AWAS — skrip ni `overwrite in-place`, TIADA salinan fail asal
+disimpan** (rujuk atas) — utk kemas kini gaya watermark PADA fail yg
+DAH bertera air (bukan fail bersih), TERAPKAN watermark BAHARU atas
+watermark LAMA akan hasilkan 2 lapisan bertindih (rosak). Fail asal
+(sebelum watermark PERTAMA) diperoleh SEMULA drpd sejarah git —
+`git show <commit-sebelum-PR-watermark>^:<laluan-fail>` (commit
+`1ac98b0^`, ibu bapa PR "Watermark menegak..." asal) — BUKAN cuba
+"kurangkan" watermark sedia ada scr matematik (tak boleh dipercayai,
+alpha blending tak boleh songsang tepat). **Pengajaran utk perubahan
+gaya watermark akan datang**: SENTIASA kekalkan/cari rujukan commit
+fail ASAL (pra-watermark) sebelum uji gaya baharu — jangan andaikan
+fail semasa dlm repo boleh jadi "titik mula" utk iterasi gaya.
+
 ## Butang "Kongsi slaid ini" pd topbar carousel (2026-08-14)
 
 **Isu**: pengguna tanya patutkah galeri infografik ada butang share —
@@ -669,13 +695,24 @@ disiplin `#zym-ig-topbar > * { pointer-events: auto; }` sedia ada
 (elemen interaktif topbar sengaja diasingkan drpd gelagat klik overlay
 am).
 
-**Ikon**: URL icons8 SAMA PERSIS drpd `KONGSI_SRC` (butang "Kongsi
-Pautan" widget bawah, IIFE BERASINGAN — skop tertutup, tak boleh rujuk
-terus, disalin sbg pemalar tempatan `IG_SHARE_ICON_SRC` dlm
-`setupInfographicGallery()`) — ikon icons8 hitam, dinyahwarna putih via
-`filter: brightness(0) invert(1)` (teknik SAMA drpd `.nota-feedback-
-kongsi-btn img`/`.nota-feedback-pdf-btn img` mod gelap, `keywords.css`
-tak berkaitan — rujuk `main.js`).
+**Ikon (2026-08-14, GANTIKAN versi asal di bawah)**: `<svg>` DALAMAN
+(bentuk "3 titik bersambung" piawai Android/Material — path SVG
+`M18 16.08c-.76 0...` disimpan sbg pemalar `IG_SHARE_ICON_SVG_PATH`
+dlm `setupInfographicGallery()`), **BUKAN** ikon icons8 pautan/rantai
+asal (§di bawah) — pengguna laporkan bentuk asal (nampak spt ikon
+"link"/rantai) kurang jelas maksud "share" berbanding bentuk nod
+bercabang piawai. Warna terus `fill:#fff` via CSS (`#zym-ig-share-btn
+svg`), TIADA lagi `filter: brightness(0) invert(1)` (teknik tu khusus
+utk `<img>` PNG icons8, tak relevan utk SVG). **Faedah SVG dalaman**:
+SIFAR pergantungan CDN luar utk ikon ni — elak terus isu sekatan
+proksi/rasterisasi yg biasa menyusahkan ikon CDN di codebase ni,
+warna/saiz 100% terkawal CSS.
+
+*(Versi asal, digantikan)*: URL icons8 SAMA PERSIS drpd `KONGSI_SRC`
+(butang "Kongsi Pautan" widget bawah) — ikon icons8 hitam, dinyahwarna
+putih via `filter: brightness(0) invert(1)` (teknik SAMA drpd
+`.nota-feedback-kongsi-btn img`/`.nota-feedback-pdf-btn img` mod
+gelap).
 
 Disahkan via Playwright (`bab-1-1.html`, viewport mudah alih 390px):
 mock `navigator.share`/`navigator.canShare` (headless chromium TIADA
@@ -684,9 +721,12 @@ klik share, sahkan panggilan `share()` bawa `files[0].name =
 "zymnotes-02-empat-perkara-utama.webp"` (BUKAN slaid 1 — bukti indeks
 slaid semasa dikira betul, bukan sentiasa default slaid pertama),
 `type: "image/webp"`, saiz fail padan fail sumber sebenar. Sifar ralat
-JS. Kedudukan/saiz butang disahkan via tangkapan skrin (ikon sendiri
-tak render dlm sandbox — CDN icons8 disekat, had ujian sedia ada,
-BUKAN isu baharu — rujuk nota persekitaran ujian §"Lencana ikon" atas).
+JS. **Ikon SVG dalaman (susulan 2026-08-14) disahkan render PENUH dlm
+tangkapan skrin sandbox** (bentuk "3 titik bersambung" jelas kelihatan
+zum masuk) — BEZA drpd ikon icons8 asal yg TAK boleh disahkan visual
+dlm sandbox (CDN disekat, rujuk nota persekitaran ujian §"Lencana
+ikon" atas); SVG dalaman elak SEPENUHNYA had ujian tu sbb tiada
+kebergantungan rangkaian langsung.
 
 ## Butang tutup (✕) — HANYA desktop (2026-08-14)
 

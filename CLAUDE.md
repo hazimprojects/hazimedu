@@ -905,7 +905,9 @@ FAB reaksi "Suka" — rujuk **`docs/infographic-gallery.md`** sebelum ubah
 - **Butang "Kongsi slaid ini" (`#zym-ig-share-btn`) kongsi IMEJ SLAID
   SEMASA** (Web Share API `files`, bukan cuma pautan) — kekal di zon
   "chrome" topbar (bukan atas ilustrasi), indeks slaid dikira SAMA
-  formula drpd `updateNav()` (jgn simpan state berasingan).
+  formula drpd `updateNav()` (jgn simpan state berasingan). Ikon `<svg>`
+  DALAMAN (3 titik bersambung, `IG_SHARE_ICON_SVG_PATH`) — BUKAN icons8
+  CDN, elak pergantungan rangkaian luar utk ikon ni sepenuhnya.
 - **Butang tutup (`#zym-ig-close-btn`) HANYA desktop** (`display:none`
   lalai, `@media (min-width: 1024px)` — sama corak `.hz-toc` Desktop
   Floating TOC) — mudah alih jimat ruang topbar, tutup kekal via
@@ -923,12 +925,16 @@ FAB reaksi "Suka" — rujuk **`docs/infographic-gallery.md`** sebelum ubah
   `scripts/generate-teaser-thumbnail.py` di bawah).
 - **SETIAP slaid carousel (bukan cuma `seo-thumbnail.webp`) WAJIB
   watermark menegak** (`scripts/watermark-infographic-slides.py`, sudut
-  kanan-bawah, "zymnotes.com") — menu "Download image"/"Share image"
-  natif peranti ambil fail `src` TERUS, langkau overlay CSS/JS, jadi
-  watermark MESTI dibakar ke piksel. Jalankan skrip ni SEBELUM daftar
-  subtopik baharu ke `HZ_INFOGRAPHIC_PAGES`, & naikkan `imgVersion`
-  (cache-bust auto via `buildOverlay()`, TAK perlu sunting HTML manual
-  — beza drpd teaser SEO).
+  kanan-bawah, "zymnotes.com", **teks slate-800 opacity ~39%, TIADA
+  garis luar** — versi awal putih+stroke hitam dilaporkan "spt sticker",
+  digantikan gaya subtle) — menu "Download image"/"Share image" natif
+  peranti ambil fail `src` TERUS, langkau overlay CSS/JS, jadi watermark
+  MESTI dibakar ke piksel. Jalankan skrip ni SEBELUM daftar subtopik
+  baharu ke `HZ_INFOGRAPHIC_PAGES`, & naikkan `imgVersion` (cache-bust
+  auto via `buildOverlay()`, TAK perlu sunting HTML manual — beza drpd
+  teaser SEO). **Skrip `overwrite in-place`, TIADA salinan asal** — utk
+  ubah gaya pd fail yg DAH bertera air, ambil fail ASAL (pra-watermark)
+  drpd sejarah git, JANGAN cuba "kurangkan" watermark sedia ada.
 - **`scripts/generate-teaser-thumbnail.py`** jana `seo-thumbnail.webp`
   drpd ilustrasi SUMBER (belum ada watermark) — jalur footer KEKAL
   KECIL (~72px, logo 36px, fon 30px; versi awal ~150px dilaporkan

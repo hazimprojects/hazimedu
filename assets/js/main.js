@@ -2980,10 +2980,12 @@ var HZ_INFOGRAPHIC_PAGES = {
 // kerapuhan bahagian tu); FAB ni kekal kedudukan tetap, tak diseret.
 // =========================
 (function setupInfographicGallery() {
-  // Ikon share SAMA persis drpd KONGSI_SRC (IIFE lain, skop tertutup —
-  // tak boleh rujuk terus, salin nilai je, ikon kecil tak berbaloi
-  // threading konstanta merentas modul).
-  var IG_SHARE_ICON_SRC = 'https://img.icons8.com/?size=100&id=xPX4qmtKvtBp&format=png&color=000000';
+  // Ikon share dilukis SVG DALAMAN (bentuk "3 titik bersambung" piawai
+  // Android/Material — BUKAN ikon icons8 pautan/rantai lama, pengguna
+  // laporkan bentuk lama tu kurang jelas maksud "share") — elak
+  // SEPENUHNYA pergantungan CDN luar utk ikon kecil ni (tiada isu
+  // rasterisasi/sekatan proksi langsung, warna terus terkawal via CSS).
+  var IG_SHARE_ICON_SVG_PATH = 'M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z';
   document.addEventListener('DOMContentLoaded', function () {
     var _p = window.location.pathname;
     if (!hzZymnotesIsSubtopicNotePathname(_p)) return;
@@ -3121,7 +3123,7 @@ var HZ_INFOGRAPHIC_PAGES = {
             '<img id="zym-ig-logo" src="/icons/icon.svg?v=6" alt="" width="26" height="26">',
             '<div id="zym-ig-title">' + data.title + '</div>',
             '<button type="button" id="zym-ig-share-btn" aria-label="Kongsi slaid ini">' +
-              '<img src="' + IG_SHARE_ICON_SRC + '" alt="" width="16" height="16" loading="eager">' +
+              '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="' + IG_SHARE_ICON_SVG_PATH + '"></path></svg>' +
             '</button>',
             '<button type="button" id="zym-ig-close-btn" aria-label="Tutup">✕</button>',
           '</div>',
@@ -8438,7 +8440,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=622').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=623').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });

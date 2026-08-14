@@ -16,7 +16,8 @@ from PIL import Image, ImageDraw, ImageFont
 FONT_PATH = "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf"
 TEXT = "zymnotes.com"
 FONT_SIZE = 20
-OPACITY = 140  # drpd 255 (~55%)
+FILL = (30, 41, 59)  # slate-800 — neutral gelap, BUKAN putih+garis luar
+OPACITY = 100  # drpd 255 (~39%) — subtle, gaya watermark stok foto
 MARGIN = 18
 
 
@@ -27,23 +28,28 @@ def watermark_one(path: Path) -> None:
     # Ukur teks dulu pd kanvas sementara supaya tahu saiz label tepat.
     tmp = Image.new("RGBA", (1, 1), (0, 0, 0, 0))
     tdraw = ImageDraw.Draw(tmp)
-    bbox = tdraw.textbbox((0, 0), TEXT, font=font, stroke_width=2)
+    bbox = tdraw.textbbox((0, 0), TEXT, font=font)
     text_w = bbox[2] - bbox[0]
     text_h = bbox[3] - bbox[1]
     pad = 6
 
+    # TIADA stroke (garis luar hitam) — versi awal (putih+stroke hitam
+    # 2px) dilaporkan pengguna nampak spt "sticker"/kartun, bukan
+    # watermark profesional. Warna gelap neutral rata + opacity rendah
+    # (gaya watermark stok foto) cukup legap sbb latar sudut kanan-bawah
+    # SEMUA slaid korpus ni konsisten cerah/krim (gaya ilustrasi "latar
+    # rata krim" sengaja, rujuk CLAUDE.md §"Infografik Galeri") — disahkan
+    # kekal terbaca merentas slaid kontras plg tinggi (rujuk PR).
     label = Image.new("RGBA", (text_w + pad * 2, text_h + pad * 2), (0, 0, 0, 0))
     ldraw = ImageDraw.Draw(label)
     ldraw.text(
         (pad - bbox[0], pad - bbox[1]),
         TEXT,
         font=font,
-        fill=(255, 255, 255, 255),
-        stroke_width=2,
-        stroke_fill=(0, 0, 0, 255),
+        fill=FILL + (255,),
     )
 
-    # Susutkan opacity KESELURUHAN label (bukan hitam/putih penuh).
+    # Susutkan opacity KESELURUHAN label.
     alpha = label.split()[3].point(lambda a: int(a * OPACITY / 255))
     label.putalpha(alpha)
 
