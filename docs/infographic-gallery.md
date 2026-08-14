@@ -475,6 +475,53 @@ Infografik 1.1"/"1.2"); klik `#zym-ig-seo-teaser` disahkan MASIH buka
 tersentuh). `scripts/seo-audit.py` (117 halaman) & `npm run lint`
 kekal lulus.
 
+## Watermark teaser terlalu besar (2026-08-14)
+
+**Isu**: pengguna laporkan (via tangkapan skrin) jalur watermark
+footer "zymnotes.com" (§"Teaser SEO Infografik" atas) pd
+`seo-thumbnail.webp` "terlalu besar" — nampak berat berbanding
+kandungan ilustrasi di atasnya. Pengukuran pixel (Python/Pillow, scan
+baris cari sempadan warna rata jalur vs ilustrasi bervariasi) sahkan:
+jalur asal **~150px** (~17% drpd tinggi imej 919px), logo ~80px & fon
+besar — jauh lebih besar drpd watermark menegak slaid carousel yg
+BAHARU sahaja ditambah (§"Watermark menegak pd slaid carousel" atas,
+sengaja KECIL/tak menonjol).
+
+**Fix**: `scripts/generate-teaser-thumbnail.py` (skrip BAHARU,
+Pillow — **skrip pertama yg PERSISTED** utk teaser SEO; sebelum ni
+dicatat sbg "bukan automatik, jalan manual" tanpa fail kekal, rujuk
+§"Teaser SEO Infografik" atas) — crop ilustrasi asal drpd imej sedia
+ada (kedua-dua `bab-1-1`/`bab-1-2` disahkan sempadan SAMA, `y=769`
+drpd tinggi 919px total, via pengesanan baris rata di atas), jana
+semula jalur footer BAHARU jauh lebih kecil: **72px** (drpd 150px),
+logo **36px** (drpd ~80px), fon **30px**. Kanvas akhir kini
+`1376×841` (drpd `1376×919`).
+
+**AWAS — dimensi imej BERUBAH (919→841 tinggi)**, jadi SEMUA rujukan
+`height="919"` (attribute `<img>`) & `content="919"` (`og:image:
+height`) di `notes/bab-1-1.html`/`bab-1-2.html` WAJIB dikemas kini
+SERENTAK ke `841` — terlepas ni sebabkan `<img>` browser reserve ruang
+salah (layout shift) & preview kongsi (WhatsApp/FB) papar imej
+terpotong/regang (nisbah bidang tak padan `og:image:width`/`height`
+yg diisytiharkan).
+
+`imgVersion` dinaikkan (bab-1-1: 6→7, bab-1-2: 5→6) & SEMUA rujukan
+`seo-thumbnail.webp?v=N` (`og:image`/`og:image:url`/`og:image:
+secure_url`/`twitter:image`/`twitter:image:src`/`<a href>`/`<img
+src>` — 7 tempat setiap halaman) dikemas kini SERENTAK, ikut disiplin
+`imgVersion` sedia ada (§"Infografik Galeri" atas) — teaser statik
+TIADA auto-sync `?v=` (beza drpd slaid carousel yg `buildOverlay()`
+lampirkan sendiri), jadi WAJIB sunting manual setiap tempat.
+
+Disahkan: `scripts/generate-teaser-thumbnail.py` diuji hasilkan output
+**IDENTIK piksel** (`ImageChops.difference` bbox `None`) drpd fail
+sebenar dlm repo (bukti skrip boleh guna semula tepat utk subtopik
+akan datang, bukan sekadar "kira-kira sama"); Playwright (kedua-dua
+halaman, viewport 390px) sahkan jalur kelihatan jauh lebih kemas &
+proporsional dlm konteks kad sebenar (tangkapan skrin + zum sudut
+jalur); `scripts/seo-audit.py` (117 halaman) & `npm run lint` kekal
+lulus.
+
 ## `og:image`/`twitter:image` guna teaser infografik pd halaman berkenaan (2026-08-14)
 
 **Sebelum ni SEMUA halaman `notes/*.html` (termasuk yg ADA infografik)

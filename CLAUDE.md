@@ -918,7 +918,9 @@ FAB reaksi "Suka" — rujuk **`docs/infographic-gallery.md`** sebelum ubah
   automatik** — bila tambah subtopik ke `HZ_INFOGRAPHIC_PAGES` atau
   naikkan `imgVersion`, WAJIB kemas kini 5 tag `og:image*`/
   `twitter:image*` di `<head>` halaman tu SERENTAK (dims sebenar
-  `1376×919`, bukan `1200×630` OG piawai).
+  `1376×841`, bukan `1200×630` OG piawai — turut kemas kini `<img
+  height>`/`og:image:height` kalau imej teaser dijana semula, rujuk
+  `scripts/generate-teaser-thumbnail.py` di bawah).
 - **SETIAP slaid carousel (bukan cuma `seo-thumbnail.webp`) WAJIB
   watermark menegak** (`scripts/watermark-infographic-slides.py`, sudut
   kanan-bawah, "zymnotes.com") — menu "Download image"/"Share image"
@@ -927,6 +929,11 @@ FAB reaksi "Suka" — rujuk **`docs/infographic-gallery.md`** sebelum ubah
   subtopik baharu ke `HZ_INFOGRAPHIC_PAGES`, & naikkan `imgVersion`
   (cache-bust auto via `buildOverlay()`, TAK perlu sunting HTML manual
   — beza drpd teaser SEO).
+- **`scripts/generate-teaser-thumbnail.py`** jana `seo-thumbnail.webp`
+  drpd ilustrasi SUMBER (belum ada watermark) — jalur footer KEKAL
+  KECIL (~72px, logo 36px, fon 30px; versi awal ~150px dilaporkan
+  "terlalu besar"). Guna skrip ni (bukan karang jalur baharu manual)
+  bila cover subtopik baharu/diganti — output kanvas `1376×841`.
 - **Teaser SEO TIADA lagi kotak CTA gradien** (dibuang — "menganggu",
   asing drpd bahasa visual laman) — gantinya tajuk gaya "Bahagian N"
   sedia ada (`.section-heading.note-infographic-heading`, label pil
