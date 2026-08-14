@@ -1944,6 +1944,26 @@ body.sparkle-panel-open .audio-notice-sheet {
   filter: brightness(0) invert(1);
 }
 
+/* Tutup (✕) — HANYA desktop (sama corak drpd ".hz-toc" Desktop Floating
+   TOC, min-width:1024px) — mudah alih jimat ruang topbar, tutup kekal
+   via tap-luar/Escape/back pelayar. Elemen KEKAL dlm DOM pd mudah alih
+   (display:none sahaja, bukan dibuang) supaya listener klik boleh
+   didaftar tanpa syarat drpd JS. */
+#zym-ig-close-btn {
+  display: none;
+  flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%;
+  border: none; background: rgba(255,255,255,0.16); cursor: pointer;
+  align-items: center; justify-content: center;
+  font-size: 1rem; line-height: 1; color: #f1f5f9;
+  transition: background 0.14s, transform 0.14s;
+}
+#zym-ig-close-btn:hover { background: rgba(255,255,255,0.26); }
+#zym-ig-close-btn:active { transform: scale(0.92); }
+
+@media (min-width: 1024px) {
+  #zym-ig-close-btn { display: flex; }
+}
+
 #zym-ig-viewport { position: absolute; inset: 0; }
 
 #zym-ig-track {
