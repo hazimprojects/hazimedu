@@ -1834,22 +1834,27 @@ body.sparkle-panel-open .audio-notice-sheet {
    awal halaman (Googlebot execute JS tapi TAK simulasi klik pengguna, jadi
    overlay carousel yg dibina lewat via buildOverlay() tak pernah dicrawl).
    Klik terus buka overlay penuh yg sama (rujuk main.js). ── */
+/* Tajuk teaser ("Infografik" + h2 "Lihat Infografik X.Y") — MENIRU
+   corak tajuk seksyen "Bahagian N" sedia ada (.section-heading, rujuk
+   paper.css) drpd digantikan kotak CTA gradien berasingan (pengguna
+   laporkan "menganggu" — nampak asing drpd bahasa visual laman ni).
+   margin-top NEGATIF (kelas marker `.note-infographic-heading`, BUKAN
+   `.section-heading` sejagat — elak kesan sampingan semua tajuk
+   "Bahagian N" lain merentas laman) sbb tajuk ni SENTIASA duduk dlm
+   `.section.note-section` SEJURUS lepas hero (`.section.page-hero`),
+   jurang lalai tersusun DUA lapisan padding (4rem bawah hero + 0.5rem
+   atas note-section = 4.5rem, ~72px) — jurang kosong tak wajar lebar
+   antara kad "Warna kata kunci" & tajuk teaser. */
+.note-infographic-heading {
+  margin-top: -3rem;
+}
+
 .note-infographic-teaser {
   display: block;
   border-radius: 18px;
   overflow: hidden;
   text-decoration: none;
-  /* margin-top NEGATIF — teaser ni SENTIASA duduk dlm .section.note-
-     section SEJURUS lepas hero (.section.page-hero), jadi jurang lalai
-     tersusun DUA lapisan padding (4rem bawah hero + 0.5rem atas
-     note-section = 4.5rem, ~72px) — jurang kosong tak wajar lebar
-     antara kad "Warna kata kunci" & imej teaser. Tolak ~3rem drpd
-     jurang tu supaya rapat spt kad bertindan biasa (~1.5rem baki,
-     padan corak `.note-subsection { margin-top: 1.8rem; }` sedia ada).
-     SKOP TERHAD kpd teaser sahaja (bukan ubah `.section`/`.note-section`
-     sejagat) — elak kesan sampingan pd 48 halaman lain yg TIADA
-     infografik/teaser. */
-  margin: -3rem 0 1.1rem;
+  margin: 0 0 1.1rem;
   border: 1px solid var(--page-surface-border, rgba(15, 23, 42, 0.1));
   box-shadow: 0 6px 20px rgba(15, 23, 42, 0.1);
   cursor: pointer;
@@ -1863,18 +1868,6 @@ body.sparkle-panel-open .audio-notice-sheet {
   display: block;
   width: 100%;
   height: auto;
-}
-.note-infographic-teaser-cta {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
-  padding: 0.62rem 1rem;
-  font-family: var(--font-sans, "Nunito", sans-serif);
-  font-size: 0.84rem;
-  font-weight: 700;
-  color: #fff;
-  background: linear-gradient(135deg, #4f46e5 0%, #6366f1 45%, #4338ca 100%);
 }
 
 /* ── Carousel overlay — skrin PENUH sebenar (gaya cerita IG/status
