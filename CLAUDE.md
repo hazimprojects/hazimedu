@@ -927,9 +927,11 @@ FAB reaksi "Suka" — rujuk **`docs/infographic-gallery.md`** sebelum ubah
   subtopik baharu ke `HZ_INFOGRAPHIC_PAGES`, & naikkan `imgVersion`
   (cache-bust auto via `buildOverlay()`, TAK perlu sunting HTML manual
   — beza drpd teaser SEO).
-- **CTA teaser SEO piawai: "Jom lihat infografik penuh!"** (nada
-  mengajak, BUKAN "Lihat infografik penuh" neutral lama) — guna teks NI
-  bila tambah teaser subtopik baharu, kekal SATU nada konsisten.
+- **Teaser SEO TIADA lagi kotak CTA gradien** (dibuang — "menganggu",
+  asing drpd bahasa visual laman) — gantinya tajuk gaya "Bahagian N"
+  sedia ada (`.section-heading.note-infographic-heading`, label pil
+  "Infografik" + `<h2>Lihat Infografik X.Y</h2>`, ikon Bar chart)
+  SEBELUM imej. Guna corak NI bila tambah teaser subtopik baharu.
 
 Rekod penuh (evolusi gaya ilustrasi, kedudukan FAB, pengesahan Playwright):
 **`docs/infographic-gallery.md`**.

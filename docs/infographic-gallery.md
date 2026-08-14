@@ -421,14 +421,59 @@ mengembang, GAP KEKAL ~32px sama ada accordion terbuka/tertutup
 (disahkan via Playwright, kedua-dua senario, sifar bertindih).
 
 CTA teaser turut ditukar drpd "Lihat infografik penuh" (neutral,
-arahan) kpd **"Jom lihat infografik penuh!"** (nada mengajak, ikut
-gaya bahasa kasual laman ni utk pelajar) — teks `<span class="note-
-infographic-teaser-cta">` & `aria-label` `<a>` KEDUA-DUA dikemas kini
-SERENTAK (kekal konsisten pembaca skrin). **Bila tambah teaser SEO utk
-subtopik infografik BAHARU, guna teks "Jom lihat infografik penuh!"
-ni** (bukan karang frasa baharu setiap kali) — kekal SATU nada
-konsisten merentas laman, sama falsafah drpd disiplin label kanonik
-lain fail ni (cth. label kelas kata kunci `KEYWORD_LABELS`).
+arahan) kpd "Jom lihat infografik penuh!" (nada mengajak) — teks
+`<span class="note-infographic-teaser-cta">` & `aria-label` `<a>`
+KEDUA-DUA dikemas kini SERENTAK. **Corak kotak CTA gradien ni KEMUDIAN
+DIGANTIKAN SEPENUHNYA — rujuk "Tajuk teaser gaya Bahagian N" di bawah
+(sejarah kekal di sini sbg rekod evolusi, BUKAN corak semasa).**
+
+**Tajuk teaser gaya "Bahagian N" (2026-08-14, GANTIKAN kotak CTA di
+atas)** — pengguna laporkan kotak CTA gradien ungu "menganggu"
+(nampak asing drpd bahasa visual laman ni — SEMUA elemen lain guna
+kad kertas/label pil lembut, tiada kotak gradien pekat penuh warna).
+Cadang: buang kotak CTA, ganti dgn tajuk teks ringkas SAHAJA, gaya
+sama drpd tajuk "Bahagian N" sedia ada (`.section-heading` — label pil
+kecil + `<h2>` tebal, rujuk `paper.css`).
+
+Fix: `<span class="note-infographic-teaser-cta">` (kotak gradien)
+DIBUANG SEPENUHNYA (CSS `.note-infographic-teaser-cta` turut
+dipadam — kod mati, sudah tiada rujukan). Digantikan blok
+`.section-heading` BARU (label pil "Infografik" + `<h2>Lihat
+Infografik X.Y</h2>`, ikon "Bar chart" Fluent Emoji — dipilih sbb
+SUDAH disahkan wujud/berfungsi merentas korpus, rujuk disiplin grep
+§"Ikon Emoji" `CLAUDE.md` — bukan tekaan ikon baharu) diletak SEBELUM
+`<a class="note-infographic-teaser">` (imej), bukan selepas —
+konsisten dgn corak SEMUA tajuk seksyen lain di laman ni (tajuk
+SENTIASA mendahului kandungan yg diperkenalkan, bukan label selepas).
+
+**Margin negatif (jurang "Warna kata kunci"→teaser, rujuk atas)
+DIPINDAH drpd `.note-infographic-teaser` (imej) KE `.note-infographic-
+heading` (kelas marker BAHARU pd `.section-heading`, BUKAN
+`.section-heading` sejagat — elak kesan sampingan SEMUA tajuk
+"Bahagian N" lain merentas laman)** — sbb tajuk kini elemen PERTAMA
+dlm section (bukan imej lagi), jurang besar (4.5rem, §atas) perlu
+ditolak drpd TAJUK, bukan imej. `.note-infographic-teaser` sendiri
+kembali ke margin asal (`0 0 1.1rem`, tiada offset negatif) — imej
+kini duduk RAPAT tajuknya sendiri (~17px, wujud semula jadi drpd
+`.section-heading h2 { margin-bottom: 0.45rem; }` sedia ada, TIADA
+CSS tambahan diperlukan utk jurang ni).
+
+**Bila tambah teaser SEO utk subtopik infografik BAHARU**, guna corak
+`.section-heading.note-infographic-heading` (label "Infografik" + h2
+"Lihat Infografik X.Y", ikon Bar chart) ni — BUKAN kotak CTA lama,
+BUKAN karang gaya baharu. Kekal SATU corak konsisten merentas laman,
+sama falsafah drpd disiplin label kanonik lain fail ni (cth. label
+kelas kata kunci `KEYWORD_LABELS`).
+
+Disahkan via Playwright (`bab-1-1.html`/`bab-1-2.html`): jurang "Warna
+kata kunci"→tajuk teaser kekal ~32px (SAMA drpd sebelum, cuma
+dipindah drpd imej ke tajuk) TERMASUK bila accordion legenda DIBUKA
+(sifar bertindih, margin relatif kpd aliran dokumen); jurang tajuk→
+imej ~17px (rapat semula jadi); teks h2 disahkan betul ("Lihat
+Infografik 1.1"/"1.2"); klik `#zym-ig-seo-teaser` disahkan MASIH buka
+`#zym-infographic-overlay` (struktur DOM berubah, fungsi/ID JS tak
+tersentuh). `scripts/seo-audit.py` (117 halaman) & `npm run lint`
+kekal lulus.
 
 ## `og:image`/`twitter:image` guna teaser infografik pd halaman berkenaan (2026-08-14)
 
