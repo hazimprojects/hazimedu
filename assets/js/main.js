@@ -2970,6 +2970,10 @@ var HZ_INFOGRAPHIC_PAGES = {
 // kerapuhan bahagian tu); FAB ni kekal kedudukan tetap, tak diseret.
 // =========================
 (function setupInfographicGallery() {
+  // Ikon share SAMA persis drpd KONGSI_SRC (IIFE lain, skop tertutup —
+  // tak boleh rujuk terus, salin nilai je, ikon kecil tak berbaloi
+  // threading konstanta merentas modul).
+  var IG_SHARE_ICON_SRC = 'https://img.icons8.com/?size=100&id=xPX4qmtKvtBp&format=png&color=000000';
   document.addEventListener('DOMContentLoaded', function () {
     var _p = window.location.pathname;
     if (!hzZymnotesIsSubtopicNotePathname(_p)) return;
@@ -3106,6 +3110,9 @@ var HZ_INFOGRAPHIC_PAGES = {
           '<div id="zym-ig-header-row">',
             '<img id="zym-ig-logo" src="/icons/icon.svg?v=6" alt="" width="26" height="26">',
             '<div id="zym-ig-title">' + data.title + '</div>',
+            '<button type="button" id="zym-ig-share-btn" aria-label="Kongsi slaid ini">' +
+              '<img src="' + IG_SHARE_ICON_SRC + '" alt="" width="16" height="16" loading="eager">' +
+            '</button>',
           '</div>',
         '</div>',
         '<div id="zym-ig-viewport">',
@@ -3116,6 +3123,42 @@ var HZ_INFOGRAPHIC_PAGES = {
 
       document.body.appendChild(overlay);
       track = document.getElementById('zym-ig-track');
+
+      // Kongsi SLAID SEMASA (imej sebenar, bukan cuma pautan) — bertera
+      // air sejak PR watermark slaid, jadi kongsi sekarang baik utk
+      // jenama (bukan risiko). Web Share API `files` (level 2) diutamakan
+      // (kongsi fail imej terus, spt kongsi gambar biasa ke WhatsApp/IG);
+      // jatuh balik kpd kongsi pautan (`navigator.share` teks+url, sama
+      // corak drpd butang "Kongsi Pautan" widget bawah) kalau pelayar
+      // sokong share asas tapi bukan `files`; senyap (tiada apa berlaku)
+      // kalau `navigator.share` langsung xde — kes jarang pd peranti
+      // sentuh (khalayak utama ciri carousel skrin-penuh ni).
+      document.getElementById('zym-ig-share-btn').addEventListener('click', function (e) {
+        e.stopPropagation();
+        var slides = track.querySelectorAll('.zym-ig-slide');
+        var cw = track.clientWidth || 1;
+        var idx = Math.min(slides.length - 1, Math.max(0, Math.round(track.scrollLeft / cw)));
+        var activeImg = slides[idx] && slides[idx].querySelector('img');
+        if (!activeImg) return;
+        var shareText = data.title + ' — zymnotes.com';
+        var shareUrlFallback = function () {
+          if (navigator.share) {
+            navigator.share({ title: data.title, url: window.location.href }).catch(function () {});
+          }
+        };
+        fetch(activeImg.src).then(function (r) { return r.blob(); }).then(function (blob) {
+          var file = new File([blob], 'zymnotes-' + data.slides[idx].file, { type: blob.type || 'image/webp' });
+          if (navigator.canShare && navigator.canShare({ files: [file] })) {
+            return navigator.share({ files: [file], title: data.title, text: shareText });
+          }
+          shareUrlFallback();
+        }).catch(function () {
+          // fetch/File gagal (jarang, sbb self-hosted same-origin) ATAU
+          // pengguna batal sheet share (AbortError) — kedua-dua senyap,
+          // TIADA fallback tambahan (elak share dobel bila pengguna
+          // sengaja batal sheet imej).
+        });
+      });
 
       track.addEventListener('scroll', function () {
         requestAnimationFrame(updateNav);
@@ -8371,7 +8414,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=612').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=613').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
