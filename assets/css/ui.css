@@ -1942,9 +1942,9 @@ body.sparkle-panel-open .audio-notice-sheet {
 }
 #zym-ig-share-btn:hover { background: rgba(255,255,255,0.26); }
 #zym-ig-share-btn:active { transform: scale(0.92); }
-#zym-ig-share-btn img {
-  width: 16px; height: 16px; pointer-events: none;
-  filter: brightness(0) invert(1);
+#zym-ig-share-btn svg {
+  width: 16px; height: 16px; pointer-events: none; display: block;
+  fill: #fff;
 }
 
 /* Tutup (✕) — HANYA desktop (sama corak drpd ".hz-toc" Desktop Floating
