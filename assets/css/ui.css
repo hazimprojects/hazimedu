@@ -1839,7 +1839,17 @@ body.sparkle-panel-open .audio-notice-sheet {
   border-radius: 18px;
   overflow: hidden;
   text-decoration: none;
-  margin: 0 0 1.1rem;
+  /* margin-top NEGATIF — teaser ni SENTIASA duduk dlm .section.note-
+     section SEJURUS lepas hero (.section.page-hero), jadi jurang lalai
+     tersusun DUA lapisan padding (4rem bawah hero + 0.5rem atas
+     note-section = 4.5rem, ~72px) — jurang kosong tak wajar lebar
+     antara kad "Warna kata kunci" & imej teaser. Tolak ~3rem drpd
+     jurang tu supaya rapat spt kad bertindan biasa (~1.5rem baki,
+     padan corak `.note-subsection { margin-top: 1.8rem; }` sedia ada).
+     SKOP TERHAD kpd teaser sahaja (bukan ubah `.section`/`.note-section`
+     sejagat) — elak kesan sampingan pd 48 halaman lain yg TIADA
+     infografik/teaser. */
+  margin: -3rem 0 1.1rem;
   border: 1px solid var(--page-surface-border, rgba(15, 23, 42, 0.1));
   box-shadow: 0 6px 20px rgba(15, 23, 42, 0.1);
   cursor: pointer;
