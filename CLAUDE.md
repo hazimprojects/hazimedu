@@ -866,6 +866,12 @@ AWAS paling kritikal (ringkasan sahaja, bukan penuh):
 - **Uji dlm sandbox agen**: `npm install html2canvas-pro jspdf --no-save`
   + Playwright `addScriptTag` (CDN sebenar disekat) — JANGAN teka drpd CSS
   semata-mata, `_ensureLibs()` langkau muat turun CDN bila lib dah wujud.
+- **Logo header PDF guna `icons/icon-512.png` (PNG), BUKAN `icon.svg`**
+  (elak isu rasterisasi SVG html2canvas) — dimuat SEKALI di parse-time
+  (`_pdfLogoImg`/`_pdfLogoDataUrl`), lukis di KEDUA-DUA laluan
+  (`_pdfComposePreviewPage` canvas 2D & `_savePdf` jsPDF `addImage`)
+  guna pemalar saiz/kedudukan DIKONGSI (`PDF_LOGO_*_MM`) — degradasi
+  selamat (teks sahaja) kalau imej belum load.
 
 Rekod penuh (setiap pepijat: punca, fix, pengesahan Playwright per-bab
 Bab 1–10): **`docs/pdf-export-engineering.md`**.
