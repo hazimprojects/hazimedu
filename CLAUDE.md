@@ -927,6 +927,9 @@ FAB reaksi "Suka" — rujuk **`docs/infographic-gallery.md`** sebelum ubah
   subtopik baharu ke `HZ_INFOGRAPHIC_PAGES`, & naikkan `imgVersion`
   (cache-bust auto via `buildOverlay()`, TAK perlu sunting HTML manual
   — beza drpd teaser SEO).
+- **CTA teaser SEO piawai: "Jom lihat infografik penuh!"** (nada
+  mengajak, BUKAN "Lihat infografik penuh" neutral lama) — guna teks NI
+  bila tambah teaser subtopik baharu, kekal SATU nada konsisten.
 
 Rekod penuh (evolusi gaya ilustrasi, kedudukan FAB, pengesahan Playwright):
 **`docs/infographic-gallery.md`**.

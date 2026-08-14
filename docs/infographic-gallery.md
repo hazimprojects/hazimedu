@@ -401,6 +401,35 @@ terus, bukan lepas JS render) utk kedua-dua `bab-1-1`/`bab-1-2`, klik
 kad teaser disahkan buka `#zym-infographic-overlay.is-open` SAMA persis
 drpd FAB. `scripts/seo-audit.py` (117 halaman) kekal lulus.
 
+**Jurang atas teaser & nada CTA (2026-08-14)** — pengguna laporkan (via
+tangkapan skrin) jurang kosong tak wajar lebar antara kad "Warna kata
+kunci" (accordion legenda, §atas) & imej teaser di bawahnya. Punca:
+teaser duduk dlm `.section.note-section` SEJURUS lepas hero
+(`.section.page-hero`) — DUA lapisan padding section bertindan (`4rem`
+bawah hero + `0.5rem` atas note-section = `4.5rem`/~72px) yg tak
+kelihatan spt jurang bertujuan, sekadar akibat sampingan dua section
+generik disusun. Fix: `.note-infographic-teaser` (`ui.css`) dpt
+`margin-top: -3rem` (SKOP TERHAD kpd teaser sahaja, bukan ubah
+`.section`/`.note-section` sejagat — elak kesan sampingan pd 48
+halaman lain yg TIADA infografik) — jurang efektif turun ~72px → ~32px,
+padan lebih dekat corak `.note-subsection { margin-top: 1.8rem; }`
+(gap kad biasa merentas laman). **Disahkan SELAMAT walau accordion
+"Warna kata kunci" DIBUKA pengguna** (bukan collapse lalai) — margin
+CSS relatif kpd aliran dokumen (bukan kedudukan mutlak), jadi teaser
+turut tertolak turun sama secara semula jadi bila panel accordion
+mengembang, GAP KEKAL ~32px sama ada accordion terbuka/tertutup
+(disahkan via Playwright, kedua-dua senario, sifar bertindih).
+
+CTA teaser turut ditukar drpd "Lihat infografik penuh" (neutral,
+arahan) kpd **"Jom lihat infografik penuh!"** (nada mengajak, ikut
+gaya bahasa kasual laman ni utk pelajar) — teks `<span class="note-
+infographic-teaser-cta">` & `aria-label` `<a>` KEDUA-DUA dikemas kini
+SERENTAK (kekal konsisten pembaca skrin). **Bila tambah teaser SEO utk
+subtopik infografik BAHARU, guna teks "Jom lihat infografik penuh!"
+ni** (bukan karang frasa baharu setiap kali) — kekal SATU nada
+konsisten merentas laman, sama falsafah drpd disiplin label kanonik
+lain fail ni (cth. label kelas kata kunci `KEYWORD_LABELS`).
+
 ## `og:image`/`twitter:image` guna teaser infografik pd halaman berkenaan (2026-08-14)
 
 **Sebelum ni SEMUA halaman `notes/*.html` (termasuk yg ADA infografik)
