@@ -2435,7 +2435,12 @@ var HZ_INFOGRAPHIC_PAGES = {
     // watermark menegak kecil sudut kanan-bawah ("zymnotes.com") via
     // scripts/watermark-infographic-slides.py — rujuk docs/infographic-
     // gallery.md §"Watermark menegak pd slaid carousel".
-    imgVersion: 6,
+    // v7 (2026-08-14): seo-thumbnail.webp — jalur watermark footer
+    // disusutkan drpd ~150px (17% tinggi) kpd ~72px (logo 36px, font
+    // 30px), dijana semula drpd ilustrasi asal (crop 1376×769) + jalur
+    // baharu (kanvas kini 1376×841, drpd 1376×919) — rujuk docs/
+    // infographic-gallery.md §"Watermark teaser terlalu besar".
+    imgVersion: 7,
     slides: [
       { file: '01-pengenalan.webp', alt: 'Muka hadapan: Sejarah Tingkatan 4, Bab 1 Warisan Negara Bangsa — Latar Belakang Negara Bangsa Sebelum Kedatangan Barat. Soalan Utama: Adakah konsep negara bangsa hanya wujud selepas kedatangan Barat? Jawapan: Tidak, asas negara bangsa telah berkembang melalui kemunculan kerajaan yang kuat dan berpengaruh' },
       { file: '02-empat-perkara-utama.webp', alt: 'Empat Perkara Utama: Proses Pembentukan Negara Bangsa, Kehebatan Kerajaan Alam Melayu, Empat Unsur Utama Negara Bangsa, Kesinambungan Negara Bangsa di Alam Melayu' },
@@ -2466,7 +2471,12 @@ var HZ_INFOGRAPHIC_PAGES = {
     // watermark menegak kecil sudut kanan-bawah ("zymnotes.com") via
     // scripts/watermark-infographic-slides.py — rujuk docs/infographic-
     // gallery.md §"Watermark menegak pd slaid carousel".
-    imgVersion: 5,
+    // v6 (2026-08-14): seo-thumbnail.webp — jalur watermark footer
+    // disusutkan drpd ~150px (17% tinggi) kpd ~72px (logo 36px, font
+    // 30px), dijana semula drpd ilustrasi asal (crop 1376×769) + jalur
+    // baharu (kanvas kini 1376×841, drpd 1376×919) — rujuk docs/
+    // infographic-gallery.md §"Watermark teaser terlalu besar".
+    imgVersion: 6,
     slides: [
       { file: '01-pengenalan.webp', alt: 'Muka hadapan: Ciri-ciri Negara Bangsa Kesultanan Melayu Melaka. Kesultanan Melayu Melaka mempunyai sistem pemerintahan yang tersusun dan lengkap. Enam ciri utama membuktikan pembentukan negara bangsa yang kukuh sebelum kedatangan Barat' },
       { file: '02-enam-ciri-utama.webp', alt: 'Enam Ciri Utama Negara Bangsa: Kerajaan, Rakyat, Kedaulatan, Wilayah Pengaruh, Undang-undang, Lambang Kebesaran — keenam-enam ciri ini membentuk negara bangsa yang kukuh di Kesultanan Melayu Melaka' },
