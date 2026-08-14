@@ -906,6 +906,11 @@ FAB reaksi "Suka" — rujuk **`docs/infographic-gallery.md`** sebelum ubah
   SEMASA** (Web Share API `files`, bukan cuma pautan) — kekal di zon
   "chrome" topbar (bukan atas ilustrasi), indeks slaid dikira SAMA
   formula drpd `updateNav()` (jgn simpan state berasingan).
+- **Butang tutup (`#zym-ig-close-btn`) HANYA desktop** (`display:none`
+  lalai, `@media (min-width: 1024px)` — sama corak `.hz-toc` Desktop
+  Floating TOC) — mudah alih jimat ruang topbar, tutup kekal via
+  tap-luar/Escape/back. Elemen KEKAL dlm DOM pd mudah alih, cuma
+  tersembunyi CSS.
 - **`og:image`/`twitter:image` halaman berinfografik guna `seo-
   thumbnail.webp` halaman tu sendiri** (bukan `assets/og-image.png`
   generik) — supaya preview "Kongsi Pautan" (WhatsApp/Telegram/FB baca

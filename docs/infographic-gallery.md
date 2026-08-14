@@ -567,6 +567,47 @@ JS. Kedudukan/saiz butang disahkan via tangkapan skrin (ikon sendiri
 tak render dlm sandbox — CDN icons8 disekat, had ujian sedia ada,
 BUKAN isu baharu — rujuk nota persekitaran ujian §"Lencana ikon" atas).
 
+## Butang tutup (✕) — HANYA desktop (2026-08-14)
+
+**Isu**: overlay carousel ni (rujuk §"Infografik Galeri" atas) TIADA
+butang tutup eksplisit langsung — tutup cuma via tap kawasan luar
+kandungan (`overlay` listener, `e.target === overlay`), `Escape`
+(papan kekunci), atau butang belakang pelayar/peranti (`popstate`).
+Pengguna cadang: desktop patut ada butang tutup eksplisit (tiada
+gerak isyarat back/tap-luar semula jadi spt mudah alih — tetikus
+kurang mesra utk "cari kawasan kosong nak klik"), TAPI mudah alih
+SENGAJA tak perlu (jimat ruang topbar sedia ada agak padat — dash+
+logo+tajuk+share — & gerak isyarat back/tap-luar dah cukup semula
+jadi di situ).
+
+**Fix**: `#zym-ig-close-btn` ("✕", bulatan lutsinar sama corak
+`#zym-ig-share-btn`) ditambah SELEPAS butang share dlm `#zym-ig-
+header-row` — **`display:none` lalai, muncul HANYA `@media (min-width:
+1024px)`** — corak IDENTIK drpd `.hz-toc` "Desktop Floating TOC" sedia
+ada (`ui.css`, ciri lain yg sama falsafah "tambah nilai di desktop,
+jangan makan ruang mudah alih"), BUKAN corak baharu. Elemen KEKAL dlm
+DOM pd mudah alih (cuma tersembunyi via CSS, bukan dibuang JS/HTML) —
+lebih ringkas drpd cabang JS `if (isDesktop)` semasa bina overlay,
+listener klik boleh didaftar tanpa syarat (elemen tersembunyi tetap
+boleh terima event listener, cuma tak nampak/tak boleh diklik pengguna
+mudah alih sbb `display:none`). Klik panggil `closeOverlay()` SEDIA
+ADA (fungsi sama drpd listener backdrop/`Escape`, tiada logik tutup
+baharu).
+
+**Breakpoint 1024px** (BUKAN 760px yg lazim dipakai fail ni utk
+majoriti override "mudah alih") — sengaja padan `.hz-toc` tepat, sbb
+kedua-dua ciri sama kelas keputusan ("desktop sahaja, ruang lega
+tambahan") bukan "mudah alih vs tablet". Kalau breakpoint `.hz-toc`
+berubah pd masa depan, semak semula breakpoint ni turut sejajar.
+
+Disahkan via Playwright (2 laluan berasingan, `bab-1-1.html`):
+mudah alih (390×844) — `isVisible('#zym-ig-close-btn')` = `false`;
+desktop (1280×900) — `isVisible(...)` = `true`, klik butang sahkan
+`#zym-infographic-overlay` KEHILANGAN kelas `is-open` (overlay tertutup
+betul, `closeOverlay()` dipanggil). Tangkapan skrin sahkan kedudukan
+(kanan topbar, selepas share) & saiz konsisten dgn butang share
+sebelah.
+
 ## FAB Suka — akses pantas reaksi "Suka" (2026-08-14)
 
 **Isu**: butang "Suka!" boleh-klik SEBENAR cuma wujud dlm widget

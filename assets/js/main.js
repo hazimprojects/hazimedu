@@ -3113,6 +3113,7 @@ var HZ_INFOGRAPHIC_PAGES = {
             '<button type="button" id="zym-ig-share-btn" aria-label="Kongsi slaid ini">' +
               '<img src="' + IG_SHARE_ICON_SRC + '" alt="" width="16" height="16" loading="eager">' +
             '</button>',
+            '<button type="button" id="zym-ig-close-btn" aria-label="Tutup">✕</button>',
           '</div>',
         '</div>',
         '<div id="zym-ig-viewport">',
@@ -3158,6 +3159,19 @@ var HZ_INFOGRAPHIC_PAGES = {
           // TIADA fallback tambahan (elak share dobel bila pengguna
           // sengaja batal sheet imej).
         });
+      });
+
+      // Butang tutup (✕) — HANYA kelihatan di desktop (CSS `@media
+      // (min-width: 1024px)`, sama corak drpd ".hz-toc" Desktop Floating
+      // TOC sedia ada). Mudah alih jimat ruang topbar (tutup kekal via
+      // tap-luar/Escape/back pelayar spt sedia ada) — desktop tiada
+      // gerak isyarat back/tap-luar semula jadi, jadi butang eksplisit
+      // berguna di situ. Elemen KEKAL dlm DOM pd mudah alih (cuma
+      // display:none), jadi listener klik ni selamat didaftar tanpa
+      // syarat.
+      document.getElementById('zym-ig-close-btn').addEventListener('click', function (e) {
+        e.stopPropagation();
+        closeOverlay();
       });
 
       track.addEventListener('scroll', function () {
@@ -8414,7 +8428,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=614').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=615').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
