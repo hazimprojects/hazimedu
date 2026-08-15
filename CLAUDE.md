@@ -32,6 +32,28 @@ peta sejarah bercerita — dibincang eksplisit, belum dilaksana lagi,
 rujuk isu lesen/self-hosting/PDF sebelum mula) secara proaktif bila
 nampak bernilai, bukan sekadar tunggu diminta.
 
+**Idea masa depan — flashcards (dibincang 2026-08-15, belum
+dilaksana).** Selepas semak sistem infografik (`docs/infographic-
+gallery.md`) & bincang beza "ulang kaji pintar" (spaced/active recall,
+pembelajaran mendalam sepanjang penggal) lwn "ulang kaji last minit"
+(cram sejam sblm periksa, corak jenama pemasaran laman lain — SENGAJA
+DIELAKKAN ZymNotes, elak eksploitasi kepanikan pelajar utk keuntungan),
+flashcard dikenal pasti sbg padanan KUAT utk "ulang kaji pintar" tulen
+(*active recall* + *spaced repetition* disokong sains kognitif, bukan
+tekaan pemasaran). **Infrastruktur data SEDIA ADA yg boleh
+dimanfaatkan bila dilaksana**: sistem kata kunci berwarna (`kw kw-*`,
+11 kelas kanonik merentas 50 halaman) & Glosari Popover (§atas —
+pasangan {istilah, definisi} extract drpd 40 kad glosari, 23 halaman)
+dah bentuk data model kad depan/belakang; `ZymStore` (localStorage,
+dah pakai utk "Suka"/lastRead) boleh sambung utk status kad/jadual
+ulang kaji tanpa backend baharu. Had jujur perlu diakui bila mula:
+liputan definisi semasa (40 kad) jauh drpd cukup utk deck penuh
+merentas semua istilah kata kunci, status kad per-peranti sahaja
+(localStorage, hilang kalau cache dipadam — sama had drpd "Suka").
+JANGAN mula bina tanpa rujuk perbualan asal (bincang skop bab
+prototaip, sumber data istilah+definisi, reka UI kad) dgn pengguna
+dulu.
+
 Walau begitu, disiplin sedia ada dlm fail ni KEKAL wajib utk ciri
 baharu jugak — bukan lesen utk kurangkan ketelitian: sahkan ikon/aset
 baharu benar2 berfungsi sebelum push (§"Ikon Emoji"), uji via
