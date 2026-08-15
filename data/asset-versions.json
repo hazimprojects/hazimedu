@@ -1,5 +1,5 @@
 {
-  "style_css": "352",
+  "style_css": "353",
   "main_js": "478",
   "zh_mode_js": "56",
   "subtopic_lab_js": "9",
@@ -14,9 +14,9 @@
   "icon_maskable_512": "4",
   "favicon_32": "4",
   "css": {
-    "base": "118",
+    "base": "119",
     "layout": "29",
-    "ui": "103",
+    "ui": "104",
     "paper": "30",
     "keywords": "60",
     "responsive": "14",

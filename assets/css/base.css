@@ -1371,6 +1371,19 @@ body.page-theme-home.app-shell-page .home-continue-arrow {
   color: var(--cr-accent, #6366f1);
 }
 
+/* Lencana ikon galeri/kuiz/audio (main.js, IIFE "Sambung Membaca") */
+body.page-theme-home.app-shell-page .home-continue-badges {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 0.4rem;
+}
+
+body.page-theme-home.app-shell-page .home-continue-badges .fluent-3d-emoji--continue-badge {
+  width: 15px;
+  height: 15px;
+}
+
 body.page-theme-home.app-shell-page .home-feature-grid,
 body.page-theme-about.app-shell-page .home-feature-grid {
   gap: 14px;
