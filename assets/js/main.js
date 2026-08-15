@@ -2489,6 +2489,39 @@ var HZ_INFOGRAPHIC_PAGES = {
       { file: '09-lambang-kebesaran.webp', alt: 'Lambang Kebesaran: identiti dan keistimewaan Sultan — adat istiadat, warna diraja, nobat, regalia, cap mohor — melambangkan kedaulatan pemerintah dan keagungan kerajaan' },
       { file: '10-kesimpulan.webp', alt: 'Kesimpulan: Kesultanan Melayu Melaka mempunyai ciri-ciri negara bangsa yang lengkap — Kerajaan, Rakyat, Kedaulatan, Wilayah Pengaruh, Undang-undang, Lambang Kebesaran — menjadi panduan kepada pembentukan negara bangsa Malaysia masa kini' }
     ]
+  },
+  'bab-1-3': {
+    title: '1.3 Keunggulan Sistem Pentadbiran dan Undang-undang',
+    // v1 (2026-08-15): 21 slaid (bukan 10 spt subtopik lain — kandungan
+    // 1.3 ada 2 Bahagian luas, Pentadbiran + Undang-undang, jadi lebih
+    // byk slaid drpd biasa utk liputi kedua-duanya). Turutan disahkan
+    // padan struktur Bahagian sebenar notes/bab-1-3.html (Bahagian
+    // Pertama: slaid 2-8, Bahagian Kedua: slaid 9-21) — rujuk CLAUDE.md
+    // §"Infografik Galeri" (disiplin turutan slaid).
+    imgVersion: 1,
+    slides: [
+      { file: '01-pengenalan.webp', alt: 'Muka hadapan: Sejarah Tingkatan 4, Bab 1 Warisan Negara Bangsa — Keunggulan Sistem Pentadbiran dan Undang-undang' },
+      { file: '02-keunggulan-melaka.webp', alt: 'Keunggulan Melaka: Melaka unggul melalui pentadbiran dan undang-undang yang tersusun — Sistem Pentadbiran, Sistem Undang-undang' },
+      { file: '03-peringkat-pentadbiran.webp', alt: 'Peringkat Pentadbiran Melaka: tersusun dari pusat (dikendalikan oleh Pembesar Berempat) hingga ke jajahan (pembesar dilantik mentadbir daerah dan kampung)' },
+      { file: '04-sistem-pembesar-empat-lipatan.webp', alt: 'Sistem Pembesar Empat Lipatan: berhierarki, tersusun, berpusat kepada sultan — Bendahara, Temenggung, Penghulu Bendahari, Laksamana' },
+      { file: '05-peranan-pembesar-utama.webp', alt: 'Peranan Pembesar Utama: Bendahara (ketua pentadbir, ketua turus angkatan tentera, penasihat sultan), Penghulu Bendahari (mengurus perbendaharaan), Temenggung (menjaga keselamatan kota), Laksamana (panglima angkatan laut)' },
+      { file: '06-pembesar-lain.webp', alt: 'Pembesar Lain yang Membantu Pentadbiran: Syahbandar (mengurus perdagangan dan pelabuhan), Bentara (menyampaikan titah dan arahan), Orang Kaya (membantu urusan pentadbiran), Hulubalang (menjaga keselamatan), Penghulu (mentadbir kawasan dan masyarakat)' },
+      { file: '07-sistem-kewangan.webp', alt: 'Sistem Kewangan Melaka: perdagangan menjadi sumber penting pendapatan — cukai di pelabuhan, cukai di kawasan pegangan, ufti, digunakan untuk pertahanan dan pembangunan istana' },
+      { file: '08-kawasan-pegangan.webp', alt: 'Kawasan Pegangan: Sultan mengurniakan kawasan kepada pembesar untuk ditadbir — wilayah, sungai, pulau — membantu menjaga keamanan dan kebajikan penduduk' },
+      { file: '09-sistem-undang-undang.webp', alt: 'Sistem Undang Undang Melaka: pentadbiran yang tersusun diperkukuh oleh undang-undang yang teratur — Hukum Kanun Melaka (mengatur kehidupan di darat), Undang-Undang Laut Melaka (mengatur pelayaran)' },
+      { file: '10-hukum-kanun-melaka.webp', alt: 'Hukum Kanun Melaka: mengandungi 44 fasal, mengatur pelbagai aspek kehidupan — Jenayah, Kuasa Sultan dan Pembesar, Kekeluargaan, Ekonomi' },
+      { file: '11-jenayah.webp', alt: 'Jenayah: hukuman dikenakan atas jenayah seperti membunuh, menikam dan mencuri — Fasal 4 (ingkar arahan dan memalsukan titah sultan, hukuman bunuh), Fasal 5.1 (membunuh tanpa pengetahuan raja atau pembesar, hukuman bunuh)' },
+      { file: '12-kuasa-sultan-pembesar.webp', alt: 'Kuasa Sultan dan Pembesar: Hukum Kanun Melaka menjelaskan tugas Sultan dan pembesar — Fasal 1 (Sultan berkuasa melantik pembesar, Bendahara penasihat sultan, Temenggung menjaga keselamatan kota, Penghulu Bendahari mengurus perbendaharaan, Laksamana panglima angkatan laut)' },
+      { file: '13-kekeluargaan.webp', alt: 'Kekeluargaan: Hukum Kanun Melaka turut mengatur hal kekeluargaan — Fasal 26 (perkahwinan memerlukan 4 orang saksi, minimum 2 orang jika tidak cukup; wanita dan hamba abdi tidak boleh menjadi saksi)' },
+      { file: '14-ekonomi.webp', alt: 'Ekonomi: perdagangan ialah asas kekuatan Melaka — Fasal 30 (riba diharamkan), peniaga mesti akil baligh dan siuman, perlu melafazkan niat jual beli' },
+      { file: '15-perkataan-khas-diraja.webp', alt: 'Perkataan Khas Diraja: rakyat perlu menghormati perkataan khas yang digunakan oleh diraja — Titah, Murka, Kurnia, Anugerah; rakyat dilarang menggunakan atau mempersendakan perkataan khas diraja, mencerminkan penghormatan terhadap institusi kesultanan' },
+      { file: '16-undang-undang-laut-melaka.webp', alt: 'Undang Undang Laut Melaka: mengatur kehidupan dan aktiviti di laut — disusun oleh Nakhoda Jenal, Nakhoda Diri dan Nakhoda Sahak, diperkenan oleh Sultan Mahmud Shah — Peranan Nakhoda, Pelayaran, Percukaian, Jenayah di Laut' },
+      { file: '17-peranan-nakhoda.webp', alt: 'Peranan Nakhoda: nakhoda ialah raja di laut, semua mesti patuh kepada arahan nakhoda — Fasal 13.3 (jika hendak mengubah laluan, perlu bermesyuarat dengan semua), Fasal 13.1 (nakhoda diberi keutamaan berniaga selama 4 hari)' },
+      { file: '18-pelayaran.webp', alt: 'Pelayaran: pegawai penting memastikan pelayaran berjalan lancar — Jurumudi (mengemudi kapal), Malim (mahir tentang ombak, arus, bulan dan bintang), Jurubatu (membantu menentukan kedudukan kapal); Fasal 9 (malim yang cuai sehingga menyebabkan kemalangan boleh dikenakan hukuman bunuh)' },
+      { file: '19-jenayah-di-laut.webp', alt: 'Jenayah di Laut: Undang Undang Laut Melaka mengatur jenayah di atas kapal — mencuri, membunuh, memberontak; Fasal 5 (membunuh di atas kapal dikenakan hukuman mati)' },
+      { file: '20-percukaian.webp', alt: 'Percukaian: sistem cukai bersifat teratur dan adil — hasil perniagaan, cukai perjalanan; Fasal 6.3 (jika penumpang turun awal sebelum sampai, perlu bayar 1/10 daripada hasil)' },
+      { file: '21-kesimpulan.webp', alt: 'Kesimpulan: keunggulan Melaka terbukti melalui pentadbiran dan undang-undang yang tersusun — pentadbiran sistematik, agihan tugas yang jelas, undang-undang yang teratur, keselamatan terjamin, rakyat hidup harmoni. Pematuhan kepada undang-undang mewujudkan kesejahteraan dan kemakmuran' }
+    ]
   }
 };
 
@@ -8440,7 +8473,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=626').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=627').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });

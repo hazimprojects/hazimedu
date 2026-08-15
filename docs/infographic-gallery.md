@@ -11,10 +11,14 @@
 Ciri BAHARU (2026-08-11): kad infografik gaya carousel media sosial
 (imej cerita ilustrasi bergaya "Instagram carousel", diselang-selikan
 dgn kandungan teks nota sedia ada) — utk pelajar visual & guru
-membentang via projektor kelas. **Skop semasa: 2 subtopik (`bab-1-1`,
-`bab-1-2`), 10 slaid setiap satu, KEDUA-DUA guna SATU gaya ilustrasi
-seragam** (latar rata krim + tipografi headline besar + label penanda
-highlight, ilustrasi isometrik sbg elemen sokongan bukan latar penuh).
+membentang via projektor kelas. **Skop semasa: 3 subtopik (`bab-1-1`,
+`bab-1-2` — 10 slaid setiap satu; `bab-1-3` — 21 slaid, rujuk §"bab-1-3
+21 slaid" bawah utk sebab bilangan beza), SEMUA guna SATU gaya
+ilustrasi seragam** (latar rata krim + tipografi headline besar +
+label penanda highlight, ilustrasi isometrik sbg elemen sokongan bukan
+latar penuh). **Bilangan slaid TAK tetap 10** — ikut keperluan liputan
+kandungan subtopik (bilangan Bahagian/kerumitan), bukan peraturan
+tegar; jangan anggap subtopik baharu WAJIB tepat 10 slaid.
 
 **Sejarah ringkas gaya (kekal sbg rujukan, bukan keadaan semasa)**:
 `bab-1-1` dibina 2026-08-11 guna gaya painterly/fotorealistik asal,
@@ -852,4 +856,74 @@ hati sempat nampak), `opacity` jatuh ke ~0 lepas ~900ms, undo drpd
 widget bawah pulihkan `opacity` ke 1 serta-merta, & muat semula halaman
 dgn rekod "suka" sedia ada terus `opacity:0` (tiada kelip). `scripts/seo-audit.py`
 (117 halaman) lulus.
+
+## `bab-1-3` — subtopik infografik ke-3, 21 slaid (2026-08-15)
+
+**Skop kandungan `bab-1-3` ("Keunggulan Sistem Pentadbiran dan Undang-
+undang") jauh lebih luas drpd `bab-1-1`/`bab-1-2` (2 Bahagian besar —
+Sistem Pentadbiran & Undang-undang, berbanding subtopik lain yg
+biasanya 1 tema padu)**, jadi pengguna bekalkan **21 slaid** (bukan 10
+piawai) — pertama kali bilangan slaid TAK SAMA drpd 2 subtopik
+terdahulu, mengesahkan `HZ_INFOGRAPHIC_PAGES`/`buildOverlay()` memang
+generik sepenuhnya (bilangan slaid TAK di-hardcode di mana-mana, cuma
+`data.slides.length`).
+
+**Imej dihantar 2 pusingan (10 + 11) via upload chat, BUKAN sekaligus
+20/21** — pengguna sendiri catat "ini 10 slide pertama" pusingan
+pertama, kemudian "ini 11 (bukan 10) slide seterusnya" pusingan kedua
+(jangkaan awal 20 jumlah, sebenarnya 21). **Fail dikesan pd cakera via
+`find ... -newer <fail-rujukan>`** (direktori muat naik sesi,
+`/root/.claude/uploads/<session-id>/`) — BUKAN drpd URL/laluan
+eksplisit dlm mesej pengguna, sbb imej dilekatkan terus dlm chat
+(bukan pautan fail).
+
+**AWAS — turutan fail ikut cap masa/ID muat naik TAK BOLEH dipercayai
+mewakili turutan slaid yg pengguna maksudkan** (rujuk amaran sedia ada
+§"Storan imej" atas — `bab-1-1` turutan asal PERNAH tersilap ikut
+corak ni). Fix/disiplin yg dipakai di sini: **setiap fail dibaca
+kandungan SEBENAR (crop bahagian tajuk, baca teks) & dipadan MANUAL kpd
+senarai bernombor pengguna** (cth. "3. Peringkat Pentadbiran Melaka"
+dipadan dgn fail yg tajuknya benar-benar "Peringkat Pentadbiran
+Melaka", bukan fail ke-3 ikut turutan `mtime`) — SEMUA 21 fail disahkan
+satu-satu sebelum diproses, bukan dipercayai drpd urutan folder.
+
+**Turutan slaid turut disahkan padan struktur Bahagian SEBENAR
+`notes/bab-1-3.html`** (§"Storan imej" atas, disiplin sedia ada) — baca
+`paper-label small`/`paper-strip strip-sub`/`paper-accordion-title`
+halaman sebenar (Bahagian Pertama: Struktur/Ciri/Pembesar/Peringkat/
+Kewangan/Kawasan Pegangan; Bahagian Kedua: Hukum Kanun Melaka
+[Jenayah/Sultan & Pembesar/Kekeluargaan/Ekonomi] + Undang-Undang Laut
+Melaka [Nakhoda/Pelayaran/Jenayah di Laut/Percukaian]) — turutan 21
+slaid pengguna padan TEPAT struktur ni tanpa songsang.
+
+**Teaser SEO (`seo-thumbnail.webp`) — cubaan PERTAMA guna format
+POTRET** (drpd slaid 1, `scripts/generate-teaser-thumbnail.py` —
+output `768×1448`) sbb `bab-1-3` mulanya TIADA sumber landskap
+berasingan (beza drpd `bab-1-1`/`bab-1-2` yg ada sumber landskap KHAS
+drpd pengguna, rujuk §"Teaser SEO Infografik" atas) — skrip jatuh
+balik ke gelagat ASAL (potret, terus drpd ilustrasi sumber). **Pengguna
+KEMUDIAN bekalkan sumber landskap KHAS jugak utk `bab-1-3`** (dihantar
+sbg mesej berasingan SELEPAS kerja slaid siap, "gunakan ini sebagai
+kad infografik") — `seo-thumbnail.webp` dijana SEMULA drpd sumber ni
+(`1376×768` → output `1376×840`, SAMA format drpd `bab-1-1`/`bab-1-2`)
+menggantikan versi potret awal. `width`/`height` `<img>` & `og:image:
+width`/`height` (`notes/bab-1-3.html`) dikemas kini SERENTAK ke nilai
+baharu. **Ketiga-tiga subtopik infografik kini SERAGAM format landskap
+teaser** — bukan lagi ketidakkonsistenan, cuma proses 2 pusingan (skrip
+sokong kedua-dua orientasi tanpa ubah kod, jadi tukar semula senang
+bila sumber baharu tiba).
+
+Disahkan via Playwright (`bab-1-3.html`): teaser `<img>` wujud dlm
+HTML MENTAH (fetch terus); klik FAB buka overlay dgn **21 slaid, 21
+dash** (padan `data.slides.length`); navigasi langsung (`track.
+scrollTo` bukan klik berulang — elak isu timing animasi scroll-snap
+dlm ujian automatik) ke slaid TERAKHIR sahkan dash aktif indeks 20 (slaid
+ke-21 "Kesimpulan"); SEMUA 21 fail webp + `seo-thumbnail.webp` disahkan
+`HTTP 200` terus (bukan sekadar `naturalWidth` DOM — imej `loading=
+"lazy"` yg dilangkau via lompat scroll terus TAK sempat masuk viewport
+threshold, false-negative dlm ujian automatik, BUKAN fail rosak
+sebenar). Watermark menegak & kad teaser disahkan visual (tangkapan
+skrin) konsisten dgn `bab-1-1`/`bab-1-2`. Sifar ralat JS.
+`scripts/seo-audit.py` (117 halaman, TIADA halaman baharu — `bab-1-3`
+dah wujud, cuma kandungan galeri ditambah) & `npm run lint` kekal lulus.
 
