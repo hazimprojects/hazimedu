@@ -1504,9 +1504,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // =========================
-  // AUDIO MARKER ON SUBTOPIC CARDS
+  // KUIZ / AUDIO / GALERI MARKER ON SUBTOPIC CARDS
   // =========================
-  const SUBTOPIC_QUIZ_HREF_RE = /^bab-(?:1-[1-4]|2-[1-8])\.html$/i;
 
   function appendAriaHint(card, fragment) {
     const currentLabel = card.getAttribute("aria-label");
@@ -1530,16 +1529,31 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     document
-      .querySelectorAll(".bab-card[href].has-quiz, .bab-card[href].has-audio")
+      .querySelectorAll(
+        ".bab-card[href].has-quiz, .bab-card[href].has-audio, .bab-card[href].has-gallery"
+      )
       .forEach(function (card) {
         var quiz = card.classList.contains("has-quiz");
         var audio = card.classList.contains("has-audio");
-        if (!quiz && !audio) return;
+        var gallery = card.classList.contains("has-gallery");
+        if (!quiz && !audio && !gallery) return;
 
         var wrap = document.createElement("span");
         wrap.className = "bab-card-badge-fluent";
         wrap.setAttribute("aria-hidden", "true");
 
+        if (gallery) {
+          var ig = document.createElement("img");
+          ig.className = "fluent-3d-emoji fluent-3d-emoji--bab-badge";
+          ig.src = "https://img.icons8.com/3d-fluency/94/stack-of-photos.png";
+          ig.alt = "";
+          ig.width = 18;
+          ig.height = 18;
+          ig.decoding = "async";
+          ig.loading = "lazy";
+          ig.setAttribute("data-bab-badge", "gallery");
+          wrap.appendChild(ig);
+        }
         if (quiz) {
           var iq = document.createElement("img");
           iq.className = "fluent-3d-emoji fluent-3d-emoji--bab-badge";
@@ -1579,11 +1593,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     subtopicCards.forEach((card) => {
       const href = card.getAttribute("href") || "";
-      const file = href.split("/").pop() || href;
-      if (SUBTOPIC_QUIZ_HREF_RE.test(file)) {
-        card.classList.add("has-quiz");
-        card.setAttribute("data-has-quiz", "true");
-        appendAriaHint(card, "ada kuiz");
+      const slug = href.replace(/\.html$/i, "");
+      if (HZ_INFOGRAPHIC_PAGES[slug]) {
+        card.classList.add("has-gallery");
+        card.setAttribute("data-has-gallery", "true");
+        appendAriaHint(card, "ada infografik");
       }
     });
 
@@ -1593,16 +1607,25 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!href) return;
 
         const slug = href.replace(/\.html$/i, "");
-        const audioPath = `../assets/audio/${slug}.mp3`;
 
         try {
-          const response = await fetch(audioPath, { method: "HEAD" });
-          if (!response.ok) return;
+          const response = await fetch(`../quiz/${slug}.html`, { method: "HEAD" });
+          if (response.ok) {
+            card.classList.add("has-quiz");
+            card.setAttribute("data-has-quiz", "true");
+            appendAriaHint(card, "ada kuiz");
+          }
+        } catch (e) {
+          // senyap sahaja jika kuiz belum wujud
+        }
 
-          card.classList.add("has-audio");
-          card.setAttribute("data-has-audio", "true");
-
-          appendAriaHint(card, "ada audio");
+        try {
+          const response = await fetch(`../assets/audio/${slug}.mp3`, { method: "HEAD" });
+          if (response.ok) {
+            card.classList.add("has-audio");
+            card.setAttribute("data-has-audio", "true");
+            appendAriaHint(card, "ada audio");
+          }
         } catch (e) {
           // senyap sahaja jika audio belum wujud
         }
@@ -1612,7 +1635,73 @@ document.addEventListener("DOMContentLoaded", function () {
     injectBabCardFluent3dBadges();
   }
 
+  async function markNotaIndexSubtopicBadges() {
+    const rows = Array.from(document.querySelectorAll(".nota-subtopic-item[href]")).filter((row) => {
+      const href = row.getAttribute("href") || "";
+      return /bab-\d+-\d+\.html$/i.test(href);
+    });
+
+    if (!rows.length) return;
+
+    function addRowBadgeIcon(wrap, src, label) {
+      const img = document.createElement("img");
+      img.className = "fluent-3d-emoji fluent-3d-emoji--row-badge";
+      img.src = src;
+      img.alt = "";
+      img.width = 15;
+      img.height = 15;
+      img.decoding = "async";
+      img.loading = "lazy";
+      img.setAttribute("data-row-badge", label);
+      wrap.appendChild(img);
+    }
+
+    await Promise.all(
+      rows.map(async (row) => {
+        const href = row.getAttribute("href");
+        if (!href) return;
+
+        const slug = href.replace(/\.html$/i, "");
+        const gallery = !!HZ_INFOGRAPHIC_PAGES[slug];
+        let quiz = false;
+        let audio = false;
+
+        try {
+          const quizRes = await fetch(`../quiz/${slug}.html`, { method: "HEAD" });
+          quiz = quizRes.ok;
+        } catch (e) {
+          // senyap sahaja jika kuiz belum wujud
+        }
+
+        try {
+          const audioRes = await fetch(`../assets/audio/${slug}.mp3`, { method: "HEAD" });
+          audio = audioRes.ok;
+        } catch (e) {
+          // senyap sahaja jika audio belum wujud
+        }
+
+        if (!gallery && !quiz && !audio) return;
+
+        const wrap = document.createElement("span");
+        wrap.className = "nota-subtopic-badges";
+        wrap.setAttribute("aria-hidden", "true");
+
+        if (gallery) addRowBadgeIcon(wrap, "https://img.icons8.com/3d-fluency/94/stack-of-photos.png", "gallery");
+        if (quiz) addRowBadgeIcon(wrap, hzFluent3dAsset("Puzzle piece", "puzzle_piece_3d.png"), "quiz");
+        if (audio) addRowBadgeIcon(wrap, hzFluent3dAsset("Headphone", "headphone_3d.png"), "audio");
+
+        const arrow = row.querySelector(".nota-row-arrow");
+        if (arrow) {
+          row.insertBefore(wrap, arrow);
+        } else {
+          row.appendChild(wrap);
+        }
+      })
+    );
+  }
+
   markSubtopicCardsWithAudio();
+  markNotaIndexSubtopicBadges();
 });
 
 /**
@@ -8473,7 +8562,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=628').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=629').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
