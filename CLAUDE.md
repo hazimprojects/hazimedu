@@ -972,6 +972,20 @@ FAB reaksi "Suka" — rujuk **`docs/infographic-gallery.md`** sebelum ubah
   sedia ada (`.section-heading.note-infographic-heading`, label pil
   "Infografik" + `<h2>Lihat Infografik X.Y</h2>`, ikon Bar chart)
   SEBELUM imej. Guna corak NI bila tambah teaser subtopik baharu.
+- **Jurang atas & bawah kad teaser dibetulkan via MARGIN NEGATIF pd
+  elemen anak (`.note-infographic-heading`/`.note-infographic-teaser`),
+  BUKAN cuba override `padding` `.section`** — `responsive.css`
+  (`@media max-width:980px`, dimuat SELEPAS `ui.css`) ada rule
+  `.section { padding: 3.5rem 0; }` yg SENTIASA menang cascade drpd
+  kelas marker spesifisiti sama. **Seksyen pembungkus teaser (`<section
+  class="section note-section">`) WAJIB TUTUP sejurus lepas `</a>`**
+  (`</div></section>`, seksyen baharu utk pemain audio+kandungan
+  seterusnya) — `bab-1-1`/`bab-1-2` (dibina sblm disiplin ni wujud)
+  PERNAH gagal tutup, sebabkan pemain audio+"Ringkasan"+SEMUA subtopik
+  seterusnya tersalut sekali dlm SATU seksyen dgn teaser (bug bertindih
+  bila margin negatif diterapkan). Sahkan `childCount` kontena teaser
+  = 2 (JS `container.children.length`) sebelum & selepas ubah struktur
+  halaman berinfografik.
 
 Rekod penuh (evolusi gaya ilustrasi, kedudukan FAB, pengesahan Playwright):
 **`docs/infographic-gallery.md`**.
