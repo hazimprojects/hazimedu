@@ -1849,17 +1849,40 @@ body.sparkle-panel-open .audio-notice-sheet {
   margin-top: -3rem;
 }
 
+/* Seksyen pembungkus teaser (<section class="section note-section
+   note-infographic-section">) — jurang BAWAH gejala SAMA drpd §atas
+   (dua lapisan padding bertindan), kali ni antara kad teaser & seksyen
+   SETERUSNYA (audio player [biasanya display:none] + kad "Ringkasan").
+   **AWAS — percubaan PERTAMA (`padding-bottom: 0.5rem` pd kelas ni)
+   TAK BERKESAN**: `responsive.css` (`@media max-width:980px`, DIMUAT
+   SELEPAS `ui.css` dlm `style.css`) ada rule `.section { padding:
+   3.5rem 0; }` — spesifisiti SAMA (satu kelas tunggal each), tapi
+   MENANG via urutan cascade (fail lain, dimuat lebih lewat), jadi
+   padding-bottom EFEKTIF kekal ~56-60px tak kira apa ditulis di sini.
+   **Fix (margin negatif pd kad teaser sendiri, BUKAN cuba kalahkan
+   padding `.section` — teknik SAMA drpd fix jurang atas
+   `.note-infographic-heading`)**: rujuk `.note-infographic-teaser`
+   margin-bottom di bawah. */
+
 .note-infographic-teaser {
   display: block;
   border-radius: 18px;
   overflow: hidden;
   text-decoration: none;
-  margin: 0 0 1.1rem;
+  /* Margin bawah NEGATIF (bukan positif spt lazim) — tolak jurang
+     tersusun padding-bottom section+padding-top section seterusnya
+     (rujuk nota `.note-infographic-heading`/atas, isu sama-jenis,
+     ~115px gabungan pd mudah alih) turun ke ~32px, konsisten dgn
+     target jurang §atas. Nilai dikalibrasi via ukuran SEBENAR
+     Playwright (bukan kira teori drpd nilai padding yg sebenarnya
+     dikalahkan cascade `responsive.css`). */
+  margin: 0 0 -5.5rem;
   border: 1px solid var(--page-surface-border, rgba(15, 23, 42, 0.1));
   box-shadow: 0 6px 20px rgba(15, 23, 42, 0.1);
   cursor: pointer;
   transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
+
 .note-infographic-teaser:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 26px rgba(15, 23, 42, 0.14);

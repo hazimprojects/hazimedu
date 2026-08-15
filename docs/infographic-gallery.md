@@ -927,3 +927,63 @@ skrin) konsisten dgn `bab-1-1`/`bab-1-2`. Sifar ralat JS.
 `scripts/seo-audit.py` (117 halaman, TIADA halaman baharu — `bab-1-3`
 dah wujud, cuma kandungan galeri ditambah) & `npm run lint` kekal lulus.
 
+## Jurang BAWAH teaser (kad teaser → "Ringkasan X.X") (2026-08-15)
+
+**Isu**: pengguna tunjuk tangkapan skrin PERANTI SEBENAR — jurang
+kosong besar antara kad teaser infografik `bab-1-3` & kad "Ringkasan
+1.3" di bawahnya (FAB galeri/Suka terapung atas ruang kosong tu).
+
+**Siasatan dedah DUA punca berasingan, kedua-duanya perlu dibetulkan**:
+
+1. **Percubaan fix PERTAMA (`padding-bottom: 0.5rem` pd kelas marker
+   `.note-infographic-section`) TAK BERKESAN** — diagnosis via
+   Playwright (`getComputedStyle`) dedah `responsive.css` (`@media
+   max-width:980px`, DIMUAT SELEPAS `ui.css` dlm `style.css`) ada rule
+   `.section { padding: 3.5rem 0; }` — spesifisiti SAMA drpd kelas
+   marker (satu kelas tunggal each), tapi MENANG cascade sbb kedudukan
+   fail lebih lewat. Padding-bottom EFEKTIF kekal ~56-60px tak kira
+   nilai ditulis pd kelas marker. **Fix**: buang pendekatan "cuba
+   kalahkan padding `.section`" sepenuhnya, guna teknik SAMA drpd fix
+   jurang ATAS (`.note-infographic-heading`) — margin NEGATIF pd
+   `.note-infographic-teaser` sendiri (`margin: 0 0 -5.5rem`, dikalibrasi
+   via ukuran Playwright SEBENAR, bukan kira teori drpd nilai padding
+   yg tetap dikalahkan cascade), jurang efektif akhir ~25.5px.
+
+2. **Struktur HTML `bab-1-1`/`bab-1-2` DIDAPATI BERBEZA drpd `bab-1-3`
+   semasa siasatan** — `bab-1-3` (dibina fresh sesi ni) betul: seksyen
+   teaser TUTUP (`</div></section>`) sejurus lepas `</a>`, pemain audio
+   + "Ringkasan X.X" bermula SEKSYEN BAHARU berasingan (`childCount`
+   `.container.narrow` teaser = **2**, cuma tajuk+imej). `bab-1-1`/
+   `bab-1-2` (dibina PR lebih awal, sblm disiplin seksyen terisolasi
+   ni wujud) TAK PERNAH tutup seksyen teaser — pemain audio, kad
+   "Ringkasan", "Soalan Utama", SEMUA subtopik seterusnya tersalut
+   SEKALI dlm SATU seksyen/container SAMA drpd teaser (`childCount`
+   = **15**). Diagnosis awal (ukuran gap ~137px pd `bab-1-3`) tak
+   dedah ni sbb kebetulan sample pertama (bab-1-3) struktur betul;
+   ujian susulan pd `bab-1-1` (margin negatif §1 diterapkan atas
+   struktur SALAH) dedah RINGKASAN 1.1 BERTINDIH atas kad teaser —
+   margin negatif dikalibrasi utk senario "seksyen terpisah" tarik
+   Ringkasan (yg SEBENARNYA sibling LANGSUNG dlm seksyen SAMA, bukan
+   seksyen berasingan) naik terlalu jauh.
+
+   **Fix**: `notes/bab-1-1.html`/`bab-1-2.html` disunting — tambah
+   `</div></section>` sejurus lepas `</a>` (tutup seksyen teaser), &
+   buka SEKSYEN BAHARU (`<section class="section note-section
+   note-section-wide"><div class="container note-wide">`) SEBELUM
+   `<div class="note-audio-player">` — padan STRUKTUR TEPAT `bab-1-3`.
+   **Pengajaran**: bila cipta corak HTML baharu (spt teaser
+   infografik) & TERAPKAN ke halaman SEDIA ADA yg dibina SEBELUM
+   corak tu wujud, SENTIASA sahkan struktur DOM (bukan cuma bacaan
+   visual teks HTML — indentation dlm codebase ni TAK selalu cerminkan
+   nesting sebenar) SETIAP halaman sasaran secara berasingan — jangan
+   andaikan SEMUA halaman guna corak sekitar yg SAMA persis, walau
+   nampak serupa drpd kandungan visual/teks.
+
+Disahkan via Playwright (`bab-1-1`/`bab-1-2`/`bab-1-3`, viewport
+mudah alih 390px): `childCount` kontena teaser kini **2** SERAGAM
+ketiga-tiga halaman (struktur konsisten), jurang teaser→Ringkasan
+**25.5px SERAGAM** ketiga-tiga (drpd himpunan ~137px `bab-1-3` &
+bertindih negatif pd `bab-1-1`/`bab-1-2` sblm fix). Tangkapan skrin
+sahkan SIFAR bertindih & SIFAR jurang janggal pd ketiga-tiga.
+`scripts/seo-audit.py` (117 halaman) & `npm run lint` kekal lulus.
+
