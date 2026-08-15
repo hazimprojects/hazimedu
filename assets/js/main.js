@@ -2642,6 +2642,28 @@ var HZ_INFOGRAPHIC_PAGES = {
       { file: '20-percukaian.webp', alt: 'Percukaian: sistem cukai bersifat teratur dan adil — hasil perniagaan, cukai perjalanan; Fasal 6.3 (jika penumpang turun awal sebelum sampai, perlu bayar 1/10 daripada hasil)' },
       { file: '21-kesimpulan.webp', alt: 'Kesimpulan: keunggulan Melaka terbukti melalui pentadbiran dan undang-undang yang tersusun — pentadbiran sistematik, agihan tugas yang jelas, undang-undang yang teratur, keselamatan terjamin, rakyat hidup harmoni. Pematuhan kepada undang-undang mewujudkan kesejahteraan dan kemakmuran' }
     ]
+  },
+  'bab-1-4': {
+    title: '1.4 Peranan Pemerintah dan Rakyat',
+    // v1 (2026-08-15): 8 slaid drpd imej dibekalkan pengguna. Turutan
+    // disahkan padan struktur Bahagian sebenar notes/bab-1-4.html
+    // (Bahagian Pertama: slaid 2, Bahagian Kedua: slaid 3-4, Bahagian
+    // Ketiga: slaid 5, Bahagian Keempat: slaid 6-7, Kesimpulan: slaid 8).
+    // seo-thumbnail.webp jana drpd imej landskap berasingan (pengguna) —
+    // label tengah "konsep waadat" DITAMPAL betul (PIL) sblm dijana,
+    // sbb sumber asal ada typo penjanaan AI ("woodot"/"rokyat"/
+    // "berasoskan") yg berterusan lepas 2 pusingan janaan semula.
+    imgVersion: 1,
+    slides: [
+      { file: '01-pengenalan.webp', alt: 'Muka hadapan: Sejarah Tingkatan 4, Bab 1 Warisan Negara Bangsa — Peranan Pemerintah dan Rakyat. Bagaimanakah hubungan antara pemerintah dan rakyat dalam Kesultanan Melayu Melaka?' },
+      { file: '02-golongan-pemerintah-dan-rakyat.webp', alt: 'Golongan Pemerintah dan Rakyat: masyarakat Melaka terbahagi kepada dua golongan — Golongan Pemerintah (Sultan, Kerabat Diraja, Pembesar, Ulama) dan Golongan Diperintah (Peniaga, Petani, Nelayan, Tukang, dan golongan hamba)' },
+      { file: '03-peranan-sultan.webp', alt: 'Peranan Sultan: Sultan ialah pelindung rakyat, penyatu masyarakat dan pemimpin negara — menjaga keselamatan rakyat, mewujudkan perpaduan, memastikan kemakmuran dan kestabilan, menggubal undang-undang' },
+      { file: '04-peranan-pembesar.webp', alt: 'Peranan Pembesar: Pembesar membantu Sultan dalam pentadbiran — menjaga keamanan kawasan pegangan, menyediakan tentera melalui sistem kerah, mengutip hasil melalui sistem serah, menjadi perantara Sultan dengan rakyat' },
+      { file: '05-peranan-rakyat.webp', alt: 'Peranan Rakyat: rakyat memainkan peranan penting dalam negara — taat setia kepada pemerintah, mematuhi arahan, tidak menderhaka, menjadi tentera dan pendayung kapal perang, menyertai gotong-royong, tenaga kerja melalui sistem kerah' },
+      { file: '06-konsep-waadat.webp', alt: 'Konsep Waadat: waadat ialah perjanjian antara pemerintah dan rakyat — Sang Sapurba (pemerintah) berjanji tidak berlaku zalim kepada rakyat, Demang Lebar Daun (wakil rakyat) berjanji rakyat tidak menderhaka kepada raja' },
+      { file: '07-jika-waadat-dilanggar.webp', alt: 'Jika Waadat Dilanggar: waadat mengikat pemerintah dan rakyat dalam tanggungjawab bersama — jika raja berlaku zalim, negeri dan takhta boleh binasa; jika rakyat menderhaka, akan ditimpa tulah' },
+      { file: '08-kesimpulan.webp', alt: 'Kesimpulan: hubungan pemerintah dan rakyat bersifat saling melengkapi — kesetiaan rakyat, keadilan pemerintah, kedaulatan raja terpelihara, kesejahteraan rakyat terjamin, negara menjadi stabil dan makmur' }
+    ]
   }
 };
 
@@ -8639,7 +8661,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=635').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=636').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
