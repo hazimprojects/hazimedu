@@ -2362,6 +2362,46 @@ document.addEventListener('DOMContentLoaded', function () {
     '<span class="home-continue-title">' + sub.num + ' ' + sub.title + '</span>' +
     '<span class="home-continue-arrow" aria-hidden="true">→</span>';
   hero.insertAdjacentElement('afterend', card);
+
+  // Lencana ikon galeri/kuiz/audio — sama falsafah drpd .bab-card-badge-fluent/
+  // .nota-subtopic-badges/.hz-mm-node-badges.
+  var slug = String(last.url).replace(/\.html$/i, '');
+  var gallery = !!HZ_INFOGRAPHIC_PAGES[slug];
+  Promise.all([
+    fetch('quiz/' + slug + '.html', { method: 'HEAD' })
+      .then(function (res) { return res.ok; })
+      .catch(function () { return false; }),
+    fetch('assets/audio/' + slug + '.mp3', { method: 'HEAD' })
+      .then(function (res) { return res.ok; })
+      .catch(function () { return false; })
+  ]).then(function (results) {
+    var quiz = results[0];
+    var audio = results[1];
+    if (!gallery && !quiz && !audio) return;
+
+    var badges = document.createElement('span');
+    badges.className = 'home-continue-badges';
+    badges.setAttribute('aria-hidden', 'true');
+
+    function addIcon(src, label) {
+      var img = document.createElement('img');
+      img.className = 'fluent-3d-emoji fluent-3d-emoji--continue-badge';
+      img.src = src;
+      img.alt = '';
+      img.width = 15;
+      img.height = 15;
+      img.decoding = 'async';
+      img.loading = 'lazy';
+      img.setAttribute('data-continue-badge', label);
+      badges.appendChild(img);
+    }
+
+    if (gallery) addIcon(HZ_ICONS8_SPARKLE.gallery, 'gallery');
+    if (quiz) addIcon(HZ_ICONS8_SPARKLE.puzzlePiece, 'quiz');
+    if (audio) addIcon(HZ_ICONS8_SPARKLE.headphones, 'audio');
+
+    card.appendChild(badges);
+  });
 });
 
 // =========================
@@ -3774,6 +3814,51 @@ var HZ_INFOGRAPHIC_PAGES = {
     return el;
   }
 
+  /** Lencana ikon galeri/kuiz/audio pd penjuru nod subtopik mindmap —
+      sama falsafah drpd .bab-card-badge-fluent/.nota-subtopic-badges. */
+  function injectMindmapNodeBadges(node, slug) {
+    var root = hzZymnotesSiteRootPath();
+    var prefix = root === '/' ? '' : root;
+    var gallery = !!HZ_INFOGRAPHIC_PAGES[slug];
+
+    Promise.all([
+      fetch(prefix + '/quiz/' + slug + '.html', { method: 'HEAD' })
+        .then(function (res) { return res.ok; })
+        .catch(function () { return false; }),
+      fetch(prefix + '/assets/audio/' + slug + '.mp3', { method: 'HEAD' })
+        .then(function (res) { return res.ok; })
+        .catch(function () { return false; })
+    ]).then(function (results) {
+      var quiz = results[0];
+      var audio = results[1];
+      if (!gallery && !quiz && !audio) return;
+      if (!node.isConnected) return;
+
+      var wrap = document.createElement('span');
+      wrap.className = 'hz-mm-node-badges';
+      wrap.setAttribute('aria-hidden', 'true');
+
+      function addIcon(src, label2) {
+        var img = document.createElement('img');
+        img.className = 'fluent-3d-emoji fluent-3d-emoji--mm-badge';
+        img.src = src;
+        img.alt = '';
+        img.width = 13;
+        img.height = 13;
+        img.decoding = 'async';
+        img.loading = 'lazy';
+        img.setAttribute('data-mm-badge', label2);
+        wrap.appendChild(img);
+      }
+
+      if (gallery) addIcon(HZ_ICONS8_SPARKLE.gallery, 'gallery');
+      if (quiz) addIcon(HZ_ICONS8_SPARKLE.puzzlePiece, 'quiz');
+      if (audio) addIcon(HZ_ICONS8_SPARKLE.headphones, 'audio');
+
+      node.appendChild(wrap);
+    });
+  }
+
   function applyChapterCenter(chapter) {
     centerEl.className = 'hz-mm-center hz-mm-center--chapter';
     if (chapter && chapter.color) {
@@ -3872,6 +3957,7 @@ var HZ_INFOGRAPHIC_PAGES = {
       node.classList.add('mm-anim-in');
       node.style.animationDelay = (i * 40) + 'ms';
       nodesWrap.appendChild(node);
+      injectMindmapNodeBadges(node, sub.url.replace(/\.html$/i, ''));
     });
 
     backBtn.style.display = '';

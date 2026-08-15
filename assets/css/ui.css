@@ -2351,6 +2351,24 @@ body.sparkle-panel-open .audio-notice-sheet {
 
 .hz-mm-node.is-current .hz-mm-node-sub { color: rgba(255, 255, 255, 0.88); opacity: 1; }
 
+/* Lencana ikon galeri/kuiz/audio pd penjuru nod (main.js, injectMindmapNodeBadges) */
+.hz-mm-node-badges {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hz-mm-node-badges .fluent-3d-emoji--mm-badge {
+  width: 13px;
+  height: 13px;
+  filter: drop-shadow(0 2px 4px rgba(15, 23, 42, 0.28));
+}
+
 /* Close button */
 .hz-mm-close {
   position: absolute;
