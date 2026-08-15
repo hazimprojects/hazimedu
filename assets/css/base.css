@@ -2090,6 +2090,22 @@ body.page-theme-notes.app-shell-page .nota-row:hover {
   border-color: rgba(148, 163, 184, 0.22);
 }
 
+/* Lencana ikon galeri/kuiz/audio pd baris subtopik (main.js,
+   markNotaIndexSubtopicBadges) — jujurkan pelajar ciri apa tersedia
+   pd subtopik SEBELUM klik masuk, sama falsafah drpd .nota-badge-akan-datang. */
+.nota-subtopic-badges {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.nota-subtopic-badges .fluent-3d-emoji--row-badge {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
 /* Chevron arrow */
 .nota-row-arrow {
   width: 14px;
