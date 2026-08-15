@@ -2957,6 +2957,12 @@ html.about-pwa-hide-card #about-pwa-card {
 .home-feature-card.hfc-rose .home-feature-title { color: var(--ink); }
 .home-feature-card.hfc-rose .home-feature-desc { color: var(--muted); opacity: 0.92; }
 
+.home-feature-card.hfc-teal {
+  background: linear-gradient(152deg, rgba(240, 253, 250, 0.98), rgba(226, 246, 241, 0.88));
+}
+.home-feature-card.hfc-teal .home-feature-title { color: var(--ink); }
+.home-feature-card.hfc-teal .home-feature-desc { color: var(--muted); opacity: 0.92; }
+
 [data-theme="dark"] .home-feature-card.hfc-violet {
   background: linear-gradient(152deg, rgba(46, 42, 72, 0.92), rgba(38, 36, 58, 0.82));
 }
@@ -2992,6 +2998,12 @@ html.about-pwa-hide-card #about-pwa-card {
 }
 [data-theme="dark"] .home-feature-card.hfc-rose .home-feature-title { color: var(--ink); }
 [data-theme="dark"] .home-feature-card.hfc-rose .home-feature-desc { color: var(--muted); opacity: 0.9; }
+
+[data-theme="dark"] .home-feature-card.hfc-teal {
+  background: linear-gradient(152deg, rgba(30, 52, 48, 0.92), rgba(24, 44, 40, 0.82));
+}
+[data-theme="dark"] .home-feature-card.hfc-teal .home-feature-title { color: var(--ink); }
+[data-theme="dark"] .home-feature-card.hfc-teal .home-feature-desc { color: var(--muted); opacity: 0.9; }
 
 /* =============================================================
    NOTA ROW ICONS — vibrant gradients (overrides flat rgba tints)
