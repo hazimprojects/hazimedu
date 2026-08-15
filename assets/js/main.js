@@ -1515,15 +1515,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function injectBabCardFluent3dBadges() {
-    var fluentRef = "62ecdc0d7ca5";
-    var fluentBase =
-      "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@" +
-      fluentRef +
-      "/assets";
-    function fluentAsset(folderName, fileName) {
-      return fluentBase + "/" + encodeURIComponent(folderName) + "/3D/" + fileName;
-    }
-
     document.querySelectorAll(".bab-card-badge-fluent").forEach(function (el) {
       el.remove();
     });
@@ -1545,7 +1536,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (gallery) {
           var ig = document.createElement("img");
           ig.className = "fluent-3d-emoji fluent-3d-emoji--bab-badge";
-          ig.src = "https://img.icons8.com/3d-fluency/94/stack-of-photos.png";
+          ig.src = HZ_ICONS8_SPARKLE.gallery;
           ig.alt = "";
           ig.width = 18;
           ig.height = 18;
@@ -1557,7 +1548,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (quiz) {
           var iq = document.createElement("img");
           iq.className = "fluent-3d-emoji fluent-3d-emoji--bab-badge";
-          iq.src = fluentAsset("Puzzle piece", "puzzle_piece_3d.png");
+          iq.src = HZ_ICONS8_SPARKLE.puzzlePiece;
           iq.alt = "";
           iq.width = 18;
           iq.height = 18;
@@ -1569,7 +1560,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (audio) {
           var ia = document.createElement("img");
           ia.className = "fluent-3d-emoji fluent-3d-emoji--bab-badge";
-          ia.src = fluentAsset("Headphone", "headphone_3d.png");
+          ia.src = HZ_ICONS8_SPARKLE.headphones;
           ia.alt = "";
           ia.width = 18;
           ia.height = 18;
@@ -1686,9 +1677,9 @@ document.addEventListener("DOMContentLoaded", function () {
         wrap.className = "nota-subtopic-badges";
         wrap.setAttribute("aria-hidden", "true");
 
-        if (gallery) addRowBadgeIcon(wrap, "https://img.icons8.com/3d-fluency/94/stack-of-photos.png", "gallery");
-        if (quiz) addRowBadgeIcon(wrap, hzFluent3dAsset("Puzzle piece", "puzzle_piece_3d.png"), "quiz");
-        if (audio) addRowBadgeIcon(wrap, hzFluent3dAsset("Headphone", "headphone_3d.png"), "audio");
+        if (gallery) addRowBadgeIcon(wrap, HZ_ICONS8_SPARKLE.gallery, "gallery");
+        if (quiz) addRowBadgeIcon(wrap, HZ_ICONS8_SPARKLE.puzzlePiece, "quiz");
+        if (audio) addRowBadgeIcon(wrap, HZ_ICONS8_SPARKLE.headphones, "audio");
 
         const arrow = row.querySelector(".nota-row-arrow");
         if (arrow) {
