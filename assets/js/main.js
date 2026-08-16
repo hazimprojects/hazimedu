@@ -2618,7 +2618,12 @@ var HZ_INFOGRAPHIC_PAGES = {
     // padan struktur Bahagian sebenar notes/bab-1-3.html (Bahagian
     // Pertama: slaid 2-8, Bahagian Kedua: slaid 9-21) — rujuk CLAUDE.md
     // §"Infografik Galeri" (disiplin turutan slaid).
-    imgVersion: 1,
+    // v2 (2026-08-15): seo-thumbnail.webp diganti dgn imej landskap
+    // baharu drpd pengguna (gaya label "SEJARAH TINGKATAN 4 • BAB 1 •
+    // 1.3" + soalan panduan di kanan atas, beza drpd gaya cover carousel
+    // asal) — dimensi kekal 1376×840, tiada kemas kini og:image:width/
+    // height diperlukan.
+    imgVersion: 2,
     slides: [
       { file: '01-pengenalan.webp', alt: 'Muka hadapan: Sejarah Tingkatan 4, Bab 1 Warisan Negara Bangsa — Keunggulan Sistem Pentadbiran dan Undang-undang' },
       { file: '02-keunggulan-melaka.webp', alt: 'Keunggulan Melaka: Melaka unggul melalui pentadbiran dan undang-undang yang tersusun — Sistem Pentadbiran, Sistem Undang-undang' },
