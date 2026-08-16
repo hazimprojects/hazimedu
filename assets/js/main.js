@@ -2669,6 +2669,24 @@ var HZ_INFOGRAPHIC_PAGES = {
       { file: '07-jika-waadat-dilanggar.webp', alt: 'Jika Waadat Dilanggar: waadat mengikat pemerintah dan rakyat dalam tanggungjawab bersama — jika raja berlaku zalim, negeri dan takhta boleh binasa; jika rakyat menderhaka, akan ditimpa tulah' },
       { file: '08-kesimpulan.webp', alt: 'Kesimpulan: hubungan pemerintah dan rakyat bersifat saling melengkapi — kesetiaan rakyat, keadilan pemerintah, kedaulatan raja terpelihara, kesejahteraan rakyat terjamin, negara menjadi stabil dan makmur' }
     ]
+  },
+  'bab-2-1': {
+    title: '2.1 Maksud Nasionalisme',
+    // v1 (2026-08-16): 7 slaid drpd imej dibekalkan pengguna. Turutan
+    // disahkan padan struktur Bahagian sebenar notes/bab-2-1.html
+    // (Bahagian Pertama: slaid 2, Bahagian Kedua: slaid 3-6 [7 tokoh +
+    // rumusan], Kesimpulan: slaid 7). seo-thumbnail.webp jana drpd imej
+    // landskap berasingan (pengguna) — disahkan sifar typo sblm diproses.
+    imgVersion: 1,
+    slides: [
+      { file: '01-pengenalan.webp', alt: 'Muka hadapan: Sejarah Tingkatan 4, Bab 2 Kebangkitan Nasionalisme — Maksud Nasionalisme. Apa itu nasionalisme? Kesedaran mempertahankan dan membebaskan bangsa daripada kuasa asing, cinta akan bangsa dan negara' },
+      { file: '02-nasionalisme-mengikut-konteks.webp', alt: 'Nasionalisme Mengikut Konteks: maksud nasionalisme berbeza mengikut masyarakat dan pengalaman sejarah — Keturunan, Agama, Bahasa, Adat Resam, Pengalaman Sejarah, Zaman' },
+      { file: '03-pandangan-tokoh-hans-kohn-william-roff.webp', alt: 'Pandangan Tokoh tentang Nasionalisme — Hans Kohn: "Nasionalisme merupakan satu gerakan yang meletakkan kesetiaan seseorang hanya kepada negara atau bangsanya." Intipati: Kesetiaan kepada negara dan tanah air. William R. Roff: "Kebangkitan nasionalisme Melayu berlaku kerana ancaman terhadap hak dan ekonomi orang Melayu, serta kebimbangan terhadap sekularisme dan imperialisme Barat." Intipati: Nasionalisme timbul akibat tekanan luar dan keperluan mempertahankan identiti' },
+      { file: '04-pandangan-tokoh-onn-jaafar-burhanuddin.webp', alt: 'Pandangan Tokoh tentang Nasionalisme — Dato\' Onn Jaafar: "Kita hendak menzahirkan suatu bangsa yang tegap, kuat, berdikari dan setanding dengan bangsa lain." Intipati: Nasionalisme membina jati diri dan keyakinan bangsa. Dr. Burhanuddin al-Helmi: "Perjuangan mesti dilakukan dengan persatuan, tatatertib dan adab sopan, demi menebus kembali hak mutlak bangsa." Intipati: Nasionalisme mesti disertai akhlak, tatatertib dan perpaduan' },
+      { file: '05-pandangan-tokoh-suntharalingam-zainal-abidin.webp', alt: 'Pandangan Tokoh tentang Nasionalisme — Dr. R. Suntharalingam: "Nasionalisme ialah fenomena sejagat — setiap bangsa berhak membentuk negara dan memindahkan kedaulatan kepada rakyat." Intipati: Setiap bangsa mempunyai hak untuk merdeka dan mentadbir sendiri. Profesor Datuk Zainal Abidin Abdul Wahid: "Nasionalisme Melayu telah wujud sejak Kesultanan Melayu Melaka — dengan kesetiaan kepada raja sebagai ciri utama." Intipati: Nasionalisme Melayu berkait dengan cinta tanah air dan kesetiaan kepada institusi bangsa' },
+      { file: '06-pandangan-tokoh-khoo-kay-kim-persamaan.webp', alt: 'Pandangan Tokoh tentang Nasionalisme — Profesor Emeritus Tan Sri Dr. Khoo Kay Kim: "Nasionalisme sebelum merdeka ialah perjuangan orang Melayu untuk mendapatkan kembali kedudukan unggul dalam negara sendiri." Intipati: Nasionalisme ialah usaha mengembalikan maruah dan kedudukan bangsa. Persamaan Pandangan Tokoh: cinta akan bangsa dan negara, mempertahankan hak dan identiti, hak mentadbir negara sendiri, maruah dan keyakinan bangsa' },
+      { file: '07-kesimpulan.webp', alt: 'Kesimpulan: nasionalisme tidak mempunyai satu takrif yang sama pada setiap zaman — cinta akan bangsa dan negara, mempertahankan hak dan identiti, perpaduan dan persatuan, hak mentadbir sendiri, membina maruah dan keyakinan bangsa. Nasionalisme lahir daripada pengalaman sejarah dan menjadi asas perjuangan menuju negara berdaulat' }
+    ]
   }
 };
 
