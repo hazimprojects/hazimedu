@@ -2327,12 +2327,16 @@ var ZYMNOTES_NAV = { chapters: [
 // Baca rekod ZymStore.getApp('lastRead') (ditulis oleh IIFE atas pd halaman
 // subtopik) & padankan dgn ZYMNOTES_NAV utk dapat tajuk/nombor/warna TERKINI
 // (bukan simpan tajuk terus dlm rekod — elak staleness kalau tajuk disunting).
-// Gerbang guna kewujudan `.home-brand-hero` (bukan pathname) — laman utama
-// sahaja ada elemen ni. TIADA apa-apa disuntik kalau tiada rekod (pelawat
-// pertama kali kekal nampak laman asal, tiada "kotak kosong").
+// AWAS — gerbang WAJIB guna hzZymnotesIsHomePathname() (pathname), BUKAN
+// cuma kewujudan `.home-brand-hero` — kelas tu DIKONGSI about.html &
+// feedback.html (gaya kad hero sama), bukan eksklusif laman utama. Gerbang
+// asal (cuma semak elemen) suntik kad "Sambung Membaca" pd about.html/
+// feedback.html jugak — CSS `.home-continue-*` cuma bertarget
+// `body.page-theme-home`, jadi kad tu terpapar teks tergumpal tanpa gaya
+// langsung di halaman lain (dilaporkan pengguna via tangkapan skrin).
 document.addEventListener('DOMContentLoaded', function () {
   var hero = document.querySelector('.home-brand-hero');
-  if (!hero || !window.ZymStore || !window.ZYMNOTES_NAV) return;
+  if (!hero || !hzZymnotesIsHomePathname(window.location.pathname) || !window.ZymStore || !window.ZYMNOTES_NAV) return;
   var last = ZymStore.getApp('lastRead');
   if (!last || !last.url) return;
 
@@ -8689,7 +8693,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=640').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=641').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
