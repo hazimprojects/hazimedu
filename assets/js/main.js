@@ -2677,7 +2677,12 @@ var HZ_INFOGRAPHIC_PAGES = {
     // (Bahagian Pertama: slaid 2, Bahagian Kedua: slaid 3-6 [7 tokoh +
     // rumusan], Kesimpulan: slaid 7). seo-thumbnail.webp jana drpd imej
     // landskap berasingan (pengguna) — disahkan sifar typo sblm diproses.
-    imgVersion: 1,
+    // v2 (2026-08-16): 06-pandangan-tokoh-khoo-kay-kim-persamaan.webp
+    // diganti dgn versi baharu drpd pengguna (kandungan sama persis,
+    // sumber bersih tanpa watermark berganda — imej asal repo dah
+    // bertera air drpd pemprosesan awal, gantian ni elak watermark
+    // bertindih 2 lapisan).
+    imgVersion: 2,
     slides: [
       { file: '01-pengenalan.webp', alt: 'Muka hadapan: Sejarah Tingkatan 4, Bab 2 Kebangkitan Nasionalisme — Maksud Nasionalisme. Apa itu nasionalisme? Kesedaran mempertahankan dan membebaskan bangsa daripada kuasa asing, cinta akan bangsa dan negara' },
       { file: '02-nasionalisme-mengikut-konteks.webp', alt: 'Nasionalisme Mengikut Konteks: maksud nasionalisme berbeza mengikut masyarakat dan pengalaman sejarah — Keturunan, Agama, Bahasa, Adat Resam, Pengalaman Sejarah, Zaman' },
