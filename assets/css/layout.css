@@ -306,6 +306,11 @@ h3 {
   color: var(--muted);
   opacity: 0.82;
 }
+.page-footer-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem 0.5rem;
+}
 .page-footer-brand {
   font-family: var(--font-display);
   font-weight: 700;
