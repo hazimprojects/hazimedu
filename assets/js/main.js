@@ -422,13 +422,6 @@ var HZ_ICONS_FILLED = {
 // DARK MODE
 // =========================
 (function () {
-  function getTheme() {
-    return (
-      ZymStore.getPref('theme') ||
-      (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
-    );
-  }
-
   function applyTheme(theme) {
     document.documentElement.setAttribute("data-theme", theme);
     ZymStore.setPref('theme', theme);
@@ -436,15 +429,38 @@ var HZ_ICONS_FILLED = {
     if (tc) tc.content = theme === "dark" ? "#0D0F1A" : "#ffffff";
   }
 
-  applyTheme(getTheme());
+  // "Ikut Sistem" — nyahpin pilihan tersimpan (kembali ke null, lalai
+  // ZymStore) supaya listener di bawah teruskan ikut OS secara live,
+  // tapi terus papar tema semasa (bukan tunggu perubahan OS seterusnya).
+  function applySystemTheme() {
+    var sysTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", sysTheme);
+    ZymStore.setPref('theme', null);
+    var tc = document.querySelector('meta[name="theme-color"]');
+    if (tc) tc.content = sysTheme === "dark" ? "#0D0F1A" : "#ffffff";
+  }
+
+  // Bootstrap: kalau pengguna DAH pernah pilih tema eksplisit, guna terus
+  // (pin semula okay, idempotent). Kalau belum (ZymStore.getPref('theme')
+  // null), guna applySystemTheme() supaya load pertama TAK secara tak
+  // sengaja "terpin" tema sistem semasa jadi pilihan eksplisit kekal
+  // (applyTheme() lama sentiasa panggil setPref, jadi tema sistem yg
+  // cuma DIRESOLVE jadi tersimpan macam pilihan tegas pengguna — pepijat
+  // pra-wujud yg buat "Ikut Sistem" jadi tak berkesan lepas load pertama).
+  if (ZymStore.getPref('theme')) {
+    applyTheme(ZymStore.getPref('theme'));
+  } else {
+    applySystemTheme();
+  }
 
   window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
-    if (!ZymStore.hasPref('theme')) {
+    if (!ZymStore.getPref('theme')) {
       applyTheme(e.matches ? "dark" : "light");
     }
   });
 
   window.hzApplyTheme = applyTheme;
+  window.hzApplySystemTheme = applySystemTheme;
 })();
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -8314,6 +8330,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
             '<div class="zym-theme-toggle-group">' +
               '<button class="zym-theme-btn" data-theme-val="light" type="button">Cerah</button>' +
               '<button class="zym-theme-btn" data-theme-val="dark" type="button">Gelap</button>' +
+              '<button class="zym-theme-btn" data-theme-val="system" type="button">Ikut Sistem</button>' +
             '</div>' +
           '</div>' +
         '</div>' +
@@ -8369,7 +8386,11 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     sheet.querySelectorAll('.zym-theme-btn').forEach(function (btn) {
       btn.addEventListener('click', function () {
         var val = btn.getAttribute('data-theme-val');
-        if (window.hzApplyTheme) window.hzApplyTheme(val);
+        if (val === 'system') {
+          if (window.hzApplySystemTheme) window.hzApplySystemTheme();
+        } else if (window.hzApplyTheme) {
+          window.hzApplyTheme(val);
+        }
         syncThemeButtons();
       });
     });
@@ -8497,8 +8518,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       deleteAllFeedbackFromSupabase().then(function () {
         ZymStore.clearAll();
         updateDataCounts();
-        var sysTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        if (window.hzApplyTheme) window.hzApplyTheme(sysTheme);
+        if (window.hzApplySystemTheme) window.hzApplySystemTheme();
         syncThemeButtons();
         if (isNotaPage) { window.location.reload(); return; }
         var dangerBtn = sheet.querySelector('#zymset-clear-all-btn');
@@ -8521,7 +8541,8 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
 
   function syncThemeButtons() {
     if (!sheet) return;
-    var current = document.documentElement.getAttribute('data-theme') || 'light';
+    var explicit = ZymStore.getPref('theme');
+    var current = explicit || 'system';
     sheet.querySelectorAll('.zym-theme-btn').forEach(function (btn) {
       btn.classList.toggle('is-active', btn.getAttribute('data-theme-val') === current);
     });
@@ -8693,7 +8714,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=649').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=650').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });

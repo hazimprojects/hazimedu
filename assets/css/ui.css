@@ -2758,10 +2758,16 @@ body.mindmap-open { overflow: hidden; }
   margin-top: 0;
 }
 
-/* Toggle Tema */
+/* Toggle Tema — 3 butang (Cerah/Gelap/Ikut Sistem) boleh melebihi lebar
+   baris label pd skrin sempit; benarkan kumpulan togol lipat ke baris
+   baharu (bukan paksa label "Tema" mengecut ke 0 lebar). */
+#zymset-theme-row { flex-wrap: wrap; }
+#zymset-theme-row .zym-settings-row-body { flex: 0 1 auto; min-width: max-content; }
 .zym-theme-toggle-group {
   display: flex;
   gap: 0.4rem;
+  flex: 1 0 auto;
+  justify-content: flex-end;
 }
 .zym-theme-btn {
   padding: 0.36rem 0.75rem;
