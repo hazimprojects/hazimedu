@@ -3098,6 +3098,7 @@ html.about-pwa-hide-card #about-pwa-card {
   line-height: 1.5;
   color: var(--ink);
   cursor: pointer;
+  overflow: hidden;
 }
 .feedback-checkbox-label input[type="checkbox"] {
   margin-top: 0.15rem;
