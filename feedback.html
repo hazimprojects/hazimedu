@@ -7,12 +7,12 @@
   <title>Maklum Balas · ZymNotes</title>
   <meta
     name="description"
-    content="Ruang maklum balas ZymNotes untuk cadangan, pembetulan isi, pertanyaan dan laporan masalah pada laman."
+    content="Ruang maklum balas ZymNotes untuk testimoni, cadangan, pembetulan isi, pertanyaan dan laporan masalah pada laman."
   />
   <link rel="canonical" href="https://zymnotes.com/feedback.html" />
   <!-- Open Graph -->
   <meta property="og:title" content="Maklum Balas · ZymNotes" />
-  <meta property="og:description" content="Ruang maklum balas ZymNotes untuk cadangan, pembetulan isi, pertanyaan dan laporan masalah pada laman." />
+  <meta property="og:description" content="Ruang maklum balas ZymNotes untuk testimoni, cadangan, pembetulan isi, pertanyaan dan laporan masalah pada laman." />
   <meta property="og:url" content="https://zymnotes.com/feedback.html" />
   <meta property="og:image" content="https://zymnotes.com/assets/og-image.png?v=20260420" />
   <meta property="og:image:url" content="https://zymnotes.com/assets/og-image.png?v=20260420" />
@@ -27,14 +27,14 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Maklum Balas · ZymNotes" />
-  <meta name="twitter:description" content="Ruang maklum balas ZymNotes untuk cadangan, pembetulan isi, pertanyaan dan laporan masalah pada laman." />
+  <meta name="twitter:description" content="Ruang maklum balas ZymNotes untuk testimoni, cadangan, pembetulan isi, pertanyaan dan laporan masalah pada laman." />
   <meta name="twitter:image" content="https://zymnotes.com/assets/og-image.png?v=20260420" />
   <meta name="twitter:image:src" content="https://zymnotes.com/assets/og-image.png?v=20260420" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Lexend:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Lexend:wght@400;500;600;700;800&display=swap"></noscript>
-  <link rel="preload" as="style" href="assets/css/base.css?v=121">
+  <link rel="preload" as="style" href="assets/css/base.css?v=122">
 <link rel="preload" as="style" href="assets/css/layout.css?v=31">
 <link rel="preload" as="style" href="assets/css/ui.css?v=107">
 <link rel="preload" as="style" href="assets/css/paper.css?v=30">
@@ -42,7 +42,7 @@
 <link rel="preload" as="style" href="assets/css/responsive.css?v=14">
 <link rel="preload" as="style" href="assets/css/themes.css?v=25">
 <link rel="preload" as="style" href="assets/css/lab.css?v=7">
-<link rel="stylesheet" href="assets/css/style.css?v=359" />
+<link rel="stylesheet" href="assets/css/style.css?v=360" />
 
   <!-- Google tag (gtag.js) — deferred for performance -->
 <script>
@@ -108,6 +108,7 @@
         <div class="home-scope-item home-scope-active"><span class="home-scope-check"><img class="fluent-3d-emoji fluent-3d-emoji--scope" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Light%20bulb/3D/light_bulb_3d.png" width="22" height="22" alt="" decoding="async" loading="lazy" /></span><span>Cadangan untuk menjadikan nota lebih jelas</span></div>
         <div class="home-scope-item home-scope-active"><span class="home-scope-check"><img class="fluent-3d-emoji fluent-3d-emoji--scope" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Headphone/3D/headphone_3d.png" width="22" height="22" alt="" decoding="async" loading="lazy" /></span><span>Maklum balas tentang audio nota</span></div>
         <div class="home-scope-item home-scope-active"><span class="home-scope-check"><img class="fluent-3d-emoji fluent-3d-emoji--scope" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Hammer%20and%20wrench/3D/hammer_and_wrench_3d.png" width="22" height="22" alt="" decoding="async" loading="lazy" /></span><span>Laporan masalah — pautan rosak, paparan tak kemas</span></div>
+        <div class="home-scope-item home-scope-active"><span class="home-scope-check"><img class="fluent-3d-emoji fluent-3d-emoji--scope" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Star/3D/star_3d.png" width="22" height="22" alt="" decoding="async" loading="lazy" /></span><span>Testimoni — kongsi bagaimana ZymNotes membantu ulang kaji anda</span></div>
       </div>
     </div>
 
@@ -138,6 +139,7 @@
             <select class="feedback-select" id="feedback-type" name="message_type" required>
               <option value="">Pilih satu</option>
               <option value="Pertanyaan">Pertanyaan</option>
+              <option value="Testimoni / Kongsi pengalaman">Testimoni / Kongsi pengalaman</option>
               <option value="Cadangan">Cadangan</option>
               <option value="Pembetulan isi">Pembetulan isi</option>
               <option value="Laporan masalah pada laman">Laporan masalah pada laman</option>
@@ -155,6 +157,13 @@
             <label class="feedback-label" for="feedback-message">Mesej anda</label>
             <textarea class="feedback-textarea" id="feedback-message" name="message" required minlength="10" rows="5" placeholder="Contoh: Saya rasa bahagian ini kurang jelas... / Ada typo pada topik ini..."></textarea>
             <p class="feedback-help">Tulis dengan santai. Tidak perlu format email rasmi.</p>
+          </div>
+
+          <div class="feedback-field feedback-consent-field feedback-hidden" id="feedbackConsentField">
+            <label class="feedback-checkbox-label" for="feedback-consent">
+              <input type="checkbox" id="feedback-consent" name="consent_to_display" value="Ya, boleh papar" />
+              <span>Boleh papar sebahagian mesej ini secara terbuka di laman ZymNotes (cth. halaman Tentang) sebagai testimoni? Nama akan disamarkan melainkan anda nyatakan sebaliknya dalam mesej.</span>
+            </label>
           </div>
 
           <div class="feedback-field">
@@ -220,11 +229,22 @@
       const endpoint = 'https://formspree.io/f/xaqlrnpe';
       const startedAtField = document.getElementById('feedbackStartedAt');
       const formOpenedAt = Date.now();
+      const typeSelect = document.getElementById('feedback-type');
+      const consentField = document.getElementById('feedbackConsentField');
 
       if (!form || !formWrap || !successPanel || !statusBox || !submitBtn) return;
 
       if (startedAtField) {
         startedAtField.value = String(formOpenedAt);
+      }
+
+      function syncConsentVisibility() {
+        if (!typeSelect || !consentField) return;
+        consentField.classList.toggle('feedback-hidden', typeSelect.value !== 'Testimoni / Kongsi pengalaman');
+      }
+      if (typeSelect) {
+        typeSelect.addEventListener('change', syncConsentVisibility);
+        syncConsentVisibility();
       }
 
       function showStatus(message, type) {
@@ -275,6 +295,7 @@
 
           if (response.ok) {
             form.reset();
+            syncConsentVisibility();
 
             if (window.turnstile) {
               const widget = form.querySelector('.cf-turnstile');
