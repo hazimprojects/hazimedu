@@ -11,7 +11,7 @@
      turun semula ~2MB tiap kali app-shell dikemas kini
 */
 
-const CACHE = 'zym-v642';
+const CACHE = 'zym-v643';
 
 // Cache imej infografik — versi TETAP (bukan ikut CACHE di atas, TAK naik
 // setiap PR ubah CSS/JS). Kekal disebut dlm senarai "jangan padam" activate()
@@ -31,6 +31,7 @@ const PRECACHE_URLS = [
   '/about.html',
   '/feedback.html',
   '/kredit.html',
+  '/privasi.html',
   '/thank-you.html',
   '/404.html',
   '/notes/index.html',
