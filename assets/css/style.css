@@ -12,7 +12,7 @@
 @import url("paper.css?v=30");      /* Paper labels, boards, chips, accordion, steps, bab overview */
 @import url("keywords.css?v=60");   /* Keyword highlights, bloc identity, keyword legend, zh-mode annotations */
 @import url("responsive.css?v=14"); /* All @media queries + spacing fixes */
-@import url("themes.css?v=25");     /* Bab visual themes, dark mode overrides, war block chips */
+@import url("themes.css?v=26");     /* Bab visual themes, dark mode overrides, war block chips */
 @import url("bab-hub-fluent-3d.css?v=1"); /* Bab induk: mesh + glass + chip wells (Fluent 3D) */
 @import url("shell-openmoji.css?v=18"); /* App shell: Zym 3D stage (mesh + glass) */
 @import url("lab.css?v=7");        /* Learning Lab, action bar, mini interactive blocks */

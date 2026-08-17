@@ -56,8 +56,7 @@ body[class*="page-theme-"] .value-card,
 body[class*="page-theme-"] .content-block,
 body[class*="page-theme-"] .search-wrap,
 body[class*="page-theme-"] .search-results,
-body[class*="page-theme-"] .search-empty,
-body[class*="page-theme-"] .feedback-form-wrap {
+body[class*="page-theme-"] .search-empty {
   background: var(--page-surface-bg);
   border-color: var(--page-surface-border);
   box-shadow: var(--page-surface-shadow);
