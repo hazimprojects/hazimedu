@@ -162,7 +162,14 @@
           <div class="feedback-field feedback-consent-field feedback-hidden" id="feedbackConsentField">
             <label class="feedback-checkbox-label" for="feedback-consent">
               <input type="checkbox" id="feedback-consent" name="consent_to_display" value="Ya, boleh papar" />
-              <span>Boleh papar sebahagian mesej ini secara terbuka di laman ZymNotes (cth. halaman Tentang) sebagai testimoni? Nama akan disamarkan melainkan anda nyatakan sebaliknya dalam mesej.</span>
+              <span>Boleh papar sebahagian mesej ini secara terbuka di laman ZymNotes (cth. halaman Tentang) sebagai testimoni?</span>
+            </label>
+          </div>
+
+          <div class="feedback-field feedback-consent-name-field feedback-hidden" id="feedbackConsentNameField">
+            <label class="feedback-checkbox-label" for="feedback-consent-name">
+              <input type="checkbox" id="feedback-consent-name" name="consent_to_display_name" value="Ya, papar nama" />
+              <span>Papar nama saya sekali bersama testimoni ini. Jika tidak ditanda, nama akan disamarkan (anonim).</span>
             </label>
           </div>
 
@@ -231,6 +238,8 @@
       const formOpenedAt = Date.now();
       const typeSelect = document.getElementById('feedback-type');
       const consentField = document.getElementById('feedbackConsentField');
+      const consentCheckbox = document.getElementById('feedback-consent');
+      const consentNameField = document.getElementById('feedbackConsentNameField');
 
       if (!form || !formWrap || !successPanel || !statusBox || !submitBtn) return;
 
@@ -238,13 +247,23 @@
         startedAtField.value = String(formOpenedAt);
       }
 
+      function syncConsentNameVisibility() {
+        if (!consentCheckbox || !consentNameField) return;
+        var isTestimoni = typeSelect && typeSelect.value === 'Testimoni / Kongsi pengalaman';
+        consentNameField.classList.toggle('feedback-hidden', !(isTestimoni && consentCheckbox.checked));
+      }
+
       function syncConsentVisibility() {
         if (!typeSelect || !consentField) return;
         consentField.classList.toggle('feedback-hidden', typeSelect.value !== 'Testimoni / Kongsi pengalaman');
+        syncConsentNameVisibility();
       }
       if (typeSelect) {
         typeSelect.addEventListener('change', syncConsentVisibility);
         syncConsentVisibility();
+      }
+      if (consentCheckbox) {
+        consentCheckbox.addEventListener('change', syncConsentNameVisibility);
       }
 
       function showStatus(message, type) {
