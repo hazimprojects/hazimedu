@@ -2993,7 +2993,7 @@ var HZ_INFOGRAPHIC_PAGES = {
     // ── Drag Behaviour ────────────────────────────────────────────────
     var isDragging = false;
     var didDrag    = false;
-    var dragStartX, dragStartY, wrapStartLeft, wrapStartTop;
+    var dragStartX, dragStartY, wrapStartLeft, wrapStartTop, wrapW, wrapH;
 
     fab.addEventListener('pointerdown', function(e) {
       isDragging  = true;
@@ -3006,6 +3006,14 @@ var HZ_INFOGRAPHIC_PAGES = {
       fab.setPointerCapture(e.pointerId);
     });
 
+    // wrapW/wrapH (utk clamp sempadan viewport) diukur SEKALI bila drag
+    // sebenar bermula, BUKAN setiap pointermove — getBoundingClientRect()
+    // berulang tiap gerakan paksa reflow segerak (layout thrashing) sebelum
+    // setiap tulisan style.left/top, punca seretan "tersekat-sekat" pd
+    // peranti sebenar (disahkan CPU-bound, bukan bug arah/kedudukan — ujian
+    // Playwright sintetik tak tunjuk isu ni sbb tiada beban render sebenar).
+    // Saiz wrap tak berubah sepanjang drag (item accordion kekal dlm flow,
+    // cuma opacity/transform), jadi ukur sekali sudah cukup & selamat.
     fab.addEventListener('pointermove', function(e) {
       if (!isDragging) return;
       var dx = e.clientX - dragStartX;
@@ -3017,11 +3025,13 @@ var HZ_INFOGRAPHIC_PAGES = {
         wrap.classList.remove('is-open');
         syncSparklePanelState();
         ['br','bl','tr','tl'].forEach(function(cc) { wrap.classList.remove('fab-corner-' + cc); });
+        var r0 = wrap.getBoundingClientRect();
+        wrapW = r0.width;
+        wrapH = r0.height;
       }
       var vw = window.innerWidth, vh = window.innerHeight;
-      var r  = wrap.getBoundingClientRect();
-      var nx = Math.max(0, Math.min(vw - r.width,  wrapStartLeft + dx));
-      var ny = Math.max(0, Math.min(vh - r.height, wrapStartTop  + dy));
+      var nx = Math.max(0, Math.min(vw - wrapW, wrapStartLeft + dx));
+      var ny = Math.max(0, Math.min(vh - wrapH, wrapStartTop  + dy));
       wrap.style.position = 'fixed';
       wrap.style.left   = nx + 'px';
       wrap.style.top    = ny + 'px';
@@ -8714,7 +8724,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=651').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=652').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });

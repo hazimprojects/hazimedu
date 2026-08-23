@@ -1191,7 +1191,14 @@ body.page-theme-error .page-hero {
 .note-sparkle-wrap.is-dragging,
 .note-sparkle-wrap.is-dragging * { transition: none !important; }
 .note-sparkle-fab { cursor: grab; }
-.note-sparkle-wrap.is-dragging .note-sparkle-fab { cursor: grabbing; }
+.note-sparkle-wrap.is-dragging .note-sparkle-fab {
+  cursor: grabbing;
+  /* Animasi denyut sedia ada (box-shadow) cetus repaint berterusan —
+     digabung dgn tulisan left/top tiap pointermove semasa drag, menokok
+     beban render pd peranti sebenar (bukan sekadar hiasan semasa seret
+     aktif). Nyahaktif sementara drag, animasi sambung semula lepas lepas. */
+  animation: none;
+}
 
 /* ── FAB Button ──────────────────────────────────────────────────────── */
 .note-sparkle-fab {
