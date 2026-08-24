@@ -998,9 +998,23 @@ body.page-theme-error .display-fab {
    PAGE-TRANSITION FADE — smooth view switching
 ============================================================= */
 
+/* AWAS — JANGAN animate `opacity` di sini. `animation-fill-mode: both`
+   bermakna <main> "terkunci" pd frame `from` SEBELUM animasi sempat main
+   (& kekal di situ kalau animasi terganggu/tak sempat selesai — cth. tab
+   dilatar-belakang sejurus lepas nav, timer animasi CSS ditahan pelayar
+   mudah alih, peranti perlahan). Satu-satunya tempat animation "dilepas"
+   secara eksplisit ialah beginDrag() (blok Swipe Nav) — paparan biasa
+   (tanpa swipe) bergantung 100% pd animasi ni SELESAI sendiri. Versi asal
+   turut animate `opacity: 0 → 1`; kalau animasi tersekat di frame `from`,
+   <main> kekal LUTSINAR PENUH (kandungan "hilang" walau DOM/CSS lain
+   normal — nav bawah/header di luar <main> kekal nampak sbb bukan anak
+   elemen ni) — dilaporkan pengguna (tangkapan skrin peranti sebenar,
+   "kadang-kadang keluar kosong") sepadan corak "animasi tersekat" ni.
+   Fix: animate `transform` SAHAJA — kes TERBURUK animasi tersekat cuma
+   <main> kekal tersasar 6px (nyaris tak ketara), BUKAN lenyap terus. */
 @keyframes hz-page-in {
-  from { opacity: 0; transform: translateY(6px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from { transform: translateY(6px); }
+  to   { transform: translateY(0); }
 }
 
 .js-enhanced main {
