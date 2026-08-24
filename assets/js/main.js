@@ -3288,13 +3288,28 @@ var HZ_INFOGRAPHIC_PAGES = {
           isTop = wrap.classList.contains('fab-corner-tr') || wrap.classList.contains('fab-corner-tl');
         }
 
+        // Kedua-dua sumber shift ni TAMBAH ketinggian SEBENAR pd wrap sparkle
+        // (bukan sekadar togol opacity) — items menu (rujuk nota is-open di
+        // atas), DAN countdown audio (`.sparkle-audio-countdown`, teks
+        // "mm:ss" kosong drpd play() smpai stopAudio(), jadi kotak baris
+        // TIADA tinggi bila kosong walau CSS cuma togol opacity, bukan
+        // display). `wrap` sparkle `position:fixed; bottom:18px` (penjuru
+        // bawah) — tambah tinggi ni "tolak" bucu ATAS wrap lebih jauh drpd
+        // nav bawah, susutkan jurang drpd FAB galeri yg kedudukannya statik
+        // (offset CSS tetap, tak sedar perubahan tinggi wrap sparkle). Tanpa
+        // shift ni, FAB galeri jadi terlalu rapat dgn cincin/countdown audio
+        // (dilaporkan pengguna, tangkapan skrin peranti sebenar) — disahkan
+        // empirik (Playwright) jurang susut drpd 16px → 6px bila audio aktif.
+        var shift = 0;
         if (sparkleWrap.classList.contains('is-open')) {
           var itemsEl = sparkleWrap.querySelector('.note-sparkle-items');
-          var shift = (itemsEl ? itemsEl.offsetHeight : 0) + 14;
-          wrap.style.transform = 'translateY(' + (isTop ? shift : -shift) + 'px)';
-        } else {
-          wrap.style.transform = '';
+          shift += (itemsEl ? itemsEl.offsetHeight : 0) + 14;
         }
+        if (sparkleWrap.classList.contains('audio-active')) {
+          var countdownEl = sparkleWrap.querySelector('.sparkle-audio-countdown');
+          shift += countdownEl ? countdownEl.offsetHeight : 0;
+        }
+        wrap.style.transform = shift ? 'translateY(' + (isTop ? shift : -shift) + 'px)' : '';
       }
 
       sync();
@@ -3611,10 +3626,21 @@ var HZ_INFOGRAPHIC_PAGES = {
         }
         var baseShift = isTop ? stackExtra : -stackExtra;
 
+        // rujuk nota "audio-active" sepadan dlm sync() FAB galeri di atas —
+        // countdown audio tambah tinggi SEBENAR pd wrap sparkle, kena
+        // dikira di sini jugak (FAB Suka susun SATU tingkat lebih jauh
+        // drpd FAB sparkle, jadi terjejas gerakan sama).
+        var extraShift = 0;
         if (sparkleWrap.classList.contains('is-open')) {
           var itemsEl = sparkleWrap.querySelector('.note-sparkle-items');
-          var openShift = (itemsEl ? itemsEl.offsetHeight : 0) + 14;
-          wrap.style.transform = 'translateY(' + (baseShift + (isTop ? openShift : -openShift)) + 'px)';
+          extraShift += (itemsEl ? itemsEl.offsetHeight : 0) + 14;
+        }
+        if (sparkleWrap.classList.contains('audio-active')) {
+          var countdownEl = sparkleWrap.querySelector('.sparkle-audio-countdown');
+          extraShift += countdownEl ? countdownEl.offsetHeight : 0;
+        }
+        if (extraShift) {
+          wrap.style.transform = 'translateY(' + (baseShift + (isTop ? extraShift : -extraShift)) + 'px)';
         } else {
           wrap.style.transform = baseShift ? 'translateY(' + baseShift + 'px)' : '';
         }
@@ -8769,7 +8795,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=661').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=662').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
