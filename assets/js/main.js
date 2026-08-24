@@ -3039,22 +3039,40 @@ var HZ_INFOGRAPHIC_PAGES = {
       wrap.style.bottom = 'auto';
     });
 
+    // Snap ke penjuru TERDEKAT drpd kedudukan SEMASA (bukan kedudukan
+    // asal sblm drag) — dikongsi pointerup & pointercancel. AWAS: dulu
+    // pointercancel guna `snapToCorner(corner)` (var `corner` closure
+    // STALE, cuma dikemas kini oleh snapToCorner() sendiri — jadi
+    // sepanjang drag aktif ia masih pegang penjuru SEBELUM drag ni
+    // bermula). pointercancel kerap tercetus di tengah gerakan sebenar
+    // pd Android (WebView/Chrome kadang batalkan pointer capture bila
+    // OS pintas gerak isyarat sistem cth. swipe balik dari tepi skrin,
+    // walau touch-action:none), jadi tiap kali ia tercetus, FAB
+    // "melompat" balik ke kedudukan LAMA & seretan terhenti senyap
+    // (isDragging=false, pointermove seterusnya diabaikan) — inilah
+    // sebab FAB nampak "tersangkut"/melantun tengah skrin pd rakaman
+    // pengguna, bukan sekadar jank render. Fix: kira penjuru drpd
+    // kedudukan wrap SEMASA (sama macam pointerup), bukan var lama.
+    function finishDragToNearestCorner() {
+      var r  = wrap.getBoundingClientRect();
+      var cx = r.left + r.width  / 2;
+      var cy = r.top  + r.height / 2;
+      snapToCorner((cy < window.innerHeight / 2 ? 't' : 'b') + (cx < window.innerWidth / 2 ? 'l' : 'r'));
+    }
+
     fab.addEventListener('pointerup', function() {
       if (!isDragging) return;
       isDragging = false;
       wrap.classList.remove('is-dragging');
       if (!didDrag) return; // tap — handled by click listener
-      var r  = wrap.getBoundingClientRect();
-      var cx = r.left + r.width  / 2;
-      var cy = r.top  + r.height / 2;
-      snapToCorner((cy < window.innerHeight / 2 ? 't' : 'b') + (cx < window.innerWidth / 2 ? 'l' : 'r'));
+      finishDragToNearestCorner();
     });
 
     fab.addEventListener('pointercancel', function() {
       if (!isDragging) return;
       isDragging = false;
       wrap.classList.remove('is-dragging');
-      if (didDrag) snapToCorner(corner);
+      if (didDrag) finishDragToNearestCorner();
     });
 
     // ── Menu / Controls Toggle (tap only) ────────────────────────────
@@ -8724,7 +8742,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=653').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=654').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
