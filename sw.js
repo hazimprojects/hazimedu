@@ -11,7 +11,7 @@
      turun semula ~2MB tiap kali app-shell dikemas kini
 */
 
-const CACHE = 'zym-v660';
+const CACHE = 'zym-v661';
 
 // Cache imej infografik — versi TETAP (bukan ikut CACHE di atas, TAK naik
 // setiap PR ubah CSS/JS). Kekal disebut dlm senarai "jangan padam" activate()
@@ -67,12 +67,12 @@ const PRECACHE_URLS = [
   '/quiz/bab-5-2.html',
   '/quiz/bab-5-3.html',
   '/quiz/bab-5-4.html',
-  '/assets/css/style.css?v=368',
+  '/assets/css/style.css?v=369',
   '/assets/css/openmoji.css?v=13',
   '/assets/css/fluent-shell-emoji.css?v=7',
   '/assets/css/bab-hub-fluent-3d.css?v=1',
   '/assets/css/shell-openmoji.css?v=18',
-  '/assets/js/main.js?v=499',
+  '/assets/js/main.js?v=500',
   '/assets/js/zh-mode.js?v=56',
   '/assets/js/subtopic-lab.js?v=9',
   '/data/zh-glossary.json',
