@@ -7443,9 +7443,15 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   var lead = document.querySelector('.note-hero .lead');
   if (!lead) return;
 
+  // SEMENTARA (diminta pengguna 2026-08-24, tiada akses log masuk Supabase
+  // sendiri utk semak terus) — dedahkan 'boleh-baik'/'kurang-jelas' skali
+  // di bar stat hero, sekadar utk tengok nombor sekali sahaja. BUANG balik
+  // 2 baris ni (kekalkan cuma suka+mudah) bila pengguna dah nampak/sahkan.
   var STAT_REACTIONS = [
     { key: 'suka',  imgSrc: 'https://img.icons8.com/?size=100&id=5twNojKL5zU7&format=png&color=000000' },
-    { key: 'mudah', pair: HZ_FLUENT_SPARKLE.faceSmiling }
+    { key: 'mudah', pair: HZ_FLUENT_SPARKLE.faceSmiling },
+    { key: 'boleh-baik',   pair: HZ_FLUENT_SPARKLE.faceThinking },
+    { key: 'kurang-jelas', pair: HZ_FLUENT_SPARKLE.faceConfused }
   ];
   var STAT_PDF_DL_IMG = 'https://img.icons8.com/?size=100&id=yGBEe6Dss9zK&format=png&color=000000';
 
@@ -8763,7 +8769,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=657').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=658').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
