@@ -5762,9 +5762,30 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     // Dalam setiap note-subsection, _renderSubChild mengendalikan section-heading, paper-timeline,
     // paper-board, paper-accordion, paper-grid, paper-flap-card; lain-lain (kecuali hero-actions)
     // lulus ke _bodyHtml supaya pembungkus baharu tidak membuang kandungan (cth. garis masa).
-    var contentEl = mainEl.querySelector('.note-section .container') ||
-                    mainEl.querySelector('.container.narrow') ||
-                    mainEl;
+    //
+    // AWAS: halaman berinfografik (rujuk HZ_INFOGRAPHIC_PAGES) kini ada DUA
+    // `.note-section` berasingan — teaser SEO ("Lihat Infografik X.Y", kad
+    // `.note-infographic-section`) SEBELUM seksyen kandungan sebenar (rujuk
+    // CLAUDE.md §"Jurang BAWAH teaser": bab-1-1/1-2 dibetulkan supaya
+    // `</section>` teaser ditutup betul & seksyen BAHARU dibuka utk pemain
+    // audio+Ringkasan+subtopik). `querySelector('.note-section .container')`
+    // (versi lama) ambil kontena PERTAMA sahaja — utk halaman ni, itu ialah
+    // kontena SEMPIT teaser (cuma tajuk + pautan imej, bukan kandungan
+    // sebenar) — bermakna SELURUH nota (Ringkasan, semua .note-subsection)
+    // tergugur senyap drpd PDF (pratonton tunjuk hero sahaja, "1/1" muka
+    // surat). Fix: cari kontena PERTAMA yg BENAR-BENAR ada penanda
+    // kandungan (.note-subsection/.paper-board), langkau kontena hiasan
+    // (teaser) yg tiada penanda tu — tahan lasak drpd bilangan `.note-section`
+    // di halaman (bukan andaian SATU sahaja).
+    var contentEl = null;
+    var containerCandidates = mainEl.querySelectorAll('.note-section .container, .container.narrow');
+    for (var cci = 0; cci < containerCandidates.length; cci++) {
+      if (containerCandidates[cci].querySelector('.note-subsection, .paper-board')) {
+        contentEl = containerCandidates[cci];
+        break;
+      }
+    }
+    if (!contentEl) contentEl = mainEl;
     contentEl.childNodes.forEach(function(child) {
       if (child.nodeType !== 1) return;
       var cls = child.className || '';
@@ -8742,7 +8763,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=655').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=656').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
